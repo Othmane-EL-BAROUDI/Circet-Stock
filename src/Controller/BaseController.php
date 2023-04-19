@@ -8,16 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class BaseController extends AbstractController
 {
-    /**
-     * @Route("/", name="Login")
-     */
-    public function index(): Response
-    {
-        return $this->render('authentification/index.html.twig', [
-            'controller_name' => 'BaseController',
-        ]);
-    }
-
+    
     /**
      * @Route("HomePage" , name="HomePage")
      */
