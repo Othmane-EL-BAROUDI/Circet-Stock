@@ -1,0 +1,6 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% block fos_user_content %}
+ <title>{% block title %}Circet-Login{% endblock %}</title>
+    {{ include('@FOSUser/Security/login_content.html.twig') }}
+{% endblock fos_user_content %}
