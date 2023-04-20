@@ -1,0 +1,13 @@
+<title>{% block title %}Circet-Dashboard{% endblock %}</title>
+{% block stylesheets %}
+        <link rel="stylesheet" href="{{asset('css/Dashboard.css')}}">
+  {% endblock %}
+{% block body %}
+     {{ include('Pages/sidebar.html.twig') }}
+     <div class="home_content">
+            <div class="text">Dashboard</div>
+      </div>
+{% endblock %}
+  {% block javascripts %}
+            <script src="{{asset('JS/sidebar.js')}}"></script>
+   {% endblock %}

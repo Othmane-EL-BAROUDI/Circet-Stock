@@ -1,0 +1,13 @@
+ <title>{% block title %}Circet-HomePage{% endblock %}</title>
+{% block stylesheets %}
+        <link rel="stylesheet" href="{{asset('css/Homepage.css')}}">
+  {% endblock %}
+{% block body %}
+     {{ include('Pages/sidebar.html.twig') }}
+     <div class="home_content">
+            <div class="text">Stock Materiel</div>
+      </div>
+{% endblock %}
+  {% block javascripts %}
+            <script src="{{asset('JS/sidebar.js')}}"></script>
+   {% endblock %}

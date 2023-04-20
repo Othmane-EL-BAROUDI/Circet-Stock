@@ -14,10 +14,20 @@ class BaseController extends AbstractController
      */
     public function HomePage(): Response
     {
-        return $this->render('homePage/home.html.twig', [
+        return $this->render('Pages/homePage.html.twig', [
             'controller_name' => 'BaseController',
         ]);
     }
+    /**
+     * @Route("Dashboard" , name="Dashboard")
+     */
+    public function Dashboard(): Response
+    {
+        return $this->render('Pages/Dashboard.html.twig', [
+            'controller_name' => 'BaseController',
+        ]);
+    }
+
 
      /**
      * @Route("ForgetPassword" , name="ForgetPassword")

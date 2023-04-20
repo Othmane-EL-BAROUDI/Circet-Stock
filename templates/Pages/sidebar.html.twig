@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="{{asset('css/sidebar.css')}}">
+  {% endblock %}
+{% block body %}
+      <div class="sidebar">
+        <div class="logo_content">
+          <div class="logo">
+              <i class='bx bxs-package'></i>
+              <div class="logo_name">CircetStock </div> 
+          </div>
+          <i class='bx bx-menu'  id="btn" ></i>
+        </div>
+        <ul class="nav_link">
+          <li> 
+              <a href="{{path('HomePage')}}">
+                    <i class='bx bx-home'></i>
+                    <span class="links_name">Home</span>
+              </a>
+              <span class="tooltip">Home</span>
+          </li>
+
+           <li> 
+              <a href="{{path('Dashboard')}}">
+                    <i class='bx bxs-dashboard' ></i>
+                    <span class="links_name">Dashboard</span>
+              </a>
+               <span class="tooltip">Dashboard</span>
+          </li>
+
+           <li> 
+              <a href="#">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">User</span>
+              </a>
+               <span class="tooltip">User</span>
+          </li>
+
+           <li> 
+              <a href="#">
+                    <i class='bx bx-history'></i>
+                    <span class="links_name">Historique</span>
+              </a>
+               <span class="tooltip">Historique</span>
+          </li>
+
+           <li> 
+              <a href="#">
+                   <i class='bx bx-cog'></i>
+                    <span class="links_name">Settings</span>
+              </a>
+               <span class="tooltip">Settings</span>
+          </li>
+        </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <img src="{{asset('images/user.png')}}" alt="">
+                    <div class="name_role">
+                        <div class="name">XjonSnow</div>
+                        <div class="role">Web dev</div>
+                    </div>
+                </div>
+                <i class='bx bx-log-out'  id="log_out" ></i>
+            </div>
+        </div>
+      </div>
+     
+{% endblock %}
