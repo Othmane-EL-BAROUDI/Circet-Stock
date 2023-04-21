@@ -38,4 +38,13 @@ class BaseController extends AbstractController
             'controller_name' => 'BaseController',
         ]);
     }
+     /**
+     * @Route("Historique" , name="Historique")
+     */
+    public function Historique(): Response
+    {
+        return $this->render('Pages/Historique.html.twig', [
+            'controller_name' => 'BaseController',
+        ]);
+    }
 }
