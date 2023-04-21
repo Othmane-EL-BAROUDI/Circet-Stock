@@ -1,0 +1,144 @@
+.home_content{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition:  all 0.5s ease;
+}
+.home_content .text{
+    font-size: 25px;
+    font-weight: 500;
+    color: #1d1b31;
+    margin: 12px;
+}
+
+.headline{
+	display: block;
+	padding: 20px 50px;
+	position: relative;
+}
+
+.headline h3{
+	font-size: 16px;
+	font-weight: 800;
+	color: #1d1b31;
+	line-height: 26px;
+}
+
+.headline h3 i{
+   color: #66676b;
+   font-size: 21px;
+   line-height: 0;
+   position: relative;
+   top: 2px;
+   margin-right: 4px;
+}
+
+.avatar-wrapper{
+	position: relative;
+	width: 130px;
+	height: 130px;
+	overflow: hidden;
+	box-shadow: none;
+	
+	transition: all .3s ease;
+}
+
+.avatar-wrapper:hover{
+   transform: scale(1.05);
+}
+
+.avatar-wrapper .profile-pic{
+	height: 90%;
+	width: 90%;
+   	margin-top: 12px;
+	transition: all .3s ease;
+   	object-fit: cover;
+   	border-radius: 50%;
+    border: 1px solid orange;
+}
+
+.field-submit{
+	margin-bottom: 28px;
+	display: block;
+	margin-right: 50px !important;
+}
+
+.fields{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.fields .field-submit{
+   flex: 1;
+}
+
+.fields h5{
+   font-size: 15px;
+   color: #1d1b31;
+   margin-bottom: 12px;
+   margin-right: 10px;
+   flex: 1;
+   text-align: right;
+}
+
+.fields input{
+   flex: 3;
+   padding: 8px;
+   border-radius: 5px;
+   border: 1px solid rgb(255, 204, 110);
+   width: 100%;
+}
+
+.section-wrapper{
+   display: flex;
+   flex-direction: row;
+   align-items: flex-start;
+}
+
+.section-wrapper .infos{
+   flex: 1;
+   margin-left: 20px;
+}
+
+.secure{
+   border: 1px dashed gray;
+   padding: 5px;
+   white-space: nowrap;
+}
+
+.fields .field-submit{
+	margin-right: 0;
+	margin-bottom: 10px;
+}
+
+.fields h5{
+	text-align: left;
+	margin-right: 0;
+	margin-bottom: 5px;
+}
+
+.infos {
+   flex: 1;
+   margin-left: 20px;
+   margin-top: 35px;
+}
+
+.btn-container {
+   text-align: center;
+   width: 100%;
+   padding-bottom: 50px;
+   opacity: 0.8;
+}
+
+.errormessage{
+   margin: 5px 0;
+   width: 100%;
+   border-radius: 5px;
+   padding: 10px;
+   text-align: center;
+   background-color: #111;
+   color: #fff;
+   font-size: 50px;
+}

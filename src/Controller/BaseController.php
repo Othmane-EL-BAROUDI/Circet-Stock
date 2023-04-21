@@ -38,4 +38,14 @@ class BaseController extends AbstractController
             'controller_name' => 'BaseController',
         ]);
     }
+
+     /**
+     * @Route("Profile" , name="Profile")
+     */
+    public function Profile(): Response
+    {
+        return $this->render('Pages/profile.html.twig', [
+            'controller_name' => 'BaseController',
+        ]);
+    }
 }
