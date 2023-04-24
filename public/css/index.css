@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-body{
-    font-family: 'Poppins', sans-serif;
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-image : url("https://gitlab.com/alexandre2908/login-page/-/raw/master/Assets/wave.png")
-    
-}
+
 .content{
     margin: 8%;
     background-color: #fff;

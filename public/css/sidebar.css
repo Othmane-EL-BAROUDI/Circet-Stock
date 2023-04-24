@@ -80,7 +80,7 @@ body{
 }
 .sidebar ul{
     
-    margin-top: 65px;
+    margin-top: 45px;
 }
 .sidebar ul li{
     position: relative;
@@ -200,6 +200,9 @@ body{
 }
 .sidebar.active .profile #log_out{
     left: 88%;
+}
+.profile_content a{
+    color: white;
 }
 .profile #log_out:hover{
     background-color: #f9a826;

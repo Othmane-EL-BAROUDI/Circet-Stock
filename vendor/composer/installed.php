@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => 'dev-master',
-        'version' => 'dev-master',
-        'reference' => '5efcca7cce6885bae7ec84c26c54f297ce20669c',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '8f5518ed1a9f96f03972a9a69d63f10ccfd3fdeb',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
-            'reference' => '5efcca7cce6885bae7ec84c26c54f297ce20669c',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '8f5518ed1a9f96f03972a9a69d63f10ccfd3fdeb',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -286,6 +286,15 @@
                 0 => '1.0',
             ),
         ),
+        'sensio/framework-extra-bundle' => array(
+            'pretty_version' => 'v5.5.3',
+            'version' => '5.5.3.0',
+            'reference' => '98f0807137b13d0acfdf3c255a731516e97015de',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../sensio/framework-extra-bundle',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'swiftmailer/swiftmailer' => array(
             'pretty_version' => 'v6.3.0',
             'version' => '6.3.0.0',
@@ -414,6 +423,15 @@
             'provided' => array(
                 0 => '1.1',
             ),
+        ),
+        'symfony/expression-language' => array(
+            'pretty_version' => 'v4.3.11',
+            'version' => '4.3.11.0',
+            'reference' => 'fcc3e2085e4832f52bed94d72663962f650dfb23',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/expression-language',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'symfony/filesystem' => array(
             'pretty_version' => 'v4.3.11',
