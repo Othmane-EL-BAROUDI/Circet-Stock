@@ -59,27 +59,30 @@
                 </div>
             </div>
             <div class="content">
-                  <div class="view_role">
-                              <ul>
-                               <li>
-                                    
-                                    <label for="name">permission1</label> 
-                                    <section>
-                                          <button type="submit" data-toggle="modal" data-target="#editRole" ><i class='bx bxs-edit-alt bx-sm'></i></button>
-                                           <button type="submit"><i class='bx bx-trash bx-sm'></i></button>
-                                    </section>
-                               </li>
-                                <li>
-                                   
-                                    <label for="name">permission2</label> 
-                                    <section>
-                                          <button type="submit"><i class='bx bxs-edit-alt bx-sm'></i></button>
-                                         <button type="submit"><i class='bx bx-trash bx-sm'></i></button>
-                                    </section>
-                               </li>
-                                 
-                              </ul>
-                  </div>
+              <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>id permission</th>
+                            <th>permission name</th>
+                            <th>action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for key , permission in allPermissions %}
+                              
+                        
+                            <tr>
+                              <td>{{key+1}} </td>
+                             <td> {{permission.getPermissionName()}} </td>
+                                    <td>
+                                <button><i class='bx bx-edit bx-sm'></i></button>
+                                <button><i class='bx bx-trash bx-sm'></i></button>
+                                    </td>   
+                              </tr>   
+                         {% endfor %}   
+                    </tbody>
+                </table>
+                  
             </div>
       </div>
 {% endblock %}

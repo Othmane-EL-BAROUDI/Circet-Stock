@@ -57,27 +57,26 @@
                 </div>
             </div>
             <div class="content">
-                  <div class="view_role">
-                              <ul>
-                               <li>
-                                    
-                                    <label for="name">Admin</label> 
-                                    <section>
-                                          <button type="submit" data-toggle="modal" data-target="#editRole" ><i class='bx bxs-edit-alt bx-sm'></i></button>
-                                           <button type="submit"><i class='bx bx-trash bx-sm'></i></button>
-                                    </section>
-                               </li>
-                                <li>
-                                   
-                                    <label for="name">Admin</label> 
-                                    <section>
-                                          <button type="submit"><i class='bx bxs-edit-alt bx-sm'></i></button>
-                                         <button type="submit"><i class='bx bx-trash bx-sm'></i></button>
-                                    </section>
-                               </li>
-                                 
-                              </ul>
-                  </div>
+              <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>id role</th>
+                            <th>role name</th>
+                            <th>action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                              <td>1 </td>
+                             <td> role1  </td>
+                                    <td>
+                                <button><i class='bx bx-edit bx-sm'></i></button>
+                                <button><i class='bx bx-trash bx-sm'></i></button>
+                                    </td>   
+                              </tr>      
+                    </tbody>
+                </table>
+                  
             </div>
       </div>
 {% endblock %}

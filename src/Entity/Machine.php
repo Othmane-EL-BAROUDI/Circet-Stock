@@ -76,7 +76,7 @@ class Machine
 
     public function getModel(): ?string
     {
-        return $this->model;
+        return $this->model ;  
     }
 
     public function setModel(string $model): self

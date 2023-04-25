@@ -25,7 +25,7 @@
               <span class="tooltip">Home</span>
           </li>
            {% if userInfo.roles[0]== "ROLE_ADMIN" %} 
-           {% endif %}
+          
            <li> 
               <a href="{{path('Dashboard')}}">
                     <i class='bx bxs-dashboard' ></i>
@@ -62,7 +62,7 @@
               </a>
                <span class="tooltip">Permission</span>
           </li>
-      
+       {% endif %}
            <li> 
               <a href="Historique">
                     <i class='bx bx-history'></i>
@@ -84,7 +84,7 @@
                     <img src="{{asset('images/user.png')}}" alt="">
                     <div class="name_role">
                         <div class="name">{{userInfo.username}}</div>
-                        <div class="role">{{userInfo.roles[0]}}</div>
+                        <div class="role">{{userInfo.job}}</div>
                     </div>
                 </div>
                <a href="{{ path('fos_user_security_logout') }}"> <i class='bx bx-log-out'  id="log_out" ></i></a>

@@ -76,131 +76,47 @@
                         <tr>
                             <th>users</th>
                             <th>role</th>
+                            <th>job</th>
                             <th>matricule</th>
                             <th>action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>
+                        
+                        {% for key , user in allusers %}
+                            <tr>
+                                 <td>
                                 <div class="user_info">
                                     <div class="user_image">
                                         <img src="{{asset('images/user.png')}}" alt="">
                                     </div>
                                     <div class="user_details">
-                                        <label for="name">XjonSnow</label>
-                                        <p>aymanegassi972003@gmail.com</p>
+                                        <label for="name">{{user.username}}  {% if user.username == userInfo.username %} (You)  {% endif %}  </label>
+                                        <p>{{user.email}}</p>
                                     </div>
                                 </div>
                             </td>
                             <td>
-                                Web developer 
+                               {{user.roles[0]}} 
+                            </td>
+                            <td>
+                               {{user.job}} 
                             </td>
                              <td>
-                                BW338332
+                                {{user.matricule}}
                             </td>
-                             <td>
+                            {% if user.roles[0] != "ROLE_ADMIN" %}
+                                    <td>
                                 <button><i class='bx bx-show bx-sm'></i></button>
                                 <button><i class='bx bx-edit bx-sm'></i></button>
                                 <button><i class='bx bx-trash bx-sm'></i></button>
-                            </td>
+                                    </td>
+                            {% endif %}
+                             
                         </tr>
-                         <tr>
-                            <td>
-                                <div class="user_info">
-                                    <div class="user_image">
-                                        <img src="{{asset('images/manager.png')}}" alt="">
-                                    </div>
-                                    <div class="user_details">
-                                        <label for="name">aymane</label>
-                                        <p>aymane@gmail.com</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td >
-                                manager
-                            </td>
-                             <td>
-                                BW338332
-                            </td>
-                             <td>
-                                <button><i class='bx bx-show bx-sm'></i></button>
-                                <button><i class='bx bx-edit bx-sm'></i></button>
-                                <button><i class='bx bx-trash bx-sm'></i></button>
-                            </td>
-                        </tr>
-                         <tr>
-                            <td>
-                                <div class="user_info">
-                                    <div class="user_image">
-                                        <img src="{{asset('images/technician.png')}}" alt="">
-                                    </div>
-                                    <div class="user_details">
-                                        <label for="name">Driss</label>
-                                        <p>Driss@gmail.com</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                technician
-                            </td>
-                             <td>
-                                BW338332
-                            </td>
-                             <td>
-                                <button><i class='bx bx-show bx-sm'></i></button>
-                                <button><i class='bx bx-edit bx-sm'></i></button>
-                                <button><i class='bx bx-trash bx-sm'></i></button>
-                            </td>
-                        </tr>
-                                                 <tr>
-                            <td>
-                                <div class="user_info">
-                                    <div class="user_image">
-                                        <img src="{{asset('images/admin.png')}}" alt="">
-                                    </div>
-                                    <div class="user_details">
-                                        <label for="name">Hmida</label>
-                                        <p>Hmida@gmail.com</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                admin
-                            </td>
-                             <td>
-                                BW338332
-                            </td>
-                              <td>
-                                <button><i class='bx bx-show bx-sm'></i></button>
-                                <button><i class='bx bx-edit bx-sm'></i></button>
-                                <button><i class='bx bx-trash bx-sm'></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="user_info">
-                                    <div class="user_image">
-                                        <img src="{{asset('images/technician.png')}}" alt="">
-                                    </div>
-                                    <div class="user_details">
-                                        <label for="name">Huwa</label>
-                                        <p>Huwa@gmail.com</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                technician
-                            </td>
-                             <td>
-                                BW338332
-                            </td>
-                             <td>
-                                <button><i class='bx bx-show bx-sm'></i></button>
-                                <button><i class='bx bx-edit bx-sm'></i></button>
-                                <button><i class='bx bx-trash bx-sm'></i></button>
-                            </td>
-                        </tr>
+            
+                        {% endfor %}
+                           
                         
                     </tbody>
                 </table>
