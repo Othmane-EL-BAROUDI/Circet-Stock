@@ -74,7 +74,7 @@ class Machine
         return $this->id;
     }
 
-    public function getModel(): ?string
+    public function getModel(): self
     {
         return $this->model ;  
     }

@@ -3,8 +3,8 @@
         <link rel="stylesheet" href="{{asset('css/Role.css')}}">
          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   {% endblock %}
+  {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
-     {{ include('Pages/sidebar.html.twig') }}
      <div class="home_content">
             <div class="modal fade" id="editRole" tabindex="-1" role="dialog" aria-labelledby="editRole" aria-hidden="true">
                   <div class="modal-dialog" role="document">
@@ -39,12 +39,10 @@
                                     </div>
                                     <div class="modal-body">
                                           <label for="name">Permission name :</label>
-                                          <input  placeholder="@permission_name" type="text">
-                                          <div class="prm" >Read :  <input type="checkbox" name="" id=""></div>
-                                          <div class="prm" >write : <input type="checkbox" name="" id=""></div>
+                                          <input  placeholder="@permission_name" required type="text">
                                     </div>
                                     <div class="modal-footer">
-                                    <button type="button" class="close_button1">Add permission</button>
+                                    <button type="submit"  class="close_button1">Add permission</button>
                                </div>
                          </div>
                   </div>
@@ -62,8 +60,7 @@
               <table class="content-table">
                     <thead>
                         <tr>
-                            <th>id permission</th>
-                            <th>permission name</th>
+                            <th>permission</th>
                             <th>action</th>
                         </tr>
                     </thead>
@@ -72,7 +69,7 @@
                               
                         
                             <tr>
-                              <td>{{key+1}} </td>
+                             
                              <td> {{permission.getPermissionName()}} </td>
                                     <td>
                                 <button><i class='bx bx-edit bx-sm'></i></button>
