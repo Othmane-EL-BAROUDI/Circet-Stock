@@ -157,16 +157,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
        ";
         }
         // line 66
-        echo "           <li> 
-              <a href=\"Historique\">
-                    <i class='bx bx-history'></i>
-                    <span class=\"links_name\">Historique</span>
-              </a>
-               <span class=\"tooltip\">Historique</span>
-          </li> 
-            <li> 
+        echo "            <li> 
               <a href=\"";
-        // line 74
+        // line 67
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Profile");
         echo "\">
                     <i class='bx bxs-user-rectangle'></i>
@@ -179,22 +172,22 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
             <div class=\"profile\">
                 <div class=\"profile_details\">
                     <img src=\"";
-        // line 84
+        // line 77
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/user.png"), "html", null, true);
         echo "\" alt=\"\">
                     <div class=\"name_role\">
                         <div class=\"name\">";
-        // line 86
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 86, $this->source); })()), "username", [], "any", false, false, false, 86), "html", null, true);
+        // line 79
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 79, $this->source); })()), "username", [], "any", false, false, false, 79), "html", null, true);
         echo "</div>
                         <div class=\"role\">";
-        // line 87
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 87, $this->source); })()), "job", [], "any", false, false, false, 87), "html", null, true);
+        // line 80
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 80, $this->source); })()), "job", [], "any", false, false, false, 80), "html", null, true);
         echo "</div>
                     </div>
                 </div>
                <a href=\"";
-        // line 90
+        // line 83
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_security_logout");
         echo "\"> <i class='bx bx-log-out'  id=\"log_out\" ></i></a>
             </div>
@@ -219,7 +212,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 
     public function getDebugInfo()
     {
-        return array (  198 => 90,  192 => 87,  188 => 86,  183 => 84,  170 => 74,  160 => 66,  150 => 59,  140 => 52,  130 => 45,  120 => 38,  109 => 30,  103 => 27,  94 => 21,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  191 => 83,  185 => 80,  181 => 79,  176 => 77,  163 => 67,  160 => 66,  150 => 59,  140 => 52,  130 => 45,  120 => 38,  109 => 30,  103 => 27,  94 => 21,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -289,13 +282,6 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
                <span class=\"tooltip\">Permission</span>
           </li>
        {% endif %}
-           <li> 
-              <a href=\"Historique\">
-                    <i class='bx bx-history'></i>
-                    <span class=\"links_name\">Historique</span>
-              </a>
-               <span class=\"tooltip\">Historique</span>
-          </li> 
             <li> 
               <a href=\"{{path('Profile')}}\">
                     <i class='bx bxs-user-rectangle'></i>
@@ -319,6 +305,6 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
       </div>
      
 {% endblock %}
-", "Pages/sidebar.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\sidebar.html.twig");
+", "Pages/sidebar.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\templates\\Pages\\sidebar.html.twig");
     }
 }

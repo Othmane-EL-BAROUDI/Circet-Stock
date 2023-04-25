@@ -48,8 +48,13 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         // line 2
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 6
+        echo "   ";
+        echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
+        echo "
+";
+        // line 7
         $this->displayBlock('body', $context, $blocks);
-        // line 211
+        // line 176
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -79,7 +84,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
         // line 3
         echo "        <link rel=\"stylesheet\" href=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/Users.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/Stock.css"), "html", null, true);
         echo "\">
            <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
   ";
@@ -88,18 +93,15 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
     }
 
-    // line 6
+    // line 7
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 7
-        echo "     ";
-        echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
-        echo "
-     <div class=\"home_content\">
+        // line 8
+        echo "     <div class=\"home_content\">
       <div class=\"modal fade\" id=\"addStock\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addStock\" aria-hidden=\"true\">
                   <div class=\"modal-dialog\" role=\"document\">
                         <div class=\"modal-content\">
@@ -210,12 +212,6 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                         <tr>
                             <td>
                                 <div class=\"user_info\">
-                                    <div class=\"user_image\">
-                                        <img src=\"";
-        // line 120
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/laptop.png"), "html", null, true);
-        echo "\" alt=\"\">
-                                    </div>
                                     <div class=\"user_details\">
                                         <label for=\"name\">Hp</label>
                                         <p>pavillion</p>
@@ -229,16 +225,10 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                                 BW338332
                             </td>
                              <td class=\"info\" >
-                                <img src=\"";
-        // line 135
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/out-stock.png"), "html", null, true);
-        echo "\" alt=\"\">
+                                Yes
                             </td>
                              <td class=\"info\" >
-                                <img src=\"";
-        // line 138
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/dislike.png"), "html", null, true);
-        echo "\" alt=\"\">
+                                Good
                             </td>
                              <td>
                                 <button><i class='bx bx-show bx-sm'></i></button>
@@ -249,12 +239,6 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                          <tr>
                             <td>
                                 <div class=\"user_info\">
-                                    <div class=\"user_pic\">
-                                        <img src=\"";
-        // line 150
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/pc.png"), "html", null, true);
-        echo "\" alt=\"\">
-                                    </div>
                                     <div class=\"user_details\">
                                         <label for=\"name\">Dell</label>
                                         <p>G5 5500</p>
@@ -268,16 +252,10 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                                 BW338332
                             </td>
                              <td class=\"info\">
-                                <img src=\"";
-        // line 165
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/in-stock.png"), "html", null, true);
-        echo "\" alt=\"\">
+                                No
                             </td>
                              <td  class=\"info\">
-                                <img src=\"";
-        // line 168
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/like.png"), "html", null, true);
-        echo "\" alt=\"\">
+                                Bad
                             </td>
                              <td>
                                 <button><i class='bx bx-show bx-sm'></i></button>
@@ -285,45 +263,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                             </td>
                         </tr>
-                                                 <tr>
-                            <td>
-                                <div class=\"user_info\">
-                                    <div class=\"user_pic\">
-                                        <img src=\"";
-        // line 180
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/scanner.png"), "html", null, true);
-        echo "\" alt=\"\">
-                                    </div>
-                                    <div class=\"user_details\">
-                                        <label for=\"name\">Hp</label>
-                                        <p>HG8070</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                scanner 
-                            </td>
-                             <td>
-                                dsqsq8dsq8
-                            </td>
-                             <td class=\"info\">
-                                <img src=\"";
-        // line 195
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/in-stock.png"), "html", null, true);
-        echo "\" alt=\"\">
-                            </td>
-                             <td  class=\"info\">
-                                <img src=\"";
-        // line 198
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/like.png"), "html", null, true);
-        echo "\" alt=\"\">
-                            </td>
-                             <td>
-                                <button><i class='bx bx-show bx-sm'></i></button>
-                                <button><i class='bx bx-edit bx-sm'></i></button>
-                                <button><i class='bx bx-trash bx-sm'></i></button>
-                            </td>
-                        </tr>
+                                                
                     </tbody>
                 </table>
             </div>
@@ -334,14 +274,14 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
     }
 
-    // line 211
+    // line 176
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 212
+        // line 177
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -359,20 +299,25 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         return "Pages/Stock.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  345 => 212,  338 => 211,  318 => 198,  312 => 195,  294 => 180,  279 => 168,  273 => 165,  255 => 150,  240 => 138,  234 => 135,  216 => 120,  99 => 7,  92 => 6,  81 => 3,  74 => 2,  61 => 1,  53 => 211,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  285 => 177,  278 => 176,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 176,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<title>{% block title %}Circet-Stock{% endblock %}</title>
 {% block stylesheets %}
-        <link rel=\"stylesheet\" href=\"{{asset('css/Users.css')}}\">
+        <link rel=\"stylesheet\" href=\"{{asset('css/Stock.css')}}\">
            <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
   {% endblock %}
+   {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
-     {{ include('Pages/sidebar.html.twig') }}
      <div class=\"home_content\">
       <div class=\"modal fade\" id=\"addStock\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addStock\" aria-hidden=\"true\">
                   <div class=\"modal-dialog\" role=\"document\">
@@ -484,9 +429,6 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                         <tr>
                             <td>
                                 <div class=\"user_info\">
-                                    <div class=\"user_image\">
-                                        <img src=\"{{asset('images/laptop.png')}}\" alt=\"\">
-                                    </div>
                                     <div class=\"user_details\">
                                         <label for=\"name\">Hp</label>
                                         <p>pavillion</p>
@@ -500,10 +442,10 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                                 BW338332
                             </td>
                              <td class=\"info\" >
-                                <img src=\"{{asset('images/out-stock.png')}}\" alt=\"\">
+                                Yes
                             </td>
                              <td class=\"info\" >
-                                <img src=\"{{asset('images/dislike.png')}}\" alt=\"\">
+                                Good
                             </td>
                              <td>
                                 <button><i class='bx bx-show bx-sm'></i></button>
@@ -514,9 +456,6 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                          <tr>
                             <td>
                                 <div class=\"user_info\">
-                                    <div class=\"user_pic\">
-                                        <img src=\"{{asset('images/pc.png')}}\" alt=\"\">
-                                    </div>
                                     <div class=\"user_details\">
                                         <label for=\"name\">Dell</label>
                                         <p>G5 5500</p>
@@ -530,10 +469,10 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                                 BW338332
                             </td>
                              <td class=\"info\">
-                                <img src=\"{{asset('images/in-stock.png')}}\" alt=\"\">
+                                No
                             </td>
                              <td  class=\"info\">
-                                <img src=\"{{asset('images/like.png')}}\" alt=\"\">
+                                Bad
                             </td>
                              <td>
                                 <button><i class='bx bx-show bx-sm'></i></button>
@@ -541,36 +480,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                             </td>
                         </tr>
-                                                 <tr>
-                            <td>
-                                <div class=\"user_info\">
-                                    <div class=\"user_pic\">
-                                        <img src=\"{{asset('images/scanner.png')}}\" alt=\"\">
-                                    </div>
-                                    <div class=\"user_details\">
-                                        <label for=\"name\">Hp</label>
-                                        <p>HG8070</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                scanner 
-                            </td>
-                             <td>
-                                dsqsq8dsq8
-                            </td>
-                             <td class=\"info\">
-                                <img src=\"{{asset('images/in-stock.png')}}\" alt=\"\">
-                            </td>
-                             <td  class=\"info\">
-                                <img src=\"{{asset('images/like.png')}}\" alt=\"\">
-                            </td>
-                             <td>
-                                <button><i class='bx bx-show bx-sm'></i></button>
-                                <button><i class='bx bx-edit bx-sm'></i></button>
-                                <button><i class='bx bx-trash bx-sm'></i></button>
-                            </td>
-                        </tr>
+                                                
                     </tbody>
                 </table>
             </div>

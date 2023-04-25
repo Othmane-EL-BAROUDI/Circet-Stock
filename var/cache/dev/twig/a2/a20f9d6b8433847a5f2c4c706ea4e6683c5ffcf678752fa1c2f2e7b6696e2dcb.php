@@ -48,6 +48,11 @@ class __TwigTemplate_6b303279fdb17559f41557c6aee56d1f6d0b3fd527225bdadbfbf415b5c
         // line 2
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 6
+        echo "  ";
+        echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
+        echo "
+";
+        // line 7
         $this->displayBlock('body', $context, $blocks);
         // line 50
         echo "  ";
@@ -88,18 +93,15 @@ class __TwigTemplate_6b303279fdb17559f41557c6aee56d1f6d0b3fd527225bdadbfbf415b5c
 
     }
 
-    // line 6
+    // line 7
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 7
-        echo "     ";
-        echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
-        echo "
-     <div class=\"home_content\">
+        // line 8
+        echo "     <div class=\"home_content\">
             <div class=\"text\">Dashboard</div>
             <div class=\"body_header\">
                   <div>
@@ -177,9 +179,14 @@ class __TwigTemplate_6b303279fdb17559f41557c6aee56d1f6d0b3fd527225bdadbfbf415b5c
         return "Pages/Dashboard.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  166 => 51,  159 => 50,  137 => 35,  125 => 26,  113 => 17,  99 => 7,  92 => 6,  81 => 3,  74 => 2,  61 => 1,  53 => 50,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  168 => 51,  161 => 50,  139 => 35,  127 => 26,  115 => 17,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 50,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -189,8 +196,8 @@ class __TwigTemplate_6b303279fdb17559f41557c6aee56d1f6d0b3fd527225bdadbfbf415b5c
         <link rel=\"stylesheet\" href=\"{{asset('css/Dashboard.css')}}\">
         <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
   {% endblock %}
+  {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
-     {{ include('Pages/sidebar.html.twig') }}
      <div class=\"home_content\">
             <div class=\"text\">Dashboard</div>
             <div class=\"body_header\">

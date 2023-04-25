@@ -3,8 +3,8 @@
         <link rel="stylesheet" href="{{asset('css/Users.css')}}">
          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   {% endblock %}
+  {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
-     {{ include('Pages/sidebar.html.twig') }}
      <div class="home_content">
          <div class="modal fade" id="addUser" tabindex="-1" role="dialog" aria-labelledby="addUser" aria-hidden="true">
                   <div class="modal-dialog" role="document">
@@ -14,11 +14,6 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                     </button>
-                                    </div>
-                                    <div class="modal-body">
-                                          <label for="name">user picture:</label>
-                                          <button><i class='bx bxs-cloud-upload bx-sm'></i></button>
-                                          <input  type="file">
                                     </div>
                                     <div class="modal-body">
                                           <label for="name">user name :</label>
@@ -75,46 +70,40 @@
                     <thead>
                         <tr>
                             <th>users</th>
-                            <th>role</th>
-                            <th>job</th>
                             <th>matricule</th>
+                            <th>job</th>
                             <th>action</th>
                         </tr>
                     </thead>
                     <tbody>
                         
                         {% for key , user in allusers %}
+                        {% if user.username != userInfo.username %}
                             <tr>
                                  <td>
                                 <div class="user_info">
-                                    <div class="user_image">
-                                        <img src="{{asset('images/user.png')}}" alt="">
-                                    </div>
                                     <div class="user_details">
-                                        <label for="name">{{user.username}}  {% if user.username == userInfo.username %} (You)  {% endif %}  </label>
+                                        <label for="name">{{user.username}}  </label>
                                         <p>{{user.email}}</p>
                                     </div>
                                 </div>
                             </td>
-                            <td>
-                               {{user.roles[0]}} 
+                             <td>
+                                {{user.matricule}}
                             </td>
                             <td>
                                {{user.job}} 
                             </td>
-                             <td>
-                                {{user.matricule}}
-                            </td>
-                            {% if user.roles[0] != "ROLE_ADMIN" %}
+                        
                                     <td>
                                 <button><i class='bx bx-show bx-sm'></i></button>
                                 <button><i class='bx bx-edit bx-sm'></i></button>
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                                     </td>
-                            {% endif %}
+                        
                              
                         </tr>
-            
+                        {% endif %}
                         {% endfor %}
                            
                         

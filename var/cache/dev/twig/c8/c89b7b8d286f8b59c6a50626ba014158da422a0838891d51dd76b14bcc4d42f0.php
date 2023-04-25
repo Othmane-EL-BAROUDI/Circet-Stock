@@ -48,8 +48,13 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
         // line 2
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 6
+        echo "  ";
+        echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
+        echo "
+";
+        // line 7
         $this->displayBlock('body', $context, $blocks);
-        // line 126
+        // line 115
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -88,18 +93,15 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 
     }
 
-    // line 6
+    // line 7
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 7
-        echo "     ";
-        echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
-        echo "
-     <div class=\"home_content\">
+        // line 8
+        echo "     <div class=\"home_content\">
          <div class=\"modal fade\" id=\"addUser\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addUser\" aria-hidden=\"true\">
                   <div class=\"modal-dialog\" role=\"document\">
                         <div class=\"modal-content\">
@@ -108,11 +110,6 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                                     <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
                                     <span aria-hidden=\"true\">&times;</span>
                                     </button>
-                                    </div>
-                                    <div class=\"modal-body\">
-                                          <label for=\"name\">user picture:</label>
-                                          <button><i class='bx bxs-cloud-upload bx-sm'></i></button>
-                                          <input  type=\"file\">
                                     </div>
                                     <div class=\"modal-body\">
                                           <label for=\"name\">user name :</label>
@@ -169,84 +166,67 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                     <thead>
                         <tr>
                             <th>users</th>
-                            <th>role</th>
-                            <th>job</th>
                             <th>matricule</th>
+                            <th>job</th>
                             <th>action</th>
                         </tr>
                     </thead>
                     <tbody>
                         
                         ";
-        // line 86
+        // line 80
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["allusers"]) || array_key_exists("allusers", $context) ? $context["allusers"] : (function () { throw new RuntimeError('Variable "allusers" does not exist.', 86, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["allusers"]) || array_key_exists("allusers", $context) ? $context["allusers"] : (function () { throw new RuntimeError('Variable "allusers" does not exist.', 80, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["user"]) {
-            // line 87
-            echo "                            <tr>
+            // line 81
+            echo "                        ";
+            if ((twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 81) != twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 81, $this->source); })()), "username", [], "any", false, false, false, 81))) {
+                // line 82
+                echo "                            <tr>
                                  <td>
                                 <div class=\"user_info\">
-                                    <div class=\"user_image\">
-                                        <img src=\"";
-            // line 91
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/user.png"), "html", null, true);
-            echo "\" alt=\"\">
-                                    </div>
                                     <div class=\"user_details\">
                                         <label for=\"name\">";
-            // line 94
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 94), "html", null, true);
-            echo "  ";
-            if ((twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 94) == twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 94, $this->source); })()), "username", [], "any", false, false, false, 94))) {
-                echo " (You)  ";
-            }
-            echo "  </label>
+                // line 86
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 86), "html", null, true);
+                echo "  </label>
                                         <p>";
-            // line 95
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 95), "html", null, true);
-            echo "</p>
+                // line 87
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 87), "html", null, true);
+                echo "</p>
                                     </div>
                                 </div>
                             </td>
-                            <td>
-                               ";
-            // line 100
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 100), 0, [], "array", false, false, false, 100), "html", null, true);
-            echo " 
-                            </td>
-                            <td>
-                               ";
-            // line 103
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "job", [], "any", false, false, false, 103), "html", null, true);
-            echo " 
-                            </td>
                              <td>
                                 ";
-            // line 106
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "matricule", [], "any", false, false, false, 106), "html", null, true);
-            echo "
+                // line 92
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "matricule", [], "any", false, false, false, 92), "html", null, true);
+                echo "
                             </td>
-                            ";
-            // line 108
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 108), 0, [], "array", false, false, false, 108) != "ROLE_ADMIN")) {
-                // line 109
-                echo "                                    <td>
+                            <td>
+                               ";
+                // line 95
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "job", [], "any", false, false, false, 95), "html", null, true);
+                echo " 
+                            </td>
+                        
+                                    <td>
                                 <button><i class='bx bx-show bx-sm'></i></button>
                                 <button><i class='bx bx-edit bx-sm'></i></button>
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                                     </td>
-                            ";
-            }
-            // line 115
-            echo "                             
+                        
+                             
                         </tr>
-            
                         ";
+            }
+            // line 107
+            echo "                        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 119
+        // line 108
         echo "                           
                         
                     </tbody>
@@ -259,14 +239,14 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 
     }
 
-    // line 126
+    // line 115
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 127
+        // line 116
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -284,9 +264,14 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
         return "Pages/Users.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  270 => 127,  263 => 126,  250 => 119,  241 => 115,  233 => 109,  231 => 108,  226 => 106,  220 => 103,  214 => 100,  206 => 95,  198 => 94,  192 => 91,  186 => 87,  182 => 86,  99 => 7,  92 => 6,  81 => 3,  74 => 2,  61 => 1,  53 => 126,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  250 => 116,  243 => 115,  230 => 108,  224 => 107,  209 => 95,  203 => 92,  195 => 87,  191 => 86,  185 => 82,  182 => 81,  178 => 80,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 115,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -296,8 +281,8 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
         <link rel=\"stylesheet\" href=\"{{asset('css/Users.css')}}\">
          <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
   {% endblock %}
+  {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
-     {{ include('Pages/sidebar.html.twig') }}
      <div class=\"home_content\">
          <div class=\"modal fade\" id=\"addUser\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addUser\" aria-hidden=\"true\">
                   <div class=\"modal-dialog\" role=\"document\">
@@ -307,11 +292,6 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                                     <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
                                     <span aria-hidden=\"true\">&times;</span>
                                     </button>
-                                    </div>
-                                    <div class=\"modal-body\">
-                                          <label for=\"name\">user picture:</label>
-                                          <button><i class='bx bxs-cloud-upload bx-sm'></i></button>
-                                          <input  type=\"file\">
                                     </div>
                                     <div class=\"modal-body\">
                                           <label for=\"name\">user name :</label>
@@ -368,46 +348,40 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                     <thead>
                         <tr>
                             <th>users</th>
-                            <th>role</th>
-                            <th>job</th>
                             <th>matricule</th>
+                            <th>job</th>
                             <th>action</th>
                         </tr>
                     </thead>
                     <tbody>
                         
                         {% for key , user in allusers %}
+                        {% if user.username != userInfo.username %}
                             <tr>
                                  <td>
                                 <div class=\"user_info\">
-                                    <div class=\"user_image\">
-                                        <img src=\"{{asset('images/user.png')}}\" alt=\"\">
-                                    </div>
                                     <div class=\"user_details\">
-                                        <label for=\"name\">{{user.username}}  {% if user.username == userInfo.username %} (You)  {% endif %}  </label>
+                                        <label for=\"name\">{{user.username}}  </label>
                                         <p>{{user.email}}</p>
                                     </div>
                                 </div>
                             </td>
-                            <td>
-                               {{user.roles[0]}} 
+                             <td>
+                                {{user.matricule}}
                             </td>
                             <td>
                                {{user.job}} 
                             </td>
-                             <td>
-                                {{user.matricule}}
-                            </td>
-                            {% if user.roles[0] != \"ROLE_ADMIN\" %}
+                        
                                     <td>
                                 <button><i class='bx bx-show bx-sm'></i></button>
                                 <button><i class='bx bx-edit bx-sm'></i></button>
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                                     </td>
-                            {% endif %}
+                        
                              
                         </tr>
-            
+                        {% endif %}
                         {% endfor %}
                            
                         

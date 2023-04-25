@@ -1,10 +1,10 @@
 <title>{% block title %}Circet-Stock{% endblock %}</title>
 {% block stylesheets %}
-        <link rel="stylesheet" href="{{asset('css/Users.css')}}">
+        <link rel="stylesheet" href="{{asset('css/Stock.css')}}">
            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   {% endblock %}
+   {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
-     {{ include('Pages/sidebar.html.twig') }}
      <div class="home_content">
       <div class="modal fade" id="addStock" tabindex="-1" role="dialog" aria-labelledby="addStock" aria-hidden="true">
                   <div class="modal-dialog" role="document">
@@ -116,9 +116,6 @@
                         <tr>
                             <td>
                                 <div class="user_info">
-                                    <div class="user_image">
-                                        <img src="{{asset('images/laptop.png')}}" alt="">
-                                    </div>
                                     <div class="user_details">
                                         <label for="name">Hp</label>
                                         <p>pavillion</p>
@@ -132,10 +129,10 @@
                                 BW338332
                             </td>
                              <td class="info" >
-                                <img src="{{asset('images/out-stock.png')}}" alt="">
+                                Yes
                             </td>
                              <td class="info" >
-                                <img src="{{asset('images/dislike.png')}}" alt="">
+                                Good
                             </td>
                              <td>
                                 <button><i class='bx bx-show bx-sm'></i></button>
@@ -146,9 +143,6 @@
                          <tr>
                             <td>
                                 <div class="user_info">
-                                    <div class="user_pic">
-                                        <img src="{{asset('images/pc.png')}}" alt="">
-                                    </div>
                                     <div class="user_details">
                                         <label for="name">Dell</label>
                                         <p>G5 5500</p>
@@ -162,10 +156,10 @@
                                 BW338332
                             </td>
                              <td class="info">
-                                <img src="{{asset('images/in-stock.png')}}" alt="">
+                                No
                             </td>
                              <td  class="info">
-                                <img src="{{asset('images/like.png')}}" alt="">
+                                Bad
                             </td>
                              <td>
                                 <button><i class='bx bx-show bx-sm'></i></button>
@@ -173,36 +167,7 @@
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                             </td>
                         </tr>
-                                                 <tr>
-                            <td>
-                                <div class="user_info">
-                                    <div class="user_pic">
-                                        <img src="{{asset('images/scanner.png')}}" alt="">
-                                    </div>
-                                    <div class="user_details">
-                                        <label for="name">Hp</label>
-                                        <p>HG8070</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                scanner 
-                            </td>
-                             <td>
-                                dsqsq8dsq8
-                            </td>
-                             <td class="info">
-                                <img src="{{asset('images/in-stock.png')}}" alt="">
-                            </td>
-                             <td  class="info">
-                                <img src="{{asset('images/like.png')}}" alt="">
-                            </td>
-                             <td>
-                                <button><i class='bx bx-show bx-sm'></i></button>
-                                <button><i class='bx bx-edit bx-sm'></i></button>
-                                <button><i class='bx bx-trash bx-sm'></i></button>
-                            </td>
-                        </tr>
+                                                
                     </tbody>
                 </table>
             </div>

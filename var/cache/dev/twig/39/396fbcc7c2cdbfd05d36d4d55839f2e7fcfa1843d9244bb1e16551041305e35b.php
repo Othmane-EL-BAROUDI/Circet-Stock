@@ -48,8 +48,13 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         // line 2
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 6
+        echo "  ";
+        echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
+        echo "
+";
+        // line 7
         $this->displayBlock('body', $context, $blocks);
-        // line 89
+        // line 86
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -88,18 +93,15 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 
     }
 
-    // line 6
+    // line 7
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 7
-        echo "     ";
-        echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
-        echo "
-     <div class=\"home_content\">
+        // line 8
+        echo "     <div class=\"home_content\">
             <div class=\"modal fade\" id=\"editRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"editRole\" aria-hidden=\"true\">
                   <div class=\"modal-dialog\" role=\"document\">
                         <div class=\"modal-content\">
@@ -133,12 +135,10 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
                                     </div>
                                     <div class=\"modal-body\">
                                           <label for=\"name\">Permission name :</label>
-                                          <input  placeholder=\"@permission_name\" type=\"text\">
-                                          <div class=\"prm\" >Read :  <input type=\"checkbox\" name=\"\" id=\"\"></div>
-                                          <div class=\"prm\" >write : <input type=\"checkbox\" name=\"\" id=\"\"></div>
+                                          <input  placeholder=\"@permission_name\" required type=\"text\">
                                     </div>
                                     <div class=\"modal-footer\">
-                                    <button type=\"button\" class=\"close_button1\">Add permission</button>
+                                    <button type=\"submit\"  class=\"close_button1\">Add permission</button>
                                </div>
                          </div>
                   </div>
@@ -156,28 +156,24 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
               <table class=\"content-table\">
                     <thead>
                         <tr>
-                            <th>id permission</th>
-                            <th>permission name</th>
+                            <th>permission</th>
                             <th>action</th>
                         </tr>
                     </thead>
                     <tbody>
                         ";
-        // line 71
+        // line 68
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["allPermissions"]) || array_key_exists("allPermissions", $context) ? $context["allPermissions"] : (function () { throw new RuntimeError('Variable "allPermissions" does not exist.', 71, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["allPermissions"]) || array_key_exists("allPermissions", $context) ? $context["allPermissions"] : (function () { throw new RuntimeError('Variable "allPermissions" does not exist.', 68, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["permission"]) {
-            // line 72
+            // line 69
             echo "                              
                         
                             <tr>
-                              <td>";
-            // line 75
-            echo twig_escape_filter($this->env, ($context["key"] + 1), "html", null, true);
-            echo " </td>
+                             
                              <td> ";
-            // line 76
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 76), "html", null, true);
+            // line 73
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 73), "html", null, true);
             echo " </td>
                                     <td>
                                 <button><i class='bx bx-edit bx-sm'></i></button>
@@ -189,7 +185,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['permission'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 82
+        // line 79
         echo "   
                     </tbody>
                 </table>
@@ -202,14 +198,14 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 
     }
 
-    // line 89
+    // line 86
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 90
+        // line 87
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -227,9 +223,14 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         return "Pages/Permission.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  213 => 90,  206 => 89,  193 => 82,  180 => 76,  176 => 75,  171 => 72,  167 => 71,  99 => 7,  92 => 6,  81 => 3,  74 => 2,  61 => 1,  53 => 89,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  209 => 87,  202 => 86,  189 => 79,  176 => 73,  170 => 69,  166 => 68,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 86,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -239,8 +240,8 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         <link rel=\"stylesheet\" href=\"{{asset('css/Role.css')}}\">
          <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
   {% endblock %}
+  {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
-     {{ include('Pages/sidebar.html.twig') }}
      <div class=\"home_content\">
             <div class=\"modal fade\" id=\"editRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"editRole\" aria-hidden=\"true\">
                   <div class=\"modal-dialog\" role=\"document\">
@@ -275,12 +276,10 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
                                     </div>
                                     <div class=\"modal-body\">
                                           <label for=\"name\">Permission name :</label>
-                                          <input  placeholder=\"@permission_name\" type=\"text\">
-                                          <div class=\"prm\" >Read :  <input type=\"checkbox\" name=\"\" id=\"\"></div>
-                                          <div class=\"prm\" >write : <input type=\"checkbox\" name=\"\" id=\"\"></div>
+                                          <input  placeholder=\"@permission_name\" required type=\"text\">
                                     </div>
                                     <div class=\"modal-footer\">
-                                    <button type=\"button\" class=\"close_button1\">Add permission</button>
+                                    <button type=\"submit\"  class=\"close_button1\">Add permission</button>
                                </div>
                          </div>
                   </div>
@@ -298,8 +297,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
               <table class=\"content-table\">
                     <thead>
                         <tr>
-                            <th>id permission</th>
-                            <th>permission name</th>
+                            <th>permission</th>
                             <th>action</th>
                         </tr>
                     </thead>
@@ -308,7 +306,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
                               
                         
                             <tr>
-                              <td>{{key+1}} </td>
+                             
                              <td> {{permission.getPermissionName()}} </td>
                                     <td>
                                 <button><i class='bx bx-edit bx-sm'></i></button>

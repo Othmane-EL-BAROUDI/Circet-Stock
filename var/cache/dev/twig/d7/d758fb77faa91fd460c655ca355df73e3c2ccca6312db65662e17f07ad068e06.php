@@ -155,7 +155,7 @@ class __TwigTemplate_8cf60bcc42060a96097e2ed6a9770ebd20866a8fa6a6ddfe85a0c5a186a
                                     </div>
 
                                     <div class=\"text-center mt-4\">
-                                          <button type=\"button\" class=\"btn btn-success\">Mettre à jour</button>
+                                          <button type=\"button\" class=\"update\">Mettre à jour</button>
                                     </div>
                               </div>
                         </div>
@@ -261,7 +261,7 @@ class __TwigTemplate_8cf60bcc42060a96097e2ed6a9770ebd20866a8fa6a6ddfe85a0c5a186a
                                     </div>
 
                                     <div class=\"text-center mt-4\">
-                                          <button type=\"button\" class=\"btn btn-success\">Mettre à jour</button>
+                                          <button type=\"button\" class=\"update\">Mettre à jour</button>
                                     </div>
                               </div>
                         </div>
@@ -272,6 +272,6 @@ class __TwigTemplate_8cf60bcc42060a96097e2ed6a9770ebd20866a8fa6a6ddfe85a0c5a186a
 {% endblock %}
   {% block javascripts %}
             <script src=\"{{asset('JS/sidebar.js')}}\"></script>
-   {% endblock %}", "Pages/Profile.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\Profile.html.twig");
+   {% endblock %}", "Pages/Profile.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\templates\\Pages\\Profile.html.twig");
     }
 }
