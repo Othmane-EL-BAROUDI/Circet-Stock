@@ -2,6 +2,8 @@
 {% block stylesheets %}
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="{{asset('css/sidebar.css')}}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-TY6ar5i3FCijZzFv+iGibWd6NUmnca6H5y5r5Q6lYU+jms0IQxh26RpX9Mv0zWNN0lb7lnpPxyVTdIvAVe8wDg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   {% endblock %}
 {% block body %}
       <div class="sidebar">
@@ -29,22 +31,35 @@
                <span class="tooltip">Dashboard</span>
           </li>
 
-           <li> 
-              <a href="{{path('Profile')}}">
-                    <i class='bx bx-user'></i>
-                    <span class="links_name">User</span>
+            <li> 
+              <a href="#">
+                    <i class='bx bxs-user-plus'></i>
+                    <span class="links_name">Users</span>
               </a>
-               <span class="tooltip">User</span>
+               <span class="tooltip">Users</span>
+          </li>
+           <li> 
+              <a href="#">
+                    <i class='bx bx-spreadsheet'></i>
+                    <span class="links_name">Privilege</span>
+              </a>
+               <span class="tooltip">Privilege</span>
           </li>
 
            <li> 
-              <a href="#">
+              <a href="Historique">
                     <i class='bx bx-history'></i>
                     <span class="links_name">Historique</span>
               </a>
                <span class="tooltip">Historique</span>
+          </li> 
+            <li> 
+              <a href="#">
+                    <i class='bx bxs-user-rectangle'></i>
+                    <span class="links_name">Profile</span>
+              </a>
+               <span class="tooltip">Profile</span>
           </li>
-
            <li> 
               <a href="#">
                    <i class='bx bx-cog'></i>

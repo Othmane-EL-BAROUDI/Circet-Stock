@@ -13,6 +13,7 @@ body{
     overflow: hidden;
 }
 .sidebar{
+    z-index: 100;
     position: fixed;
     top:0;
     left: 0;
@@ -26,6 +27,7 @@ body{
     width: 240px;
 }
 .sidebar .logo_content .logo{
+    
     color: white ;
     display: flex;
     height: 50px;
@@ -51,9 +53,19 @@ body{
     font-weight: 400;
 }
 .sidebar.active #btn{
+    
     left: 90%;
 }
+.sidebar #btn:hover{
+    background-color: #f9a826;
+    color: white;
+}
+.sidebar.active #btn:hover{
+    background:none;
+    color: white;
+}
 .sidebar #btn{
+    border-radius: 12px;
     position: absolute;
     color: white;
     left: 50%;
@@ -67,7 +79,8 @@ body{
     cursor: pointer;
 }
 .sidebar ul{
-    margin-top: 20px;
+    
+    margin-top: 65px;
 }
 .sidebar ul li{
     position: relative;
@@ -87,6 +100,8 @@ body{
     pointer-events: auto;
 }
 .sidebar ul li .tooltip{
+   
+    color: white;
     position: absolute;
     left: 69px;
     top: 0;
@@ -94,11 +109,10 @@ body{
     border-radius: 6px;
     height: 35px;
     width: 122px;
-    background-color: white;
+    background-color: #f9a826;
     line-height: 35px;
     text-align: center;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    transition: 0s;
     opacity: 0;
     pointer-events: none;
     display: block;
@@ -121,8 +135,8 @@ body{
     white-space: nowrap;
 }
 .sidebar ul li a:hover{
-    color: #11101d;
-    background-color: white;
+    color: white;
+    background-color: #f9a826;
 }
 .sidebar ul li a i{
     height: 50px;
@@ -186,6 +200,15 @@ body{
 }
 .sidebar.active .profile #log_out{
     left: 88%;
+}
+.profile #log_out:hover{
+    background-color: #f9a826;
+    color: white;
+}
+  
+.sidebar.active #log_out:hover{
+    background-color:#11101d;
+    color: white;
 }
 
 .sidebar.active ~ .home_content{
