@@ -49,7 +49,7 @@ class __TwigTemplate_8cf60bcc42060a96097e2ed6a9770ebd20866a8fa6a6ddfe85a0c5a186a
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 6
         $this->displayBlock('body', $context, $blocks);
-        // line 73
+        // line 72
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -106,7 +106,6 @@ class __TwigTemplate_8cf60bcc42060a96097e2ed6a9770ebd20866a8fa6a6ddfe85a0c5a186a
                   <div class=\"col-md-9\">
                         <div class=\"card mb-3 content\">
                               <div class=\"card-body\">
-                                    
                                     <div class=\"mb-3 row\">
                                           <label class=\"col-sm-2 col-form-label\">Nom</label>
                                           <div class=\"col-sm-10\">
@@ -169,14 +168,14 @@ class __TwigTemplate_8cf60bcc42060a96097e2ed6a9770ebd20866a8fa6a6ddfe85a0c5a186a
 
     }
 
-    // line 73
+    // line 72
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 74
+        // line 73
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -193,7 +192,7 @@ class __TwigTemplate_8cf60bcc42060a96097e2ed6a9770ebd20866a8fa6a6ddfe85a0c5a186a
 
     public function getDebugInfo()
     {
-        return array (  180 => 74,  173 => 73,  99 => 7,  92 => 6,  81 => 3,  74 => 2,  61 => 1,  53 => 73,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  179 => 73,  172 => 72,  99 => 7,  92 => 6,  81 => 3,  74 => 2,  61 => 1,  53 => 72,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -212,7 +211,6 @@ class __TwigTemplate_8cf60bcc42060a96097e2ed6a9770ebd20866a8fa6a6ddfe85a0c5a186a
                   <div class=\"col-md-9\">
                         <div class=\"card mb-3 content\">
                               <div class=\"card-body\">
-                                    
                                     <div class=\"mb-3 row\">
                                           <label class=\"col-sm-2 col-form-label\">Nom</label>
                                           <div class=\"col-sm-10\">
