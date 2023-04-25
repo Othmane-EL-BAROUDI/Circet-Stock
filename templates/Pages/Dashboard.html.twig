@@ -1,11 +1,50 @@
 <title>{% block title %}Circet-Dashboard{% endblock %}</title>
 {% block stylesheets %}
         <link rel="stylesheet" href="{{asset('css/Dashboard.css')}}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   {% endblock %}
 {% block body %}
      {{ include('Pages/sidebar.html.twig') }}
      <div class="home_content">
             <div class="text">Dashboard</div>
+            <div class="body_header">
+                  <div>
+                        <div class="pic_container">
+                              <i class='bx bxs-user bx-lg'></i>
+                        </div>
+                        <div class="info_container">
+                              <label for="name">USER</label>
+                              <p>0</p>
+                        </div>
+                  </div>
+                   <div>
+                        <div class="pic_container">
+                              <i class='bx bxs-user-voice bx-lg'></i>
+                        </div>
+                        <div class="info_container">
+                              <label for="name">ADMIN</label>
+                              <p>0</p>
+                        </div>
+                  </div>
+                   <div>
+                        <div class="pic_container">
+                              <i class='bx bx-package bx-lg'></i>
+                        </div>
+                        <div class="info_container">
+                              <label for="name">STOCK ITEMS</label>
+                              <p>0</p>
+                        </div>
+                  </div>
+                   <div>
+                        <div class="pic_container">
+                              <i class='bx bxs-analyse bx-lg'></i>
+                        </div>
+                        <div class="info_container">
+                              <label for="name">AFFECTATION</label>
+                              <p>0</p>
+                        </div>
+                  </div>
+            </div>
       </div>
 {% endblock %}
   {% block javascripts %}

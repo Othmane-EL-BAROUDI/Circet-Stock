@@ -50,131 +50,21 @@
                     <button>   Sort  </button>
                 </div>
             <div class="materiel_area">
+                  {% for key , item in data %}
+                        <div class="materiel">
+                              <div class="pic">
+                                    <img src="{{asset('images/laptop.png')}}" alt="">
+                              </div>
+                              <div class="details">
+                                    <label for="name">{{item.id}}</label>
+                              </div>
+                              <div class="action">
+                                    <button>Demande</button>
+                              <button type="button"  data-toggle="modal" data-target="#exampleModal">details</button>
 
-                  <div class="materiel">
-                        <div class="pic">
-                              <img src="{{asset('images/pc.png')}}" alt="">
+                              </div>
                         </div>
-                        <div class="details">
-                              <label for="name">Dell G5 5500</label>
-                        </div>
-                        <div class="action">
-                              <button>Demande</button>
-                             <button type="button"  data-toggle="modal" data-target="#exampleModal">details</button>
-
-                        </div>
-                  </div>
-                   <div class="materiel">
-                        <div class="pic">
-                              <img src="{{asset('images/laptop.png')}}" alt="">
-                        </div>
-                        <div class="details">
-                              <label for="name">Hp pavillion</label>
-                        </div>
-                        <div class="action">
-                              <button>Demande</button>
-                             <button type="button"  data-toggle="modal" data-target="#exampleModal">details</button>
-                        </div>
-                  </div>
-                   <div class="materiel">
-                        <div class="pic">
-                              <img src="{{asset('images/mobile-phone.png')}}" alt="">
-                        </div>
-                        <div class="details">
-                              <label for="name">iphone Xr</label>
-                        </div>
-                        <div class="action">
-                              <button>Demande</button>
-                              <button type="submit"> details</button>
-                        </div>
-                  </div>
-                   <div class="materiel">
-                        <div class="pic">
-                              <img src="{{asset('images/printer.png')}}" alt="">
-                        </div>
-                        <div class="details">
-                              <label for="name">hp printer</label>
-                        </div>
-                        <div class="action">
-                              <button>Demande</button>
-                              <button type="submit"> details</button>
-                        </div>
-                  </div>
-                  <div class="materiel">
-                        <div class="pic">
-                              <img src="{{asset('images/scanner.png')}}" alt="">
-                        </div>
-                        <div class="details">
-                              <label for="name">hp scanner</label>
-                        </div>
-                        <div class="action">
-                              <button>Demande</button>
-                              <button type="submit"> details</button>
-                        </div>
-                  </div>
-                   <div class="materiel">
-                        <div class="pic">
-                              <img src="{{asset('images/computer-mouse.png')}}" alt="">
-                        </div>
-                        <div class="details">
-                              <label for="name">Mouse</label>
-                        </div>
-                        <div class="action">
-                              <button>Demande</button>
-                              <button type="submit"> details</button>
-                        </div>
-                  </div>
-                   <div class="materiel">
-                        <div class="pic">
-                              <img src="{{asset('images/headphones.png')}}" alt="">
-                        </div>
-                        <div class="details">
-                              <label for="name">head phones</label>
-                        </div>
-                        <div class="action">
-                              <button>Demande</button>
-                              <button type="submit"> details</button>
-                        </div>
-                  </div>
-                  <div class="materiel">
-                        <div class="pic">
-                              <img src="{{asset('images/keyboard.png')}}" alt="">
-                        </div>
-                        <div class="details">
-                              <label for="name">keyboard</label>
-                        </div>
-                        <div class="action">
-                              <button>Demande</button>
-                              <button type="submit"> details</button>
-                        </div>
-                  </div>
-                  <div class="materiel">
-                        <div class="pic">
-                              <img src="{{asset('images/monitor.png')}}" alt="">
-                        </div>
-                        <div class="details">
-                              <label for="name">msi monitor</label>
-                        </div>
-                        <div class="action">
-                              <button>Demande</button>
-                              <button type="submit"> details</button>
-                        </div>
-                  </div>
-                  <div class="materiel">
-                        <div class="pic">
-                              <img src="{{asset('images/cable.png')}}" alt="">
-                        </div>
-                        <div class="details">
-                              <label for="name">Cable</label>
-                        </div>
-                        <div class="action">
-                              <button>Demande</button>
-                              <button type="submit"> details</button>
-                        </div>
-                  </div>
-                 
-                   
-                  
+                  {% endfor %} 
             </div>
       </div>
 {% endblock %}

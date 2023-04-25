@@ -1,4 +1,5 @@
 {% extends 'base.html.twig' %}
+
 {% block stylesheets %}
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="{{asset('css/sidebar.css')}}">
@@ -6,6 +7,7 @@
 
   {% endblock %}
 {% block body %}
+
       <div class="sidebar">
         <div class="logo_content">
           <div class="logo">
@@ -22,7 +24,8 @@
               </a>
               <span class="tooltip">Home</span>
           </li>
-
+           {% if userInfo.roles[0]== "ROLE_ADMIN" %} 
+           {% endif %}
            <li> 
               <a href="{{path('Dashboard')}}">
                     <i class='bx bxs-dashboard' ></i>
@@ -32,20 +35,34 @@
           </li>
 
             <li> 
-              <a href="#">
+              <a href="{{path('Users')}}">
                     <i class='bx bxs-user-plus'></i>
                     <span class="links_name">Users</span>
               </a>
                <span class="tooltip">Users</span>
           </li>
            <li> 
-              <a href="#">
-                    <i class='bx bx-spreadsheet'></i>
-                    <span class="links_name">Privilege</span>
+              <a href="{{path('Stock')}}">
+                    <i class='bx bx-package'></i>
+                    <span class="links_name">Stock</span>
               </a>
-               <span class="tooltip">Privilege</span>
+               <span class="tooltip">Stock</span>
           </li>
-
+           <li> 
+              <a href="{{path('Role')}}">
+                   <i class='bx bx-briefcase-alt-2'></i>
+                    <span class="links_name"> Role</span>
+              </a>
+               <span class="tooltip">Role</span>
+          </li>
+          <li> 
+              <a href="{{path('Permission')}}">
+                    <i class='bx bx-spreadsheet'></i>
+                    <span class="links_name">Permission</span>
+              </a>
+               <span class="tooltip">Permission</span>
+          </li>
+      
            <li> 
               <a href="Historique">
                     <i class='bx bx-history'></i>
@@ -60,24 +77,17 @@
               </a>
                <span class="tooltip">Profile</span>
           </li>
-           <li> 
-              <a href="#">
-                   <i class='bx bx-cog'></i>
-                    <span class="links_name">Settings</span>
-              </a>
-               <span class="tooltip">Settings</span>
-          </li>
         </ul>
         <div class="profile_content">
             <div class="profile">
                 <div class="profile_details">
                     <img src="{{asset('images/user.png')}}" alt="">
                     <div class="name_role">
-                        <div class="name">XjonSnow</div>
-                        <div class="role">Web dev</div>
+                        <div class="name">{{userInfo.username}}</div>
+                        <div class="role">{{userInfo.roles[0]}}</div>
                     </div>
                 </div>
-                <i class='bx bx-log-out'  id="log_out" ></i>
+               <a href="{{ path('fos_user_security_logout') }}"> <i class='bx bx-log-out'  id="log_out" ></i></a>
             </div>
         </div>
       </div>

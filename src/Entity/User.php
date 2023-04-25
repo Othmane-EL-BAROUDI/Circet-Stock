@@ -18,10 +18,38 @@ class User extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $matricule;
+       /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $manager;
 
     public function __construct()
     {
         parent::__construct();
         // your own logic
+    }
+    public function getMatricule(): ?string
+    {
+        return $this->matricule;
+    }
+    public function getManager(): ?string
+    {
+        return $this->matricule;
+    }
+    public function setManager(string $manager): self
+    {
+        $this->manager = $manager;
+
+        return $this;
+    }
+    public function setMatricule(string $matricule): self
+    {
+        $this->matricule = $matricule;
+
+        return $this;
     }
 }

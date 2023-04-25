@@ -1,0 +1,215 @@
+<title>{% block title %}Circet-Users{% endblock %}</title>
+{% block stylesheets %}
+        <link rel="stylesheet" href="{{asset('css/Users.css')}}">
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  {% endblock %}
+{% block body %}
+     {{ include('Pages/sidebar.html.twig') }}
+     <div class="home_content">
+         <div class="modal fade" id="addUser" tabindex="-1" role="dialog" aria-labelledby="addUser" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                             <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Add user</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                          <label for="name">user picture:</label>
+                                          <button><i class='bx bxs-cloud-upload bx-sm'></i></button>
+                                          <input  type="file">
+                                    </div>
+                                    <div class="modal-body">
+                                          <label for="name">user name :</label>
+                                          <input  placeholder="@user_name" type="text">
+                                    </div>
+                                     <div class="modal-body">
+                                          <label for="name">user matricule :</label>
+                                          <input  placeholder="@matricule" type="text">
+                                    </div>
+                                     <div class="modal-body">
+                                          <label for="name">user manager :</label>
+                                          <input  placeholder="@manager" type="text">
+                                    </div>
+                                     <div class="modal-body">
+                                          <label for="name">user role :</label>
+                                          <select name="role" id="">
+                                                 <option selected disabled>role</option>
+                                          </select>
+                                    </div>
+                                     <div class="modal-body">
+                                          <label for="name">user permission :</label>
+                                          <select name="role" id="">
+                                                 <option selected disabled>permission</option>
+                                          </select>
+                                    </div>
+                                     <div class="modal-body">
+                                          <label for="name">user email :</label>
+                                          <input  placeholder="user_email@gmail.com" type="text">
+                                    </div>
+                                    <div class="modal-body">
+                                          <label for="name">user password:</label>
+                                          <input  placeholder="@password" type="text">
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="close_button1">Add user</button>
+                               </div>
+                         </div>
+                  </div>
+                  
+      </div>
+            <div class="text">Users</div>
+            <button type="button" class="new" data-toggle="modal" data-target="#addUser">Add new user</button>
+            <div class="main_content">
+                 <div class="sort">
+                    <input type="text" placeholder="Search" >
+                     <select name="role">
+                            <option selected disabled>role</option>
+                            <option value="manager">manager</option>
+                            <option value="admin">admin</option>
+                    </select>
+                    <button>   Search  </button>
+                </div>
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>users</th>
+                            <th>role</th>
+                            <th>matricule</th>
+                            <th>action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="user_info">
+                                    <div class="user_image">
+                                        <img src="{{asset('images/user.png')}}" alt="">
+                                    </div>
+                                    <div class="user_details">
+                                        <label for="name">XjonSnow</label>
+                                        <p>aymanegassi972003@gmail.com</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                Web developer 
+                            </td>
+                             <td>
+                                BW338332
+                            </td>
+                             <td>
+                                <button><i class='bx bx-show bx-sm'></i></button>
+                                <button><i class='bx bx-edit bx-sm'></i></button>
+                                <button><i class='bx bx-trash bx-sm'></i></button>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                <div class="user_info">
+                                    <div class="user_image">
+                                        <img src="{{asset('images/manager.png')}}" alt="">
+                                    </div>
+                                    <div class="user_details">
+                                        <label for="name">aymane</label>
+                                        <p>aymane@gmail.com</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td >
+                                manager
+                            </td>
+                             <td>
+                                BW338332
+                            </td>
+                             <td>
+                                <button><i class='bx bx-show bx-sm'></i></button>
+                                <button><i class='bx bx-edit bx-sm'></i></button>
+                                <button><i class='bx bx-trash bx-sm'></i></button>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                <div class="user_info">
+                                    <div class="user_image">
+                                        <img src="{{asset('images/technician.png')}}" alt="">
+                                    </div>
+                                    <div class="user_details">
+                                        <label for="name">Driss</label>
+                                        <p>Driss@gmail.com</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                technician
+                            </td>
+                             <td>
+                                BW338332
+                            </td>
+                             <td>
+                                <button><i class='bx bx-show bx-sm'></i></button>
+                                <button><i class='bx bx-edit bx-sm'></i></button>
+                                <button><i class='bx bx-trash bx-sm'></i></button>
+                            </td>
+                        </tr>
+                                                 <tr>
+                            <td>
+                                <div class="user_info">
+                                    <div class="user_image">
+                                        <img src="{{asset('images/admin.png')}}" alt="">
+                                    </div>
+                                    <div class="user_details">
+                                        <label for="name">Hmida</label>
+                                        <p>Hmida@gmail.com</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                admin
+                            </td>
+                             <td>
+                                BW338332
+                            </td>
+                              <td>
+                                <button><i class='bx bx-show bx-sm'></i></button>
+                                <button><i class='bx bx-edit bx-sm'></i></button>
+                                <button><i class='bx bx-trash bx-sm'></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user_info">
+                                    <div class="user_image">
+                                        <img src="{{asset('images/technician.png')}}" alt="">
+                                    </div>
+                                    <div class="user_details">
+                                        <label for="name">Huwa</label>
+                                        <p>Huwa@gmail.com</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                technician
+                            </td>
+                             <td>
+                                BW338332
+                            </td>
+                             <td>
+                                <button><i class='bx bx-show bx-sm'></i></button>
+                                <button><i class='bx bx-edit bx-sm'></i></button>
+                                <button><i class='bx bx-trash bx-sm'></i></button>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+      </div>
+{% endblock %}
+  {% block javascripts %}
+            <script src="{{asset('JS/sidebar.js')}}"></script>
+             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   {% endblock %}
