@@ -17,6 +17,7 @@ return [
         '/Permission' => [[['_route' => 'Permission', '_controller' => 'App\\Controller\\BaseController::Permission'], null, null, null, false, false, null]],
         '/Users' => [[['_route' => 'Users', '_controller' => 'App\\Controller\\BaseController::Users'], null, null, null, false, false, null]],
         '/Stock' => [[['_route' => 'Stock', '_controller' => 'App\\Controller\\BaseController::Stock'], null, null, null, false, false, null]],
+        '/Profile' => [[['_route' => 'Profile', '_controller' => 'App\\Controller\\BaseController::Profile'], null, null, null, false, false, null]],
         '/redirect-after-login' => [[['_route' => 'redirect_after_login', '_controller' => 'App\\Controller\\SecurityController::redirectAfterLogin'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'fos_user_security_login', '_controller' => 'fos_user.security.controller:loginAction'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/login_check' => [[['_route' => 'fos_user_security_check', '_controller' => 'fos_user.security.controller:checkAction'], null, ['POST' => 0], null, false, false, null]],

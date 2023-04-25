@@ -7,62 +7,62 @@
      {{ include('Pages/sidebar.html.twig') }}
      <div class="home_content">
             <div class="text">Profile</div>
-            
-            <div class="col-md-9">
-                  <div class="card mb-3 content">
-                        <div class="card-body d-flex justify-content-center align-items-center">
-                              <img src="{{asset('images/user.png')}}" class="img-fluid mb-2 mt-2" style="width: 140px;height:140px;object-fit: cover; border: 1px solid orange; border-radius: 50%;">
-                        </div>
 
-                        <div class="card-body">
-                              <div class="row">
-                                    <div class="col-md-3">
-                                          <h5>Nom</h5>
+            <div class="container" style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+                  <div class="col-md-9">
+                        <div class="card mb-3 content">
+                              <div class="card-body">
+                                    
+                                    <div class="mb-3 row">
+                                          <label class="col-sm-2 col-form-label">Nom</label>
+                                          <div class="col-sm-10">
+                                                <input class="form-control" type="text" value="Othmane EL BAROUDI" aria-label="readonly input example" readonly>
+                                          </div>
                                     </div>
 
-                                    <div class="col-md-9 text-secondary ">
-                                          EL BAROUDI
-                                    </div>
-                              </div>
-
-                              <hr>
-
-                              <div class="row">
-                                    <div class="col-md-3">
-                                          <h5>Prénom</h5>
+                                    <div class="mb-3 row">
+                                          <label class="col-sm-2 col-form-label">Matricule</label>
+                                          <div class="col-sm-10">
+                                                <input class="form-control" type="text" value="MA306084" aria-label="readonly input example" readonly>
+                                          </div>
                                     </div>
 
-                                    <div class="col-md-9 text-secondary">
-                                          Othmane
-                                    </div>
-                              </div>
-
-                              <hr>
-
-                              <div class="row">
-                                    <div class="col-md-3">
-                                          <h5>Email</h5>
+                                    <div class="mb-3 row">
+                                          <label class="col-sm-2 col-form-label">Email</label>
+                                          <div class="col-sm-10">
+                                                <input class="form-control" type="text" value="elbaroudiotmane99@gmail.com" aria-label="readonly input example" readonly>
+                                          </div>
                                     </div>
 
-                                    <div class="col-md-9 text-secondary">
-                                          elbaroudiotmane99@gmail.com
-                                    </div>
-                              </div>
-
-                              <hr>
-
-                              <div class="row">
-                                    <div class="col-md-3">
-                                          <h5>Email</h5>
+                                    <div class="mb-3 row">
+                                          <label class="col-sm-2 col-form-label">Job</label>
+                                          <div class="col-sm-10">
+                                                <input class="form-control" type="text" value="Web Developer" aria-label="readonly input example" readonly>
+                                          </div>
                                     </div>
 
-                                    <div class="col-md-9 text-secondary">
-                                          elbaroudiotmane99@gmail.com
+                                    <label for="inputPassword1" class="mt-3 mb-1 col-form-label">Mot de passe</label>
+                                    <div class="mb-3 row" style="width: 125%;">
+                                          <div class="col-sm-10">
+                                                <input type="password" class="form-control" id="inputPassword1" placeholder="Mot de passe actuel">
+                                          </div>
                                     </div>
-                              </div>
 
-                              <div class="text-center mt-4">
-                                    <button type="button" class="btn btn-primary">Modifier</button>
+                                    <div class="mb-3 row" style="width: 125%;">
+                                          <div class="col-sm-10">
+                                                <input type="password" class="form-control" id="inputPassword2" placeholder="Nouveau mot de passe">
+                                          </div>
+                                    </div>
+
+                                    <div class="mb-3 row" style="width: 125%;">
+                                          <div class="col-sm-10">
+                                                <input type="password" class="form-control" id="inputPassword3" placeholder="Confirmer le Nouveau mot de passe">
+                                          </div>
+                                    </div>
+
+                                    <div class="text-center mt-4">
+                                          <button type="button" class="btn btn-success">Mettre à jour</button>
+                                    </div>
                               </div>
                         </div>
                   </div>

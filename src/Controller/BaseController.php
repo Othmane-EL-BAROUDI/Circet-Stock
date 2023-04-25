@@ -127,4 +127,16 @@ class BaseController extends AbstractController
             'userInfo' => $user,
         ]);
     }
+
+     /**
+     * @Route("Profile" , name="Profile")
+     */
+    public function Profile(): Response
+    {
+        $user = $this->getUser();
+        return $this->render('Pages/Profile.html.twig', [
+            'controller_name' => 'BaseController',
+            'userInfo' => $user,
+        ]);
+    }
 }

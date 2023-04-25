@@ -165,7 +165,10 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
                <span class=\"tooltip\">Historique</span>
           </li> 
             <li> 
-              <a href=\"#\">
+              <a href=\"";
+        // line 74
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Profile");
+        echo "\">
                     <i class='bx bxs-user-rectangle'></i>
                     <span class=\"links_name\">Profile</span>
               </a>
@@ -216,7 +219,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 
     public function getDebugInfo()
     {
-        return array (  195 => 90,  189 => 87,  185 => 86,  180 => 84,  160 => 66,  150 => 59,  140 => 52,  130 => 45,  120 => 38,  109 => 30,  103 => 27,  94 => 21,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  198 => 90,  192 => 87,  188 => 86,  183 => 84,  170 => 74,  160 => 66,  150 => 59,  140 => 52,  130 => 45,  120 => 38,  109 => 30,  103 => 27,  94 => 21,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -294,7 +297,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
                <span class=\"tooltip\">Historique</span>
           </li> 
             <li> 
-              <a href=\"#\">
+              <a href=\"{{path('Profile')}}\">
                     <i class='bx bxs-user-rectangle'></i>
                     <span class=\"links_name\">Profile</span>
               </a>
@@ -316,6 +319,6 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
       </div>
      
 {% endblock %}
-", "Pages/sidebar.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\templates\\Pages\\sidebar.html.twig");
+", "Pages/sidebar.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\sidebar.html.twig");
     }
 }

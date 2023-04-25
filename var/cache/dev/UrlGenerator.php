@@ -13,6 +13,7 @@ return [
     'Permission' => [[], ['_controller' => 'App\\Controller\\BaseController::Permission'], [], [['text', '/Permission']], [], []],
     'Users' => [[], ['_controller' => 'App\\Controller\\BaseController::Users'], [], [['text', '/Users']], [], []],
     'Stock' => [[], ['_controller' => 'App\\Controller\\BaseController::Stock'], [], [['text', '/Stock']], [], []],
+    'Profile' => [[], ['_controller' => 'App\\Controller\\BaseController::Profile'], [], [['text', '/Profile']], [], []],
     'redirect_after_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::redirectAfterLogin'], [], [['text', '/redirect-after-login']], [], []],
     'fos_user_security_login' => [[], ['_controller' => 'fos_user.security.controller:loginAction'], [], [['text', '/login']], [], []],
     'fos_user_security_check' => [[], ['_controller' => 'fos_user.security.controller:checkAction'], [], [['text', '/login_check']], [], []],
