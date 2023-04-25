@@ -35,12 +35,21 @@ class BaseController extends AbstractController
     /**
      * @Route("Dashboard" , name="Dashboard")
      */
-    public function Dashboard(): Response
+    public function Dashboard(EntityManagerInterface $entityManager): Response
     {
+        $query = $entityManager->createQuery('SELECT COUNT(u) FROM App\Entity\User u');
+        $nbr_of_users = $query->getResult();
+        $query = $entityManager->createQuery('SELECT COUNT(u) FROM App\Entity\Machine u');
+        $nbr_of_machines = $query->getResult();
+        $query = $entityManager->createQuery(' SELECT COUNT(u.id) FROM App\Entity\User u WHERE  u.roles = \'ROLE_ADMIN\' ');
+        $nbr_of_admins = $query->getResult();
         $user = $this->getUser();
         return $this->render('Pages/Dashboard.html.twig', [
             'controller_name' => 'BaseController',
             'userInfo' => $user,
+            'usersnbr' => $nbr_of_users[0],
+            'machinesnbr' => $nbr_of_machines[0],
+            'adminsnbr' => $nbr_of_admins[0],
         ]);
     }
 
@@ -72,6 +81,7 @@ class BaseController extends AbstractController
      */
     public function Role(): Response
     {
+        
         $user = $this->getUser();
         return $this->render('Pages/Role.html.twig', [
             'controller_name' => 'BaseController',
@@ -81,23 +91,29 @@ class BaseController extends AbstractController
       /**
      * @Route("Permission" , name="Permission")
      */
-    public function Permission(): Response
+    public function Permission(EntityManagerInterface $entityManager): Response
     {
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Permission u');
+        $allPermissions = $query->getResult();
         $user = $this->getUser();
         return $this->render('Pages/Permission.html.twig', [
             'controller_name' => 'BaseController',
             'userInfo' => $user,
+            'allPermissions' => $allPermissions,
         ]);
     }
      /**
      * @Route("Users" , name="Users")
      */
-    public function Users(): Response
+    public function Users(EntityManagerInterface $entityManager): Response
     {
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u');
+        $results = $query->getResult();
         $user = $this->getUser();
         return $this->render('Pages/Users.html.twig', [
             'controller_name' => 'BaseController',
             'userInfo' => $user,
+            'allusers' => $results,
         ]);
     }
      /**

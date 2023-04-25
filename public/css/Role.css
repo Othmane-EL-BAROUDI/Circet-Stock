@@ -23,7 +23,7 @@
 }
 .sort input{
     padding-left: 10px;
-    width: 29%;
+    width: 26%;
     height: 35px;
     border-radius: 4px;
     border: solid #f9a826 1px;
@@ -54,50 +54,53 @@
     justify-content: space-around;
     align-items: center;
     margin-left: 18%;
-}.content > div{
-    border: solid 1px #f9a826 ;
-    width: 534px;
-    height: 400px;
-    border-radius: 4px;
-    padding: 5px;
-
 }
-.view_role {
-    overflow: scroll;
-    overflow-x: hidden ;
+.content-table  td{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.view_role ul li {
+.content-table{
+   
+    border-collapse: collapse;
+    min-width: 500px;
+    border-radius: 12px;
+}
+.content-table thead tr{
     background-color: #f9a826;
     color: white;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    height: 45px;
-    padding-top: 5px;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight:bolder;
-
+    text-align: left;
+    font-weight: bold;
 }
-.view_role ul li section{
-    margin-left: 50%;
-   
+.content-table th,.content-table td {
+    padding: 12px 15px;
 }
-.view_role ul li button{
+.content-table tbody tr{
     
-    background: none;
-    border:  none;
+    border-bottom: 1px solid #dddddd;
 }
-.view_role ul li button i{
-    margin-left: 13px;
-    cursor: pointer;
-    color: white;
+.info{
+    text-align: center;
 }
-.view_role ul li img{
+.content-table tbody tr td > img{
     width: 30px;
-    margin-right: 10px;
+}
+.content-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+.content-table tbody tr:last-of-type{
+    border-bottom: 2px solid #f9a826 ;
+}
+
+.content-table tbody tr td button i{
+    cursor: pointer;
+    margin-left: 8px;
+    
+}
+.content-table tbody tr td button i:hover{
+    color: #f9a826;
+}
+.content-table tbody tr td button{
+    border: none;
+    background: none;
 }
 .add_role input{
     text-align: center;

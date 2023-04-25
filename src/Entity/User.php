@@ -22,6 +22,10 @@ class User extends BaseUser
      * @ORM\Column(type="string", length=255)
      */
     protected $matricule;
+     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $job;
        /**
      * @ORM\Column(type="string", length=255)
      */
@@ -40,6 +44,11 @@ class User extends BaseUser
     {
         return $this->matricule;
     }
+    public function getJob(): ?string
+    {
+        return $this->job;
+    }
+
     public function setManager(string $manager): self
     {
         $this->manager = $manager;
@@ -49,6 +58,12 @@ class User extends BaseUser
     public function setMatricule(string $matricule): self
     {
         $this->matricule = $matricule;
+
+        return $this;
+    }
+    public function setJob(string $job): self
+    {
+        $this->job = $job;
 
         return $this;
     }
