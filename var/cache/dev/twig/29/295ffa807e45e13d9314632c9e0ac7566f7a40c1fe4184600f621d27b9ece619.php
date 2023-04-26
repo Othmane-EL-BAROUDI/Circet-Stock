@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FrameworkBundle:FormTable:button_row.html.php */
+/* @Framework/FormTable/button_row.html.php */
 class __TwigTemplate_64253262c22132fd14f672d1a8cf2105862a2d4e30524a183a380f1094c92c21 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_64253262c22132fd14f672d1a8cf2105862a2d4e30524a183a380f1094c
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:FormTable:button_row.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/FormTable/button_row.html.php"));
 
         // line 1
         echo "<tr>
@@ -51,7 +51,7 @@ class __TwigTemplate_64253262c22132fd14f672d1a8cf2105862a2d4e30524a183a380f1094c
 
     public function getTemplateName()
     {
-        return "FrameworkBundle:FormTable:button_row.html.php";
+        return "@Framework/FormTable/button_row.html.php";
     }
 
     public function getDebugInfo()
@@ -67,6 +67,6 @@ class __TwigTemplate_64253262c22132fd14f672d1a8cf2105862a2d4e30524a183a380f1094c
         <?php echo \$view['form']->widget(\$form); ?>
     </td>
 </tr>
-", "FrameworkBundle:FormTable:button_row.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\FormTable\\button_row.html.php");
+", "@Framework/FormTable/button_row.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\FormTable\\button_row.html.php");
     }
 }

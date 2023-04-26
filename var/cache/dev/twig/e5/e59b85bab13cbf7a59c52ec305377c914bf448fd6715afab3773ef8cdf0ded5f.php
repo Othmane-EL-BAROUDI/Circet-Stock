@@ -976,6 +976,6 @@ class __TwigTemplate_236807559159c5b42e512e3540ec95ac72ca2666d82e111f39c1a6aab78
         {% endif %}
     {% endfor %}
 {% endblock %}
-", "SwiftmailerBundle:Collector:swiftmailer.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
+", "SwiftmailerBundle:Collector:swiftmailer.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
     }
 }

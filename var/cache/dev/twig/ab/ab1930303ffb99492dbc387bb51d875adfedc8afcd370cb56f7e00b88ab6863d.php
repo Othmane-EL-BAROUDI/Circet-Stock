@@ -59,6 +59,6 @@ class __TwigTemplate_1d26811ad05a5c61dd486ac974e6f3257b90d205ba5b0aba5a2bfbdcee9
     {
         return new Source("id=\"<?php echo \$view->escape(\$id) ?>\" name=\"<?php echo \$view->escape(\$full_name) ?>\"<?php if (\$disabled): ?> disabled=\"disabled\"<?php endif ?>
 <?php echo \$attr ? ' '.\$view['form']->block(\$form, 'attributes') : '' ?>
-", "FrameworkBundle:Form:button_attributes.html.php", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\framework-bundle/Resources/views/Form/button_attributes.html.php");
+", "FrameworkBundle:Form:button_attributes.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle/Resources/views/Form/button_attributes.html.php");
     }
 }

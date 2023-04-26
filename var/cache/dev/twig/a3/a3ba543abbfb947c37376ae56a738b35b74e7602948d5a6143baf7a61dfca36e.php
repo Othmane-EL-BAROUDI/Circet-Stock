@@ -245,7 +245,10 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
             echo "
                             </td>
                              <td>
-                               <button ><i class='bx bx-show bx-sm'></i></button>
+                               <a href=\"";
+            // line 124
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("createStock");
+            echo "\"><button ><i class='bx bx-show bx-sm'></i></button></a>
                                 <button><i class='bx bx-edit bx-sm'></i></button>
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                             </td>
@@ -299,7 +302,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
     public function getDebugInfo()
     {
-        return array (  278 => 136,  271 => 135,  259 => 129,  244 => 121,  240 => 119,  236 => 117,  232 => 116,  230 => 115,  224 => 112,  218 => 109,  210 => 104,  206 => 103,  199 => 98,  195 => 97,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 135,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  281 => 136,  274 => 135,  262 => 129,  250 => 124,  244 => 121,  240 => 119,  236 => 117,  232 => 116,  230 => 115,  224 => 112,  218 => 109,  210 => 104,  206 => 103,  199 => 98,  195 => 97,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 135,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -427,7 +430,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                                {{machine.state}}
                             </td>
                              <td>
-                               <button ><i class='bx bx-show bx-sm'></i></button>
+                               <a href=\"{{path('createStock')}}\"><button ><i class='bx bx-show bx-sm'></i></button></a>
                                 <button><i class='bx bx-edit bx-sm'></i></button>
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                             </td>

@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* TwigBundle::exception.css.twig */
+/* @Twig/exception.css.twig */
 class __TwigTemplate_b47ccd0a120c9c09dd75e499b4008565392e02a9efbec5d36118f1912cd88d82 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_b47ccd0a120c9c09dd75e499b4008565392e02a9efbec5d36118f1912cd
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "TwigBundle::exception.css.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Twig/exception.css.twig"));
 
         // line 3
         echo ":root {
@@ -252,7 +252,7 @@ header .container { display: flex; justify-content: space-between; }
 
     public function getTemplateName()
     {
-        return "TwigBundle::exception.css.twig";
+        return "@Twig/exception.css.twig";
     }
 
     public function getDebugInfo()
@@ -471,6 +471,6 @@ header .container { display: flex; justify-content: space-between; }
     .hidden-xs-down { display: initial; }
     .help-link { margin-left: 30px; }
 }
-", "TwigBundle::exception.css.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\twig-bundle\\Resources\\views\\exception.css.twig");
+", "@Twig/exception.css.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\twig-bundle\\Resources\\views\\exception.css.twig");
     }
 }

@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* TwigBundle:Exception:error.txt.twig */
+/* @Twig/Exception/error.txt.twig */
 class __TwigTemplate_69e0c7fb66330ddf497634c70618ce27b4f525b5ad29bb8f4713d081e7871d2b extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_69e0c7fb66330ddf497634c70618ce27b4f525b5ad29bb8f4713d081e78
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.txt.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Twig/Exception/error.txt.twig"));
 
         // line 1
         echo "Oops! An Error Occurred
@@ -57,7 +57,7 @@ We will fix it as soon as possible. Sorry for any inconvenience caused.
 
     public function getTemplateName()
     {
-        return "TwigBundle:Exception:error.txt.twig";
+        return "@Twig/Exception/error.txt.twig";
     }
 
     public function isTraitable()
@@ -79,6 +79,6 @@ The server returned a \"{{ status_code }} {{ status_text }}\".
 
 Something is broken. Please let us know what you were doing when this error occurred.
 We will fix it as soon as possible. Sorry for any inconvenience caused.
-", "TwigBundle:Exception:error.txt.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\error.txt.twig");
+", "@Twig/Exception/error.txt.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\error.txt.twig");
     }
 }

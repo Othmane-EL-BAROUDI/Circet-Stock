@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FrameworkBundle:Form:choice_widget_options.html.php */
+/* @Framework/Form/choice_widget_options.html.php */
 class __TwigTemplate_17cb76d7ffa464b5cce5b2f688f506a6c417ee3e38aafb0d120423cdbb4c2657 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_17cb76d7ffa464b5cce5b2f688f506a6c417ee3e38aafb0d120423cdbb4
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:choice_widget_options.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/choice_widget_options.html.php"));
 
         // line 1
         echo "<?php use Symfony\\Component\\Form\\ChoiceList\\View\\ChoiceGroupView;
@@ -58,7 +58,7 @@ class __TwigTemplate_17cb76d7ffa464b5cce5b2f688f506a6c417ee3e38aafb0d120423cdbb4
 
     public function getTemplateName()
     {
-        return "FrameworkBundle:Form:choice_widget_options.html.php";
+        return "@Framework/Form/choice_widget_options.html.php";
     }
 
     public function getDebugInfo()
@@ -81,6 +81,6 @@ class __TwigTemplate_17cb76d7ffa464b5cce5b2f688f506a6c417ee3e38aafb0d120423cdbb4
         <option value=\"<?php echo \$view->escape(\$choice->value) ?>\" <?php echo \$formHelper->block(\$form, 'choice_attributes', ['choice_attr' => \$choice->attr]) ?><?php if (\$is_selected(\$choice->value, \$value)): ?> selected=\"selected\"<?php endif?>><?php echo \$view->escape(false !== \$choice_translation_domain ? \$translatorHelper->trans(\$choice->label, [], \$choice_translation_domain) : \$choice->label) ?></option>
     <?php endif ?>
 <?php endforeach ?>
-", "FrameworkBundle:Form:choice_widget_options.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\choice_widget_options.html.php");
+", "@Framework/Form/choice_widget_options.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\choice_widget_options.html.php");
     }
 }

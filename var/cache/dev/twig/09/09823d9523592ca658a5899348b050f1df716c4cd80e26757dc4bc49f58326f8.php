@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* TwigBundle:Exception:traces.xml.twig */
+/* @Twig/Exception/traces.xml.twig */
 class __TwigTemplate_57fe941ee6e0ba965438b5ed17ccfbf7f1600698bc342a6890c50ea059111727 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_57fe941ee6e0ba965438b5ed17ccfbf7f1600698bc342a6890c50ea0591
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "TwigBundle:Exception:traces.xml.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Twig/Exception/traces.xml.twig"));
 
         // line 1
         echo "        <traces>
@@ -66,7 +66,7 @@ class __TwigTemplate_57fe941ee6e0ba965438b5ed17ccfbf7f1600698bc342a6890c50ea0591
 
     public function getTemplateName()
     {
-        return "TwigBundle:Exception:traces.xml.twig";
+        return "@Twig/Exception/traces.xml.twig";
     }
 
     public function isTraitable()
@@ -89,6 +89,6 @@ class __TwigTemplate_57fe941ee6e0ba965438b5ed17ccfbf7f1600698bc342a6890c50ea0591
             </trace>
 {% endfor %}
         </traces>
-", "TwigBundle:Exception:traces.xml.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces.xml.twig");
+", "@Twig/Exception/traces.xml.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces.xml.twig");
     }
 }

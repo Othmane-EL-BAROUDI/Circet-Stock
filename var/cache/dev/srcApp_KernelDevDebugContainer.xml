@@ -288,6 +288,13 @@
         <argument type="service" id=".service_locator.E18xQID.App\Controller\HomePageController"/>
       </call>
     </service>
+    <service id="App\Controller\MachineFormController" class="App\Controller\MachineFormController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.E18xQID.App\Controller\MachineFormController"/>
+      </call>
+    </service>
     <service id="App\Controller\PermissionController" class="App\Controller\PermissionController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -329,6 +336,9 @@
       <call method="setContainer">
         <argument type="service" id=".service_locator.E18xQID.App\Controller\UsersController"/>
       </call>
+    </service>
+    <service id="App\Form\MachineFormType" class="App\Form\MachineFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
     </service>
     <service id="App\Repository\AffectationRepository" class="App\Repository\AffectationRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
@@ -683,10 +693,12 @@
       <argument type="service" id="form.registry"/>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\Core\Type</argument>
+        <argument>App\Form</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
         <argument>FOS\UserBundle\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\MachineFormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
@@ -980,7 +992,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.h3vA5qB"/>
+      <argument type="service" id=".service_locator.vNklt3K"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4825,6 +4837,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomePageController" class="App\Controller\HomePageController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomePageController" class="App\Controller\HomePageController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HomePageController" class="App\Controller\HomePageController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MachineFormController" class="App\Controller\MachineFormController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MachineFormController" class="App\Controller\MachineFormController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\MachineFormController" class="App\Controller\MachineFormController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PermissionController" class="App\Controller\PermissionController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PermissionController" class="App\Controller\PermissionController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\PermissionController" class="App\Controller\PermissionController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4843,6 +4858,8 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\MachineFormType" class="App\Form\MachineFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\MachineFormType" class="App\Form\MachineFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AffectationRepository" class="App\Repository\AffectationRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\AffectationRepository" class="App\Repository\AffectationRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\MachineRepository" class="App\Repository\MachineRepository" autowire="true" abstract="true"/>
@@ -5199,9 +5216,10 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.h3vA5qB" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.vNklt3K" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\MachineFormType" type="service" id="App\Form\MachineFormType"/>
         <argument key="FOS\UserBundle\Form\Type\ChangePasswordFormType" type="service" id="fos_user.change_password.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\ProfileFormType" type="service" id="fos_user.profile.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\RegistrationFormType" type="service" id="fos_user.registration.form.type"/>
@@ -5302,6 +5320,12 @@
     <service id=".service_locator.E18xQID.App\Controller\HomePageController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\HomePageController"/>
       <argument>App\Controller\HomePageController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.E18xQID" method="withContext"/>
+    </service>
+    <service id=".service_locator.E18xQID.App\Controller\MachineFormController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\MachineFormController"/>
+      <argument>App\Controller\MachineFormController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.E18xQID" method="withContext"/>
     </service>

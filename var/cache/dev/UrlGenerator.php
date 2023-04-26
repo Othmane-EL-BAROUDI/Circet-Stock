@@ -8,6 +8,7 @@ return [
     'Dashboard' => [[], ['_controller' => 'App\\Controller\\DashboardController::Dashboard'], [], [['text', '/Dashboard']], [], []],
     'ForgetPassword' => [[], ['_controller' => 'App\\Controller\\ForgetPasswordController::ForgetPassword'], [], [['text', '/ForgetPassword']], [], []],
     'HomePage' => [[], ['_controller' => 'App\\Controller\\HomePageController::HomePage'], [], [['text', '/HomePage']], [], []],
+    'createStock' => [[], ['_controller' => 'App\\Controller\\MachineFormController::create'], [], [['text', '/Stock/create']], [], []],
     'Permission' => [[], ['_controller' => 'App\\Controller\\PermissionController::Permission'], [], [['text', '/Permission']], [], []],
     'Profile' => [[], ['_controller' => 'App\\Controller\\ProfileController::ForgetPassword'], [], [['text', '/Profile']], [], []],
     'Role' => [[], ['_controller' => 'App\\Controller\\RoleController::Role'], [], [['text', '/Role']], [], []],

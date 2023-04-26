@@ -59,6 +59,6 @@ class __TwigTemplate_2c298fc1e3849437ebbe06fc60ea5db1157f57f56065e66de8a9dcd0cb5
     {
         return new Source("<?php \$symbol = false !== \$symbol ? (\$symbol ? ' '.\$symbol : ' %') : '' ?>
 <?php echo \$view['form']->block(\$form, 'form_widget_simple', ['type' => isset(\$type) ? \$type : 'text']).\$view->escape(\$symbol) ?>
-", "FrameworkBundle:Form:percent_widget.html.php", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\framework-bundle/Resources/views/Form/percent_widget.html.php");
+", "FrameworkBundle:Form:percent_widget.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle/Resources/views/Form/percent_widget.html.php");
     }
 }

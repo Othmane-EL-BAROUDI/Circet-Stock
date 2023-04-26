@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FrameworkBundle:Form:widget_container_attributes.html.php */
+/* @Framework/Form/widget_container_attributes.html.php */
 class __TwigTemplate_992f80f081496ecb4a7082911eb8f83f299f3d6202f6161fc4f2e09e261793de extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_992f80f081496ecb4a7082911eb8f83f299f3d6202f6161fc4f2e09e261
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:widget_container_attributes.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/widget_container_attributes.html.php"));
 
         // line 1
         echo "<?php if (!empty(\$id)): ?>id=\"<?php echo \$view->escape(\$id) ?>\"<?php endif ?>
@@ -47,7 +47,7 @@ class __TwigTemplate_992f80f081496ecb4a7082911eb8f83f299f3d6202f6161fc4f2e09e261
 
     public function getTemplateName()
     {
-        return "FrameworkBundle:Form:widget_container_attributes.html.php";
+        return "@Framework/Form/widget_container_attributes.html.php";
     }
 
     public function getDebugInfo()
@@ -59,6 +59,6 @@ class __TwigTemplate_992f80f081496ecb4a7082911eb8f83f299f3d6202f6161fc4f2e09e261
     {
         return new Source("<?php if (!empty(\$id)): ?>id=\"<?php echo \$view->escape(\$id) ?>\"<?php endif ?>
 <?php echo \$attr ? ' '.\$view['form']->block(\$form, 'attributes') : '' ?>
-", "FrameworkBundle:Form:widget_container_attributes.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\widget_container_attributes.html.php");
+", "@Framework/Form/widget_container_attributes.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\widget_container_attributes.html.php");
     }
 }

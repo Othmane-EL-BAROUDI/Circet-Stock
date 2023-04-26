@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FrameworkBundle:Form:button_label.html.php */
+/* @Framework/Form/button_label.html.php */
 class __TwigTemplate_df8891ff36c8fcf64696db6cd632dbeae7a3a33d5f9c36f84a4c1df082c5258b extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_df8891ff36c8fcf64696db6cd632dbeae7a3a33d5f9c36f84a4c1df082c
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:button_label.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/button_label.html.php"));
 
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -43,7 +43,7 @@ class __TwigTemplate_df8891ff36c8fcf64696db6cd632dbeae7a3a33d5f9c36f84a4c1df082c
 
     public function getTemplateName()
     {
-        return "FrameworkBundle:Form:button_label.html.php";
+        return "@Framework/Form/button_label.html.php";
     }
 
     public function getDebugInfo()
@@ -53,6 +53,6 @@ class __TwigTemplate_df8891ff36c8fcf64696db6cd632dbeae7a3a33d5f9c36f84a4c1df082c
 
     public function getSourceContext()
     {
-        return new Source("", "FrameworkBundle:Form:button_label.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\button_label.html.php");
+        return new Source("", "@Framework/Form/button_label.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\button_label.html.php");
     }
 }

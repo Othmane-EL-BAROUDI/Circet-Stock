@@ -484,6 +484,6 @@ class __TwigTemplate_5bb3dc43abbd9fee2d0f1567468ac5261263661ea3f637ac5b4d1df8451
         {% endif %}
     </div>
 </div>
-", "TwigBundle:Exception:exception.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\twig-bundle/Resources/views/Exception/exception.html.twig");
+", "TwigBundle:Exception:exception.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\twig-bundle/Resources/views/Exception/exception.html.twig");
     }
 }

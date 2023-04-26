@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FrameworkBundle:Form:hidden_row.html.php */
+/* @Framework/Form/hidden_row.html.php */
 class __TwigTemplate_330d3137492bb71ad0cd96ed9f3f81c45e32b67fb4551c13fe9d72eb6827910a extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_330d3137492bb71ad0cd96ed9f3f81c45e32b67fb4551c13fe9d72eb682
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:hidden_row.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/hidden_row.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->widget(\$form) ?>
@@ -46,7 +46,7 @@ class __TwigTemplate_330d3137492bb71ad0cd96ed9f3f81c45e32b67fb4551c13fe9d72eb682
 
     public function getTemplateName()
     {
-        return "FrameworkBundle:Form:hidden_row.html.php";
+        return "@Framework/Form/hidden_row.html.php";
     }
 
     public function getDebugInfo()
@@ -57,6 +57,6 @@ class __TwigTemplate_330d3137492bb71ad0cd96ed9f3f81c45e32b67fb4551c13fe9d72eb682
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->widget(\$form) ?>
-", "FrameworkBundle:Form:hidden_row.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\hidden_row.html.php");
+", "@Framework/Form/hidden_row.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\hidden_row.html.php");
     }
 }
