@@ -242,6 +242,6 @@ class __TwigTemplate_6b303279fdb17559f41557c6aee56d1f6d0b3fd527225bdadbfbf415b5c
 {% endblock %}
   {% block javascripts %}
             <script src=\"{{asset('JS/sidebar.js')}}\"></script>
-   {% endblock %}", "Pages/Dashboard.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\templates\\Pages\\Dashboard.html.twig");
+   {% endblock %}", "Pages/Dashboard.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\Dashboard.html.twig");
     }
 }
