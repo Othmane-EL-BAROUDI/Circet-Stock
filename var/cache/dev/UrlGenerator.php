@@ -13,6 +13,7 @@ return [
     'Role' => [[], ['_controller' => 'App\\Controller\\RoleController::Role'], [], [['text', '/Role']], [], []],
     'redirect_after_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::redirectAfterLogin'], [], [['text', '/redirect-after-login']], [], []],
     'Stock' => [[], ['_controller' => 'App\\Controller\\StockController::Stock'], [], [['text', '/Stock']], [], []],
+    'UserProfile' => [[], ['_controller' => 'App\\Controller\\UserProfileController::ForgetPassword'], [], [['text', '/UserProfile']], [], []],
     'Users' => [[], ['_controller' => 'App\\Controller\\UsersController::Users'], [], [['text', '/Users']], [], []],
     'fos_user_security_login' => [[], ['_controller' => 'fos_user.security.controller:loginAction'], [], [['text', '/login']], [], []],
     'fos_user_security_check' => [[], ['_controller' => 'fos_user.security.controller:checkAction'], [], [['text', '/login_check']], [], []],

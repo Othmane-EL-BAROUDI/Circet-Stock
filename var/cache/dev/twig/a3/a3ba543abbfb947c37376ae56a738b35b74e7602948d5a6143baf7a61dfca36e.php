@@ -54,7 +54,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 ";
         // line 7
         $this->displayBlock('body', $context, $blocks);
-        // line 176
+        // line 155
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -174,6 +174,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                                     </div>
                                     <div class=\"modal-footer\">
                                     <button type=\"button\" class=\"close_button1\">Add item</button>
+                                    
                                </div>
                          </div>
                   </div>
@@ -209,61 +210,73 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                    ";
+        // line 117
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["Allmachines"]) || array_key_exists("Allmachines", $context) ? $context["Allmachines"] : (function () { throw new RuntimeError('Variable "Allmachines" does not exist.', 117, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["machine"]) {
+            // line 118
+            echo "
+                            <tr>
                             <td>
                                 <div class=\"user_info\">
                                     <div class=\"user_details\">
-                                        <label for=\"name\">Hp</label>
-                                        <p>pavillion</p>
+                                        <label for=\"name\">";
+            // line 123
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 123), "marque", [], "any", false, false, false, 123), "getMarqueName", [], "method", false, false, false, 123), "html", null, true);
+            echo "</label>
+                                        <p>";
+            // line 124
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 124), "getModelName", [], "method", false, false, false, 124), "html", null, true);
+            echo "</p>
                                     </div>
                                 </div>
                             </td>
                             <td >
-                                laptop
+                                ";
+            // line 129
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "type", [], "any", false, false, false, 129), "html", null, true);
+            echo "
                             </td>
                              <td>
-                                BW338332
+                                 ";
+            // line 132
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "getSerialNum", [], "method", false, false, false, 132), "html", null, true);
+            echo "
                             </td>
                              <td class=\"info\" >
-                                Yes
-                            </td>
+                                 ";
+            // line 135
+            if ((twig_get_attribute($this->env, $this->source, $context["machine"], "available", [], "any", false, false, false, 135) == 1)) {
+                // line 136
+                echo "                                          Yes
+                                    ";
+            } else {
+                // line 137
+                echo "  No
+                                ";
+            }
+            // line 139
+            echo "                            </td>
                              <td class=\"info\" >
-                                Good
+                               ";
+            // line 141
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "state", [], "any", false, false, false, 141), "html", null, true);
+            echo "
                             </td>
                              <td>
-                                <button><i class='bx bx-show bx-sm'></i></button>
+                               <button ><i class='bx bx-show bx-sm'></i></button>
                                 <button><i class='bx bx-edit bx-sm'></i></button>
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                             </td>
                         </tr>
-                         <tr>
-                            <td>
-                                <div class=\"user_info\">
-                                    <div class=\"user_details\">
-                                        <label for=\"name\">Dell</label>
-                                        <p>G5 5500</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                computer 
-                            </td>
-                             <td>
-                                BW338332
-                            </td>
-                             <td class=\"info\">
-                                No
-                            </td>
-                             <td  class=\"info\">
-                                Bad
-                            </td>
-                             <td>
-                                <button><i class='bx bx-show bx-sm'></i></button>
-                                <button><i class='bx bx-edit bx-sm'></i></button>
-                                <button><i class='bx bx-trash bx-sm'></i></button>
-                            </td>
-                        </tr>
-                                                
+                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['machine'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 149
+        echo "                       
                     </tbody>
                 </table>
             </div>
@@ -274,14 +287,14 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
     }
 
-    // line 176
+    // line 155
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 177
+        // line 156
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -306,7 +319,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
     public function getDebugInfo()
     {
-        return array (  285 => 177,  278 => 176,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 176,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  298 => 156,  291 => 155,  279 => 149,  264 => 141,  260 => 139,  256 => 137,  252 => 136,  250 => 135,  244 => 132,  238 => 129,  230 => 124,  226 => 123,  219 => 118,  215 => 117,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 155,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -391,6 +404,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                                     </div>
                                     <div class=\"modal-footer\">
                                     <button type=\"button\" class=\"close_button1\">Add item</button>
+                                    
                                </div>
                          </div>
                   </div>
@@ -426,61 +440,39 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                    {% for machine in Allmachines %}
+
+                            <tr>
                             <td>
                                 <div class=\"user_info\">
                                     <div class=\"user_details\">
-                                        <label for=\"name\">Hp</label>
-                                        <p>pavillion</p>
+                                        <label for=\"name\">{{machine.model.marque.getMarqueName()}}</label>
+                                        <p>{{machine.model.getModelName()}}</p>
                                     </div>
                                 </div>
                             </td>
                             <td >
-                                laptop
+                                {{machine.type}}
                             </td>
                              <td>
-                                BW338332
+                                 {{machine.getSerialNum()}}
                             </td>
                              <td class=\"info\" >
-                                Yes
+                                 {% if machine.available == 1 %}
+                                          Yes
+                                    {% else %}  No
+                                {% endif %}
                             </td>
                              <td class=\"info\" >
-                                Good
+                               {{machine.state}}
                             </td>
                              <td>
-                                <button><i class='bx bx-show bx-sm'></i></button>
+                               <button ><i class='bx bx-show bx-sm'></i></button>
                                 <button><i class='bx bx-edit bx-sm'></i></button>
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                             </td>
                         </tr>
-                         <tr>
-                            <td>
-                                <div class=\"user_info\">
-                                    <div class=\"user_details\">
-                                        <label for=\"name\">Dell</label>
-                                        <p>G5 5500</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                computer 
-                            </td>
-                             <td>
-                                BW338332
-                            </td>
-                             <td class=\"info\">
-                                No
-                            </td>
-                             <td  class=\"info\">
-                                Bad
-                            </td>
-                             <td>
-                                <button><i class='bx bx-show bx-sm'></i></button>
-                                <button><i class='bx bx-edit bx-sm'></i></button>
-                                <button><i class='bx bx-trash bx-sm'></i></button>
-                            </td>
-                        </tr>
-                                                
+                    {% endfor %}                       
                     </tbody>
                 </table>
             </div>

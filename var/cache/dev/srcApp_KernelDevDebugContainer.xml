@@ -323,6 +323,13 @@
         <argument type="service" id=".service_locator.E18xQID.App\Controller\StockController"/>
       </call>
     </service>
+    <service id="App\Controller\UserProfileController" class="App\Controller\UserProfileController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.E18xQID.App\Controller\UserProfileController"/>
+      </call>
+    </service>
     <service id="App\Controller\UsersController" class="App\Controller\UsersController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -4840,6 +4847,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\StockController" class="App\Controller\StockController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\StockController" class="App\Controller\StockController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\StockController" class="App\Controller\StockController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UserProfileController" class="App\Controller\UserProfileController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UserProfileController" class="App\Controller\UserProfileController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\UserProfileController" class="App\Controller\UserProfileController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5332,6 +5342,12 @@
     <service id=".service_locator.E18xQID.App\Controller\StockController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\StockController"/>
       <argument>App\Controller\StockController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.E18xQID" method="withContext"/>
+    </service>
+    <service id=".service_locator.E18xQID.App\Controller\UserProfileController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\UserProfileController"/>
+      <argument>App\Controller\UserProfileController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.E18xQID" method="withContext"/>
     </service>

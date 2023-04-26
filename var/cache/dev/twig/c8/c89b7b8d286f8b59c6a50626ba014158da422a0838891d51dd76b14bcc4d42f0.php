@@ -145,7 +145,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                                     </div>
                                     <div class=\"modal-footer\">
                                     <button type=\"button\" class=\"close_button1\">Add user</button>
-                               </div>
+                                    </div>
                          </div>
                   </div>
                   
@@ -327,7 +327,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                                     </div>
                                     <div class=\"modal-footer\">
                                     <button type=\"button\" class=\"close_button1\">Add user</button>
-                               </div>
+                                    </div>
                          </div>
                   </div>
                   

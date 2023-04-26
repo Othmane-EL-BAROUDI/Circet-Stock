@@ -42,7 +42,7 @@ class User extends BaseUser
     }
     public function getManager(): ?string
     {
-        return $this->matricule;
+        return $this->manager;
     }
     public function getJob(): ?string
     {

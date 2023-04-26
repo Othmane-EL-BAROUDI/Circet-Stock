@@ -74,9 +74,9 @@ class Machine
         return $this->id;
     }
 
-    public function getModel(): self
+    public function getModel(): ?object
     {
-        return $this->model ;  
+        return   $this->model ;  
     }
 
     public function setModel(string $model): self

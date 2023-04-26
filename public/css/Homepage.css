@@ -1,4 +1,5 @@
 .home_content{
+    background-color: white;
     position: absolute;
     height: 100%;
     width: calc(100% - 78px);

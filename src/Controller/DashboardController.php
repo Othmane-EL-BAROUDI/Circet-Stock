@@ -18,7 +18,7 @@ class DashboardController extends AbstractController
         $nbr_of_users = $query->getResult();
         $query = $entityManager->createQuery('SELECT COUNT(u) FROM App\Entity\Machine u');
         $nbr_of_machines = $query->getResult();
-        $query = $entityManager->createQuery(' SELECT COUNT(u.id) FROM App\Entity\User u WHERE  u.roles = \'ROLE_ADMIN\' ');
+        $query = $entityManager->createQuery(' SELECT COUNT(u) FROM App\Entity\User u WHERE  u.roles = \'ROLE_ADMIN\' ');
         $nbr_of_admins = $query->getResult();
         $user = $this->getUser();
         return $this->render('Pages/Dashboard.html.twig', [

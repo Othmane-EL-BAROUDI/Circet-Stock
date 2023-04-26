@@ -78,6 +78,7 @@
                                     </div>
                                     <div class="modal-footer">
                                     <button type="button" class="close_button1">Add item</button>
+                                    
                                </div>
                          </div>
                   </div>
@@ -113,61 +114,39 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                    {% for machine in Allmachines %}
+
+                            <tr>
                             <td>
                                 <div class="user_info">
                                     <div class="user_details">
-                                        <label for="name">Hp</label>
-                                        <p>pavillion</p>
+                                        <label for="name">{{machine.model.marque.getMarqueName()}}</label>
+                                        <p>{{machine.model.getModelName()}}</p>
                                     </div>
                                 </div>
                             </td>
                             <td >
-                                laptop
+                                {{machine.type}}
                             </td>
                              <td>
-                                BW338332
+                                 {{machine.getSerialNum()}}
                             </td>
                              <td class="info" >
-                                Yes
+                                 {% if machine.available == 1 %}
+                                          Yes
+                                    {% else %}  No
+                                {% endif %}
                             </td>
                              <td class="info" >
-                                Good
+                               {{machine.state}}
                             </td>
                              <td>
-                                <button><i class='bx bx-show bx-sm'></i></button>
+                               <button ><i class='bx bx-show bx-sm'></i></button>
                                 <button><i class='bx bx-edit bx-sm'></i></button>
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                             </td>
                         </tr>
-                         <tr>
-                            <td>
-                                <div class="user_info">
-                                    <div class="user_details">
-                                        <label for="name">Dell</label>
-                                        <p>G5 5500</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                computer 
-                            </td>
-                             <td>
-                                BW338332
-                            </td>
-                             <td class="info">
-                                No
-                            </td>
-                             <td  class="info">
-                                Bad
-                            </td>
-                             <td>
-                                <button><i class='bx bx-show bx-sm'></i></button>
-                                <button><i class='bx bx-edit bx-sm'></i></button>
-                                <button><i class='bx bx-trash bx-sm'></i></button>
-                            </td>
-                        </tr>
-                                                
+                    {% endfor %}                       
                     </tbody>
                 </table>
             </div>

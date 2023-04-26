@@ -101,6 +101,7 @@
 .content-table tbody tr td button{
     border: none;
     background: none;
+    margin-left: 14%;
 }
 .add_role input{
     text-align: center;
