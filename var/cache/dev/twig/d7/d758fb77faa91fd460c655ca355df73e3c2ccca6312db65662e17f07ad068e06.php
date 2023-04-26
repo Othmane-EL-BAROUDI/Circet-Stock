@@ -110,35 +110,47 @@ class __TwigTemplate_8cf60bcc42060a96097e2ed6a9770ebd20866a8fa6a6ddfe85a0c5a186a
                                     <div class=\"mb-3 row\">
                                           <label class=\"col-sm-2 col-form-label\">Nom</label>
                                           <div class=\"col-sm-10\">
-                                                <input class=\"form-control\" type=\"text\" value=\"Othmane EL BAROUDI\" aria-label=\"readonly input example\" readonly>
+                                                <input class=\"form-control\" type=\"text\" value=\"";
+        // line 19
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 19, $this->source); })()), "username", [], "any", false, false, false, 19), "html", null, true);
+        echo "\" aria-label=\"readonly input example\" readonly>
                                           </div>
                                     </div>
 
                                     <div class=\"mb-3 row\">
                                           <label class=\"col-sm-2 col-form-label\">Matricule</label>
                                           <div class=\"col-sm-10\">
-                                                <input class=\"form-control\" type=\"text\" value=\"MA306084\" aria-label=\"readonly input example\" readonly>
+                                                <input class=\"form-control\" type=\"text\" value=\"";
+        // line 26
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 26, $this->source); })()), "matricule", [], "any", false, false, false, 26), "html", null, true);
+        echo "\" aria-label=\"readonly input example\" readonly>
                                           </div>
                                     </div>
 
                                     <div class=\"mb-3 row\">
                                           <label class=\"col-sm-2 col-form-label\">Email</label>
                                           <div class=\"col-sm-10\">
-                                                <input class=\"form-control\" type=\"text\" value=\"elbaroudiotmane99@gmail.com\" aria-label=\"readonly input example\" readonly>
+                                                <input class=\"form-control\" type=\"text\" value=\"";
+        // line 33
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 33, $this->source); })()), "email", [], "any", false, false, false, 33), "html", null, true);
+        echo "\" aria-label=\"readonly input example\" readonly>
                                           </div>
                                     </div>
 
                                     <div class=\"mb-3 row\">
                                           <label class=\"col-sm-2 col-form-label\">Job</label>
                                           <div class=\"col-sm-10\">
-                                                <input class=\"form-control\" type=\"text\" value=\"Web Developer\" aria-label=\"readonly input example\" readonly>
+                                                <input class=\"form-control\" type=\"text\" value=\"";
+        // line 40
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 40, $this->source); })()), "job", [], "any", false, false, false, 40), "html", null, true);
+        echo "\" aria-label=\"readonly input example\" readonly>
                                           </div>
                                     </div>
 
                                     <label for=\"inputPassword1\" class=\"mt-3 mb-1 col-form-label\">Mot de passe</label>
                                     <div class=\"mb-3 row\" style=\"width: 125%;\">
                                           <div class=\"col-sm-10\">
-                                                <input type=\"password\" class=\"form-control\" id=\"inputPassword1\" placeholder=\"Mot de passe actuel\">
+                                                <input type=\"password\"   class=\"form-control\" id=\"inputPassword1\" placeholder=\"Mot de passe actuel\">
                                           </div>
                                     </div>
 
@@ -193,7 +205,7 @@ class __TwigTemplate_8cf60bcc42060a96097e2ed6a9770ebd20866a8fa6a6ddfe85a0c5a186a
 
     public function getDebugInfo()
     {
-        return array (  180 => 74,  173 => 73,  99 => 7,  92 => 6,  81 => 3,  74 => 2,  61 => 1,  53 => 73,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  192 => 74,  185 => 73,  145 => 40,  135 => 33,  125 => 26,  115 => 19,  99 => 7,  92 => 6,  81 => 3,  74 => 2,  61 => 1,  53 => 73,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -216,35 +228,35 @@ class __TwigTemplate_8cf60bcc42060a96097e2ed6a9770ebd20866a8fa6a6ddfe85a0c5a186a
                                     <div class=\"mb-3 row\">
                                           <label class=\"col-sm-2 col-form-label\">Nom</label>
                                           <div class=\"col-sm-10\">
-                                                <input class=\"form-control\" type=\"text\" value=\"Othmane EL BAROUDI\" aria-label=\"readonly input example\" readonly>
+                                                <input class=\"form-control\" type=\"text\" value=\"{{userInfo.username}}\" aria-label=\"readonly input example\" readonly>
                                           </div>
                                     </div>
 
                                     <div class=\"mb-3 row\">
                                           <label class=\"col-sm-2 col-form-label\">Matricule</label>
                                           <div class=\"col-sm-10\">
-                                                <input class=\"form-control\" type=\"text\" value=\"MA306084\" aria-label=\"readonly input example\" readonly>
+                                                <input class=\"form-control\" type=\"text\" value=\"{{userInfo.matricule}}\" aria-label=\"readonly input example\" readonly>
                                           </div>
                                     </div>
 
                                     <div class=\"mb-3 row\">
                                           <label class=\"col-sm-2 col-form-label\">Email</label>
                                           <div class=\"col-sm-10\">
-                                                <input class=\"form-control\" type=\"text\" value=\"elbaroudiotmane99@gmail.com\" aria-label=\"readonly input example\" readonly>
+                                                <input class=\"form-control\" type=\"text\" value=\"{{userInfo.email}}\" aria-label=\"readonly input example\" readonly>
                                           </div>
                                     </div>
 
                                     <div class=\"mb-3 row\">
                                           <label class=\"col-sm-2 col-form-label\">Job</label>
                                           <div class=\"col-sm-10\">
-                                                <input class=\"form-control\" type=\"text\" value=\"Web Developer\" aria-label=\"readonly input example\" readonly>
+                                                <input class=\"form-control\" type=\"text\" value=\"{{userInfo.job}}\" aria-label=\"readonly input example\" readonly>
                                           </div>
                                     </div>
 
                                     <label for=\"inputPassword1\" class=\"mt-3 mb-1 col-form-label\">Mot de passe</label>
                                     <div class=\"mb-3 row\" style=\"width: 125%;\">
                                           <div class=\"col-sm-10\">
-                                                <input type=\"password\" class=\"form-control\" id=\"inputPassword1\" placeholder=\"Mot de passe actuel\">
+                                                <input type=\"password\"   class=\"form-control\" id=\"inputPassword1\" placeholder=\"Mot de passe actuel\">
                                           </div>
                                     </div>
 

@@ -14,7 +14,7 @@ class HomePageController extends AbstractController
      * @Route("HomePage" , name="HomePage")
      */
     public function HomePage(EntityManagerInterface $entityManager): Response
-    {
+    {       
         $entityManager = $this->getDoctrine()->getManager();
         $results = $entityManager->getRepository(Machine::class)->findAll();
         $user = $this->getUser();
