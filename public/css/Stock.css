@@ -96,10 +96,11 @@
     color: #f9a826;
     margin-right: 3px;
 }
-::placeholder{
+ 
+.sort1 ::placeholder{
+    
     color: #f9a826;
-    font-weight: bold;
-}   
+}
 .sort1 > button{
     font-weight: bold;
     width: 10%;
@@ -173,11 +174,11 @@ textarea:focus, input:focus , button:focus{
     padding-left: 10px;
     font-size: 15px;
     background-color: white;
-    border: #f9a826 solid 1px;
+    border: black solid 1px;
 }
 .modal-body textarea{
     resize: none;
-    border-color: #f9a826;
+    border-color: black;
     padding: 5px;
 }
 .modal-body input[type="file"]{
@@ -207,7 +208,7 @@ textarea:focus, input:focus , button:focus{
     border: none;
 }
 .modal-body select{
-    color: #f9a826;
+    color: black;
 }
 
 .close_button1{

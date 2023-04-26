@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Controller;
-
+use App\Entity\Permission;
+use App\Entity\Role;
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -14,13 +16,18 @@ class UsersController extends AbstractController
      */
     public function Users(EntityManagerInterface $entityManager): Response
     {
-        $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u');
-        $results = $query->getResult();
+       
+        $entityManager = $this->getDoctrine()->getManager();
+        $users = $entityManager->getRepository(User::class)->findAll();
+        $roles = $entityManager->getRepository(Role::class)->findAll();
+        $permissions = $entityManager->getRepository(Permission::class)->findAll();
         $user = $this->getUser();
         return $this->render('Pages/Users.html.twig', [
             'controller_name' => 'BaseController',
             'userInfo' => $user,
-            'allusers' => $results,
+            'allusers' => $users,
+            'allroles' => $roles,
+            'allpermissions' => $permissions,
         ]);
     }
 }
