@@ -49,7 +49,7 @@ class __TwigTemplate_1c30cf283e931232784caed1e925dd1ce5348a07b4019d61ec5b73be9c3
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 12
         $this->displayBlock('body', $context, $blocks);
-        // line 103
+        // line 112
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -79,7 +79,7 @@ class __TwigTemplate_1c30cf283e931232784caed1e925dd1ce5348a07b4019d61ec5b73be9c3
 
         // line 3
         echo "      <link rel=\"stylesheet\" href=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/profile.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/UserProfile.css"), "html", null, true);
         echo "\">
       <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
       <!-- Font Awesome -->
@@ -110,20 +110,19 @@ class __TwigTemplate_1c30cf283e931232784caed1e925dd1ce5348a07b4019d61ec5b73be9c3
             
             <div class=\"container\">
                   <div class=\"row d-flex justify-content-center\">
-                        <div class=\"col-md-10 pt-5\">
+                        <div class=\"col-md-10 pt-5\" >
                               <div class=\"row z-depth-3\">
                                     <div class=\"col-sm-4 rounded-left\" style=\"background-color: rgb(255, 209, 100);\">
-                                          <div class=\"card-block text-center text-white\">
+                                          <div class=\"card-block text-center text-white mt-5\">
                                                 <i class=\"fas fa-user fa-7x mt-5\"></i>
-                                                <h2 class=\"font-weight-bold mt-4\">Othmane EL BAROUDI</h2>
-                                                <p>testtesttesttest</p>
-                                          </div>
+                                                <h3 class=\"font-weight-bold mt-4\">Othmane EL BAROUDI</h3>
+                                                ";
+        // line 26
+        echo "                                          </div>
                                     </div>
 
-                                    <div class=\"col-sm-7 rounded-right\" style=\"box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 3px, rgba(0, 0, 0, 0.24) 0px 0px 2px;\">
-                                          <h3 class=\"mt-3 text-center\">Information</h3>
-                                          <hr class=\"badge-primary mx-auto mt-4 mb-4 w-25\">
-                                          <div class=\"row mb-4\">
+                                    <div class=\"col-sm-7 rounded-right\">
+                                          <div class=\"row mb-4 mt-4\">
                                                 <div class=\"col-sm-6\">
                                                       <p class=\"font-weight-bold\">Nom et prénom</p>
                                                       <h6 class=\"text-muted\">Othmane EL BAROUDI</h6>
@@ -145,14 +144,20 @@ class __TwigTemplate_1c30cf283e931232784caed1e925dd1ce5348a07b4019d61ec5b73be9c3
                                                 </div>
                                           </div>
 
-                                          <div class=\"text-center mb-5\">
-                                                <p class=\"font-weight-bold\">Job</p>
-                                                <h6 class=\"text-muted\">Devops</h6>
+                                          <div class=\"row mb-4\">
+                                                <div class=\"col-sm-6\">
+                                                      <p class=\"font-weight-bold\">Job</p>
+                                                      <h6 class=\"text-muted\">Devops</h6>
+                                                </div>
+                                                <div class=\"col-sm-6\">
+                                                      <p class=\"font-weight-bold\">Role</p>
+                                                      <h6 class=\"text-muted\">Add user</h6>
+                                                </div>
                                           </div>
 
-                                          <div class=\"text-center mb-4\">
+                                          <div class=\"text-center mb-4 d-flex\" style=\"justify-content: center;\">
                                                 <div class=\"row\">
-                                                      <table class=\"table table-bordered text-center mr-4 ml-4\" style=\"width: 40%;\">
+                                                      <table class=\"table table-bordered text-center mr-4 ml-4\" style=\"width: 500px;\">
                                                             <thead>
                                                                   <tr>
                                                                         <th>Permission</th>
@@ -163,23 +168,28 @@ class __TwigTemplate_1c30cf283e931232784caed1e925dd1ce5348a07b4019d61ec5b73be9c3
                                                                         <td>Add user</td>
                                                                   </tr>
                                                                   <tr>
+                                                                        <td>Add user</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Add user</td>
+                                                                  </tr>
+                                                                  <tr>
                                                                         <td>delete user</td>
                                                                   </tr>
                                                                   <tr>
                                                                         <td>Modifier user</td>
                                                                   </tr>
-                                                            </tbody>
-                                                      </table>
-
-                                                      <table class=\"table table-bordered text-center mr-4 ml-4\" style=\"width: 40%;\">
-                                                            <thead>
                                                                   <tr>
-                                                                        <th>Role</th>
+                                                                        <td>Modifier user</td>
                                                                   </tr>
-                                                            </thead>
-                                                            <tbody>
                                                                   <tr>
-                                                                        <td>Add user</td>
+                                                                        <td>Modifier user</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Modifier user</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Modifier user</td>
                                                                   </tr>
                                                             </tbody>
                                                       </table>
@@ -199,14 +209,14 @@ class __TwigTemplate_1c30cf283e931232784caed1e925dd1ce5348a07b4019d61ec5b73be9c3
 
     }
 
-    // line 103
+    // line 112
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 104
+        // line 113
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -223,14 +233,14 @@ class __TwigTemplate_1c30cf283e931232784caed1e925dd1ce5348a07b4019d61ec5b73be9c3
 
     public function getDebugInfo()
     {
-        return array (  210 => 104,  203 => 103,  105 => 13,  98 => 12,  81 => 3,  74 => 2,  61 => 1,  53 => 103,  51 => 12,  49 => 2,  44 => 1,);
+        return array (  220 => 113,  213 => 112,  121 => 26,  105 => 13,  98 => 12,  81 => 3,  74 => 2,  61 => 1,  53 => 112,  51 => 12,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source(" <title>{% block title %}Circet-Profile{% endblock %}</title>
 {% block stylesheets %}
-      <link rel=\"stylesheet\" href=\"{{asset('css/profile.css')}}\">
+      <link rel=\"stylesheet\" href=\"{{asset('css/UserProfile.css')}}\">
       <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
       <!-- Font Awesome -->
       <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css\" rel=\"stylesheet\"/>
@@ -246,20 +256,18 @@ class __TwigTemplate_1c30cf283e931232784caed1e925dd1ce5348a07b4019d61ec5b73be9c3
             
             <div class=\"container\">
                   <div class=\"row d-flex justify-content-center\">
-                        <div class=\"col-md-10 pt-5\">
+                        <div class=\"col-md-10 pt-5\" >
                               <div class=\"row z-depth-3\">
                                     <div class=\"col-sm-4 rounded-left\" style=\"background-color: rgb(255, 209, 100);\">
-                                          <div class=\"card-block text-center text-white\">
+                                          <div class=\"card-block text-center text-white mt-5\">
                                                 <i class=\"fas fa-user fa-7x mt-5\"></i>
-                                                <h2 class=\"font-weight-bold mt-4\">Othmane EL BAROUDI</h2>
-                                                <p>testtesttesttest</p>
+                                                <h3 class=\"font-weight-bold mt-4\">Othmane EL BAROUDI</h3>
+                                                {# <p>Web </p> #}
                                           </div>
                                     </div>
 
-                                    <div class=\"col-sm-7 rounded-right\" style=\"box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 3px, rgba(0, 0, 0, 0.24) 0px 0px 2px;\">
-                                          <h3 class=\"mt-3 text-center\">Information</h3>
-                                          <hr class=\"badge-primary mx-auto mt-4 mb-4 w-25\">
-                                          <div class=\"row mb-4\">
+                                    <div class=\"col-sm-7 rounded-right\">
+                                          <div class=\"row mb-4 mt-4\">
                                                 <div class=\"col-sm-6\">
                                                       <p class=\"font-weight-bold\">Nom et prénom</p>
                                                       <h6 class=\"text-muted\">Othmane EL BAROUDI</h6>
@@ -281,14 +289,20 @@ class __TwigTemplate_1c30cf283e931232784caed1e925dd1ce5348a07b4019d61ec5b73be9c3
                                                 </div>
                                           </div>
 
-                                          <div class=\"text-center mb-5\">
-                                                <p class=\"font-weight-bold\">Job</p>
-                                                <h6 class=\"text-muted\">Devops</h6>
+                                          <div class=\"row mb-4\">
+                                                <div class=\"col-sm-6\">
+                                                      <p class=\"font-weight-bold\">Job</p>
+                                                      <h6 class=\"text-muted\">Devops</h6>
+                                                </div>
+                                                <div class=\"col-sm-6\">
+                                                      <p class=\"font-weight-bold\">Role</p>
+                                                      <h6 class=\"text-muted\">Add user</h6>
+                                                </div>
                                           </div>
 
-                                          <div class=\"text-center mb-4\">
+                                          <div class=\"text-center mb-4 d-flex\" style=\"justify-content: center;\">
                                                 <div class=\"row\">
-                                                      <table class=\"table table-bordered text-center mr-4 ml-4\" style=\"width: 40%;\">
+                                                      <table class=\"table table-bordered text-center mr-4 ml-4\" style=\"width: 500px;\">
                                                             <thead>
                                                                   <tr>
                                                                         <th>Permission</th>
@@ -299,23 +313,28 @@ class __TwigTemplate_1c30cf283e931232784caed1e925dd1ce5348a07b4019d61ec5b73be9c3
                                                                         <td>Add user</td>
                                                                   </tr>
                                                                   <tr>
+                                                                        <td>Add user</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Add user</td>
+                                                                  </tr>
+                                                                  <tr>
                                                                         <td>delete user</td>
                                                                   </tr>
                                                                   <tr>
                                                                         <td>Modifier user</td>
                                                                   </tr>
-                                                            </tbody>
-                                                      </table>
-
-                                                      <table class=\"table table-bordered text-center mr-4 ml-4\" style=\"width: 40%;\">
-                                                            <thead>
                                                                   <tr>
-                                                                        <th>Role</th>
+                                                                        <td>Modifier user</td>
                                                                   </tr>
-                                                            </thead>
-                                                            <tbody>
                                                                   <tr>
-                                                                        <td>Add user</td>
+                                                                        <td>Modifier user</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Modifier user</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Modifier user</td>
                                                                   </tr>
                                                             </tbody>
                                                       </table>

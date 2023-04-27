@@ -211,6 +211,10 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
     {% endblock %}
      {% block javascripts %}
             <script src=\"{{asset('JS/sidebar.js')}}\"></script>
+<<<<<<< HEAD
    {% endblock %}", "Pages/update/Update.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\update\\Update.html.twig");
+=======
+   {% endblock %}", "Pages/update/Update.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\templates\\Pages\\update\\Update.html.twig");
+>>>>>>> 3f8366d0df2b6c9f09335159b41054045f1bf3f7
     }
 }
