@@ -54,7 +54,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 ";
         // line 7
         $this->displayBlock('body', $context, $blocks);
-        // line 96
+        // line 95
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -223,28 +223,27 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         foreach ($context['_seq'] as $context["key"] => $context["permission"]) {
             // line 81
             echo "                            <tr>
-                             
-                             <td> ";
-            // line 83
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 83), "html", null, true);
+                             <td  class=\"textperm\" > ";
+            // line 82
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 82), "html", null, true);
             echo " </td>
-                                    <td>
-                               <a href=\"/Permission/";
+                                    <td class=\"actions\">
+                                          <a class = \"text-decoration-none\" href=\"/Permission/";
+            // line 84
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 84), "html", null, true);
+            echo "\"  ><button><i class='bx bx-edit bx-sm'></i>Update</button></a> 
+                                          <a href=\"/Permission/Remove/";
             // line 85
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 85), "html", null, true);
-            echo "\"><button><i class='bx bx-edit bx-sm'></i></button></a> 
-                               <a href=\"/Permission/Remove/";
-            // line 86
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 86), "html", null, true);
-            echo "\"><button><i class='bx bx-trash bx-sm'></i></button></a> 
+            echo "\"><button><i class='bx bx-trash bx-sm'></i> Delete</button></a> 
                                     </td>   
-                              </tr>   
+                              </tr>       
                          ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['permission'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 89
+        // line 88
         echo "   
                     </tbody>
                 </table>
@@ -257,14 +256,14 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 
     }
 
-    // line 96
+    // line 95
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 97
+        // line 96
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -289,7 +288,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 
     public function getDebugInfo()
     {
-        return array (  268 => 97,  261 => 96,  248 => 89,  238 => 86,  234 => 85,  229 => 83,  225 => 81,  221 => 80,  202 => 63,  193 => 61,  188 => 60,  179 => 58,  174 => 57,  165 => 55,  161 => 54,  151 => 47,  143 => 42,  132 => 34,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 96,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  267 => 96,  260 => 95,  247 => 88,  237 => 85,  233 => 84,  228 => 82,  225 => 81,  221 => 80,  202 => 63,  193 => 61,  188 => 60,  179 => 58,  174 => 57,  165 => 55,  161 => 54,  151 => 47,  143 => 42,  132 => 34,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 95,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -375,13 +374,12 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
                     <tbody>
                         {% for key , permission in allPermissions %}
                             <tr>
-                             
-                             <td> {{permission.getPermissionName()}} </td>
-                                    <td>
-                               <a href=\"/Permission/{{permission.id}}\"><button><i class='bx bx-edit bx-sm'></i></button></a> 
-                               <a href=\"/Permission/Remove/{{permission.id}}\"><button><i class='bx bx-trash bx-sm'></i></button></a> 
+                             <td  class=\"textperm\" > {{permission.getPermissionName()}} </td>
+                                    <td class=\"actions\">
+                                          <a class = \"text-decoration-none\" href=\"/Permission/{{permission.id}}\"  ><button><i class='bx bx-edit bx-sm'></i>Update</button></a> 
+                                          <a href=\"/Permission/Remove/{{permission.id}}\"><button><i class='bx bx-trash bx-sm'></i> Delete</button></a> 
                                     </td>   
-                              </tr>   
+                              </tr>       
                          {% endfor %}   
                     </tbody>
                 </table>

@@ -18,6 +18,7 @@ return [
     'Stock' => [[], ['_controller' => 'App\\Controller\\StockController::Stock'], [], [['text', '/Stock']], [], []],
     'UserProfile' => [[], ['_controller' => 'App\\Controller\\UserProfileController::ForgetPassword'], [], [['text', '/UserProfile']], [], []],
     'Users' => [[], ['_controller' => 'App\\Controller\\UsersController::Users'], [], [['text', '/Users']], [], []],
+    'UserView' => [['id'], ['_controller' => 'App\\Controller\\UsersController::UserView'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/User']], [], []],
     'fos_user_security_login' => [[], ['_controller' => 'fos_user.security.controller:loginAction'], [], [['text', '/login']], [], []],
     'fos_user_security_check' => [[], ['_controller' => 'fos_user.security.controller:checkAction'], [], [['text', '/login_check']], [], []],
     'fos_user_security_logout' => [[], ['_controller' => 'fos_user.security.controller:logoutAction'], [], [['text', '/logout']], [], []],

@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* Pages/HomePage.html.twig */
+/* Pages/homePage.html.twig */
 class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235be7d2e extends \Twig\Template
 {
     private $source;
@@ -38,7 +38,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Pages/HomePage.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Pages/homePage.html.twig"));
 
         // line 1
         echo " <title>";
@@ -51,12 +51,16 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
         echo "   ";
         echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
         echo "
-";
+      ";
         // line 7
         $this->displayBlock('body', $context, $blocks);
         // line 80
-        echo "  ";
+        echo "
+  ";
+        // line 81
         $this->displayBlock('javascripts', $context, $blocks);
+        // line 87
+        echo "  ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -237,14 +241,14 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     }
 
-    // line 80
+    // line 81
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 81
+        // line 82
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -259,7 +263,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     public function getTemplateName()
     {
-        return "Pages/HomePage.html.twig";
+        return "Pages/homePage.html.twig";
     }
 
     public function isTraitable()
@@ -269,7 +273,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     public function getDebugInfo()
     {
-        return array (  248 => 81,  241 => 80,  231 => 76,  220 => 72,  211 => 68,  205 => 65,  190 => 53,  186 => 52,  182 => 51,  179 => 50,  175 => 48,  171 => 47,  169 => 46,  164 => 44,  160 => 43,  156 => 42,  152 => 41,  145 => 37,  135 => 30,  127 => 26,  123 => 25,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 80,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  252 => 82,  245 => 81,  235 => 76,  224 => 72,  215 => 68,  209 => 65,  194 => 53,  190 => 52,  186 => 51,  183 => 50,  179 => 48,  175 => 47,  173 => 46,  168 => 44,  164 => 43,  160 => 42,  156 => 41,  149 => 37,  139 => 30,  131 => 26,  127 => 25,  108 => 8,  101 => 7,  90 => 3,  83 => 2,  70 => 1,  63 => 87,  61 => 81,  58 => 80,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -280,7 +284,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
         <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
   {% endblock %}
    {{ include('Pages/sidebar.html.twig') }}
-{% block body %}
+      {% block body %}
     
      <div class=\"home_content\">
             <div class=\"text\">Stock Materiel</div>
@@ -353,15 +357,13 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
             </div>
       </div>
 {% endblock %}
+
   {% block javascripts %}
             <script src=\"{{asset('JS/sidebar.js')}}\"></script>
             <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
-<<<<<<< HEAD
-   {% endblock %}", "Pages/homePage.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\HomePage.html.twig");
-=======
-   {% endblock %}", "Pages/HomePage.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\templates\\Pages\\HomePage.html.twig");
->>>>>>> e5698fffb11b1e3c1c05361e885e361c3eb29f37
+   {% endblock %}
+  ", "Pages/homePage.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\templates\\Pages\\HomePage.html.twig");
     }
 }

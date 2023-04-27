@@ -79,13 +79,12 @@
                     <tbody>
                         {% for key , permission in allPermissions %}
                             <tr>
-                             
-                             <td> {{permission.getPermissionName()}} </td>
-                                    <td>
-                               <a href="/Permission/{{permission.id}}"><button><i class='bx bx-edit bx-sm'></i></button></a> 
-                               <a href="/Permission/Remove/{{permission.id}}"><button><i class='bx bx-trash bx-sm'></i></button></a> 
+                             <td  class="textperm" > {{permission.getPermissionName()}} </td>
+                                    <td class="actions">
+                                          <a class = "text-decoration-none" href="/Permission/{{permission.id}}"  ><button><i class='bx bx-edit bx-sm'></i>Update</button></a> 
+                                          <a href="/Permission/Remove/{{permission.id}}"><button><i class='bx bx-trash bx-sm'></i> Delete</button></a> 
                                     </td>   
-                              </tr>   
+                              </tr>       
                          {% endfor %}   
                     </tbody>
                 </table>

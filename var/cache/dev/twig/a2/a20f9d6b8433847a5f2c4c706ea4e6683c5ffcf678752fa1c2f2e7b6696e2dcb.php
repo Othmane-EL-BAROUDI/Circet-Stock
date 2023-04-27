@@ -124,7 +124,7 @@ class __TwigTemplate_6b303279fdb17559f41557c6aee56d1f6d0b3fd527225bdadbfbf415b5c
                               <label for=\"name\">ADMIN</label>
                               <p>";
         // line 26
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["adminsnbr"]) || array_key_exists("adminsnbr", $context) ? $context["adminsnbr"] : (function () { throw new RuntimeError('Variable "adminsnbr" does not exist.', 26, $this->source); })()), 1, [], "array", false, false, false, 26), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["adminsnbr"]) || array_key_exists("adminsnbr", $context) ? $context["adminsnbr"] : (function () { throw new RuntimeError('Variable "adminsnbr" does not exist.', 26, $this->source); })()), "html", null, true);
         echo "</p>
                         </div>
                   </div>
@@ -216,7 +216,7 @@ class __TwigTemplate_6b303279fdb17559f41557c6aee56d1f6d0b3fd527225bdadbfbf415b5c
                         </div>
                         <div class=\"info_container\">
                               <label for=\"name\">ADMIN</label>
-                              <p>{{adminsnbr[1]}}</p>
+                              <p>{{adminsnbr}}</p>
                         </div>
                   </div>
                    <div>
@@ -242,6 +242,6 @@ class __TwigTemplate_6b303279fdb17559f41557c6aee56d1f6d0b3fd527225bdadbfbf415b5c
 {% endblock %}
   {% block javascripts %}
             <script src=\"{{asset('JS/sidebar.js')}}\"></script>
-   {% endblock %}", "Pages/Dashboard.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\Dashboard.html.twig");
+   {% endblock %}", "Pages/Dashboard.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\templates\\Pages\\Dashboard.html.twig");
     }
 }
