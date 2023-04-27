@@ -22,4 +22,5 @@ class StockController extends AbstractController
             'Allmachines' => $results,
         ]);
     }
+    
 }

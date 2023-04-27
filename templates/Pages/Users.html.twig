@@ -31,12 +31,18 @@
                                           <label for="name">user role :</label>
                                           <select name="role" id="">
                                                  <option selected disabled>role</option>
+                                                  {% for role in allroles %}
+                                                        <option>{{role.getRoleName()}}</option>
+                                                 {% endfor %}
                                           </select>
                                     </div>
                                      <div class="modal-body">
                                           <label for="name">user permission :</label>
                                           <select name="role" id="">
                                                  <option selected disabled>permission</option>
+                                                 {% for permission in allpermissions %}
+                                                        <option>{{permission.getPermissionName()}}</option>
+                                                 {% endfor %}
                                           </select>
                                     </div>
                                      <div class="modal-body">

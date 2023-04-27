@@ -54,7 +54,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 ";
         // line 7
         $this->displayBlock('body', $context, $blocks);
-        // line 155
+        // line 135
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -129,36 +129,16 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                                           <input  placeholder=\"@serial_number\" type=\"text\">
                                     </div>
                                      <div class=\"modal-body\">
-                                         <fieldset>
+                                 
                                             <label>State:</label>
-
-                                            <div>
-                                            <label for=\"name\">Good</label>
-                                            <input type=\"radio\" name=\"drone\" value=\"good\"  checked >
-                                            
-                                            </div>
-
-                                            <div>
-                                            <label for=\"name\">Bad</label>
-                                            <input type=\"radio\"  name=\"drone\" value=\"bad\">
-                                            </div>
-                                        </fieldset>
+                                             <input type=\"text\" placeholder=\"@State\" >
+                                      
                                     </div>
                                     <div class=\"modal-body\">
-                                         <fieldset>
+                                         
                                             <label>Available:</label>
-
-                                            <div>
-                                            <label for=\"name\">Yes</label>
-                                            <input type=\"radio\" name=\"drone\" value=\"Yes\"  checked >
-                                            
-                                            </div>
-
-                                            <div>
-                                            <label for=\"name\">No</label>
-                                            <input type=\"radio\"  name=\"drone\" value=\"No\">
-                                            </div>
-                                        </fieldset>
+                                             <input type=\"text\" placeholder=\"@Available\" >
+                                         
                                     </div>
                                      <div class=\"modal-body\">
                                           <label for=\"name\">mac ethernet :</label>
@@ -211,61 +191,64 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                     </thead>
                     <tbody>
                     ";
-        // line 117
+        // line 97
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["Allmachines"]) || array_key_exists("Allmachines", $context) ? $context["Allmachines"] : (function () { throw new RuntimeError('Variable "Allmachines" does not exist.', 117, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["Allmachines"]) || array_key_exists("Allmachines", $context) ? $context["Allmachines"] : (function () { throw new RuntimeError('Variable "Allmachines" does not exist.', 97, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["machine"]) {
-            // line 118
+            // line 98
             echo "
                             <tr>
                             <td>
                                 <div class=\"user_info\">
                                     <div class=\"user_details\">
                                         <label for=\"name\">";
-            // line 123
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 123), "marque", [], "any", false, false, false, 123), "getMarqueName", [], "method", false, false, false, 123), "html", null, true);
+            // line 103
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 103), "marque", [], "any", false, false, false, 103), "getMarqueName", [], "method", false, false, false, 103), "html", null, true);
             echo "</label>
                                         <p>";
-            // line 124
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 124), "getModelName", [], "method", false, false, false, 124), "html", null, true);
+            // line 104
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 104), "getModelName", [], "method", false, false, false, 104), "html", null, true);
             echo "</p>
                                     </div>
                                 </div>
                             </td>
                             <td >
                                 ";
-            // line 129
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "type", [], "any", false, false, false, 129), "html", null, true);
+            // line 109
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "type", [], "any", false, false, false, 109), "html", null, true);
             echo "
                             </td>
                              <td>
                                  ";
-            // line 132
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "getSerialNum", [], "method", false, false, false, 132), "html", null, true);
+            // line 112
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "getSerialNum", [], "method", false, false, false, 112), "html", null, true);
             echo "
                             </td>
                              <td class=\"info\" >
                                  ";
-            // line 135
-            if ((twig_get_attribute($this->env, $this->source, $context["machine"], "available", [], "any", false, false, false, 135) == 1)) {
-                // line 136
+            // line 115
+            if ((twig_get_attribute($this->env, $this->source, $context["machine"], "available", [], "any", false, false, false, 115) == 1)) {
+                // line 116
                 echo "                                          Yes
                                     ";
             } else {
-                // line 137
+                // line 117
                 echo "  No
                                 ";
             }
-            // line 139
+            // line 119
             echo "                            </td>
                              <td class=\"info\" >
                                ";
-            // line 141
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "state", [], "any", false, false, false, 141), "html", null, true);
+            // line 121
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "state", [], "any", false, false, false, 121), "html", null, true);
             echo "
                             </td>
                              <td>
-                               <button ><i class='bx bx-show bx-sm'></i></button>
+                               <a href=\"";
+            // line 124
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("createStock");
+            echo "\"><button ><i class='bx bx-show bx-sm'></i></button></a>
                                 <button><i class='bx bx-edit bx-sm'></i></button>
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                             </td>
@@ -275,7 +258,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['machine'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 149
+        // line 129
         echo "                       
                     </tbody>
                 </table>
@@ -287,14 +270,14 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
     }
 
-    // line 155
+    // line 135
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 156
+        // line 136
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -319,7 +302,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
     public function getDebugInfo()
     {
-        return array (  298 => 156,  291 => 155,  279 => 149,  264 => 141,  260 => 139,  256 => 137,  252 => 136,  250 => 135,  244 => 132,  238 => 129,  230 => 124,  226 => 123,  219 => 118,  215 => 117,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 155,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  281 => 136,  274 => 135,  262 => 129,  250 => 124,  244 => 121,  240 => 119,  236 => 117,  232 => 116,  230 => 115,  224 => 112,  218 => 109,  210 => 104,  206 => 103,  199 => 98,  195 => 97,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 135,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -359,36 +342,16 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                                           <input  placeholder=\"@serial_number\" type=\"text\">
                                     </div>
                                      <div class=\"modal-body\">
-                                         <fieldset>
+                                 
                                             <label>State:</label>
-
-                                            <div>
-                                            <label for=\"name\">Good</label>
-                                            <input type=\"radio\" name=\"drone\" value=\"good\"  checked >
-                                            
-                                            </div>
-
-                                            <div>
-                                            <label for=\"name\">Bad</label>
-                                            <input type=\"radio\"  name=\"drone\" value=\"bad\">
-                                            </div>
-                                        </fieldset>
+                                             <input type=\"text\" placeholder=\"@State\" >
+                                      
                                     </div>
                                     <div class=\"modal-body\">
-                                         <fieldset>
+                                         
                                             <label>Available:</label>
-
-                                            <div>
-                                            <label for=\"name\">Yes</label>
-                                            <input type=\"radio\" name=\"drone\" value=\"Yes\"  checked >
-                                            
-                                            </div>
-
-                                            <div>
-                                            <label for=\"name\">No</label>
-                                            <input type=\"radio\"  name=\"drone\" value=\"No\">
-                                            </div>
-                                        </fieldset>
+                                             <input type=\"text\" placeholder=\"@Available\" >
+                                         
                                     </div>
                                      <div class=\"modal-body\">
                                           <label for=\"name\">mac ethernet :</label>
@@ -467,7 +430,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                                {{machine.state}}
                             </td>
                              <td>
-                               <button ><i class='bx bx-show bx-sm'></i></button>
+                               <a href=\"{{path('createStock')}}\"><button ><i class='bx bx-show bx-sm'></i></button></a>
                                 <button><i class='bx bx-edit bx-sm'></i></button>
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                             </td>

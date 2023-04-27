@@ -69,6 +69,6 @@ class __TwigTemplate_76af9764c555f0a31d0bdc9a9662a2bf8f42b1d4135b66f85975fe5783e
     <?php echo \$view['form']->block(\$form, 'form_rows') ?>
     <?php echo \$view['form']->rest(\$form) ?>
 </div>
-", "FrameworkBundle:Form:form_widget_compound.html.php", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\framework-bundle/Resources/views/Form/form_widget_compound.html.php");
+", "FrameworkBundle:Form:form_widget_compound.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle/Resources/views/Form/form_widget_compound.html.php");
     }
 }

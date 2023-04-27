@@ -119,6 +119,6 @@ class __TwigTemplate_9c56f3d5f8f26da39c36f7b933d9baaab770921e726ef796ca23ec0e104
         </div>
     </body>
 </html>
-", "TwigBundle:Exception:error.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\twig-bundle/Resources/views/Exception/error.html.twig");
+", "TwigBundle:Exception:error.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\twig-bundle/Resources/views/Exception/error.html.twig");
     }
 }

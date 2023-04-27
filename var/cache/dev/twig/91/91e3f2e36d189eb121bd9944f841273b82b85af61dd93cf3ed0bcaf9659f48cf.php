@@ -53,6 +53,6 @@ class __TwigTemplate_eb2798d2cf2878f5be758c9b593609c86561465362f1a9e8cb9d2dbeee2
 
     public function getSourceContext()
     {
-        return new Source("", "FrameworkBundle:Form:button_label.html.php", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\framework-bundle/Resources/views/Form/button_label.html.php");
+        return new Source("", "FrameworkBundle:Form:button_label.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle/Resources/views/Form/button_label.html.php");
     }
 }

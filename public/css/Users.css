@@ -98,10 +98,9 @@
     color: #f9a826;
     margin-right: 3px;
 }
-::placeholder{
-    color: #f9a826;
-    font-weight: bold;
-}   
+.sort ::placeholder{
+    color:#f9a826;
+}
 .sort > button{
     font-weight: bold;
     width: 13%;
@@ -165,7 +164,7 @@ textarea:focus, input:focus , button:focus{
     cursor: pointer;
 }
 .modal-body{
-    margin-bottom: -28px;
+    margin-bottom: -25px;
     padding-bottom: 3%;
 }
 .modal-body input , .modal-body select{
@@ -176,7 +175,8 @@ textarea:focus, input:focus , button:focus{
     padding-left: 10px;
     font-size: 15px;
     background-color: white;
-    border: #f9a826 solid 1px;
+    color: black;
+    border: black solid 1px;
 }
 .modal-body textarea{
     resize: none;
@@ -202,11 +202,12 @@ textarea:focus, input:focus , button:focus{
     border: none;
 }
 .modal-body select{
-    color: #f9a826;
+    color: black;
 }
 .modal-body label{
-     color: #f9a826;
+     color:#f9a826;
      font-weight: bold;
+     
 }
 .modal-body p{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

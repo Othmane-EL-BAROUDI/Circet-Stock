@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FrameworkBundle:Form:datetime_widget.html.php */
+/* @Framework/Form/datetime_widget.html.php */
 class __TwigTemplate_0525b31c451df586dd031212987978c8f353a70feb03984d5a6be6b1c42ca184 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_0525b31c451df586dd031212987978c8f353a70feb03984d5a6be6b1c42
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:datetime_widget.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/datetime_widget.html.php"));
 
         // line 1
         echo "<?php if (\$widget == 'single_text'): ?>
@@ -52,7 +52,7 @@ class __TwigTemplate_0525b31c451df586dd031212987978c8f353a70feb03984d5a6be6b1c42
 
     public function getTemplateName()
     {
-        return "FrameworkBundle:Form:datetime_widget.html.php";
+        return "@Framework/Form/datetime_widget.html.php";
     }
 
     public function getDebugInfo()
@@ -69,6 +69,6 @@ class __TwigTemplate_0525b31c451df586dd031212987978c8f353a70feb03984d5a6be6b1c42
         <?php echo \$view['form']->widget(\$form['date']).' '.\$view['form']->widget(\$form['time']) ?>
     </div>
 <?php endif ?>
-", "FrameworkBundle:Form:datetime_widget.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\datetime_widget.html.php");
+", "@Framework/Form/datetime_widget.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\datetime_widget.html.php");
     }
 }

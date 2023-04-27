@@ -12,6 +12,7 @@ return [
         '/Dashboard' => [[['_route' => 'Dashboard', '_controller' => 'App\\Controller\\DashboardController::Dashboard'], null, null, null, false, false, null]],
         '/ForgetPassword' => [[['_route' => 'ForgetPassword', '_controller' => 'App\\Controller\\ForgetPasswordController::ForgetPassword'], null, null, null, false, false, null]],
         '/HomePage' => [[['_route' => 'HomePage', '_controller' => 'App\\Controller\\HomePageController::HomePage'], null, null, null, false, false, null]],
+        '/Stock/create' => [[['_route' => 'createStock', '_controller' => 'App\\Controller\\MachineFormController::create'], null, null, null, false, false, null]],
         '/Permission' => [[['_route' => 'Permission', '_controller' => 'App\\Controller\\PermissionController::Permission'], null, null, null, false, false, null]],
         '/Profile' => [[['_route' => 'Profile', '_controller' => 'App\\Controller\\ProfileController::ForgetPassword'], null, null, null, false, false, null]],
         '/Role' => [[['_route' => 'Role', '_controller' => 'App\\Controller\\RoleController::Role'], null, null, null, false, false, null]],

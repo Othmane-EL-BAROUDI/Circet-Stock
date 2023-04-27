@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FOSUserBundle:Profile:show_content.html.twig */
+/* @FOSUser/Profile/show_content.html.twig */
 class __TwigTemplate_3bb3544df02ec3a4bda0e302f53ee0b1569ad4aa0ef46ff33a45ef826c16fa9d extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_3bb3544df02ec3a4bda0e302f53ee0b1569ad4aa0ef46ff33a45ef826c1
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:show_content.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@FOSUser/Profile/show_content.html.twig"));
 
         // line 2
         echo "
@@ -60,7 +60,7 @@ class __TwigTemplate_3bb3544df02ec3a4bda0e302f53ee0b1569ad4aa0ef46ff33a45ef826c1
 
     public function getTemplateName()
     {
-        return "FOSUserBundle:Profile:show_content.html.twig";
+        return "@FOSUser/Profile/show_content.html.twig";
     }
 
     public function isTraitable()
@@ -81,6 +81,6 @@ class __TwigTemplate_3bb3544df02ec3a4bda0e302f53ee0b1569ad4aa0ef46ff33a45ef826c1
     <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
     <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
 </div>
-", "FOSUserBundle:Profile:show_content.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Profile\\show_content.html.twig");
+", "@FOSUser/Profile/show_content.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Profile\\show_content.html.twig");
     }
 }
