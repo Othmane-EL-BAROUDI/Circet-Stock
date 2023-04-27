@@ -54,7 +54,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 ";
         // line 7
         $this->displayBlock('body', $context, $blocks);
-        // line 135
+        // line 105
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -106,56 +106,35 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                   <div class=\"modal-dialog\" role=\"document\">
                         <div class=\"modal-content\">
                              <div class=\"modal-header\">
+                                 ";
+        // line 13
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), 'form_start');
+        echo "
                                     <h5 class=\"modal-title\" id=\"exampleModalLabel\">Add to stock</h5>
                                     <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
                                     <span aria-hidden=\"true\">&times;</span>
                                     </button>
                                     </div>
                                     <div class=\"modal-body\">
+                                     
                                           <label for=\"name\">item picture:</label>
-                                          <button><i class='bx bxs-cloud-upload bx-sm'></i></button>
+                                          <button class=\"up\"< ><i class='bx bxs-cloud-upload bx-sm'></i></button>
                                           <input  type=\"file\">
-                                    </div>
-                                    <div class=\"modal-body\">
-                                          <label for=\"name\">item model :</label>
-                                          <input  placeholder=\"@model\" type=\"text\">
-                                    </div>
-                                     <div class=\"modal-body\">
-                                          <label for=\"name\">item marque :</label>
-                                          <input  placeholder=\"@marque\" type=\"text\">
-                                    </div>
-                                    <div class=\"modal-body\">
-                                          <label for=\"name\">serial number :</label>
-                                          <input  placeholder=\"@serial_number\" type=\"text\">
-                                    </div>
-                                     <div class=\"modal-body\">
-                                 
-                                            <label>State:</label>
-                                             <input type=\"text\" placeholder=\"@State\" >
-                                      
-                                    </div>
-                                    <div class=\"modal-body\">
+                                   
                                          
-                                            <label>Available:</label>
-                                             <input type=\"text\" placeholder=\"@Available\" >
-                                         
-                                    </div>
-                                     <div class=\"modal-body\">
-                                          <label for=\"name\">mac ethernet :</label>
-                                           <input  placeholder=\"@mac_ethernet\" type=\"text\">
-                                    </div>
-                                    <div class=\"modal-body\">
-                                          <label for=\"name\">mac wifi :</label>
-                                           <input  placeholder=\"@mac_wifi\" type=\"text\">
-                                    </div>
-                                    <div class=\"modal-body\">
-                                          <label for=\"name\">description:</label>
-                                           <textarea name=\"\" id=\"\" cols=\"55\" placeholder=\"@configuration\" rows=\"10\"></textarea>
+                                        ";
+        // line 26
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 26, $this->source); })()), 'widget');
+        echo "
+                                        
                                     </div>
                                     <div class=\"modal-footer\">
-                                    <button type=\"button\" class=\"close_button1\">Add item</button>
-                                    
-                               </div>
+                                    <button type=\"submit\" class=\"close_button1\">Add item</button>
+                                    </div>
+                                    ";
+        // line 32
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 32, $this->source); })()), 'form_end');
+        echo "
                          </div>
                   </div>
                   
@@ -186,69 +165,66 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                             <th>serial number</th>
                             <th>availability</th>
                             <th>state</th>
-                            <th>action</th>
+                            <th  style=\"text-align : center\"  >action</th>
                         </tr>
                     </thead>
                     <tbody>
                     ";
-        // line 97
+        // line 67
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["Allmachines"]) || array_key_exists("Allmachines", $context) ? $context["Allmachines"] : (function () { throw new RuntimeError('Variable "Allmachines" does not exist.', 97, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["Allmachines"]) || array_key_exists("Allmachines", $context) ? $context["Allmachines"] : (function () { throw new RuntimeError('Variable "Allmachines" does not exist.', 67, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["machine"]) {
-            // line 98
+            // line 68
             echo "
                             <tr>
                             <td>
                                 <div class=\"user_info\">
                                     <div class=\"user_details\">
                                         <label for=\"name\">";
-            // line 103
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 103), "marque", [], "any", false, false, false, 103), "getMarqueName", [], "method", false, false, false, 103), "html", null, true);
+            // line 73
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 73), "marque", [], "any", false, false, false, 73), "getMarqueName", [], "method", false, false, false, 73), "html", null, true);
             echo "</label>
                                         <p>";
-            // line 104
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 104), "getModelName", [], "method", false, false, false, 104), "html", null, true);
+            // line 74
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 74), "getModelName", [], "method", false, false, false, 74), "html", null, true);
             echo "</p>
                                     </div>
                                 </div>
                             </td>
                             <td >
                                 ";
-            // line 109
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "type", [], "any", false, false, false, 109), "html", null, true);
+            // line 79
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "type", [], "any", false, false, false, 79), "html", null, true);
             echo "
                             </td>
                              <td>
                                  ";
-            // line 112
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "getSerialNum", [], "method", false, false, false, 112), "html", null, true);
+            // line 82
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "getSerialNum", [], "method", false, false, false, 82), "html", null, true);
             echo "
                             </td>
-                             <td class=\"info\" >
+                             <td class=\"info\" style=\"text-align : center\">
                                  ";
-            // line 115
-            if ((twig_get_attribute($this->env, $this->source, $context["machine"], "available", [], "any", false, false, false, 115) == 1)) {
-                // line 116
+            // line 85
+            if ((twig_get_attribute($this->env, $this->source, $context["machine"], "available", [], "any", false, false, false, 85) == 1)) {
+                // line 86
                 echo "                                          Yes
                                     ";
             } else {
-                // line 117
+                // line 87
                 echo "  No
                                 ";
             }
-            // line 119
+            // line 89
             echo "                            </td>
                              <td class=\"info\" >
                                ";
-            // line 121
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "state", [], "any", false, false, false, 121), "html", null, true);
+            // line 91
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "state", [], "any", false, false, false, 91), "html", null, true);
             echo "
                             </td>
                              <td>
-                               <a href=\"";
-            // line 124
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("createStock");
-            echo "\"><button ><i class='bx bx-show bx-sm'></i></button></a>
+                               <button ><i class='bx bx-show bx-sm'></i></button></a>
                                 <button><i class='bx bx-edit bx-sm'></i></button>
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                             </td>
@@ -258,7 +234,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['machine'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 129
+        // line 99
         echo "                       
                     </tbody>
                 </table>
@@ -270,14 +246,14 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
     }
 
-    // line 135
+    // line 105
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 136
+        // line 106
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -302,7 +278,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
     public function getDebugInfo()
     {
-        return array (  281 => 136,  274 => 135,  262 => 129,  250 => 124,  244 => 121,  240 => 119,  236 => 117,  232 => 116,  230 => 115,  224 => 112,  218 => 109,  210 => 104,  206 => 103,  199 => 98,  195 => 97,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 135,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  257 => 106,  250 => 105,  238 => 99,  223 => 91,  219 => 89,  215 => 87,  211 => 86,  209 => 85,  203 => 82,  197 => 79,  189 => 74,  185 => 73,  178 => 68,  174 => 67,  136 => 32,  127 => 26,  111 => 13,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 105,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -319,56 +295,26 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                   <div class=\"modal-dialog\" role=\"document\">
                         <div class=\"modal-content\">
                              <div class=\"modal-header\">
+                                 {{ form_start(form) }}
                                     <h5 class=\"modal-title\" id=\"exampleModalLabel\">Add to stock</h5>
                                     <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
                                     <span aria-hidden=\"true\">&times;</span>
                                     </button>
                                     </div>
                                     <div class=\"modal-body\">
+                                     
                                           <label for=\"name\">item picture:</label>
-                                          <button><i class='bx bxs-cloud-upload bx-sm'></i></button>
+                                          <button class=\"up\"< ><i class='bx bxs-cloud-upload bx-sm'></i></button>
                                           <input  type=\"file\">
-                                    </div>
-                                    <div class=\"modal-body\">
-                                          <label for=\"name\">item model :</label>
-                                          <input  placeholder=\"@model\" type=\"text\">
-                                    </div>
-                                     <div class=\"modal-body\">
-                                          <label for=\"name\">item marque :</label>
-                                          <input  placeholder=\"@marque\" type=\"text\">
-                                    </div>
-                                    <div class=\"modal-body\">
-                                          <label for=\"name\">serial number :</label>
-                                          <input  placeholder=\"@serial_number\" type=\"text\">
-                                    </div>
-                                     <div class=\"modal-body\">
-                                 
-                                            <label>State:</label>
-                                             <input type=\"text\" placeholder=\"@State\" >
-                                      
-                                    </div>
-                                    <div class=\"modal-body\">
+                                   
                                          
-                                            <label>Available:</label>
-                                             <input type=\"text\" placeholder=\"@Available\" >
-                                         
-                                    </div>
-                                     <div class=\"modal-body\">
-                                          <label for=\"name\">mac ethernet :</label>
-                                           <input  placeholder=\"@mac_ethernet\" type=\"text\">
-                                    </div>
-                                    <div class=\"modal-body\">
-                                          <label for=\"name\">mac wifi :</label>
-                                           <input  placeholder=\"@mac_wifi\" type=\"text\">
-                                    </div>
-                                    <div class=\"modal-body\">
-                                          <label for=\"name\">description:</label>
-                                           <textarea name=\"\" id=\"\" cols=\"55\" placeholder=\"@configuration\" rows=\"10\"></textarea>
+                                        {{ form_widget(form) }}
+                                        
                                     </div>
                                     <div class=\"modal-footer\">
-                                    <button type=\"button\" class=\"close_button1\">Add item</button>
-                                    
-                               </div>
+                                    <button type=\"submit\" class=\"close_button1\">Add item</button>
+                                    </div>
+                                    {{ form_end(form) }}
                          </div>
                   </div>
                   
@@ -399,7 +345,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                             <th>serial number</th>
                             <th>availability</th>
                             <th>state</th>
-                            <th>action</th>
+                            <th  style=\"text-align : center\"  >action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -420,7 +366,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                              <td>
                                  {{machine.getSerialNum()}}
                             </td>
-                             <td class=\"info\" >
+                             <td class=\"info\" style=\"text-align : center\">
                                  {% if machine.available == 1 %}
                                           Yes
                                     {% else %}  No
@@ -430,7 +376,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
                                {{machine.state}}
                             </td>
                              <td>
-                               <a href=\"{{path('createStock')}}\"><button ><i class='bx bx-show bx-sm'></i></button></a>
+                               <button ><i class='bx bx-show bx-sm'></i></button></a>
                                 <button><i class='bx bx-edit bx-sm'></i></button>
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                             </td>

@@ -49,7 +49,7 @@ class __TwigTemplate_1c30cf283e931232784caed1e925dd1ce5348a07b4019d61ec5b73be9c3
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 12
         $this->displayBlock('body', $context, $blocks);
-        // line 101
+        // line 103
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -132,24 +132,6 @@ class __TwigTemplate_1c30cf283e931232784caed1e925dd1ce5348a07b4019d61ec5b73be9c3
                                                       <p class=\"font-weight-bold\">Email</p>
                                                       <h6 class=\"text-muted\">elbaroudiotmane99@gmail.com</h6>
                                                 </div>
-                                                <table class=\"table table-bordered text-center mr-4 ml-4\" style=\"width: 50%;\">
-                                                      <thead>
-                                                            <tr>
-                                                                  <th>Permission</th>
-                                                            </tr>
-                                                      </thead>
-                                                      <tbody>
-                                                            <tr>
-                                                                  <td>Add user</td>
-                                                            </tr>
-                                                            <tr>
-                                                                  <td>delete user</td>
-                                                            </tr>
-                                                            <tr>
-                                                                  <td>Modifier user</td>
-                                                            </tr>
-                                                      </tbody>
-                                                </table>
                                           </div>
 
                                           <div class=\"row mb-4\">
@@ -163,26 +145,45 @@ class __TwigTemplate_1c30cf283e931232784caed1e925dd1ce5348a07b4019d61ec5b73be9c3
                                                 </div>
                                           </div>
 
-                                          <div class=\"row mb-4\">
-                                                <div class=\"col-sm-6\">
-                                                      <p class=\"font-weight-bold\">Job</p>
-                                                      <h6 class=\"text-muted\">Devops</h6>
-                                                </div>
-                                                <div class=\"col-sm-6\">
-                                                      <p class=\"font-weight-bold\">Role</p>
-                                                      <h6 class=\"text-muted\">test</h6>
-                                                </div>
+                                          <div class=\"text-center mb-5\">
+                                                <p class=\"font-weight-bold\">Job</p>
+                                                <h6 class=\"text-muted\">Devops</h6>
                                           </div>
+
                                           <div class=\"text-center mb-4\">
-                                                <p class=\"font-weight-bold\">Permission</p>
-                                                ";
-        // line 85
-        echo "                                                <select class=\"form-select text-muted bg-light border-0 shadow-sm\" size=\"3\" aria-label=\"size 3 select example\">
-                                                      <option selected>Open this select menu</option>
-                                                      <option value=\"1\">One</option>
-                                                      <option value=\"2\">Two</option>
-                                                      <option value=\"3\">Three</option>
-                                                </select>
+                                                <div class=\"row\">
+                                                      <table class=\"table table-bordered text-center mr-4 ml-4\" style=\"width: 40%;\">
+                                                            <thead>
+                                                                  <tr>
+                                                                        <th>Permission</th>
+                                                                  </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                  <tr>
+                                                                        <td>Add user</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>delete user</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Modifier user</td>
+                                                                  </tr>
+                                                            </tbody>
+                                                      </table>
+
+                                                      <table class=\"table table-bordered text-center mr-4 ml-4\" style=\"width: 40%;\">
+                                                            <thead>
+                                                                  <tr>
+                                                                        <th>Role</th>
+                                                                  </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                  <tr>
+                                                                        <td>Add user</td>
+                                                                  </tr>
+                                                            </tbody>
+                                                      </table>
+                                                </div>
                                           </div>
                                     </div>
 
@@ -198,14 +199,14 @@ class __TwigTemplate_1c30cf283e931232784caed1e925dd1ce5348a07b4019d61ec5b73be9c3
 
     }
 
-    // line 101
+    // line 103
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 102
+        // line 104
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -222,7 +223,7 @@ class __TwigTemplate_1c30cf283e931232784caed1e925dd1ce5348a07b4019d61ec5b73be9c3
 
     public function getDebugInfo()
     {
-        return array (  209 => 102,  202 => 101,  180 => 85,  105 => 13,  98 => 12,  81 => 3,  74 => 2,  61 => 1,  53 => 101,  51 => 12,  49 => 2,  44 => 1,);
+        return array (  210 => 104,  203 => 103,  105 => 13,  98 => 12,  81 => 3,  74 => 2,  61 => 1,  53 => 103,  51 => 12,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -267,24 +268,6 @@ class __TwigTemplate_1c30cf283e931232784caed1e925dd1ce5348a07b4019d61ec5b73be9c3
                                                       <p class=\"font-weight-bold\">Email</p>
                                                       <h6 class=\"text-muted\">elbaroudiotmane99@gmail.com</h6>
                                                 </div>
-                                                <table class=\"table table-bordered text-center mr-4 ml-4\" style=\"width: 50%;\">
-                                                      <thead>
-                                                            <tr>
-                                                                  <th>Permission</th>
-                                                            </tr>
-                                                      </thead>
-                                                      <tbody>
-                                                            <tr>
-                                                                  <td>Add user</td>
-                                                            </tr>
-                                                            <tr>
-                                                                  <td>delete user</td>
-                                                            </tr>
-                                                            <tr>
-                                                                  <td>Modifier user</td>
-                                                            </tr>
-                                                      </tbody>
-                                                </table>
                                           </div>
 
                                           <div class=\"row mb-4\">
@@ -298,25 +281,45 @@ class __TwigTemplate_1c30cf283e931232784caed1e925dd1ce5348a07b4019d61ec5b73be9c3
                                                 </div>
                                           </div>
 
-                                          <div class=\"row mb-4\">
-                                                <div class=\"col-sm-6\">
-                                                      <p class=\"font-weight-bold\">Job</p>
-                                                      <h6 class=\"text-muted\">Devops</h6>
-                                                </div>
-                                                <div class=\"col-sm-6\">
-                                                      <p class=\"font-weight-bold\">Role</p>
-                                                      <h6 class=\"text-muted\">test</h6>
-                                                </div>
+                                          <div class=\"text-center mb-5\">
+                                                <p class=\"font-weight-bold\">Job</p>
+                                                <h6 class=\"text-muted\">Devops</h6>
                                           </div>
+
                                           <div class=\"text-center mb-4\">
-                                                <p class=\"font-weight-bold\">Permission</p>
-                                                {# <h6 class=\"text-muted\">test</h6> #}
-                                                <select class=\"form-select text-muted bg-light border-0 shadow-sm\" size=\"3\" aria-label=\"size 3 select example\">
-                                                      <option selected>Open this select menu</option>
-                                                      <option value=\"1\">One</option>
-                                                      <option value=\"2\">Two</option>
-                                                      <option value=\"3\">Three</option>
-                                                </select>
+                                                <div class=\"row\">
+                                                      <table class=\"table table-bordered text-center mr-4 ml-4\" style=\"width: 40%;\">
+                                                            <thead>
+                                                                  <tr>
+                                                                        <th>Permission</th>
+                                                                  </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                  <tr>
+                                                                        <td>Add user</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>delete user</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Modifier user</td>
+                                                                  </tr>
+                                                            </tbody>
+                                                      </table>
+
+                                                      <table class=\"table table-bordered text-center mr-4 ml-4\" style=\"width: 40%;\">
+                                                            <thead>
+                                                                  <tr>
+                                                                        <th>Role</th>
+                                                                  </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                  <tr>
+                                                                        <td>Add user</td>
+                                                                  </tr>
+                                                            </tbody>
+                                                      </table>
+                                                </div>
                                           </div>
                                     </div>
 

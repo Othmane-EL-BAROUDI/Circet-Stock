@@ -54,7 +54,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 ";
         // line 7
         $this->displayBlock('body', $context, $blocks);
-        // line 86
+        // line 96
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -127,6 +127,10 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
             <div class=\"modal fade\" id=\"addRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addRole\" aria-hidden=\"true\">
                   <div class=\"modal-dialog\" role=\"document\">
                         <div class=\"modal-content\">
+                              ";
+        // line 34
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 34, $this->source); })()), 'form_start');
+        echo "
                              <div class=\"modal-header\">
                                     <h5 class=\"modal-title\" id=\"exampleModalLabel\">Add permission</h5>
                                     <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
@@ -134,50 +138,105 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
                                     </button>
                                     </div>
                                     <div class=\"modal-body\">
-                                          <label for=\"name\">Permission name :</label>
-                                          <input  placeholder=\"@permission_name\" required type=\"text\">
+                                         ";
+        // line 42
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 42, $this->source); })()), 'widget');
+        echo "
                                     </div>
                                     <div class=\"modal-footer\">
                                     <button type=\"submit\"  class=\"close_button1\">Add permission</button>
-                               </div>
+                              </div>
+                              ";
+        // line 47
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 47, $this->source); })()), 'form_end');
+        echo "
                          </div>
                   </div>
                   
       </div>
+            
             <div class=\"text\">Permission</div>
-            <button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Add new permission</button>
+            ";
+        // line 54
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 54, $this->source); })()), "session", [], "any", false, false, false, 54), "flashbag", [], "any", false, false, false, 54), "get", [0 => "success"], "method", false, false, false, 54));
+        foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
+            // line 55
+            echo "                  <label class=\"alerto\" style=\"background-color: lightgreen\" >";
+            echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
+            echo "</label>
+             ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 57
+        echo "             ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 57, $this->source); })()), "session", [], "any", false, false, false, 57), "flashbag", [], "any", false, false, false, 57), "get", [0 => "update"], "method", false, false, false, 57));
+        foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
+            // line 58
+            echo "                  <label class=\"alerto\" style=\"background-color: skyblue\" >";
+            echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
+            echo "</label>
+             ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 60
+        echo "             ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 60, $this->source); })()), "session", [], "any", false, false, false, 60), "flashbag", [], "any", false, false, false, 60), "get", [0 => "delete"], "method", false, false, false, 60));
+        foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
+            // line 61
+            echo "                  <label class=\"alerto\" style=\"background-color: lightcoral\" >";
+            echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
+            echo "</label>
+             ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 63
+        echo "            <button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Add new permission</button>
             <div class=\"main_content\">
                <div class=\"sort\">
                     <input type=\"text\" placeholder=\"Search\" >
                     <button>   Search  </button>
                 </div>
             </div>
+            
             <div class=\"content\">
-              <table class=\"content-table\">
+              <table class=\"content-table\" style=\"\">
                     <thead>
                         <tr>
                             <th>permission</th>
-                            <th>action</th>
+                            <th  style=\"text-align : center\" >action</th>
                         </tr>
                     </thead>
                     <tbody>
                         ";
-        // line 68
+        // line 80
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["allPermissions"]) || array_key_exists("allPermissions", $context) ? $context["allPermissions"] : (function () { throw new RuntimeError('Variable "allPermissions" does not exist.', 68, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["allPermissions"]) || array_key_exists("allPermissions", $context) ? $context["allPermissions"] : (function () { throw new RuntimeError('Variable "allPermissions" does not exist.', 80, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["permission"]) {
-            // line 69
-            echo "                              
-                        
-                            <tr>
+            // line 81
+            echo "                            <tr>
                              
                              <td> ";
-            // line 73
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 73), "html", null, true);
+            // line 83
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 83), "html", null, true);
             echo " </td>
                                     <td>
-                                <button><i class='bx bx-edit bx-sm'></i></button>
-                                <button><i class='bx bx-trash bx-sm'></i></button>
+                               <a href=\"/Permission/";
+            // line 85
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 85), "html", null, true);
+            echo "\"><button><i class='bx bx-edit bx-sm'></i></button></a> 
+                               <a href=\"/Permission/Remove/";
+            // line 86
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 86), "html", null, true);
+            echo "\"><button><i class='bx bx-trash bx-sm'></i></button></a> 
                                     </td>   
                               </tr>   
                          ";
@@ -185,7 +244,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['permission'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 79
+        // line 89
         echo "   
                     </tbody>
                 </table>
@@ -198,14 +257,14 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 
     }
 
-    // line 86
+    // line 96
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 87
+        // line 97
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -230,7 +289,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 
     public function getDebugInfo()
     {
-        return array (  209 => 87,  202 => 86,  189 => 79,  176 => 73,  170 => 69,  166 => 68,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 86,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  268 => 97,  261 => 96,  248 => 89,  238 => 86,  234 => 85,  229 => 83,  225 => 81,  221 => 80,  202 => 63,  193 => 61,  188 => 60,  179 => 58,  174 => 57,  165 => 55,  161 => 54,  151 => 47,  143 => 42,  132 => 34,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 96,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -268,6 +327,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
             <div class=\"modal fade\" id=\"addRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addRole\" aria-hidden=\"true\">
                   <div class=\"modal-dialog\" role=\"document\">
                         <div class=\"modal-content\">
+                              {{ form_start(form) }}
                              <div class=\"modal-header\">
                                     <h5 class=\"modal-title\" id=\"exampleModalLabel\">Add permission</h5>
                                     <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
@@ -275,17 +335,27 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
                                     </button>
                                     </div>
                                     <div class=\"modal-body\">
-                                          <label for=\"name\">Permission name :</label>
-                                          <input  placeholder=\"@permission_name\" required type=\"text\">
+                                         {{ form_widget(form) }}
                                     </div>
                                     <div class=\"modal-footer\">
                                     <button type=\"submit\"  class=\"close_button1\">Add permission</button>
-                               </div>
+                              </div>
+                              {{ form_end(form) }}
                          </div>
                   </div>
                   
       </div>
+            
             <div class=\"text\">Permission</div>
+            {% for flash_message in app.session.flashbag.get('success') %}
+                  <label class=\"alerto\" style=\"background-color: lightgreen\" >{{flash_message}}</label>
+             {% endfor %}
+             {% for flash_message in app.session.flashbag.get('update') %}
+                  <label class=\"alerto\" style=\"background-color: skyblue\" >{{flash_message}}</label>
+             {% endfor %}
+             {% for flash_message in app.session.flashbag.get('delete') %}
+                  <label class=\"alerto\" style=\"background-color: lightcoral\" >{{flash_message}}</label>
+             {% endfor %}
             <button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Add new permission</button>
             <div class=\"main_content\">
                <div class=\"sort\">
@@ -293,24 +363,23 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
                     <button>   Search  </button>
                 </div>
             </div>
+            
             <div class=\"content\">
-              <table class=\"content-table\">
+              <table class=\"content-table\" style=\"\">
                     <thead>
                         <tr>
                             <th>permission</th>
-                            <th>action</th>
+                            <th  style=\"text-align : center\" >action</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for key , permission in allPermissions %}
-                              
-                        
                             <tr>
                              
                              <td> {{permission.getPermissionName()}} </td>
                                     <td>
-                                <button><i class='bx bx-edit bx-sm'></i></button>
-                                <button><i class='bx bx-trash bx-sm'></i></button>
+                               <a href=\"/Permission/{{permission.id}}\"><button><i class='bx bx-edit bx-sm'></i></button></a> 
+                               <a href=\"/Permission/Remove/{{permission.id}}\"><button><i class='bx bx-trash bx-sm'></i></button></a> 
                                     </td>   
                               </tr>   
                          {% endfor %}   

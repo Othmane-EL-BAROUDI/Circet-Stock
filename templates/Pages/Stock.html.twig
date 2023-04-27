@@ -10,56 +10,26 @@
                   <div class="modal-dialog" role="document">
                         <div class="modal-content">
                              <div class="modal-header">
+                                 {{ form_start(form) }}
                                     <h5 class="modal-title" id="exampleModalLabel">Add to stock</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                     </button>
                                     </div>
                                     <div class="modal-body">
+                                     
                                           <label for="name">item picture:</label>
-                                          <button><i class='bx bxs-cloud-upload bx-sm'></i></button>
+                                          <button class="up"< ><i class='bx bxs-cloud-upload bx-sm'></i></button>
                                           <input  type="file">
-                                    </div>
-                                    <div class="modal-body">
-                                          <label for="name">item model :</label>
-                                          <input  placeholder="@model" type="text">
-                                    </div>
-                                     <div class="modal-body">
-                                          <label for="name">item marque :</label>
-                                          <input  placeholder="@marque" type="text">
-                                    </div>
-                                    <div class="modal-body">
-                                          <label for="name">serial number :</label>
-                                          <input  placeholder="@serial_number" type="text">
-                                    </div>
-                                     <div class="modal-body">
-                                 
-                                            <label>State:</label>
-                                             <input type="text" placeholder="@State" >
-                                      
-                                    </div>
-                                    <div class="modal-body">
+                                   
                                          
-                                            <label>Available:</label>
-                                             <input type="text" placeholder="@Available" >
-                                         
-                                    </div>
-                                     <div class="modal-body">
-                                          <label for="name">mac ethernet :</label>
-                                           <input  placeholder="@mac_ethernet" type="text">
-                                    </div>
-                                    <div class="modal-body">
-                                          <label for="name">mac wifi :</label>
-                                           <input  placeholder="@mac_wifi" type="text">
-                                    </div>
-                                    <div class="modal-body">
-                                          <label for="name">description:</label>
-                                           <textarea name="" id="" cols="55" placeholder="@configuration" rows="10"></textarea>
+                                        {{ form_widget(form) }}
+                                        
                                     </div>
                                     <div class="modal-footer">
-                                    <button type="button" class="close_button1">Add item</button>
-                                    
-                               </div>
+                                    <button type="submit" class="close_button1">Add item</button>
+                                    </div>
+                                    {{ form_end(form) }}
                          </div>
                   </div>
                   
@@ -90,7 +60,7 @@
                             <th>serial number</th>
                             <th>availability</th>
                             <th>state</th>
-                            <th>action</th>
+                            <th  style="text-align : center"  >action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -111,7 +81,7 @@
                              <td>
                                  {{machine.getSerialNum()}}
                             </td>
-                             <td class="info" >
+                             <td class="info" style="text-align : center">
                                  {% if machine.available == 1 %}
                                           Yes
                                     {% else %}  No
@@ -121,7 +91,7 @@
                                {{machine.state}}
                             </td>
                              <td>
-                               <a href="{{path('createStock')}}"><button ><i class='bx bx-show bx-sm'></i></button></a>
+                               <button ><i class='bx bx-show bx-sm'></i></button></a>
                                 <button><i class='bx bx-edit bx-sm'></i></button>
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                             </td>
