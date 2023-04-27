@@ -50,6 +50,7 @@ class UserFormType extends AbstractType
                 'attr' =>array(
                     'placeholder' => '@Manager'
                 ),
+                'required' => false,
             ])
         ;
     }

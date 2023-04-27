@@ -54,7 +54,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 ";
         // line 7
         $this->displayBlock('body', $context, $blocks);
-        // line 128
+        // line 136
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -175,13 +175,34 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                   </div>
                   
       </div>
-            <div class=\"text\">Users</div>
-             ";
-        // line 50
+            ";
+        // line 49
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 50, $this->source); })()), "session", [], "any", false, false, false, 50), "flashbag", [], "any", false, false, false, 50), "get", [0 => "success"], "method", false, false, false, 50));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 49, $this->source); })()), "session", [], "any", false, false, false, 49), "flashbag", [], "any", false, false, false, 49), "get", [0 => "success"], "method", false, false, false, 49));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
+            // line 50
+            echo "                   <div class=\"alert  alert-success fade show\" role=\"alert\">
+                              <strong>Success!</strong> ";
             // line 51
+            echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
+            echo "
+                              <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                              <span aria-hidden=\"true\">&times;</span>
+                              </button>
+                     </div>
+             ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 57
+        echo "            <div class=\"text\">Users</div>
+             ";
+        // line 58
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 58, $this->source); })()), "session", [], "any", false, false, false, 58), "flashbag", [], "any", false, false, false, 58), "get", [0 => "success"], "method", false, false, false, 58));
+        foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
+            // line 59
             echo "              <label class=\"alerto\" style=\"background-color: lightgreen\" >";
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "</label>
@@ -190,7 +211,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 53
+        // line 61
         echo "            <button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addUser\">Add new user</button>
             <div class=\"main_content\">
                  <div class=\"sort\">
@@ -215,63 +236,63 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
   </thead>
   <tbody>
      ";
-        // line 76
+        // line 84
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["allusers"]) || array_key_exists("allusers", $context) ? $context["allusers"] : (function () { throw new RuntimeError('Variable "allusers" does not exist.', 76, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["allusers"]) || array_key_exists("allusers", $context) ? $context["allusers"] : (function () { throw new RuntimeError('Variable "allusers" does not exist.', 84, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["user"]) {
-            // line 77
+            // line 85
             echo "     ";
-            if ((twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 77) != twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 77, $this->source); })()), "username", [], "any", false, false, false, 77))) {
-                // line 78
+            if ((twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 85) != twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 85, $this->source); })()), "username", [], "any", false, false, false, 85))) {
+                // line 86
                 echo "    <tr>
       <td>
         <div class=\"d-flex align-items-center\">
           <div class=\"ms-3\">
             <p class=\"fw-bold mb-1\">";
-                // line 82
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 82), "html", null, true);
+                // line 90
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 90), "html", null, true);
                 echo "</p>
             <p class=\"text-muted mb-0\">";
-                // line 83
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 83), "html", null, true);
+                // line 91
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 91), "html", null, true);
                 echo "</p>
           </div>
         </div>
       </td>
       <td>
         <p class=\"text-muted mb-0 mt-2 \">";
-                // line 88
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "matricule", [], "any", false, false, false, 88), "html", null, true);
+                // line 96
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "matricule", [], "any", false, false, false, 96), "html", null, true);
                 echo "t</p>
       </td>
       <td>
         <label class=\"mt-2\">
             ";
-                // line 92
-                if (twig_get_attribute($this->env, $this->source, $context["user"], "enabled", [], "any", false, false, false, 92)) {
-                    echo " <span class=\"badge badge-success rounded-pill d-inline\">Active</span>
+                // line 100
+                if (twig_get_attribute($this->env, $this->source, $context["user"], "enabled", [], "any", false, false, false, 100)) {
+                    echo " <span class=\"badge badge-success rounded-pill d-inline \">Active</span>
             ";
                 } else {
-                    // line 93
+                    // line 101
                     echo "  <span class=\"badge badge-warning rounded-pill d-inline\">Blocked</span>
             ";
                 }
-                // line 95
+                // line 103
                 echo "                
         </label>
         
       </td>
       <td><label class=\"mt-2\">";
-                // line 99
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "job", [], "any", false, false, false, 99), "html", null, true);
+                // line 107
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "job", [], "any", false, false, false, 107), "html", null, true);
                 echo "</label></td>
       <td  class=\"actions\" >
        <a href=\"User/";
-                // line 101
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 101), "html", null, true);
+                // line 109
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 109), "html", null, true);
                 echo "\"> 
             <button type=\"button\" class=\"btn  btn-sm btn-rounded mt-1 mr-1\">
-               <i class='bx bx-show bx-xs'></i> view
+               <i class='bx bx-show-alt bx-xs'></i> view
             </button>
         </a>
         <a href=\"#\"> 
@@ -290,13 +311,13 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
     </tr>
     ";
             }
-            // line 121
+            // line 129
             echo "     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 122
+        // line 130
         echo "  </tbody>
 </table>
 </div>
@@ -308,14 +329,14 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 
     }
 
-    // line 128
+    // line 136
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 129
+        // line 137
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -340,7 +361,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 
     public function getDebugInfo()
     {
-        return array (  319 => 129,  312 => 128,  300 => 122,  294 => 121,  271 => 101,  266 => 99,  260 => 95,  256 => 93,  251 => 92,  244 => 88,  236 => 83,  232 => 82,  226 => 78,  223 => 77,  219 => 76,  194 => 53,  185 => 51,  181 => 50,  171 => 43,  164 => 38,  155 => 36,  151 => 35,  143 => 29,  134 => 27,  130 => 26,  121 => 20,  116 => 18,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 128,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  340 => 137,  333 => 136,  321 => 130,  315 => 129,  292 => 109,  287 => 107,  281 => 103,  277 => 101,  272 => 100,  265 => 96,  257 => 91,  253 => 90,  247 => 86,  244 => 85,  240 => 84,  215 => 61,  206 => 59,  202 => 58,  199 => 57,  187 => 51,  184 => 50,  180 => 49,  171 => 43,  164 => 38,  155 => 36,  151 => 35,  143 => 29,  134 => 27,  130 => 26,  121 => 20,  116 => 18,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 136,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -393,6 +414,14 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                   </div>
                   
       </div>
+            {% for flash_message in app.session.flashbag.get('success') %}
+                   <div class=\"alert  alert-success fade show\" role=\"alert\">
+                              <strong>Success!</strong> {{flash_message}}
+                              <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                              <span aria-hidden=\"true\">&times;</span>
+                              </button>
+                     </div>
+             {% endfor %}
             <div class=\"text\">Users</div>
              {% for flash_message in app.session.flashbag.get('success') %}
               <label class=\"alerto\" style=\"background-color: lightgreen\" >{{flash_message}}</label>
@@ -436,7 +465,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
       </td>
       <td>
         <label class=\"mt-2\">
-            {% if user.enabled %} <span class=\"badge badge-success rounded-pill d-inline\">Active</span>
+            {% if user.enabled %} <span class=\"badge badge-success rounded-pill d-inline \">Active</span>
             {% else %}  <span class=\"badge badge-warning rounded-pill d-inline\">Blocked</span>
             {% endif %}
                 
@@ -447,7 +476,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
       <td  class=\"actions\" >
        <a href=\"User/{{user.id}}\"> 
             <button type=\"button\" class=\"btn  btn-sm btn-rounded mt-1 mr-1\">
-               <i class='bx bx-show bx-xs'></i> view
+               <i class='bx bx-show-alt bx-xs'></i> view
             </button>
         </a>
         <a href=\"#\"> 

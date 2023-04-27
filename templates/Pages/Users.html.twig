@@ -46,6 +46,14 @@
                   </div>
                   
       </div>
+            {% for flash_message in app.session.flashbag.get('success') %}
+                   <div class="alert  alert-success fade show" role="alert">
+                              <strong>Success!</strong> {{flash_message}}
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                     </div>
+             {% endfor %}
             <div class="text">Users</div>
              {% for flash_message in app.session.flashbag.get('success') %}
               <label class="alerto" style="background-color: lightgreen" >{{flash_message}}</label>
@@ -89,7 +97,7 @@
       </td>
       <td>
         <label class="mt-2">
-            {% if user.enabled %} <span class="badge badge-success rounded-pill d-inline">Active</span>
+            {% if user.enabled %} <span class="badge badge-success rounded-pill d-inline ">Active</span>
             {% else %}  <span class="badge badge-warning rounded-pill d-inline">Blocked</span>
             {% endif %}
                 
@@ -100,7 +108,7 @@
       <td  class="actions" >
        <a href="User/{{user.id}}"> 
             <button type="button" class="btn  btn-sm btn-rounded mt-1 mr-1">
-               <i class='bx bx-show bx-xs'></i> view
+               <i class='bx bx-show-alt bx-xs'></i> view
             </button>
         </a>
         <a href="#"> 

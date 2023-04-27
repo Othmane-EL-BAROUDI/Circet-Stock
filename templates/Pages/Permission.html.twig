@@ -50,16 +50,32 @@
                   
       </div>
             
-            <div class="text">Permission</div>
+            
             {% for flash_message in app.session.flashbag.get('success') %}
-                  <label class="alerto" style="background-color: lightgreen" >{{flash_message}}</label>
+                   <div class="alert  alert-success fade show" role="alert">
+                              <strong>Success!</strong> {{flash_message}}
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                     </div>
              {% endfor %}
              {% for flash_message in app.session.flashbag.get('update') %}
-                  <label class="alerto" style="background-color: skyblue" >{{flash_message}}</label>
+                  <div class="alert  alert-info fade show" role="alert">
+                              <strong>Success!</strong> {{flash_message}}
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                  </div>
              {% endfor %}
              {% for flash_message in app.session.flashbag.get('delete') %}
-                  <label class="alerto" style="background-color: lightcoral" >{{flash_message}}</label>
+                   <div class="alert  alert-danger fade show" role="alert">
+                               {{flash_message}}
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                  </div>
              {% endfor %}
+             <div class="text">Permission</div>
             <button type="button" class="new" data-toggle="modal" data-target="#addRole">Add new permission</button>
             <div class="main_content">
                <div class="sort">
@@ -67,7 +83,6 @@
                     <button>   Search  </button>
                 </div>
             </div>
-            
             <div class="content">
               <table class="content-table" style="">
                     <thead>

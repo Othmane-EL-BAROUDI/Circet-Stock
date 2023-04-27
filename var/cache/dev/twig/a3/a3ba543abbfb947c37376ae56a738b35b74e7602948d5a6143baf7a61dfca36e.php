@@ -211,11 +211,11 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
              ";
             // line 89
             if ((twig_get_attribute($this->env, $this->source, $context["machine"], "available", [], "any", false, false, false, 89) == 1)) {
-                echo " <span class=\"badge badge-success rounded-pill d-inline\">Yes</span>
+                echo " <span class=\"badge badge-success rounded-pill d-inline pl-3 pr-3\">Yes</span>
             ";
             } else {
                 // line 90
-                echo "  <span class=\"badge badge-warning rounded-pill d-inline\">No</span>
+                echo "  <span class=\"badge badge-warning rounded-pill d-inline pl-3 pr-3\">No</span>
             ";
             }
             // line 92
@@ -232,7 +232,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
       <td  class=\"actions\" >
        <a href=\"#\"> 
             <button type=\"button\" class=\"btn  btn-sm btn-rounded mt-1 mr-1\">
-               <i class='bx bx-show bx-xs'></i> view
+            <i class='bx bx-show-alt bx-xs'></i> view
             </button>
         </a>
         <a href=\"#\"> 
@@ -392,8 +392,8 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         
       </td>
       <td  ><label  class=\"mt-2 ml-2\">
-             {% if machine.available == 1 %} <span class=\"badge badge-success rounded-pill d-inline\">Yes</span>
-            {% else %}  <span class=\"badge badge-warning rounded-pill d-inline\">No</span>
+             {% if machine.available == 1 %} <span class=\"badge badge-success rounded-pill d-inline pl-3 pr-3\">Yes</span>
+            {% else %}  <span class=\"badge badge-warning rounded-pill d-inline pl-3 pr-3\">No</span>
             {% endif %}
       </label></td>
       <td >
@@ -405,7 +405,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
       <td  class=\"actions\" >
        <a href=\"#\"> 
             <button type=\"button\" class=\"btn  btn-sm btn-rounded mt-1 mr-1\">
-               <i class='bx bx-show bx-xs'></i> view
+            <i class='bx bx-show-alt bx-xs'></i> view
             </button>
         </a>
         <a href=\"#\"> 

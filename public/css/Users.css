@@ -36,7 +36,7 @@ table tbody tr:last-of-type{
     border-radius: 4px;
     border: solid #f9a826 1px;
     color: #f9a826;
-    margin-right: 3px;
+    margin-right: 7px;
 }
 .sort ::placeholder{
     color:#f9a826;
@@ -62,7 +62,7 @@ table tbody tr:last-of-type{
     border: solid #f9a826 1px;
     color: #f9a826;
     font-weight: bold;
-    margin-right: 3px;
+    margin-right: 7px;
 }
 .sort select option{
     height: 50px;
