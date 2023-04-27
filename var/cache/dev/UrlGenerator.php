@@ -10,6 +10,8 @@ return [
     'HomePage' => [[], ['_controller' => 'App\\Controller\\HomePageController::HomePage'], [], [['text', '/HomePage']], [], []],
     'createStock' => [[], ['_controller' => 'App\\Controller\\MachineFormController::create'], [], [['text', '/Stock/create']], [], []],
     'Permission' => [[], ['_controller' => 'App\\Controller\\PermissionController::Permission'], [], [['text', '/Permission']], [], []],
+    'PermissionUpdate' => [['id'], ['_controller' => 'App\\Controller\\PermissionController::PermissionUpdate'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Permission']], [], []],
+    'PermissionRemove' => [['id'], ['_controller' => 'App\\Controller\\PermissionController::PermissionDelete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Permission/Remove']], [], []],
     'Profile' => [[], ['_controller' => 'App\\Controller\\ProfileController::ForgetPassword'], [], [['text', '/Profile']], [], []],
     'Role' => [[], ['_controller' => 'App\\Controller\\RoleController::Role'], [], [['text', '/Role']], [], []],
     'redirect_after_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::redirectAfterLogin'], [], [['text', '/redirect-after-login']], [], []],

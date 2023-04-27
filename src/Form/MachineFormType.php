@@ -3,22 +3,48 @@
 namespace App\Form;
 
 use App\Entity\Machine;
+
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 class MachineFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('type')
-            ->add('serial_num')
-            ->add('state')
+            ->add('type', TextType::class,[
+                'attr' =>array(
+                    'placeholder' => '@Type'
+                ),
+            ])
+            ->add('serial_num', TextType::class,[
+                'attr' =>array(
+                    'placeholder' => '@Serial number'
+                ),
+            ])
+            ->add('state', TextType::class,[
+                'attr' =>array(
+                    'placeholder' => '@state'
+                ),
+            ])
             ->add('available')
-            ->add('description')
-            ->add('mac_ethernet')
-            ->add('mac_wifi')
+            ->add('description', TextType::class,[
+                'attr' =>array(
+                    'placeholder' => '@Description'
+                ),
+            ])
+            ->add('mac_ethernet', TextType::class,[
+                'attr' =>array(
+                    'placeholder' => '@Mac_ethernet'
+                ),
+            ])
+            ->add('mac_wifi', TextType::class,[
+                'attr' =>array(
+                    'placeholder' => '@Mac_wifi'
+                ),
+            ])
             
         ;
     }

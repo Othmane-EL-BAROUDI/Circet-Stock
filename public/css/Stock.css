@@ -175,6 +175,7 @@ textarea:focus, input:focus , button:focus{
     font-size: 15px;
     background-color: white;
     border: black solid 1px;
+    margin-bottom: 15px;
 }
 .modal-body textarea{
     resize: none;
@@ -186,6 +187,16 @@ textarea:focus, input:focus , button:focus{
     top:50;
     width: 94%;
     opacity: 0;
+    cursor: pointer;
+}
+.up{
+        margin-bottom: 18px;
+}
+.modal-body  input[type="checkbox"]{
+    margin-left: -45%;
+    
+    margin-bottom: 20px;
+    height: 15px;
     cursor: pointer;
 }
 .modal-body label{

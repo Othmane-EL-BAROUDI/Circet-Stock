@@ -161,7 +161,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t\t<thead>
 \t\t\t\t\t<tr>
 \t\t\t\t\t\t<th>Rôle</th>
-\t\t\t\t\t\t<th>action</th>
+\t\t\t\t\t\t<th style=\"text-align : center\"  >action</th>
 \t\t\t\t\t</tr>
 \t\t\t\t</thead>
 \t\t\t\t<tbody>
@@ -310,7 +310,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t\t<thead>
 \t\t\t\t\t<tr>
 \t\t\t\t\t\t<th>Rôle</th>
-\t\t\t\t\t\t<th>action</th>
+\t\t\t\t\t\t<th style=\"text-align : center\"  >action</th>
 \t\t\t\t\t</tr>
 \t\t\t\t</thead>
 \t\t\t\t<tbody>

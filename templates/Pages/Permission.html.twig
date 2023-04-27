@@ -31,6 +31,7 @@
             <div class="modal fade" id="addRole" tabindex="-1" role="dialog" aria-labelledby="addRole" aria-hidden="true">
                   <div class="modal-dialog" role="document">
                         <div class="modal-content">
+                              {{ form_start(form) }}
                              <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Add permission</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -38,17 +39,27 @@
                                     </button>
                                     </div>
                                     <div class="modal-body">
-                                          <label for="name">Permission name :</label>
-                                          <input  placeholder="@permission_name" required type="text">
+                                         {{ form_widget(form) }}
                                     </div>
                                     <div class="modal-footer">
                                     <button type="submit"  class="close_button1">Add permission</button>
-                               </div>
+                              </div>
+                              {{ form_end(form) }}
                          </div>
                   </div>
                   
       </div>
+            
             <div class="text">Permission</div>
+            {% for flash_message in app.session.flashbag.get('success') %}
+                  <label class="alerto" style="background-color: lightgreen" >{{flash_message}}</label>
+             {% endfor %}
+             {% for flash_message in app.session.flashbag.get('update') %}
+                  <label class="alerto" style="background-color: skyblue" >{{flash_message}}</label>
+             {% endfor %}
+             {% for flash_message in app.session.flashbag.get('delete') %}
+                  <label class="alerto" style="background-color: lightcoral" >{{flash_message}}</label>
+             {% endfor %}
             <button type="button" class="new" data-toggle="modal" data-target="#addRole">Add new permission</button>
             <div class="main_content">
                <div class="sort">
@@ -56,24 +67,23 @@
                     <button>   Search  </button>
                 </div>
             </div>
+            
             <div class="content">
-              <table class="content-table">
+              <table class="content-table" style="">
                     <thead>
                         <tr>
                             <th>permission</th>
-                            <th>action</th>
+                            <th  style="text-align : center" >action</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for key , permission in allPermissions %}
-                              
-                        
                             <tr>
                              
                              <td> {{permission.getPermissionName()}} </td>
                                     <td>
-                                <button><i class='bx bx-edit bx-sm'></i></button>
-                                <button><i class='bx bx-trash bx-sm'></i></button>
+                               <a href="/Permission/{{permission.id}}"><button><i class='bx bx-edit bx-sm'></i></button></a> 
+                               <a href="/Permission/Remove/{{permission.id}}"><button><i class='bx bx-trash bx-sm'></i></button></a> 
                                     </td>   
                               </tr>   
                          {% endfor %}   

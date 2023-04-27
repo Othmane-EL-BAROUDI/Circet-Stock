@@ -6,6 +6,7 @@ use App\Repository\PermissionRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=PermissionRepository::class)
@@ -26,6 +27,7 @@ class Permission
 
     /**
      * @ORM\ManyToMany(targetEntity=user::class, inversedBy="permissions")
+     * @Assert\NotBlank
      */
     private $user_permission;
 

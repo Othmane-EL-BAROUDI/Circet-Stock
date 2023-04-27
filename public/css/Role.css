@@ -59,10 +59,11 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .content-table{
-   
     border-collapse: collapse;
     min-width: 500px;
     border-radius: 12px;
+    overflow: auto; 
+    max-height: 100px;
 }
 .content-table thead tr{
     background-color: #f9a826;
@@ -101,7 +102,7 @@
 .content-table tbody tr td button{
     border: none;
     background: none;
-    margin-left: 14%;
+    margin-left: 19%;
 }
 .add_role input{
     text-align: center;
@@ -175,3 +176,21 @@
   ::-webkit-scrollbar-thumb {
     background:#f9a826;
   }
+  .alerto{
+        border-radius: 5px;
+        position: absolute;     
+        text-align: center;
+        margin-left:29.2% ;
+        margin-top: -3%;
+        width: 38.7%;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+  }
+  *:active {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}

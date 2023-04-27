@@ -1,0 +1,56 @@
+.home_content{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition:  all 0.5s ease;
+    overflow: scroll;
+}
+button:focus,input:focus,select:focus{
+    outline: none;
+}
+.home_content .text{
+    font-size: 25px;
+    font-weight: 500;
+    color: #1d1b31;
+    margin: 12px;
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ }
+ .card input{
+    width: 100%;
+    padding:5px 0 5px 15px;
+
+ }
+ .card label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#f9a826  ;
+    font-weight: bold;
+    margin-bottom: 10px;
+ }
+ .headline{
+     display: block;
+     padding: 20px 50px;
+     position: relative;
+ }
+ .actions{
+    display: flex;
+    justify-content: center;
+ }
+.buttons{
+    width: 58%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 
+.buttons button{
+    cursor: pointer;
+    border-radius: 5px;
+    width: 170px;
+    padding: 5px 0 5px 0;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

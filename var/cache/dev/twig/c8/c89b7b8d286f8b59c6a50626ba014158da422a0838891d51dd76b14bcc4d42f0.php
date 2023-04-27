@@ -198,7 +198,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                             <th>users</th>
                             <th>matricule</th>
                             <th>job</th>
-                            <th>action</th>
+                            <th  style=\"text-align : center\"  >action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -386,7 +386,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                             <th>users</th>
                             <th>matricule</th>
                             <th>job</th>
-                            <th>action</th>
+                            <th  style=\"text-align : center\"  >action</th>
                         </tr>
                     </thead>
                     <tbody>
