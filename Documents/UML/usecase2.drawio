@@ -1,0 +1,77 @@
+<mxfile host="app.diagrams.net" modified="2023-04-12T21:19:26.187Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="IJW2BQlMmOWzh0h96MxQ" version="21.1.4" type="device">
+  <diagram name="Page-1" id="FsZMhJcFI--1bidPcu9I">
+    <mxGraphModel dx="1877" dy="573" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dOH8WT17mmbGDaWcSOd6-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="90" width="720" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="dOH8WT17mmbGDaWcSOd6-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="dOH8WT17mmbGDaWcSOd6-2" target="dOH8WT17mmbGDaWcSOd6-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="255" />
+              <mxPoint x="110" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dOH8WT17mmbGDaWcSOd6-2" value="admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-30" y="210" width="50" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="dOH8WT17mmbGDaWcSOd6-3" value="Gestion des utilisateurs" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="90" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dOH8WT17mmbGDaWcSOd6-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="dOH8WT17mmbGDaWcSOd6-4" target="dOH8WT17mmbGDaWcSOd6-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dOH8WT17mmbGDaWcSOd6-4" value="Mettre&amp;nbsp;à jour la base de donnée" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="265" y="160" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dOH8WT17mmbGDaWcSOd6-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dOH8WT17mmbGDaWcSOd6-6" target="dOH8WT17mmbGDaWcSOd6-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="185" y="260" />
+              <mxPoint x="325" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dOH8WT17mmbGDaWcSOd6-6" value="Ajouter un utilisateur" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="270" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dOH8WT17mmbGDaWcSOd6-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="dOH8WT17mmbGDaWcSOd6-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="325" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dOH8WT17mmbGDaWcSOd6-7" value="Modifier un utilisateur" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="270" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dOH8WT17mmbGDaWcSOd6-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="dOH8WT17mmbGDaWcSOd6-8" target="dOH8WT17mmbGDaWcSOd6-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="469" y="260" />
+              <mxPoint x="325" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dOH8WT17mmbGDaWcSOd6-8" value="Supprimer un utilisateur" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="413.5" y="270" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dOH8WT17mmbGDaWcSOd6-13" value="Authentification" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="220" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dOH8WT17mmbGDaWcSOd6-15" value="include" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="510" y="170" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dOH8WT17mmbGDaWcSOd6-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="dOH8WT17mmbGDaWcSOd6-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dOH8WT17mmbGDaWcSOd6-16" value="Consulter la listes des utilisateurs" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="265" y="350" width="145" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
