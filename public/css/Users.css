@@ -173,12 +173,15 @@ textarea:focus, input:focus , select:focus ,button:focus{
     outline: none;
 }
 .mainC{
-    overflow-y: scroll;
+  
     height: 75%;
     width: 90%;
     margin-left: 5%;
     margin-top: 1%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ }
+ .mainC{
+    overflow-y: scroll !important; 
  }
  .actions{
     display: flex;
@@ -193,13 +196,30 @@ textarea:focus, input:focus , select:focus ,button:focus{
     align-items: center;
     padding: 3px;
     background: none;
-    border: #f9a826 solid 1px;
-    color: #f9a826;
+  
  }
- .actions button:hover{
-    background-color: #f9a826;
-    color: white;
- } 
+ 
  .actions a{
     text-decoration: none !important;
+ }
+ .bn1{
+    color: #28a745;
+ }
+ .bn2{
+    color: #007bff;
+ }
+ .bn3{
+    color: #dc3545;
+ }
+ .bn1:hover{
+    background-color: #28a745;
+    color: white;
+ }
+ .bn2:hover{
+    background-color: #007bff;
+    color: white;
+ }
+ .bn3:hover{
+    background-color: #dc3545;
+    color: white;
  }

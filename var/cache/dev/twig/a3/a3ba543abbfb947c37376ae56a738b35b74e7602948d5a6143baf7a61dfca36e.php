@@ -231,18 +231,18 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
       </td>
       <td  class=\"actions\" >
        <a href=\"#\"> 
-            <button type=\"button\" class=\"btn  btn-sm btn-rounded mt-1 mr-1\">
+            <button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\"  style=\" border: #28a745 solid 1px; \">
             <i class='bx bx-show-alt bx-xs'></i> view
             </button>
         </a>
         <a href=\"#\"> 
-            <button type=\"button\" class=\"btn  btn-sm btn-rounded mt-1 mr-1 \">
+            <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
             <i class='bx bx-edit bx-xs'></i>
             Edit
             </button>
         </a>
         <a href=\"#\"> 
-            <button type=\"button\" class=\"btn  btn-sm btn-rounded mt-1 \">
+            <button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \"style=\" border: #dc3545 solid 1px;\" >
             <i class='bx bx-trash bx-xs'></i>
             Delete
             </button>
@@ -404,18 +404,18 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
       </td>
       <td  class=\"actions\" >
        <a href=\"#\"> 
-            <button type=\"button\" class=\"btn  btn-sm btn-rounded mt-1 mr-1\">
+            <button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\"  style=\" border: #28a745 solid 1px; \">
             <i class='bx bx-show-alt bx-xs'></i> view
             </button>
         </a>
         <a href=\"#\"> 
-            <button type=\"button\" class=\"btn  btn-sm btn-rounded mt-1 mr-1 \">
+            <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
             <i class='bx bx-edit bx-xs'></i>
             Edit
             </button>
         </a>
         <a href=\"#\"> 
-            <button type=\"button\" class=\"btn  btn-sm btn-rounded mt-1 \">
+            <button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \"style=\" border: #dc3545 solid 1px;\" >
             <i class='bx bx-trash bx-xs'></i>
             Delete
             </button>

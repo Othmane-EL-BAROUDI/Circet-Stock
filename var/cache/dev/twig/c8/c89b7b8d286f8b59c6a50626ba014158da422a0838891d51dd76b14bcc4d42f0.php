@@ -291,18 +291,18 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                 // line 109
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 109), "html", null, true);
                 echo "\"> 
-            <button type=\"button\" class=\"btn  btn-sm btn-rounded mt-1 mr-1\">
+            <button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\"  style=\" border: #28a745 solid 1px; \" >
                <i class='bx bx-show-alt bx-xs'></i> view
             </button>
         </a>
         <a href=\"#\"> 
-            <button type=\"button\" class=\"btn  btn-sm btn-rounded mt-1 mr-1 \">
+            <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \"  style=\" border: #007bff solid 1px; \">
             <i class='bx bx-edit bx-xs'></i>
             Edit
             </button>
         </a>
         <a href=\"#\"> 
-            <button type=\"button\" class=\"btn  btn-sm btn-rounded mt-1 \">
+            <button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" >
             <i class='bx bx-trash bx-xs'></i>
             Delete
             </button>
@@ -475,18 +475,18 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
       <td><label class=\"mt-2\">{{user.job}}</label></td>
       <td  class=\"actions\" >
        <a href=\"User/{{user.id}}\"> 
-            <button type=\"button\" class=\"btn  btn-sm btn-rounded mt-1 mr-1\">
+            <button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\"  style=\" border: #28a745 solid 1px; \" >
                <i class='bx bx-show-alt bx-xs'></i> view
             </button>
         </a>
         <a href=\"#\"> 
-            <button type=\"button\" class=\"btn  btn-sm btn-rounded mt-1 mr-1 \">
+            <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \"  style=\" border: #007bff solid 1px; \">
             <i class='bx bx-edit bx-xs'></i>
             Edit
             </button>
         </a>
         <a href=\"#\"> 
-            <button type=\"button\" class=\"btn  btn-sm btn-rounded mt-1 \">
+            <button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" >
             <i class='bx bx-trash bx-xs'></i>
             Delete
             </button>
