@@ -295,7 +295,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                <i class='bx bx-show-alt bx-xs'></i> view
             </button>
         </a>
-        <a href=\"#\"> 
+        <a href=\"\"> 
             <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \"  style=\" border: #007bff solid 1px; \">
             <i class='bx bx-edit bx-xs'></i>
             Edit
@@ -479,7 +479,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                <i class='bx bx-show-alt bx-xs'></i> view
             </button>
         </a>
-        <a href=\"#\"> 
+        <a href=\"\"> 
             <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \"  style=\" border: #007bff solid 1px; \">
             <i class='bx bx-edit bx-xs'></i>
             Edit
@@ -506,6 +506,6 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
              <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
-   {% endblock %}", "Pages/Users.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\templates\\Pages\\Users.html.twig");
+   {% endblock %}", "Pages/Users.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\Users.html.twig");
     }
 }

@@ -49,7 +49,7 @@ class __TwigTemplate_43c3dd1a6047731f8c755ef17ed6e5808a790cb6c9c3e47c3e80199ffeb
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 12
         $this->displayBlock('body', $context, $blocks);
-        // line 77
+        // line 73
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -64,7 +64,7 @@ class __TwigTemplate_43c3dd1a6047731f8c755ef17ed6e5808a790cb6c9c3e47c3e80199ffeb
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Circet-Profile";
+        echo "Circet-Stock";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -109,21 +109,25 @@ class __TwigTemplate_43c3dd1a6047731f8c755ef17ed6e5808a790cb6c9c3e47c3e80199ffeb
             <div class=\"text\">Stock View</div>
             
             <div class=\"container\">
-                  <div class=\"row d-flex justify-content-center\">
+                  <div class=\"row d-flex justify-content-center mt-5\">
                         <div class=\"col-md-10 pt-5\" >
                               <div class=\"row z-depth-3\">
-                                    <div class=\"col-sm-4 rounded-left\" style=\"background-color: rgb(255, 209, 100);\">
-                                          <div class=\"card-block text-center text-white mt-5\">
+                                    <div class=\"col-sm-4 text-center rounded-left\" style=\"background-color: rgb(255, 209, 100);\">
+                                          <a class=\"back\" href=\"#\"><i class='bx bx-chevron-left bx-md'></i></a>      
+                                          <div class=\"img-prod mt-4\">
                                                 <img src=\"";
-        // line 23
+        // line 24
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/laptop.png"), "html", null, true);
-        echo "\" class=\"rounded float-start w-50\" alt=\"\">
-
+        echo "\" class=\"rounded float-start mt-3 mb-3 w-50\" alt=\"\">
+                                          </div>
+                                          <div class=\"desc mt-2 mb-3\">
+                                                <p class=\"desc-title mb-1 mt-1 ml-2\">Description</p>
+                                                <textarea class=\"form-control\" style=\"height: 140px;\" disabled>test test test test test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test test</textarea>
                                           </div>
                                     </div>
 
                                     <div class=\"col-sm-7 rounded-right text-center\">
-                                          <div class=\"row mb-5 mt-4\">
+                                          <div class=\"row mb-5 mt-5\">
                                                 <div class=\"col-sm-6\">
                                                       <p class=\"font-weight-bold\">Type</p>
                                                       <h6 class=\"text-muted\">Laptop</h6>
@@ -155,16 +159,7 @@ class __TwigTemplate_43c3dd1a6047731f8c755ef17ed6e5808a790cb6c9c3e47c3e80199ffeb
                                                       <h6 class=\"text-muted\">test test</h6>
                                                 </div>
                                           </div>
-
-                                          <div class=\" mb-3\">
-                                                <p class=\"font-weight-bold\">Description</p>
-                                                ";
-        // line 65
-        echo "                                                <textarea class=\"form-control\" style=\"height: 100px\" disabled>test test test</textarea>
-                                                
-                                          </div>
                                     </div>
-
                               </div>
                         </div>
                   </div>
@@ -177,14 +172,14 @@ class __TwigTemplate_43c3dd1a6047731f8c755ef17ed6e5808a790cb6c9c3e47c3e80199ffeb
 
     }
 
-    // line 77
+    // line 73
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 78
+        // line 74
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -201,12 +196,12 @@ class __TwigTemplate_43c3dd1a6047731f8c755ef17ed6e5808a790cb6c9c3e47c3e80199ffeb
 
     public function getDebugInfo()
     {
-        return array (  188 => 78,  181 => 77,  163 => 65,  119 => 23,  105 => 13,  98 => 12,  81 => 3,  74 => 2,  61 => 1,  53 => 77,  51 => 12,  49 => 2,  44 => 1,);
+        return array (  183 => 74,  176 => 73,  120 => 24,  105 => 13,  98 => 12,  81 => 3,  74 => 2,  61 => 1,  53 => 73,  51 => 12,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source(" <title>{% block title %}Circet-Profile{% endblock %}</title>
+        return new Source(" <title>{% block title %}Circet-Stock{% endblock %}</title>
 {% block stylesheets %}
       <link rel=\"stylesheet\" href=\"{{asset('css/UserProfile.css')}}\">
       <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
@@ -223,18 +218,22 @@ class __TwigTemplate_43c3dd1a6047731f8c755ef17ed6e5808a790cb6c9c3e47c3e80199ffeb
             <div class=\"text\">Stock View</div>
             
             <div class=\"container\">
-                  <div class=\"row d-flex justify-content-center\">
+                  <div class=\"row d-flex justify-content-center mt-5\">
                         <div class=\"col-md-10 pt-5\" >
                               <div class=\"row z-depth-3\">
-                                    <div class=\"col-sm-4 rounded-left\" style=\"background-color: rgb(255, 209, 100);\">
-                                          <div class=\"card-block text-center text-white mt-5\">
-                                                <img src=\"{{asset('images/laptop.png')}}\" class=\"rounded float-start w-50\" alt=\"\">
-
+                                    <div class=\"col-sm-4 text-center rounded-left\" style=\"background-color: rgb(255, 209, 100);\">
+                                          <a class=\"back\" href=\"#\"><i class='bx bx-chevron-left bx-md'></i></a>      
+                                          <div class=\"img-prod mt-4\">
+                                                <img src=\"{{asset('images/laptop.png')}}\" class=\"rounded float-start mt-3 mb-3 w-50\" alt=\"\">
+                                          </div>
+                                          <div class=\"desc mt-2 mb-3\">
+                                                <p class=\"desc-title mb-1 mt-1 ml-2\">Description</p>
+                                                <textarea class=\"form-control\" style=\"height: 140px;\" disabled>test test test test test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test test</textarea>
                                           </div>
                                     </div>
 
                                     <div class=\"col-sm-7 rounded-right text-center\">
-                                          <div class=\"row mb-5 mt-4\">
+                                          <div class=\"row mb-5 mt-5\">
                                                 <div class=\"col-sm-6\">
                                                       <p class=\"font-weight-bold\">Type</p>
                                                       <h6 class=\"text-muted\">Laptop</h6>
@@ -266,15 +265,7 @@ class __TwigTemplate_43c3dd1a6047731f8c755ef17ed6e5808a790cb6c9c3e47c3e80199ffeb
                                                       <h6 class=\"text-muted\">test test</h6>
                                                 </div>
                                           </div>
-
-                                          <div class=\" mb-3\">
-                                                <p class=\"font-weight-bold\">Description</p>
-                                                {# <h6 class=\"text-muted\">Add user</h6> #}
-                                                <textarea class=\"form-control\" style=\"height: 100px\" disabled>test test test</textarea>
-                                                
-                                          </div>
                                     </div>
-
                               </div>
                         </div>
                   </div>

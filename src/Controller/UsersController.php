@@ -48,6 +48,7 @@ class UsersController extends AbstractController
             'allpermissions' => $permissions,
         ]);
     }
+
      /**
      * @Route("User/{id}" , name="UserView")
      */
@@ -57,7 +58,6 @@ class UsersController extends AbstractController
         $user = $entityManager->getRepository(User::class)->find($id);
         $CurrentUser = $this->getUser();
         return $this->render('Pages/view/userView.html.twig', [
-            'controller_name' => 'BaseController',
             'userInfo' => $CurrentUser,
             'user' => $user,
             'Path' => '/Users'

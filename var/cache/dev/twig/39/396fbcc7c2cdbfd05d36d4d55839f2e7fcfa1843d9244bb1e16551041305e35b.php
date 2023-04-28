@@ -48,11 +48,6 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         // line 2
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 6
-        echo "  ";
-        echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
-        echo "
-";
-        // line 7
         $this->displayBlock('body', $context, $blocks);
         // line 110
         echo "  ";
@@ -93,15 +88,18 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 
     }
 
-    // line 7
+    // line 6
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 8
-        echo "     <div class=\"home_content\">
+        // line 7
+        echo "  ";
+        echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
+        echo "
+     <div class=\"home_content\">
             <div class=\"modal fade\" id=\"editRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"editRole\" aria-hidden=\"true\">
                   <div class=\"modal-dialog\" role=\"document\">
                         <div class=\"modal-content\">
@@ -249,7 +247,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
                                           <a class = \"text-decoration-none\" href=\"/Permission/";
             // line 99
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 99), "html", null, true);
-            echo "\"  ><button><i class='bx bx-edit bx-sm'></i>Update</button></a> 
+            echo "\"><button><i class='bx bx-edit bx-sm'></i>Update</button></a> 
                                           <a href=\"/Permission/Remove/";
             // line 100
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 100), "html", null, true);
@@ -299,14 +297,9 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         return "Pages/Permission.html.twig";
     }
 
-    public function isTraitable()
-    {
-        return false;
-    }
-
     public function getDebugInfo()
     {
-        return array (  285 => 111,  278 => 110,  265 => 103,  255 => 100,  251 => 99,  246 => 97,  243 => 96,  239 => 95,  220 => 78,  208 => 72,  205 => 71,  200 => 70,  188 => 64,  185 => 63,  180 => 62,  168 => 56,  165 => 55,  161 => 54,  151 => 47,  143 => 42,  132 => 34,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 110,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  283 => 111,  276 => 110,  263 => 103,  253 => 100,  249 => 99,  244 => 97,  241 => 96,  237 => 95,  218 => 78,  206 => 72,  203 => 71,  198 => 70,  186 => 64,  183 => 63,  178 => 62,  166 => 56,  163 => 55,  159 => 54,  149 => 47,  141 => 42,  130 => 34,  99 => 7,  92 => 6,  81 => 3,  74 => 2,  61 => 1,  53 => 110,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -316,8 +309,8 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         <link rel=\"stylesheet\" href=\"{{asset('css/Role.css')}}\">
          <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
   {% endblock %}
-  {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
+  {{ include('Pages/sidebar.html.twig') }}
      <div class=\"home_content\">
             <div class=\"modal fade\" id=\"editRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"editRole\" aria-hidden=\"true\">
                   <div class=\"modal-dialog\" role=\"document\">
@@ -409,7 +402,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
                             <tr>
                              <td  class=\"textperm\" > {{permission.getPermissionName()}} </td>
                                     <td class=\"actions\">
-                                          <a class = \"text-decoration-none\" href=\"/Permission/{{permission.id}}\"  ><button><i class='bx bx-edit bx-sm'></i>Update</button></a> 
+                                          <a class = \"text-decoration-none\" href=\"/Permission/{{permission.id}}\"><button><i class='bx bx-edit bx-sm'></i>Update</button></a> 
                                           <a href=\"/Permission/Remove/{{permission.id}}\"><button><i class='bx bx-trash bx-sm'></i> Delete</button></a> 
                                     </td>   
                               </tr>       
@@ -425,6 +418,6 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
              <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
-   {% endblock %}", "Pages/Permission.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\templates\\Pages\\Permission.html.twig");
+   {% endblock %}", "Pages/Permission.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\Permission.html.twig");
     }
 }

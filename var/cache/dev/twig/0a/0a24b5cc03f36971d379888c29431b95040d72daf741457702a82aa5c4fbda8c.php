@@ -395,6 +395,6 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 {% endblock %}
   {% block javascripts %}
             <script src=\"{{asset('JS/sidebar.js')}}\"></script>
-   {% endblock %}", "Pages/view/userView.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\templates\\Pages\\view\\userView.html.twig");
+   {% endblock %}", "Pages/view/userView.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\view\\userView.html.twig");
     }
 }

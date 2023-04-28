@@ -28,7 +28,6 @@
 
 .container{
    margin-top:-4%;
-   
 }
 
 .rounded-right{
@@ -47,4 +46,24 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
    background:#f9a826;
+}
+
+
+.desc{
+   /* border: 1px solid black; */
+   box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 3px, rgba(0, 0, 0, 0.24) 0px 0px 2px;
+   border-radius: 5px;
+   background: white;
+}
+
+.desc-title{
+   font-size: 14px;
+   float: left;
+   font-weight: 600;
+}
+
+.img-prod{
+   /* border: 1px solid black; */
+   border-radius: 10px;
+   /* background: transparent; */
 }

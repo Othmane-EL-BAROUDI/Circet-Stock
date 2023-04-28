@@ -14,7 +14,7 @@ class stockViewController extends AbstractController
     public function stockView(): Response
     {
         $user = $this->getUser();
-        return $this->render('Pages/stockView.html.twig', [
+        return $this->render('Pages/view/stockView.html.twig', [
             'controller_name' => 'BaseController',
             'userInfo' => $user,
         ]);

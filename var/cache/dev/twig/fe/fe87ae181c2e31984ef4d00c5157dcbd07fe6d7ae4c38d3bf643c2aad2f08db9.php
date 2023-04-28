@@ -51,6 +51,10 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 7
         echo "   ";
+        echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
+        echo "
+   ";
+        // line 8
         $this->displayBlock('body', $context, $blocks);
         // line 31
         echo "     ";
@@ -91,18 +95,15 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
     }
 
-    // line 7
+    // line 8
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 8
-        echo "   ";
-        echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
-        echo "
-     <div class=\"home_content\">
+        // line 9
+        echo "     <div class=\"home_content\">
         <div class=\"text\">";
         // line 10
         echo twig_escape_filter($this->env, (isset($context["PageName"]) || array_key_exists("PageName", $context) ? $context["PageName"] : (function () { throw new RuntimeError('Variable "PageName" does not exist.', 10, $this->source); })()), "html", null, true);
@@ -166,9 +167,14 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
         return "Pages/update/Update.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  155 => 32,  148 => 31,  131 => 21,  127 => 20,  120 => 16,  115 => 14,  108 => 10,  102 => 8,  95 => 7,  84 => 4,  77 => 3,  64 => 2,  56 => 31,  53 => 7,  51 => 3,  47 => 2,  44 => 1,);
+        return array (  156 => 32,  149 => 31,  132 => 21,  128 => 20,  121 => 16,  116 => 14,  109 => 10,  106 => 9,  99 => 8,  88 => 4,  81 => 3,  68 => 2,  60 => 31,  58 => 8,  53 => 7,  51 => 3,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -179,8 +185,8 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
         <link rel=\"stylesheet\" href=\"{{asset('css/Update.css')}}\">
          <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
   {% endblock %}
-   {% block body %}
    {{ include('Pages/sidebar.html.twig') }}
+   {% block body %}
      <div class=\"home_content\">
         <div class=\"text\">{{PageName}}</div>
                  <div class=\"container\" style=\"display: flex; justify-content: center; align-items: center; height: 80vh;\">
@@ -205,10 +211,6 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
     {% endblock %}
      {% block javascripts %}
             <script src=\"{{asset('JS/sidebar.js')}}\"></script>
-<<<<<<< HEAD
    {% endblock %}", "Pages/update/Update.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\update\\Update.html.twig");
-=======
-   {% endblock %}", "Pages/update/Update.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\templates\\Pages\\update\\Update.html.twig");
->>>>>>> 6b8312cafdd1e1e6507aef7f0b80f576dd3e4691
     }
 }

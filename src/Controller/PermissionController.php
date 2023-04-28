@@ -68,7 +68,6 @@ class PermissionController extends AbstractController
             'permission' => $permission,
             'form' => $form->createView(),
         ]);
-
     }
 
       /**
