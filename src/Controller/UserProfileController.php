@@ -11,7 +11,7 @@ class UserProfileController extends AbstractController
     /**
      * @Route("UserProfile" , name="UserProfile")
      */
-    public function ForgetPassword(): Response
+    public function UserProfile(): Response
     {
         $user = $this->getUser();
         return $this->render('Pages/UserProfile.html.twig', [
