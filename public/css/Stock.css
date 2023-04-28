@@ -13,97 +13,34 @@
     color: #1d1b31;
     margin: 12px;
 }
-.content-table p , td{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.content-table{
-   
-    border-collapse: collapse;
-    margin-left: 21%;
-    min-width: 500px;
-    border-radius: 12px;
-}
-.user_info{
-    display: flex;
-    justify-self: center;
-    align-items: center;
-}
-.user_image img{
-    width: 43px;
-    height: 43px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-.user_pic img{
-    width: 43px;
-    height: 43px;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-.user_details label{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold   ;
-}
-.content-table thead tr{
-    background-color: #f9a826;
-    color: white;
-    text-align: left;
-    font-weight: bold;
-}
-.content-table th,.content-table td {
-    padding: 12px 15px;
-}
-.content-table tbody tr{
-    
-    border-bottom: 1px solid #dddddd;
-}
-
-
-.content-table tbody tr:nth-of-type(even){
-    background-color: #f3f3f3;
-}
-.content-table tbody tr:last-of-type{
-    border-bottom: 2px solid #f9a826 ;
-}
-
-.content-table tbody tr td button i{
-    cursor: pointer;
-    margin-left: 8px;
-    
-}
-.content-table tbody tr td button i:hover{
-    color: #f9a826;
-}
-.content-table tbody tr td button{
-    border: none;
-    background: none;
+textarea:focus, input:focus , button:focus{
+    outline: none !important ;
 }
 .sort1{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    width: calc(100% - 78px);
-    margin-left: 3px;
+    width: 90%;
+    margin-left: 5%;
     padding-bottom: 10px;
     z-index: -1;
+    
 }
 .sort1 input{
     padding-left: 10px;
-    width: 15%;
+    width: 25%;
     height: 35px;
     border-radius: 4px;
     border: solid #f9a826 1px;
     color: #f9a826;
-    margin-right: 3px;
+    margin-right: 7px;
 }
- 
 .sort1 ::placeholder{
-    
-    color: #f9a826;
+    color:#f9a826;
 }
 .sort1 > button{
     font-weight: bold;
-    width: 10%;
+    width: 13%;
     height: 35px;
     background-color: white;
     border: solid #f9a826 1px;
@@ -122,7 +59,7 @@
     border: solid #f9a826 1px;
     color: #f9a826;
     font-weight: bold;
-    margin-right: 3px;
+    margin-right: 7px;
 }
 .sort1 select option{
     height: 50px;
@@ -144,10 +81,6 @@
   ::-webkit-scrollbar-thumb {
     background:#f9a826;
   }
-textarea:focus, input:focus , button:focus{
-    outline: none !important ;
-}
-
 .new{
     position: absolute;
     right: 22;
@@ -233,4 +166,68 @@ textarea:focus, input:focus , button:focus{
 }
 textarea:focus, input:focus , select:focus ,button:focus{
     outline: none;
+}
+.alerto{
+    border-radius: 5px;    
+    text-align: center;
+    margin-left:29.2% ;
+    margin-top: -3%;
+    width: 38.7%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+.mainC{
+    overflow-y: scroll;
+    height: 75%;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 1%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ }
+ .actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+ }
+ .actions button{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 60px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    background: none;
+ }
+ .actions a{
+    text-decoration: none !important;
+ }
+ .bn1{
+    color: #28a745;
+ }
+ .bn2{
+    color: #007bff;
+ }
+ .bn3{
+    color: #dc3545;
+ }
+ .bn1:hover{
+    background-color: #28a745;
+    color: white;
+ }
+ .bn2:hover{
+    background-color: #007bff;
+    color: white;
+ }
+ .bn3:hover{
+    background-color: #dc3545;
+    color: white;
+ }
+ table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+table tbody tr:last-of-type{
+    border-bottom: 2px solid #f3f3f3 ;
 }

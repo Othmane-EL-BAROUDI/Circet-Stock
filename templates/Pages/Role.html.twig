@@ -72,15 +72,15 @@
 				<tbody>
 					{% for role in allRoles %}
 						<tr>
-							<td>
+							<td  class="textperm" >
 								{{role.roleName}}
 							</td>
-							<td>
+							<td class="actions">
 								<button>
-									<i class='bx bx-edit bx-sm'></i>
+									<i class='bx bx-edit bx-sm'></i> Update
 								</button>
 								<button>
-									<i class='bx bx-trash bx-sm'></i>
+									<i class='bx bx-trash bx-sm'></i> Delete
 								</button>
 							</td>
 						</tr>

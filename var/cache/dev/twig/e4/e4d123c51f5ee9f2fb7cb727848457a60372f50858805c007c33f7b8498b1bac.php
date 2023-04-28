@@ -172,18 +172,18 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
         foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
             // line 74
             echo "\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<td>
+\t\t\t\t\t\t\t<td  class=\"textperm\" >
 \t\t\t\t\t\t\t\t";
             // line 76
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "roleName", [], "any", false, false, false, 76), "html", null, true);
             echo "
 \t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t<td>
+\t\t\t\t\t\t\t<td class=\"actions\">
 \t\t\t\t\t\t\t\t<button>
-\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-sm'></i>
+\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-sm'></i> Update
 \t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t<button>
-\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-sm'></i>
+\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-sm'></i> Delete
 \t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t</tr>
@@ -316,15 +316,15 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t\t<tbody>
 \t\t\t\t\t{% for role in allRoles %}
 \t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<td>
+\t\t\t\t\t\t\t<td  class=\"textperm\" >
 \t\t\t\t\t\t\t\t{{role.roleName}}
 \t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t<td>
+\t\t\t\t\t\t\t<td class=\"actions\">
 \t\t\t\t\t\t\t\t<button>
-\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-sm'></i>
+\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-sm'></i> Update
 \t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t<button>
-\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-sm'></i>
+\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-sm'></i> Delete
 \t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t</tr>
@@ -342,6 +342,6 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
 {% endblock %}
-", "Pages/Role.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\Role.html.twig");
+", "Pages/Role.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\templates\\Pages\\Role.html.twig");
     }
 }

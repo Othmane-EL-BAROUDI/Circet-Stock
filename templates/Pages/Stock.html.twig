@@ -10,14 +10,15 @@
                   <div class="modal-dialog" role="document">
                         <div class="modal-content">
                              <div class="modal-header">
-                                 {{ form_start(form) }}
+                                 
                                     <h5 class="modal-title" id="exampleModalLabel">Add to stock</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                     </button>
                                     </div>
                                     <div class="modal-body">
-                                     
+                                       
+                                        {{ form_start(form) }}
                                           <label for="name">item picture:</label>
                                           <button class="up"< ><i class='bx bxs-cloud-upload bx-sm'></i></button>
                                           <input  type="file">
@@ -52,53 +53,74 @@
                     </select>
                     <button>   Search  </button>
                 </div>
-                <table class="content-table">
-                    <thead>
-                        <tr>
-                            <th>name</th>
-                            <th>type</th>
-                            <th>serial number</th>
-                            <th>availability</th>
-                            <th>state</th>
-                            <th  style="text-align : center"  >action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    {% for machine in Allmachines %}
+<div class="mainC">
+<table class="table align-middle mb-0 bg-white">
+  <thead class="bg-light"  >
+    <tr>
+      <th>name</th>
+      <th>type</th>
+       <th>serial number</th>
+       <th>availability</th>
+       <th>state</th>
+       <th  style="text-align:center;" >action</th>
+    </tr>
+  </thead>
+  <tbody>
+     {% for machine in Allmachines %}
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <div class="ms-3">
+            <p class="fw-bold mb-1">{{machine.model.marque.getMarqueName()}}</p>
+            <p class="text-muted mb-0">{{machine.model.getModelName()}}</p>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="text-muted mb-0 mt-2 ">{{machine.type}}</p>
+      </td>
+      <td>
+        <label class="mt-2">
+                {{machine.getSerialNum()}}
+        </label>
+        
+      </td>
+      <td  ><label  class="mt-2 ml-2">
+             {% if machine.available == 1 %} <span class="badge badge-success rounded-pill d-inline pl-3 pr-3">Yes</span>
+            {% else %}  <span class="badge badge-warning rounded-pill d-inline pl-3 pr-3">No</span>
+            {% endif %}
+      </label></td>
+      <td >
+        <label class="mt-2">
+                {{machine.state()}}
+        </label>
+        
+      </td>
+      <td  class="actions" >
+       <a href="#"> 
+            <button type="button" class="bn1 btn  btn-sm btn-rounded mt-1 mr-1"  style=" border: #28a745 solid 1px; ">
+            <i class='bx bx-show-alt bx-xs'></i> view
+            </button>
+        </a>
+        <a href="#"> 
+            <button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 " style=" border: #007bff solid 1px; ">
+            <i class='bx bx-edit bx-xs'></i>
+            Edit
+            </button>
+        </a>
+        <a href="#"> 
+            <button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 "style=" border: #dc3545 solid 1px;" >
+            <i class='bx bx-trash bx-xs'></i>
+            Delete
+            </button>
+        </a>
+      </td>
+    </tr>
+     {% endfor %}
+  </tbody>
+</table>
+</div>
 
-                            <tr>
-                            <td>
-                                <div class="user_info">
-                                    <div class="user_details">
-                                        <label for="name">{{machine.model.marque.getMarqueName()}}</label>
-                                        <p>{{machine.model.getModelName()}}</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td >
-                                {{machine.type}}
-                            </td>
-                             <td>
-                                 {{machine.getSerialNum()}}
-                            </td>
-                             <td class="info" style="text-align : center">
-                                 {% if machine.available == 1 %}
-                                          Yes
-                                    {% else %}  No
-                                {% endif %}
-                            </td>
-                             <td class="info" >
-                               {{machine.state}}
-                            </td>
-                             <td>
-                               <button ><i class='bx bx-show bx-sm'></i></button></a>
-                                <button><i class='bx bx-edit bx-sm'></i></button>
-                                <button><i class='bx bx-trash bx-sm'></i></button>
-                            </td>
-                        </tr>
-                    {% endfor %}                       
-                    </tbody>
-                </table>
             </div>
       </div>
 {% endblock %}

@@ -90,19 +90,25 @@
 .content-table tbody tr:last-of-type{
     border-bottom: 2px solid #f9a826 ;
 }
-
-.content-table tbody tr td button i{
-    cursor: pointer;
-    margin-left: 8px;
-    
-}
-.content-table tbody tr td button i:hover{
-    color: #f9a826;
+.actions{
+    width: 215px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .content-table tbody tr td button{
+    cursor: pointer;
     border: none;
-    background: none;
-    margin-left: 19%;
+    border-radius: 6px;
+   background-color:#f9a826;
+   color: white;
+   padding: 5px;
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    text-decoration: none !important;
 }
 .add_role input{
     text-align: center;
@@ -177,8 +183,7 @@
     background:#f9a826;
   }
   .alerto{
-        border-radius: 5px;
-        position: absolute;     
+        border-radius: 5px;    
         text-align: center;
         margin-left:29.2% ;
         margin-top: -3%;
@@ -193,4 +198,8 @@
     border-color: inherit;
     -webkit-box-shadow: none;
     box-shadow: none;
+}
+.textperm{
+    width: 60%;
+    text-align: left;
 }

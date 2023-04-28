@@ -41,9 +41,10 @@ return [
                     .'|([^/]++)(*:65)'
                     .'|Remove/([^/]++)(*:87)'
                 .')'
+                .'|/User/([^/]++)(*:109)'
                 .'|/re(?'
-                    .'|gister/confirm/([^/]++)(*:124)'
-                    .'|setting/reset/([^/]++)(*:154)'
+                    .'|gister/confirm/([^/]++)(*:146)'
+                    .'|setting/reset/([^/]++)(*:176)'
                 .')'
             .')/?$}sDu',
     ],
@@ -51,8 +52,9 @@ return [
         35 => [[['_route' => '_twig_error_test', '_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
         65 => [[['_route' => 'PermissionUpdate', '_controller' => 'App\\Controller\\PermissionController::PermissionUpdate'], ['id'], null, null, false, true, null]],
         87 => [[['_route' => 'PermissionRemove', '_controller' => 'App\\Controller\\PermissionController::PermissionDelete'], ['id'], null, null, false, true, null]],
-        124 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
-        154 => [
+        109 => [[['_route' => 'UserView', '_controller' => 'App\\Controller\\UsersController::UserView'], ['id'], null, null, false, true, null]],
+        146 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
+        176 => [
             [['_route' => 'fos_user_resetting_reset', '_controller' => 'fos_user.resetting.controller:resetAction'], ['token'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
