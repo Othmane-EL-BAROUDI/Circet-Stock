@@ -14,18 +14,18 @@
       <div class="home_content">
             <div class="text">Stock View</div>
             
-            <div class="container">
+            <div class="container mt-2">
                   <div class="row d-flex justify-content-center mt-5">
                         <div class="col-md-10 pt-5" >
                               <div class="row z-depth-3">
                                     <div class="col-sm-4 text-center rounded-left" style="background-color: rgb(255, 209, 100);">
-                                          <a class="back" href="#"><i class='bx bx-chevron-left bx-md'></i></a>      
+                                          <a class="back" href="{{Path}}"><i class='bx bx-chevron-left bx-md'></i></a>      
                                           <div class="img-prod mt-4">
                                                 <img src="{{asset('images/laptop.png')}}" class="rounded float-start mt-3 mb-3 w-50" alt="">
                                           </div>
                                           <div class="desc mt-2 mb-3">
                                                 <p class="desc-title mb-1 mt-1 ml-2">Description</p>
-                                                <textarea class="form-control" style="height: 140px;" disabled>test test test test test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test testtest test test</textarea>
+                                                <textarea class="form-control" style="height: 140px;" disabled  >{{machine.description}}</textarea>
                                           </div>
                                     </div>
 
@@ -33,33 +33,35 @@
                                           <div class="row mb-5 mt-5">
                                                 <div class="col-sm-6">
                                                       <p class="font-weight-bold">Type</p>
-                                                      <h6 class="text-muted">Laptop</h6>
+                                                      <h6 class="text-muted">{{machine.type}}</h6>
                                                 </div>
                                                 <div class="col-sm-6">
                                                       <p class="font-weight-bold">Serial number</p>
-                                                      <h6 class="text-muted">srl223</h6>
+                                                      <h6 class="text-muted">{{machine.getSerialNum()}}</h6>
                                                 </div>
                                           </div>
 
                                           <div class="row mb-5">
                                                 <div class="col-sm-6">
                                                       <p class="font-weight-bold">State</p>
-                                                      <h6 class="text-muted">bad</h6>
+                                                      <h6 class="text-muted">{{machine.state}}</h6>
                                                 </div>
                                                 <div class="col-sm-6">
                                                       <p class="font-weight-bold">Available</p>
-                                                      <h6 class="text-muted">Yes</h6>
+                                                       {% if machine.available == 1 %} <span class="badge badge-success rounded-pill d-inline pl-3 pr-3">Yes</span>
+                                                      {% else %}  <span class="badge badge-warning rounded-pill d-inline pl-3 pr-3">No</span>
+                                                      {% endif %}
                                                 </div>
                                           </div>
 
                                           <div class="row mb-5">
                                                 <div class="col-sm-6">
                                                       <p class="font-weight-bold">Mac ethernet</p>
-                                                      <h6 class="text-muted">test test</h6>
+                                                      <h6 class="text-muted">{{machine.getMacEthernet()}}</h6>
                                                 </div>
                                                 <div class="col-sm-6">
                                                       <p class="font-weight-bold">Mac wifi</p>
-                                                      <h6 class="text-muted">test test</h6>
+                                                      <h6 class="text-muted">{{machine.getMacWifi()}}</h6>
                                                 </div>
                                           </div>
                                     </div>

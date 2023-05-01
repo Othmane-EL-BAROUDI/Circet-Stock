@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* @Framework/Form/reset_widget.html.php */
+/* FrameworkBundle:Form:reset_widget.html.php */
 class __TwigTemplate_0679a716657c8c70252f759f311e8d9ebf6bcb711fe5853d4ed9f520a6941df0 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_0679a716657c8c70252f759f311e8d9ebf6bcb711fe5853d4ed9f520a69
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/reset_widget.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:reset_widget.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'button_widget', ['type' => isset(\$type) ? \$type : 'reset']) ?>
@@ -46,7 +46,7 @@ class __TwigTemplate_0679a716657c8c70252f759f311e8d9ebf6bcb711fe5853d4ed9f520a69
 
     public function getTemplateName()
     {
-        return "@Framework/Form/reset_widget.html.php";
+        return "FrameworkBundle:Form:reset_widget.html.php";
     }
 
     public function getDebugInfo()
@@ -57,6 +57,6 @@ class __TwigTemplate_0679a716657c8c70252f759f311e8d9ebf6bcb711fe5853d4ed9f520a69
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'button_widget', ['type' => isset(\$type) ? \$type : 'reset']) ?>
-", "@Framework/Form/reset_widget.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\reset_widget.html.php");
+", "FrameworkBundle:Form:reset_widget.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\reset_widget.html.php");
     }
 }

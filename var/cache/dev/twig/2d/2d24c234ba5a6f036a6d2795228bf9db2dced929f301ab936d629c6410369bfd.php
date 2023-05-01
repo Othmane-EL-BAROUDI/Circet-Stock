@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* @Framework/Form/radio_widget.html.php */
+/* FrameworkBundle:Form:radio_widget.html.php */
 class __TwigTemplate_20c8a1ff4ce46b73135f15209e2fc85136d7359445dc4b358fc61599b72da053 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_20c8a1ff4ce46b73135f15209e2fc85136d7359445dc4b358fc61599b72
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/radio_widget.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:radio_widget.html.php"));
 
         // line 1
         echo "<input type=\"radio\"
@@ -50,7 +50,7 @@ class __TwigTemplate_20c8a1ff4ce46b73135f15209e2fc85136d7359445dc4b358fc61599b72
 
     public function getTemplateName()
     {
-        return "@Framework/Form/radio_widget.html.php";
+        return "FrameworkBundle:Form:radio_widget.html.php";
     }
 
     public function getDebugInfo()
@@ -65,6 +65,6 @@ class __TwigTemplate_20c8a1ff4ce46b73135f15209e2fc85136d7359445dc4b358fc61599b72
     value=\"<?php echo \$view->escape(\$value) ?>\"
     <?php if (\$checked): ?> checked=\"checked\"<?php endif ?>
 />
-", "@Framework/Form/radio_widget.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\radio_widget.html.php");
+", "FrameworkBundle:Form:radio_widget.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\radio_widget.html.php");
     }
 }

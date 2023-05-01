@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* @Framework/Form/choice_widget.html.php */
+/* FrameworkBundle:Form:choice_widget.html.php */
 class __TwigTemplate_45e0eadf6aaf764daef5ce0df9589a5d23b2fda9702eeb777365d7d125d60a85 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_45e0eadf6aaf764daef5ce0df9589a5d23b2fda9702eeb777365d7d125d
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/choice_widget.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:choice_widget.html.php"));
 
         // line 1
         echo "<?php if (\$expanded): ?>
@@ -50,7 +50,7 @@ class __TwigTemplate_45e0eadf6aaf764daef5ce0df9589a5d23b2fda9702eeb777365d7d125d
 
     public function getTemplateName()
     {
-        return "@Framework/Form/choice_widget.html.php";
+        return "FrameworkBundle:Form:choice_widget.html.php";
     }
 
     public function getDebugInfo()
@@ -65,6 +65,6 @@ class __TwigTemplate_45e0eadf6aaf764daef5ce0df9589a5d23b2fda9702eeb777365d7d125d
 <?php else: ?>
 <?php echo \$view['form']->block(\$form, 'choice_widget_collapsed') ?>
 <?php endif ?>
-", "@Framework/Form/choice_widget.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\choice_widget.html.php");
+", "FrameworkBundle:Form:choice_widget.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\choice_widget.html.php");
     }
 }

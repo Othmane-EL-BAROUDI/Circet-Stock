@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* @FOSUser/Resetting/request_content.html.twig */
+/* FOSUserBundle:Resetting:request_content.html.twig */
 class __TwigTemplate_82ae759fe847e4b3b988cbf63260f0ad45160b27c04ed629f081f5d2b5df94b6 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_82ae759fe847e4b3b988cbf63260f0ad45160b27c04ed629f081f5d2b5d
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@FOSUser/Resetting/request_content.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FOSUserBundle:Resetting:request_content.html.twig"));
 
         // line 2
         echo "
@@ -64,7 +64,7 @@ class __TwigTemplate_82ae759fe847e4b3b988cbf63260f0ad45160b27c04ed629f081f5d2b5d
 
     public function getTemplateName()
     {
-        return "@FOSUser/Resetting/request_content.html.twig";
+        return "FOSUserBundle:Resetting:request_content.html.twig";
     }
 
     public function isTraitable()
@@ -90,6 +90,6 @@ class __TwigTemplate_82ae759fe847e4b3b988cbf63260f0ad45160b27c04ed629f081f5d2b5d
         <input type=\"submit\" value=\"{{ 'resetting.request.submit'|trans }}\" />
     </div>
 </form>
-", "@FOSUser/Resetting/request_content.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Resetting\\request_content.html.twig");
+", "FOSUserBundle:Resetting:request_content.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Resetting\\request_content.html.twig");
     }
 }

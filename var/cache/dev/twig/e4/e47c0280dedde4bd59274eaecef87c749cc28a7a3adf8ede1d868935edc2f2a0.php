@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* @Framework/Form/button_row.html.php */
+/* FrameworkBundle:Form:button_row.html.php */
 class __TwigTemplate_a5c3532454259c2a4faeb5ca613336946394b976dea7c01bfb0992ace26a519e extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_a5c3532454259c2a4faeb5ca613336946394b976dea7c01bfb0992ace26
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/button_row.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:button_row.html.php"));
 
         // line 1
         echo "<div>
@@ -48,7 +48,7 @@ class __TwigTemplate_a5c3532454259c2a4faeb5ca613336946394b976dea7c01bfb0992ace26
 
     public function getTemplateName()
     {
-        return "@Framework/Form/button_row.html.php";
+        return "FrameworkBundle:Form:button_row.html.php";
     }
 
     public function getDebugInfo()
@@ -61,6 +61,6 @@ class __TwigTemplate_a5c3532454259c2a4faeb5ca613336946394b976dea7c01bfb0992ace26
         return new Source("<div>
     <?php echo \$view['form']->widget(\$form) ?>
 </div>
-", "@Framework/Form/button_row.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\button_row.html.php");
+", "FrameworkBundle:Form:button_row.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\button_row.html.php");
     }
 }

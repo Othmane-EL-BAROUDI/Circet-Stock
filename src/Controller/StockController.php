@@ -37,4 +37,19 @@ class StockController extends AbstractController
             'Allmachines' => $results,
         ]);
     }
+
+     /**
+     * @Route("stockView/{id}" , name="stockView")
+     */
+    public function stockView($id): Response
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $machine = $entityManager->getRepository(Machine::class)->find($id);
+        $user = $this->getUser();
+        return $this->render('Pages/view/stockView.html.twig', [
+            'userInfo' => $user,
+            'machine' => $machine,
+            'Path' => '/Stock',
+        ]);
+    }
 }

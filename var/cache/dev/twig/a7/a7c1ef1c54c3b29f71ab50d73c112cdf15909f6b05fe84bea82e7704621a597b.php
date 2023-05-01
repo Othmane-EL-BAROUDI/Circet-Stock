@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* @Framework/Form/email_widget.html.php */
+/* FrameworkBundle:Form:email_widget.html.php */
 class __TwigTemplate_9a2430cac4bdd5c5a8d87b35822d1b1b3b0eb77c0088073414e8c532da73ced3 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_9a2430cac4bdd5c5a8d87b35822d1b1b3b0eb77c0088073414e8c532da7
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/email_widget.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:email_widget.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'form_widget_simple', ['type' => isset(\$type) ? \$type : 'email']) ?>
@@ -46,7 +46,7 @@ class __TwigTemplate_9a2430cac4bdd5c5a8d87b35822d1b1b3b0eb77c0088073414e8c532da7
 
     public function getTemplateName()
     {
-        return "@Framework/Form/email_widget.html.php";
+        return "FrameworkBundle:Form:email_widget.html.php";
     }
 
     public function getDebugInfo()
@@ -57,6 +57,6 @@ class __TwigTemplate_9a2430cac4bdd5c5a8d87b35822d1b1b3b0eb77c0088073414e8c532da7
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'form_widget_simple', ['type' => isset(\$type) ? \$type : 'email']) ?>
-", "@Framework/Form/email_widget.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\email_widget.html.php");
+", "FrameworkBundle:Form:email_widget.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\email_widget.html.php");
     }
 }

@@ -230,7 +230,10 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         
       </td>
       <td  class=\"actions\" >
-       <a href=\"#\"> 
+       <a href=\"stockView/";
+            // line 100
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 100), "html", null, true);
+            echo "\"> 
             <button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\"  style=\" border: #28a745 solid 1px; \">
             <i class='bx bx-show-alt bx-xs'></i> view
             </button>
@@ -299,7 +302,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
     public function getDebugInfo()
     {
-        return array (  278 => 128,  271 => 127,  258 => 120,  227 => 95,  222 => 92,  218 => 90,  213 => 89,  205 => 84,  198 => 80,  190 => 75,  186 => 74,  180 => 70,  176 => 69,  137 => 33,  128 => 27,  119 => 21,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 127,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  281 => 128,  274 => 127,  261 => 120,  235 => 100,  227 => 95,  222 => 92,  218 => 90,  213 => 89,  205 => 84,  198 => 80,  190 => 75,  186 => 74,  180 => 70,  176 => 69,  137 => 33,  128 => 27,  119 => 21,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 127,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -403,7 +406,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         
       </td>
       <td  class=\"actions\" >
-       <a href=\"#\"> 
+       <a href=\"stockView/{{machine.id}}\"> 
             <button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\"  style=\" border: #28a745 solid 1px; \">
             <i class='bx bx-show-alt bx-xs'></i> view
             </button>
@@ -435,6 +438,6 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
        <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
-   {% endblock %}", "Pages/Stock.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\Stock.html.twig");
+   {% endblock %}", "Pages/Stock.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\Stock.html.twig");
     }
 }

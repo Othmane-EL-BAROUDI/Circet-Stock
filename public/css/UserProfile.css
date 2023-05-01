@@ -4,10 +4,11 @@
     width: calc(100% - 78px);
     left: 78px;
     transition:  all 0.5s ease;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 .card-block{
    padding-top: 40%;
+  
 }
 .back{
    position: absolute;

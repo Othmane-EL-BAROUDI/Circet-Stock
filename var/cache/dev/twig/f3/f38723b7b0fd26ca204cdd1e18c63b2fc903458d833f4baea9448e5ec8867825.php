@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* @Framework/Form/form_row.html.php */
+/* FrameworkBundle:Form:form_row.html.php */
 class __TwigTemplate_d2264426bb19ce82f6d4b34734c4dfb999ab4e0283781d484d9abf726c876bc7 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_d2264426bb19ce82f6d4b34734c4dfb999ab4e0283781d484d9abf726c8
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/form_row.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:form_row.html.php"));
 
         // line 1
         echo "<div>
@@ -52,7 +52,7 @@ class __TwigTemplate_d2264426bb19ce82f6d4b34734c4dfb999ab4e0283781d484d9abf726c8
 
     public function getTemplateName()
     {
-        return "@Framework/Form/form_row.html.php";
+        return "FrameworkBundle:Form:form_row.html.php";
     }
 
     public function getDebugInfo()
@@ -69,6 +69,6 @@ class __TwigTemplate_d2264426bb19ce82f6d4b34734c4dfb999ab4e0283781d484d9abf726c8
     <?php echo \$view['form']->widget(\$form, \$widgetAttr); ?>
     <?php echo \$view['form']->help(\$form); ?>
 </div>
-", "@Framework/Form/form_row.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_row.html.php");
+", "FrameworkBundle:Form:form_row.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_row.html.php");
     }
 }

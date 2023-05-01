@@ -54,7 +54,7 @@ class __TwigTemplate_6b303279fdb17559f41557c6aee56d1f6d0b3fd527225bdadbfbf415b5c
 ";
         // line 7
         $this->displayBlock('body', $context, $blocks);
-        // line 50
+        // line 165
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -150,6 +150,121 @@ class __TwigTemplate_6b303279fdb17559f41557c6aee56d1f6d0b3fd527225bdadbfbf415b5c
                         </div>
                   </div>
             </div>
+            <div class=\"body_body\" >
+                 <div class=\"left\" >
+                 <div class=\"text2\">Demandes de changement de mot de passe</div>
+                  <table class=\"table align-middle mb-0 bg-white\">
+                  <thead class=\"bg-light\">
+                  <tr>
+                        <th>users</th>
+                        <th>matricule</th>
+                        <th  style=\"text-align:center;\" >Actions</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                        <td>
+                        <div class=\"d-flex align-items-center\">
+                        <div class=\"ms-3\">
+                              <p class=\"fw-bold mb-1\">Ayman</p>
+                              <p class=\"text-muted mb-0\">Aymangassi972003@gmail.com</p>
+                        </div>
+                        </div>
+                        </td>
+                        <td>
+                        <p class=\"text-muted mb-0 mt-2 \">BOWBOW</p>
+                        </td>
+                       
+                        <td  class=\"actions\" >
+                        <a href=\"#\"> 
+                              <button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\"  style=\" border: #28a745 solid 1px; \" >
+                              <i class='bx bx-check bx-xs' ></i>
+                              Accept
+                              </button>
+                        </a>
+                         <a href=\"#\"> 
+                              <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" >
+                              <i class='bx bx-x bx-xs' ></i>
+                              Decline
+                              </button>
+                        </a>
+                        </td>
+                  </tr>
+                   <tr>
+                        <td>
+                        <div class=\"d-flex align-items-center\">
+                        <div class=\"ms-3\">
+                              <p class=\"fw-bold mb-1\">Othman</p>
+                              <p class=\"text-muted mb-0\">Othman@gmail.com</p>
+                        </div>
+                        </div>
+                        </td>
+                        <td>
+                        <p class=\"text-muted mb-0 mt-2 \">BAWBAW</p>
+                        </td>
+                       
+                        <td  class=\"actions\" >
+                        <a href=\"#\"> 
+                              <button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\"  style=\" border: #28a745 solid 1px; \" >
+                              <i class='bx bx-check bx-xs' ></i>
+                              Accept
+                              </button>
+                        </a>
+                         <a href=\"#\"> 
+                              <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" >
+                              <i class='bx bx-x bx-xs' ></i>
+                              Decline
+                              </button>
+                        </a>
+                        </td>
+                  </tr>
+                  </tbody>
+                  </table>
+                 </div>
+
+                   <div class=\"right\" >
+                 <div class=\"text2\">Affectation of today</div>
+                  <table class=\"table align-middle mb-0 bg-white\">
+                  <thead class=\"bg-light\">
+                  <tr>
+                        <th>affectation</th>
+                        <th>Time</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                        <td>
+                        <div class=\"d-flex align-items-center\">
+                        <div class=\"ms-3\">
+                              <p class=\"fw-bold mb-1\">Ayman - Web developer</p>
+                              <p class=\"text-muted mb-0\">took  <label>DELL G5500</label> </p>
+                        </div>
+                        </div>
+                        </td>
+                        <td>
+                        <p class=\"text-muted mb-0 mt-2 \">08:30</p>
+                        </td>
+                  </tr>
+                   </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                        <td>
+                        <div class=\"d-flex align-items-center\">
+                        <div class=\"ms-3\">
+                              <p class=\"fw-bold mb-1\">Othman - Manager</p>
+                              <p class=\"text-muted mb-0\">took  <label>scanner</label> </p>
+                        </div>
+                        </div>
+                        </td>
+                        <td>
+                        <p class=\"text-muted mb-0 mt-2 \">16:30</p>
+                        </td>
+                  </tr>
+                  </tbody>
+                  </table>
+                 </div>
+            </div>
       </div>
 ";
         
@@ -157,14 +272,14 @@ class __TwigTemplate_6b303279fdb17559f41557c6aee56d1f6d0b3fd527225bdadbfbf415b5c
 
     }
 
-    // line 50
+    // line 165
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 51
+        // line 166
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -186,7 +301,7 @@ class __TwigTemplate_6b303279fdb17559f41557c6aee56d1f6d0b3fd527225bdadbfbf415b5c
 
     public function getDebugInfo()
     {
-        return array (  168 => 51,  161 => 50,  139 => 35,  127 => 26,  115 => 17,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 50,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  283 => 166,  276 => 165,  139 => 35,  127 => 26,  115 => 17,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 165,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -238,10 +353,125 @@ class __TwigTemplate_6b303279fdb17559f41557c6aee56d1f6d0b3fd527225bdadbfbf415b5c
                         </div>
                   </div>
             </div>
+            <div class=\"body_body\" >
+                 <div class=\"left\" >
+                 <div class=\"text2\">Demandes de changement de mot de passe</div>
+                  <table class=\"table align-middle mb-0 bg-white\">
+                  <thead class=\"bg-light\">
+                  <tr>
+                        <th>users</th>
+                        <th>matricule</th>
+                        <th  style=\"text-align:center;\" >Actions</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                        <td>
+                        <div class=\"d-flex align-items-center\">
+                        <div class=\"ms-3\">
+                              <p class=\"fw-bold mb-1\">Ayman</p>
+                              <p class=\"text-muted mb-0\">Aymangassi972003@gmail.com</p>
+                        </div>
+                        </div>
+                        </td>
+                        <td>
+                        <p class=\"text-muted mb-0 mt-2 \">BOWBOW</p>
+                        </td>
+                       
+                        <td  class=\"actions\" >
+                        <a href=\"#\"> 
+                              <button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\"  style=\" border: #28a745 solid 1px; \" >
+                              <i class='bx bx-check bx-xs' ></i>
+                              Accept
+                              </button>
+                        </a>
+                         <a href=\"#\"> 
+                              <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" >
+                              <i class='bx bx-x bx-xs' ></i>
+                              Decline
+                              </button>
+                        </a>
+                        </td>
+                  </tr>
+                   <tr>
+                        <td>
+                        <div class=\"d-flex align-items-center\">
+                        <div class=\"ms-3\">
+                              <p class=\"fw-bold mb-1\">Othman</p>
+                              <p class=\"text-muted mb-0\">Othman@gmail.com</p>
+                        </div>
+                        </div>
+                        </td>
+                        <td>
+                        <p class=\"text-muted mb-0 mt-2 \">BAWBAW</p>
+                        </td>
+                       
+                        <td  class=\"actions\" >
+                        <a href=\"#\"> 
+                              <button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\"  style=\" border: #28a745 solid 1px; \" >
+                              <i class='bx bx-check bx-xs' ></i>
+                              Accept
+                              </button>
+                        </a>
+                         <a href=\"#\"> 
+                              <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" >
+                              <i class='bx bx-x bx-xs' ></i>
+                              Decline
+                              </button>
+                        </a>
+                        </td>
+                  </tr>
+                  </tbody>
+                  </table>
+                 </div>
+
+                   <div class=\"right\" >
+                 <div class=\"text2\">Affectation of today</div>
+                  <table class=\"table align-middle mb-0 bg-white\">
+                  <thead class=\"bg-light\">
+                  <tr>
+                        <th>affectation</th>
+                        <th>Time</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                        <td>
+                        <div class=\"d-flex align-items-center\">
+                        <div class=\"ms-3\">
+                              <p class=\"fw-bold mb-1\">Ayman - Web developer</p>
+                              <p class=\"text-muted mb-0\">took  <label>DELL G5500</label> </p>
+                        </div>
+                        </div>
+                        </td>
+                        <td>
+                        <p class=\"text-muted mb-0 mt-2 \">08:30</p>
+                        </td>
+                  </tr>
+                   </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                        <td>
+                        <div class=\"d-flex align-items-center\">
+                        <div class=\"ms-3\">
+                              <p class=\"fw-bold mb-1\">Othman - Manager</p>
+                              <p class=\"text-muted mb-0\">took  <label>scanner</label> </p>
+                        </div>
+                        </div>
+                        </td>
+                        <td>
+                        <p class=\"text-muted mb-0 mt-2 \">16:30</p>
+                        </td>
+                  </tr>
+                  </tbody>
+                  </table>
+                 </div>
+            </div>
       </div>
 {% endblock %}
   {% block javascripts %}
             <script src=\"{{asset('JS/sidebar.js')}}\"></script>
-   {% endblock %}", "Pages/Dashboard.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\templates\\Pages\\Dashboard.html.twig");
+   {% endblock %}", "Pages/Dashboard.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\Dashboard.html.twig");
     }
 }

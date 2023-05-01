@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* @Framework/Form/container_attributes.html.php */
+/* FrameworkBundle:Form:container_attributes.html.php */
 class __TwigTemplate_3f18649cb6280dcb9e2e2fc4307a1cff61f1f5deb77bd77d0a31768c921b79a7 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_3f18649cb6280dcb9e2e2fc4307a1cff61f1f5deb77bd77d0a31768c921
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/container_attributes.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:container_attributes.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'widget_container_attributes') ?>
@@ -46,7 +46,7 @@ class __TwigTemplate_3f18649cb6280dcb9e2e2fc4307a1cff61f1f5deb77bd77d0a31768c921
 
     public function getTemplateName()
     {
-        return "@Framework/Form/container_attributes.html.php";
+        return "FrameworkBundle:Form:container_attributes.html.php";
     }
 
     public function getDebugInfo()
@@ -57,6 +57,6 @@ class __TwigTemplate_3f18649cb6280dcb9e2e2fc4307a1cff61f1f5deb77bd77d0a31768c921
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'widget_container_attributes') ?>
-", "@Framework/Form/container_attributes.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\container_attributes.html.php");
+", "FrameworkBundle:Form:container_attributes.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\container_attributes.html.php");
     }
 }

@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* @Framework/Form/attributes.html.php */
+/* FrameworkBundle:Form:attributes.html.php */
 class __TwigTemplate_17a24913bba150d24c12efd1f9f580f723b768d62b6004c4f016e7c416121fa0 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_17a24913bba150d24c12efd1f9f580f723b768d62b6004c4f016e7c4161
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/attributes.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:attributes.html.php"));
 
         // line 1
         echo "<?php foreach (\$attr as \$k => \$v): ?>
@@ -54,7 +54,7 @@ class __TwigTemplate_17a24913bba150d24c12efd1f9f580f723b768d62b6004c4f016e7c4161
 
     public function getTemplateName()
     {
-        return "@Framework/Form/attributes.html.php";
+        return "FrameworkBundle:Form:attributes.html.php";
     }
 
     public function getDebugInfo()
@@ -73,6 +73,6 @@ class __TwigTemplate_17a24913bba150d24c12efd1f9f580f723b768d62b6004c4f016e7c4161
 <?php printf('%s=\"%s\" ', \$view->escape(\$k), \$view->escape(\$v)) ?>
 <?php endif ?>
 <?php endforeach ?>
-", "@Framework/Form/attributes.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\attributes.html.php");
+", "FrameworkBundle:Form:attributes.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\attributes.html.php");
     }
 }

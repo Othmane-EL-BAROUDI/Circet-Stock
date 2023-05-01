@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* @FOSUser/Registration/email.txt.twig */
+/* FOSUserBundle:Registration:email.txt.twig */
 class __TwigTemplate_775f959d55d12544134e44b736197753fa4227070606cd1b8093621373ab5389 extends \Twig\Template
 {
     private $source;
@@ -37,7 +37,7 @@ class __TwigTemplate_775f959d55d12544134e44b736197753fa4227070606cd1b8093621373a
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@FOSUser/Registration/email.txt.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FOSUserBundle:Registration:email.txt.twig"));
 
         // line 2
         $this->displayBlock('subject', $context, $blocks);
@@ -97,7 +97,7 @@ class __TwigTemplate_775f959d55d12544134e44b736197753fa4227070606cd1b8093621373a
 
     public function getTemplateName()
     {
-        return "@FOSUser/Registration/email.txt.twig";
+        return "FOSUserBundle:Registration:email.txt.twig";
     }
 
     public function getDebugInfo()
@@ -120,6 +120,6 @@ class __TwigTemplate_775f959d55d12544134e44b736197753fa4227070606cd1b8093621373a
 {% endautoescape %}
 {% endblock %}
 {% block body_html %}{% endblock %}
-", "@FOSUser/Registration/email.txt.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\email.txt.twig");
+", "FOSUserBundle:Registration:email.txt.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\email.txt.twig");
     }
 }

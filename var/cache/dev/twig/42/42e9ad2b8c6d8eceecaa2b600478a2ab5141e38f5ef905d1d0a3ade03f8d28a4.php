@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* @FOSUser/Group/list_content.html.twig */
+/* FOSUserBundle:Group:list_content.html.twig */
 class __TwigTemplate_cc4b06b066c333a48426c6e19015a0d82ca20808fa4de7144acc3013de57db5d extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_cc4b06b066c333a48426c6e19015a0d82ca20808fa4de7144acc3013de5
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@FOSUser/Group/list_content.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FOSUserBundle:Group:list_content.html.twig"));
 
         // line 1
         echo "<div class=\"fos_user_group_list\">
@@ -66,7 +66,7 @@ class __TwigTemplate_cc4b06b066c333a48426c6e19015a0d82ca20808fa4de7144acc3013de5
 
     public function getTemplateName()
     {
-        return "@FOSUser/Group/list_content.html.twig";
+        return "FOSUserBundle:Group:list_content.html.twig";
     }
 
     public function isTraitable()
@@ -88,6 +88,6 @@ class __TwigTemplate_cc4b06b066c333a48426c6e19015a0d82ca20808fa4de7144acc3013de5
     {% endfor %}
     </ul>
 </div>
-", "@FOSUser/Group/list_content.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Group\\list_content.html.twig");
+", "FOSUserBundle:Group:list_content.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Group\\list_content.html.twig");
     }
 }

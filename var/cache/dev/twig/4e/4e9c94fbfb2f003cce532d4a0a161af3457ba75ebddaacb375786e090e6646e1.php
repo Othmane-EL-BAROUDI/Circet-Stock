@@ -167,6 +167,6 @@ class __TwigTemplate_07e133236b7d05aca3b9f2f698ca7830c3ca84e7e53cd6a393d46fa33e2
         {% endblock %}
     </body>
 </html>
-", "base.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\templates\\base.html.twig");
+", "base.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\base.html.twig");
     }
 }
