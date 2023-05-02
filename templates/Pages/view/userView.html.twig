@@ -11,7 +11,7 @@
 {% endblock %}
 {% block body %}
      {{ include('Pages/sidebar.html.twig') }}
-     <div class="modal fade" id="model" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal fade" id="model" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                      <div class="modal-content">
                                      <div class="modal-header" >
@@ -22,19 +22,13 @@
                                           </div>
                                           <div class="modal-body "  >
                                                 <ul class="row d-flex justify-content-center">
-                                                {% for permission in user.getUserPermission() %}
-                                                      <li  class="d-flex justify-content-center align-items-center" style=" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;">{{permission.getPermissionName()}}</li>
-                                                {% endfor %}
-                                                                                                      <li  class="d-flex justify-content-center align-items-center" style=" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;">fdsfdsfsd</li>
-                                                      <li  class="d-flex justify-content-center align-items-center" style=" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;">fsdfsd</li>
-                                                      <li  class="d-flex justify-content-center align-items-center" style=" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;">fdssd</li>
-                                                      <li  class="d-flex justify-content-center align-items-center" style=" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;">fdssd</li>
-                                                      <li  class="d-flex justify-content-center align-items-center" style=" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;">fdssd</li>
-                                                      <li  class="d-flex justify-content-center align-items-center" style=" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;">fdssd</li>
-                                                      <li  class="d-flex justify-content-center align-items-center" style=" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;">fdssd</li>
-                                                      <li  class="d-flex justify-content-center align-items-center" style=" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;">fdssd</li>
-
-
+                                                {% if user.getUserPermission()|length > 0 %}
+                                                             {% for permission in user.getUserPermission() %}
+                                                                   <li  class="d-flex justify-content-center align-items-center" style=" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;">{{permission.getPermissionName()}}</li>
+                                                             {% endfor %}
+                                                {% else %} <li  class="d-flex justify-content-center align-items-center" style=" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;" >no permission</li>
+                                                {% endif %}
+                                            
                                                 </ul>
                                           </div>
                                     <div class="modal-footer close_button">

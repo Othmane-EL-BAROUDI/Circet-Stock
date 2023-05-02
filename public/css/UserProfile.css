@@ -85,3 +85,16 @@
    height: 450px !important;
    overflow-y: scroll !important;
 }
+.Bactions{
+   margin-top: 2%;
+   margin-left: 37%;
+}
+.Bactions button{
+   cursor: pointer;
+   background-color: #f9a826;
+   color: white;
+   font-weight: bold;
+   padding: 5px;
+   border: none;
+   border-radius: 6px;
+}

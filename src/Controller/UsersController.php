@@ -31,14 +31,14 @@ class UsersController extends AbstractController
         
         if(  $form->isSubmitted()  && $form->isValid()){
             $newUser = $form->getData();
-            $encoded = $encoder->encodePassword($newUser, $newUser->getPassword);
+            $encoded = $encoder->encodePassword($Nuser, $newUser->getPassword());
             $newUser->setPassword($encoded);
             $entityManager->persist($newUser);
             $newUser->setEnabled(true);
             $entityManager->flush();
             $this->addFlash(
                'success',
-               sprintf(' new "%s" added successfully.', $newUser->getUsername())
+               sprintf('  "%s" added successfully as "%s" ', $newUser->getUsername(),$newUser->getJob())
             );
             return $this->redirectToRoute('Users');
         }

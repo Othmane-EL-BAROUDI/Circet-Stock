@@ -52,4 +52,21 @@ class StockController extends AbstractController
             'Path' => '/Stock',
         ]);
     }
+
+    /**
+     * @Route("Stock/Remove/{id}" , name="StockRemove")
+     */
+    public function PermissionDelete( EntityManagerInterface $entityManager, $id): Response
+    {   
+        $entityManager = $this->getDoctrine()->getManager();
+        $stock = $entityManager->getRepository(Machine::class)->find($id);
+        $entityManager->remove($stock);
+        $entityManager->flush();
+        $this->addFlash(
+            'delete',
+            sprintf(' " %s - %s " deleted successfully.', $stock->getModel()->getMarque()->getMarqueName() ,$stock->getModel()->getModelName())
+         );
+        return $this->redirectToRoute('Stock');
+
+    }
 }

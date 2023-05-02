@@ -12,7 +12,6 @@ return [
         '/Dashboard' => [[['_route' => 'Dashboard', '_controller' => 'App\\Controller\\DashboardController::Dashboard'], null, null, null, false, false, null]],
         '/ForgetPassword' => [[['_route' => 'ForgetPassword', '_controller' => 'App\\Controller\\ForgetPasswordController::ForgetPassword'], null, null, null, false, false, null]],
         '/HomePage' => [[['_route' => 'HomePage', '_controller' => 'App\\Controller\\HomePageController::HomePage'], null, null, null, false, false, null]],
-        '/Stock/create' => [[['_route' => 'createStock', '_controller' => 'App\\Controller\\MachineFormController::create'], null, null, null, false, false, null]],
         '/Permission' => [[['_route' => 'Permission', '_controller' => 'App\\Controller\\PermissionController::Permission'], null, null, null, false, false, null]],
         '/Profile' => [[['_route' => 'Profile', '_controller' => 'App\\Controller\\ProfileController::ForgetPassword'], null, null, null, false, false, null]],
         '/Role' => [[['_route' => 'Role', '_controller' => 'App\\Controller\\RoleController::Role'], null, null, null, false, false, null]],
@@ -41,13 +40,14 @@ return [
                     .'|Remove/([^/]++)(*:87)'
                 .')'
                 .'|/stockView/([^/]++)(*:114)'
+                .'|/Stock/Remove/([^/]++)(*:144)'
                 .'|/User/(?'
-                    .'|([^/]++)(*:139)'
-                    .'|Remove/([^/]++)(*:162)'
+                    .'|([^/]++)(*:169)'
+                    .'|Remove/([^/]++)(*:192)'
                 .')'
                 .'|/re(?'
-                    .'|gister/confirm/([^/]++)(*:200)'
-                    .'|setting/reset/([^/]++)(*:230)'
+                    .'|gister/confirm/([^/]++)(*:230)'
+                    .'|setting/reset/([^/]++)(*:260)'
                 .')'
             .')/?$}sDu',
     ],
@@ -56,10 +56,11 @@ return [
         65 => [[['_route' => 'PermissionUpdate', '_controller' => 'App\\Controller\\PermissionController::PermissionUpdate'], ['id'], null, null, false, true, null]],
         87 => [[['_route' => 'PermissionRemove', '_controller' => 'App\\Controller\\PermissionController::PermissionDelete'], ['id'], null, null, false, true, null]],
         114 => [[['_route' => 'stockView', '_controller' => 'App\\Controller\\StockController::stockView'], ['id'], null, null, false, true, null]],
-        139 => [[['_route' => 'UserView', '_controller' => 'App\\Controller\\UsersController::UserView'], ['id'], null, null, false, true, null]],
-        162 => [[['_route' => 'UserRemove', '_controller' => 'App\\Controller\\UsersController::PermissionDelete'], ['id'], null, null, false, true, null]],
-        200 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
-        230 => [
+        144 => [[['_route' => 'StockRemove', '_controller' => 'App\\Controller\\StockController::PermissionDelete'], ['id'], null, null, false, true, null]],
+        169 => [[['_route' => 'UserView', '_controller' => 'App\\Controller\\UsersController::UserView'], ['id'], null, null, false, true, null]],
+        192 => [[['_route' => 'UserRemove', '_controller' => 'App\\Controller\\UsersController::PermissionDelete'], ['id'], null, null, false, true, null]],
+        230 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
+        260 => [
             [['_route' => 'fos_user_resetting_reset', '_controller' => 'fos_user.resetting.controller:resetAction'], ['token'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

@@ -13,10 +13,11 @@
     margin: 12px;
 }
 .sort{
+    margin-left: 18%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(100% - 78px);
+    width: calc(100% - 500px);
     padding-bottom: 10px;
     z-index: -1;
 }

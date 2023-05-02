@@ -49,7 +49,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 12
         $this->displayBlock('body', $context, $blocks);
-        // line 115
+        // line 109
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -105,7 +105,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
         echo "     ";
         echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
         echo "
-     <div class=\"modal fade\" id=\"model\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+                  <div class=\"modal fade\" id=\"model\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
                                     <div class=\"modal-dialog\" role=\"document\">
                                      <div class=\"modal-content\">
                                      <div class=\"modal-header\" >
@@ -121,29 +121,29 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
                                                 <ul class=\"row d-flex justify-content-center\">
                                                 ";
         // line 25
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 25, $this->source); })()), "getUserPermission", [], "method", false, false, false, 25));
-        foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+        if ((twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 25, $this->source); })()), "getUserPermission", [], "method", false, false, false, 25)) > 0)) {
             // line 26
-            echo "                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 26), "html", null, true);
-            echo "</li>
+            echo "                                                             ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 26, $this->source); })()), "getUserPermission", [], "method", false, false, false, 26));
+            foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+                // line 27
+                echo "                                                                   <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 27), "html", null, true);
+                echo "</li>
+                                                             ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 29
+            echo "                                                ";
+        } else {
+            echo " <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\" >no permission</li>
                                                 ";
         }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 28
-        echo "                                                                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdsfdsfsd</li>
-                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fsdfsd</li>
-                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
-                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
-                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
-                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
-                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
-                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
-
-
+        // line 31
+        echo "                                            
                                                 </ul>
                                           </div>
                                     <div class=\"modal-footer close_button\">
@@ -162,8 +162,8 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
                                     <div class=\"col-sm-4 rounded-left\" style=\"background-color: #f9a826; \">
                                           <div class=\"card-block text-center text-white mt-2\"  >
                                                    <a  class=\"back\" href=\"";
-        // line 55
-        echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 55, $this->source); })()), "html", null, true);
+        // line 49
+        echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 49, $this->source); })()), "html", null, true);
         echo "\"><i class='bx bx-chevron-left bx-lg'></i></a>
                                                   <i class=\"fas fa-user fa-7x \"></i>
                                           </div>
@@ -174,15 +174,15 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
                                                 <div class=\"col-sm-6\">
                                                       <p class=\"font-weight-bold\">Nom et prénom</p>
                                                       <h6 class=\"text-muted\">";
-        // line 64
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 64, $this->source); })()), "username", [], "any", false, false, false, 64), "html", null, true);
+        // line 58
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 58, $this->source); })()), "username", [], "any", false, false, false, 58), "html", null, true);
         echo "</h6>
                                                 </div>
                                                 <div class=\"col-sm-6\">
                                                       <p class=\"font-weight-bold\">Email</p>
                                                       <h6 class=\"text-muted\">";
-        // line 68
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 68, $this->source); })()), "email", [], "any", false, false, false, 68), "html", null, true);
+        // line 62
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 62, $this->source); })()), "email", [], "any", false, false, false, 62), "html", null, true);
         echo "</h6>
                                                 </div>
                                           </div>
@@ -191,51 +191,51 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
                                                 <div class=\"col-sm-6\">
                                                       <p class=\"font-weight-bold\">Matricule</p>
                                                       <h6 class=\"text-muted\">";
-        // line 75
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 75, $this->source); })()), "matricule", [], "any", false, false, false, 75), "html", null, true);
+        // line 69
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 69, $this->source); })()), "matricule", [], "any", false, false, false, 69), "html", null, true);
         echo "</h6>
                                                 </div>
                                                 ";
-        // line 77
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 77, $this->source); })()), "roles", [], "any", false, false, false, 77), 0, [], "array", false, false, false, 77) != "ROLE_ADMIN")) {
-            // line 78
+        // line 71
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 71, $this->source); })()), "roles", [], "any", false, false, false, 71), 0, [], "array", false, false, false, 71) != "ROLE_ADMIN")) {
+            // line 72
             echo "                                                <div class=\"col-sm-6\">
                                                       <p class=\"font-weight-bold\">manager</p>
                                                       <h6 class=\"text-muted\">
                                                                   ";
-            // line 81
-            if (twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 81, $this->source); })()), "manager", [], "any", false, false, false, 81)) {
-                // line 82
+            // line 75
+            if (twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 75, $this->source); })()), "manager", [], "any", false, false, false, 75)) {
+                // line 76
                 echo "                                                                              ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 82, $this->source); })()), "manager", [], "any", false, false, false, 82), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 76, $this->source); })()), "manager", [], "any", false, false, false, 76), "html", null, true);
                 echo "
                                                                   ";
             } else {
-                // line 83
+                // line 77
                 echo " no manager
                                                                   ";
             }
-            // line 85
+            // line 79
             echo "                                                      </h6>
                                                 </div>
                                                 ";
         }
-        // line 88
+        // line 82
         echo "                                          </div>
 
                                           <div class=\"row mb-4\">
                                                 <div class=\"col-sm-6\">
                                                       <p class=\"font-weight-bold\">Job</p>
                                                       <h6 class=\"text-muted\">";
-        // line 93
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 93, $this->source); })()), "job", [], "any", false, false, false, 93), "html", null, true);
+        // line 87
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 87, $this->source); })()), "job", [], "any", false, false, false, 87), "html", null, true);
         echo "</h6>
                                                 </div>
                                                 <div class=\"col-sm-6\">
                                                       <p class=\"font-weight-bold\">Role</p>
                                                       <h6 class=\"text-muted\">";
-        // line 97
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 97, $this->source); })()), "roles", [], "any", false, false, false, 97), 0, [], "array", false, false, false, 97), "html", null, true);
+        // line 91
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 91, $this->source); })()), "roles", [], "any", false, false, false, 91), 0, [], "array", false, false, false, 91), "html", null, true);
         echo "</h6>
                                                 </div>
                                           </div>
@@ -259,14 +259,14 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 
     }
 
-    // line 115
+    // line 109
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 116
+        // line 110
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -286,7 +286,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 
     public function getDebugInfo()
     {
-        return array (  270 => 116,  263 => 115,  238 => 97,  231 => 93,  224 => 88,  219 => 85,  215 => 83,  209 => 82,  207 => 81,  202 => 78,  200 => 77,  195 => 75,  185 => 68,  178 => 64,  166 => 55,  137 => 28,  128 => 26,  124 => 25,  114 => 18,  105 => 13,  98 => 12,  81 => 3,  74 => 2,  61 => 1,  53 => 115,  51 => 12,  49 => 2,  44 => 1,);
+        return array (  270 => 110,  263 => 109,  238 => 91,  231 => 87,  224 => 82,  219 => 79,  215 => 77,  209 => 76,  207 => 75,  202 => 72,  200 => 71,  195 => 69,  185 => 62,  178 => 58,  166 => 49,  146 => 31,  140 => 29,  131 => 27,  126 => 26,  124 => 25,  114 => 18,  105 => 13,  98 => 12,  81 => 3,  74 => 2,  61 => 1,  53 => 109,  51 => 12,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -304,7 +304,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 {% endblock %}
 {% block body %}
      {{ include('Pages/sidebar.html.twig') }}
-     <div class=\"modal fade\" id=\"model\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+                  <div class=\"modal fade\" id=\"model\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
                                     <div class=\"modal-dialog\" role=\"document\">
                                      <div class=\"modal-content\">
                                      <div class=\"modal-header\" >
@@ -315,19 +315,13 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
                                           </div>
                                           <div class=\"modal-body \"  >
                                                 <ul class=\"row d-flex justify-content-center\">
-                                                {% for permission in user.getUserPermission() %}
-                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">{{permission.getPermissionName()}}</li>
-                                                {% endfor %}
-                                                                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdsfdsfsd</li>
-                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fsdfsd</li>
-                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
-                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
-                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
-                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
-                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
-                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
-
-
+                                                {% if user.getUserPermission()|length > 0 %}
+                                                             {% for permission in user.getUserPermission() %}
+                                                                   <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">{{permission.getPermissionName()}}</li>
+                                                             {% endfor %}
+                                                {% else %} <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\" >no permission</li>
+                                                {% endif %}
+                                            
                                                 </ul>
                                           </div>
                                     <div class=\"modal-footer close_button\">

@@ -35,6 +35,14 @@
                   </div>
                   
       </div>
+             {% for flash_message in app.session.flashbag.get('delete') %}
+                   <div class="alert  alert-danger fade show" role="alert">
+                               {{flash_message}}
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                  </div>
+             {% endfor %}
             <div class="text">Stock</div>
             <button type="button" class="new" data-toggle="modal" data-target="#addStock">Add to stock</button>
             <div class="main_content">
@@ -108,7 +116,7 @@
             Edit
             </button>
         </a>
-        <a href="#"> 
+        <a href="/Stock/Remove/{{machine.id}}"> 
             <button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 "style=" border: #dc3545 solid 1px;" >
             <i class='bx bx-trash bx-xs'></i>
             Delete
