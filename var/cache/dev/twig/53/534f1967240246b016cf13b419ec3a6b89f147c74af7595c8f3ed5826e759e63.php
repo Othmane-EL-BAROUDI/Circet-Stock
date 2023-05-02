@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* DoctrineBundle:Collector:explain.html.twig */
+/* @Doctrine/Collector/explain.html.twig */
 class __TwigTemplate_73ff6420adc9e24fe95828713c6c8cbef2df278c7cd25264bbb7ec4c5f986b34 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_73ff6420adc9e24fe95828713c6c8cbef2df278c7cd25264bbb7ec4c5f9
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "DoctrineBundle:Collector:explain.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Doctrine/Collector/explain.html.twig"));
 
         // line 1
         if ((twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 1, $this->source); })()), 0, [], "array", false, false, false, 1)) > 1)) {
@@ -122,7 +122,7 @@ class __TwigTemplate_73ff6420adc9e24fe95828713c6c8cbef2df278c7cd25264bbb7ec4c5f9
 
     public function getTemplateName()
     {
-        return "DoctrineBundle:Collector:explain.html.twig";
+        return "@Doctrine/Collector/explain.html.twig";
     }
 
     public function isTraitable()
@@ -165,6 +165,6 @@ class __TwigTemplate_73ff6420adc9e24fe95828713c6c8cbef2df278c7cd25264bbb7ec4c5f9
         {%- endfor -%}
     </pre>
 {% endif %}
-", "DoctrineBundle:Collector:explain.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\explain.html.twig");
+", "@Doctrine/Collector/explain.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\explain.html.twig");
     }
 }

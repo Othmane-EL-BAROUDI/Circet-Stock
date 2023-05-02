@@ -183,6 +183,6 @@ class __TwigTemplate_9fa2cbefcbc3c305add0cc23346752ae3648e248f0a31fd571d36217f8b
         </div>
     </div>
 </div>
-", "TwigBundle:Exception:traces.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\twig-bundle/Resources/views/Exception/traces.html.twig");
+", "TwigBundle:Exception:traces.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\twig-bundle/Resources/views/Exception/traces.html.twig");
     }
 }

@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FrameworkBundle:Form:choice_widget_expanded.html.php */
+/* @Framework/Form/choice_widget_expanded.html.php */
 class __TwigTemplate_c7a8ed800fd5aad664dbe3848be4471db6229e6fe219b2d341ed756d5d1cbdcb extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_c7a8ed800fd5aad664dbe3848be4471db6229e6fe219b2d341ed756d5d1
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:choice_widget_expanded.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/choice_widget_expanded.html.php"));
 
         // line 1
         echo "<div <?php echo \$view['form']->block(\$form, 'widget_container_attributes') ?>>
@@ -51,7 +51,7 @@ class __TwigTemplate_c7a8ed800fd5aad664dbe3848be4471db6229e6fe219b2d341ed756d5d1
 
     public function getTemplateName()
     {
-        return "FrameworkBundle:Form:choice_widget_expanded.html.php";
+        return "@Framework/Form/choice_widget_expanded.html.php";
     }
 
     public function getDebugInfo()
@@ -67,6 +67,6 @@ class __TwigTemplate_c7a8ed800fd5aad664dbe3848be4471db6229e6fe219b2d341ed756d5d1
     <?php echo \$view['form']->label(\$child, null, ['translation_domain' => \$choice_translation_domain]) ?>
 <?php endforeach ?>
 </div>
-", "FrameworkBundle:Form:choice_widget_expanded.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\choice_widget_expanded.html.php");
+", "@Framework/Form/choice_widget_expanded.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\choice_widget_expanded.html.php");
     }
 }

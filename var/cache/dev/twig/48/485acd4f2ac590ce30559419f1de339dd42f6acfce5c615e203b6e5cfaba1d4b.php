@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FrameworkBundle:Form:form_label.html.php */
+/* @Framework/Form/form_label.html.php */
 class __TwigTemplate_f21fdf2bd6661e430b9948c13d9049b5c231ebad402267558a749a988b5a5cfd extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_f21fdf2bd6661e430b9948c13d9049b5c231ebad402267558a749a988b5
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:form_label.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/form_label.html.php"));
 
         // line 1
         echo "<?php if (false !== \$label): ?>
@@ -53,7 +53,7 @@ class __TwigTemplate_f21fdf2bd6661e430b9948c13d9049b5c231ebad402267558a749a988b5
 
     public function getTemplateName()
     {
-        return "FrameworkBundle:Form:form_label.html.php";
+        return "@Framework/Form/form_label.html.php";
     }
 
     public function getDebugInfo()
@@ -71,6 +71,6 @@ class __TwigTemplate_f21fdf2bd6661e430b9948c13d9049b5c231ebad402267558a749a988b5
     : \$view['form']->humanize(\$name); } ?>
 <label<?php if (\$label_attr) { echo ' '.\$view['form']->block(\$form, 'attributes', ['attr' => \$label_attr]); } ?>><?php echo \$view->escape(false !== \$translation_domain ? \$view['translator']->trans(\$label, \$label_translation_parameters, \$translation_domain) : \$label) ?></label>
 <?php endif ?>
-", "FrameworkBundle:Form:form_label.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_label.html.php");
+", "@Framework/Form/form_label.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_label.html.php");
     }
 }

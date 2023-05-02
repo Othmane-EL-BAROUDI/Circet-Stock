@@ -73,6 +73,6 @@ class __TwigTemplate_ab7a7746e969b027de0bfcf6550bc344f6a4d48cdc2380896e417a21518
 <?php printf('%s=\"%s\" ', \$view->escape(\$k), \$view->escape(\$v)) ?>
 <?php endif ?>
 <?php endforeach ?>
-", "FrameworkBundle:Form:attributes.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle/Resources/views/Form/attributes.html.php");
+", "FrameworkBundle:Form:attributes.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle/Resources/views/Form/attributes.html.php");
     }
 }

@@ -41,10 +41,13 @@ return [
                     .'|Remove/([^/]++)(*:87)'
                 .')'
                 .'|/stockView/([^/]++)(*:114)'
-                .'|/User/([^/]++)(*:136)'
+                .'|/User/(?'
+                    .'|([^/]++)(*:139)'
+                    .'|Remove/([^/]++)(*:162)'
+                .')'
                 .'|/re(?'
-                    .'|gister/confirm/([^/]++)(*:173)'
-                    .'|setting/reset/([^/]++)(*:203)'
+                    .'|gister/confirm/([^/]++)(*:200)'
+                    .'|setting/reset/([^/]++)(*:230)'
                 .')'
             .')/?$}sDu',
     ],
@@ -53,9 +56,10 @@ return [
         65 => [[['_route' => 'PermissionUpdate', '_controller' => 'App\\Controller\\PermissionController::PermissionUpdate'], ['id'], null, null, false, true, null]],
         87 => [[['_route' => 'PermissionRemove', '_controller' => 'App\\Controller\\PermissionController::PermissionDelete'], ['id'], null, null, false, true, null]],
         114 => [[['_route' => 'stockView', '_controller' => 'App\\Controller\\StockController::stockView'], ['id'], null, null, false, true, null]],
-        136 => [[['_route' => 'UserView', '_controller' => 'App\\Controller\\UsersController::UserView'], ['id'], null, null, false, true, null]],
-        173 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
-        203 => [
+        139 => [[['_route' => 'UserView', '_controller' => 'App\\Controller\\UsersController::UserView'], ['id'], null, null, false, true, null]],
+        162 => [[['_route' => 'UserRemove', '_controller' => 'App\\Controller\\UsersController::PermissionDelete'], ['id'], null, null, false, true, null]],
+        200 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
+        230 => [
             [['_route' => 'fos_user_resetting_reset', '_controller' => 'fos_user.resetting.controller:resetAction'], ['token'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

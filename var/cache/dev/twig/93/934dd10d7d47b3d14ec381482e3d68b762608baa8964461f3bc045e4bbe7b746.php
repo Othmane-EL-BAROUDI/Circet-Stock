@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FrameworkBundle:Form:time_widget.html.php */
+/* @Framework/Form/time_widget.html.php */
 class __TwigTemplate_17ce7a6ffe5862bf87d968f4d10b09ad47716658ab34538a604022b986ee016d extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_17ce7a6ffe5862bf87d968f4d10b09ad47716658ab34538a604022b986e
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:time_widget.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/time_widget.html.php"));
 
         // line 1
         echo "<?php if (\$widget == 'single_text'): ?>
@@ -67,7 +67,7 @@ class __TwigTemplate_17ce7a6ffe5862bf87d968f4d10b09ad47716658ab34538a604022b986e
 
     public function getTemplateName()
     {
-        return "FrameworkBundle:Form:time_widget.html.php";
+        return "@Framework/Form/time_widget.html.php";
     }
 
     public function getDebugInfo()
@@ -99,6 +99,6 @@ class __TwigTemplate_17ce7a6ffe5862bf87d968f4d10b09ad47716658ab34538a604022b986e
         ?>
     </div>
 <?php endif ?>
-", "FrameworkBundle:Form:time_widget.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\time_widget.html.php");
+", "@Framework/Form/time_widget.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\time_widget.html.php");
     }
 }

@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FrameworkBundle:Form:form_widget.html.php */
+/* @Framework/Form/form_widget.html.php */
 class __TwigTemplate_abf3ec30d3b2c4fcae5f6b709ae631d1fcc1dc1825e729dea96369934851e1ef extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_abf3ec30d3b2c4fcae5f6b709ae631d1fcc1dc1825e729dea9636993485
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:form_widget.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/form_widget.html.php"));
 
         // line 1
         echo "<?php if (\$compound): ?>
@@ -50,7 +50,7 @@ class __TwigTemplate_abf3ec30d3b2c4fcae5f6b709ae631d1fcc1dc1825e729dea9636993485
 
     public function getTemplateName()
     {
-        return "FrameworkBundle:Form:form_widget.html.php";
+        return "@Framework/Form/form_widget.html.php";
     }
 
     public function getDebugInfo()
@@ -65,6 +65,6 @@ class __TwigTemplate_abf3ec30d3b2c4fcae5f6b709ae631d1fcc1dc1825e729dea9636993485
 <?php else: ?>
 <?php echo \$view['form']->block(\$form, 'form_widget_simple')?>
 <?php endif ?>
-", "FrameworkBundle:Form:form_widget.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_widget.html.php");
+", "@Framework/Form/form_widget.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_widget.html.php");
     }
 }

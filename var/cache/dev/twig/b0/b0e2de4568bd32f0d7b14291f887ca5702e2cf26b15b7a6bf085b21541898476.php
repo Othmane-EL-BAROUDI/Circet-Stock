@@ -57,6 +57,6 @@ class __TwigTemplate_a798d2bcbcc0fe984044a0e718bcb2909f6c38818fa5c2757f0cd600c46
     public function getSourceContext()
     {
         return new Source("<input type=\"<?php echo isset(\$type) ? \$view->escape(\$type) : 'text' ?>\" <?php echo \$view['form']->block(\$form, 'widget_attributes') ?><?php if (!empty(\$value) || is_numeric(\$value)): ?> value=\"<?php echo \$view->escape(\$value) ?>\"<?php endif ?> />
-", "FrameworkBundle:Form:form_widget_simple.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle/Resources/views/Form/form_widget_simple.html.php");
+", "FrameworkBundle:Form:form_widget_simple.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle/Resources/views/Form/form_widget_simple.html.php");
     }
 }

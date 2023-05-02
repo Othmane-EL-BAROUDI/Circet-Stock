@@ -20,6 +20,7 @@ return [
     'UserProfile' => [[], ['_controller' => 'App\\Controller\\UserProfileController::UserProfile'], [], [['text', '/UserProfile']], [], []],
     'Users' => [[], ['_controller' => 'App\\Controller\\UsersController::Users'], [], [['text', '/Users']], [], []],
     'UserView' => [['id'], ['_controller' => 'App\\Controller\\UsersController::UserView'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/User']], [], []],
+    'UserRemove' => [['id'], ['_controller' => 'App\\Controller\\UsersController::PermissionDelete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/User/Remove']], [], []],
     'fos_user_security_login' => [[], ['_controller' => 'fos_user.security.controller:loginAction'], [], [['text', '/login']], [], []],
     'fos_user_security_check' => [[], ['_controller' => 'fos_user.security.controller:checkAction'], [], [['text', '/login_check']], [], []],
     'fos_user_security_logout' => [[], ['_controller' => 'fos_user.security.controller:logoutAction'], [], [['text', '/logout']], [], []],

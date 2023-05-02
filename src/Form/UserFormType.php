@@ -3,8 +3,10 @@
 namespace App\Form;
 
 use App\Entity\User;
+use App\Entity\Permission;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
@@ -29,13 +31,22 @@ class UserFormType extends AbstractType
            // ->add('salt')
             ->add('password',TextType::class,[
                 'attr' =>array(
-                    'placeholder' => '@Password'
+                    'placeholder' => '@Password',
                 ),
             ])
+            ->add('user_permission', EntityType::class, [
+                'required' => true,
+                'class' => Permission::class,
+                'choice_label' => 'permission_name',
+                'multiple' => true,
+                'expanded' => false,
+                'attr' => ['class' => 'form-control']
+            ])
+
            // ->add('lastLogin')
           //  ->add('confirmationToken')
           //  ->add('passwordRequestedAt')
-            ->add('roles')
+          //  ->add('roles')
             ->add('matricule',TextType::class,[
                 'attr' =>array(
                     'placeholder' => '@Matricule'
@@ -52,6 +63,7 @@ class UserFormType extends AbstractType
                 ),
                 'required' => false,
             ])
+           
         ;
     }
 

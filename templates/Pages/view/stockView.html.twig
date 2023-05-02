@@ -22,10 +22,11 @@
                                           <a class="back" href="{{Path}}"><i class='bx bx-chevron-left bx-md'></i></a>      
                                           <div class="img-prod mt-4">
                                                 <img src="{{asset('images/laptop.png')}}" class="rounded float-start mt-3 mb-3 w-50" alt="">
+                                                <p  style="color:white; font-weight:bold" >{{machine.model.marque.getMarqueName()}} - {{machine.model.getModelName()}}</p>
                                           </div>
                                           <div class="desc mt-2 mb-3">
                                                 <p class="desc-title mb-1 mt-1 ml-2">Description</p>
-                                                <textarea class="form-control" style="height: 140px;" disabled  >{{machine.description}}</textarea>
+                                                <textarea class="form-control" style="height: 140px; resize: none " disabled  >{{machine.description}}</textarea>
                                           </div>
                                     </div>
 

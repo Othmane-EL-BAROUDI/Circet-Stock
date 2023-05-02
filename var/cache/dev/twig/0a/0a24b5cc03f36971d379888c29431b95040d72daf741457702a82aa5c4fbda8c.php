@@ -49,7 +49,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 12
         $this->displayBlock('body', $context, $blocks);
-        // line 118
+        // line 115
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -105,6 +105,53 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
         echo "     ";
         echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
         echo "
+     <div class=\"modal fade\" id=\"model\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+                                    <div class=\"modal-dialog\" role=\"document\">
+                                     <div class=\"modal-content\">
+                                     <div class=\"modal-header\" >
+                                          <h5 class=\"modal-title\" id=\"exampleModalLabel \">Les permissions de ";
+        // line 18
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 18, $this->source); })()), "username", [], "any", false, false, false, 18), "html", null, true);
+        echo "</h5>
+                                          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                                          <span aria-hidden=\"true\">&times;</span>
+                                          </button>
+                                          </div>
+                                          <div class=\"modal-body \"  >
+                                                <ul class=\"row d-flex justify-content-center\">
+                                                ";
+        // line 25
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 25, $this->source); })()), "getUserPermission", [], "method", false, false, false, 25));
+        foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+            // line 26
+            echo "                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 26), "html", null, true);
+            echo "</li>
+                                                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 28
+        echo "                                                                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdsfdsfsd</li>
+                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fsdfsd</li>
+                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
+                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
+                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
+                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
+                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
+                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
+
+
+                                                </ul>
+                                          </div>
+                                    <div class=\"modal-footer close_button\">
+                                          <button style=\"width: 120px;background: #f9a826; border:none; border-radius: 5px; color:white; padding: 2px 3px 2px 3px ;  cursor: pointer;\" type=\"button\"  data-dismiss=\"modal\">Close</button>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
       <div class=\"home_content\">
             <div class=\"text\">User View</div>
             <div class=\"container mt-2\">
@@ -113,29 +160,29 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
                         <div class=\"col-md-10 pt-5\" >
                               <div class=\"row z-depth-3\"  >
                                     <div class=\"col-sm-4 rounded-left\" style=\"background-color: #f9a826; \">
-                                          <div class=\"card-block text-center text-white mt-5\"  >
+                                          <div class=\"card-block text-center text-white mt-2\"  >
                                                    <a  class=\"back\" href=\"";
-        // line 23
-        echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 23, $this->source); })()), "html", null, true);
+        // line 55
+        echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 55, $this->source); })()), "html", null, true);
         echo "\"><i class='bx bx-chevron-left bx-lg'></i></a>
                                                   <i class=\"fas fa-user fa-7x \"></i>
                                           </div>
                                     </div>
 
-                                    <div class=\"col-sm-7 rounded-right\">
+                                    <div class=\"col-sm-7 rounded-right\"  style=\"border: solid 1px #f9a826; \">
                                           <div class=\"row mb-4 mt-4\">
                                                 <div class=\"col-sm-6\">
                                                       <p class=\"font-weight-bold\">Nom et prénom</p>
                                                       <h6 class=\"text-muted\">";
-        // line 32
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 32, $this->source); })()), "username", [], "any", false, false, false, 32), "html", null, true);
+        // line 64
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 64, $this->source); })()), "username", [], "any", false, false, false, 64), "html", null, true);
         echo "</h6>
                                                 </div>
                                                 <div class=\"col-sm-6\">
                                                       <p class=\"font-weight-bold\">Email</p>
                                                       <h6 class=\"text-muted\">";
-        // line 36
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 36, $this->source); })()), "email", [], "any", false, false, false, 36), "html", null, true);
+        // line 68
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 68, $this->source); })()), "email", [], "any", false, false, false, 68), "html", null, true);
         echo "</h6>
                                                 </div>
                                           </div>
@@ -144,93 +191,58 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
                                                 <div class=\"col-sm-6\">
                                                       <p class=\"font-weight-bold\">Matricule</p>
                                                       <h6 class=\"text-muted\">";
-        // line 43
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 43, $this->source); })()), "matricule", [], "any", false, false, false, 43), "html", null, true);
+        // line 75
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 75, $this->source); })()), "matricule", [], "any", false, false, false, 75), "html", null, true);
         echo "</h6>
                                                 </div>
                                                 ";
-        // line 45
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 45, $this->source); })()), "roles", [], "any", false, false, false, 45), 0, [], "array", false, false, false, 45) != "ROLE_ADMIN")) {
-            // line 46
+        // line 77
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 77, $this->source); })()), "roles", [], "any", false, false, false, 77), 0, [], "array", false, false, false, 77) != "ROLE_ADMIN")) {
+            // line 78
             echo "                                                <div class=\"col-sm-6\">
                                                       <p class=\"font-weight-bold\">manager</p>
                                                       <h6 class=\"text-muted\">
                                                                   ";
-            // line 49
-            if (twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 49, $this->source); })()), "manager", [], "any", false, false, false, 49)) {
-                // line 50
+            // line 81
+            if (twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 81, $this->source); })()), "manager", [], "any", false, false, false, 81)) {
+                // line 82
                 echo "                                                                              ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 50, $this->source); })()), "manager", [], "any", false, false, false, 50), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 82, $this->source); })()), "manager", [], "any", false, false, false, 82), "html", null, true);
                 echo "
                                                                   ";
             } else {
-                // line 51
+                // line 83
                 echo " no manager
                                                                   ";
             }
-            // line 53
+            // line 85
             echo "                                                      </h6>
                                                 </div>
                                                 ";
         }
-        // line 56
+        // line 88
         echo "                                          </div>
 
                                           <div class=\"row mb-4\">
                                                 <div class=\"col-sm-6\">
                                                       <p class=\"font-weight-bold\">Job</p>
                                                       <h6 class=\"text-muted\">";
-        // line 61
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 61, $this->source); })()), "job", [], "any", false, false, false, 61), "html", null, true);
+        // line 93
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 93, $this->source); })()), "job", [], "any", false, false, false, 93), "html", null, true);
         echo "</h6>
                                                 </div>
                                                 <div class=\"col-sm-6\">
                                                       <p class=\"font-weight-bold\">Role</p>
                                                       <h6 class=\"text-muted\">";
-        // line 65
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 65, $this->source); })()), "roles", [], "any", false, false, false, 65), 0, [], "array", false, false, false, 65), "html", null, true);
+        // line 97
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 97, $this->source); })()), "roles", [], "any", false, false, false, 97), 0, [], "array", false, false, false, 97), "html", null, true);
         echo "</h6>
                                                 </div>
                                           </div>
 
                                           <div class=\"text-center mb-4 d-flex\" style=\"justify-content: center;\">
                                                 <div class=\"row\">
-                                                      <table class=\"table table-bordered text-center mr-4 ml-4\" style=\"width: 500px;\">
-                                                            <thead>
-                                                                  <tr>
-                                                                        <th>Permission</th>
-                                                                  </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                  <tr>
-                                                                        <td>Add user</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td>Add user</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td>Add user</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td>delete user</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td>Modifier user</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td>Modifier user</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td>Modifier user</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td>Modifier user</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td>Modifier user</td>
-                                                                  </tr>
-                                                            </tbody>
-                                                      </table>
+                                                     <button type=\"button\"   data-toggle=\"modal\" class=\"start\"  id=\"start\" data-target=\"#model\">voir permissions</button>
                                                 </div>
                                           </div>
                                     </div>
@@ -247,17 +259,20 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 
     }
 
-    // line 118
+    // line 115
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 119
+        // line 116
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
+             <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
+            <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
+            <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
    ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -271,7 +286,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 
     public function getDebugInfo()
     {
-        return array (  258 => 119,  251 => 118,  191 => 65,  184 => 61,  177 => 56,  172 => 53,  168 => 51,  162 => 50,  160 => 49,  155 => 46,  153 => 45,  148 => 43,  138 => 36,  131 => 32,  119 => 23,  105 => 13,  98 => 12,  81 => 3,  74 => 2,  61 => 1,  53 => 118,  51 => 12,  49 => 2,  44 => 1,);
+        return array (  270 => 116,  263 => 115,  238 => 97,  231 => 93,  224 => 88,  219 => 85,  215 => 83,  209 => 82,  207 => 81,  202 => 78,  200 => 77,  195 => 75,  185 => 68,  178 => 64,  166 => 55,  137 => 28,  128 => 26,  124 => 25,  114 => 18,  105 => 13,  98 => 12,  81 => 3,  74 => 2,  61 => 1,  53 => 115,  51 => 12,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -289,6 +304,38 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 {% endblock %}
 {% block body %}
      {{ include('Pages/sidebar.html.twig') }}
+     <div class=\"modal fade\" id=\"model\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+                                    <div class=\"modal-dialog\" role=\"document\">
+                                     <div class=\"modal-content\">
+                                     <div class=\"modal-header\" >
+                                          <h5 class=\"modal-title\" id=\"exampleModalLabel \">Les permissions de {{user.username}}</h5>
+                                          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                                          <span aria-hidden=\"true\">&times;</span>
+                                          </button>
+                                          </div>
+                                          <div class=\"modal-body \"  >
+                                                <ul class=\"row d-flex justify-content-center\">
+                                                {% for permission in user.getUserPermission() %}
+                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">{{permission.getPermissionName()}}</li>
+                                                {% endfor %}
+                                                                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdsfdsfsd</li>
+                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fsdfsd</li>
+                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
+                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
+                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
+                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
+                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
+                                                      <li  class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">fdssd</li>
+
+
+                                                </ul>
+                                          </div>
+                                    <div class=\"modal-footer close_button\">
+                                          <button style=\"width: 120px;background: #f9a826; border:none; border-radius: 5px; color:white; padding: 2px 3px 2px 3px ;  cursor: pointer;\" type=\"button\"  data-dismiss=\"modal\">Close</button>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
       <div class=\"home_content\">
             <div class=\"text\">User View</div>
             <div class=\"container mt-2\">
@@ -297,13 +344,13 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
                         <div class=\"col-md-10 pt-5\" >
                               <div class=\"row z-depth-3\"  >
                                     <div class=\"col-sm-4 rounded-left\" style=\"background-color: #f9a826; \">
-                                          <div class=\"card-block text-center text-white mt-5\"  >
+                                          <div class=\"card-block text-center text-white mt-2\"  >
                                                    <a  class=\"back\" href=\"{{Path}}\"><i class='bx bx-chevron-left bx-lg'></i></a>
                                                   <i class=\"fas fa-user fa-7x \"></i>
                                           </div>
                                     </div>
 
-                                    <div class=\"col-sm-7 rounded-right\">
+                                    <div class=\"col-sm-7 rounded-right\"  style=\"border: solid 1px #f9a826; \">
                                           <div class=\"row mb-4 mt-4\">
                                                 <div class=\"col-sm-6\">
                                                       <p class=\"font-weight-bold\">Nom et prénom</p>
@@ -346,42 +393,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 
                                           <div class=\"text-center mb-4 d-flex\" style=\"justify-content: center;\">
                                                 <div class=\"row\">
-                                                      <table class=\"table table-bordered text-center mr-4 ml-4\" style=\"width: 500px;\">
-                                                            <thead>
-                                                                  <tr>
-                                                                        <th>Permission</th>
-                                                                  </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                  <tr>
-                                                                        <td>Add user</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td>Add user</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td>Add user</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td>delete user</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td>Modifier user</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td>Modifier user</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td>Modifier user</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td>Modifier user</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td>Modifier user</td>
-                                                                  </tr>
-                                                            </tbody>
-                                                      </table>
+                                                     <button type=\"button\"   data-toggle=\"modal\" class=\"start\"  id=\"start\" data-target=\"#model\">voir permissions</button>
                                                 </div>
                                           </div>
                                     </div>
@@ -395,6 +407,9 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 {% endblock %}
   {% block javascripts %}
             <script src=\"{{asset('JS/sidebar.js')}}\"></script>
+             <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
+            <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
+            <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
    {% endblock %}", "Pages/view/userView.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\view\\userView.html.twig");
     }
 }

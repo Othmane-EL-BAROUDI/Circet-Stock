@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FOSUserBundle:Security:login.html.twig */
+/* @FOSUser/Security/login.html.twig */
 class __TwigTemplate_ddc1ff4228b5bc6874345aaf6a7f10a8ff30471f59e611999ebf165214b8e4e0 extends \Twig\Template
 {
     private $source;
@@ -40,9 +40,9 @@ class __TwigTemplate_ddc1ff4228b5bc6874345aaf6a7f10a8ff30471f59e611999ebf165214b
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FOSUserBundle:Security:login.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@FOSUser/Security/login.html.twig"));
 
-        $this->parent = $this->loadTemplate("@FOSUser/layout.html.twig", "FOSUserBundle:Security:login.html.twig", 1);
+        $this->parent = $this->loadTemplate("@FOSUser/layout.html.twig", "@FOSUser/Security/login.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -85,7 +85,7 @@ class __TwigTemplate_ddc1ff4228b5bc6874345aaf6a7f10a8ff30471f59e611999ebf165214b
 
     public function getTemplateName()
     {
-        return "FOSUserBundle:Security:login.html.twig";
+        return "@FOSUser/Security/login.html.twig";
     }
 
     public function isTraitable()
@@ -106,6 +106,6 @@ class __TwigTemplate_ddc1ff4228b5bc6874345aaf6a7f10a8ff30471f59e611999ebf165214b
  <title>{% block title %}Circet-Login{% endblock %}</title>
     {{ include('@FOSUser/Security/login_content.html.twig') }}
 {% endblock fos_user_content %}
-", "FOSUserBundle:Security:login.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Security\\login.html.twig");
+", "@FOSUser/Security/login.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Security\\login.html.twig");
     }
 }

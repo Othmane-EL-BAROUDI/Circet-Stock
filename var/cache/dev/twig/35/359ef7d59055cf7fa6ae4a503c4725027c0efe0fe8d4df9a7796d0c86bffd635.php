@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FOSUserBundle:Profile:edit_content.html.twig */
+/* @FOSUser/Profile/edit_content.html.twig */
 class __TwigTemplate_474419fda99da5e4d83f49c490924b87e864e7028be9d26df2e81e51961274ae extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_474419fda99da5e4d83f49c490924b87e864e7028be9d26df2e81e51961
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:edit_content.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@FOSUser/Profile/edit_content.html.twig"));
 
         // line 2
         echo "
@@ -64,7 +64,7 @@ class __TwigTemplate_474419fda99da5e4d83f49c490924b87e864e7028be9d26df2e81e51961
 
     public function getTemplateName()
     {
-        return "FOSUserBundle:Profile:edit_content.html.twig";
+        return "@FOSUser/Profile/edit_content.html.twig";
     }
 
     public function isTraitable()
@@ -87,6 +87,6 @@ class __TwigTemplate_474419fda99da5e4d83f49c490924b87e864e7028be9d26df2e81e51961
         <input type=\"submit\" value=\"{{ 'profile.edit.submit'|trans }}\" />
     </div>
 {{ form_end(form) }}
-", "FOSUserBundle:Profile:edit_content.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Profile\\edit_content.html.twig");
+", "@FOSUser/Profile/edit_content.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Profile\\edit_content.html.twig");
     }
 }

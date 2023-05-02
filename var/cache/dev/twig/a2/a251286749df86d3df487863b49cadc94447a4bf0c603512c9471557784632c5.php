@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FOSUserBundle:Security:login_content.html.twig */
+/* @FOSUser/Security/login_content.html.twig */
 class __TwigTemplate_e7dd8daf7129807c7efdce5516a7863f33d91e564fe959ff0d79694bd868e72b extends \Twig\Template
 {
     private $source;
@@ -35,7 +35,7 @@ class __TwigTemplate_e7dd8daf7129807c7efdce5516a7863f33d91e564fe959ff0d79694bd86
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FOSUserBundle:Security:login_content.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@FOSUser/Security/login_content.html.twig"));
 
         // line 2
         echo " ";
@@ -156,7 +156,7 @@ class __TwigTemplate_e7dd8daf7129807c7efdce5516a7863f33d91e564fe959ff0d79694bd86
 
     public function getTemplateName()
     {
-        return "FOSUserBundle:Security:login_content.html.twig";
+        return "@FOSUser/Security/login_content.html.twig";
     }
 
     public function isTraitable()
@@ -223,6 +223,6 @@ class __TwigTemplate_e7dd8daf7129807c7efdce5516a7863f33d91e564fe959ff0d79694bd86
   </div>
 </div>
 </form>
-", "FOSUserBundle:Security:login_content.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Security\\login_content.html.twig");
+", "@FOSUser/Security/login_content.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Security\\login_content.html.twig");
     }
 }

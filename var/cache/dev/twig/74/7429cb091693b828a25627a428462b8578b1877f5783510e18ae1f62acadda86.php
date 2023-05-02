@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FrameworkBundle:Form:form_errors.html.php */
+/* @Framework/Form/form_errors.html.php */
 class __TwigTemplate_76beb3de17acafc93dec78f2fd4035824314f453620246539def96acb9571677 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_76beb3de17acafc93dec78f2fd4035824314f453620246539def96acb95
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:form_errors.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/form_errors.html.php"));
 
         // line 1
         echo "<?php if (count(\$errors) > 0): ?>
@@ -52,7 +52,7 @@ class __TwigTemplate_76beb3de17acafc93dec78f2fd4035824314f453620246539def96acb95
 
     public function getTemplateName()
     {
-        return "FrameworkBundle:Form:form_errors.html.php";
+        return "@Framework/Form/form_errors.html.php";
     }
 
     public function getDebugInfo()
@@ -69,6 +69,6 @@ class __TwigTemplate_76beb3de17acafc93dec78f2fd4035824314f453620246539def96acb95
         <?php endforeach; ?>
     </ul>
 <?php endif ?>
-", "FrameworkBundle:Form:form_errors.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_errors.html.php");
+", "@Framework/Form/form_errors.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_errors.html.php");
     }
 }

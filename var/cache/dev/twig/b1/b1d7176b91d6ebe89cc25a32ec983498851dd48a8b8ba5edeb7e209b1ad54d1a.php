@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FrameworkBundle:Form:money_widget.html.php */
+/* @Framework/Form/money_widget.html.php */
 class __TwigTemplate_0bf24adac26a7665d8e2441dbe01fce188fbc641ea44a3bbc6fce0babfb97cda extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_0bf24adac26a7665d8e2441dbe01fce188fbc641ea44a3bbc6fce0babfb
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:money_widget.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/money_widget.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->formEncodeCurrency(\$money_pattern, \$view['form']->block(\$form, 'form_widget_simple')) ?>
@@ -46,7 +46,7 @@ class __TwigTemplate_0bf24adac26a7665d8e2441dbe01fce188fbc641ea44a3bbc6fce0babfb
 
     public function getTemplateName()
     {
-        return "FrameworkBundle:Form:money_widget.html.php";
+        return "@Framework/Form/money_widget.html.php";
     }
 
     public function getDebugInfo()
@@ -57,6 +57,6 @@ class __TwigTemplate_0bf24adac26a7665d8e2441dbe01fce188fbc641ea44a3bbc6fce0babfb
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->formEncodeCurrency(\$money_pattern, \$view['form']->block(\$form, 'form_widget_simple')) ?>
-", "FrameworkBundle:Form:money_widget.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\money_widget.html.php");
+", "@Framework/Form/money_widget.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\money_widget.html.php");
     }
 }

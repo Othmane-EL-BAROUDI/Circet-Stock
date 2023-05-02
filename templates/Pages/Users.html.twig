@@ -20,11 +20,11 @@
                                     {{ form_widget(form) }}
                                     </div>
                                      <div class="modal-body">
-                                          <label for="name">user permission :</label>
-                                          <select name="role" id="">
-                                                 <option selected disabled>permission</option>
-                                                 {% for permission in allpermissions %}
-                                                        <option>{{permission.getPermissionName()}}</option>
+                                          <label for="name">Role :</label>
+                                          <select class="roleSelect" name="role" id=""  required>
+                                                 <option selected disabled>Role</option>
+                                                 {% for role in allroles %}
+                                                        <option>{{role.getRoleName()}}</option>
                                                  {% endfor %}
                                           </select>
                                     </div>
@@ -44,6 +44,14 @@
                               <span aria-hidden="true">&times;</span>
                               </button>
                      </div>
+             {% endfor %}
+              {% for flash_message in app.session.flashbag.get('delete') %}
+                   <div class="alert  alert-danger fade show" role="alert">
+                               {{flash_message}}
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                  </div>
              {% endfor %}
             <div class="text">Users</div>
              {% for flash_message in app.session.flashbag.get('success') %}
@@ -102,13 +110,13 @@
                <i class='bx bx-show-alt bx-xs'></i> view
             </button>
         </a>
-        <a href=""> 
+        <a href="#"> 
             <button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 "  style=" border: #007bff solid 1px; ">
             <i class='bx bx-edit bx-xs'></i>
             Edit
             </button>
         </a>
-        <a href="#"> 
+        <a href="User/Remove/{{user.id}}"> 
             <button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;" >
             <i class='bx bx-trash bx-xs'></i>
             Delete

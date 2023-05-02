@@ -10,19 +10,19 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class UsersController extends AbstractController
 {
      /**
      * @Route("Users" , name="Users")
      */
-    public function Users(Request $request , EntityManagerInterface $entityManager): Response
+    public function Users(Request $request , EntityManagerInterface $entityManager,UserPasswordEncoderInterface $encoder): Response
     {
        
         $entityManager = $this->getDoctrine()->getManager();
         $users = $entityManager->getRepository(User::class)->findAll();
         $roles = $entityManager->getRepository(Role::class)->findAll();
-        $permissions = $entityManager->getRepository(Permission::class)->findAll();
         $user = $this->getUser();
 
         $Nuser = new User();
@@ -31,12 +31,14 @@ class UsersController extends AbstractController
         
         if(  $form->isSubmitted()  && $form->isValid()){
             $newUser = $form->getData();
+            $encoded = $encoder->encodePassword($newUser, $newUser->getPassword);
+            $newUser->setPassword($encoded);
             $entityManager->persist($newUser);
             $newUser->setEnabled(true);
             $entityManager->flush();
             $this->addFlash(
                'success',
-               sprintf(' new "%s" added successfully.', $newUser->getJob())
+               sprintf(' new "%s" added successfully.', $newUser->getUsername())
             );
             return $this->redirectToRoute('Users');
         }
@@ -45,7 +47,6 @@ class UsersController extends AbstractController
             'userInfo' => $user,
             'allusers' => $users,
             'allroles' => $roles,
-            'allpermissions' => $permissions,
         ]);
     }
 
@@ -62,5 +63,23 @@ class UsersController extends AbstractController
             'user' => $user,
             'Path' => '/Users'
         ]);
+    }
+
+    
+      /**
+     * @Route("User/Remove/{id}" , name="UserRemove")
+     */
+    public function PermissionDelete(EntityManagerInterface $entityManager, $id): Response
+    {   
+        $entityManager = $this->getDoctrine()->getManager();
+        $user = $entityManager->getRepository(User::class)->find($id);
+        $entityManager->remove($user);
+        $entityManager->flush();
+        $this->addFlash(
+            'delete',
+            sprintf('"%s" deleted successfully.', $user->getUsername())
+         );
+        return $this->redirectToRoute('Users');
+
     }
 }

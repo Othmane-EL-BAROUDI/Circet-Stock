@@ -3,8 +3,10 @@
 
 namespace App\Entity;
 
-use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Model\User as BaseUser;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
@@ -30,10 +32,15 @@ class User extends BaseUser
      * @ORM\Column(type="string", length=255)
      */
     protected $manager;
+     /**
+     * @ORM\ManyToMany(targetEntity=Permission::class, inversedBy="user")
+     */
+    private $user_permission;
 
     public function __construct()
     {
         parent::__construct();
+        $this->user_permission = new ArrayCollection();
         // your own logic
     }
     public function getMatricule(): ?string
@@ -64,6 +71,26 @@ class User extends BaseUser
     public function setJob(string $job): self
     {
         $this->job = $job;
+
+        return $this;
+    }
+    public function getUserPermission(): Collection
+    {
+        return $this->user_permission;
+    }
+
+    public function addUserPermission(user $userPermission): self
+    {
+        if (!$this->user_permission->contains($userPermission)) {
+            $this->user_permission[] = $userPermission;
+        }
+
+        return $this;
+    }
+
+    public function removeUserPermission(user $userPermission): self
+    {
+        $this->user_permission->removeElement($userPermission);
 
         return $this;
     }

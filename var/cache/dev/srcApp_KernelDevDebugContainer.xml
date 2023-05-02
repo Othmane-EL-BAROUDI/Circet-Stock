@@ -5164,7 +5164,14 @@
         <argument key="entityManager" type="service" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.llTVoVD" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.Hm8CUXV" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="encoder" type="service" id="security.user_password_encoder.generic"/>
+        <argument key="entityManager" type="service" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.bkq9aEk" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\DashboardController::Dashboard" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5174,8 +5181,9 @@
         <argument key="App\Controller\PermissionController::PermissionUpdate" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\RoleController::Role" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController::Stock" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\UsersController::PermissionDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController::UserView" type="service" id=".service_locator.ZIsCxOI"/>
-        <argument key="App\Controller\UsersController::Users" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\UsersController::Users" type="service" id=".service_locator.Hm8CUXV"/>
         <argument key="App\Controller\DashboardController:Dashboard" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\HomePageController:HomePage" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\PermissionController:Permission" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5183,8 +5191,9 @@
         <argument key="App\Controller\PermissionController:PermissionUpdate" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\RoleController:Role" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController:Stock" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\UsersController:PermissionDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController:UserView" type="service" id=".service_locator.ZIsCxOI"/>
-        <argument key="App\Controller\UsersController:Users" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\UsersController:Users" type="service" id=".service_locator.Hm8CUXV"/>
       </argument>
     </service>
     <service id=".service_locator.LtnrEkg" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5515,12 +5524,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.llTVoVD"/>
+      <argument type="service" id=".service_locator.bkq9aEk"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.llTVoVD"/>
+      <argument type="service" id=".service_locator.bkq9aEk"/>
     </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.aPyppP2"/>
@@ -5840,7 +5849,7 @@
     <service id="mailer" alias="swiftmailer.mailer.default" public="true"/>
     <service id="sensio_framework_extra.converter.doctrine.orm.expression_language" alias="sensio_framework_extra.converter.doctrine.orm.expression_language.default" public="false"/>
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.llTVoVD"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.bkq9aEk"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>

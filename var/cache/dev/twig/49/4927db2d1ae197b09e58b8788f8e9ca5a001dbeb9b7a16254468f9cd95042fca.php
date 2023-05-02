@@ -73,6 +73,6 @@ class __TwigTemplate_baf9caf71deffcd1bc08524dab6d1f05627925a7dd2c58734284cfc086b
         return new Source("<?xml version=\"1.0\" encoding=\"{{ _charset }}\" ?>
 
 <error code=\"{{ status_code }}\" message=\"{{ status_text }}\" />
-", "TwigBundle:Exception:error.xml.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\twig-bundle/Resources/views/Exception/error.xml.twig");
+", "TwigBundle:Exception:error.xml.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\twig-bundle/Resources/views/Exception/error.xml.twig");
     }
 }

@@ -57,6 +57,6 @@ class __TwigTemplate_0112826a7a69cfe22abaaaafd5d481a78166f55deca8bb1036e760588fd
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'form_rows') ?>
-", "FrameworkBundle:Form:repeated_row.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle/Resources/views/Form/repeated_row.html.php");
+", "FrameworkBundle:Form:repeated_row.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle/Resources/views/Form/repeated_row.html.php");
     }
 }

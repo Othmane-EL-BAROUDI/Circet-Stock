@@ -61,6 +61,6 @@ class __TwigTemplate_c9ac37f272e9072d7933b3b33ddd4abca49573b9c83f882d7e1348dee47
         return new Source("<?php echo \$view['form']->start(\$form) ?>
     <?php echo \$view['form']->widget(\$form) ?>
 <?php echo \$view['form']->end(\$form) ?>
-", "FrameworkBundle:Form:form.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle/Resources/views/Form/form.html.php");
+", "FrameworkBundle:Form:form.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle/Resources/views/Form/form.html.php");
     }
 }

@@ -25,15 +25,11 @@ class Permission
      */
     private $permission_name;
 
-    /**
-     * @ORM\ManyToMany(targetEntity=user::class, inversedBy="permissions")
-     * @Assert\NotBlank
-     */
-    private $user_permission;
+   
 
     public function __construct()
     {
-        $this->user_permission = new ArrayCollection();
+       
     }
 
     public function getId(): ?int
@@ -56,24 +52,5 @@ class Permission
     /**
      * @return Collection|user[]
      */
-    public function getUserPermission(): Collection
-    {
-        return $this->user_permission;
-    }
-
-    public function addUserPermission(user $userPermission): self
-    {
-        if (!$this->user_permission->contains($userPermission)) {
-            $this->user_permission[] = $userPermission;
-        }
-
-        return $this;
-    }
-
-    public function removeUserPermission(user $userPermission): self
-    {
-        $this->user_permission->removeElement($userPermission);
-
-        return $this;
-    }
+  
 }

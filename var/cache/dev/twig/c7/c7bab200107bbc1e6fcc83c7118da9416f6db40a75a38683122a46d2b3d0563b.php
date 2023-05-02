@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* TwigBundle:Exception:error.html.twig */
+/* @Twig/Exception/error.html.twig */
 class __TwigTemplate_671f7f4227a2fa785cd643fbf322a96c3d8f4b122a4ba6a7506d5fc4904f2f8c extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_671f7f4227a2fa785cd643fbf322a96c3d8f4b122a4ba6a7506d5fc4904
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Twig/Exception/error.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -80,7 +80,7 @@ class __TwigTemplate_671f7f4227a2fa785cd643fbf322a96c3d8f4b122a4ba6a7506d5fc4904
 
     public function getTemplateName()
     {
-        return "TwigBundle:Exception:error.html.twig";
+        return "@Twig/Exception/error.html.twig";
     }
 
     public function isTraitable()
@@ -119,6 +119,6 @@ class __TwigTemplate_671f7f4227a2fa785cd643fbf322a96c3d8f4b122a4ba6a7506d5fc4904
         </div>
     </body>
 </html>
-", "TwigBundle:Exception:error.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\error.html.twig");
+", "@Twig/Exception/error.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\error.html.twig");
     }
 }

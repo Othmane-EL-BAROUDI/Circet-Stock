@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FrameworkBundle:FormTable:form_widget_compound.html.php */
+/* @Framework/FormTable/form_widget_compound.html.php */
 class __TwigTemplate_0442dbaf11ccbcad1b176427f5e238379ac049437a2e36bb8681b7d7c1b6345a extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_0442dbaf11ccbcad1b176427f5e238379ac049437a2e36bb8681b7d7c1b
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:FormTable:form_widget_compound.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/FormTable/form_widget_compound.html.php"));
 
         // line 1
         echo "<table <?php echo \$view['form']->block(\$form, 'widget_container_attributes'); ?>>
@@ -56,7 +56,7 @@ class __TwigTemplate_0442dbaf11ccbcad1b176427f5e238379ac049437a2e36bb8681b7d7c1b
 
     public function getTemplateName()
     {
-        return "FrameworkBundle:FormTable:form_widget_compound.html.php";
+        return "@Framework/FormTable/form_widget_compound.html.php";
     }
 
     public function getDebugInfo()
@@ -77,6 +77,6 @@ class __TwigTemplate_0442dbaf11ccbcad1b176427f5e238379ac049437a2e36bb8681b7d7c1b
     <?php echo \$view['form']->block(\$form, 'form_rows'); ?>
     <?php echo \$view['form']->rest(\$form); ?>
 </table>
-", "FrameworkBundle:FormTable:form_widget_compound.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\FormTable\\form_widget_compound.html.php");
+", "@Framework/FormTable/form_widget_compound.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\FormTable\\form_widget_compound.html.php");
     }
 }

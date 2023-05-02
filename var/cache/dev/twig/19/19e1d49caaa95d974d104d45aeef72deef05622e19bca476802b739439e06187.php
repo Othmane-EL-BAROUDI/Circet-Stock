@@ -120,6 +120,6 @@ class __TwigTemplate_375aababf290edf39aced2d6504136c5e1d5b87eec6a46bc153b8eb0429
 {% endautoescape %}
 {% endblock %}
 {% block body_html %}{% endblock %}
-", "FOSUserBundle:Resetting:email.txt.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\friendsofsymfony\\user-bundle/Resources/views/Resetting/email.txt.twig");
+", "FOSUserBundle:Resetting:email.txt.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle/Resources/views/Resetting/email.txt.twig");
     }
 }

@@ -65,6 +65,6 @@ class __TwigTemplate_1318eea93c6f69f55601dae1da0bac9b59a279fefd34d2a42da2cb62b4d
     <?php if (strlen(\$value) > 0): ?> value=\"<?php echo \$view->escape(\$value) ?>\"<?php endif ?>
     <?php if (\$checked): ?> checked=\"checked\"<?php endif ?>
 />
-", "FrameworkBundle:Form:checkbox_widget.html.php", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\symfony\\framework-bundle/Resources/views/Form/checkbox_widget.html.php");
+", "FrameworkBundle:Form:checkbox_widget.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle/Resources/views/Form/checkbox_widget.html.php");
     }
 }

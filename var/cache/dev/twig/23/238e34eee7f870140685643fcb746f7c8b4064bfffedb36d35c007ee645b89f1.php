@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FrameworkBundle:Form:form_help.html.php */
+/* @Framework/Form/form_help.html.php */
 class __TwigTemplate_38d4e67a93e34b7abf9d296df7810314960e89175a4bd8dec7e816fa5d8b22a0 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_38d4e67a93e34b7abf9d296df7810314960e89175a4bd8dec7e816fa5d8
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:form_help.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/form_help.html.php"));
 
         // line 1
         echo "<?php if (!empty(\$help)): ?>
@@ -51,7 +51,7 @@ class __TwigTemplate_38d4e67a93e34b7abf9d296df7810314960e89175a4bd8dec7e816fa5d8
 
     public function getTemplateName()
     {
-        return "FrameworkBundle:Form:form_help.html.php";
+        return "@Framework/Form/form_help.html.php";
     }
 
     public function getDebugInfo()
@@ -67,6 +67,6 @@ class __TwigTemplate_38d4e67a93e34b7abf9d296df7810314960e89175a4bd8dec7e816fa5d8
     <?php \$help = false === \$help_html ? \$view->escape(\$help) : \$help ?>
     <p id=\"<?php echo \$view->escape(\$id); ?>_help\" <?php echo ' '.\$view['form']->block(\$form, 'attributes', ['attr' => \$help_attr]); ?>><?php echo \$help; ?></p>
 <?php endif; ?>
-", "FrameworkBundle:Form:form_help.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_help.html.php");
+", "@Framework/Form/form_help.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_help.html.php");
     }
 }

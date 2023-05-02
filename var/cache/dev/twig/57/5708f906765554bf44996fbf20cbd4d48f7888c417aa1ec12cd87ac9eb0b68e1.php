@@ -94,6 +94,6 @@ class __TwigTemplate_55862e29b7404a1461214e5eeb94665b67e9c1866ce356db59da59dc849
 {{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}
 </p>
 {% endblock %}
-", "FOSUserBundle:Resetting:check_email.html.twig", "C:\\xampp\\htdocs\\doc\\Project\\Final version\\vendor\\friendsofsymfony\\user-bundle/Resources/views/Resetting/check_email.html.twig");
+", "FOSUserBundle:Resetting:check_email.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle/Resources/views/Resetting/check_email.html.twig");
     }
 }

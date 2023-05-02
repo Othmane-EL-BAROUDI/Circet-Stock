@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FrameworkBundle:Form:checkbox_widget.html.php */
+/* @Framework/Form/checkbox_widget.html.php */
 class __TwigTemplate_781dc9ea6b3dbbb095c2d65a27172f0f3874f586087064f6350f8a88d2ea0f51 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_781dc9ea6b3dbbb095c2d65a27172f0f3874f586087064f6350f8a88d2e
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:checkbox_widget.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/checkbox_widget.html.php"));
 
         // line 1
         echo "<input type=\"checkbox\"
@@ -50,7 +50,7 @@ class __TwigTemplate_781dc9ea6b3dbbb095c2d65a27172f0f3874f586087064f6350f8a88d2e
 
     public function getTemplateName()
     {
-        return "FrameworkBundle:Form:checkbox_widget.html.php";
+        return "@Framework/Form/checkbox_widget.html.php";
     }
 
     public function getDebugInfo()
@@ -65,6 +65,6 @@ class __TwigTemplate_781dc9ea6b3dbbb095c2d65a27172f0f3874f586087064f6350f8a88d2e
     <?php if (strlen(\$value) > 0): ?> value=\"<?php echo \$view->escape(\$value) ?>\"<?php endif ?>
     <?php if (\$checked): ?> checked=\"checked\"<?php endif ?>
 />
-", "FrameworkBundle:Form:checkbox_widget.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\checkbox_widget.html.php");
+", "@Framework/Form/checkbox_widget.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\checkbox_widget.html.php");
     }
 }

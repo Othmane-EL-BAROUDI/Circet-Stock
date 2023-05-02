@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FrameworkBundle:Form:form.html.php */
+/* @Framework/Form/form.html.php */
 class __TwigTemplate_f07284b908795a12a6bc3eaf4bde4aa20985a82b03d1efa0c9169d5d8c6fd836 extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_f07284b908795a12a6bc3eaf4bde4aa20985a82b03d1efa0c9169d5d8c6
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FrameworkBundle:Form:form.html.php"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Framework/Form/form.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->start(\$form) ?>
@@ -48,7 +48,7 @@ class __TwigTemplate_f07284b908795a12a6bc3eaf4bde4aa20985a82b03d1efa0c9169d5d8c6
 
     public function getTemplateName()
     {
-        return "FrameworkBundle:Form:form.html.php";
+        return "@Framework/Form/form.html.php";
     }
 
     public function getDebugInfo()
@@ -61,6 +61,6 @@ class __TwigTemplate_f07284b908795a12a6bc3eaf4bde4aa20985a82b03d1efa0c9169d5d8c6
         return new Source("<?php echo \$view['form']->start(\$form) ?>
     <?php echo \$view['form']->widget(\$form) ?>
 <?php echo \$view['form']->end(\$form) ?>
-", "FrameworkBundle:Form:form.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form.html.php");
+", "@Framework/Form/form.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form.html.php");
     }
 }

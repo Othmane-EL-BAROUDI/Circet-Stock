@@ -54,7 +54,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 ";
         // line 7
         $this->displayBlock('body', $context, $blocks);
-        // line 127
+        // line 135
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -122,22 +122,22 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
         echo "
                                     </div>
                                      <div class=\"modal-body\">
-                                          <label for=\"name\">user permission :</label>
-                                          <select name=\"role\" id=\"\">
-                                                 <option selected disabled>permission</option>
+                                          <label for=\"name\">Role :</label>
+                                          <select class=\"roleSelect\" name=\"role\" id=\"\"  required>
+                                                 <option selected disabled>Role</option>
                                                  ";
         // line 26
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["allpermissions"]) || array_key_exists("allpermissions", $context) ? $context["allpermissions"] : (function () { throw new RuntimeError('Variable "allpermissions" does not exist.', 26, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+        $context['_seq'] = twig_ensure_traversable((isset($context["allroles"]) || array_key_exists("allroles", $context) ? $context["allroles"] : (function () { throw new RuntimeError('Variable "allroles" does not exist.', 26, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
             // line 27
             echo "                                                        <option>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 27), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "getRoleName", [], "method", false, false, false, 27), "html", null, true);
             echo "</option>
                                                  ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 29
         echo "                                          </select>
@@ -175,13 +175,33 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 48
+        echo "              ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 48, $this->source); })()), "session", [], "any", false, false, false, 48), "flashbag", [], "any", false, false, false, 48), "get", [0 => "delete"], "method", false, false, false, 48));
+        foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
+            // line 49
+            echo "                   <div class=\"alert  alert-danger fade show\" role=\"alert\">
+                               ";
+            // line 50
+            echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
+            echo "
+                              <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                              <span aria-hidden=\"true\">&times;</span>
+                              </button>
+                  </div>
+             ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 56
         echo "            <div class=\"text\">Users</div>
              ";
-        // line 49
+        // line 57
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 49, $this->source); })()), "session", [], "any", false, false, false, 49), "flashbag", [], "any", false, false, false, 49), "get", [0 => "success"], "method", false, false, false, 49));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 57, $this->source); })()), "session", [], "any", false, false, false, 57), "flashbag", [], "any", false, false, false, 57), "get", [0 => "success"], "method", false, false, false, 57));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 50
+            // line 58
             echo "              <label class=\"alerto\" style=\"background-color: lightgreen\" >";
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "</label>
@@ -190,7 +210,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 52
+        // line 60
         echo "            <button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addUser\">Add new user</button>
             <div class=\"main_content\">
                  <div class=\"sort\">
@@ -215,72 +235,75 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
   </thead>
   <tbody>
      ";
-        // line 75
+        // line 83
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["allusers"]) || array_key_exists("allusers", $context) ? $context["allusers"] : (function () { throw new RuntimeError('Variable "allusers" does not exist.', 75, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["allusers"]) || array_key_exists("allusers", $context) ? $context["allusers"] : (function () { throw new RuntimeError('Variable "allusers" does not exist.', 83, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["user"]) {
-            // line 76
+            // line 84
             echo "     ";
-            if ((twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 76) != twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 76, $this->source); })()), "username", [], "any", false, false, false, 76))) {
-                // line 77
+            if ((twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 84) != twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 84, $this->source); })()), "username", [], "any", false, false, false, 84))) {
+                // line 85
                 echo "    <tr>
       <td>
         <div class=\"d-flex align-items-center\">
           <div class=\"ms-3\">
             <p class=\"fw-bold mb-1\">";
-                // line 81
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 81), "html", null, true);
+                // line 89
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 89), "html", null, true);
                 echo "</p>
             <p class=\"text-muted mb-0\">";
-                // line 82
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 82), "html", null, true);
+                // line 90
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 90), "html", null, true);
                 echo "</p>
           </div>
         </div>
       </td>
       <td>
         <p class=\"text-muted mb-0 mt-2 \">";
-                // line 87
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "matricule", [], "any", false, false, false, 87), "html", null, true);
+                // line 95
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "matricule", [], "any", false, false, false, 95), "html", null, true);
                 echo "t</p>
       </td>
       <td>
         <label class=\"mt-2\">
             ";
-                // line 91
-                if (twig_get_attribute($this->env, $this->source, $context["user"], "enabled", [], "any", false, false, false, 91)) {
+                // line 99
+                if (twig_get_attribute($this->env, $this->source, $context["user"], "enabled", [], "any", false, false, false, 99)) {
                     echo " <span class=\"badge badge-success rounded-pill d-inline \">Active</span>
             ";
                 } else {
-                    // line 92
+                    // line 100
                     echo "  <span class=\"badge badge-warning rounded-pill d-inline\">Blocked</span>
             ";
                 }
-                // line 94
+                // line 102
                 echo "                
         </label>
         
       </td>
       <td><label class=\"mt-2\">";
-                // line 98
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "job", [], "any", false, false, false, 98), "html", null, true);
+                // line 106
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "job", [], "any", false, false, false, 106), "html", null, true);
                 echo "</label></td>
       <td  class=\"actions\" >
        <a href=\"User/";
-                // line 100
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 100), "html", null, true);
+                // line 108
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 108), "html", null, true);
                 echo "\"> 
             <button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\"  style=\" border: #28a745 solid 1px; \" >
                <i class='bx bx-show-alt bx-xs'></i> view
             </button>
         </a>
-        <a href=\"\"> 
+        <a href=\"#\"> 
             <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \"  style=\" border: #007bff solid 1px; \">
             <i class='bx bx-edit bx-xs'></i>
             Edit
             </button>
         </a>
-        <a href=\"#\"> 
+        <a href=\"User/Remove/";
+                // line 119
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 119), "html", null, true);
+                echo "\"> 
             <button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" >
             <i class='bx bx-trash bx-xs'></i>
             Delete
@@ -290,13 +313,13 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
     </tr>
     ";
             }
-            // line 120
+            // line 128
             echo "     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 121
+        // line 129
         echo "  </tbody>
 </table>
 </div>
@@ -308,14 +331,14 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 
     }
 
-    // line 127
+    // line 135
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 128
+        // line 136
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -340,7 +363,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 
     public function getDebugInfo()
     {
-        return array (  319 => 128,  312 => 127,  300 => 121,  294 => 120,  271 => 100,  266 => 98,  260 => 94,  256 => 92,  251 => 91,  244 => 87,  236 => 82,  232 => 81,  226 => 77,  223 => 76,  219 => 75,  194 => 52,  185 => 50,  181 => 49,  178 => 48,  166 => 42,  163 => 41,  159 => 40,  150 => 34,  143 => 29,  134 => 27,  130 => 26,  121 => 20,  116 => 18,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 127,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  342 => 136,  335 => 135,  323 => 129,  317 => 128,  305 => 119,  291 => 108,  286 => 106,  280 => 102,  276 => 100,  271 => 99,  264 => 95,  256 => 90,  252 => 89,  246 => 85,  243 => 84,  239 => 83,  214 => 60,  205 => 58,  201 => 57,  198 => 56,  186 => 50,  183 => 49,  178 => 48,  166 => 42,  163 => 41,  159 => 40,  150 => 34,  143 => 29,  134 => 27,  130 => 26,  121 => 20,  116 => 18,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 135,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -367,11 +390,11 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                                     {{ form_widget(form) }}
                                     </div>
                                      <div class=\"modal-body\">
-                                          <label for=\"name\">user permission :</label>
-                                          <select name=\"role\" id=\"\">
-                                                 <option selected disabled>permission</option>
-                                                 {% for permission in allpermissions %}
-                                                        <option>{{permission.getPermissionName()}}</option>
+                                          <label for=\"name\">Role :</label>
+                                          <select class=\"roleSelect\" name=\"role\" id=\"\"  required>
+                                                 <option selected disabled>Role</option>
+                                                 {% for role in allroles %}
+                                                        <option>{{role.getRoleName()}}</option>
                                                  {% endfor %}
                                           </select>
                                     </div>
@@ -391,6 +414,14 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                               <span aria-hidden=\"true\">&times;</span>
                               </button>
                      </div>
+             {% endfor %}
+              {% for flash_message in app.session.flashbag.get('delete') %}
+                   <div class=\"alert  alert-danger fade show\" role=\"alert\">
+                               {{flash_message}}
+                              <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                              <span aria-hidden=\"true\">&times;</span>
+                              </button>
+                  </div>
              {% endfor %}
             <div class=\"text\">Users</div>
              {% for flash_message in app.session.flashbag.get('success') %}
@@ -449,13 +480,13 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                <i class='bx bx-show-alt bx-xs'></i> view
             </button>
         </a>
-        <a href=\"\"> 
+        <a href=\"#\"> 
             <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \"  style=\" border: #007bff solid 1px; \">
             <i class='bx bx-edit bx-xs'></i>
             Edit
             </button>
         </a>
-        <a href=\"#\"> 
+        <a href=\"User/Remove/{{user.id}}\"> 
             <button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" >
             <i class='bx bx-trash bx-xs'></i>
             Delete

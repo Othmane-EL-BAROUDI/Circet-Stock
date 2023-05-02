@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FOSUserBundle::layout.html.twig */
+/* @FOSUser/layout.html.twig */
 class __TwigTemplate_6a20e85d0123e5fe4de6e76452c9ed4119433ad735f02f5afc6cbe1ef67f497a extends \Twig\Template
 {
     private $source;
@@ -37,7 +37,7 @@ class __TwigTemplate_6a20e85d0123e5fe4de6e76452c9ed4119433ad735f02f5afc6cbe1ef67
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FOSUserBundle::layout.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@FOSUser/layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -172,7 +172,7 @@ class __TwigTemplate_6a20e85d0123e5fe4de6e76452c9ed4119433ad735f02f5afc6cbe1ef67
 
     public function getTemplateName()
     {
-        return "FOSUserBundle::layout.html.twig";
+        return "@FOSUser/layout.html.twig";
     }
 
     public function isTraitable()
@@ -223,6 +223,6 @@ class __TwigTemplate_6a20e85d0123e5fe4de6e76452c9ed4119433ad735f02f5afc6cbe1ef67
         </div>
     </body>
 </html>
-", "FOSUserBundle::layout.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\layout.html.twig");
+", "@FOSUser/layout.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\layout.html.twig");
     }
 }

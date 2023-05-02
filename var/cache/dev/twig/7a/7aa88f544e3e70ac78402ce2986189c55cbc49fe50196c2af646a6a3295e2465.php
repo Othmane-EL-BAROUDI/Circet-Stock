@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* FOSUserBundle:Resetting:email.txt.twig */
+/* @FOSUser/Resetting/email.txt.twig */
 class __TwigTemplate_7fd99de243bedb9062c797fd7ee183c10de63531c9fbe11c9eb0f0e904f19446 extends \Twig\Template
 {
     private $source;
@@ -37,7 +37,7 @@ class __TwigTemplate_7fd99de243bedb9062c797fd7ee183c10de63531c9fbe11c9eb0f0e904f
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "FOSUserBundle:Resetting:email.txt.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@FOSUser/Resetting/email.txt.twig"));
 
         // line 2
         $this->displayBlock('subject', $context, $blocks);
@@ -97,7 +97,7 @@ class __TwigTemplate_7fd99de243bedb9062c797fd7ee183c10de63531c9fbe11c9eb0f0e904f
 
     public function getTemplateName()
     {
-        return "FOSUserBundle:Resetting:email.txt.twig";
+        return "@FOSUser/Resetting/email.txt.twig";
     }
 
     public function getDebugInfo()
@@ -120,6 +120,6 @@ class __TwigTemplate_7fd99de243bedb9062c797fd7ee183c10de63531c9fbe11c9eb0f0e904f
 {% endautoescape %}
 {% endblock %}
 {% block body_html %}{% endblock %}
-", "FOSUserBundle:Resetting:email.txt.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Resetting\\email.txt.twig");
+", "@FOSUser/Resetting/email.txt.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Resetting\\email.txt.twig");
     }
 }

@@ -68,3 +68,20 @@
    border-radius: 10px;
    /* background: transparent; */
 }
+.row button{
+   cursor: pointer;
+   
+   padding: 3px 55px 5px 55px;
+   height: 30px;
+   background-color: #f9a826;
+   color: white;
+   border: none;
+   border-radius: 5px;
+}
+.row button:hover{
+   transform: scale(1.01);
+}
+.modal-body{
+   height: 450px !important;
+   overflow-y: scroll !important;
+}
