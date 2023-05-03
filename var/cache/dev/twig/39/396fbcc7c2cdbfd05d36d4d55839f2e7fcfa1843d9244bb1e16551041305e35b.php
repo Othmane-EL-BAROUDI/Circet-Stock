@@ -49,7 +49,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 6
         $this->displayBlock('body', $context, $blocks);
-        // line 110
+        // line 123
         echo "  ";
         $this->displayBlock('javascripts', $context, $blocks);
         
@@ -223,47 +223,60 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
                     <button>   Search  </button>
                 </div>
             </div>
-            <div class=\"content\">
-              <table class=\"content-table\" style=\"\">
-                    <thead>
+            <div class=\"CContent\" >
+                  <div class=\"mainC\">
+                        <table class=\"table align-middle mb-0 bg-white\">
+                        <thead class=\"bg-light\">
                         <tr>
-                            <th>permission</th>
-                            <th  style=\"text-align : center\" >action</th>
+                              <th>permission</th>
+                              <th  style=\"text-align:center;\" >Actions</th>
                         </tr>
-                    </thead>
-                    <tbody>
-                        ";
-        // line 95
+                        </thead>
+                        <tbody>
+                          ";
+        // line 96
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["allPermissions"]) || array_key_exists("allPermissions", $context) ? $context["allPermissions"] : (function () { throw new RuntimeError('Variable "allPermissions" does not exist.', 95, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["allPermissions"]) || array_key_exists("allPermissions", $context) ? $context["allPermissions"] : (function () { throw new RuntimeError('Variable "allPermissions" does not exist.', 96, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["permission"]) {
-            // line 96
+            // line 97
             echo "                            <tr>
                              <td  class=\"textperm\" > ";
-            // line 97
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 97), "html", null, true);
-            echo " </td>
-                                    <td class=\"actions\">
-                                          <a class = \"text-decoration-none\" href=\"/Permission/";
-            // line 99
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 99), "html", null, true);
-            echo "\"><button><i class='bx bx-edit bx-sm'></i>Update</button></a> 
-                                          <a href=\"/Permission/Remove/";
-            // line 100
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 100), "html", null, true);
-            echo "\"><button><i class='bx bx-trash bx-sm'></i> Delete</button></a> 
-                                    </td>   
+            // line 98
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 98), "html", null, true);
+            echo " </td>  
+                                     <td  class=\"actions\" >
+                        
+                                    <a href=\"/Permission/";
+            // line 101
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 101), "html", null, true);
+            echo "\"> 
+                                          <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \"  style=\" border: #007bff solid 1px; \">
+                                          <i class='bx bx-edit bx-xs'></i>
+                                          Edit
+                                          </button>
+                                    </a>
+                                    <a href=\"Permission/Remove/";
+            // line 107
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 107), "html", null, true);
+            echo "\"> 
+                                          <button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" >
+                                          <i class='bx bx-trash bx-xs'></i>
+                                          Delete
+                                          </button>
+                                    </a>
+                                    </td>
                               </tr>       
                          ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['permission'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 103
+        // line 115
         echo "   
-                    </tbody>
-                </table>
-                  
+                        </tbody>
+                        </table>
+                  </div>
+                  </div>
             </div>
       </div>
 ";
@@ -272,14 +285,14 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 
     }
 
-    // line 110
+    // line 123
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 111
+        // line 124
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -299,7 +312,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 
     public function getDebugInfo()
     {
-        return array (  283 => 111,  276 => 110,  263 => 103,  253 => 100,  249 => 99,  244 => 97,  241 => 96,  237 => 95,  218 => 78,  206 => 72,  203 => 71,  198 => 70,  186 => 64,  183 => 63,  178 => 62,  166 => 56,  163 => 55,  159 => 54,  149 => 47,  141 => 42,  130 => 34,  99 => 7,  92 => 6,  81 => 3,  74 => 2,  61 => 1,  53 => 110,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  296 => 124,  289 => 123,  275 => 115,  260 => 107,  251 => 101,  245 => 98,  242 => 97,  238 => 96,  218 => 78,  206 => 72,  203 => 71,  198 => 70,  186 => 64,  183 => 63,  178 => 62,  166 => 56,  163 => 55,  159 => 54,  149 => 47,  141 => 42,  130 => 34,  99 => 7,  92 => 6,  81 => 3,  74 => 2,  61 => 1,  53 => 123,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -389,27 +402,40 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
                     <button>   Search  </button>
                 </div>
             </div>
-            <div class=\"content\">
-              <table class=\"content-table\" style=\"\">
-                    <thead>
+            <div class=\"CContent\" >
+                  <div class=\"mainC\">
+                        <table class=\"table align-middle mb-0 bg-white\">
+                        <thead class=\"bg-light\">
                         <tr>
-                            <th>permission</th>
-                            <th  style=\"text-align : center\" >action</th>
+                              <th>permission</th>
+                              <th  style=\"text-align:center;\" >Actions</th>
                         </tr>
-                    </thead>
-                    <tbody>
-                        {% for key , permission in allPermissions %}
+                        </thead>
+                        <tbody>
+                          {% for key , permission in allPermissions %}
                             <tr>
-                             <td  class=\"textperm\" > {{permission.getPermissionName()}} </td>
-                                    <td class=\"actions\">
-                                          <a class = \"text-decoration-none\" href=\"/Permission/{{permission.id}}\"><button><i class='bx bx-edit bx-sm'></i>Update</button></a> 
-                                          <a href=\"/Permission/Remove/{{permission.id}}\"><button><i class='bx bx-trash bx-sm'></i> Delete</button></a> 
-                                    </td>   
+                             <td  class=\"textperm\" > {{permission.getPermissionName()}} </td>  
+                                     <td  class=\"actions\" >
+                        
+                                    <a href=\"/Permission/{{permission.id}}\"> 
+                                          <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \"  style=\" border: #007bff solid 1px; \">
+                                          <i class='bx bx-edit bx-xs'></i>
+                                          Edit
+                                          </button>
+                                    </a>
+                                    <a href=\"Permission/Remove/{{permission.id}}\"> 
+                                          <button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" >
+                                          <i class='bx bx-trash bx-xs'></i>
+                                          Delete
+                                          </button>
+                                    </a>
+                                    </td>
                               </tr>       
                          {% endfor %}   
-                    </tbody>
-                </table>
-                  
+                        </tbody>
+                        </table>
+                  </div>
+                  </div>
             </div>
       </div>
 {% endblock %}

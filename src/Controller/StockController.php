@@ -13,7 +13,7 @@ use Doctrine\ORM\EntityManagerInterface;
 class StockController extends AbstractController
 {
     /**
-     * @Route("Stock" , name="Stock")
+     * @Route("/Stock" , name="Stock")
      */
     public function Stock(Request $request , EntityManagerInterface $entityManager): Response
     {
@@ -39,7 +39,7 @@ class StockController extends AbstractController
     }
 
      /**
-     * @Route("stockView/{id}" , name="stockView")
+     * @Route("/stockView/{id}" , name="stockView")
      */
     public function stockView($id): Response
     {
@@ -54,7 +54,7 @@ class StockController extends AbstractController
     }
 
     /**
-     * @Route("Stock/Remove/{id}" , name="StockRemove")
+     * @Route("/Stock/Remove/{id}" , name="StockRemove")
      */
     public function PermissionDelete( EntityManagerInterface $entityManager, $id): Response
     {   

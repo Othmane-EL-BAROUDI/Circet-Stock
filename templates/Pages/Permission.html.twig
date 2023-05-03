@@ -83,27 +83,40 @@
                     <button>   Search  </button>
                 </div>
             </div>
-            <div class="content">
-              <table class="content-table" style="">
-                    <thead>
+            <div class="CContent" >
+                  <div class="mainC">
+                        <table class="table align-middle mb-0 bg-white">
+                        <thead class="bg-light">
                         <tr>
-                            <th>permission</th>
-                            <th  style="text-align : center" >action</th>
+                              <th>permission</th>
+                              <th  style="text-align:center;" >Actions</th>
                         </tr>
-                    </thead>
-                    <tbody>
-                        {% for key , permission in allPermissions %}
+                        </thead>
+                        <tbody>
+                          {% for key , permission in allPermissions %}
                             <tr>
-                             <td  class="textperm" > {{permission.getPermissionName()}} </td>
-                                    <td class="actions">
-                                          <a class = "text-decoration-none" href="/Permission/{{permission.id}}"><button><i class='bx bx-edit bx-sm'></i>Update</button></a> 
-                                          <a href="/Permission/Remove/{{permission.id}}"><button><i class='bx bx-trash bx-sm'></i> Delete</button></a> 
-                                    </td>   
+                             <td  class="textperm" > {{permission.getPermissionName()}} </td>  
+                                     <td  class="actions" >
+                        
+                                    <a href="/Permission/{{permission.id}}"> 
+                                          <button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 "  style=" border: #007bff solid 1px; ">
+                                          <i class='bx bx-edit bx-xs'></i>
+                                          Edit
+                                          </button>
+                                    </a>
+                                    <a href="Permission/Remove/{{permission.id}}"> 
+                                          <button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;" >
+                                          <i class='bx bx-trash bx-xs'></i>
+                                          Delete
+                                          </button>
+                                    </a>
+                                    </td>
                               </tr>       
                          {% endfor %}   
-                    </tbody>
-                </table>
-                  
+                        </tbody>
+                        </table>
+                  </div>
+                  </div>
             </div>
       </div>
 {% endblock %}

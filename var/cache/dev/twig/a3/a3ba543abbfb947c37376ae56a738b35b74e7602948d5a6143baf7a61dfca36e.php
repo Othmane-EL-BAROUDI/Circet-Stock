@@ -265,7 +265,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
             Edit
             </button>
         </a>
-        <a href=\"/Stock/Remove/";
+        <a href=\"Stock/Remove/";
             // line 119
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 119), "html", null, true);
             echo "\"> 
@@ -449,7 +449,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
             Edit
             </button>
         </a>
-        <a href=\"/Stock/Remove/{{machine.id}}\"> 
+        <a href=\"Stock/Remove/{{machine.id}}\"> 
             <button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \"style=\" border: #dc3545 solid 1px;\" >
             <i class='bx bx-trash bx-xs'></i>
             Delete

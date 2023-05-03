@@ -61,35 +61,44 @@
 				</button>
 			</div>
 		</div>
-		<div class="content">
-			<table class="content-table">
-				<thead>
-					<tr>
-						<th>Rôle</th>
-						<th style="text-align : center"  >action</th>
-					</tr>
-				</thead>
-				<tbody>
-					{% for role in allRoles %}
-						<tr>
+		<div class="CContent" >
+                  <div class="mainC">
+                        <table class="table align-middle mb-0 bg-white">
+                        <thead class="bg-light">
+                        <tr>
+                              <th>Rôle</th>
+                              <th  style="text-align:center;" >Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                         {% for role in allRoles %}
+                            <tr>
 							<td  class="textperm" >
 								{{role.roleName}}
 							</td>
-							<td class="actions">
-								<button>
-									<i class='bx bx-edit bx-sm'></i> Update
-								</button>
-								<button>
-									<i class='bx bx-trash bx-sm'></i> Delete
-								</button>
-							</td>
-						</tr>
-					{% endfor %}
-
-				</tbody>
-			</table>
-
-		</div>
+                             
+                                     <td  class="actions" >
+                        
+                                    <a href="#"> 
+                                          <button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 "  style=" border: #007bff solid 1px; ">
+                                          <i class='bx bx-edit bx-xs'></i>
+                                          Edit
+                                          </button>
+                                    </a>
+                                    <a href="#"> 
+                                          <button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;" >
+                                          <i class='bx bx-trash bx-xs'></i>
+                                          Delete
+                                          </button>
+                                    </a>
+                                    </td>
+                              </tr>       
+                         {% endfor %}   
+                        </tbody>
+                        </table>
+                  </div>
+                  </div>
+		
 	</div>
 {% endblock %}
 {% block javascripts %}

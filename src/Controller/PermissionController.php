@@ -12,7 +12,7 @@ use Doctrine\ORM\EntityManagerInterface;
 class PermissionController extends AbstractController
 {
      /**
-     * @Route("Permission" , name="Permission")
+     * @Route("/Permission" , name="Permission")
      */
     public function Permission(Request $request , EntityManagerInterface $entityManager): Response
     {
@@ -42,7 +42,7 @@ class PermissionController extends AbstractController
         ]);
     }
        /**
-     * @Route("Permission/{id}" , name="PermissionUpdate")
+     * @Route("/Permission/{id}" , name="PermissionUpdate")
      */
     public function PermissionUpdate(Request $request , EntityManagerInterface $entityManager, $id): Response
     {   
@@ -71,7 +71,7 @@ class PermissionController extends AbstractController
     }
 
       /**
-     * @Route("Permission/Remove/{id}" , name="PermissionRemove")
+     * @Route("/Permission/Remove/{id}" , name="PermissionRemove")
      */
     public function PermissionDelete(Request $request , EntityManagerInterface $entityManager, $id): Response
     {   
