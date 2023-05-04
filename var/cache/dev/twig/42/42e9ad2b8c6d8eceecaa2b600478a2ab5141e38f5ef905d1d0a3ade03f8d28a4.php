@@ -88,6 +88,6 @@ class __TwigTemplate_cc4b06b066c333a48426c6e19015a0d82ca20808fa4de7144acc3013de5
     {% endfor %}
     </ul>
 </div>
-", "@FOSUser/Group/list_content.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Group\\list_content.html.twig");
+", "@FOSUser/Group/list_content.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Group\\list_content.html.twig");
     }
 }

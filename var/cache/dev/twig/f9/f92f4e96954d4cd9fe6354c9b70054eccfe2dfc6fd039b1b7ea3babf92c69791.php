@@ -89,6 +89,6 @@ class __TwigTemplate_e95f465de69eb4ec4c4a5c675a95f5e00863d0f90f544aca0de04b77e36
 {% block fos_user_content %}
     <p>{{ 'registration.check_email'|trans({'%email%': user.email}) }}</p>
 {% endblock fos_user_content %}
-", "@FOSUser/Registration/check_email.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\check_email.html.twig");
+", "@FOSUser/Registration/check_email.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\check_email.html.twig");
     }
 }

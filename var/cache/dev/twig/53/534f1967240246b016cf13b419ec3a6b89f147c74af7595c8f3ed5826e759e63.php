@@ -165,6 +165,6 @@ class __TwigTemplate_73ff6420adc9e24fe95828713c6c8cbef2df278c7cd25264bbb7ec4c5f9
         {%- endfor -%}
     </pre>
 {% endif %}
-", "@Doctrine/Collector/explain.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\explain.html.twig");
+", "@Doctrine/Collector/explain.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\explain.html.twig");
     }
 }

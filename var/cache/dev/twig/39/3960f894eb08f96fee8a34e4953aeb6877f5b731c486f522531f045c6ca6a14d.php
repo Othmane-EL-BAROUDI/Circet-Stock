@@ -84,6 +84,6 @@ class __TwigTemplate_1b7e81d4cefb7bac81c71b5b4c5d46ced0b03e266870cd39b0e24abc43c
 {% block fos_user_content %}
 {% include \"@FOSUser/Registration/register_content.html.twig\" %}
 {% endblock fos_user_content %}
-", "@FOSUser/Registration/register.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\register.html.twig");
+", "@FOSUser/Registration/register.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\register.html.twig");
     }
 }

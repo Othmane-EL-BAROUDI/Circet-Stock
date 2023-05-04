@@ -120,6 +120,6 @@ class __TwigTemplate_9959884c520c33dd37579407c236149c1379856d7943eb4a1906c7e152c
 {% endautoescape %}
 {% endblock %}
 {% block body_html %}{% endblock %}
-", "FOSUserBundle:Registration:email.txt.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle/Resources/views/Registration/email.txt.twig");
+", "FOSUserBundle:Registration:email.txt.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle/Resources/views/Registration/email.txt.twig");
     }
 }

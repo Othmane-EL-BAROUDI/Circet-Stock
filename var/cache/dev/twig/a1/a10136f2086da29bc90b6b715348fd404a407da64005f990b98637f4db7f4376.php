@@ -81,6 +81,6 @@ class __TwigTemplate_3bb3544df02ec3a4bda0e302f53ee0b1569ad4aa0ef46ff33a45ef826c1
     <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
     <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
 </div>
-", "@FOSUser/Profile/show_content.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Profile\\show_content.html.twig");
+", "@FOSUser/Profile/show_content.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Profile\\show_content.html.twig");
     }
 }

@@ -57,6 +57,6 @@ class __TwigTemplate_f0b59fdab1832ce9728ede8a64a9bd535ea17a1a6693021971da6249d73
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->widget(\$form) ?>
-", "FrameworkBundle:Form:hidden_row.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle/Resources/views/Form/hidden_row.html.php");
+", "FrameworkBundle:Form:hidden_row.html.php", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\framework-bundle/Resources/views/Form/hidden_row.html.php");
     }
 }

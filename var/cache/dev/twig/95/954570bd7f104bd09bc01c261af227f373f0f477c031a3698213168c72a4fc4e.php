@@ -89,6 +89,6 @@ class __TwigTemplate_43b58d1ad46001fc0eed6cada6195a06e094baca7f08d577a5609ac3675
             </trace>
 {% endfor %}
         </traces>
-", "TwigBundle:Exception:traces.xml.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\twig-bundle/Resources/views/Exception/traces.xml.twig");
+", "TwigBundle:Exception:traces.xml.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\twig-bundle/Resources/views/Exception/traces.xml.twig");
     }
 }

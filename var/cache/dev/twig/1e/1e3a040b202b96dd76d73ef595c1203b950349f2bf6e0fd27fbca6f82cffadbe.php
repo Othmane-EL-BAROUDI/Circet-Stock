@@ -102,6 +102,6 @@ class __TwigTemplate_da68ece11ebd5a0fa1997ccc6cbd05a19b0ec900da2f996ca6aa636cc20
     <p><a href=\"{{ targetUrl }}\">{{ 'registration.back'|trans }}</a></p>
     {% endif %}
 {% endblock fos_user_content %}
-", "@FOSUser/Registration/confirmed.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\confirmed.html.twig");
+", "@FOSUser/Registration/confirmed.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\confirmed.html.twig");
     }
 }

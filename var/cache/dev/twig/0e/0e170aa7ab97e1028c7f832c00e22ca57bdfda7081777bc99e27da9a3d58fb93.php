@@ -67,6 +67,6 @@ class __TwigTemplate_680251d82faaad7f6216f1194fb219dea6852a5af69757dafe89f11f42c
         <?php echo \$view['form']->widget(\$form); ?>
     </td>
 </tr>
-", "FrameworkBundle:FormTable:button_row.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle/Resources/views/FormTable/button_row.html.php");
+", "FrameworkBundle:FormTable:button_row.html.php", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\framework-bundle/Resources/views/FormTable/button_row.html.php");
     }
 }

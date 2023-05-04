@@ -53,7 +53,7 @@ class PermissionController extends AbstractController
         $form = $this->createForm(PermissionFormType::class, $permission);
         $form->handleRequest($request);
         if(  $form->isSubmitted()  && $form->isValid()){
-            $permission->setPermissionName($form->get('permission_name')->getData());
+            // $permission->setPermissionName($form->get('permission_name')->getData());
             $entityManager->flush();
             $this->addFlash(
                 'update',

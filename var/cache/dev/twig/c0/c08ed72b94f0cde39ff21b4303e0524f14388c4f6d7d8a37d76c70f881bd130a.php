@@ -87,6 +87,6 @@ class __TwigTemplate_995147bd70b20eedf08822b123a423e698d6d3a1e9b43163b33119010cc
         <input type=\"submit\" value=\"{{ 'registration.submit'|trans }}\" />
     </div>
 {{ form_end(form) }}
-", "@FOSUser/Registration/register_content.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\register_content.html.twig");
+", "@FOSUser/Registration/register_content.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\register_content.html.twig");
     }
 }

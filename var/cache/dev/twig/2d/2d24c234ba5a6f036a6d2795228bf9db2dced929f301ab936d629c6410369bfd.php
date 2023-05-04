@@ -65,6 +65,6 @@ class __TwigTemplate_20c8a1ff4ce46b73135f15209e2fc85136d7359445dc4b358fc61599b72
     value=\"<?php echo \$view->escape(\$value) ?>\"
     <?php if (\$checked): ?> checked=\"checked\"<?php endif ?>
 />
-", "@Framework/Form/radio_widget.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\radio_widget.html.php");
+", "@Framework/Form/radio_widget.html.php", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\radio_widget.html.php");
     }
 }

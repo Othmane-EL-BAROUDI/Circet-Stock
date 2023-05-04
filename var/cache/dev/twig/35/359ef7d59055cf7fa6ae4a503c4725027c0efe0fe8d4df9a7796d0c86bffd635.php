@@ -87,6 +87,6 @@ class __TwigTemplate_474419fda99da5e4d83f49c490924b87e864e7028be9d26df2e81e51961
         <input type=\"submit\" value=\"{{ 'profile.edit.submit'|trans }}\" />
     </div>
 {{ form_end(form) }}
-", "@FOSUser/Profile/edit_content.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Profile\\edit_content.html.twig");
+", "@FOSUser/Profile/edit_content.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Profile\\edit_content.html.twig");
     }
 }

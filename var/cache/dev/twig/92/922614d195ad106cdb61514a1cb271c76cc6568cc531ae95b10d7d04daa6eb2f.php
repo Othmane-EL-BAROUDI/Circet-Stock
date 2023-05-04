@@ -155,6 +155,6 @@ class __TwigTemplate_78e05dd645fe19a85e4dfc85ed3c552fe5c466ca5664fbdce2a4297f3af
         </tr>
     </tbody>
 </table>
-", "@Twig/Exception/traces_text.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces_text.html.twig");
+", "@Twig/Exception/traces_text.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces_text.html.twig");
     }
 }

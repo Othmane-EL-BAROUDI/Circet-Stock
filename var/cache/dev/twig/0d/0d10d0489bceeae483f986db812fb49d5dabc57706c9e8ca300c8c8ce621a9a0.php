@@ -73,6 +73,6 @@ class __TwigTemplate_76a6742b13032bf948d69ae86a3afd77c0ac1bbb0d9a687aa33c1be3735
 {{ status_code }} {{ status_text }}
 
 */
-", "TwigBundle:Exception:error.css.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\twig-bundle/Resources/views/Exception/error.css.twig");
+", "TwigBundle:Exception:error.css.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\twig-bundle/Resources/views/Exception/error.css.twig");
     }
 }

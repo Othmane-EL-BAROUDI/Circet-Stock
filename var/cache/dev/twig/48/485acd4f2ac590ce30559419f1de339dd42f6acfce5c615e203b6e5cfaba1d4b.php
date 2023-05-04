@@ -71,6 +71,6 @@ class __TwigTemplate_f21fdf2bd6661e430b9948c13d9049b5c231ebad402267558a749a988b5
     : \$view['form']->humanize(\$name); } ?>
 <label<?php if (\$label_attr) { echo ' '.\$view['form']->block(\$form, 'attributes', ['attr' => \$label_attr]); } ?>><?php echo \$view->escape(false !== \$translation_domain ? \$view['translator']->trans(\$label, \$label_translation_parameters, \$translation_domain) : \$label) ?></label>
 <?php endif ?>
-", "@Framework/Form/form_label.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_label.html.php");
+", "@Framework/Form/form_label.html.php", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_label.html.php");
     }
 }

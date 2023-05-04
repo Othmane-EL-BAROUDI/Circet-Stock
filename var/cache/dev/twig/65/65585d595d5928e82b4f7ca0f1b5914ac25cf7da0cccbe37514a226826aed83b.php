@@ -77,6 +77,6 @@ class __TwigTemplate_b12390cee554e7aad05256a7e5a0ed91fd4b38848950cb5f8ea973c3546
         <?php echo \$view['form']->help(\$form); ?>
     </td>
 </tr>
-", "@Framework/FormTable/form_row.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\FormTable\\form_row.html.php");
+", "@Framework/FormTable/form_row.html.php", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\FormTable\\form_row.html.php");
     }
 }

@@ -63,6 +63,6 @@ class __TwigTemplate_efbd78a6748177fe7a16f21fd36665a3ce5f52534dee822af9a8b38118e
     public function getSourceContext()
     {
         return new Source("{{ include('@Twig/Exception/error.xml.twig') }}
-", "@Twig/Exception/error.rdf.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\error.rdf.twig");
+", "@Twig/Exception/error.rdf.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\error.rdf.twig");
     }
 }

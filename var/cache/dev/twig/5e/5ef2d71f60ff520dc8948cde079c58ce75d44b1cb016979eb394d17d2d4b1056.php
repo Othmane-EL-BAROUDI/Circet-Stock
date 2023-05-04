@@ -63,6 +63,6 @@ class __TwigTemplate_85f7fde0b27bdb3d620c879b146c3153c44948d1c060584deceb4769b7d
     public function getSourceContext()
     {
         return new Source("{{ include('@Twig/Exception/error.xml.twig') }}
-", "TwigBundle:Exception:error.atom.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\twig-bundle/Resources/views/Exception/error.atom.twig");
+", "TwigBundle:Exception:error.atom.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\twig-bundle/Resources/views/Exception/error.atom.twig");
     }
 }

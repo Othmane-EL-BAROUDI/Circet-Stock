@@ -84,6 +84,6 @@ class __TwigTemplate_060632e6923fc86a2722765089bb8764abfc7a580065381b77bc9d37e86
 {% block fos_user_content %}
 {% include \"@FOSUser/ChangePassword/change_password_content.html.twig\" %}
 {% endblock fos_user_content %}
-", "@FOSUser/ChangePassword/change_password.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\ChangePassword\\change_password.html.twig");
+", "@FOSUser/ChangePassword/change_password.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\ChangePassword\\change_password.html.twig");
     }
 }

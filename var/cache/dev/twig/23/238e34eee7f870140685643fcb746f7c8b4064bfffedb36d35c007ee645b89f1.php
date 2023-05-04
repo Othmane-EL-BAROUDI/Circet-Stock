@@ -67,6 +67,6 @@ class __TwigTemplate_38d4e67a93e34b7abf9d296df7810314960e89175a4bd8dec7e816fa5d8
     <?php \$help = false === \$help_html ? \$view->escape(\$help) : \$help ?>
     <p id=\"<?php echo \$view->escape(\$id); ?>_help\" <?php echo ' '.\$view['form']->block(\$form, 'attributes', ['attr' => \$help_attr]); ?>><?php echo \$help; ?></p>
 <?php endif; ?>
-", "@Framework/Form/form_help.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_help.html.php");
+", "@Framework/Form/form_help.html.php", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_help.html.php");
     }
 }

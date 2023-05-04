@@ -294,7 +294,10 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                <i class='bx bx-show-alt bx-xs'></i> view
             </button>
         </a>
-        <a href=\"#\"> 
+        <a href=\"User/Edit/";
+                // line 113
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 113), "html", null, true);
+                echo "\"> 
             <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \"  style=\" border: #007bff solid 1px; \">
             <i class='bx bx-edit bx-xs'></i>
             Edit
@@ -363,7 +366,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 
     public function getDebugInfo()
     {
-        return array (  342 => 136,  335 => 135,  323 => 129,  317 => 128,  305 => 119,  291 => 108,  286 => 106,  280 => 102,  276 => 100,  271 => 99,  264 => 95,  256 => 90,  252 => 89,  246 => 85,  243 => 84,  239 => 83,  214 => 60,  205 => 58,  201 => 57,  198 => 56,  186 => 50,  183 => 49,  178 => 48,  166 => 42,  163 => 41,  159 => 40,  150 => 34,  143 => 29,  134 => 27,  130 => 26,  121 => 20,  116 => 18,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 135,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
+        return array (  345 => 136,  338 => 135,  326 => 129,  320 => 128,  308 => 119,  299 => 113,  291 => 108,  286 => 106,  280 => 102,  276 => 100,  271 => 99,  264 => 95,  256 => 90,  252 => 89,  246 => 85,  243 => 84,  239 => 83,  214 => 60,  205 => 58,  201 => 57,  198 => 56,  186 => 50,  183 => 49,  178 => 48,  166 => 42,  163 => 41,  159 => 40,  150 => 34,  143 => 29,  134 => 27,  130 => 26,  121 => 20,  116 => 18,  104 => 8,  97 => 7,  86 => 3,  79 => 2,  66 => 1,  58 => 135,  56 => 7,  51 => 6,  49 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -480,7 +483,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                <i class='bx bx-show-alt bx-xs'></i> view
             </button>
         </a>
-        <a href=\"#\"> 
+        <a href=\"User/Edit/{{user.id}}\"> 
             <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \"  style=\" border: #007bff solid 1px; \">
             <i class='bx bx-edit bx-xs'></i>
             Edit
@@ -507,6 +510,6 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
              <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
-   {% endblock %}", "Pages/Users.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\Users.html.twig");
+   {% endblock %}", "Pages/Users.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\Users.html.twig");
     }
 }

@@ -69,7 +69,7 @@ class UsersController extends AbstractController
       /**
      * @Route("User/Remove/{id}" , name="UserRemove")
      */
-    public function PermissionDelete(EntityManagerInterface $entityManager, $id): Response
+    public function UserDelete(EntityManagerInterface $entityManager, $id): Response
     {   
         $entityManager = $this->getDoctrine()->getManager();
         $user = $entityManager->getRepository(User::class)->find($id);
@@ -81,5 +81,28 @@ class UsersController extends AbstractController
          );
         return $this->redirectToRoute('Users');
 
+    }
+
+       /**
+     * @Route("User/Edit/{id}" , name="UserUpdate")
+     */
+    public function UserUpdate(Request $request , EntityManagerInterface $entityManager, $id): Response
+    {   
+        $user = $this->getUser();
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $user = $entityManager->getRepository(User::class)->find($id);
+        $form = $this->createForm(UserFormType::class, $user);
+        $form->handleRequest($request);
+        if(  $form->isSubmitted()  && $form->isValid()){
+            $entityManager->flush();
+            return $this->redirectToRoute('Users');
+        }
+        return $this->render('Pages/update/Update.html.twig', [
+            'userInfo' => $user,
+            'PageName' => 'User Update',
+            'Path' => '/Users',
+            'form' => $form->createView(),
+        ]);
     }
 }

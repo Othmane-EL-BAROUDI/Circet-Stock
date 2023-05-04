@@ -56,7 +56,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 ";
         // line 10
         $this->displayBlock('body', $context, $blocks);
-        // line 104
+        // line 103
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -123,7 +123,6 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
-
 \t\t</div>
 
 \t\t<div class=\"modal fade\" id=\"addRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addRole\" aria-hidden=\"true\">
@@ -167,16 +166,16 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
                         </thead>
                         <tbody>
                          ";
-        // line 74
+        // line 73
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["allRoles"]) || array_key_exists("allRoles", $context) ? $context["allRoles"] : (function () { throw new RuntimeError('Variable "allRoles" does not exist.', 74, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["allRoles"]) || array_key_exists("allRoles", $context) ? $context["allRoles"] : (function () { throw new RuntimeError('Variable "allRoles" does not exist.', 73, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-            // line 75
+            // line 74
             echo "                            <tr>
 \t\t\t\t\t\t\t<td  class=\"textperm\" >
 \t\t\t\t\t\t\t\t";
-            // line 77
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "roleName", [], "any", false, false, false, 77), "html", null, true);
+            // line 76
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "roleName", [], "any", false, false, false, 76), "html", null, true);
             echo "
 \t\t\t\t\t\t\t</td>
                              
@@ -201,7 +200,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 96
+        // line 95
         echo "   
                         </tbody>
                         </table>
@@ -215,14 +214,14 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 
     }
 
-    // line 104
+    // line 103
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 105
+        // line 104
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -247,7 +246,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 
     public function getDebugInfo()
     {
-        return array (  226 => 105,  219 => 104,  205 => 96,  179 => 77,  175 => 75,  171 => 74,  106 => 11,  99 => 10,  88 => 6,  81 => 5,  67 => 2,  60 => 104,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  225 => 104,  218 => 103,  204 => 95,  178 => 76,  174 => 74,  170 => 73,  106 => 11,  99 => 10,  88 => 6,  81 => 5,  67 => 2,  60 => 103,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -282,7 +281,6 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
-
 \t\t</div>
 
 \t\t<div class=\"modal fade\" id=\"addRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addRole\" aria-hidden=\"true\">
@@ -361,6 +359,6 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
 {% endblock %}
-", "Pages/Role.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\Role.html.twig");
+", "Pages/Role.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\Role.html.twig");
     }
 }

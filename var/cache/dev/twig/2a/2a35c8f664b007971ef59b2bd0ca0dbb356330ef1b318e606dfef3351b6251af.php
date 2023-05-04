@@ -69,6 +69,6 @@ class __TwigTemplate_ecc4a7efee2fa11f4b387baea7b0fbc774eb105fc6a09eb2cc38732173e
         return new Source("/*
 {{ include('@Twig/Exception/exception.txt.twig', { exception: exception }) }}
 */
-", "@Twig/Exception/exception.js.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\exception.js.twig");
+", "@Twig/Exception/exception.js.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\exception.js.twig");
     }
 }

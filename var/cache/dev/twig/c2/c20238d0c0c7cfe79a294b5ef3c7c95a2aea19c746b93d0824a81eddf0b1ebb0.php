@@ -71,6 +71,6 @@ class __TwigTemplate_69b5534d53ad5fdeb8dac427687ab4752155ac30180901a7e58bd8e12fb
 <?php printf('%s=\"%s\" ', \$view->escape(\$k), \$view->escape(\$v)) ?>
 <?php endif ?>
 <?php endforeach ?>
-", "FrameworkBundle:Form:choice_attributes.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle/Resources/views/Form/choice_attributes.html.php");
+", "FrameworkBundle:Form:choice_attributes.html.php", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\framework-bundle/Resources/views/Form/choice_attributes.html.php");
     }
 }

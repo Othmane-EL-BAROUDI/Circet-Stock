@@ -69,6 +69,6 @@ class __TwigTemplate_e7a4c906dfcc22c004bd60f063c3bb1163b425e87350c0e3507dc80962a
     <?php echo \$view['form']->widget(\$form, \$widgetAttr); ?>
     <?php echo \$view['form']->help(\$form); ?>
 </div>
-", "FrameworkBundle:Form:form_row.html.php", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\framework-bundle/Resources/views/Form/form_row.html.php");
+", "FrameworkBundle:Form:form_row.html.php", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\framework-bundle/Resources/views/Form/form_row.html.php");
     }
 }

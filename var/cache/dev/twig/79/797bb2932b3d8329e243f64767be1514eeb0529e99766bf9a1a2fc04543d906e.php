@@ -198,6 +198,6 @@ class __TwigTemplate_924734b3fe7da9bb55c43751bdc18459476cb60fd3fcbcef0e7f056cfb0
         })|raw }}
     </div>
 {% endif %}
-", "TwigBundle:Exception:trace.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\twig-bundle/Resources/views/Exception/trace.html.twig");
+", "TwigBundle:Exception:trace.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\twig-bundle/Resources/views/Exception/trace.html.twig");
     }
 }
