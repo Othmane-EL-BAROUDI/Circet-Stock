@@ -76,6 +76,7 @@
         }
     },
     "require-dev": {
-        "symfony/maker-bundle": "^1.35"
+        "symfony/maker-bundle": "^1.35",
+        "symfony/var-dumper": "4.3.*"
     }
 }

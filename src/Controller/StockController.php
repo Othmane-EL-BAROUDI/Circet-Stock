@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controller;
+
 use App\Entity\Machine;
 use App\Form\MachineFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -15,7 +16,7 @@ class StockController extends AbstractController
     /**
      * @Route("/Stock" , name="Stock")
      */
-    public function Stock(Request $request , EntityManagerInterface $entityManager): Response
+    public function Stock(Request $request, EntityManagerInterface $entityManager): Response
     {
         $entityManager = $this->getDoctrine()->getManager();
         $results = $entityManager->getRepository(Machine::class)->findAll();
@@ -24,13 +25,14 @@ class StockController extends AbstractController
         $machine = new Machine();
         $form = $this->createForm(MachineFormType::class, $machine);
         $form->handleRequest($request);
-        if(  $form->isSubmitted()  && $form->isValid()){
+        if ($form->isSubmitted()  && $form->isValid()) {
             $newItem = $form->getData();
             $entityManager->persist($newItem);
             $entityManager->flush();
             return $this->redirectToRoute('Stock');
         }
-        
+
+
         return $this->render('Pages/Stock.html.twig', [
             'userInfo' => $user,
             'form' => $form->createView(),
@@ -38,7 +40,7 @@ class StockController extends AbstractController
         ]);
     }
 
-     /**
+    /**
      * @Route("/stockView/{id}" , name="stockView")
      */
     public function stockView($id): Response
@@ -56,17 +58,16 @@ class StockController extends AbstractController
     /**
      * @Route("/Stock/Remove/{id}" , name="StockRemove")
      */
-    public function PermissionDelete( EntityManagerInterface $entityManager, $id): Response
-    {   
+    public function PermissionDelete(EntityManagerInterface $entityManager, $id): Response
+    {
         $entityManager = $this->getDoctrine()->getManager();
         $stock = $entityManager->getRepository(Machine::class)->find($id);
         $entityManager->remove($stock);
         $entityManager->flush();
         $this->addFlash(
             'delete',
-            sprintf(' " %s - %s " deleted successfully.', $stock->getModel()->getMarque()->getMarqueName() ,$stock->getModel()->getModelName())
-         );
+            sprintf(' " %s - %s " deleted successfully.', $stock->getModel()->getMarque()->getMarqueName(), $stock->getModel()->getModelName())
+        );
         return $this->redirectToRoute('Stock');
-
     }
 }
