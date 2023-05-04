@@ -241,7 +241,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
               </a>
               <span class=\"tooltip\">Home</span>
           </li>
-           {% if userInfo.roles[0]== \"ROLE_ADMIN\" %} 
+           {% if userInfo.roles[0] == \"ROLE_ADMIN\" %} 
           
            <li> 
               <a href=\"{{path('Dashboard')}}\">

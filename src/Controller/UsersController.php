@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Controller;
-use App\Entity\Permission;
 use App\Entity\Role;
 use App\Entity\User;
 use App\Form\UserFormType;
@@ -19,7 +18,7 @@ class UsersController extends AbstractController
      */
     public function Users(Request $request , EntityManagerInterface $entityManager,UserPasswordEncoderInterface $encoder): Response
     {
-       
+        
         $entityManager = $this->getDoctrine()->getManager();
         $users = $entityManager->getRepository(User::class)->findAll();
         $roles = $entityManager->getRepository(Role::class)->findAll();
@@ -33,6 +32,8 @@ class UsersController extends AbstractController
             $newUser = $form->getData();
             $encoded = $encoder->encodePassword($Nuser, $newUser->getPassword());
             $newUser->setPassword($encoded);
+            $selectedRole = $form->get('roles')->getData();
+            $newUser->addRole($selectedRole->getRoleName());
             $entityManager->persist($newUser);
             $newUser->setEnabled(true);
             $entityManager->flush();
