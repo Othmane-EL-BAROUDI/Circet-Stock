@@ -39,16 +39,20 @@ return [
                     .'|([^/]++)(*:65)'
                     .'|Remove/([^/]++)(*:87)'
                 .')'
-                .'|/stockView/([^/]++)(*:114)'
-                .'|/Stock/Remove/([^/]++)(*:144)'
+                .'|/Role/(?'
+                    .'|Edit/([^/]++)(*:117)'
+                    .'|Remove/([^/]++)(*:140)'
+                .')'
+                .'|/stockView/([^/]++)(*:168)'
+                .'|/Stock/Remove/([^/]++)(*:198)'
                 .'|/User/(?'
-                    .'|([^/]++)(*:169)'
-                    .'|Remove/([^/]++)(*:192)'
-                    .'|Edit/([^/]++)(*:213)'
+                    .'|([^/]++)(*:223)'
+                    .'|Remove/([^/]++)(*:246)'
+                    .'|Edit/([^/]++)(*:267)'
                 .')'
                 .'|/re(?'
-                    .'|gister/confirm/([^/]++)(*:251)'
-                    .'|setting/reset/([^/]++)(*:281)'
+                    .'|gister/confirm/([^/]++)(*:305)'
+                    .'|setting/reset/([^/]++)(*:335)'
                 .')'
             .')/?$}sDu',
     ],
@@ -56,13 +60,15 @@ return [
         35 => [[['_route' => '_twig_error_test', '_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
         65 => [[['_route' => 'PermissionUpdate', '_controller' => 'App\\Controller\\PermissionController::PermissionUpdate'], ['id'], null, null, false, true, null]],
         87 => [[['_route' => 'PermissionRemove', '_controller' => 'App\\Controller\\PermissionController::PermissionDelete'], ['id'], null, null, false, true, null]],
-        114 => [[['_route' => 'stockView', '_controller' => 'App\\Controller\\StockController::stockView'], ['id'], null, null, false, true, null]],
-        144 => [[['_route' => 'StockRemove', '_controller' => 'App\\Controller\\StockController::PermissionDelete'], ['id'], null, null, false, true, null]],
-        169 => [[['_route' => 'UserView', '_controller' => 'App\\Controller\\UsersController::UserView'], ['id'], null, null, false, true, null]],
-        192 => [[['_route' => 'UserRemove', '_controller' => 'App\\Controller\\UsersController::UserDelete'], ['id'], null, null, false, true, null]],
-        213 => [[['_route' => 'UserUpdate', '_controller' => 'App\\Controller\\UsersController::UserUpdate'], ['id'], null, null, false, true, null]],
-        251 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
-        281 => [
+        117 => [[['_route' => 'RoleUpdate', '_controller' => 'App\\Controller\\RoleController::RoleUpdate'], ['id'], null, null, false, true, null]],
+        140 => [[['_route' => 'RoleRemove', '_controller' => 'App\\Controller\\RoleController::RoleDelete'], ['id'], null, null, false, true, null]],
+        168 => [[['_route' => 'stockView', '_controller' => 'App\\Controller\\StockController::stockView'], ['id'], null, null, false, true, null]],
+        198 => [[['_route' => 'StockRemove', '_controller' => 'App\\Controller\\StockController::PermissionDelete'], ['id'], null, null, false, true, null]],
+        223 => [[['_route' => 'UserView', '_controller' => 'App\\Controller\\UsersController::UserView'], ['id'], null, null, false, true, null]],
+        246 => [[['_route' => 'UserRemove', '_controller' => 'App\\Controller\\UsersController::UserDelete'], ['id'], null, null, false, true, null]],
+        267 => [[['_route' => 'UserUpdate', '_controller' => 'App\\Controller\\UsersController::UserUpdate'], ['id'], null, null, false, true, null]],
+        305 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
+        335 => [
             [['_route' => 'fos_user_resetting_reset', '_controller' => 'fos_user.resetting.controller:resetAction'], ['token'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

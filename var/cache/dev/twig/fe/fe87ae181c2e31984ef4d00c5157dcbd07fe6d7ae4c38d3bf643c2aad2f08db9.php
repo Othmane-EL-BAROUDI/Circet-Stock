@@ -71,6 +71,7 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
         echo twig_escape_filter($this->env, (isset($context["Title"]) || array_key_exists("Title", $context) ? $context["Title"] : (function () { throw new RuntimeError('Variable "Title" does not exist.', 2, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["Title"]) || array_key_exists("Title", $context) ? $context["Title"] : (function () { throw new RuntimeError('Variable "Title" does not exist.', 2, $this->source); })()), "html", null, true);
         echo "
 \t";
         
@@ -177,13 +178,13 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
     public function getDebugInfo()
     {
-        return array (  159 => 36,  152 => 35,  133 => 23,  129 => 22,  122 => 18,  117 => 16,  110 => 12,  107 => 11,  100 => 10,  89 => 6,  82 => 5,  67 => 2,  60 => 35,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  160 => 36,  153 => 35,  134 => 23,  130 => 22,  123 => 18,  118 => 16,  111 => 12,  108 => 11,  101 => 10,  90 => 6,  83 => 5,  67 => 2,  60 => 35,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<title>
-\t{% block title %}{{Title}}
+\t{% block title %}{{Title}}{{Title}}
 \t{% endblock %}
 </title>
 {% block stylesheets %}

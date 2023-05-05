@@ -8,6 +8,7 @@
 {% endblock %}
 {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
+
 	<div class="home_content">
 		<div class="modal fade" id="editRole" tabindex="-1" role="dialog" aria-labelledby="editRole" aria-hidden="true">
 			<div class="modal-dialog" role="document">
@@ -39,17 +40,46 @@
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
+					{{ form_start(form) }}
 					<div class="modal-body">
-						<label for="name">Role name :</label>
-						<input placeholder="@role_name" type="text">
+						{{ form_widget(form) }}
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="close_button1">Add role</button>
+						<button type="submit" class="close_button1">Add role</button>
 					</div>
+					{{ form_end(form) }}
 				</div>
 			</div>
 
 		</div>
+
+		{% for flash_message in app.session.flashbag.get('success') %}
+			<div class="alert  alert-success fade show" role="alert">
+				<strong>Success!</strong>
+				{{flash_message}}
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		{% endfor %}
+		{% for flash_message in app.session.flashbag.get('update') %}
+			<div class="alert  alert-info fade show" role="alert">
+				<strong>Success!</strong>
+				{{flash_message}}
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		{% endfor %}
+		{% for flash_message in app.session.flashbag.get('delete') %}
+			<div class="alert  alert-danger fade show" role="alert">
+				{{flash_message}}
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		{% endfor %}
+
 		<div class="text">Role</div>
 		<button type="button" class="new" data-toggle="modal" data-target="#addRole">Add new role</button>
 		<div class="main_content">
@@ -60,6 +90,8 @@
 				</button>
 			</div>
 		</div>
+
+
 		<div class="CContent">
 			<div class="mainC">
 				<table class="table align-middle mb-0 bg-white">
@@ -78,7 +110,7 @@
 
 								<td class="actions">
 
-									<a href="#">
+									<a href="Role/Edit/{{role.id}}">
 										<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 " style=" border: #007bff solid 1px; ">
 											<i class='bx bx-edit bx-xs'></i>
 											Edit
@@ -104,7 +136,7 @@
 											<label style="  font-weight: bold; color: #f9a826; ">{{role.roleName}}</label>
 										</div>
 										<div class="modal-footer">
-											<a href="#">
+											<a href="Role/Remove/{{role.id}}">
 												<button type="button" class="bn3 btn btn-sm h-4" style=" border: #dc3545 solid 1px;">Delete</button>
 											</a>
 											<button type="button" class="btn btn-sm  btn-secondary" data-dismiss="modal">Close</button>

@@ -49,6 +49,7 @@ class UserFormType extends AbstractType
                 'required' => true,
                 'class' => Permission::class,
                 'choice_label' => 'permission_name',
+                'multiple' => true,
             ])
 
             // ->add('lastLogin')

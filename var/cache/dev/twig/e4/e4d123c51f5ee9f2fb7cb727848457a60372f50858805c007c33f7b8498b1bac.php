@@ -56,7 +56,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 ";
         // line 10
         $this->displayBlock('body', $context, $blocks);
-        // line 123
+        // line 155
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -103,192 +103,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 11
-        echo "\t<div class=\"home_content\">
-\t\t<div class=\"modal fade\" id=\"editRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"editRole\" aria-hidden=\"true\">
-\t\t\t<div class=\"modal-dialog\" role=\"document\">
-\t\t\t\t<div class=\"modal-content\">
-\t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Edit role</h5>
-\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
-\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
-\t\t\t\t\t\t</button>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t<label for=\"name\">Role name:</label>
-\t\t\t\t\t\t<input placeholder=\"@role_name\" type=\"text\">
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
-\t\t\t\t\t\t<button type=\"button\" class=\"close_button\">Save changes</button>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t</div>
-
-\t\t<div class=\"modal fade\" id=\"addRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addRole\" aria-hidden=\"true\">
-\t\t\t<div class=\"modal-dialog\" role=\"document\">
-\t\t\t\t<div class=\"modal-content\">
-\t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Add role</h5>
-\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
-\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
-\t\t\t\t\t\t</button>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t<label for=\"name\">Role name :</label>
-\t\t\t\t\t\t<input placeholder=\"@role_name\" type=\"text\">
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"button\" class=\"close_button1\">Add role</button>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t</div>
-
-\t\t</div>
-\t\t<div class=\"text\">Role</div>
-\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Add new role</button>
-\t\t<div class=\"main_content\">
-\t\t\t<div class=\"sort\">
-\t\t\t\t<input type=\"text\" placeholder=\"Search\">
-\t\t\t\t<button>
-\t\t\t\t\tSearch
-\t\t\t\t</button>
-\t\t\t</div>
-\t\t</div>
-\t\t<div class=\"CContent\">
-\t\t\t<div class=\"mainC\">
-\t\t\t\t<table class=\"table align-middle mb-0 bg-white\">
-\t\t\t\t\t<thead class=\"bg-light\">
-\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<th>Rôle</th>
-\t\t\t\t\t\t\t<th style=\"text-align:center;\">Actions</th>
-\t\t\t\t\t\t</tr>
-\t\t\t\t\t</thead>
-\t\t\t\t\t<tbody>
-\t\t\t\t\t\t";
-        // line 73
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["allRoles"]) || array_key_exists("allRoles", $context) ? $context["allRoles"] : (function () { throw new RuntimeError('Variable "allRoles" does not exist.', 73, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-            // line 74
-            echo "\t\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t\t<td class=\"textperm\">
-\t\t\t\t\t\t\t\t\t";
-            // line 76
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "roleName", [], "any", false, false, false, 76), "html", null, true);
-            echo "
-\t\t\t\t\t\t\t\t</td>
-
-\t\t\t\t\t\t\t\t<td class=\"actions\">
-
-\t\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
-\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\tEdit
-\t\t\t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal";
-            // line 87
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "id", [], "any", false, false, false, 87), "html", null, true);
-            echo "\" style=\" border: #dc3545 solid 1px;\">
-\t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\tDelete
-\t\t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t</tr>
-\t\t\t\t\t\t\t<div class=\"modal fade\" id=\"exampleModal";
-            // line 93
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "id", [], "any", false, false, false, 93), "html", null, true);
-            echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
-\t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
-\t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
-\t\t\t\t\t\t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Delete confirmation</h5>
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
-\t\t\t\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
-\t\t\t\t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t\t\t\t\t\tDo you Realy want to delete role :
-\t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">";
-            // line 104
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "roleName", [], "any", false, false, false, 104), "html", null, true);
-            echo "</label>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Delete</button>
-\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Close</button>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 116
-        echo "\t\t\t\t\t</tbody>
-\t\t\t\t</table>
-\t\t\t</div>
-\t\t</div>
-
-\t</div>
-";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-    }
-
-    // line 123
-    public function block_javascripts($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
-
-        // line 124
-        echo "\t<script src=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
-        echo "\"></script>
-\t<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
-\t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
-\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
-";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-    }
-
-    public function getTemplateName()
-    {
-        return "Pages/Role.html.twig";
-    }
-
-    public function isTraitable()
-    {
-        return false;
-    }
-
-    public function getDebugInfo()
-    {
-        return array (  253 => 124,  246 => 123,  233 => 116,  215 => 104,  201 => 93,  192 => 87,  178 => 76,  174 => 74,  170 => 73,  106 => 11,  99 => 10,  88 => 6,  81 => 5,  67 => 2,  60 => 123,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
-    }
-
-    public function getSourceContext()
-    {
-        return new Source("<title>
-\t{% block title %}Circet-Role
-\t{% endblock %}
-</title>
-{% block stylesheets %}
-\t<link rel=\"stylesheet\" href=\"{{asset('css/Role.css')}}\">
-\t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
-{% endblock %}
-{{ include('Pages/sidebar.html.twig') }}
-{% block body %}
+        echo "
 \t<div class=\"home_content\">
 \t\t<div class=\"modal fade\" id=\"editRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"editRole\" aria-hidden=\"true\">
 \t\t\t<div class=\"modal-dialog\" role=\"document\">
@@ -320,17 +135,92 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t</button>
 \t\t\t\t\t</div>
+\t\t\t\t\t";
+        // line 43
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 43, $this->source); })()), 'form_start');
+        echo "
 \t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t<label for=\"name\">Role name :</label>
-\t\t\t\t\t\t<input placeholder=\"@role_name\" type=\"text\">
+\t\t\t\t\t\t";
+        // line 45
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 45, $this->source); })()), 'widget');
+        echo "
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"button\" class=\"close_button1\">Add role</button>
+\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Add role</button>
 \t\t\t\t\t</div>
+\t\t\t\t\t";
+        // line 50
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 50, $this->source); })()), 'form_end');
+        echo "
 \t\t\t\t</div>
 \t\t\t</div>
 
 \t\t</div>
+
+\t\t";
+        // line 56
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 56, $this->source); })()), "session", [], "any", false, false, false, 56), "flashbag", [], "any", false, false, false, 56), "get", [0 => "success"], "method", false, false, false, 56));
+        foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
+            // line 57
+            echo "\t\t\t<div class=\"alert  alert-success fade show\" role=\"alert\">
+\t\t\t\t<strong>Success!</strong>
+\t\t\t\t";
+            // line 59
+            echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
+            echo "
+\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
+\t\t\t\t</button>
+\t\t\t</div>
+\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 65
+        echo "\t\t";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 65, $this->source); })()), "session", [], "any", false, false, false, 65), "flashbag", [], "any", false, false, false, 65), "get", [0 => "update"], "method", false, false, false, 65));
+        foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
+            // line 66
+            echo "\t\t\t<div class=\"alert  alert-info fade show\" role=\"alert\">
+\t\t\t\t<strong>Success!</strong>
+\t\t\t\t";
+            // line 68
+            echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
+            echo "
+\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
+\t\t\t\t</button>
+\t\t\t</div>
+\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 74
+        echo "\t\t";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 74, $this->source); })()), "session", [], "any", false, false, false, 74), "flashbag", [], "any", false, false, false, 74), "get", [0 => "delete"], "method", false, false, false, 74));
+        foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
+            // line 75
+            echo "\t\t\t<div class=\"alert  alert-danger fade show\" role=\"alert\">
+\t\t\t\t";
+            // line 76
+            echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
+            echo "
+\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
+\t\t\t\t</button>
+\t\t\t</div>
+\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 82
+        echo "
 \t\t<div class=\"text\">Role</div>
 \t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Add new role</button>
 \t\t<div class=\"main_content\">
@@ -341,6 +231,232 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t\t</button>
 \t\t\t</div>
 \t\t</div>
+
+
+\t\t<div class=\"CContent\">
+\t\t\t<div class=\"mainC\">
+\t\t\t\t<table class=\"table align-middle mb-0 bg-white\">
+\t\t\t\t\t<thead class=\"bg-light\">
+\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t<th>Rôle</th>
+\t\t\t\t\t\t\t<th style=\"text-align:center;\">Actions</th>
+\t\t\t\t\t\t</tr>
+\t\t\t\t\t</thead>
+\t\t\t\t\t<tbody>
+\t\t\t\t\t\t";
+        // line 105
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["allRoles"]) || array_key_exists("allRoles", $context) ? $context["allRoles"] : (function () { throw new RuntimeError('Variable "allRoles" does not exist.', 105, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
+            // line 106
+            echo "\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t<td class=\"textperm\">
+\t\t\t\t\t\t\t\t\t";
+            // line 108
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "roleName", [], "any", false, false, false, 108), "html", null, true);
+            echo "
+\t\t\t\t\t\t\t\t</td>
+
+\t\t\t\t\t\t\t\t<td class=\"actions\">
+
+\t\t\t\t\t\t\t\t\t<a href=\"Role/Edit/";
+            // line 113
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "id", [], "any", false, false, false, 113), "html", null, true);
+            echo "\">
+\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
+\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
+\t\t\t\t\t\t\t\t\t\t\tEdit
+\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal";
+            // line 119
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "id", [], "any", false, false, false, 119), "html", null, true);
+            echo "\" style=\" border: #dc3545 solid 1px;\">
+\t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
+\t\t\t\t\t\t\t\t\t\tDelete
+\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t<div class=\"modal fade\" id=\"exampleModal";
+            // line 125
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "id", [], "any", false, false, false, 125), "html", null, true);
+            echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+\t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
+\t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
+\t\t\t\t\t\t\t\t\t\t<div class=\"modal-header\">
+\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Delete confirmation</h5>
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+\t\t\t\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
+\t\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
+\t\t\t\t\t\t\t\t\t\t\tDo you Realy want to delete role :
+\t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">";
+            // line 136
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "roleName", [], "any", false, false, false, 136), "html", null, true);
+            echo "</label>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"Role/Remove/";
+            // line 139
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "id", [], "any", false, false, false, 139), "html", null, true);
+            echo "\">
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Delete</button>
+\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Close</button>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 148
+        echo "\t\t\t\t\t</tbody>
+\t\t\t\t</table>
+\t\t\t</div>
+\t\t</div>
+
+\t</div>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 155
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 156
+        echo "\t<script src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
+        echo "\"></script>
+\t<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
+\t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
+\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    public function getTemplateName()
+    {
+        return "Pages/Role.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  337 => 156,  330 => 155,  317 => 148,  302 => 139,  296 => 136,  282 => 125,  273 => 119,  264 => 113,  256 => 108,  252 => 106,  248 => 105,  223 => 82,  211 => 76,  208 => 75,  203 => 74,  191 => 68,  187 => 66,  182 => 65,  170 => 59,  166 => 57,  162 => 56,  153 => 50,  145 => 45,  140 => 43,  106 => 11,  99 => 10,  88 => 6,  81 => 5,  67 => 2,  60 => 155,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("<title>
+\t{% block title %}Circet-Role
+\t{% endblock %}
+</title>
+{% block stylesheets %}
+\t<link rel=\"stylesheet\" href=\"{{asset('css/Role.css')}}\">
+\t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
+{% endblock %}
+{{ include('Pages/sidebar.html.twig') }}
+{% block body %}
+
+\t<div class=\"home_content\">
+\t\t<div class=\"modal fade\" id=\"editRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"editRole\" aria-hidden=\"true\">
+\t\t\t<div class=\"modal-dialog\" role=\"document\">
+\t\t\t\t<div class=\"modal-content\">
+\t\t\t\t\t<div class=\"modal-header\">
+\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Edit role</h5>
+\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
+\t\t\t\t\t\t</button>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"modal-body\">
+\t\t\t\t\t\t<label for=\"name\">Role name:</label>
+\t\t\t\t\t\t<input placeholder=\"@role_name\" type=\"text\">
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"modal-footer\">
+\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
+\t\t\t\t\t\t<button type=\"button\" class=\"close_button\">Save changes</button>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+
+\t\t<div class=\"modal fade\" id=\"addRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addRole\" aria-hidden=\"true\">
+\t\t\t<div class=\"modal-dialog\" role=\"document\">
+\t\t\t\t<div class=\"modal-content\">
+\t\t\t\t\t<div class=\"modal-header\">
+\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Add role</h5>
+\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
+\t\t\t\t\t\t</button>
+\t\t\t\t\t</div>
+\t\t\t\t\t{{ form_start(form) }}
+\t\t\t\t\t<div class=\"modal-body\">
+\t\t\t\t\t\t{{ form_widget(form) }}
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"modal-footer\">
+\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Add role</button>
+\t\t\t\t\t</div>
+\t\t\t\t\t{{ form_end(form) }}
+\t\t\t\t</div>
+\t\t\t</div>
+
+\t\t</div>
+
+\t\t{% for flash_message in app.session.flashbag.get('success') %}
+\t\t\t<div class=\"alert  alert-success fade show\" role=\"alert\">
+\t\t\t\t<strong>Success!</strong>
+\t\t\t\t{{flash_message}}
+\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
+\t\t\t\t</button>
+\t\t\t</div>
+\t\t{% endfor %}
+\t\t{% for flash_message in app.session.flashbag.get('update') %}
+\t\t\t<div class=\"alert  alert-info fade show\" role=\"alert\">
+\t\t\t\t<strong>Success!</strong>
+\t\t\t\t{{flash_message}}
+\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
+\t\t\t\t</button>
+\t\t\t</div>
+\t\t{% endfor %}
+\t\t{% for flash_message in app.session.flashbag.get('delete') %}
+\t\t\t<div class=\"alert  alert-danger fade show\" role=\"alert\">
+\t\t\t\t{{flash_message}}
+\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
+\t\t\t\t</button>
+\t\t\t</div>
+\t\t{% endfor %}
+
+\t\t<div class=\"text\">Role</div>
+\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Add new role</button>
+\t\t<div class=\"main_content\">
+\t\t\t<div class=\"sort\">
+\t\t\t\t<input type=\"text\" placeholder=\"Search\">
+\t\t\t\t<button>
+\t\t\t\t\tSearch
+\t\t\t\t</button>
+\t\t\t</div>
+\t\t</div>
+
+
 \t\t<div class=\"CContent\">
 \t\t\t<div class=\"mainC\">
 \t\t\t\t<table class=\"table align-middle mb-0 bg-white\">
@@ -359,7 +475,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 
 \t\t\t\t\t\t\t\t<td class=\"actions\">
 
-\t\t\t\t\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t\t\t\t<a href=\"Role/Edit/{{role.id}}\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
 \t\t\t\t\t\t\t\t\t\t\tEdit
@@ -385,7 +501,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">{{role.roleName}}</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"Role/Remove/{{role.id}}\">
 \t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Delete</button>
 \t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Close</button>
@@ -407,6 +523,6 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
 {% endblock %}
-", "Pages/Role.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\Role.html.twig");
+", "Pages/Role.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\Role.html.twig");
     }
 }

@@ -52,7 +52,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 9
         $this->displayBlock('body', $context, $blocks);
-        // line 153
+        // line 152
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -153,20 +153,19 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         echo "
 \t\t\t\t</div>
 \t\t\t</div>
-
 \t\t</div>
 
 
 \t\t";
-        // line 57
+        // line 56
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 57, $this->source); })()), "session", [], "any", false, false, false, 57), "flashbag", [], "any", false, false, false, 57), "get", [0 => "success"], "method", false, false, false, 57));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 56, $this->source); })()), "session", [], "any", false, false, false, 56), "flashbag", [], "any", false, false, false, 56), "get", [0 => "success"], "method", false, false, false, 56));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 58
+            // line 57
             echo "\t\t\t<div class=\"alert  alert-success fade show\" role=\"alert\">
 \t\t\t\t<strong>Success!</strong>
 \t\t\t\t";
-            // line 60
+            // line 59
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
@@ -178,16 +177,16 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 66
+        // line 65
         echo "\t\t";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 66, $this->source); })()), "session", [], "any", false, false, false, 66), "flashbag", [], "any", false, false, false, 66), "get", [0 => "update"], "method", false, false, false, 66));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 65, $this->source); })()), "session", [], "any", false, false, false, 65), "flashbag", [], "any", false, false, false, 65), "get", [0 => "update"], "method", false, false, false, 65));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 67
+            // line 66
             echo "\t\t\t<div class=\"alert  alert-info fade show\" role=\"alert\">
 \t\t\t\t<strong>Success!</strong>
 \t\t\t\t";
-            // line 69
+            // line 68
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
@@ -199,15 +198,15 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 75
+        // line 74
         echo "\t\t";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 75, $this->source); })()), "session", [], "any", false, false, false, 75), "flashbag", [], "any", false, false, false, 75), "get", [0 => "delete"], "method", false, false, false, 75));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 74, $this->source); })()), "session", [], "any", false, false, false, 74), "flashbag", [], "any", false, false, false, 74), "get", [0 => "delete"], "method", false, false, false, 74));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 76
+            // line 75
             echo "\t\t\t<div class=\"alert  alert-danger fade show\" role=\"alert\">
 \t\t\t\t";
-            // line 77
+            // line 76
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
@@ -219,7 +218,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 83
+        // line 82
         echo "\t\t<div class=\"text\">Permission</div>
 \t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Add new permission</button>
 \t\t<div class=\"main_content\">
@@ -241,23 +240,23 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 \t\t\t\t\t</thead>
 \t\t\t\t\t<tbody>
 \t\t\t\t\t\t";
-        // line 103
+        // line 102
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["allPermissions"]) || array_key_exists("allPermissions", $context) ? $context["allPermissions"] : (function () { throw new RuntimeError('Variable "allPermissions" does not exist.', 103, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["allPermissions"]) || array_key_exists("allPermissions", $context) ? $context["allPermissions"] : (function () { throw new RuntimeError('Variable "allPermissions" does not exist.', 102, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["permission"]) {
-            // line 104
+            // line 103
             echo "\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t\t<td class=\"textperm\">
 \t\t\t\t\t\t\t\t\t";
-            // line 106
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 106), "html", null, true);
+            // line 105
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 105), "html", null, true);
             echo "
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t<td class=\"actions\">
 
 \t\t\t\t\t\t\t\t\t<a href=\"/Permission/";
-            // line 110
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 110), "html", null, true);
+            // line 109
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 109), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
@@ -266,8 +265,8 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 \t\t\t\t\t\t\t\t\t</a>
 
 \t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModal";
-            // line 117
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 117), "html", null, true);
+            // line 116
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 116), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
 \t\t\t\t\t\t\t\t\t\tDelete
@@ -277,8 +276,8 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t</tr>
 \t\t\t\t\t\t\t<div class=\"modal fade\" id=\"exampleModal";
-            // line 125
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 125), "html", null, true);
+            // line 124
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 124), "html", null, true);
             echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
 \t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
 \t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
@@ -291,14 +290,14 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t\t\t\t\t\tDo you Realy want to delete permission :
 \t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">";
-            // line 136
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 136), "html", null, true);
+            // line 135
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 135), "html", null, true);
             echo "</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"Permission/Remove/";
-            // line 139
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 139), "html", null, true);
+            // line 138
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 138), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Delete</button>
 \t\t\t\t\t\t\t\t\t\t\t</a>
@@ -312,7 +311,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['permission'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 148
+        // line 147
         echo "\t\t\t\t\t</tbody>
 \t\t\t\t</table>
 \t\t\t</div>
@@ -324,14 +323,14 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 
     }
 
-    // line 153
+    // line 152
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 154
+        // line 153
         echo "<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -350,7 +349,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 
     public function getDebugInfo()
     {
-        return array (  335 => 154,  328 => 153,  316 => 148,  301 => 139,  295 => 136,  281 => 125,  270 => 117,  260 => 110,  253 => 106,  249 => 104,  245 => 103,  223 => 83,  211 => 77,  208 => 76,  203 => 75,  191 => 69,  187 => 67,  182 => 66,  170 => 60,  166 => 58,  162 => 57,  152 => 50,  144 => 45,  133 => 37,  102 => 10,  95 => 9,  84 => 6,  77 => 5,  63 => 2,  56 => 153,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  334 => 153,  327 => 152,  315 => 147,  300 => 138,  294 => 135,  280 => 124,  269 => 116,  259 => 109,  252 => 105,  248 => 103,  244 => 102,  222 => 82,  210 => 76,  207 => 75,  202 => 74,  190 => 68,  186 => 66,  181 => 65,  169 => 59,  165 => 57,  161 => 56,  152 => 50,  144 => 45,  133 => 37,  102 => 10,  95 => 9,  84 => 6,  77 => 5,  63 => 2,  56 => 152,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -407,7 +406,6 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 \t\t\t\t\t{{ form_end(form) }}
 \t\t\t\t</div>
 \t\t\t</div>
-
 \t\t</div>
 
 
@@ -512,6 +510,6 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
 <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>{% endblock %}
-", "Pages/Permission.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\Permission.html.twig");
+", "Pages/Permission.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\Permission.html.twig");
     }
 }

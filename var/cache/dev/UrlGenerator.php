@@ -13,6 +13,8 @@ return [
     'PermissionRemove' => [['id'], ['_controller' => 'App\\Controller\\PermissionController::PermissionDelete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Permission/Remove']], [], []],
     'Profile' => [[], ['_controller' => 'App\\Controller\\ProfileController::ForgetPassword'], [], [['text', '/Profile']], [], []],
     'Role' => [[], ['_controller' => 'App\\Controller\\RoleController::Role'], [], [['text', '/Role']], [], []],
+    'RoleUpdate' => [['id'], ['_controller' => 'App\\Controller\\RoleController::RoleUpdate'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Role/Edit']], [], []],
+    'RoleRemove' => [['id'], ['_controller' => 'App\\Controller\\RoleController::RoleDelete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Role/Remove']], [], []],
     'redirect_after_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::redirectAfterLogin'], [], [['text', '/redirect-after-login']], [], []],
     'Stock' => [[], ['_controller' => 'App\\Controller\\StockController::Stock'], [], [['text', '/Stock']], [], []],
     'stockView' => [['id'], ['_controller' => 'App\\Controller\\StockController::stockView'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/stockView']], [], []],

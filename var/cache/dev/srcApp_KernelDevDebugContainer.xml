@@ -346,6 +346,9 @@
     <service id="App\Form\PermissionFormType" class="App\Form\PermissionFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\RoleFormType" class="App\Form\RoleFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\UserFormType" class="App\Form\UserFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -710,6 +713,7 @@
         <argument>App\Form\MachineFormType</argument>
         <argument>App\Form\ModelFormType</argument>
         <argument>App\Form\PermissionFormType</argument>
+        <argument>App\Form\RoleFormType</argument>
         <argument>App\Form\UserFormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
@@ -1004,7 +1008,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.yD1u3tz"/>
+      <argument type="service" id=".service_locator.1cTjxSG"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4876,6 +4880,8 @@
     <service id=".abstract.instanceof.App\Form\ModelFormType" class="App\Form\ModelFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PermissionFormType" class="App\Form\PermissionFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\PermissionFormType" class="App\Form\PermissionFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RoleFormType" class="App\Form\RoleFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\RoleFormType" class="App\Form\RoleFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserFormType" class="App\Form\UserFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UserFormType" class="App\Form\UserFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AffectationRepository" class="App\Repository\AffectationRepository" autowire="true" abstract="true"/>
@@ -5167,7 +5173,7 @@
         <argument key="entityManager" type="service" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.YGHrHND" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.nssC5_7" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\DashboardController::Dashboard" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5176,6 +5182,8 @@
         <argument key="App\Controller\PermissionController::PermissionDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\PermissionController::PermissionUpdate" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\RoleController::Role" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\RoleController::RoleDelete" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\RoleController::RoleUpdate" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController::PermissionDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController::Stock" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController::UserDelete" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5188,6 +5196,8 @@
         <argument key="App\Controller\PermissionController:PermissionDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\PermissionController:PermissionUpdate" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\RoleController:Role" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\RoleController:RoleDelete" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\RoleController:RoleUpdate" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController:PermissionDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController:Stock" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController:UserDelete" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5255,12 +5265,13 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.yD1u3tz" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.1cTjxSG" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\MachineFormType" type="service" id="App\Form\MachineFormType"/>
         <argument key="App\Form\ModelFormType" type="service" id="App\Form\ModelFormType"/>
         <argument key="App\Form\PermissionFormType" type="service" id="App\Form\PermissionFormType"/>
+        <argument key="App\Form\RoleFormType" type="service" id="App\Form\RoleFormType"/>
         <argument key="App\Form\UserFormType" type="service" id="App\Form\UserFormType"/>
         <argument key="FOS\UserBundle\Form\Type\ChangePasswordFormType" type="service" id="fos_user.change_password.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\ProfileFormType" type="service" id="fos_user.profile.form.type"/>
@@ -5519,12 +5530,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.YGHrHND"/>
+      <argument type="service" id=".service_locator.nssC5_7"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.YGHrHND"/>
+      <argument type="service" id=".service_locator.nssC5_7"/>
     </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.aPyppP2"/>
@@ -5844,7 +5855,7 @@
     <service id="mailer" alias="swiftmailer.mailer.default" public="true"/>
     <service id="sensio_framework_extra.converter.doctrine.orm.expression_language" alias="sensio_framework_extra.converter.doctrine.orm.expression_language.default" public="false"/>
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.YGHrHND"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.nssC5_7"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>
