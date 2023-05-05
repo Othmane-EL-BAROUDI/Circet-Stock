@@ -156,7 +156,7 @@ a{
     text-align: left;
 }
 .mainC{
-    height: 570px !important;
+    max-height: 510px !important;
     width: 50%;
     margin-left: 5%;
     margin-top: 1%;
@@ -198,6 +198,7 @@ a{
  }
  .bn3{
     color: #dc3545;
+    background-color: white;
  }
  .bn1:hover{
     background-color: #28a745;
@@ -210,4 +211,10 @@ a{
  .bn3:hover{
     background-color: #dc3545;
     color: white;
+ }
+ .save{
+    border: #dc3545 1px solid;
+ }
+ .modal{
+   margin-top: 10%;
  }

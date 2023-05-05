@@ -4,7 +4,7 @@
     width: calc(100% - 78px);
     left: 78px;
     transition:  all 0.5s ease;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 button:focus,input:focus,select:focus{
     outline: none;
@@ -21,13 +21,18 @@ button:focus,input:focus,select:focus{
  .card input{
     width: 100%;
     padding:5px 0 5px 15px;
-
+    margin-bottom: 15px;
+ }
+ .card select{
+    width: 100%;
+    padding:10px 0 5px 15px;
+    margin-bottom: 18px;
  }
  .card label{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:#f9a826  ;
     font-weight: bold;
-    margin-bottom: 10px;
+    
  }
  .headline{
      display: block;
@@ -54,3 +59,19 @@ button:focus,input:focus,select:focus{
     font-weight: bolder;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.card-body{
+    overflow-y: scroll;
+    max-height: 640px;
+}
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#f9a826;
+  }

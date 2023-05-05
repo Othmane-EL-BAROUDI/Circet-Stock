@@ -52,7 +52,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 18
         $this->displayBlock('body', $context, $blocks);
-        // line 120
+        // line 119
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -151,8 +151,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t";
         }
         // line 39
-        echo "
-\t\t\t\t\t</ul>
+        echo "\t\t\t\t\t</ul>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"modal-footer close_button\">
 \t\t\t\t\t<button style=\"width: 120px;background: #f9a826; border:none; border-radius: 5px; color:white; padding: 2px 3px 2px 3px ;  cursor: pointer;\" type=\"button\" data-dismiss=\"modal\">Close</button>
@@ -170,8 +169,8 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t<div class=\"col-sm-4 rounded-left\" style=\"background-color: #f9a826; \">
 \t\t\t\t\t\t\t<div class=\"card-block text-center text-white mt-2\">
 \t\t\t\t\t\t\t\t<a class=\"back\" href=\"";
-        // line 57
-        echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 57, $this->source); })()), "html", null, true);
+        // line 56
+        echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 56, $this->source); })()), "html", null, true);
         echo "\">
 \t\t\t\t\t\t\t\t\t<i class='bx bx-chevron-left bx-lg'></i>
 \t\t\t\t\t\t\t\t</a>
@@ -184,15 +183,15 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t\t\t<div class=\"col-sm-6\">
 \t\t\t\t\t\t\t\t\t<p class=\"font-weight-bold\">Nom et prénom</p>
 \t\t\t\t\t\t\t\t\t<h6 class=\"text-muted\">";
-        // line 68
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 68, $this->source); })()), "username", [], "any", false, false, false, 68), "html", null, true);
+        // line 67
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 67, $this->source); })()), "username", [], "any", false, false, false, 67), "html", null, true);
         echo "</h6>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class=\"col-sm-6\">
 \t\t\t\t\t\t\t\t\t<p class=\"font-weight-bold\">Email</p>
 \t\t\t\t\t\t\t\t\t<h6 class=\"text-muted\">";
-        // line 72
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 72, $this->source); })()), "email", [], "any", false, false, false, 72), "html", null, true);
+        // line 71
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 71, $this->source); })()), "email", [], "any", false, false, false, 71), "html", null, true);
         echo "</h6>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
@@ -201,51 +200,51 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t\t\t<div class=\"col-sm-6\">
 \t\t\t\t\t\t\t\t\t<p class=\"font-weight-bold\">Matricule</p>
 \t\t\t\t\t\t\t\t\t<h6 class=\"text-muted\">";
-        // line 79
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 79, $this->source); })()), "matricule", [], "any", false, false, false, 79), "html", null, true);
+        // line 78
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 78, $this->source); })()), "matricule", [], "any", false, false, false, 78), "html", null, true);
         echo "</h6>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t";
-        // line 81
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 81, $this->source); })()), "roles", [], "any", false, false, false, 81), 0, [], "array", false, false, false, 81) != "ROLE_ADMIN")) {
-            // line 82
+        // line 80
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 80, $this->source); })()), "roles", [], "any", false, false, false, 80), 0, [], "array", false, false, false, 80) != "ROLE_ADMIN")) {
+            // line 81
             echo "\t\t\t\t\t\t\t\t\t<div class=\"col-sm-6\">
 \t\t\t\t\t\t\t\t\t\t<p class=\"font-weight-bold\">manager</p>
 \t\t\t\t\t\t\t\t\t\t<h6 class=\"text-muted\">
 \t\t\t\t\t\t\t\t\t\t\t";
-            // line 85
-            if (twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 85, $this->source); })()), "manager", [], "any", false, false, false, 85)) {
-                // line 86
+            // line 84
+            if (twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 84, $this->source); })()), "manager", [], "any", false, false, false, 84)) {
+                // line 85
                 echo "\t\t\t\t\t\t\t\t\t\t\t\t";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 86, $this->source); })()), "manager", [], "any", false, false, false, 86), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 85, $this->source); })()), "manager", [], "any", false, false, false, 85), "html", null, true);
                 echo "
 \t\t\t\t\t\t\t\t\t\t\t";
             } else {
-                // line 88
+                // line 87
                 echo "\t\t\t\t\t\t\t\t\t\t\t\tno manager
 \t\t\t\t\t\t\t\t\t\t\t";
             }
-            // line 90
+            // line 89
             echo "\t\t\t\t\t\t\t\t\t\t</h6>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t";
         }
-        // line 93
+        // line 92
         echo "\t\t\t\t\t\t\t</div>
 
 \t\t\t\t\t\t\t<div class=\"row mb-4\">
 \t\t\t\t\t\t\t\t<div class=\"col-sm-6\">
 \t\t\t\t\t\t\t\t\t<p class=\"font-weight-bold\">Job</p>
 \t\t\t\t\t\t\t\t\t<h6 class=\"text-muted\">";
-        // line 98
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 98, $this->source); })()), "job", [], "any", false, false, false, 98), "html", null, true);
+        // line 97
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 97, $this->source); })()), "job", [], "any", false, false, false, 97), "html", null, true);
         echo "</h6>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class=\"col-sm-6\">
 \t\t\t\t\t\t\t\t\t<p class=\"font-weight-bold\">Role</p>
 \t\t\t\t\t\t\t\t\t<h6 class=\"text-muted\">";
-        // line 102
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 102, $this->source); })()), "roles", [], "any", false, false, false, 102), 0, [], "array", false, false, false, 102), "html", null, true);
+        // line 101
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 101, $this->source); })()), "roles", [], "any", false, false, false, 101), 0, [], "array", false, false, false, 101), "html", null, true);
         echo "</h6>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
@@ -269,14 +268,14 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 
     }
 
-    // line 120
+    // line 119
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 121
+        // line 120
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -296,7 +295,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 
     public function getDebugInfo()
     {
-        return array (  280 => 121,  273 => 120,  248 => 102,  241 => 98,  234 => 93,  229 => 90,  225 => 88,  219 => 86,  217 => 85,  212 => 82,  210 => 81,  205 => 79,  195 => 72,  188 => 68,  174 => 57,  154 => 39,  150 => 37,  147 => 36,  138 => 34,  133 => 33,  131 => 32,  121 => 25,  111 => 19,  104 => 18,  84 => 6,  77 => 5,  63 => 2,  56 => 120,  54 => 18,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  279 => 120,  272 => 119,  247 => 101,  240 => 97,  233 => 92,  228 => 89,  224 => 87,  218 => 85,  216 => 84,  211 => 81,  209 => 80,  204 => 78,  194 => 71,  187 => 67,  173 => 56,  154 => 39,  150 => 37,  147 => 36,  138 => 34,  133 => 33,  131 => 32,  121 => 25,  111 => 19,  104 => 18,  84 => 6,  77 => 5,  63 => 2,  56 => 119,  54 => 18,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -339,7 +338,6 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t{% else %}
 \t\t\t\t\t\t\t<li class=\"d-flex justify-content-center align-items-center\" style=\" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;\">no permission</li>
 \t\t\t\t\t\t{% endif %}
-
 \t\t\t\t\t</ul>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"modal-footer close_button\">

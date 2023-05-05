@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Role;
 use App\Entity\User;
 use App\Entity\Permission;
 use Symfony\Component\Form\AbstractType;
@@ -15,22 +16,32 @@ class UserFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('username',TextType::class,[
-                'attr' =>array(
+            ->add('username', TextType::class, [
+                'attr' => array(
                     'placeholder' => '@Username'
                 ),
             ])
-          //  ->add('usernameCanonical')
-            ->add('email',TextType::class,[
-                'attr' =>array(
+            ->add('matricule', TextType::class, [
+                'attr' => array(
+                    'placeholder' => '@Matricule'
+                ),
+            ])
+            ->add('job', TextType::class, [
+                'attr' => array(
+                    'placeholder' => '@Job'
+                ),
+            ])
+            //  ->add('usernameCanonical')
+            ->add('email', TextType::class, [
+                'attr' => array(
                     'placeholder' => '@Email'
                 ),
             ])
-           // ->add('emailCanonical')
-           // ->add('enabled')
-           // ->add('salt')
-            ->add('password',TextType::class,[
-                'attr' =>array(
+            // ->add('emailCanonical')
+            // ->add('enabled')
+            // ->add('salt')
+            ->add('password', TextType::class, [
+                'attr' => array(
                     'placeholder' => '@Password',
                 ),
             ])
@@ -40,28 +51,29 @@ class UserFormType extends AbstractType
                 'choice_label' => 'permission_name',
             ])
 
-           // ->add('lastLogin')
-          //  ->add('confirmationToken')
-          //  ->add('passwordRequestedAt')
-          //  ->add('roles')
-            ->add('matricule',TextType::class,[
-                'attr' =>array(
-                    'placeholder' => '@Matricule'
-                ),
+            // ->add('lastLogin')
+            //  ->add('confirmationToken')
+            //  ->add('passwordRequestedAt')
+            ->add('roles', EntityType::class, [
+                'required' => true,
+                'class' => Role::class,
+                'choice_label' => 'roleName',
+                'query_builder' => function (\App\Repository\RoleRepository $r) {
+                    return $r->createQueryBuilder('r');
+                        
+                },
+              
+                    'mapped' => false,
+                    'multiple' => false,
+                    'expanded' => false,
+                'attr' => ['class' => 'form-control']
             ])
-            ->add('job',TextType::class,[
-                'attr' =>array(
-                    'placeholder' => '@Job'
-                ),
-            ])
-            ->add('manager',TextType::class,[
-                'attr' =>array(
+            ->add('manager', TextType::class, [
+                'attr' => array(
                     'placeholder' => '@Manager'
                 ),
                 'required' => false,
-            ])
-           
-        ;
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Controller;
-use App\Entity\Permission;
 use App\Entity\Role;
 use App\Entity\User;
 use App\Form\UserFormType;
@@ -19,7 +18,7 @@ class UsersController extends AbstractController
      */
     public function Users(Request $request , EntityManagerInterface $entityManager,UserPasswordEncoderInterface $encoder): Response
     {
-       
+        
         $entityManager = $this->getDoctrine()->getManager();
         $users = $entityManager->getRepository(User::class)->findAll();
         $roles = $entityManager->getRepository(Role::class)->findAll();
@@ -33,6 +32,8 @@ class UsersController extends AbstractController
             $newUser = $form->getData();
             $encoded = $encoder->encodePassword($Nuser, $newUser->getPassword());
             $newUser->setPassword($encoded);
+            $selectedRole = $form->get('roles')->getData();
+            $newUser->addRole($selectedRole->getRoleName());
             $entityManager->persist($newUser);
             $newUser->setEnabled(true);
             $entityManager->flush();
@@ -69,7 +70,7 @@ class UsersController extends AbstractController
       /**
      * @Route("User/Remove/{id}" , name="UserRemove")
      */
-    public function PermissionDelete(EntityManagerInterface $entityManager, $id): Response
+    public function UserDelete(EntityManagerInterface $entityManager, $id): Response
     {   
         $entityManager = $this->getDoctrine()->getManager();
         $user = $entityManager->getRepository(User::class)->find($id);
@@ -81,5 +82,33 @@ class UsersController extends AbstractController
          );
         return $this->redirectToRoute('Users');
 
+    }
+
+       /**
+     * @Route("User/Edit/{id}" , name="UserUpdate")
+     */
+    public function UserUpdate(Request $request , EntityManagerInterface $entityManager, $id): Response
+    {   
+        $user = $this->getUser();
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $user = $entityManager->getRepository(User::class)->find($id);
+        $form = $this->createForm(UserFormType::class, $user);
+        $form->handleRequest($request);
+        if(  $form->isSubmitted()  && $form->isValid()){
+            $entityManager->flush();
+            return $this->redirectToRoute('Users');
+            $this->addFlash(
+                'update',
+                sprintf('"%s" updated successfully.', $user->getUsername())
+             );
+        }
+        return $this->render('Pages/update/Update.html.twig', [
+            'userInfo' => $user,
+            'PageName' => 'User Update',
+            'Path' => '/Users',
+            'form' => $form->createView(),
+            'Title' => 'User Update'
+        ]);
     }
 }

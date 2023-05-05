@@ -188,10 +188,10 @@
     <parameter key="security.authentication.trust_resolver.anonymous_class">null</parameter>
     <parameter key="security.authentication.trust_resolver.rememberme_class">null</parameter>
     <parameter key="security.role_hierarchy.roles" type="collection">
-      <parameter key="ROLE_ADMIN" type="collection">
+      <parameter key="ROLE_USER" type="collection">
         <parameter>ROLE_USER</parameter>
       </parameter>
-      <parameter key="ROLE_SUPER_ADMIN" type="collection">
+      <parameter key="ROLE_ADMIN" type="collection">
         <parameter>ROLE_ADMIN</parameter>
       </parameter>
     </parameter>
@@ -5167,7 +5167,7 @@
         <argument key="entityManager" type="service" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.LALkXb3" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.YGHrHND" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\DashboardController::Dashboard" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5178,7 +5178,8 @@
         <argument key="App\Controller\RoleController::Role" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController::PermissionDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController::Stock" type="service" id=".service_locator.ZIsCxOI"/>
-        <argument key="App\Controller\UsersController::PermissionDelete" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\UsersController::UserDelete" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\UsersController::UserUpdate" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController::UserView" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController::Users" type="service" id=".service_locator.Hm8CUXV"/>
         <argument key="App\Controller\DashboardController:Dashboard" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5189,7 +5190,8 @@
         <argument key="App\Controller\RoleController:Role" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController:PermissionDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController:Stock" type="service" id=".service_locator.ZIsCxOI"/>
-        <argument key="App\Controller\UsersController:PermissionDelete" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\UsersController:UserDelete" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\UsersController:UserUpdate" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController:UserView" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController:Users" type="service" id=".service_locator.Hm8CUXV"/>
       </argument>
@@ -5517,12 +5519,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.LALkXb3"/>
+      <argument type="service" id=".service_locator.YGHrHND"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.LALkXb3"/>
+      <argument type="service" id=".service_locator.YGHrHND"/>
     </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.aPyppP2"/>
@@ -5842,7 +5844,7 @@
     <service id="mailer" alias="swiftmailer.mailer.default" public="true"/>
     <service id="sensio_framework_extra.converter.doctrine.orm.expression_language" alias="sensio_framework_extra.converter.doctrine.orm.expression_language.default" public="false"/>
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.LALkXb3"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.YGHrHND"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>

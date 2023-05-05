@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '5dd3e76c8d6d6e3d1f2a9a71977c5fecec84cd23',
+        'reference' => 'ae68eed50147d14fa47528beb954008cde239d2d',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '5dd3e76c8d6d6e3d1f2a9a71977c5fecec84cd23',
+            'reference' => 'ae68eed50147d14fa47528beb954008cde239d2d',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -798,6 +798,15 @@
             'install_path' => __DIR__ . '/../symfony/validator',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'symfony/var-dumper' => array(
+            'pretty_version' => 'v4.3.11',
+            'version' => '4.3.11.0',
+            'reference' => '75669a7e681cbd4a291a08ed31d2d3998fe86e48',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/var-dumper',
+            'aliases' => array(),
+            'dev_requirement' => true,
         ),
         'symfony/var-exporter' => array(
             'pretty_version' => 'v4.4.43',
