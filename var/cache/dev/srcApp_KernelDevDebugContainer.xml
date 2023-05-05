@@ -340,6 +340,9 @@
     <service id="App\Form\MachineFormType" class="App\Form\MachineFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\ModelFormType" class="App\Form\ModelFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\PermissionFormType" class="App\Form\PermissionFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -705,6 +708,7 @@
       </argument>
       <argument type="collection">
         <argument>App\Form\MachineFormType</argument>
+        <argument>App\Form\ModelFormType</argument>
         <argument>App\Form\PermissionFormType</argument>
         <argument>App\Form\UserFormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
@@ -1000,7 +1004,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.e51pSx6"/>
+      <argument type="service" id=".service_locator.yD1u3tz"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -2176,14 +2180,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -4876,6 +4872,8 @@
     <service id=".abstract.instanceof.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\MachineFormType" class="App\Form\MachineFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\MachineFormType" class="App\Form\MachineFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ModelFormType" class="App\Form\ModelFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ModelFormType" class="App\Form\ModelFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PermissionFormType" class="App\Form\PermissionFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\PermissionFormType" class="App\Form\PermissionFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserFormType" class="App\Form\UserFormType" autowire="true" abstract="true"/>
@@ -5257,10 +5255,11 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.e51pSx6" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.yD1u3tz" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\MachineFormType" type="service" id="App\Form\MachineFormType"/>
+        <argument key="App\Form\ModelFormType" type="service" id="App\Form\ModelFormType"/>
         <argument key="App\Form\PermissionFormType" type="service" id="App\Form\PermissionFormType"/>
         <argument key="App\Form\UserFormType" type="service" id="App\Form\UserFormType"/>
         <argument key="FOS\UserBundle\Form\Type\ChangePasswordFormType" type="service" id="fos_user.change_password.form.type"/>

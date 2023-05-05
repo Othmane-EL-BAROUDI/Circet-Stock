@@ -90,9 +90,9 @@ class __TwigTemplate_78e05dd645fe19a85e4dfc85ed3c552fe5c466ca5664fbdce2a4297f3af
             ob_start();
             // line 23
             echo twig_include($this->env, $context, "@Twig/Exception/traces.txt.twig", ["exception" => (isset($context["exception"]) || array_key_exists("exception", $context) ? $context["exception"] : (function () { throw new RuntimeError('Variable "exception" does not exist.', 23, $this->source); })()), "format" => "html"], false);
-            $___internal_parse_1_ = ('' === $tmp = ob_get_clean()) ? '' : new Markup($tmp, $this->env->getCharset());
+            $___internal_parse_0_ = ('' === $tmp = ob_get_clean()) ? '' : new Markup($tmp, $this->env->getCharset());
             // line 22
-            echo twig_escape_filter($this->env, $___internal_parse_1_, "html");
+            echo twig_escape_filter($this->env, $___internal_parse_0_, "html");
             // line 25
             echo "</pre>
                 ";
@@ -155,6 +155,6 @@ class __TwigTemplate_78e05dd645fe19a85e4dfc85ed3c552fe5c466ca5664fbdce2a4297f3af
         </tr>
     </tbody>
 </table>
-", "@Twig/Exception/traces_text.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces_text.html.twig");
+", "@Twig/Exception/traces_text.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces_text.html.twig");
     }
 }

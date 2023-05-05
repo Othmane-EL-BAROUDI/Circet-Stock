@@ -41,23 +41,22 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Pages/update/Update.html.twig"));
 
         // line 1
-        echo "
- <title>";
+        echo "<title>
+\t";
         // line 2
         $this->displayBlock('title', $context, $blocks);
+        // line 4
         echo "</title>
- ";
-        // line 3
+";
+        // line 5
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 7
-        echo "   ";
+        // line 9
         echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
         echo "
-   ";
-        // line 8
+";
+        // line 10
         $this->displayBlock('body', $context, $blocks);
-        // line 31
-        echo "     ";
+        // line 35
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -71,92 +70,96 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Circet-Permissions";
+        echo twig_escape_filter($this->env, (isset($context["Title"]) || array_key_exists("Title", $context) ? $context["Title"] : (function () { throw new RuntimeError('Variable "Title" does not exist.', 2, $this->source); })()), "html", null, true);
+        echo "
+\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
     }
 
-    // line 3
+    // line 5
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 4
-        echo "        <link rel=\"stylesheet\" href=\"";
+        // line 6
+        echo "\t<link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/Update.css"), "html", null, true);
         echo "\">
-         <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
-  ";
+\t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
     }
 
-    // line 8
+    // line 10
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 9
-        echo "     <div class=\"home_content\">
-        <div class=\"text\">";
-        // line 10
-        echo twig_escape_filter($this->env, (isset($context["PageName"]) || array_key_exists("PageName", $context) ? $context["PageName"] : (function () { throw new RuntimeError('Variable "PageName" does not exist.', 10, $this->source); })()), "html", null, true);
+        // line 11
+        echo "\t<div class=\"home_content\">
+\t\t<div class=\"text\">";
+        // line 12
+        echo twig_escape_filter($this->env, (isset($context["PageName"]) || array_key_exists("PageName", $context) ? $context["PageName"] : (function () { throw new RuntimeError('Variable "PageName" does not exist.', 12, $this->source); })()), "html", null, true);
         echo "</div>
-                 <div class=\"container\" style=\"display: flex; justify-content: center; align-items: center; height: 80vh;\">
-                    <div class=\"col-md-9\">
-                        <div class=\"card mb-3 content\">
-                              ";
-        // line 14
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 14, $this->source); })()), 'form_start');
-        echo "
-                              <div class=\"card-body\">
-                                    ";
+\t\t<div class=\"container\" style=\"display: flex; justify-content: center; align-items: center; height: 80vh;\">
+\t\t\t<div class=\"col-md-9\" >
+\t\t\t\t<div class=\"card mb-3 content\" >
+\t\t\t\t\t";
         // line 16
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), 'widget');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), 'form_start');
         echo "
-                                    <div class=\"actions\">
-                                    <div class=\"buttons  text-center mt-4\">
-                                          <button type=\"submit\"  style=\"background-color:#f9a826;\" >Mettre à jour</button>
-                                    ";
-        // line 20
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 20, $this->source); })()), 'form_end');
+\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t";
+        // line 18
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), 'widget');
         echo "
-                                          <a href=\"";
-        // line 21
-        echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 21, $this->source); })()), "html", null, true);
-        echo "\"><button  type=\"button\" style=\"background-color: #6c757d\" >Cancel</button></a>
-                                    </div>
-                                    </div>
-                              </div>
-                               
-                        </div>
-                    </div>
-                 </div>
-     </div>
-    ";
+\t\t\t\t\t\t<div class=\"actions\">
+\t\t\t\t\t\t\t<div class=\"buttons  text-center mt-4\">
+\t\t\t\t\t\t\t\t<button type=\"submit\" style=\"background-color:#f9a826;\">Mettre à jour</button>
+\t\t\t\t\t\t\t\t";
+        // line 22
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), 'form_end');
+        echo "
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 23
+        echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 23, $this->source); })()), "html", null, true);
+        echo "\">
+\t\t\t\t\t\t\t\t\t<button type=\"button\" style=\"background-color: #6c757d\">Cancel</button>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
     }
 
-    // line 31
+    // line 35
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 32
-        echo "            <script src=\"";
+        // line 36
+        echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
-   ";
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -174,43 +177,48 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
     public function getDebugInfo()
     {
-        return array (  156 => 32,  149 => 31,  132 => 21,  128 => 20,  121 => 16,  116 => 14,  109 => 10,  106 => 9,  99 => 8,  88 => 4,  81 => 3,  68 => 2,  60 => 31,  58 => 8,  53 => 7,  51 => 3,  47 => 2,  44 => 1,);
+        return array (  159 => 36,  152 => 35,  133 => 23,  129 => 22,  122 => 18,  117 => 16,  110 => 12,  107 => 11,  100 => 10,  89 => 6,  82 => 5,  67 => 2,  60 => 35,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("
- <title>{% block title %}Circet-Permissions{% endblock %}</title>
- {% block stylesheets %}
-        <link rel=\"stylesheet\" href=\"{{asset('css/Update.css')}}\">
-         <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
-  {% endblock %}
-   {{ include('Pages/sidebar.html.twig') }}
-   {% block body %}
-     <div class=\"home_content\">
-        <div class=\"text\">{{PageName}}</div>
-                 <div class=\"container\" style=\"display: flex; justify-content: center; align-items: center; height: 80vh;\">
-                    <div class=\"col-md-9\">
-                        <div class=\"card mb-3 content\">
-                              {{ form_start(form) }}
-                              <div class=\"card-body\">
-                                    {{ form_widget(form) }}
-                                    <div class=\"actions\">
-                                    <div class=\"buttons  text-center mt-4\">
-                                          <button type=\"submit\"  style=\"background-color:#f9a826;\" >Mettre à jour</button>
-                                    {{ form_end(form) }}
-                                          <a href=\"{{Path}}\"><button  type=\"button\" style=\"background-color: #6c757d\" >Cancel</button></a>
-                                    </div>
-                                    </div>
-                              </div>
-                               
-                        </div>
-                    </div>
-                 </div>
-     </div>
-    {% endblock %}
-     {% block javascripts %}
-            <script src=\"{{asset('JS/sidebar.js')}}\"></script>
-   {% endblock %}", "Pages/update/Update.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\update\\Update.html.twig");
+        return new Source("<title>
+\t{% block title %}{{Title}}
+\t{% endblock %}
+</title>
+{% block stylesheets %}
+\t<link rel=\"stylesheet\" href=\"{{asset('css/Update.css')}}\">
+\t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
+{% endblock %}
+{{ include('Pages/sidebar.html.twig') }}
+{% block body %}
+\t<div class=\"home_content\">
+\t\t<div class=\"text\">{{PageName}}</div>
+\t\t<div class=\"container\" style=\"display: flex; justify-content: center; align-items: center; height: 80vh;\">
+\t\t\t<div class=\"col-md-9\" >
+\t\t\t\t<div class=\"card mb-3 content\" >
+\t\t\t\t\t{{ form_start(form) }}
+\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t{{ form_widget(form) }}
+\t\t\t\t\t\t<div class=\"actions\">
+\t\t\t\t\t\t\t<div class=\"buttons  text-center mt-4\">
+\t\t\t\t\t\t\t\t<button type=\"submit\" style=\"background-color:#f9a826;\">Mettre à jour</button>
+\t\t\t\t\t\t\t\t{{ form_end(form) }}
+\t\t\t\t\t\t\t\t<a href=\"{{Path}}\">
+\t\t\t\t\t\t\t\t\t<button type=\"button\" style=\"background-color: #6c757d\">Cancel</button>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+{% endblock %}
+{% block javascripts %}
+\t<script src=\"{{asset('JS/sidebar.js')}}\"></script>
+{% endblock %}
+", "Pages/update/Update.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\update\\Update.html.twig");
     }
 }

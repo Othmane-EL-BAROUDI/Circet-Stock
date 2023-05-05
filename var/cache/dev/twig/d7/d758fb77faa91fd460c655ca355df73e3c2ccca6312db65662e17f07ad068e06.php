@@ -282,6 +282,6 @@ class __TwigTemplate_8cf60bcc42060a96097e2ed6a9770ebd20866a8fa6a6ddfe85a0c5a186a
 {% endblock %}
   {% block javascripts %}
             <script src=\"{{asset('JS/sidebar.js')}}\"></script>
-   {% endblock %}", "Pages/Profile.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\Profile.html.twig");
+   {% endblock %}", "Pages/Profile.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\Profile.html.twig");
     }
 }

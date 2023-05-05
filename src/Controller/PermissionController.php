@@ -67,6 +67,7 @@ class PermissionController extends AbstractController
             'Path' => '/Permission',
             'permission' => $permission,
             'form' => $form->createView(),
+            'Title' => 'Permission Update'
         ]);
     }
 

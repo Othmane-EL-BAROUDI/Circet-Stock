@@ -183,7 +183,7 @@ textarea:focus, input:focus , select:focus ,button:focus{
 }
 .mainC{
   
-    height: 75%;
+    max-height: 75%;
     width: 90%;
     margin-left: 5%;
     margin-top: 1%;
@@ -219,6 +219,7 @@ textarea:focus, input:focus , select:focus ,button:focus{
  }
  .bn3{
     color: #dc3545;
+    background-color: white;
  }
  .bn1:hover{
     background-color: #28a745;

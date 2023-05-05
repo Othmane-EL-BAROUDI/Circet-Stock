@@ -56,7 +56,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 ";
         // line 10
         $this->displayBlock('body', $context, $blocks);
-        // line 103
+        // line 123
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -155,58 +155,86 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t\t</button>
 \t\t\t</div>
 \t\t</div>
-\t\t<div class=\"CContent\" >
-                  <div class=\"mainC\">
-                        <table class=\"table align-middle mb-0 bg-white\">
-                        <thead class=\"bg-light\">
-                        <tr>
-                              <th>Rôle</th>
-                              <th  style=\"text-align:center;\" >Actions</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                         ";
+\t\t<div class=\"CContent\">
+\t\t\t<div class=\"mainC\">
+\t\t\t\t<table class=\"table align-middle mb-0 bg-white\">
+\t\t\t\t\t<thead class=\"bg-light\">
+\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t<th>Rôle</th>
+\t\t\t\t\t\t\t<th style=\"text-align:center;\">Actions</th>
+\t\t\t\t\t\t</tr>
+\t\t\t\t\t</thead>
+\t\t\t\t\t<tbody>
+\t\t\t\t\t\t";
         // line 73
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["allRoles"]) || array_key_exists("allRoles", $context) ? $context["allRoles"] : (function () { throw new RuntimeError('Variable "allRoles" does not exist.', 73, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
             // line 74
-            echo "                            <tr>
-\t\t\t\t\t\t\t<td  class=\"textperm\" >
-\t\t\t\t\t\t\t\t";
+            echo "\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t<td class=\"textperm\">
+\t\t\t\t\t\t\t\t\t";
             // line 76
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "roleName", [], "any", false, false, false, 76), "html", null, true);
             echo "
-\t\t\t\t\t\t\t</td>
-                             
-                                     <td  class=\"actions\" >
-                        
-                                    <a href=\"#\"> 
-                                          <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \"  style=\" border: #007bff solid 1px; \">
-                                          <i class='bx bx-edit bx-xs'></i>
-                                          Edit
-                                          </button>
-                                    </a>
-                                    <a href=\"#\"> 
-                                          <button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" >
-                                          <i class='bx bx-trash bx-xs'></i>
-                                          Delete
-                                          </button>
-                                    </a>
-                                    </td>
-                              </tr>       
-                         ";
+\t\t\t\t\t\t\t\t</td>
+
+\t\t\t\t\t\t\t\t<td class=\"actions\">
+
+\t\t\t\t\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
+\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
+\t\t\t\t\t\t\t\t\t\t\tEdit
+\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal";
+            // line 87
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "id", [], "any", false, false, false, 87), "html", null, true);
+            echo "\" style=\" border: #dc3545 solid 1px;\">
+\t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
+\t\t\t\t\t\t\t\t\t\tDelete
+\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t<div class=\"modal fade\" id=\"exampleModal";
+            // line 93
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "id", [], "any", false, false, false, 93), "html", null, true);
+            echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+\t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
+\t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
+\t\t\t\t\t\t\t\t\t\t<div class=\"modal-header\">
+\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Delete confirmation</h5>
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+\t\t\t\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
+\t\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
+\t\t\t\t\t\t\t\t\t\t\tDo you Realy want to delete role :
+\t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">";
+            // line 104
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "roleName", [], "any", false, false, false, 104), "html", null, true);
+            echo "</label>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Delete</button>
+\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Close</button>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 95
-        echo "   
-                        </tbody>
-                        </table>
-                  </div>
-                  </div>
-\t\t
+        // line 116
+        echo "\t\t\t\t\t</tbody>
+\t\t\t\t</table>
+\t\t\t</div>
+\t\t</div>
+
 \t</div>
 ";
         
@@ -214,14 +242,14 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 
     }
 
-    // line 103
+    // line 123
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 104
+        // line 124
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -246,7 +274,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 
     public function getDebugInfo()
     {
-        return array (  225 => 104,  218 => 103,  204 => 95,  178 => 76,  174 => 74,  170 => 73,  106 => 11,  99 => 10,  88 => 6,  81 => 5,  67 => 2,  60 => 103,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  253 => 124,  246 => 123,  233 => 116,  215 => 104,  201 => 93,  192 => 87,  178 => 76,  174 => 74,  170 => 73,  106 => 11,  99 => 10,  88 => 6,  81 => 5,  67 => 2,  60 => 123,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -313,44 +341,64 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t\t</button>
 \t\t\t</div>
 \t\t</div>
-\t\t<div class=\"CContent\" >
-                  <div class=\"mainC\">
-                        <table class=\"table align-middle mb-0 bg-white\">
-                        <thead class=\"bg-light\">
-                        <tr>
-                              <th>Rôle</th>
-                              <th  style=\"text-align:center;\" >Actions</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                         {% for role in allRoles %}
-                            <tr>
-\t\t\t\t\t\t\t<td  class=\"textperm\" >
-\t\t\t\t\t\t\t\t{{role.roleName}}
-\t\t\t\t\t\t\t</td>
-                             
-                                     <td  class=\"actions\" >
-                        
-                                    <a href=\"#\"> 
-                                          <button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \"  style=\" border: #007bff solid 1px; \">
-                                          <i class='bx bx-edit bx-xs'></i>
-                                          Edit
-                                          </button>
-                                    </a>
-                                    <a href=\"#\"> 
-                                          <button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" >
-                                          <i class='bx bx-trash bx-xs'></i>
-                                          Delete
-                                          </button>
-                                    </a>
-                                    </td>
-                              </tr>       
-                         {% endfor %}   
-                        </tbody>
-                        </table>
-                  </div>
-                  </div>
-\t\t
+\t\t<div class=\"CContent\">
+\t\t\t<div class=\"mainC\">
+\t\t\t\t<table class=\"table align-middle mb-0 bg-white\">
+\t\t\t\t\t<thead class=\"bg-light\">
+\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t<th>Rôle</th>
+\t\t\t\t\t\t\t<th style=\"text-align:center;\">Actions</th>
+\t\t\t\t\t\t</tr>
+\t\t\t\t\t</thead>
+\t\t\t\t\t<tbody>
+\t\t\t\t\t\t{% for role in allRoles %}
+\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t<td class=\"textperm\">
+\t\t\t\t\t\t\t\t\t{{role.roleName}}
+\t\t\t\t\t\t\t\t</td>
+
+\t\t\t\t\t\t\t\t<td class=\"actions\">
+
+\t\t\t\t\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
+\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
+\t\t\t\t\t\t\t\t\t\t\tEdit
+\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal{{role.id}}\" style=\" border: #dc3545 solid 1px;\">
+\t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
+\t\t\t\t\t\t\t\t\t\tDelete
+\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t</tr>
+\t\t\t\t\t\t\t<div class=\"modal fade\" id=\"exampleModal{{role.id}}\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+\t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
+\t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
+\t\t\t\t\t\t\t\t\t\t<div class=\"modal-header\">
+\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Delete confirmation</h5>
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+\t\t\t\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
+\t\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
+\t\t\t\t\t\t\t\t\t\t\tDo you Realy want to delete role :
+\t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">{{role.roleName}}</label>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Delete</button>
+\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Close</button>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t{% endfor %}
+\t\t\t\t\t</tbody>
+\t\t\t\t</table>
+\t\t\t</div>
+\t\t</div>
+
 \t</div>
 {% endblock %}
 {% block javascripts %}
@@ -359,6 +407,6 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
 {% endblock %}
-", "Pages/Role.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\Role.html.twig");
+", "Pages/Role.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\Role.html.twig");
     }
 }

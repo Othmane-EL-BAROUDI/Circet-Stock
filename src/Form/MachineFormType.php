@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Machine;
 use App\Entity\Marque;
 use App\Entity\Model;
+use Proxies\__CG__\App\Entity\Model as EntityModel;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -47,6 +48,8 @@ class MachineFormType extends AbstractType
                     'placeholder' => '@Mac_wifi'
                 ),
             ])
+           
+            
     
            
             

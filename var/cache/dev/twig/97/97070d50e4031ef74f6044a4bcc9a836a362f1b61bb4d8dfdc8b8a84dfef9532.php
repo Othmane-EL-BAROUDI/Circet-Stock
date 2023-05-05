@@ -223,6 +223,6 @@ class __TwigTemplate_6a20e85d0123e5fe4de6e76452c9ed4119433ad735f02f5afc6cbe1ef67
         </div>
     </body>
 </html>
-", "@FOSUser/layout.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\layout.html.twig");
+", "@FOSUser/layout.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\layout.html.twig");
     }
 }
