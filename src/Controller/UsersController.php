@@ -97,18 +97,18 @@ class UsersController extends AbstractController
         $form->handleRequest($request);
         if(  $form->isSubmitted()  && $form->isValid()){
             $entityManager->flush();
-            return $this->redirectToRoute('Users');
             $this->addFlash(
                 'update',
                 sprintf('"%s" updated successfully.', $user->getUsername())
              );
+             return $this->redirectToRoute('Users');
         }
         return $this->render('Pages/update/Update.html.twig', [
             'userInfo' => $user,
-            'PageName' => 'User Update',
             'Path' => '/Users',
             'form' => $form->createView(),
-            'Title' => 'User Update'
+            'Title' => 'Users',
+            'PageName' => 'User Update'
         ]);
     }
 }
