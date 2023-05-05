@@ -163,8 +163,8 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
         $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 44, $this->source); })()), "session", [], "any", false, false, false, 44), "flashbag", [], "any", false, false, false, 44), "get", [0 => "update"], "method", false, false, false, 44));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
             // line 45
-            echo "\t\t\t<div class=\"alert  alert-success fade show\" role=\"alert\">
-\t\t\t\t<strong>update!</strong>
+            echo "\t\t\t<div class=\"alert  alert-info fade show\" role=\"alert\">
+\t\t\t\t<strong>Success!</strong>
 \t\t\t\t";
             // line 47
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
@@ -442,8 +442,8 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t\t</div>
 \t\t{% endfor %}
 \t\t{% for flash_message in app.session.flashbag.get('update') %}
-\t\t\t<div class=\"alert  alert-success fade show\" role=\"alert\">
-\t\t\t\t<strong>update!</strong>
+\t\t\t<div class=\"alert  alert-info fade show\" role=\"alert\">
+\t\t\t\t<strong>Success!</strong>
 \t\t\t\t{{flash_message}}
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
 \t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
