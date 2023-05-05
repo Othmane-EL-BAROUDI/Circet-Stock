@@ -42,8 +42,8 @@
 			</div>
 		{% endfor %}
 		{% for flash_message in app.session.flashbag.get('update') %}
-			<div class="alert  alert-success fade show" role="alert">
-				<strong>update!</strong>
+			<div class="alert  alert-info fade show" role="alert">
+				<strong>Success!</strong>
 				{{flash_message}}
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					<span aria-hidden="true">&times;</span>

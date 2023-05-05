@@ -5173,7 +5173,11 @@
         <argument key="entityManager" type="service" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
+<<<<<<< HEAD
     <service id=".service_locator.nssC5_7" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+=======
+    <service id=".service_locator.dZjUVxQ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+>>>>>>> 8e19b65e61224e5e621f97c9ffa90c5f76e77196
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\DashboardController::Dashboard" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5187,7 +5191,7 @@
         <argument key="App\Controller\StockController::PermissionDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController::Stock" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController::UserDelete" type="service" id=".service_locator.ZIsCxOI"/>
-        <argument key="App\Controller\UsersController::UserUpdate" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\UsersController::UserUpdate" type="service" id=".service_locator.Hm8CUXV"/>
         <argument key="App\Controller\UsersController::UserView" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController::Users" type="service" id=".service_locator.Hm8CUXV"/>
         <argument key="App\Controller\DashboardController:Dashboard" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5201,7 +5205,7 @@
         <argument key="App\Controller\StockController:PermissionDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController:Stock" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController:UserDelete" type="service" id=".service_locator.ZIsCxOI"/>
-        <argument key="App\Controller\UsersController:UserUpdate" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\UsersController:UserUpdate" type="service" id=".service_locator.Hm8CUXV"/>
         <argument key="App\Controller\UsersController:UserView" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController:Users" type="service" id=".service_locator.Hm8CUXV"/>
       </argument>
@@ -5530,12 +5534,20 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
+<<<<<<< HEAD
       <argument type="service" id=".service_locator.nssC5_7"/>
+=======
+      <argument type="service" id=".service_locator.dZjUVxQ"/>
+>>>>>>> 8e19b65e61224e5e621f97c9ffa90c5f76e77196
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
+<<<<<<< HEAD
       <argument type="service" id=".service_locator.nssC5_7"/>
+=======
+      <argument type="service" id=".service_locator.dZjUVxQ"/>
+>>>>>>> 8e19b65e61224e5e621f97c9ffa90c5f76e77196
     </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.aPyppP2"/>
@@ -5855,7 +5867,11 @@
     <service id="mailer" alias="swiftmailer.mailer.default" public="true"/>
     <service id="sensio_framework_extra.converter.doctrine.orm.expression_language" alias="sensio_framework_extra.converter.doctrine.orm.expression_language.default" public="false"/>
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default" public="false"/>
+<<<<<<< HEAD
     <service id="argument_resolver.controller_locator" alias=".service_locator.nssC5_7"/>
+=======
+    <service id="argument_resolver.controller_locator" alias=".service_locator.dZjUVxQ"/>
+>>>>>>> 8e19b65e61224e5e621f97c9ffa90c5f76e77196
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>

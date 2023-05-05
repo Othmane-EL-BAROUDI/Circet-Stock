@@ -29,6 +29,7 @@ button:focus,input:focus,select:focus{
     height: 120px;
  }
  .card select option{
+    height: 30px !important;
     padding-top: 6px;
     padding-bottom: 6px;
     padding-left: 5px;
