@@ -5,7 +5,7 @@
     width: calc(100% - 78px);
     left: 78px;
     transition:  all 0.5s ease;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 .home_content .text{
     font-size: 25px;
@@ -148,7 +148,7 @@ textarea:focus, input:focus , select:focus ,button:focus{
     align-items: center;
 }
 .pop_picture img{
-    width: 120px;
+    width: 280px;
     margin-bottom: 3px
 }
 .pop_desc{
@@ -162,4 +162,11 @@ textarea:focus, input:focus , select:focus ,button:focus{
     color: black;
     font-size: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.pic{
+    width: 100%;
+    height: 64%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

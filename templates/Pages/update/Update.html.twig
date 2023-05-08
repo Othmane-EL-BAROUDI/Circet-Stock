@@ -16,15 +16,19 @@
 				<div class="card mb-3 content">
 					{{ form_start(form) }}
 					<div class="card-body">
-						{% if Title == "Stock" %}
-						<div class="modal-body">1
+						<label>upload picture</label>
+						<div class="modal-body">
 							
 							<button type="button" >
 								<i class='bx bxs-cloud-upload bx-sm'></i>
+								
 							</button>
-							<input type="file" name="machine_form[MachinePic]">
+							
+							
+							
+						
 						</div>
-						{% endif %}
+					
 
 						{{ form_widget(form) }}
 						<div class="actions">

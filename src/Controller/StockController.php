@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
-
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 
 class StockController extends AbstractController
 {
@@ -27,13 +27,28 @@ class StockController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted()  && $form->isValid()) {
             $machine = $form->getData();
-            $entityManager->persist($machine);
-            $entityManager->flush();
-            $this->addFlash(
-                'success',
-                sprintf('  " %s - %s " added successfully ', $machine->getModel()->getMarque()->getMarqueName(), $machine->getModel()->getModelName())
-            );
-            return $this->redirectToRoute('Stock');
+            $uploadedPicture = $form->get('img_src')->getData();
+            $uploadType = $form->get('type')->getData();
+            if($uploadedPicture){
+                $file = 'upload/' . $uploadType . '/' . uniqid() . '.' . $uploadedPicture->guessExtension();
+                try{
+                    $uploadedPicture->move(
+                        $this->getParameter('kernel.project_dir') . '/public/images/upload/' . $uploadType ,
+                        $file
+                    );
+                }catch(FileException $error){
+                        return new Response($error->getMessage());
+                }
+                $machine->setImgSrc('/images/' . $file);
+                $entityManager->persist($machine);
+                $entityManager->flush();
+                $this->addFlash(
+                    'success',
+                    sprintf('  " %s - %s " added successfully ', $machine->getModel()->getMarque()->getMarqueName(), $machine->getModel()->getModelName())
+                );
+                return $this->redirectToRoute('Stock');
+            }
+           
         }
 
 
@@ -86,7 +101,6 @@ class StockController extends AbstractController
         $form->handleRequest($request);
        
         if ($form->isSubmitted()  && $form->isValid()) {
-            dd($form->get('MachinePic')->getdata());
             $entityManager->flush();
             $this->addFlash(
                 'update',

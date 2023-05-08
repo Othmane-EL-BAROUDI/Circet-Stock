@@ -21,7 +21,13 @@ class MachineFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-           
+
+            ->add('img_src', FileType::class, [
+                'attr' => array('class' => 'form-control' , 'style' => ' position: absolute;  width: 94%;'),
+                'label' => false,
+                'data_class' => null,
+                'required' => true,
+            ])
             ->add('model', EntityType::class, [
                 'required' => true,
                 'class' => Model::class,
@@ -34,11 +40,13 @@ class MachineFormType extends AbstractType
                 'attr' => array(
                     'placeholder' => '@Type'
                 ),
+                'required' => true,
             ])
             ->add('serial_num', TextType::class, [
                 'attr' => array(
                     'placeholder' => '@Serial number'
                 ),
+                'required' => true,
             ])
             ->add('state', ChoiceType::class, [
 
@@ -47,27 +55,32 @@ class MachineFormType extends AbstractType
                     'Bad' => "bad",
 
                 ],
+                'required' => true,
                 'attr' => array('class' => 'form-control', 'placeholder' => '@state'),
 
             ])
             ->add('available', CheckboxType::class, [
 
                 'attr' => array('class' => 'form-control', 'style' => 'margin-top: -3.5%; width:180px;'),
+                'required' => false,
             ])
             ->add('description', TextType::class, [
                 'attr' => array(
                     'placeholder' => '@Description'
                 ),
+                'required' => true,
             ])
             ->add('mac_ethernet', TextType::class, [
                 'attr' => array(
                     'placeholder' => '@Mac_ethernet'
                 ),
+                'required' => true,
             ])
             ->add('mac_wifi', TextType::class, [
                 'attr' => array(
                     'placeholder' => '@Mac_wifi'
                 ),
+                'required' => true,
             ]);
     }
     public function configureOptions(OptionsResolver $resolver): void

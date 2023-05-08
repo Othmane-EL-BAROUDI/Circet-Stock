@@ -19,6 +19,7 @@ button:focus,input:focus,select:focus{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
  }
  .card input{
+    margin-top: 8px;
     width: 100%;
     padding:5px 0 5px 15px;
     margin-bottom: 15px;
@@ -86,16 +87,22 @@ button:focus,input:focus,select:focus{
     height: 15px;
     cursor: pointer;
 }
-.modal-body > input[type="file"]{
+input[type="file"]{
     position: absolute;
-    top:00;
+    top:35;
     width: 94%;
     opacity: 0;
     cursor: pointer;
     
 }
+.modal-body button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
 .modal-body .bxs-cloud-upload{
-    top: 0;
+    top: -6;
     position: absolute;
     left: 0;
     width: 100%;
