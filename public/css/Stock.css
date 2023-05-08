@@ -126,9 +126,8 @@ textarea:focus, input:focus , button:focus{
         margin-bottom: 18px;
 }
 .modal-body  input[type="checkbox"]{
-    margin-left: -45%;
-    
-    margin-bottom: 20px;
+    margin-left: 2%;
+    margin-top: -27px !important;
     height: 15px;
     cursor: pointer;
 }

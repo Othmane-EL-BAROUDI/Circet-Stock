@@ -45,18 +45,18 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t";
         // line 2
         $this->displayBlock('title', $context, $blocks);
-        // line 4
+        // line 5
         echo "</title>
 ";
-        // line 5
+        // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 9
+        // line 10
         echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
         echo "
 ";
-        // line 10
+        // line 11
         $this->displayBlock('body', $context, $blocks);
-        // line 35
+        // line 46
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -70,8 +70,9 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo twig_escape_filter($this->env, (isset($context["Title"]) || array_key_exists("Title", $context) ? $context["Title"] : (function () { throw new RuntimeError('Variable "Title" does not exist.', 2, $this->source); })()), "html", null, true);
-        echo twig_escape_filter($this->env, (isset($context["Title"]) || array_key_exists("Title", $context) ? $context["Title"] : (function () { throw new RuntimeError('Variable "Title" does not exist.', 2, $this->source); })()), "html", null, true);
+        // line 3
+        echo "\t\t";
+        echo twig_escape_filter($this->env, (isset($context["Title"]) || array_key_exists("Title", $context) ? $context["Title"] : (function () { throw new RuntimeError('Variable "Title" does not exist.', 3, $this->source); })()), "html", null, true);
         echo "
 \t";
         
@@ -79,14 +80,14 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
     }
 
-    // line 5
+    // line 6
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 6
+        // line 7
         echo "\t<link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/Update.css"), "html", null, true);
         echo "\">
@@ -97,41 +98,56 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
     }
 
-    // line 10
+    // line 11
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 11
+        // line 12
         echo "\t<div class=\"home_content\">
 \t\t<div class=\"text\">";
-        // line 12
-        echo twig_escape_filter($this->env, (isset($context["PageName"]) || array_key_exists("PageName", $context) ? $context["PageName"] : (function () { throw new RuntimeError('Variable "PageName" does not exist.', 12, $this->source); })()), "html", null, true);
+        // line 13
+        echo twig_escape_filter($this->env, (isset($context["PageName"]) || array_key_exists("PageName", $context) ? $context["PageName"] : (function () { throw new RuntimeError('Variable "PageName" does not exist.', 13, $this->source); })()), "html", null, true);
         echo "</div>
 \t\t<div class=\"container\" style=\"display: flex; justify-content: center; align-items: center; height: 80vh;\">
-\t\t\t<div class=\"col-md-9\" >
-\t\t\t\t<div class=\"card mb-3 content\" >
+\t\t\t<div class=\"col-md-9\">
+\t\t\t\t<div class=\"card mb-3 content\">
 \t\t\t\t\t";
-        // line 16
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), 'form_start');
+        // line 17
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 17, $this->source); })()), 'form_start');
         echo "
 \t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t";
-        // line 18
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), 'widget');
+        // line 19
+        if (((isset($context["Title"]) || array_key_exists("Title", $context) ? $context["Title"] : (function () { throw new RuntimeError('Variable "Title" does not exist.', 19, $this->source); })()) == "Stock")) {
+            // line 20
+            echo "\t\t\t\t\t\t<div class=\"modal-body\">1
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t<button type=\"button\" >
+\t\t\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
+\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t<input type=\"file\" name=\"machine_form[MachinePic]\">
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t";
+        }
+        // line 28
+        echo "
+\t\t\t\t\t\t";
+        // line 29
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 29, $this->source); })()), 'widget');
         echo "
 \t\t\t\t\t\t<div class=\"actions\">
 \t\t\t\t\t\t\t<div class=\"buttons  text-center mt-4\">
 \t\t\t\t\t\t\t\t<button type=\"submit\" style=\"background-color:#f9a826;\">Mettre à jour</button>
 \t\t\t\t\t\t\t\t";
-        // line 22
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), 'form_end');
+        // line 33
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 33, $this->source); })()), 'form_end');
         echo "
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 23
-        echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 23, $this->source); })()), "html", null, true);
+        // line 34
+        echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 34, $this->source); })()), "html", null, true);
         echo "\">
 \t\t\t\t\t\t\t\t\t<button type=\"button\" style=\"background-color: #6c757d\">Cancel</button>
 \t\t\t\t\t\t\t\t</a>
@@ -149,14 +165,14 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
     }
 
-    // line 35
+    // line 46
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 36
+        // line 47
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -178,13 +194,14 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
     public function getDebugInfo()
     {
-        return array (  160 => 36,  153 => 35,  134 => 23,  130 => 22,  123 => 18,  118 => 16,  111 => 12,  108 => 11,  101 => 10,  90 => 6,  83 => 5,  67 => 2,  60 => 35,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  176 => 47,  169 => 46,  150 => 34,  146 => 33,  139 => 29,  136 => 28,  126 => 20,  124 => 19,  119 => 17,  112 => 13,  109 => 12,  102 => 11,  91 => 7,  84 => 6,  74 => 3,  67 => 2,  60 => 46,  58 => 11,  54 => 10,  52 => 6,  49 => 5,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<title>
-\t{% block title %}{{Title}}{{Title}}
+\t{% block title %}
+\t\t{{Title}}
 \t{% endblock %}
 </title>
 {% block stylesheets %}
@@ -196,10 +213,20 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t<div class=\"home_content\">
 \t\t<div class=\"text\">{{PageName}}</div>
 \t\t<div class=\"container\" style=\"display: flex; justify-content: center; align-items: center; height: 80vh;\">
-\t\t\t<div class=\"col-md-9\" >
-\t\t\t\t<div class=\"card mb-3 content\" >
+\t\t\t<div class=\"col-md-9\">
+\t\t\t\t<div class=\"card mb-3 content\">
 \t\t\t\t\t{{ form_start(form) }}
 \t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t{% if Title == \"Stock\" %}
+\t\t\t\t\t\t<div class=\"modal-body\">1
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t<button type=\"button\" >
+\t\t\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
+\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t<input type=\"file\" name=\"machine_form[MachinePic]\">
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t{% endif %}
+
 \t\t\t\t\t\t{{ form_widget(form) }}
 \t\t\t\t\t\t<div class=\"actions\">
 \t\t\t\t\t\t\t<div class=\"buttons  text-center mt-4\">

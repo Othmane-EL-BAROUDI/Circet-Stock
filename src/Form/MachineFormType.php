@@ -13,19 +13,23 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class MachineFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-        ->add('model', EntityType::class, [
-            'required' => true,
-            'class' => Model::class,
-            'choice_label' => 'model_name',
-            'multiple' => false,
-            'required' => true,
-        ])
+           
+            ->add('model', EntityType::class, [
+                'required' => true,
+                'class' => Model::class,
+                'choice_label' => 'model_name',
+                'multiple' => false,
+                'required' => true,
+                'attr' => array('class' => 'form-control'),
+            ])
             ->add('type', TextType::class, [
                 'attr' => array(
                     'placeholder' => '@Type'
@@ -37,16 +41,19 @@ class MachineFormType extends AbstractType
                 ),
             ])
             ->add('state', ChoiceType::class, [
-                'attr' => array(
-                    'placeholder' => '@state'
-                ),
+
                 'choices'  => [
                     'Good' => "Good",
                     'Bad' => "bad",
-                    
+
                 ],
+                'attr' => array('class' => 'form-control', 'placeholder' => '@state'),
+
             ])
-            ->add('available')
+            ->add('available', CheckboxType::class, [
+
+                'attr' => array('class' => 'form-control', 'style' => 'margin-top: -3.5%; width:180px;'),
+            ])
             ->add('description', TextType::class, [
                 'attr' => array(
                     'placeholder' => '@Description'

@@ -84,7 +84,9 @@ class StockController extends AbstractController
         $stock = $entityManager->getRepository(Machine::class)->find($id);
         $form = $this->createForm(MachineFormType::class, $stock);
         $form->handleRequest($request);
+       
         if ($form->isSubmitted()  && $form->isValid()) {
+            dd($form->get('MachinePic')->getdata());
             $entityManager->flush();
             $this->addFlash(
                 'update',
@@ -97,7 +99,8 @@ class StockController extends AbstractController
             'Path' => '/Stock',
             'form' => $form->createView(),
             'Title' => 'Stock',
-            'PageName' => 'Stock Update'
+            'PageName' => 'Stock Update',
+         
         ]);
     }
 }

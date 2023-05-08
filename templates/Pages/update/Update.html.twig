@@ -1,5 +1,6 @@
 <title>
-	{% block title %}{{Title}}{{Title}}
+	{% block title %}
+		{{Title}}
 	{% endblock %}
 </title>
 {% block stylesheets %}
@@ -11,10 +12,20 @@
 	<div class="home_content">
 		<div class="text">{{PageName}}</div>
 		<div class="container" style="display: flex; justify-content: center; align-items: center; height: 80vh;">
-			<div class="col-md-9" >
-				<div class="card mb-3 content" >
+			<div class="col-md-9">
+				<div class="card mb-3 content">
 					{{ form_start(form) }}
 					<div class="card-body">
+						{% if Title == "Stock" %}
+						<div class="modal-body">1
+							
+							<button type="button" >
+								<i class='bx bxs-cloud-upload bx-sm'></i>
+							</button>
+							<input type="file" name="machine_form[MachinePic]">
+						</div>
+						{% endif %}
+
 						{{ form_widget(form) }}
 						<div class="actions">
 							<div class="buttons  text-center mt-4">

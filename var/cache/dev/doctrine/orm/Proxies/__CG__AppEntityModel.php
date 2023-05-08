@@ -66,10 +66,10 @@ class Model extends \App\Entity\Model implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'model_name', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'img_src', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'marque', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'machines'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'model_name', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'marque', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'machines'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'model_name', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'img_src', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'marque', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'machines'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'model_name', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'marque', '' . "\0" . 'App\\Entity\\Model' . "\0" . 'machines'];
     }
 
     /**
@@ -211,28 +211,6 @@ class Model extends \App\Entity\Model implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setModelName', [$model_name]);
 
         return parent::setModelName($model_name);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getImgSrc(): ?string
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getImgSrc', []);
-
-        return parent::getImgSrc();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setImgSrc(string $img_src): \App\Entity\Model
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setImgSrc', [$img_src]);
-
-        return parent::setImgSrc($img_src);
     }
 
     /**

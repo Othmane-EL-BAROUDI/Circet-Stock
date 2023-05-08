@@ -124,7 +124,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t<button>
 \t\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
 \t\t\t\t\t\t</button>
-\t\t\t\t\t\t<input type=\"file\">
+\t\t\t\t\t\t<input type=\"file\" name=\"MachinePic\">
 \t\t\t\t\t\t";
         // line 30
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 30, $this->source); })()), 'widget');
@@ -448,7 +448,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t<button>
 \t\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
 \t\t\t\t\t\t</button>
-\t\t\t\t\t\t<input type=\"file\">
+\t\t\t\t\t\t<input type=\"file\" name=\"MachinePic\">
 \t\t\t\t\t\t{{ form_widget(form) }}
 
 \t\t\t\t\t</div>

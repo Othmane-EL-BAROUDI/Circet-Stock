@@ -81,3 +81,31 @@ button:focus,input:focus,select:focus{
   ::-webkit-scrollbar-thumb {
     background:#f9a826;
   }
+  .card-body  input[type="checkbox"]{
+    
+    height: 15px;
+    cursor: pointer;
+}
+.modal-body > input[type="file"]{
+    position: absolute;
+    top:00;
+    width: 94%;
+    opacity: 0;
+    cursor: pointer;
+    
+}
+.modal-body .bxs-cloud-upload{
+    top: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9a826;
+    color: white;
+    border: none;
+    
+}
