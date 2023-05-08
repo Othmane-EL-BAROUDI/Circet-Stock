@@ -17,104 +17,119 @@
 {% endblock %}
 {% block body %}
 	{{ include('Pages/sidebar.html.twig') }}
-	<div class="modal fade" id="model" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel ">Les permissions de
-						{{user.username}}</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body ">
-					<ul class="row d-flex justify-content-center">
-						{% if user.getUserPermission()|length > 0 %}
-							{% for permission in user.getUserPermission() %}
-								<li class="d-flex justify-content-center align-items-center" style=" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;">{{permission.getPermissionName()}}</li>
-							{% endfor %}
-						{% else %}
-							<li class="d-flex justify-content-center align-items-center" style=" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;">no permission</li>
-						{% endif %}
-					</ul>
-				</div>
-				<div class="modal-footer close_button">
-					<button style="width: 120px;background: #f9a826; border:none; border-radius: 5px; color:white; padding: 2px 3px 2px 3px ;  cursor: pointer;" type="button" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="home_content">
-		<div class="text">User View</div>
-		<div class="container mt-2">
 
-			<div class="row d-flex justify-content-center ">
-				<div class="col-md-10 pt-5">
-					<div class="row z-depth-3">
-						<div class="col-sm-4 rounded-left" style="background-color: #f9a826; ">
-							<div class="card-block text-center text-white mt-2">
+	<div class="home_content"   >
+		<div class="text">User View</div>
+		<section>
+			<div class="container py-5">
+
+
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="card mb-4">
+							<div class="card-body text-center pt-5 pb-5"  style=" box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
 								<a class="back" href="{{Path}}">
-									<i class='bx bx-chevron-left bx-lg'></i>
+									<i class='bx bx-chevron-left bx-lg'  style="color:black;" ></i>
 								</a>
-								<i class="fas fa-user fa-7x "></i>
+								<i class="fas fa-user fa-7x " alt="avatar" class="rounded-circle img-fluid" style="width: 150px;"></i>
+								<h5 class="my-3 mt-4">Profile de {{user.username}}</h5>
 							</div>
 						</div>
+						<div class="card mb-4 mb-lg-0"  >
+							<div class="card-body p-0"  >
+								<ul class="list-group list-group-flush rounded-3"  >
+									<li class="list-group-item d-flex justify-content-between align-items-center p-3" style=" box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;" >
 
-						<div class="col-sm-7 rounded-right" style="border: solid 1px #f9a826; ">
-							<div class="row mb-4 mt-4">
-								<div class="col-sm-6">
-									<p class="font-weight-bold">Nom et prénom</p>
-									<h6 class="text-muted">{{user.username}}</h6>
-								</div>
-								<div class="col-sm-6">
-									<p class="font-weight-bold">Email</p>
-									<h6 class="text-muted">{{user.email}}</h6>
-								</div>
+										<i class='bx bxs-envelope fa-lg'></i>
+										<p class="mb-0">{{user.email}}</p>
+									</li>
+								</ul>
 							</div>
-
-							<div class="row mb-4">
-								<div class="col-sm-6">
-									<p class="font-weight-bold">Matricule</p>
-									<h6 class="text-muted">{{user.matricule}}</h6>
+						</div>
+					</div>
+					<div class="col-lg-8">
+						<div class="card mb-4">
+							<div class="card-body" style=" box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;" >
+								<div class="row">
+									<div class="col-sm-3">
+										<p class="mb-0">Full Name</p>
+									</div>
+									<div class="col-sm-9">
+										<p class="text-muted mb-0">{{user.username}}</p>
+									</div>
 								</div>
-								{% if user.roles[0] != "ROLE_ADMIN" %}
-									<div class="col-sm-6">
-										<p class="font-weight-bold">manager</p>
-										<h6 class="text-muted">
+								<hr>
+								<div class="row">
+									<div class="col-sm-3">
+										<p class="mb-0">Matricule</p>
+									</div>
+									<div class="col-sm-9">
+										<p class="text-muted mb-0">{{user.matricule}}</p>
+									</div>
+								</div>
+								<hr>
+								<div class="row">
+									<div class="col-sm-3">
+										<p class="mb-0">Job</p>
+									</div>
+									<div class="col-sm-9">
+										<p class="text-muted mb-0">{{user.job}}</p>
+									</div>
+								</div>
+								<hr>
+								<div class="row">
+									<div class="col-sm-3">
+										<p class="mb-0">Role</p>
+									</div>
+									<div class="col-sm-9">
+										<p class="text-muted mb-0">{{user.roles[0]}}</p>
+									</div>
+								</div>
+								<hr>
+								<div class="row">
+									<div class="col-sm-3">
+										<p class="mb-0">Manager</p>
+									</div>
+									<div class="col-sm-9">
+										<p class="text-muted mb-0">
 											{% if user.manager %}
 												{{user.manager}}
 											{% else %}
 												no manager
 											{% endif %}
-										</h6>
+										</p>
 									</div>
-								{% endif %}
-							</div>
-
-							<div class="row mb-4">
-								<div class="col-sm-6">
-									<p class="font-weight-bold">Job</p>
-									<h6 class="text-muted">{{user.job}}</h6>
-								</div>
-								<div class="col-sm-6">
-									<p class="font-weight-bold">Role</p>
-									<h6 class="text-muted">{{user.roles[0]}}</h6>
-								</div>
-							</div>
-
-							<div class="text-center mb-4 d-flex" style="justify-content: center;">
-								<div class="row">
-									<button type="button" style="width:300px;" data-toggle="modal" class="start mr-4" id="start" data-target="#model">voir permissions</button>
 								</div>
 							</div>
 						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="card mb-4 mb-md-0">
+									<div class="card-body" style="max-height: 270px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;" >
+										<p class="mb-4">
+											<span class=" font-italic me-1" style=" color:#f9a826;">Permission de</span>
+											Ayman
+										</p>
+										<div style="overflow-y: scroll  !important; max-height: 150px;">
+											{% if user.getUserPermission()|length > 0 %}
+												{% for permission in user.getUserPermission() %}
+													<p class="mb-2" style="font-size: .77rem; ">{{permission.getPermissionName()}}</p>
+												{% endfor %}
+											{% else %}
+												<p class="mb-1" style="font-size: .77rem; ">no permissions</p>
+											{% endif %}
+										</div>
 
+
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	</div>
-
 {% endblock %}
 {% block javascripts %}
 	<script src="{{asset('JS/sidebar.js')}}"></script>

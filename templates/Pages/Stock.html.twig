@@ -23,11 +23,9 @@
 
 						{{ form_start(form) }}
 						<label for="name">item picture:</label>
-						<button<i class="up" < > class='bx bxs-cloud-upload bx-sm'></i>
+						<button> <i class='bx bxs-cloud-upload bx-sm'></i>
 					</button>
 					<input type="file">
-
-
 					{{ form_widget(form) }}
 
 				</div>
@@ -127,12 +125,12 @@
 										Edit
 									</button>
 								</a>
-								
-									<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " data-toggle="modal" data-target="#exampleModal{{machine.id}}" style=" border: #dc3545 solid 1px;">
-										<i class='bx bx-trash bx-xs'></i>
-										Delete
-									</button>
-							
+
+								<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " data-toggle="modal" data-target="#exampleModal{{machine.id}}" style=" border: #dc3545 solid 1px;">
+									<i class='bx bx-trash bx-xs'></i>
+									Delete
+								</button>
+
 							</td>
 						</tr>
 						<div class="modal fade" id="exampleModal{{machine.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -146,7 +144,9 @@
 									</div>
 									<div class="modal-body">
 										Do you Realy want to delete from the stock :
-										<label style="  font-weight: bold; color: #f9a826; ">{{machine.model.marque.getMarqueName()}} - {{machine.model.getModelName()}}</label>
+										<label style="  font-weight: bold; color: #f9a826; ">{{machine.model.marque.getMarqueName()}}
+											-
+											{{machine.model.getModelName()}}</label>
 									</div>
 									<div class="modal-footer">
 										<a href="Stock/Remove/{{machine.id}}">
