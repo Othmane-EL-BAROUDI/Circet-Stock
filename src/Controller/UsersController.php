@@ -30,17 +30,17 @@ class UsersController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted()  && $form->isValid()) {
-            $newUser = $form->getData();
-            $encoded = $encoder->encodePassword($Nuser, $newUser->getPassword());
-            $newUser->setPassword($encoded);
+            $Nuser = $form->getData();
+            $encoded = $encoder->encodePassword($Nuser, $Nuser->getPassword());
+            $Nuser->setPassword($encoded);
             $selectedRole = $form->get('roles')->getData();
-            $newUser->addRole($selectedRole->getRoleName());
-            $entityManager->persist($newUser);
-            $newUser->setEnabled(true);
+            $Nuser->addRole($selectedRole->getRoleName());
+            $entityManager->persist($Nuser);
+            $Nuser->setEnabled(true);
             $entityManager->flush();
             $this->addFlash(
                 'success',
-                sprintf('  "%s" added successfully as "%s" ', $newUser->getUsername(), $newUser->getJob())
+                sprintf('  "%s" added successfully as "%s" ', $Nuser->getUsername(), $Nuser->getJob())
             );
             return $this->redirectToRoute('Users');
         }
@@ -94,10 +94,12 @@ class UsersController extends AbstractController
         $user = $entityManager->getRepository(User::class)->find($id);
         $form = $this->createForm(UserFormType::class, $user);
         $form->get('password')->setData(' ');
+        $form->get('roles')->setData($user->getRoles()[0]);
         $form->handleRequest($request);
         if ($form->isSubmitted()  && $form->isValid()) {
             $encoded = $encoder->encodePassword($user, $user->getPassword());
             $user->setPassword($encoded);
+            $user->setRoles(array($form->get('roles')->getData()->getRoleName()));
             $entityManager->flush();
             $this->addFlash(
                 'update',

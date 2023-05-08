@@ -156,14 +156,18 @@ a{
     text-align: left;
 }
 .mainC{
-    max-height: 510px !important;
+   
+    max-height: 400px !important;
     width: 50%;
     margin-left: 5%;
     margin-top: 1%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     overflow-y: scroll !important; 
  }
-
+ .mainC table thead{
+    position: sticky;
+    top : 0;
+ }
  .CContent{
     width: 100%;
     display: flex;

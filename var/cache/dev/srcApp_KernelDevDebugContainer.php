@@ -16,6 +16,6 @@ if (!\class_exists(srcApp_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerMWzO2UT\srcApp_KernelDevDebugContainer([
     'container.build_hash' => 'MWzO2UT',
-    'container.build_id' => '6162028b',
-    'container.build_time' => 1683290522,
+    'container.build_id' => 'cc279f7d',
+    'container.build_time' => 1683533523,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerMWzO2UT');

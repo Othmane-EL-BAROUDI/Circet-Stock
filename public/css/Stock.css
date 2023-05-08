@@ -187,6 +187,10 @@ textarea:focus, input:focus , select:focus ,button:focus{
     margin-top: 1%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
  }
+ .mainC table thead{
+    position: sticky;
+    top : 0;
+ }
  .actions{
     display: flex;
     align-items: center;

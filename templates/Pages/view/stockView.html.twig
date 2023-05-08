@@ -17,127 +17,285 @@
 {% endblock %}
 {% block body %}
 	{{ include('Pages/sidebar.html.twig') }}
-	<div class="modal fade" id="model" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel ">L'historique d'affectation de
-						{{machine.model.marque.getMarqueName()}}
-						-
-						{{machine.model.getModelName()}}</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body ">
-					<ul class="row d-flex justify-content-center">
-						<li class="d-flex justify-content-center align-items-center" style=" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;">no affectation</li>
-					</ul>
-				</div>
-				<div class="modal-footer close_button">
-					<button style="width: 120px;background: #f9a826; border:none; border-radius: 5px; color:white; padding: 2px 3px 2px 3px ;  cursor: pointer;" type="button" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="modal fade" id="model1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel ">L'historique de restitution de
-						{{machine.model.marque.getMarqueName()}}
-						-
-						{{machine.model.getModelName()}}</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body ">
-					<ul class="row d-flex justify-content-center">
-						<li class="d-flex justify-content-center align-items-center" style=" color:white; height: 40px; background: #f9a826; border-radius: 5px; width: 70%; list-style: none; border: 1px solid orange;  margin-bottom: 10px; font-size: 16px;">no restitution</li>
-					</ul>
-				</div>
-				<div class="modal-footer close_button">
-					<button style="width: 120px;background: #f9a826; border:none; border-radius: 5px; color:white; padding: 2px 3px 2px 3px ;  cursor: pointer;" type="button" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
+
 	<div class="home_content">
-		<div class="text">Stock View</div>
-		<div class="container mt-2 " style="height: 100px !importante ;">
-			<div class="row d-flex justify-content-center">
-				<div class="col-md-10 pt-5">
-					<div class="row z-depth-3">
-						<div class="col-sm-4 text-center rounded-left" style="background: #f9a826;">
-							<a class="back" href="{{Path}}">
-								<i class='bx bx-chevron-left bx-md'></i>
-							</a>
-							<div class="img-prod mt-4">
-								<img src="{{asset('images/laptop.png')}}" class="rounded float-start mt-3 mb-3 w-50" alt="">
-								<p style="color:white; font-weight:bold">{{machine.model.marque.getMarqueName()}}
-									-
-									{{machine.model.getModelName()}}</p>
-							</div>
-							<div class="desc mt-2 mb-3">
-								<p class="desc-title mb-1 mt-1 ml-2">Description</p>
-								<textarea class="form-control" style="height: 140px; resize: none " disabled>{{machine.description}}</textarea>
+
+		<section class="mt-4">
+			<div class="container py-5">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="card mb-4">
+							<div class="card-body text-center pt-2 pb-2" style=" box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+								<a class="back" href="{{Path}}">
+									<i class='bx bx-chevron-left bx-lg' style="color:black;"></i>
+								</a>
+								<img src="{{asset('images/laptop.png')}}" class="rounded float-start mt-3 mb-3" style="width: 120px;" alt="">
 							</div>
 						</div>
-
-						<div class="col-sm-7 rounded-right text-center">
-							<div class="row mb-5 mt-5">
-								<div class="col-sm-6">
-									<p class="font-weight-bold">Type</p>
-									<h6 class="text-muted">{{machine.type}}</h6>
-								</div>
-								<div class="col-sm-6">
-									<p class="font-weight-bold">Serial number</p>
-									<h6 class="text-muted">{{machine.getSerialNum()}}</h6>
-								</div>
-							</div>
-
-							<div class="row mb-5">
-								<div class="col-sm-6">
-									<p class="font-weight-bold">State</p>
-									<h6 class="text-muted">{{machine.state}}</h6>
-								</div>
-								<div class="col-sm-6">
-									<p class="font-weight-bold">Available</p>
-									{% if machine.available == 1 %}
-										<span class="badge badge-success rounded-pill d-inline pl-3 pr-3">Yes</span>
-									{% else %}
-										<span class="badge badge-warning rounded-pill d-inline pl-3 pr-3">No</span>
-									{% endif %}
-								</div>
-							</div>
-
-							<div class="row mb-5">
-								<div class="col-sm-6">
-									<p class="font-weight-bold">Mac ethernet</p>
-									<h6 class="text-muted">{{machine.getMacEthernet()}}</h6>
-								</div>
-								<div class="col-sm-6">
-									<p class="font-weight-bold">Mac wifi</p>
-									<h6 class="text-muted">{{machine.getMacWifi()}}</h6>
-								</div>
-							</div>
-							<div class="row mb-5">
-
-								<button type="button" data-toggle="modal" class="start" id="start" data-target="#model">voir affectations</button>
-								<button type="button" data-toggle="modal" class="start" id="start" data-target="#model1">voir restitutions</button>
-
+						<div class="card mb-4 mb-lg-0">
+							<div class="card-body p-0">
+								<ul class="list-group list-group-flush rounded-3" style=" box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+									<li class="list-group-item d-flex justify-content-between align-items-center p-3">
+										<p class="mb-0">Marque & Model</p>
+										<p class="mb-1" style="font-size: .77rem; ">{{machine.model.marque.getMarqueName()}}
+											-
+											{{machine.model.getModelName()}}</p>
+									</li>
+									<li class="list-group-item d-flex justify-content-between align-items-center p-3">
+										<p class="mb-0">Type</p>
+										<p class="mb-1" style="font-size: .77rem; ">{{machine.type}}</p>
+									</li>
+									<li class="list-group-item d-flex justify-content-between align-items-center p-3">
+										<p class="mb-0">Serial Number</p>
+										<p class="mb-1" style="font-size: .77rem; ">{{machine.getSerialNum()}}</p>
+									</li>
+									<li class="list-group-item d-flex justify-content-between align-items-center p-3">
+										<p class="mb-0">State</p>
+										<p class="mb-1" style="font-size: .77rem; ">{{machine.state}}</p>
+									</li>
+									<li class="list-group-item d-flex justify-content-between align-items-center p-3">
+										<p class="mb-0">Available</p>
+										<p class="mb-1" style="font-size: .77rem; ">
+											{% if machine.available == 1 %}
+												<span class="badge badge-success rounded-pill d-inline pl-3 pr-3">Yes</span>
+											{% else %}
+												<span class="badge badge-warning rounded-pill d-inline pl-3 pr-3">No</span>
+											{% endif %}
+										</p>
+									</li>
+									<li class="list-group-item d-flex justify-content-between align-items-center p-3">
+										<p class="mb-0">Mac ethernet</p>
+										<p class="mb-1" style="font-size: .77rem; ">{{machine.getSerialNum()}}</p>
+									</li>
+									<li class="list-group-item d-flex justify-content-between align-items-center p-3">
+										<p class="mb-0">Mac wifi</p>
+										<p class="mb-1" style="font-size: .77rem; ">{{machine.state}}</p>
+									</li>
+								</ul>
 							</div>
 						</div>
-
 					</div>
+					<div class="col-lg-8">
+						<div class="card mb-4 ">
+							<div class="card-body pb-3" style="max-height: 270px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+								<p class="mb-4">
+									<span class=" font-italic me-1">Historique d'affectation de</span>
+									{{machine.model.marque.getMarqueName()}}
+									-
+									{{machine.model.getModelName()}}
+								</p>
+								<div class="mainCont">
+									<table class="table align-middle mb-0 bg-white">
+										<thead class="bg-light">
+											<tr>
+												<th>affectation</th>
+												<th>type</th>
+												<th>Date</th>
+											</tr>
+										</thead>
+										<tbody>
 
+											<tr>
+												<td class="textperm">
+													<label>Ayman</label> took 
+													this <label>Laptop</label>
+												</td>
+												<td class="textperm">
+													Laptop
+												</td>
+												<td class="textperm">
+													09/17/2023 8:00
+												</td>
+											</tr>
+											<tr>
+												<td class="textperm">
+													<label>Ayman</label> took 
+													this <label>Laptop</label>
+												</td>
+												<td class="textperm">
+													Laptop
+												</td>
+												<td class="textperm">
+													09/17/2023 8:00
+												</td>
+											</tr>
+											<tr>
+												<td class="textperm">
+													<label>Ayman</label> took 
+													this <label>Laptop</label>
+												</td>
+												<td class="textperm">
+													Laptop
+												</td>
+												<td class="textperm">
+													09/17/2023 8:00
+												</td>
+											</tr>
+											<tr>
+												<td class="textperm">
+													<label>Ayman</label> took 
+													this <label>Laptop</label>
+												</td>
+												<td class="textperm">
+													Laptop
+												</td>
+												<td class="textperm">
+													09/17/2023 8:00
+												</td>
+											</tr>
+											<tr>
+												<td class="textperm">
+													<label>Ayman</label> took 
+													this <label>Laptop</label>
+												</td>
+												<td class="textperm">
+													Laptop
+												</td>
+												<td class="textperm">
+													09/17/2023 8:00
+												</td>
+											</tr>
+											<tr>
+												<td class="textperm">
+													<label>Ayman</label> took 
+													this <label>Laptop</label>
+												</td>
+												<td class="textperm">
+													Laptop
+												</td>
+												<td class="textperm">
+													09/17/2023 8:00
+												</td>
+											</tr>
+											<tr>
+												<td class="textperm">
+													<label>Ayman</label> took 
+													this <label>Laptop</label>
+												</td>
+												<td class="textperm">
+													Laptop
+												</td>
+												<td class="textperm">
+													09/17/2023 8:00
+												</td>
+											</tr>
+
+
+
+										</tbody>
+									</table>
+								</div>
+
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="card mb-4 mb-md-0">
+									<div class="card-body pb-3" style="max-height: 270px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+										<p class="mb-4">
+											<span class=" font-italic me-1" >Historique de restitution de</span>
+											{{machine.model.marque.getMarqueName()}}
+											-
+											{{machine.model.getModelName()}}
+										</p>
+										<div class="mainCont">
+											<table class="table align-middle mb-0 bg-white">
+												<thead class="bg-light">
+													<tr>
+														<th>restitution</th>
+														<th>type</th>
+														<th>Date</th>
+													</tr>
+												</thead>
+												<tbody>
+
+													<tr>
+														<td class="textperm">
+															<label>restitution</label> made a
+															<label>restitution</label>
+														</td>
+														<td class="textperm">
+															restitution
+														</td>
+														<td class="textperm">
+															09/17/2023 8:00
+														</td>
+													</tr>
+																										<tr>
+														<td class="textperm">
+															<label>restitution</label> made a
+															<label>restitution</label>
+														</td>
+														<td class="textperm">
+															restitution
+														</td>
+														<td class="textperm">
+															09/17/2023 8:00
+														</td>
+													</tr>
+																										<tr>
+														<td class="textperm">
+															<label>restitution</label> made a
+															<label>restitution</label>
+														</td>
+														<td class="textperm">
+															restitution
+														</td>
+														<td class="textperm">
+															09/17/2023 8:00
+														</td>
+													</tr>
+																										<tr>
+														<td class="textperm">
+															<label>restitution</label> made a
+															<label>restitution</label>
+														</td>
+														<td class="textperm">
+															restitution
+														</td>
+														<td class="textperm">
+															09/17/2023 8:00
+														</td>
+													</tr>
+																										<tr>
+														<td class="textperm">
+															<label>restitution</label> made a
+															<label>restitution</label>
+														</td>
+														<td class="textperm">
+															restitution
+														</td>
+														<td class="textperm">
+															09/17/2023 8:00
+														</td>
+													</tr>
+																										<tr>
+														<td class="textperm">
+															<label>restitution</label> made a
+															<label>restitution</label>
+														</td>
+														<td class="textperm">
+															restitution
+														</td>
+														<td class="textperm">
+															09/17/2023 8:00
+														</td>
+													</tr>
+
+
+												</tbody>
+											</table>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-
 			</div>
-
-		</div>
-
+		</section>
 
 	</div>
 

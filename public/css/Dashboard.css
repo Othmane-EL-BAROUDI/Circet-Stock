@@ -4,6 +4,7 @@
     width: calc(100% - 78px);
     left: 78px;
     transition:  all 0.5s ease;
+    overflow-y: scroll  !important;
 }
 .home_content .text{
     font-size: 25px;
@@ -33,10 +34,18 @@
     align-items: center;
 }
 .body_body > div{
-    margin-top: 5%;
+    margin-top: 1%;
     width: 45%;
+   
+}
+.over{
+    
+    overflow-y: scroll  !important;
+    max-height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .body_body > div label{
+   
     color: #f9a826;
 }
 .actions{
@@ -104,6 +113,10 @@
     margin-left: 35px;
     margin-top: -15px;
 }
+ table thead{
+    position: sticky;
+    top : 0;
+ }
 ::-webkit-scrollbar {
     width: 4px;
   }

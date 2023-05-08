@@ -192,6 +192,10 @@ textarea:focus, input:focus , select:focus ,button:focus{
  .mainC{
     overflow-y: scroll !important; 
  }
+ .mainC table thead{
+    position: sticky;
+    top : 0;
+ }
  .actions{
     display: flex;
     align-items: center;
