@@ -19,6 +19,7 @@ return [
     'Stock' => [[], ['_controller' => 'App\\Controller\\StockController::Stock'], [], [['text', '/Stock']], [], []],
     'stockView' => [['id'], ['_controller' => 'App\\Controller\\StockController::stockView'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/stockView']], [], []],
     'StockRemove' => [['id'], ['_controller' => 'App\\Controller\\StockController::PermissionDelete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Stock/Remove']], [], []],
+    'StockUpdate' => [['id'], ['_controller' => 'App\\Controller\\StockController::StockUpdate'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Stock/Edit']], [], []],
     'UserProfile' => [[], ['_controller' => 'App\\Controller\\UserProfileController::UserProfile'], [], [['text', '/UserProfile']], [], []],
     'Users' => [[], ['_controller' => 'App\\Controller\\UsersController::Users'], [], [['text', '/Users']], [], []],
     'UserView' => [['id'], ['_controller' => 'App\\Controller\\UsersController::UserView'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/User']], [], []],

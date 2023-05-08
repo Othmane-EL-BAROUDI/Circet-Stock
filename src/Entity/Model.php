@@ -22,10 +22,6 @@ class Model
      */
     private $model_name;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $img_src;
 
     /**
      * @ORM\ManyToOne(targetEntity=Marque::class, inversedBy="model")
@@ -54,17 +50,7 @@ class Model
         return $this;
     }
 
-    public function getImgSrc(): ?string
-    {
-        return $this->img_src;
-    }
-
-    public function setImgSrc(string $img_src): self
-    {
-        $this->img_src = $img_src;
-
-        return $this;
-    }
+   
     public function getMarque(): ?Marque
     {
         return $this->marque;

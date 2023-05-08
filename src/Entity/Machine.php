@@ -63,6 +63,11 @@ class Machine
      * @ORM\JoinColumn(nullable=false)
      */
     private $model;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $img_src;
 
     public function __construct()
     {
@@ -79,7 +84,7 @@ class Machine
         return   $this->model ;  
     }
 
-    public function setModel(string $model): self
+    public function setModel(?Model $model): self
     {
         $this->model = $model;
 
@@ -121,7 +126,17 @@ class Machine
 
         return $this;
     }
+    public function getImgSrc(): ?string
+    {
+        return $this->img_src;
+    }
 
+    public function setImgSrc(string $img_src): self
+    {
+        $this->img_src = $img_src;
+
+        return $this;
+    }
     public function getAvailable(): ?bool
     {
         return $this->available;

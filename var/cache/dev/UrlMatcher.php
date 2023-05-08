@@ -44,15 +44,18 @@ return [
                     .'|Remove/([^/]++)(*:140)'
                 .')'
                 .'|/stockView/([^/]++)(*:168)'
-                .'|/Stock/Remove/([^/]++)(*:198)'
+                .'|/Stock/(?'
+                    .'|Remove/([^/]++)(*:201)'
+                    .'|Edit/([^/]++)(*:222)'
+                .')'
                 .'|/User/(?'
-                    .'|([^/]++)(*:223)'
-                    .'|Remove/([^/]++)(*:246)'
-                    .'|Edit/([^/]++)(*:267)'
+                    .'|([^/]++)(*:248)'
+                    .'|Remove/([^/]++)(*:271)'
+                    .'|Edit/([^/]++)(*:292)'
                 .')'
                 .'|/re(?'
-                    .'|gister/confirm/([^/]++)(*:305)'
-                    .'|setting/reset/([^/]++)(*:335)'
+                    .'|gister/confirm/([^/]++)(*:330)'
+                    .'|setting/reset/([^/]++)(*:360)'
                 .')'
             .')/?$}sDu',
     ],
@@ -63,12 +66,13 @@ return [
         117 => [[['_route' => 'RoleUpdate', '_controller' => 'App\\Controller\\RoleController::RoleUpdate'], ['id'], null, null, false, true, null]],
         140 => [[['_route' => 'RoleRemove', '_controller' => 'App\\Controller\\RoleController::RoleDelete'], ['id'], null, null, false, true, null]],
         168 => [[['_route' => 'stockView', '_controller' => 'App\\Controller\\StockController::stockView'], ['id'], null, null, false, true, null]],
-        198 => [[['_route' => 'StockRemove', '_controller' => 'App\\Controller\\StockController::PermissionDelete'], ['id'], null, null, false, true, null]],
-        223 => [[['_route' => 'UserView', '_controller' => 'App\\Controller\\UsersController::UserView'], ['id'], null, null, false, true, null]],
-        246 => [[['_route' => 'UserRemove', '_controller' => 'App\\Controller\\UsersController::UserDelete'], ['id'], null, null, false, true, null]],
-        267 => [[['_route' => 'UserUpdate', '_controller' => 'App\\Controller\\UsersController::UserUpdate'], ['id'], null, null, false, true, null]],
-        305 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
-        335 => [
+        201 => [[['_route' => 'StockRemove', '_controller' => 'App\\Controller\\StockController::PermissionDelete'], ['id'], null, null, false, true, null]],
+        222 => [[['_route' => 'StockUpdate', '_controller' => 'App\\Controller\\StockController::StockUpdate'], ['id'], null, null, false, true, null]],
+        248 => [[['_route' => 'UserView', '_controller' => 'App\\Controller\\UsersController::UserView'], ['id'], null, null, false, true, null]],
+        271 => [[['_route' => 'UserRemove', '_controller' => 'App\\Controller\\UsersController::UserDelete'], ['id'], null, null, false, true, null]],
+        292 => [[['_route' => 'UserUpdate', '_controller' => 'App\\Controller\\UsersController::UserUpdate'], ['id'], null, null, false, true, null]],
+        330 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
+        360 => [
             [['_route' => 'fos_user_resetting_reset', '_controller' => 'fos_user.resetting.controller:resetAction'], ['token'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
