@@ -87,16 +87,9 @@ class UsersController extends AbstractController
     /**
      * @Route("User/Edit/{id}" , name="UserUpdate")
      */
-<<<<<<< HEAD
-    public function UserUpdate(Request $request , EntityManagerInterface $entityManager, $id): Response
-    {   
-        $CurrentUser = $this->getUser();
-
-=======
     public function UserUpdate(Request $request, EntityManagerInterface $entityManager, $id, UserPasswordEncoderInterface $encoder): Response
     {
         $CurrentUser = $this->getUser();
->>>>>>> 8e19b65e61224e5e621f97c9ffa90c5f76e77196
         $entityManager = $this->getDoctrine()->getManager();
         $user = $entityManager->getRepository(User::class)->find($id);
         $form = $this->createForm(UserFormType::class, $user);
