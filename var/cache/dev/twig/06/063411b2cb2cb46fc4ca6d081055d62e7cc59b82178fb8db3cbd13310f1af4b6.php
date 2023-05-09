@@ -203,6 +203,6 @@ class __TwigTemplate_75c41ab1d4a74fa1d229bd064d74ec2b5c7d367b4b3139a23889ffc371c
         {{ include('@Twig/base_js.html.twig') }}
     </body>
 </html>
-", "@Twig/layout.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\twig-bundle\\Resources\\views\\layout.html.twig");
+", "@Twig/layout.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\twig-bundle\\Resources\\views\\layout.html.twig");
     }
 }

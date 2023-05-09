@@ -629,6 +629,6 @@ class __TwigTemplate_78ee7d8d911ddeea695f8f78626d82a17e0883e637a81e45609f2868fc3
     });
 
 /*]]>*/</script>
-", "@Twig/base_js.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\vendor\\symfony\\twig-bundle\\Resources\\views\\base_js.html.twig");
+", "@Twig/base_js.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\vendor\\symfony\\twig-bundle\\Resources\\views\\base_js.html.twig");
     }
 }

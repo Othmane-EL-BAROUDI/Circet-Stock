@@ -227,7 +227,7 @@ class Marque extends \App\Entity\Marque implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function addModel(\App\Entity\model $model): \App\Entity\Marque
+    public function addModel(\App\Entity\Model $model): \App\Entity\Marque
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'addModel', [$model]);
@@ -238,7 +238,7 @@ class Marque extends \App\Entity\Marque implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function removeModel(\App\Entity\model $model): \App\Entity\Marque
+    public function removeModel(\App\Entity\Model $model): \App\Entity\Marque
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeModel', [$model]);
