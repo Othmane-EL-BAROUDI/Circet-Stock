@@ -2,8 +2,9 @@
 
 namespace App\Entity;
 
-use App\Repository\ModelRepository;
+use App\Entity\Marque;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ModelRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ModelRepository::class)

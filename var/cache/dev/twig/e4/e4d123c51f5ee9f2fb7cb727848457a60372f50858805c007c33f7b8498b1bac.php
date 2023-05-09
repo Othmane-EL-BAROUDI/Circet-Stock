@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* Pages/Stock.html.twig */
-class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89c1ce8 extends \Twig\Template
+/* Pages/Role.html.twig */
+class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47df428 extends \Twig\Template
 {
     private $source;
     private $macros = [];
@@ -38,7 +38,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Pages/Stock.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Pages/Role.html.twig"));
 
         // line 1
         echo "<title>
@@ -56,7 +56,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 ";
         // line 10
         $this->displayBlock('body', $context, $blocks);
-        // line 187
+        // line 155
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -70,7 +70,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Circet-Stock
+        echo "Circet-Role
 \t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -86,7 +86,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
         // line 6
         echo "\t<link rel=\"stylesheet\" href=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/Stock.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/Role.css"), "html", null, true);
         echo "\">
 \t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
 ";
@@ -103,55 +103,70 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 11
-        echo "\t<div class=\"home_content\">
-\t\t<div class=\"modal fade\" id=\"addStock\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addStock\" aria-hidden=\"true\">
+        echo "
+\t<div class=\"home_content\">
+\t\t<div class=\"modal fade\" id=\"editRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"editRole\" aria-hidden=\"true\">
 \t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t<div class=\"modal-content\">
 \t\t\t\t\t<div class=\"modal-header\">
-
-\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Add to stock</h5>
+\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Edit role</h5>
 \t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t</button>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-body\">
-
-\t\t\t\t\t\t";
-        // line 24
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 24, $this->source); })()), 'form_start');
-        echo "
-\t\t\t\t\t\t<label for=\"name\">item picture:</label>
-\t\t\t\t\t\t<button>
-\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
-\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t<p class=\"mb-1 mt-1\" id=\"fileName\"  style=\"font-size: .77rem; \"></p>
-\t\t\t\t\t\t";
-        // line 30
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 30, $this->source); })()), 'widget');
-        echo "
-
+\t\t\t\t\t\t<label for=\"name\">Role name:</label>
+\t\t\t\t\t\t<input placeholder=\"@role_name\" type=\"text\">
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Add item</button>
+\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
+\t\t\t\t\t\t<button type=\"button\" class=\"close_button\">Save changes</button>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+
+\t\t<div class=\"modal fade\" id=\"addRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addRole\" aria-hidden=\"true\">
+\t\t\t<div class=\"modal-dialog\" role=\"document\">
+\t\t\t\t<div class=\"modal-content\">
+\t\t\t\t\t<div class=\"modal-header\">
+\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Add role</h5>
+\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
+\t\t\t\t\t\t</button>
 \t\t\t\t\t</div>
 \t\t\t\t\t";
-        // line 36
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 36, $this->source); })()), 'form_end');
+        // line 43
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 43, $this->source); })()), 'form_start');
+        echo "
+\t\t\t\t\t<div class=\"modal-body\">
+\t\t\t\t\t\t";
+        // line 45
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 45, $this->source); })()), 'widget');
+        echo "
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"modal-footer\">
+\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Add role</button>
+\t\t\t\t\t</div>
+\t\t\t\t\t";
+        // line 50
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 50, $this->source); })()), 'form_end');
         echo "
 \t\t\t\t</div>
 \t\t\t</div>
 
 \t\t</div>
+
 \t\t";
-        // line 41
+        // line 56
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 41, $this->source); })()), "session", [], "any", false, false, false, 41), "flashbag", [], "any", false, false, false, 41), "get", [0 => "success"], "method", false, false, false, 41));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 56, $this->source); })()), "session", [], "any", false, false, false, 56), "flashbag", [], "any", false, false, false, 56), "get", [0 => "success"], "method", false, false, false, 56));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 42
+            // line 57
             echo "\t\t\t<div class=\"alert  alert-success fade show\" role=\"alert\">
 \t\t\t\t<strong>Success!</strong>
 \t\t\t\t";
-            // line 44
+            // line 59
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
@@ -163,16 +178,16 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 50
-        echo "\t\t\t";
+        // line 65
+        echo "\t\t";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 50, $this->source); })()), "session", [], "any", false, false, false, 50), "flashbag", [], "any", false, false, false, 50), "get", [0 => "update"], "method", false, false, false, 50));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 65, $this->source); })()), "session", [], "any", false, false, false, 65), "flashbag", [], "any", false, false, false, 65), "get", [0 => "update"], "method", false, false, false, 65));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 51
+            // line 66
             echo "\t\t\t<div class=\"alert  alert-info fade show\" role=\"alert\">
 \t\t\t\t<strong>Success!</strong>
 \t\t\t\t";
-            // line 53
+            // line 68
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
@@ -184,15 +199,15 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 59
+        // line 74
         echo "\t\t";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 59, $this->source); })()), "session", [], "any", false, false, false, 59), "flashbag", [], "any", false, false, false, 59), "get", [0 => "delete"], "method", false, false, false, 59));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 74, $this->source); })()), "session", [], "any", false, false, false, 74), "flashbag", [], "any", false, false, false, 74), "get", [0 => "delete"], "method", false, false, false, 74));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 60
+            // line 75
             echo "\t\t\t<div class=\"alert  alert-danger fade show\" role=\"alert\">
 \t\t\t\t";
-            // line 61
+            // line 76
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
@@ -204,134 +219,67 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 67
-        echo "\t\t<div class=\"text\">Stock</div>
-\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addStock\">Add to stock</button>
+        // line 82
+        echo "
+\t\t<div class=\"text\">Role</div>
+\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Add new role</button>
 \t\t<div class=\"main_content\">
-\t\t\t<div class=\"sort1\">
+\t\t\t<div class=\"sort\">
 \t\t\t\t<input type=\"text\" placeholder=\"Search\">
-\t\t\t\t<select name=\"role\">
-\t\t\t\t\t<option selected disabled>Type</option>
-\t\t\t\t\t<option value=\"manager\">manager</option>
-\t\t\t\t\t<option value=\"admin\">admin</option>
-\t\t\t\t</select>
-\t\t\t\t<select name=\"availability\">
-\t\t\t\t\t<option selected disabled>Availability</option>
-\t\t\t\t</select>
-\t\t\t\t<select name=\"state\">
-\t\t\t\t\t<option selected disabled>State</option>
-\t\t\t\t</select>
 \t\t\t\t<button>
 \t\t\t\t\tSearch
 \t\t\t\t</button>
 \t\t\t</div>
+\t\t</div>
+
+
+\t\t<div class=\"CContent\">
 \t\t\t<div class=\"mainC\">
 \t\t\t\t<table class=\"table align-middle mb-0 bg-white\">
 \t\t\t\t\t<thead class=\"bg-light\">
 \t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<th>name</th>
-\t\t\t\t\t\t\t<th>type</th>
-\t\t\t\t\t\t\t<th>serial number</th>
-\t\t\t\t\t\t\t<th>availability</th>
-\t\t\t\t\t\t\t<th>state</th>
-\t\t\t\t\t\t\t<th style=\"text-align:center;\">action</th>
+\t\t\t\t\t\t\t<th>Rôle</th>
+\t\t\t\t\t\t\t<th style=\"text-align:center;\">Actions</th>
 \t\t\t\t\t\t</tr>
 \t\t\t\t\t</thead>
 \t\t\t\t\t<tbody>
 \t\t\t\t\t\t";
-        // line 100
+        // line 105
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["Allmachines"]) || array_key_exists("Allmachines", $context) ? $context["Allmachines"] : (function () { throw new RuntimeError('Variable "Allmachines" does not exist.', 100, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["machine"]) {
-            // line 101
-            echo "\t\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t\t<div class=\"d-flex align-items-center\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"ms-3\">
-\t\t\t\t\t\t\t\t\t\t\t<p class=\"fw-bold mb-1\">";
-            // line 105
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 105), "marque", [], "any", false, false, false, 105), "getMarqueName", [], "method", false, false, false, 105), "html", null, true);
-            echo "</p>
-\t\t\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0\">";
+        $context['_seq'] = twig_ensure_traversable((isset($context["allRoles"]) || array_key_exists("allRoles", $context) ? $context["allRoles"] : (function () { throw new RuntimeError('Variable "allRoles" does not exist.', 105, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
             // line 106
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 106), "getModelName", [], "method", false, false, false, 106), "html", null, true);
-            echo "</p>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0 mt-2 \">";
-            // line 111
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "type", [], "any", false, false, false, 111), "html", null, true);
-            echo "</p>
-\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t\t<label class=\"mt-2\">
-\t\t\t\t\t\t\t\t\t\t";
-            // line 115
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "getSerialNum", [], "method", false, false, false, 115), "html", null, true);
+            echo "\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t<td class=\"textperm\">
+\t\t\t\t\t\t\t\t\t";
+            // line 108
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "roleName", [], "any", false, false, false, 108), "html", null, true);
             echo "
-\t\t\t\t\t\t\t\t\t</label>
+\t\t\t\t\t\t\t\t</td>
 
-\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t\t<label class=\"mt-2 ml-2\">
-\t\t\t\t\t\t\t\t\t\t";
-            // line 121
-            if ((twig_get_attribute($this->env, $this->source, $context["machine"], "available", [], "any", false, false, false, 121) == 1)) {
-                // line 122
-                echo "\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-success rounded-pill d-inline pl-3 pr-3\">Yes</span>
-\t\t\t\t\t\t\t\t\t\t";
-            } else {
-                // line 124
-                echo "\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-warning rounded-pill d-inline pl-3 pr-3\">No</span>
-\t\t\t\t\t\t\t\t\t\t";
-            }
-            // line 126
-            echo "\t\t\t\t\t\t\t\t\t</label>
-\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t\t<label class=\"mt-2\">
-\t\t\t\t\t\t\t\t\t\t";
-            // line 130
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "state", [], "method", false, false, false, 130), "html", null, true);
-            echo "
-\t\t\t\t\t\t\t\t\t</label>
-
-\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t<td class=\"actions\">
-\t\t\t\t\t\t\t\t\t<a href=\"stockView/";
-            // line 135
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 135), "html", null, true);
-            echo "\">
-\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\" style=\" border: #28a745 solid 1px; \">
-\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-show-alt bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\tview
-\t\t\t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t<a href=\"Stock/Edit/";
-            // line 141
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 141), "html", null, true);
+
+\t\t\t\t\t\t\t\t\t<a href=\"Role/Edit/";
+            // line 113
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "id", [], "any", false, false, false, 113), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
 \t\t\t\t\t\t\t\t\t\t\tEdit
 \t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t</a>
-
 \t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal";
-            // line 148
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 148), "html", null, true);
+            // line 119
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "id", [], "any", false, false, false, 119), "html", null, true);
             echo "\" style=\" border: #dc3545 solid 1px;\">
 \t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
 \t\t\t\t\t\t\t\t\t\tDelete
 \t\t\t\t\t\t\t\t\t</button>
-
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t</tr>
 \t\t\t\t\t\t\t<div class=\"modal fade\" id=\"exampleModal";
-            // line 155
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 155), "html", null, true);
+            // line 125
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "id", [], "any", false, false, false, 125), "html", null, true);
             echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
 \t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
 \t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
@@ -342,21 +290,16 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t\t\t\t\t\tDo you Realy want to delete from the stock :
+\t\t\t\t\t\t\t\t\t\t\tDo you Realy want to delete role :
 \t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">";
-            // line 166
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 166), "marque", [], "any", false, false, false, 166), "getMarqueName", [], "method", false, false, false, 166), "html", null, true);
-            echo "
-\t\t\t\t\t\t\t\t\t\t\t\t-
-\t\t\t\t\t\t\t\t\t\t\t\t";
-            // line 168
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 168), "getModelName", [], "method", false, false, false, 168), "html", null, true);
+            // line 136
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "roleName", [], "any", false, false, false, 136), "html", null, true);
             echo "</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"Stock/Remove/";
-            // line 171
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 171), "html", null, true);
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"Role/Remove/";
+            // line 139
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "id", [], "any", false, false, false, 139), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Delete</button>
 \t\t\t\t\t\t\t\t\t\t\t</a>
@@ -368,14 +311,14 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['machine'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 180
+        // line 148
         echo "\t\t\t\t\t</tbody>
 \t\t\t\t</table>
 \t\t\t</div>
-
 \t\t</div>
+
 \t</div>
 ";
         
@@ -383,20 +326,16 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
     }
 
-    // line 187
+    // line 155
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 188
+        // line 156
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
-        echo "\"></script>
-\t\t<script src=\"";
-        // line 189
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/Stock.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
@@ -409,7 +348,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
     public function getTemplateName()
     {
-        return "Pages/Stock.html.twig";
+        return "Pages/Role.html.twig";
     }
 
     public function isTraitable()
@@ -419,51 +358,66 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
     public function getDebugInfo()
     {
-        return array (  399 => 189,  394 => 188,  387 => 187,  374 => 180,  359 => 171,  353 => 168,  348 => 166,  334 => 155,  324 => 148,  314 => 141,  305 => 135,  297 => 130,  291 => 126,  287 => 124,  283 => 122,  281 => 121,  272 => 115,  265 => 111,  257 => 106,  253 => 105,  247 => 101,  243 => 100,  208 => 67,  196 => 61,  193 => 60,  188 => 59,  176 => 53,  172 => 51,  167 => 50,  155 => 44,  151 => 42,  147 => 41,  139 => 36,  130 => 30,  121 => 24,  106 => 11,  99 => 10,  88 => 6,  81 => 5,  67 => 2,  60 => 187,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  337 => 156,  330 => 155,  317 => 148,  302 => 139,  296 => 136,  282 => 125,  273 => 119,  264 => 113,  256 => 108,  252 => 106,  248 => 105,  223 => 82,  211 => 76,  208 => 75,  203 => 74,  191 => 68,  187 => 66,  182 => 65,  170 => 59,  166 => 57,  162 => 56,  153 => 50,  145 => 45,  140 => 43,  106 => 11,  99 => 10,  88 => 6,  81 => 5,  67 => 2,  60 => 155,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<title>
-\t{% block title %}Circet-Stock
+\t{% block title %}Circet-Role
 \t{% endblock %}
 </title>
 {% block stylesheets %}
-\t<link rel=\"stylesheet\" href=\"{{asset('css/Stock.css')}}\">
+\t<link rel=\"stylesheet\" href=\"{{asset('css/Role.css')}}\">
 \t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
 {% endblock %}
 {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
+
 \t<div class=\"home_content\">
-\t\t<div class=\"modal fade\" id=\"addStock\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addStock\" aria-hidden=\"true\">
+\t\t<div class=\"modal fade\" id=\"editRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"editRole\" aria-hidden=\"true\">
 \t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t<div class=\"modal-content\">
 \t\t\t\t\t<div class=\"modal-header\">
-
-\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Add to stock</h5>
+\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Edit role</h5>
 \t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t</button>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-body\">
-
-\t\t\t\t\t\t{{ form_start(form) }}
-\t\t\t\t\t\t<label for=\"name\">item picture:</label>
-\t\t\t\t\t\t<button>
-\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
-\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t<p class=\"mb-1 mt-1\" id=\"fileName\"  style=\"font-size: .77rem; \"></p>
-\t\t\t\t\t\t{{ form_widget(form) }}
-
+\t\t\t\t\t\t<label for=\"name\">Role name:</label>
+\t\t\t\t\t\t<input placeholder=\"@role_name\" type=\"text\">
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Add item</button>
+\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
+\t\t\t\t\t\t<button type=\"button\" class=\"close_button\">Save changes</button>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+
+\t\t<div class=\"modal fade\" id=\"addRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addRole\" aria-hidden=\"true\">
+\t\t\t<div class=\"modal-dialog\" role=\"document\">
+\t\t\t\t<div class=\"modal-content\">
+\t\t\t\t\t<div class=\"modal-header\">
+\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Add role</h5>
+\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
+\t\t\t\t\t\t</button>
+\t\t\t\t\t</div>
+\t\t\t\t\t{{ form_start(form) }}
+\t\t\t\t\t<div class=\"modal-body\">
+\t\t\t\t\t\t{{ form_widget(form) }}
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"modal-footer\">
+\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Add role</button>
 \t\t\t\t\t</div>
 \t\t\t\t\t{{ form_end(form) }}
 \t\t\t\t</div>
 \t\t\t</div>
 
 \t\t</div>
+
 \t\t{% for flash_message in app.session.flashbag.get('success') %}
 \t\t\t<div class=\"alert  alert-success fade show\" role=\"alert\">
 \t\t\t\t<strong>Success!</strong>
@@ -473,7 +427,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t</button>
 \t\t\t</div>
 \t\t{% endfor %}
-\t\t\t{% for flash_message in app.session.flashbag.get('update') %}
+\t\t{% for flash_message in app.session.flashbag.get('update') %}
 \t\t\t<div class=\"alert  alert-info fade show\" role=\"alert\">
 \t\t\t\t<strong>Success!</strong>
 \t\t\t\t{{flash_message}}
@@ -490,95 +444,50 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t</button>
 \t\t\t</div>
 \t\t{% endfor %}
-\t\t<div class=\"text\">Stock</div>
-\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addStock\">Add to stock</button>
+
+\t\t<div class=\"text\">Role</div>
+\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Add new role</button>
 \t\t<div class=\"main_content\">
-\t\t\t<div class=\"sort1\">
+\t\t\t<div class=\"sort\">
 \t\t\t\t<input type=\"text\" placeholder=\"Search\">
-\t\t\t\t<select name=\"role\">
-\t\t\t\t\t<option selected disabled>Type</option>
-\t\t\t\t\t<option value=\"manager\">manager</option>
-\t\t\t\t\t<option value=\"admin\">admin</option>
-\t\t\t\t</select>
-\t\t\t\t<select name=\"availability\">
-\t\t\t\t\t<option selected disabled>Availability</option>
-\t\t\t\t</select>
-\t\t\t\t<select name=\"state\">
-\t\t\t\t\t<option selected disabled>State</option>
-\t\t\t\t</select>
 \t\t\t\t<button>
 \t\t\t\t\tSearch
 \t\t\t\t</button>
 \t\t\t</div>
+\t\t</div>
+
+
+\t\t<div class=\"CContent\">
 \t\t\t<div class=\"mainC\">
 \t\t\t\t<table class=\"table align-middle mb-0 bg-white\">
 \t\t\t\t\t<thead class=\"bg-light\">
 \t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<th>name</th>
-\t\t\t\t\t\t\t<th>type</th>
-\t\t\t\t\t\t\t<th>serial number</th>
-\t\t\t\t\t\t\t<th>availability</th>
-\t\t\t\t\t\t\t<th>state</th>
-\t\t\t\t\t\t\t<th style=\"text-align:center;\">action</th>
+\t\t\t\t\t\t\t<th>Rôle</th>
+\t\t\t\t\t\t\t<th style=\"text-align:center;\">Actions</th>
 \t\t\t\t\t\t</tr>
 \t\t\t\t\t</thead>
 \t\t\t\t\t<tbody>
-\t\t\t\t\t\t{% for machine in Allmachines %}
+\t\t\t\t\t\t{% for role in allRoles %}
 \t\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t\t<div class=\"d-flex align-items-center\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"ms-3\">
-\t\t\t\t\t\t\t\t\t\t\t<p class=\"fw-bold mb-1\">{{machine.model.marque.getMarqueName()}}</p>
-\t\t\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0\">{{machine.model.getModelName()}}</p>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<td class=\"textperm\">
+\t\t\t\t\t\t\t\t\t{{role.roleName}}
 \t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0 mt-2 \">{{machine.type}}</p>
-\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t\t<label class=\"mt-2\">
-\t\t\t\t\t\t\t\t\t\t{{machine.getSerialNum()}}
-\t\t\t\t\t\t\t\t\t</label>
 
-\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t\t<label class=\"mt-2 ml-2\">
-\t\t\t\t\t\t\t\t\t\t{% if machine.available == 1 %}
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-success rounded-pill d-inline pl-3 pr-3\">Yes</span>
-\t\t\t\t\t\t\t\t\t\t{% else %}
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-warning rounded-pill d-inline pl-3 pr-3\">No</span>
-\t\t\t\t\t\t\t\t\t\t{% endif %}
-\t\t\t\t\t\t\t\t\t</label>
-\t\t\t\t\t\t\t\t</td>
-\t\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t\t<label class=\"mt-2\">
-\t\t\t\t\t\t\t\t\t\t{{machine.state()}}
-\t\t\t\t\t\t\t\t\t</label>
-
-\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t<td class=\"actions\">
-\t\t\t\t\t\t\t\t\t<a href=\"stockView/{{machine.id}}\">
-\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\" style=\" border: #28a745 solid 1px; \">
-\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-show-alt bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\tview
-\t\t\t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t<a href=\"Stock/Edit/{{machine.id}}\">
+
+\t\t\t\t\t\t\t\t\t<a href=\"Role/Edit/{{role.id}}\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
 \t\t\t\t\t\t\t\t\t\t\tEdit
 \t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t</a>
-
-\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal{{machine.id}}\" style=\" border: #dc3545 solid 1px;\">
+\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal{{role.id}}\" style=\" border: #dc3545 solid 1px;\">
 \t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
 \t\t\t\t\t\t\t\t\t\tDelete
 \t\t\t\t\t\t\t\t\t</button>
-
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t</tr>
-\t\t\t\t\t\t\t<div class=\"modal fade\" id=\"exampleModal{{machine.id}}\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+\t\t\t\t\t\t\t<div class=\"modal fade\" id=\"exampleModal{{role.id}}\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
 \t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
 \t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-header\">
@@ -588,13 +497,11 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t\t\t\t\t\tDo you Realy want to delete from the stock :
-\t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">{{machine.model.marque.getMarqueName()}}
-\t\t\t\t\t\t\t\t\t\t\t\t-
-\t\t\t\t\t\t\t\t\t\t\t\t{{machine.model.getModelName()}}</label>
+\t\t\t\t\t\t\t\t\t\t\tDo you Realy want to delete role :
+\t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">{{role.roleName}}</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t\t\t\t\t\t<a href=\"Stock/Remove/{{machine.id}}\">
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"Role/Remove/{{role.id}}\">
 \t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Delete</button>
 \t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Close</button>
@@ -606,17 +513,16 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t</tbody>
 \t\t\t\t</table>
 \t\t\t</div>
-
 \t\t</div>
+
 \t</div>
 {% endblock %}
 {% block javascripts %}
 \t<script src=\"{{asset('JS/sidebar.js')}}\"></script>
-\t\t<script src=\"{{asset('JS/Stock.js')}}\"></script>
 \t<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
 {% endblock %}
-", "Pages/Stock.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\Stock.html.twig");
+", "Pages/Role.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\Role.html.twig");
     }
 }
