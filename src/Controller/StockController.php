@@ -29,26 +29,29 @@ class StockController extends AbstractController
             $machine = $form->getData();
             $uploadedPicture = $form->get('img_src')->getData();
             $uploadType = $form->get('type')->getData();
-            if($uploadedPicture){
+            if ($uploadedPicture) {
                 $file = 'upload/' . $uploadType . '/' . uniqid() . '.' . $uploadedPicture->guessExtension();
-                try{
+                try {
                     $uploadedPicture->move(
-                        $this->getParameter('kernel.project_dir') . '/public/images/upload/' . $uploadType ,
+                        $this->getParameter('kernel.project_dir') . '/public/images/upload/' . $uploadType,
                         $file
                     );
-                }catch(FileException $error){
-                        return new Response($error->getMessage());
+                } catch (FileException $error) {
+                    return new Response($error->getMessage());
                 }
                 $machine->setImgSrc('/images/' . $file);
-                $entityManager->persist($machine);
-                $entityManager->flush();
-                $this->addFlash(
-                    'success',
-                    sprintf('  " %s - %s " added successfully ', $machine->getModel()->getMarque()->getMarqueName(), $machine->getModel()->getModelName())
-                );
-                return $this->redirectToRoute('Stock');
+               
             }
-           
+            else{
+                $machine->setImgSrc('/CIRCET-STOCK/public/images/laptop.png');
+            }
+            $entityManager->persist($machine);
+            $entityManager->flush();
+            $this->addFlash(
+                'success',
+                sprintf('  " %s - %s " added successfully ', $machine->getModel()->getMarque()->getMarqueName(), $machine->getModel()->getModelName())
+            );
+            return $this->redirectToRoute('Stock');
         }
 
 
@@ -99,7 +102,7 @@ class StockController extends AbstractController
         $stock = $entityManager->getRepository(Machine::class)->find($id);
         $form = $this->createForm(MachineFormType::class, $stock);
         $form->handleRequest($request);
-       
+
         if ($form->isSubmitted()  && $form->isValid()) {
             $entityManager->flush();
             $this->addFlash(
@@ -114,7 +117,7 @@ class StockController extends AbstractController
             'form' => $form->createView(),
             'Title' => 'Stock',
             'PageName' => 'Stock Update',
-         
+
         ]);
     }
 }

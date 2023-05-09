@@ -164,6 +164,7 @@ textarea:focus, input:focus , select:focus ,button:focus{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .pic{
+   
     width: 100%;
     height: 64%;
     display: flex;

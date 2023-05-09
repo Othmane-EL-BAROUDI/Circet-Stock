@@ -23,10 +23,10 @@ class MachineFormType extends AbstractType
         $builder
 
             ->add('img_src', FileType::class, [
-                'attr' => array('class' => 'form-control' , 'style' => ' position: absolute;  width: 94%;'),
+                'attr' => array('class' => 'filePic' , 'style' => ' position: absolute;  width: 94%;'),
                 'label' => false,
                 'data_class' => null,
-                'required' => true,
+                'required' => false,
             ])
             ->add('model', EntityType::class, [
                 'required' => true,

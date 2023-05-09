@@ -122,9 +122,9 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         echo "
 \t\t\t\t\t\t<label for=\"name\">item picture:</label>
 \t\t\t\t\t\t<button>
-\t\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
+\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
 \t\t\t\t\t\t</button>
-\t\t\t\t\t\t<input type=\"file\" name=\"MachinePic\">
+\t\t\t\t\t\t\t<p class=\"mb-1 mt-1\" id=\"fileName\"  style=\"font-size: .77rem; \"></p>
 \t\t\t\t\t\t";
         // line 30
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 30, $this->source); })()), 'widget');
@@ -394,6 +394,10 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
+\t\t<script src=\"";
+        // line 189
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/Stock.js"), "html", null, true);
+        echo "\"></script>
 \t<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
@@ -415,7 +419,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
     public function getDebugInfo()
     {
-        return array (  394 => 188,  387 => 187,  374 => 180,  359 => 171,  353 => 168,  348 => 166,  334 => 155,  324 => 148,  314 => 141,  305 => 135,  297 => 130,  291 => 126,  287 => 124,  283 => 122,  281 => 121,  272 => 115,  265 => 111,  257 => 106,  253 => 105,  247 => 101,  243 => 100,  208 => 67,  196 => 61,  193 => 60,  188 => 59,  176 => 53,  172 => 51,  167 => 50,  155 => 44,  151 => 42,  147 => 41,  139 => 36,  130 => 30,  121 => 24,  106 => 11,  99 => 10,  88 => 6,  81 => 5,  67 => 2,  60 => 187,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  399 => 189,  394 => 188,  387 => 187,  374 => 180,  359 => 171,  353 => 168,  348 => 166,  334 => 155,  324 => 148,  314 => 141,  305 => 135,  297 => 130,  291 => 126,  287 => 124,  283 => 122,  281 => 121,  272 => 115,  265 => 111,  257 => 106,  253 => 105,  247 => 101,  243 => 100,  208 => 67,  196 => 61,  193 => 60,  188 => 59,  176 => 53,  172 => 51,  167 => 50,  155 => 44,  151 => 42,  147 => 41,  139 => 36,  130 => 30,  121 => 24,  106 => 11,  99 => 10,  88 => 6,  81 => 5,  67 => 2,  60 => 187,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -446,9 +450,9 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t{{ form_start(form) }}
 \t\t\t\t\t\t<label for=\"name\">item picture:</label>
 \t\t\t\t\t\t<button>
-\t\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
+\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
 \t\t\t\t\t\t</button>
-\t\t\t\t\t\t<input type=\"file\" name=\"MachinePic\">
+\t\t\t\t\t\t\t<p class=\"mb-1 mt-1\" id=\"fileName\"  style=\"font-size: .77rem; \"></p>
 \t\t\t\t\t\t{{ form_widget(form) }}
 
 \t\t\t\t\t</div>
@@ -608,6 +612,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 {% endblock %}
 {% block javascripts %}
 \t<script src=\"{{asset('JS/sidebar.js')}}\"></script>
+\t\t<script src=\"{{asset('JS/Stock.js')}}\"></script>
 \t<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
