@@ -119,20 +119,25 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 17, $this->source); })()), 'form_start');
         echo "
 \t\t\t\t\t<div class=\"card-body\">
-\t\t\t\t\t\t<label>upload picture</label>
-\t\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t<button type=\"button\" >
-\t\t\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
-\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t
-\t\t\t\t\t\t</div>
-\t\t\t\t\t
+\t\t\t\t\t\t";
+        // line 19
+        if (((isset($context["Title"]) || array_key_exists("Title", $context) ? $context["Title"] : (function () { throw new RuntimeError('Variable "Title" does not exist.', 19, $this->source); })()) == "Stock")) {
+            // line 20
+            echo "
+\t\t\t\t\t\t\t<label>upload picture</label>
+\t\t\t\t\t\t\t<div class=\"modal-body\">
 
+\t\t\t\t\t\t\t\t<button type=\"button\">
+\t\t\t\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
+
+\t\t\t\t\t\t\t\t</button>
+
+
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t";
+        }
+        // line 32
+        echo "
 \t\t\t\t\t\t";
         // line 33
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 33, $this->source); })()), 'widget');
@@ -193,7 +198,7 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
     public function getDebugInfo()
     {
-        return array (  175 => 51,  168 => 50,  149 => 38,  145 => 37,  138 => 33,  119 => 17,  112 => 13,  109 => 12,  102 => 11,  91 => 7,  84 => 6,  74 => 3,  67 => 2,  60 => 50,  58 => 11,  54 => 10,  52 => 6,  49 => 5,  47 => 2,  44 => 1,);
+        return array (  180 => 51,  173 => 50,  154 => 38,  150 => 37,  143 => 33,  140 => 32,  126 => 20,  124 => 19,  119 => 17,  112 => 13,  109 => 12,  102 => 11,  91 => 7,  84 => 6,  74 => 3,  67 => 2,  60 => 50,  58 => 11,  54 => 10,  52 => 6,  49 => 5,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -216,19 +221,19 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t\t\t\t<div class=\"card mb-3 content\">
 \t\t\t\t\t{{ form_start(form) }}
 \t\t\t\t\t<div class=\"card-body\">
-\t\t\t\t\t\t<label>upload picture</label>
-\t\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t<button type=\"button\" >
-\t\t\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
-\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t
-\t\t\t\t\t\t</div>
-\t\t\t\t\t
+\t\t\t\t\t\t{% if Title == 'Stock' %}
+
+\t\t\t\t\t\t\t<label>upload picture</label>
+\t\t\t\t\t\t\t<div class=\"modal-body\">
+
+\t\t\t\t\t\t\t\t<button type=\"button\">
+\t\t\t\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
+
+\t\t\t\t\t\t\t\t</button>
+
+
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t{% endif %}
 
 \t\t\t\t\t\t{{ form_widget(form) }}
 \t\t\t\t\t\t<div class=\"actions\">
@@ -250,6 +255,6 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 {% block javascripts %}
 \t<script src=\"{{asset('JS/sidebar.js')}}\"></script>
 {% endblock %}
-", "Pages/update/Update.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\update\\Update.html.twig");
+", "Pages/update/Update.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\update\\Update.html.twig");
     }
 }

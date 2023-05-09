@@ -90,14 +90,14 @@
 							<img src="/CIRCET-STOCK/public/{{item.getImgSrc()}}" alt="no pic">
 						{% endif %}
 					</div>
-					<p class="des" >{{data[1].id}}</p>
+					
 					<div class="details">
 						<label for="name">{{item.model.marque.getMarqueName()}}
 							{{item.model.getModelName()}}</label>
 					</div>
 					<div class="action">
 						<button>Demande</button>
-						<button type="button" data-toggle="modal" value="{{item}}"  class="start" data-target="#model{{item.id}}">details</button>
+						<button type="button" data-toggle="modal"   class="start" data-target="#model{{item.id}}">details</button>
 
 					</div>
 				</div>

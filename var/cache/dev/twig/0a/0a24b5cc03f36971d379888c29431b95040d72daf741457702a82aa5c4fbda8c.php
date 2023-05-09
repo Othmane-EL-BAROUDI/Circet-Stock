@@ -52,7 +52,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 18
         $this->displayBlock('body', $context, $blocks);
-        // line 134
+        // line 135
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -126,12 +126,13 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
         // line 31
         echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 31, $this->source); })()), "html", null, true);
         echo "\">
-\t\t\t\t\t\t\t\t\t<i class='bx bx-chevron-left bx-lg'  style=\"color:black;\" ></i>
+\t\t\t\t
+\t\t\t\t\t\t\t\t\t<i class='bx bxs-share  bx-md'  style=\"color:black;\"> </i>
 \t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t<i class=\"fas fa-user fa-7x \" alt=\"avatar\" class=\"rounded-circle img-fluid\" style=\"width: 150px;\"></i>
 \t\t\t\t\t\t\t\t<h5 class=\"my-3 mt-4\">Profile de ";
-        // line 35
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 35, $this->source); })()), "username", [], "any", false, false, false, 35), "html", null, true);
+        // line 36
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 36, $this->source); })()), "username", [], "any", false, false, false, 36), "html", null, true);
         echo "</h5>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
@@ -142,8 +143,8 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 
 \t\t\t\t\t\t\t\t\t\t<i class='bx bxs-envelope fa-lg'></i>
 \t\t\t\t\t\t\t\t\t\t<p class=\"mb-0\">";
-        // line 44
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 44, $this->source); })()), "email", [], "any", false, false, false, 44), "html", null, true);
+        // line 45
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 45, $this->source); })()), "email", [], "any", false, false, false, 45), "html", null, true);
         echo "</p>
 \t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t</ul>
@@ -159,8 +160,8 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<div class=\"col-sm-9\">
 \t\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0\">";
-        // line 58
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 58, $this->source); })()), "username", [], "any", false, false, false, 58), "html", null, true);
+        // line 59
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 59, $this->source); })()), "username", [], "any", false, false, false, 59), "html", null, true);
         echo "</p>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
@@ -171,8 +172,8 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<div class=\"col-sm-9\">
 \t\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0\">";
-        // line 67
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 67, $this->source); })()), "matricule", [], "any", false, false, false, 67), "html", null, true);
+        // line 68
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 68, $this->source); })()), "matricule", [], "any", false, false, false, 68), "html", null, true);
         echo "</p>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
@@ -183,8 +184,8 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<div class=\"col-sm-9\">
 \t\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0\">";
-        // line 76
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 76, $this->source); })()), "job", [], "any", false, false, false, 76), "html", null, true);
+        // line 77
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 77, $this->source); })()), "job", [], "any", false, false, false, 77), "html", null, true);
         echo "</p>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
@@ -195,8 +196,8 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<div class=\"col-sm-9\">
 \t\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0\">";
-        // line 85
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 85, $this->source); })()), "roles", [], "any", false, false, false, 85), 0, [], "array", false, false, false, 85), "html", null, true);
+        // line 86
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 86, $this->source); })()), "roles", [], "any", false, false, false, 86), 0, [], "array", false, false, false, 86), "html", null, true);
         echo "</p>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
@@ -208,19 +209,19 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t\t\t\t<div class=\"col-sm-9\">
 \t\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0\">
 \t\t\t\t\t\t\t\t\t\t\t";
-        // line 95
-        if (twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 95, $this->source); })()), "manager", [], "any", false, false, false, 95)) {
-            // line 96
+        // line 96
+        if (twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 96, $this->source); })()), "manager", [], "any", false, false, false, 96)) {
+            // line 97
             echo "\t\t\t\t\t\t\t\t\t\t\t\t";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 96, $this->source); })()), "manager", [], "any", false, false, false, 96), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 97, $this->source); })()), "manager", [], "any", false, false, false, 97), "html", null, true);
             echo "
 \t\t\t\t\t\t\t\t\t\t\t";
         } else {
-            // line 98
+            // line 99
             echo "\t\t\t\t\t\t\t\t\t\t\t\tno manager
 \t\t\t\t\t\t\t\t\t\t\t";
         }
-        // line 100
+        // line 101
         echo "\t\t\t\t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
@@ -236,30 +237,30 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t\t\t\t<div style=\"overflow-y: scroll  !important; max-height: 150px;\">
 \t\t\t\t\t\t\t\t\t\t\t";
-        // line 114
-        if ((twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 114, $this->source); })()), "getUserPermission", [], "method", false, false, false, 114)) > 0)) {
-            // line 115
+        // line 115
+        if ((twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 115, $this->source); })()), "getUserPermission", [], "method", false, false, false, 115)) > 0)) {
+            // line 116
             echo "\t\t\t\t\t\t\t\t\t\t\t\t";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 115, $this->source); })()), "getUserPermission", [], "method", false, false, false, 115));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 116, $this->source); })()), "getUserPermission", [], "method", false, false, false, 116));
             foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
-                // line 116
+                // line 117
                 echo "\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mb-2\" style=\"font-size: .77rem; \">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 116), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 117), "html", null, true);
                 echo "</p>
 \t\t\t\t\t\t\t\t\t\t\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 118
+            // line 119
             echo "\t\t\t\t\t\t\t\t\t\t\t";
         } else {
-            // line 119
+            // line 120
             echo "\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mb-1\" style=\"font-size: .77rem; \">no permissions</p>
 \t\t\t\t\t\t\t\t\t\t\t";
         }
-        // line 121
+        // line 122
         echo "\t\t\t\t\t\t\t\t\t\t</div>
 
 
@@ -278,14 +279,14 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 
     }
 
-    // line 134
+    // line 135
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 135
+        // line 136
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -305,7 +306,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 
     public function getDebugInfo()
     {
-        return array (  289 => 135,  282 => 134,  263 => 121,  259 => 119,  256 => 118,  247 => 116,  242 => 115,  240 => 114,  224 => 100,  220 => 98,  214 => 96,  212 => 95,  199 => 85,  187 => 76,  175 => 67,  163 => 58,  146 => 44,  134 => 35,  127 => 31,  111 => 19,  104 => 18,  84 => 6,  77 => 5,  63 => 2,  56 => 134,  54 => 18,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  290 => 136,  283 => 135,  264 => 122,  260 => 120,  257 => 119,  248 => 117,  243 => 116,  241 => 115,  225 => 101,  221 => 99,  215 => 97,  213 => 96,  200 => 86,  188 => 77,  176 => 68,  164 => 59,  147 => 45,  135 => 36,  127 => 31,  111 => 19,  104 => 18,  84 => 6,  77 => 5,  63 => 2,  56 => 135,  54 => 18,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -341,7 +342,8 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t<div class=\"card mb-4\">
 \t\t\t\t\t\t\t<div class=\"card-body text-center pt-5 pb-5\"  style=\" box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\">
 \t\t\t\t\t\t\t\t<a class=\"back\" href=\"{{Path}}\">
-\t\t\t\t\t\t\t\t\t<i class='bx bx-chevron-left bx-lg'  style=\"color:black;\" ></i>
+\t\t\t\t
+\t\t\t\t\t\t\t\t\t<i class='bx bxs-share  bx-md'  style=\"color:black;\"> </i>
 \t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t<i class=\"fas fa-user fa-7x \" alt=\"avatar\" class=\"rounded-circle img-fluid\" style=\"width: 150px;\"></i>
 \t\t\t\t\t\t\t\t<h5 class=\"my-3 mt-4\">Profile de {{user.username}}</h5>
@@ -449,6 +451,6 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
 {% endblock %}
-", "Pages/view/userView.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\view\\userView.html.twig");
+", "Pages/view/userView.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\view\\userView.html.twig");
     }
 }

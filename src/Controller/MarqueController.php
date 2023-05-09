@@ -13,7 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class MarqueController extends AbstractController
 {
  /**
-     * @Route("Marque" , name="Marque")
+     * @Route("/Marque" , name="Marque")
      */
     public function Marque(Request $request , EntityManagerInterface $entityManager): Response
     {

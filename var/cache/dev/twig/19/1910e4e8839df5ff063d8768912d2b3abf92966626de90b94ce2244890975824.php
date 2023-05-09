@@ -126,16 +126,6 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
            <li> 
               <a href=\"";
             // line 44
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Stock");
-            echo "\">
-                    <i class='bx bx-package'></i>
-                    <span class=\"links_name\">Stock</span>
-              </a>
-               <span class=\"tooltip\">Stock</span>
-          </li>
-           <li> 
-              <a href=\"";
-            // line 51
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Role");
             echo "\">
                    <i class='bx bx-briefcase-alt-2'></i>
@@ -145,7 +135,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
           </li>
           <li> 
               <a href=\"";
-            // line 58
+            // line 51
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Permission");
             echo "\">
                     <i class='bx bx-spreadsheet'></i>
@@ -153,12 +143,43 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
               </a>
                <span class=\"tooltip\">Permission</span>
           </li>
+           <li> 
+              <a href=\"";
+            // line 58
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Stock");
+            echo "\">
+                    <i class='bx bx-package'></i>
+                    <span class=\"links_name\">Stock</span>
+              </a>
+               <span class=\"tooltip\">Stock</span>
+          </li>
+           <li> 
+              <a href=\"";
+            // line 65
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Model");
+            echo "\">
+                   <i class='bx bx-purchase-tag'></i>
+                    <span class=\"links_name\">Model</span>
+              </a>
+               <span class=\"tooltip\">Model</span>
+          </li>
+           <li> 
+              <a href=\"";
+            // line 72
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Marque");
+            echo "\">
+                   <i class='bx bx-barcode'></i>
+                    <span class=\"links_name\">Marque</span>
+              </a>
+               <span class=\"tooltip\">Marque</span>
+          </li>
+          
        ";
         }
-        // line 65
+        // line 80
         echo "            <li> 
               <a href=\"";
-        // line 66
+        // line 81
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Profile");
         echo "\">
                     <i class='bx bxs-user-rectangle'></i>
@@ -171,22 +192,22 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
             <div class=\"profile\">
                 <div class=\"profile_details\">
                     <img src=\"";
-        // line 76
+        // line 91
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/user.png"), "html", null, true);
         echo "\" alt=\"\">
                     <div class=\"name_role\">
                         <div class=\"name\">";
-        // line 78
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 78, $this->source); })()), "username", [], "any", false, false, false, 78), "html", null, true);
+        // line 93
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 93, $this->source); })()), "username", [], "any", false, false, false, 93), "html", null, true);
         echo "</div>
                         <div class=\"role\">";
-        // line 79
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 79, $this->source); })()), "job", [], "any", false, false, false, 79), "html", null, true);
+        // line 94
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 94, $this->source); })()), "job", [], "any", false, false, false, 94), "html", null, true);
         echo "</div>
                     </div>
                 </div>
                <a href=\"";
-        // line 82
+        // line 97
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_security_logout");
         echo "\"> <i class='bx bx-log-out'  id=\"log_out\" ></i></a>
             </div>
@@ -211,7 +232,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 
     public function getDebugInfo()
     {
-        return array (  190 => 82,  184 => 79,  180 => 78,  175 => 76,  162 => 66,  159 => 65,  149 => 58,  139 => 51,  129 => 44,  119 => 37,  108 => 29,  102 => 26,  93 => 20,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  211 => 97,  205 => 94,  201 => 93,  196 => 91,  183 => 81,  180 => 80,  169 => 72,  159 => 65,  149 => 58,  139 => 51,  129 => 44,  119 => 37,  108 => 29,  102 => 26,  93 => 20,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -259,13 +280,6 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
                <span class=\"tooltip\">Users</span>
           </li>
            <li> 
-              <a href=\"{{path('Stock')}}\">
-                    <i class='bx bx-package'></i>
-                    <span class=\"links_name\">Stock</span>
-              </a>
-               <span class=\"tooltip\">Stock</span>
-          </li>
-           <li> 
               <a href=\"{{path('Role')}}\">
                    <i class='bx bx-briefcase-alt-2'></i>
                     <span class=\"links_name\"> Role</span>
@@ -279,6 +293,28 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
               </a>
                <span class=\"tooltip\">Permission</span>
           </li>
+           <li> 
+              <a href=\"{{path('Stock')}}\">
+                    <i class='bx bx-package'></i>
+                    <span class=\"links_name\">Stock</span>
+              </a>
+               <span class=\"tooltip\">Stock</span>
+          </li>
+           <li> 
+              <a href=\"{{path('Model')}}\">
+                   <i class='bx bx-purchase-tag'></i>
+                    <span class=\"links_name\">Model</span>
+              </a>
+               <span class=\"tooltip\">Model</span>
+          </li>
+           <li> 
+              <a href=\"{{path('Marque')}}\">
+                   <i class='bx bx-barcode'></i>
+                    <span class=\"links_name\">Marque</span>
+              </a>
+               <span class=\"tooltip\">Marque</span>
+          </li>
+          
        {% endif %}
             <li> 
               <a href=\"{{path('Profile')}}\">
@@ -303,6 +339,6 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
       </div>
      
 {% endblock %}
-", "Pages/sidebar.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\sidebar.html.twig");
+", "Pages/sidebar.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\sidebar.html.twig");
     }
 }

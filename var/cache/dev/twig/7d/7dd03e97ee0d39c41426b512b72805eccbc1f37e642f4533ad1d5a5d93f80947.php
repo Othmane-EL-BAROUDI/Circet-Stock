@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* Pages/HomePage.html.twig */
+/* Pages/homePage.html.twig */
 class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235be7d2e extends \Twig\Template
 {
     private $source;
@@ -38,7 +38,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Pages/HomePage.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Pages/homePage.html.twig"));
 
         // line 1
         echo "<title>
@@ -248,10 +248,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
             }
             // line 92
             echo "\t\t\t\t\t</div>
-\t\t\t\t\t<p class=\"des\" >";
-            // line 93
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 93, $this->source); })()), 1, [], "array", false, false, false, 93), "id", [], "any", false, false, false, 93), "html", null, true);
-            echo "</p>
+\t\t\t\t\t
 \t\t\t\t\t<div class=\"details\">
 \t\t\t\t\t\t<label for=\"name\">";
             // line 95
@@ -264,10 +261,8 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"action\">
 \t\t\t\t\t\t<button>Demande</button>
-\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\" value=\"";
+\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\"   class=\"start\" data-target=\"#model";
             // line 100
-            echo twig_escape_filter($this->env, $context["item"], "html", null, true);
-            echo "\"  class=\"start\" data-target=\"#model";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 100), "html", null, true);
             echo "\">details</button>
 
@@ -313,7 +308,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     public function getTemplateName()
     {
-        return "Pages/HomePage.html.twig";
+        return "Pages/homePage.html.twig";
     }
 
     public function isTraitable()
@@ -323,7 +318,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     public function getDebugInfo()
     {
-        return array (  303 => 111,  298 => 110,  291 => 109,  282 => 105,  269 => 100,  262 => 96,  258 => 95,  253 => 93,  250 => 92,  244 => 90,  237 => 87,  235 => 86,  220 => 74,  215 => 72,  210 => 70,  206 => 68,  202 => 66,  198 => 64,  196 => 63,  190 => 60,  185 => 58,  180 => 56,  174 => 53,  168 => 49,  162 => 47,  155 => 44,  153 => 43,  142 => 35,  134 => 31,  130 => 30,  109 => 11,  102 => 10,  91 => 6,  84 => 5,  70 => 2,  63 => 109,  60 => 108,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  298 => 111,  293 => 110,  286 => 109,  277 => 105,  266 => 100,  259 => 96,  255 => 95,  250 => 92,  244 => 90,  237 => 87,  235 => 86,  220 => 74,  215 => 72,  210 => 70,  206 => 68,  202 => 66,  198 => 64,  196 => 63,  190 => 60,  185 => 58,  180 => 56,  174 => 53,  168 => 49,  162 => 47,  155 => 44,  153 => 43,  142 => 35,  134 => 31,  130 => 30,  109 => 11,  102 => 10,  91 => 6,  84 => 5,  70 => 2,  63 => 109,  60 => 108,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -420,14 +415,14 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/{{item.getImgSrc()}}\" alt=\"no pic\">
 \t\t\t\t\t\t{% endif %}
 \t\t\t\t\t</div>
-\t\t\t\t\t<p class=\"des\" >{{data[1].id}}</p>
+\t\t\t\t\t
 \t\t\t\t\t<div class=\"details\">
 \t\t\t\t\t\t<label for=\"name\">{{item.model.marque.getMarqueName()}}
 \t\t\t\t\t\t\t{{item.model.getModelName()}}</label>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"action\">
 \t\t\t\t\t\t<button>Demande</button>
-\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\" value=\"{{item}}\"  class=\"start\" data-target=\"#model{{item.id}}\">details</button>
+\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\"   class=\"start\" data-target=\"#model{{item.id}}\">details</button>
 
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -443,6 +438,6 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
 {% endblock %}
-", "Pages/HomePage.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\HomePage.html.twig");
+", "Pages/homePage.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\HomePage.html.twig");
     }
 }
