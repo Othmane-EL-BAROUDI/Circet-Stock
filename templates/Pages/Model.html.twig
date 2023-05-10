@@ -9,6 +9,11 @@
 {% block body %}
 	{{ include('Pages/sidebar.html.twig') }}
 	<div class="home_content">
+<<<<<<< HEAD
+		
+
+=======
+>>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
 		<div class="modal fade" id="addRole" tabindex="-1" role="dialog" aria-labelledby="addRole" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
@@ -75,6 +80,7 @@
 						<tr>
 							<th>Modèle</th>
 							<th>Marque</th>
+							<th>Type</th>
 							<th style="text-align:center;">Actions</th>
 						</tr>
 					</thead>
@@ -86,6 +92,9 @@
 								</td>
 									<td class="textperm">
 									{{model.marque.getMarqueName()}}
+								</td>
+								<td class="textperm">
+									{{model.getType()}}
 								</td>
 								<td class="actions">
 

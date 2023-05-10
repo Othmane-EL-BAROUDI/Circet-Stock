@@ -45,8 +45,8 @@
 										<img src="{{asset('images/laptop.png')}}" style="width:180px;" alt="">
 
 									{% else %}
-										<img src="{{asset(item.getImgSrc())}}" style="width:235px;" alt="no pic">
-									{% endif %}
+									<img src="/CIRCET-STOCK/public{{item.getImgSrc()}}" style="width:200px; max-height:200px;" alt="no pic">
+								{% endif %}
 								</div>
 								<div class="pop_desc">
 
@@ -54,8 +54,13 @@
 									<label for="name" id="customerId">{{item.model.getModelName()}}</label>
 									<br>
 									Type :
+<<<<<<< HEAD
+									<label for="name">{{item.model.getType()}}</label><br>
+									Serial number :
+=======
 									<label for="name">{{item.type}}</label><br>
 									Numéro de série :
+>>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
 									<label for="name">{{item.getSerialNum()}}</label><br>
 									État :
 									<label for="name">{{item.state}}</label><br>
@@ -67,11 +72,21 @@
 											No
 										{% endif %}
 									</label><br>
+<<<<<<< HEAD
+									{% if item.model.getType() == "Desktop" or item.model.getType() == "Laptop" %}
+									mac_ethernet :
+=======
 									Mac_ethernet :
+>>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
 									<label for="name">{{item.getMacEthernet()}}</label><br>
 									Mac_wifi :
 									<label for="name">{{item.getMacWifi()}}</label><br>
+<<<<<<< HEAD
+									{% endif %}
+									description :
+=======
 									Déscription :
+>>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
 									<label for="name">{{item.description}}</label><br>
 
 								</div>
@@ -88,7 +103,7 @@
 									<img src="{{asset('images/laptop.png')}}" style="width:150px;" alt="">
 
 								{% else %}
-									<img src="{{asset(item.getImgSrc())}}" style="width:150px; height:auto;" alt="no pic">
+									<img src="/CIRCET-STOCK/public{{item.getImgSrc()}}" style="width:150px; max-height:150px;" alt="no pic">
 								{% endif %}
 					</div>
 

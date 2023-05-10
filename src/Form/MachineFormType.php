@@ -10,11 +10,12 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Proxies\__CG__\App\Entity\Model as EntityModel;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class MachineFormType extends AbstractType
 {
@@ -35,6 +36,9 @@ class MachineFormType extends AbstractType
                 'multiple' => false,
                 'required' => true,
                 'attr' => array('class' => 'form-control'),
+<<<<<<< HEAD
+            ])  
+=======
                 'label' => 'Modèle',
             ])
             ->add('type', TextType::class, [
@@ -43,6 +47,7 @@ class MachineFormType extends AbstractType
                 ),
                 'required' => true,
             ])
+>>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
             ->add('serial_num', TextType::class, [
                 'attr' => array(
                     'placeholder' => '@Numéro_de_série'
@@ -67,9 +72,11 @@ class MachineFormType extends AbstractType
                 'required' => false,
                 'label' => 'Disponible',
             ])
-            ->add('description', TextType::class, [
+            ->add('description', TextareaType::class, [
                 'attr' => array(
-                    'placeholder' => '@Description'
+                    'placeholder' => '@Description',
+                    'style' => ' width:100%; margin-bottom:13px; height:90px;',
+                    'class' => 'form-control',
                 ),
                 'required' => true,
             ])
@@ -77,13 +84,13 @@ class MachineFormType extends AbstractType
                 'attr' => array(
                     'placeholder' => '@Mac_ethernet'
                 ),
-                'required' => true,
+                'required' => false,
             ])
             ->add('mac_wifi', TextType::class, [
                 'attr' => array(
                     'placeholder' => '@Mac_wifi'
                 ),
-                'required' => true,
+                'required' => false,
             ]);
     }
     public function configureOptions(OptionsResolver $resolver): void

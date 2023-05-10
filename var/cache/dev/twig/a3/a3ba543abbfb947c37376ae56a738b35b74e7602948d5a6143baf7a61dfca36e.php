@@ -262,7 +262,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0 mt-2 \">";
             // line 111
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "type", [], "any", false, false, false, 111), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 111), "getType", [], "method", false, false, false, 111), "html", null, true);
             echo "</p>
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t<td>
@@ -534,7 +534,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0 mt-2 \">{{machine.type}}</p>
+\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0 mt-2 \">{{machine.model.getType()}}</p>
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t<label class=\"mt-2\">

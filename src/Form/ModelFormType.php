@@ -22,6 +22,12 @@ class ModelFormType extends AbstractType
                 'required' => true,
                 'label' => 'Nom du modèle',
             ])
+            ->add('type',TextType::class,[
+                'attr' =>array(
+                    'placeholder' => '@Type name'
+                ),
+                'required' => true,
+            ])
             ->add('marque', EntityType::class, [
                 'class' => Marque::class,
                 'choice_label' => 'marque_name',
