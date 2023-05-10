@@ -27,9 +27,15 @@
 						<div class="card mb-4">
 							<div class="card-body text-center pt-2 pb-2" style=" box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
 								<a class="back" href="{{Path}}">
-									<i class='bx bx-chevron-left bx-lg' style="color:black;"></i>
+										<i class='bx bxs-share  bx-md'  style="color:black;"> </i>
+									
 								</a>
-								<img src="{{asset('images/laptop.png')}}" class="rounded float-start mt-3 mb-3" style="width: 120px;" alt="">
+								{% if machine.getImgSrc() is empty   %}
+									<img src="{{asset('images/laptop.png')}}" style="width:155px;" alt="">
+
+								{% else %}
+									<img src="{{asset(machine.getImgSrc())}}" style="width:150px;" alt="no pic">
+								{% endif %}
 							</div>
 						</div>
 						<div class="card mb-4 mb-lg-0">
@@ -97,8 +103,10 @@
 
 											<tr>
 												<td class="textperm">
-													<label>Ayman</label> took 
-													this <label>Laptop</label>
+													<label>Ayman</label>
+													took 
+																										this
+													<label>Laptop</label>
 												</td>
 												<td class="textperm">
 													Laptop
@@ -109,8 +117,10 @@
 											</tr>
 											<tr>
 												<td class="textperm">
-													<label>Ayman</label> took 
-													this <label>Laptop</label>
+													<label>Ayman</label>
+													took 
+																										this
+													<label>Laptop</label>
 												</td>
 												<td class="textperm">
 													Laptop
@@ -121,8 +131,10 @@
 											</tr>
 											<tr>
 												<td class="textperm">
-													<label>Ayman</label> took 
-													this <label>Laptop</label>
+													<label>Ayman</label>
+													took 
+																										this
+													<label>Laptop</label>
 												</td>
 												<td class="textperm">
 													Laptop
@@ -133,8 +145,10 @@
 											</tr>
 											<tr>
 												<td class="textperm">
-													<label>Ayman</label> took 
-													this <label>Laptop</label>
+													<label>Ayman</label>
+													took 
+																										this
+													<label>Laptop</label>
 												</td>
 												<td class="textperm">
 													Laptop
@@ -145,8 +159,10 @@
 											</tr>
 											<tr>
 												<td class="textperm">
-													<label>Ayman</label> took 
-													this <label>Laptop</label>
+													<label>Ayman</label>
+													took 
+																										this
+													<label>Laptop</label>
 												</td>
 												<td class="textperm">
 													Laptop
@@ -157,8 +173,10 @@
 											</tr>
 											<tr>
 												<td class="textperm">
-													<label>Ayman</label> took 
-													this <label>Laptop</label>
+													<label>Ayman</label>
+													took 
+																										this
+													<label>Laptop</label>
 												</td>
 												<td class="textperm">
 													Laptop
@@ -169,8 +187,10 @@
 											</tr>
 											<tr>
 												<td class="textperm">
-													<label>Ayman</label> took 
-													this <label>Laptop</label>
+													<label>Ayman</label>
+													took 
+																										this
+													<label>Laptop</label>
 												</td>
 												<td class="textperm">
 													Laptop
@@ -179,7 +199,6 @@
 													09/17/2023 8:00
 												</td>
 											</tr>
-
 
 
 										</tbody>
@@ -194,7 +213,7 @@
 								<div class="card mb-4 mb-md-0">
 									<div class="card-body pb-3" style="max-height: 270px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
 										<p class="mb-4">
-											<span class=" font-italic me-1" >Historique de restitution de</span>
+											<span class=" font-italic me-1">Historique de restitution de</span>
 											{{machine.model.marque.getMarqueName()}}
 											-
 											{{machine.model.getModelName()}}
@@ -212,7 +231,8 @@
 
 													<tr>
 														<td class="textperm">
-															<label>restitution</label> made a
+															<label>restitution</label>
+															made a
 															<label>restitution</label>
 														</td>
 														<td class="textperm">
@@ -222,9 +242,10 @@
 															09/17/2023 8:00
 														</td>
 													</tr>
-																										<tr>
+													<tr>
 														<td class="textperm">
-															<label>restitution</label> made a
+															<label>restitution</label>
+															made a
 															<label>restitution</label>
 														</td>
 														<td class="textperm">
@@ -234,9 +255,10 @@
 															09/17/2023 8:00
 														</td>
 													</tr>
-																										<tr>
+													<tr>
 														<td class="textperm">
-															<label>restitution</label> made a
+															<label>restitution</label>
+															made a
 															<label>restitution</label>
 														</td>
 														<td class="textperm">
@@ -246,9 +268,10 @@
 															09/17/2023 8:00
 														</td>
 													</tr>
-																										<tr>
+													<tr>
 														<td class="textperm">
-															<label>restitution</label> made a
+															<label>restitution</label>
+															made a
 															<label>restitution</label>
 														</td>
 														<td class="textperm">
@@ -258,9 +281,10 @@
 															09/17/2023 8:00
 														</td>
 													</tr>
-																										<tr>
+													<tr>
 														<td class="textperm">
-															<label>restitution</label> made a
+															<label>restitution</label>
+															made a
 															<label>restitution</label>
 														</td>
 														<td class="textperm">
@@ -270,9 +294,10 @@
 															09/17/2023 8:00
 														</td>
 													</tr>
-																										<tr>
+													<tr>
 														<td class="textperm">
-															<label>restitution</label> made a
+															<label>restitution</label>
+															made a
 															<label>restitution</label>
 														</td>
 														<td class="textperm">
