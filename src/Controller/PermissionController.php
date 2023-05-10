@@ -30,7 +30,7 @@ class PermissionController extends AbstractController
             $entityManager->flush();
             $this->addFlash(
                'success',
-               sprintf('"%s" added successfully.', $newPermission->getPermissionName())
+               sprintf('"%s" ajouté avec succès.', $newPermission->getPermissionName())
             );
             return $this->redirectToRoute('Permission');
         }
@@ -57,7 +57,7 @@ class PermissionController extends AbstractController
             $entityManager->flush();
             $this->addFlash(
                 'update',
-                sprintf('"%s" updated successfully.', $permission->getPermissionName())
+                sprintf('"%s" Mis à jour avec succés.', $permission->getPermissionName())
              );
             return $this->redirectToRoute('Permission');
         }
@@ -82,7 +82,7 @@ class PermissionController extends AbstractController
         $entityManager->flush();
         $this->addFlash(
             'delete',
-            sprintf('"%s" deleted successfully.', $permission->getPermissionName())
+            sprintf('"%s" Supprimé avec succès.', $permission->getPermissionName())
          );
         return $this->redirectToRoute('Permission');
 

@@ -30,7 +30,7 @@ class ModelController extends AbstractController
             $entityManager->flush();
             $this->addFlash(
                'success',
-               sprintf('"%s" added successfully.', $model->getModelName())
+               sprintf('"%s" ajouté avec succès.', $model->getModelName())
             );
             return $this->redirectToRoute('Model');
         }
@@ -55,7 +55,7 @@ class ModelController extends AbstractController
             $entityManager->flush();
             $this->addFlash(
                 'update',
-                sprintf('"%s" updated successfully.', $model->getModelName())
+                sprintf('"%s" Mis à jour avec succés.', $model->getModelName())
              );
             return $this->redirectToRoute('Model');
         }
@@ -80,7 +80,7 @@ class ModelController extends AbstractController
         $entityManager->flush();
         $this->addFlash(
             'delete',
-            sprintf('"%s" deleted successfully.', $model->getModelName())
+            sprintf('"%s" Supprimé avec succès.', $model->getModelName())
          );
         return $this->redirectToRoute('Model');
     }

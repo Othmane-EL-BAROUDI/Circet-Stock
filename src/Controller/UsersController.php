@@ -40,7 +40,7 @@ class UsersController extends AbstractController
             $entityManager->flush();
             $this->addFlash(
                 'success',
-                sprintf('  "%s" added successfully as "%s" ', $Nuser->getUsername(), $Nuser->getJob())
+                sprintf('  "%s" ajouté avec succès du poste  "%s" ', $Nuser->getUsername(), $Nuser->getJob())
             );
             return $this->redirectToRoute('Users');
         }
@@ -79,7 +79,7 @@ class UsersController extends AbstractController
         $entityManager->flush();
         $this->addFlash(
             'delete',
-            sprintf('"%s" deleted successfully.', $user->getUsername())
+            sprintf('"%s" Supprimé avec succès.', $user->getUsername())
         );
         return $this->redirectToRoute('Users');
     }
@@ -103,7 +103,7 @@ class UsersController extends AbstractController
             $entityManager->flush();
             $this->addFlash(
                 'update',
-                sprintf('"%s" updated successfully.', $user->getUsername())
+                sprintf('"%s" Mis à jour avec succés.', $user->getUsername())
             );
             return $this->redirectToRoute('Users');
         }
