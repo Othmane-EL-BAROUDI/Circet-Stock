@@ -23,7 +23,10 @@ class Model
      */
     private $model_name;
 
-
+      /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $type;
     /**
      * @ORM\ManyToOne(targetEntity=Marque::class, inversedBy="model")
      * @ORM\JoinColumn(nullable=false)
@@ -50,7 +53,17 @@ class Model
 
         return $this;
     }
+    public function getType(): ?string
+    {
+        return $this->type;
+    }
 
+    public function setType(string $type): self
+    {
+        $this->type = $type;
+
+        return $this;
+    }
    
     public function getMarque(): ?Marque
     {

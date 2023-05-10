@@ -45,8 +45,8 @@
 										<img src="{{asset('images/laptop.png')}}" style="width:180px;" alt="">
 
 									{% else %}
-										<img src="{{asset(item.getImgSrc())}}" style="width:235px;" alt="no pic">
-									{% endif %}
+									<img src="/CIRCET-STOCK/public{{item.getImgSrc()}}" style="width:200px; max-height:200px;" alt="no pic">
+								{% endif %}
 								</div>
 								<div class="pop_desc">
 
@@ -54,7 +54,7 @@
 									<label for="name" id="customerId">{{item.model.getModelName()}}</label>
 									<br>
 									Type :
-									<label for="name">{{item.type}}</label><br>
+									<label for="name">{{item.model.getType()}}</label><br>
 									Serial number :
 									<label for="name">{{item.getSerialNum()}}</label><br>
 									State :
@@ -67,10 +67,12 @@
 											No
 										{% endif %}
 									</label><br>
+									{% if item.model.getType() == "Desktop" or item.model.getType() == "Laptop" %}
 									mac_ethernet :
 									<label for="name">{{item.getMacEthernet()}}</label><br>
 									mac_wifi :
 									<label for="name">{{item.getMacWifi()}}</label><br>
+									{% endif %}
 									description :
 									<label for="name">{{item.description}}</label><br>
 
@@ -88,7 +90,7 @@
 									<img src="{{asset('images/laptop.png')}}" style="width:150px;" alt="">
 
 								{% else %}
-									<img src="{{asset(item.getImgSrc())}}" style="width:150px; height:auto;" alt="no pic">
+									<img src="/CIRCET-STOCK/public{{item.getImgSrc()}}" style="width:150px; max-height:150px;" alt="no pic">
 								{% endif %}
 					</div>
 

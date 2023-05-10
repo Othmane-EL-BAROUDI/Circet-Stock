@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Machine;
+use App\Entity\Model;
 use App\Form\MachineFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -28,7 +29,7 @@ class StockController extends AbstractController
         if ($form->isSubmitted()  && $form->isValid()) {
             $machine = $form->getData();
             $uploadedPicture = $form->get('img_src')->getData();
-            $uploadType = $form->get('type')->getData();
+            $uploadType = $machine->getModel()->getType();
             if ($uploadedPicture) {
                 $file = 'upload/' . $uploadType . '/' . uniqid() . '.' . $uploadedPicture->guessExtension();
                 try {
@@ -40,12 +41,10 @@ class StockController extends AbstractController
                     return new Response($error->getMessage());
                 }
                 $machine->setImgSrc('/images/' . $file);
-               
-            }
-            else{
+            } else {
                 $machine->setImgSrc('');
             }
-          /*  else{
+            /*  else{
                 $machine->setImgSrc('/CIRCET-STOCK/public/images/laptop.png');
             }*/
             $entityManager->persist($machine);
@@ -105,8 +104,28 @@ class StockController extends AbstractController
         $stock = $entityManager->getRepository(Machine::class)->find($id);
         $form = $this->createForm(MachineFormType::class, $stock);
         $form->handleRequest($request);
-
+        $uploadedPicture = $form->get('img_src')->getData();
+        $uploadType = $stock->getModel()->getType();
         if ($form->isSubmitted()  && $form->isValid()) {
+            if ($uploadedPicture) {
+                if ($stock->getImgSrc() != null) {
+                    if (file_exists(
+                        $this->getParameter('kernel.project_dir') . '/public/images/upload/' . $uploadType
+                    )) {
+                        $this->GetParameter('kernel.project_dir') . '/public/images/upload/' . $uploadType;
+                        $newfile = 'upload/' . $uploadType . '/' . uniqid() . '.' . $uploadedPicture->guessExtension();
+                        try {
+                            $uploadedPicture->move(
+                                $this->getParameter('kernel.project_dir') . '/public/images/upload/' . $uploadType,
+                                $newfile
+                            );
+                        } catch (FileException $error) {
+                            return new Response($error->getMessage());
+                        }
+                        $stock->setImgSrc('/images/' . $newfile);
+                    }
+                }
+            }
             $entityManager->flush();
             $this->addFlash(
                 'update',

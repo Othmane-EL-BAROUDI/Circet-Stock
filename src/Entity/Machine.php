@@ -18,10 +18,7 @@ class Machine
      * @ORM\Column(type="integer")
      */
     private $id;
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $type;
+  
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -91,17 +88,7 @@ class Machine
         return $this;
     }
 
-    public function getType(): ?string
-    {
-        return $this->type;
-    }
-
-    public function setType(string $type): self
-    {
-        $this->type = $type;
-
-        return $this;
-    }
+   
 
     public function getSerialNum(): ?string
     {

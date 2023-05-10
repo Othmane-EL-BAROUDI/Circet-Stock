@@ -25,9 +25,10 @@
 									<i class='bx bxs-cloud-upload bx-sm'></i>
 
 								</button>
-
+								
 
 							</div>
+							<p class=" mt-3" id="fileName"  style="font-size: .77rem; ">image uploaded : Current picture</p>
 						{% endif %}
 
 						{{ form_widget(form) }}
@@ -48,5 +49,6 @@
 	</div>
 {% endblock %}
 {% block javascripts %}
+	<script src="{{asset('JS/Stock.js')}}"></script>
 	<script src="{{asset('JS/sidebar.js')}}"></script>
 {% endblock %}
