@@ -43,8 +43,11 @@ class StockController extends AbstractController
                
             }
             else{
-                $machine->setImgSrc('/CIRCET-STOCK/public/images/laptop.png');
+                $machine->setImgSrc('');
             }
+          /*  else{
+                $machine->setImgSrc('/CIRCET-STOCK/public/images/laptop.png');
+            }*/
             $entityManager->persist($machine);
             $entityManager->flush();
             $this->addFlash(

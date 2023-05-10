@@ -56,10 +56,10 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 ";
         // line 10
         $this->displayBlock('body', $context, $blocks);
-        // line 108
+        // line 109
         echo "
 ";
-        // line 109
+        // line 110
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -148,76 +148,77 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t\t\t<div class=\"pop_picture\">
 
+
 \t\t\t\t\t\t\t\t\t";
-            // line 43
-            if (twig_test_empty(twig_get_attribute($this->env, $this->source, $context["item"], "getImgSrc", [], "method", false, false, false, 43))) {
-                // line 44
+            // line 44
+            if (twig_test_empty(twig_get_attribute($this->env, $this->source, $context["item"], "getImgSrc", [], "method", false, false, false, 44))) {
+                // line 45
                 echo "\t\t\t\t\t\t\t\t\t\t<img src=\"";
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/laptop.png"), "html", null, true);
                 echo "\" style=\"width:180px;\" alt=\"\">
 
 \t\t\t\t\t\t\t\t\t";
             } else {
-                // line 47
-                echo "\t\t\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getImgSrc", [], "method", false, false, false, 47), "html", null, true);
-                echo "\" style=\"width:155px;\" alt=\"no pic\">
+                // line 48
+                echo "\t\t\t\t\t\t\t\t\t\t<img src=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(twig_get_attribute($this->env, $this->source, $context["item"], "getImgSrc", [], "method", false, false, false, 48)), "html", null, true);
+                echo "\" style=\"width:235px;\" alt=\"no pic\">
 \t\t\t\t\t\t\t\t\t";
             }
-            // line 49
+            // line 50
             echo "\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class=\"pop_desc\">
 
 \t\t\t\t\t\t\t\t\tModel :
 \t\t\t\t\t\t\t\t\t<label for=\"name\" id=\"customerId\">";
-            // line 53
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "model", [], "any", false, false, false, 53), "getModelName", [], "method", false, false, false, 53), "html", null, true);
+            // line 54
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "model", [], "any", false, false, false, 54), "getModelName", [], "method", false, false, false, 54), "html", null, true);
             echo "</label>
 \t\t\t\t\t\t\t\t\t<br>
 \t\t\t\t\t\t\t\t\tType :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">";
-            // line 56
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "type", [], "any", false, false, false, 56), "html", null, true);
+            // line 57
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "type", [], "any", false, false, false, 57), "html", null, true);
             echo "</label><br>
 \t\t\t\t\t\t\t\t\tSerial number :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">";
-            // line 58
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getSerialNum", [], "method", false, false, false, 58), "html", null, true);
+            // line 59
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getSerialNum", [], "method", false, false, false, 59), "html", null, true);
             echo "</label><br>
 \t\t\t\t\t\t\t\t\tState :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">";
-            // line 60
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "state", [], "any", false, false, false, 60), "html", null, true);
+            // line 61
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "state", [], "any", false, false, false, 61), "html", null, true);
             echo "</label><br>
 \t\t\t\t\t\t\t\t\tAvailable :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">
 \t\t\t\t\t\t\t\t\t\t";
-            // line 63
-            if ((twig_get_attribute($this->env, $this->source, $context["item"], "available", [], "any", false, false, false, 63) == 1)) {
-                // line 64
+            // line 64
+            if ((twig_get_attribute($this->env, $this->source, $context["item"], "available", [], "any", false, false, false, 64) == 1)) {
+                // line 65
                 echo "\t\t\t\t\t\t\t\t\t\t\tYes
 \t\t\t\t\t\t\t\t\t\t";
             } else {
-                // line 66
+                // line 67
                 echo "\t\t\t\t\t\t\t\t\t\t\tNo
 \t\t\t\t\t\t\t\t\t\t";
             }
-            // line 68
+            // line 69
             echo "\t\t\t\t\t\t\t\t\t</label><br>
 \t\t\t\t\t\t\t\t\tmac_ethernet :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">";
-            // line 70
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getMacEthernet", [], "method", false, false, false, 70), "html", null, true);
+            // line 71
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getMacEthernet", [], "method", false, false, false, 71), "html", null, true);
             echo "</label><br>
 \t\t\t\t\t\t\t\t\tmac_wifi :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">";
-            // line 72
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getMacWifi", [], "method", false, false, false, 72), "html", null, true);
+            // line 73
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getMacWifi", [], "method", false, false, false, 73), "html", null, true);
             echo "</label><br>
 \t\t\t\t\t\t\t\t\tdescription :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">";
-            // line 74
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "description", [], "any", false, false, false, 74), "html", null, true);
+            // line 75
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "description", [], "any", false, false, false, 75), "html", null, true);
             echo "</label><br>
 
 \t\t\t\t\t\t\t\t</div>
@@ -231,39 +232,39 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t<div class=\"materiel\">
 \t\t\t\t\t<div class=\"pic\">
 \t\t\t\t\t\t";
-            // line 86
-            if (twig_test_empty(twig_get_attribute($this->env, $this->source, $context["item"], "getImgSrc", [], "method", false, false, false, 86))) {
-                // line 87
-                echo "\t\t\t\t\t\t\t<img src=\"";
+            // line 87
+            if (twig_test_empty(twig_get_attribute($this->env, $this->source, $context["item"], "getImgSrc", [], "method", false, false, false, 87))) {
+                // line 88
+                echo "\t\t\t\t\t\t\t\t\t<img src=\"";
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/laptop.png"), "html", null, true);
                 echo "\" style=\"width:150px;\" alt=\"\">
 
-\t\t\t\t\t\t";
+\t\t\t\t\t\t\t\t";
             } else {
-                // line 90
-                echo "\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getImgSrc", [], "method", false, false, false, 90), "html", null, true);
-                echo "\" alt=\"no pic\">
-\t\t\t\t\t\t";
+                // line 91
+                echo "\t\t\t\t\t\t\t\t\t<img src=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(twig_get_attribute($this->env, $this->source, $context["item"], "getImgSrc", [], "method", false, false, false, 91)), "html", null, true);
+                echo "\" style=\"width:150px; height:auto;\" alt=\"no pic\">
+\t\t\t\t\t\t\t\t";
             }
-            // line 92
+            // line 93
             echo "\t\t\t\t\t</div>
-\t\t\t\t\t
+
 \t\t\t\t\t<div class=\"details\">
 \t\t\t\t\t\t<label for=\"name\">";
-            // line 95
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "model", [], "any", false, false, false, 95), "marque", [], "any", false, false, false, 95), "getMarqueName", [], "method", false, false, false, 95), "html", null, true);
+            // line 96
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "model", [], "any", false, false, false, 96), "marque", [], "any", false, false, false, 96), "getMarqueName", [], "method", false, false, false, 96), "html", null, true);
             echo "
 \t\t\t\t\t\t\t";
-            // line 96
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "model", [], "any", false, false, false, 96), "getModelName", [], "method", false, false, false, 96), "html", null, true);
+            // line 97
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "model", [], "any", false, false, false, 97), "getModelName", [], "method", false, false, false, 97), "html", null, true);
             echo "</label>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"action\">
 \t\t\t\t\t\t<button>Demande</button>
-\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\"   class=\"start\" data-target=\"#model";
-            // line 100
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 100), "html", null, true);
+\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\" class=\"start\" data-target=\"#model";
+            // line 101
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 101), "html", null, true);
             echo "\">details</button>
 
 \t\t\t\t\t</div>
@@ -273,7 +274,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 105
+        // line 106
         echo "\t\t</div>
 \t</div>
 ";
@@ -282,19 +283,19 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     }
 
-    // line 109
+    // line 110
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 110
-        echo "<script src=\"";
+        // line 111
+        echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/HomePage.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 111
+        // line 112
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
@@ -318,7 +319,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     public function getDebugInfo()
     {
-        return array (  298 => 111,  293 => 110,  286 => 109,  277 => 105,  266 => 100,  259 => 96,  255 => 95,  250 => 92,  244 => 90,  237 => 87,  235 => 86,  220 => 74,  215 => 72,  210 => 70,  206 => 68,  202 => 66,  198 => 64,  196 => 63,  190 => 60,  185 => 58,  180 => 56,  174 => 53,  168 => 49,  162 => 47,  155 => 44,  153 => 43,  142 => 35,  134 => 31,  130 => 30,  109 => 11,  102 => 10,  91 => 6,  84 => 5,  70 => 2,  63 => 109,  60 => 108,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  299 => 112,  294 => 111,  287 => 110,  278 => 106,  267 => 101,  260 => 97,  256 => 96,  251 => 93,  245 => 91,  238 => 88,  236 => 87,  221 => 75,  216 => 73,  211 => 71,  207 => 69,  203 => 67,  199 => 65,  197 => 64,  191 => 61,  186 => 59,  181 => 57,  175 => 54,  169 => 50,  163 => 48,  156 => 45,  154 => 44,  142 => 35,  134 => 31,  130 => 30,  109 => 11,  102 => 10,  91 => 6,  84 => 5,  70 => 2,  63 => 110,  60 => 109,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -365,11 +366,12 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t\t\t<div class=\"pop_picture\">
 
-\t\t\t\t\t\t\t\t\t{% if item.getImgSrc() is empty %}
+
+\t\t\t\t\t\t\t\t\t{% if item.getImgSrc() is empty   %}
 \t\t\t\t\t\t\t\t\t\t<img src=\"{{asset('images/laptop.png')}}\" style=\"width:180px;\" alt=\"\">
 
 \t\t\t\t\t\t\t\t\t{% else %}
-\t\t\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/{{item.getImgSrc()}}\" style=\"width:155px;\" alt=\"no pic\">
+\t\t\t\t\t\t\t\t\t\t<img src=\"{{asset(item.getImgSrc())}}\" style=\"width:235px;\" alt=\"no pic\">
 \t\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class=\"pop_desc\">
@@ -408,21 +410,21 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t</div>
 \t\t\t\t<div class=\"materiel\">
 \t\t\t\t\t<div class=\"pic\">
-\t\t\t\t\t\t{% if item.getImgSrc() is empty %}
-\t\t\t\t\t\t\t<img src=\"{{asset('images/laptop.png')}}\" style=\"width:150px;\" alt=\"\">
+\t\t\t\t\t\t{% if item.getImgSrc() is empty   %}
+\t\t\t\t\t\t\t\t\t<img src=\"{{asset('images/laptop.png')}}\" style=\"width:150px;\" alt=\"\">
 
-\t\t\t\t\t\t{% else %}
-\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/{{item.getImgSrc()}}\" alt=\"no pic\">
-\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t\t\t<img src=\"{{asset(item.getImgSrc())}}\" style=\"width:150px; height:auto;\" alt=\"no pic\">
+\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t</div>
-\t\t\t\t\t
+
 \t\t\t\t\t<div class=\"details\">
 \t\t\t\t\t\t<label for=\"name\">{{item.model.marque.getMarqueName()}}
 \t\t\t\t\t\t\t{{item.model.getModelName()}}</label>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"action\">
 \t\t\t\t\t\t<button>Demande</button>
-\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\"   class=\"start\" data-target=\"#model{{item.id}}\">details</button>
+\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\" class=\"start\" data-target=\"#model{{item.id}}\">details</button>
 
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -432,7 +434,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 {% endblock %}
 
 {% block javascripts %}
-<script src=\"{{asset('JS/HomePage.js')}}\"></script>
+\t<script src=\"{{asset('JS/HomePage.js')}}\"></script>
 \t<script src=\"{{asset('JS/sidebar.js')}}\"></script>
 \t<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>

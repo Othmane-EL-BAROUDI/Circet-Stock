@@ -168,7 +168,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
             // line 72
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Marque");
             echo "\">
-                   <i class='bx bx-barcode'></i>
+                   <i class='bx bx-bookmark-plus'></i>
                     <span class=\"links_name\">Marque</span>
               </a>
                <span class=\"tooltip\">Marque</span>
@@ -309,7 +309,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
           </li>
            <li> 
               <a href=\"{{path('Marque')}}\">
-                   <i class='bx bx-barcode'></i>
+                   <i class='bx bx-bookmark-plus'></i>
                     <span class=\"links_name\">Marque</span>
               </a>
                <span class=\"tooltip\">Marque</span>

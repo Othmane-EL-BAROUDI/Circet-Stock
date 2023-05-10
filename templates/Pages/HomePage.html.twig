@@ -40,11 +40,12 @@
 							<div class="modal-body">
 								<div class="pop_picture">
 
-									{% if item.getImgSrc() is empty %}
+
+									{% if item.getImgSrc() is empty   %}
 										<img src="{{asset('images/laptop.png')}}" style="width:180px;" alt="">
 
 									{% else %}
-										<img src="/CIRCET-STOCK/public/{{item.getImgSrc()}}" style="width:155px;" alt="no pic">
+										<img src="{{asset(item.getImgSrc())}}" style="width:235px;" alt="no pic">
 									{% endif %}
 								</div>
 								<div class="pop_desc">
@@ -83,21 +84,21 @@
 				</div>
 				<div class="materiel">
 					<div class="pic">
-						{% if item.getImgSrc() is empty %}
-							<img src="{{asset('images/laptop.png')}}" style="width:150px;" alt="">
+						{% if item.getImgSrc() is empty   %}
+									<img src="{{asset('images/laptop.png')}}" style="width:150px;" alt="">
 
-						{% else %}
-							<img src="/CIRCET-STOCK/public/{{item.getImgSrc()}}" alt="no pic">
-						{% endif %}
+								{% else %}
+									<img src="{{asset(item.getImgSrc())}}" style="width:150px; height:auto;" alt="no pic">
+								{% endif %}
 					</div>
-					
+
 					<div class="details">
 						<label for="name">{{item.model.marque.getMarqueName()}}
 							{{item.model.getModelName()}}</label>
 					</div>
 					<div class="action">
 						<button>Demande</button>
-						<button type="button" data-toggle="modal"   class="start" data-target="#model{{item.id}}">details</button>
+						<button type="button" data-toggle="modal" class="start" data-target="#model{{item.id}}">details</button>
 
 					</div>
 				</div>
@@ -107,7 +108,7 @@
 {% endblock %}
 
 {% block javascripts %}
-<script src="{{asset('JS/HomePage.js')}}"></script>
+	<script src="{{asset('JS/HomePage.js')}}"></script>
 	<script src="{{asset('JS/sidebar.js')}}"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

@@ -30,11 +30,11 @@
 										<i class='bx bxs-share  bx-md'  style="color:black;"> </i>
 									
 								</a>
-								{% if machine.getImgSrc() is empty %}
+								{% if machine.getImgSrc() is empty   %}
 									<img src="{{asset('images/laptop.png')}}" style="width:155px;" alt="">
 
 								{% else %}
-									<img src="/CIRCET-STOCK/public/{{machine.getImgSrc()}}" style="width:150px;" alt="no pic">
+									<img src="{{asset(machine.getImgSrc())}}" style="width:150px;" alt="no pic">
 								{% endif %}
 							</div>
 						</div>

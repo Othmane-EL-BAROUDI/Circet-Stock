@@ -18,14 +18,8 @@ class DashboardController extends AbstractController
         $nbr_of_users = $query->getResult();
         $query = $entityManager->createQuery('SELECT COUNT(u) FROM App\Entity\Machine u');
         $nbr_of_machines = $query->getResult();
-        $nbr_of_admins = $entityManager->createQueryBuilder('u')
-            ->select('COUNT(u)')
-            ->from(User::class, 'u')
-            ->where('u.roles = :admin')
-            ->setParameter('admin', 'ROLE_ADMIN')
-            ->getQuery()
-            ->getSingleScalarResult();
-       
+        $query1 = $entityManager->createQuery('SELECT COUNT(u) FROM App\Entity\User u WHERE u.roles = \'ADMIN\'');
+        $nbr_of_admins = $query1->getResult();
         $user = $this->getUser();
         return $this->render('Pages/Dashboard.html.twig', [
             'controller_name' => 'BaseController',
