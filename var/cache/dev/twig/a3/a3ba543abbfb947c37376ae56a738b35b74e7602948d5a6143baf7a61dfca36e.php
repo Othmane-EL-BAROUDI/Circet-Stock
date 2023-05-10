@@ -219,7 +219,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t<option selected disabled>Disponibilité</option>
 \t\t\t\t</select>
 \t\t\t\t<select name=\"state\">
-\t\t\t\t\t<option selected disabled>Etat</option>
+\t\t\t\t\t<option selected disabled>État</option>
 \t\t\t\t</select>
 \t\t\t\t<button>
 \t\t\t\t\tRechercher
@@ -306,7 +306,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
             echo "\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\" style=\" border: #28a745 solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-show-alt bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\tview
+\t\t\t\t\t\t\t\t\t\t\tVoir
 \t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t<a href=\"Stock/Edit/";
@@ -504,7 +504,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t<option selected disabled>Disponibilité</option>
 \t\t\t\t</select>
 \t\t\t\t<select name=\"state\">
-\t\t\t\t\t<option selected disabled>Etat</option>
+\t\t\t\t\t<option selected disabled>État</option>
 \t\t\t\t</select>
 \t\t\t\t<button>
 \t\t\t\t\tRechercher
@@ -561,7 +561,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t\t\t\t<a href=\"stockView/{{machine.id}}\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\" style=\" border: #28a745 solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-show-alt bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\tview
+\t\t\t\t\t\t\t\t\t\t\tVoir
 \t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t<a href=\"Stock/Edit/{{machine.id}}\">
@@ -617,6 +617,6 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
 {% endblock %}
-", "Pages/Stock.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\Stock.html.twig");
+", "Pages/Stock.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\Stock.html.twig");
     }
 }

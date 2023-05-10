@@ -119,7 +119,7 @@ class StockController extends AbstractController
             'Path' => '/Stock',
             'form' => $form->createView(),
             'Title' => 'Stock',
-            'PageName' => 'Stock Update',
+            'PageName' => 'Mise à jour',
 
         ]);
     }

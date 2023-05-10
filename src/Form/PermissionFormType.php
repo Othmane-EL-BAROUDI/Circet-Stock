@@ -15,9 +15,10 @@ class PermissionFormType extends AbstractType
         $builder
             ->add('permission_name',TextType::class,[
                 'attr' =>array(
-                    'placeholder' => '@Permission name'
+                    'placeholder' => '@Nom_de_permission'
                 ),
                 'required' => true,
+                'label' => 'Nom de permission',
             ])
             //->add('user_permission')
         ;

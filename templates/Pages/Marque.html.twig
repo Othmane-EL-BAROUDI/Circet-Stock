@@ -9,33 +9,12 @@
 {% block body %}
 	{{ include('Pages/sidebar.html.twig') }}
 	<div class="home_content">
-		<div class="modal fade" id="editRole" tabindex="-1" role="dialog" aria-labelledby="editRole" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Edit Marque</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<label for="name">Marque name:</label>
-						<input placeholder="@marque_name" type="text">
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="close_button">Save changes</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
 		<div class="modal fade" id="addRole" tabindex="-1" role="dialog" aria-labelledby="addRole" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					{{ form_start(form) }}
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Add marque</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Ajouter marque</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
@@ -44,7 +23,7 @@
 						{{ form_widget(form) }}
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="close_button1">Add marque</button>
+						<button type="submit" class="close_button1">Ajouter marque</button>
 					</div>
 					{{ form_end(form) }}
 				</div>
@@ -53,7 +32,7 @@
 
 		{% for flash_message in app.session.flashbag.get('success') %}
 			<div class="alert  alert-success fade show" role="alert">
-				<strong>Success!</strong>
+				<strong>Succès!</strong>
 				{{flash_message}}
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -62,7 +41,7 @@
 		{% endfor %}
 		{% for flash_message in app.session.flashbag.get('update') %}
 			<div class="alert  alert-info fade show" role="alert">
-				<strong>Success!</strong>
+				<strong>Succès!</strong>
 				{{flash_message}}
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -79,12 +58,12 @@
 		{% endfor %}
 
 		<div class="text">Marque</div>
-		<button type="button" class="new" data-toggle="modal" data-target="#addRole">Add new marque</button>
+		<button type="button" class="new" data-toggle="modal" data-target="#addRole">Ajouter marque</button>
 		<div class="main_content">
 			<div class="sort">
-				<input type="text" placeholder="Search">
+				<input type="text" placeholder="Rechercher">
 				<button>
-					Search
+					Rechercher
 				</button>
 			</div>
 		</div>
@@ -107,13 +86,13 @@
 									<a href="/Marque/{{marque.id}}">
 										<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 " style=" border: #007bff solid 1px; ">
 											<i class='bx bx-edit bx-xs'></i>
-											Edit
+											Modifier
 										</button>
 									</a>
 
 									<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal{{marque.id}}">
 										<i class='bx bx-trash bx-xs'></i>
-										Delete
+										Supprimer
 									</button>
 								</td>
 							</tr>
@@ -121,20 +100,20 @@
 								<div class="modal-dialog " role="document">
 									<div class="modal-content ">
 										<div class="modal-header">
-											<h5 class="modal-title" id="exampleModalLabel">Delete confirmation</h5>
+											<h5 class="modal-title" id="exampleModalLabel">Confirmation de suppression</h5>
 											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
 										<div class="modal-body">
-											Do you Realy want to delete marque :
+											Voulez-vous vraiment supprimer ce marque :
 											<label style="  font-weight: bold; color: #f9a826; ">{{marque.getMarqueName()}}</label>
 										</div>
 										<div class="modal-footer">
 											<a href="Marque/Remove/{{marque.id}}">
-												<button type="button" class="bn3 btn btn-sm h-4" style=" border: #dc3545 solid 1px;">Delete</button>
+												<button type="button" class="bn3 btn btn-sm h-4" style=" border: #dc3545 solid 1px;">Supprimer</button>
 											</a>
-											<button type="button" class="btn btn-sm  btn-secondary" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-sm  btn-secondary" data-dismiss="modal">Annuler</button>
 										</div>
 									</div>
 								</div>

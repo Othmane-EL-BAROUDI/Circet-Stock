@@ -1,5 +1,5 @@
 <title>
-	{% block title %}Circet-Users
+	{% block title %}Circet-Utilisateur
 	{% endblock %}
 </title>
 {% block stylesheets %}
@@ -19,7 +19,7 @@
 	{{ include('Pages/sidebar.html.twig') }}
 
 	<div class="home_content"   >
-		<div class="text">User View</div>
+		<div class="text">Profil de l'utilisateur</div>
 		<section>
 			<div class="container py-5">
 
@@ -53,7 +53,7 @@
 							<div class="card-body" style=" box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;" >
 								<div class="row">
 									<div class="col-sm-3">
-										<p class="mb-0">Full Name</p>
+										<p class="mb-0">Nom et Prénom</p>
 									</div>
 									<div class="col-sm-9">
 										<p class="text-muted mb-0">{{user.username}}</p>
@@ -71,7 +71,7 @@
 								<hr>
 								<div class="row">
 									<div class="col-sm-3">
-										<p class="mb-0">Job</p>
+										<p class="mb-0">Poste</p>
 									</div>
 									<div class="col-sm-9">
 										<p class="text-muted mb-0">{{user.job}}</p>
@@ -80,7 +80,7 @@
 								<hr>
 								<div class="row">
 									<div class="col-sm-3">
-										<p class="mb-0">Role</p>
+										<p class="mb-0">Rôle</p>
 									</div>
 									<div class="col-sm-9">
 										<p class="text-muted mb-0">{{user.roles[0]}}</p>
@@ -96,7 +96,7 @@
 											{% if user.manager %}
 												{{user.manager}}
 											{% else %}
-												no manager
+												Pas de manager
 											{% endif %}
 										</p>
 									</div>
@@ -117,7 +117,7 @@
 													<p class="mb-2" style="font-size: .77rem; ">{{permission.getPermissionName()}}</p>
 												{% endfor %}
 											{% else %}
-												<p class="mb-1" style="font-size: .77rem; ">no permissions</p>
+												<p class="mb-1" style="font-size: .77rem; ">Pas de permissions</p>
 											{% endif %}
 										</div>
 

@@ -70,7 +70,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Circet-Role
+        echo "Circet-Rôle
 \t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -346,7 +346,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
     public function getSourceContext()
     {
         return new Source("<title>
-\t{% block title %}Circet-Role
+\t{% block title %}Circet-Rôle
 \t{% endblock %}
 </title>
 {% block stylesheets %}

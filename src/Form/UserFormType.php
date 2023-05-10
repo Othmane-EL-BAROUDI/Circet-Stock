@@ -18,7 +18,7 @@ class UserFormType extends AbstractType
         $builder
             ->add('username', TextType::class, [
                 'attr' => array(
-                    'placeholder' => '@Username'
+                    'placeholder' => '@Username',
                 ),
             ])
             ->add('matricule', TextType::class, [
@@ -28,8 +28,9 @@ class UserFormType extends AbstractType
             ])
             ->add('job', TextType::class, [
                 'attr' => array(
-                    'placeholder' => '@Job'
+                    'placeholder' => '@Poste'
                 ),
+                'label' => 'Poste',
             ])
             //  ->add('usernameCanonical')
             ->add('email', TextType::class, [
@@ -42,8 +43,9 @@ class UserFormType extends AbstractType
             // ->add('salt')
             ->add('password', TextType::class, [
                 'attr' => array(
-                    'placeholder' => '@Password',
+                    'placeholder' => '@Mot de passe',
                 ),
+                'label' => 'Mot de passe',
             ])
             ->add('user_permission', EntityType::class, [
                 'required' => true,
@@ -51,6 +53,7 @@ class UserFormType extends AbstractType
                 'choice_label' => 'permission_name',
                 'multiple' => true,
                 'required' => false,
+                'label' => 'Permissions',
             ])
 
             // ->add('lastLogin')
@@ -60,6 +63,7 @@ class UserFormType extends AbstractType
                 'required' => true,
                 'class' => Role::class,
                 'choice_label' => 'roleName',
+                'label' => 'Rôles',
                 'query_builder' => function (\App\Repository\RoleRepository $r) {
                     return $r->createQueryBuilder('r');
                         

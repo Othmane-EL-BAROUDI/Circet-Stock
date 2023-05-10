@@ -159,9 +159,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Model");
             echo "\">
                    <i class='bx bx-purchase-tag'></i>
-                    <span class=\"links_name\">Model</span>
+                    <span class=\"links_name\">Modèle</span>
               </a>
-               <span class=\"tooltip\">Model</span>
+               <span class=\"tooltip\">Modèle</span>
           </li>
            <li> 
               <a href=\"";
@@ -303,9 +303,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
            <li> 
               <a href=\"{{path('Model')}}\">
                    <i class='bx bx-purchase-tag'></i>
-                    <span class=\"links_name\">Model</span>
+                    <span class=\"links_name\">Modèle</span>
               </a>
-               <span class=\"tooltip\">Model</span>
+               <span class=\"tooltip\">Modèle</span>
           </li>
            <li> 
               <a href=\"{{path('Marque')}}\">
@@ -339,6 +339,6 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
       </div>
      
 {% endblock %}
-", "Pages/sidebar.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\sidebar.html.twig");
+", "Pages/sidebar.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\sidebar.html.twig");
     }
 }

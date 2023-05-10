@@ -15,9 +15,10 @@ class MarqueFormType extends AbstractType
         $builder
             ->add('marque_name',TextType::class,[
                 'attr' =>array(
-                    'placeholder' => '@marque name'
+                    'placeholder' => '@Nom_de_marque'
                 ),
                 'required' => true,
+                'label' => 'Nom de marque',
             ])
         ;
     }

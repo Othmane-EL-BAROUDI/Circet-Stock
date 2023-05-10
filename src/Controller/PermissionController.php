@@ -63,11 +63,11 @@ class PermissionController extends AbstractController
         }
         return $this->render('Pages/update/Update.html.twig', [
             'userInfo' => $user,
-            'PageName' => 'Permission Update',
+            'PageName' => 'Mise à jour',
             'Path' => '/Permission',
             'permission' => $permission,
             'form' => $form->createView(),
-            'Title' => 'Permission Update'
+            'Title' => 'Permission'
         ]);
     }
 

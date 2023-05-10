@@ -35,6 +35,7 @@ class MachineFormType extends AbstractType
                 'multiple' => false,
                 'required' => true,
                 'attr' => array('class' => 'form-control'),
+                'label' => 'Modèle',
             ])
             ->add('type', TextType::class, [
                 'attr' => array(
@@ -44,25 +45,27 @@ class MachineFormType extends AbstractType
             ])
             ->add('serial_num', TextType::class, [
                 'attr' => array(
-                    'placeholder' => '@Serial number'
+                    'placeholder' => '@Numéro_de_série'
                 ),
                 'required' => true,
+                'label' => 'Numéro de série',
             ])
             ->add('state', ChoiceType::class, [
 
                 'choices'  => [
-                    'Good' => "Good",
-                    'Bad' => "bad",
-
+                    'Bon' => "Bon",
+                    'Mauvais' => "Mauvais",
                 ],
                 'required' => true,
                 'attr' => array('class' => 'form-control', 'placeholder' => '@state'),
+                'label' => 'État',
 
             ])
             ->add('available', CheckboxType::class, [
 
                 'attr' => array('class' => 'form-control', 'style' => 'margin-top: -3.5%; width:180px;'),
                 'required' => false,
+                'label' => 'Disponible',
             ])
             ->add('description', TextType::class, [
                 'attr' => array(

@@ -56,10 +56,10 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 ";
         // line 10
         $this->displayBlock('body', $context, $blocks);
-        // line 109
+        // line 108
         echo "
 ";
-        // line 110
+        // line 109
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -73,7 +73,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Circet-HomePage
+        echo "Circet-Accueil
 \t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -108,14 +108,14 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
         // line 11
         echo "
 \t<div class=\"home_content\">
-\t\t<div class=\"text\">Stock Materiel</div>
+\t\t<div class=\"text\">Stock matériel</div>
 \t\t<div class=\"sort\">
-\t\t\t<input type=\"text\" placeholder=\"Search\">
+\t\t\t<input type=\"text\" placeholder=\"Rechercher\">
 \t\t\t<select name=\"machine\">
 \t\t\t\t<option selected disabled>Type</option>
-\t\t\t\t<option value=\"computer\">Computer</option>
+\t\t\t\t<option value=\"computer\">Ordinateur</option>
 \t\t\t\t<option value=\"cable\">Cable</option>
-\t\t\t\t<option value=\"scanner\">scanner</option>
+\t\t\t\t<option value=\"scanner\">Scanner</option>
 \t\t\t</select>
 
 \t\t\t<button>
@@ -169,7 +169,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
             echo "\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class=\"pop_desc\">
 
-\t\t\t\t\t\t\t\t\tModel :
+\t\t\t\t\t\t\t\t\tModèle :
 \t\t\t\t\t\t\t\t\t<label for=\"name\" id=\"customerId\">";
             // line 54
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "model", [], "any", false, false, false, 54), "getModelName", [], "method", false, false, false, 54), "html", null, true);
@@ -180,17 +180,17 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
             // line 57
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "type", [], "any", false, false, false, 57), "html", null, true);
             echo "</label><br>
-\t\t\t\t\t\t\t\t\tSerial number :
+\t\t\t\t\t\t\t\t\tNuméro de série :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">";
             // line 59
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getSerialNum", [], "method", false, false, false, 59), "html", null, true);
             echo "</label><br>
-\t\t\t\t\t\t\t\t\tState :
+\t\t\t\t\t\t\t\t\tÉtat :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">";
             // line 61
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "state", [], "any", false, false, false, 61), "html", null, true);
             echo "</label><br>
-\t\t\t\t\t\t\t\t\tAvailable :
+\t\t\t\t\t\t\t\t\tDisponibilité :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">
 \t\t\t\t\t\t\t\t\t\t";
             // line 64
@@ -205,17 +205,17 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
             }
             // line 69
             echo "\t\t\t\t\t\t\t\t\t</label><br>
-\t\t\t\t\t\t\t\t\tmac_ethernet :
+\t\t\t\t\t\t\t\t\tMac_ethernet :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">";
             // line 71
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getMacEthernet", [], "method", false, false, false, 71), "html", null, true);
             echo "</label><br>
-\t\t\t\t\t\t\t\t\tmac_wifi :
+\t\t\t\t\t\t\t\t\tMac_wifi :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">";
             // line 73
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getMacWifi", [], "method", false, false, false, 73), "html", null, true);
             echo "</label><br>
-\t\t\t\t\t\t\t\t\tdescription :
+\t\t\t\t\t\t\t\t\tDéscription :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">";
             // line 75
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "description", [], "any", false, false, false, 75), "html", null, true);
@@ -224,7 +224,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"modal-footer close_button\">
-\t\t\t\t\t\t\t\t<button type=\"button\" data-dismiss=\"modal\">Close</button>
+\t\t\t\t\t\t\t\t<button type=\"button\" data-dismiss=\"modal\">Annuler</button>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
@@ -265,8 +265,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\" class=\"start\" data-target=\"#model";
             // line 101
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 101), "html", null, true);
-            echo "\">details</button>
-
+            echo "\">Détails</button>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t";
@@ -274,7 +273,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 106
+        // line 105
         echo "\t\t</div>
 \t</div>
 ";
@@ -283,19 +282,19 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     }
 
-    // line 110
+    // line 109
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 111
+        // line 110
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/HomePage.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 112
+        // line 111
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
@@ -319,13 +318,13 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     public function getDebugInfo()
     {
-        return array (  299 => 112,  294 => 111,  287 => 110,  278 => 106,  267 => 101,  260 => 97,  256 => 96,  251 => 93,  245 => 91,  238 => 88,  236 => 87,  221 => 75,  216 => 73,  211 => 71,  207 => 69,  203 => 67,  199 => 65,  197 => 64,  191 => 61,  186 => 59,  181 => 57,  175 => 54,  169 => 50,  163 => 48,  156 => 45,  154 => 44,  142 => 35,  134 => 31,  130 => 30,  109 => 11,  102 => 10,  91 => 6,  84 => 5,  70 => 2,  63 => 110,  60 => 109,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  298 => 111,  293 => 110,  286 => 109,  277 => 105,  267 => 101,  260 => 97,  256 => 96,  251 => 93,  245 => 91,  238 => 88,  236 => 87,  221 => 75,  216 => 73,  211 => 71,  207 => 69,  203 => 67,  199 => 65,  197 => 64,  191 => 61,  186 => 59,  181 => 57,  175 => 54,  169 => 50,  163 => 48,  156 => 45,  154 => 44,  142 => 35,  134 => 31,  130 => 30,  109 => 11,  102 => 10,  91 => 6,  84 => 5,  70 => 2,  63 => 109,  60 => 108,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<title>
-\t{% block title %}Circet-HomePage
+\t{% block title %}Circet-Accueil
 \t{% endblock %}
 </title>
 {% block stylesheets %}
@@ -336,14 +335,14 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 {% block body %}
 
 \t<div class=\"home_content\">
-\t\t<div class=\"text\">Stock Materiel</div>
+\t\t<div class=\"text\">Stock matériel</div>
 \t\t<div class=\"sort\">
-\t\t\t<input type=\"text\" placeholder=\"Search\">
+\t\t\t<input type=\"text\" placeholder=\"Rechercher\">
 \t\t\t<select name=\"machine\">
 \t\t\t\t<option selected disabled>Type</option>
-\t\t\t\t<option value=\"computer\">Computer</option>
+\t\t\t\t<option value=\"computer\">Ordinateur</option>
 \t\t\t\t<option value=\"cable\">Cable</option>
-\t\t\t\t<option value=\"scanner\">scanner</option>
+\t\t\t\t<option value=\"scanner\">Scanner</option>
 \t\t\t</select>
 
 \t\t\t<button>
@@ -376,16 +375,16 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class=\"pop_desc\">
 
-\t\t\t\t\t\t\t\t\tModel :
+\t\t\t\t\t\t\t\t\tModèle :
 \t\t\t\t\t\t\t\t\t<label for=\"name\" id=\"customerId\">{{item.model.getModelName()}}</label>
 \t\t\t\t\t\t\t\t\t<br>
 \t\t\t\t\t\t\t\t\tType :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">{{item.type}}</label><br>
-\t\t\t\t\t\t\t\t\tSerial number :
+\t\t\t\t\t\t\t\t\tNuméro de série :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">{{item.getSerialNum()}}</label><br>
-\t\t\t\t\t\t\t\t\tState :
+\t\t\t\t\t\t\t\t\tÉtat :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">{{item.state}}</label><br>
-\t\t\t\t\t\t\t\t\tAvailable :
+\t\t\t\t\t\t\t\t\tDisponibilité :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">
 \t\t\t\t\t\t\t\t\t\t{% if item.available == 1 %}
 \t\t\t\t\t\t\t\t\t\t\tYes
@@ -393,17 +392,17 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t\t\t\t\tNo
 \t\t\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t\t\t</label><br>
-\t\t\t\t\t\t\t\t\tmac_ethernet :
+\t\t\t\t\t\t\t\t\tMac_ethernet :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">{{item.getMacEthernet()}}</label><br>
-\t\t\t\t\t\t\t\t\tmac_wifi :
+\t\t\t\t\t\t\t\t\tMac_wifi :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">{{item.getMacWifi()}}</label><br>
-\t\t\t\t\t\t\t\t\tdescription :
+\t\t\t\t\t\t\t\t\tDéscription :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">{{item.description}}</label><br>
 
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"modal-footer close_button\">
-\t\t\t\t\t\t\t\t<button type=\"button\" data-dismiss=\"modal\">Close</button>
+\t\t\t\t\t\t\t\t<button type=\"button\" data-dismiss=\"modal\">Annuler</button>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
@@ -424,8 +423,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"action\">
 \t\t\t\t\t\t<button>Demande</button>
-\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\" class=\"start\" data-target=\"#model{{item.id}}\">details</button>
-
+\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\" class=\"start\" data-target=\"#model{{item.id}}\">Détails</button>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t{% endfor %}
@@ -440,6 +438,6 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
 {% endblock %}
-", "Pages/homePage.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\HomePage.html.twig");
+", "Pages/homePage.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\HomePage.html.twig");
     }
 }
