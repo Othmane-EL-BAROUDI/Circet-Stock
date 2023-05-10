@@ -70,7 +70,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Circet-Users
+        echo "Circet-Utilisateurs
 \t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -108,7 +108,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t<div class=\"modal-content\">
 \t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Add user</h5>
+\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Ajouter un utilisateur</h5>
 \t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t</button>
@@ -125,7 +125,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t\t\t\t</div>
 
 \t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Add user</button>
+\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Ajouter un utilisateur</button>
 \t\t\t\t\t</div>
 \t\t\t\t\t";
         // line 29
@@ -143,7 +143,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
             // line 36
             echo "\t\t\t<div class=\"alert  alert-success fade show\" role=\"alert\">
-\t\t\t\t<strong>Success!</strong>
+\t\t\t\t<strong>Succès!</strong>
 \t\t\t\t";
             // line 38
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
@@ -164,7 +164,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
             // line 45
             echo "\t\t\t<div class=\"alert  alert-info fade show\" role=\"alert\">
-\t\t\t\t<strong>Success!</strong>
+\t\t\t\t<strong>Succès!</strong>
 \t\t\t\t";
             // line 47
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
@@ -199,29 +199,29 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 61
-        echo "\t\t<div class=\"text\">Users</div>
+        echo "\t\t<div class=\"text\">Utilisateurs</div>
 
-\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addUser\">Add new user</button>
+\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addUser\">Ajouter un utilisateur</button>
 \t\t<div class=\"main_content\">
 \t\t\t<div class=\"sort\">
-\t\t\t\t<input type=\"text\" placeholder=\"Search\">
+\t\t\t\t<input type=\"text\" placeholder=\"Rechercher\">
 \t\t\t\t<select name=\"role\">
-\t\t\t\t\t<option selected disabled>role</option>
-\t\t\t\t\t<option value=\"manager\">manager</option>
-\t\t\t\t\t<option value=\"admin\">admin</option>
+\t\t\t\t\t<option selected disabled>Rôle</option>
+\t\t\t\t\t<option value=\"manager\">Manager</option>
+\t\t\t\t\t<option value=\"admin\">Admin</option>
 \t\t\t\t</select>
 \t\t\t\t<button>
-\t\t\t\t\tSearch
+\t\t\t\t\tRechercher
 \t\t\t\t</button>
 \t\t\t</div>
 \t\t\t<div class=\"mainC\">
 \t\t\t\t<table class=\"table align-middle mb-0 bg-white\">
 \t\t\t\t\t<thead class=\"bg-light\">
 \t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<th>users</th>
-\t\t\t\t\t\t\t<th>matricule</th>
-\t\t\t\t\t\t\t<th>Status</th>
-\t\t\t\t\t\t\t<th>job</th>
+\t\t\t\t\t\t\t<th>Utilisateurs</th>
+\t\t\t\t\t\t\t<th>Matricule</th>
+\t\t\t\t\t\t\t<th>Statut</th>
+\t\t\t\t\t\t\t<th>Poste</th>
 \t\t\t\t\t\t\t<th style=\"text-align:center;\">Actions</th>
 \t\t\t\t\t\t</tr>
 \t\t\t\t\t</thead>
@@ -262,11 +262,11 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                 // line 104
                 if (twig_get_attribute($this->env, $this->source, $context["user"], "enabled", [], "any", false, false, false, 104)) {
                     // line 105
-                    echo "\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-success rounded-pill d-inline \">Active</span>
+                    echo "\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-success rounded-pill d-inline \">Actif</span>
 \t\t\t\t\t\t\t\t\t\t\t";
                 } else {
                     // line 107
-                    echo "\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-warning rounded-pill d-inline\">Blocked</span>
+                    echo "\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-warning rounded-pill d-inline\">Bloqué</span>
 \t\t\t\t\t\t\t\t\t\t\t";
                 }
                 // line 109
@@ -287,7 +287,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                 echo "\">
 \t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\" style=\" border: #28a745 solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-show-alt bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\t\tview
+\t\t\t\t\t\t\t\t\t\t\t\tVoir
 \t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t<a href=\"User/Edit/";
@@ -296,16 +296,16 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                 echo "\">
 \t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\t\tEdit
+\t\t\t\t\t\t\t\t\t\t\t\tModifier
 \t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal";
                 // line 130
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 130), "html", null, true);
-                echo "\"  style=\" border: #dc3545 solid 1px;\">
+                echo "\"  style=\" border: #dc3545 solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\t\tDelete
+\t\t\t\t\t\t\t\t\t\t\t\tSupprimer
 \t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t</td>
@@ -317,13 +317,13 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Delete confirmation</h5>
+\t\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Confirmation de suppression</h5>
 \t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t\t\t\t\t\t\tDo you Realy want to delete user :
+\t\t\t\t\t\t\t\t\t\t\t\tVoulez-vous vraiment supprimer cet utilisateur :
 \t\t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">";
                 // line 148
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 148), "html", null, true);
@@ -334,9 +334,9 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
                 // line 151
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 151), "html", null, true);
                 echo "\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Delete</button>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
 \t\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Close</button>
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Annuler</button>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
@@ -399,7 +399,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
     public function getSourceContext()
     {
         return new Source("<title>
-\t{% block title %}Circet-Users
+\t{% block title %}Circet-Utilisateurs
 \t{% endblock %}
 </title>
 {% block stylesheets %}
@@ -413,7 +413,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t<div class=\"modal-content\">
 \t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Add user</h5>
+\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Ajouter un utilisateur</h5>
 \t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t</button>
@@ -424,7 +424,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t\t\t\t</div>
 
 \t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Add user</button>
+\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Ajouter un utilisateur</button>
 \t\t\t\t\t</div>
 \t\t\t\t\t{{ form_end(form) }}
 
@@ -434,7 +434,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t</div>
 \t\t{% for flash_message in app.session.flashbag.get('success') %}
 \t\t\t<div class=\"alert  alert-success fade show\" role=\"alert\">
-\t\t\t\t<strong>Success!</strong>
+\t\t\t\t<strong>Succès!</strong>
 \t\t\t\t{{flash_message}}
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
 \t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
@@ -443,7 +443,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t{% endfor %}
 \t\t{% for flash_message in app.session.flashbag.get('update') %}
 \t\t\t<div class=\"alert  alert-info fade show\" role=\"alert\">
-\t\t\t\t<strong>Success!</strong>
+\t\t\t\t<strong>Succès!</strong>
 \t\t\t\t{{flash_message}}
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
 \t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
@@ -458,29 +458,29 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t\t\t</button>
 \t\t\t</div>
 \t\t{% endfor %}
-\t\t<div class=\"text\">Users</div>
+\t\t<div class=\"text\">Utilisateurs</div>
 
-\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addUser\">Add new user</button>
+\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addUser\">Ajouter un utilisateur</button>
 \t\t<div class=\"main_content\">
 \t\t\t<div class=\"sort\">
-\t\t\t\t<input type=\"text\" placeholder=\"Search\">
+\t\t\t\t<input type=\"text\" placeholder=\"Rechercher\">
 \t\t\t\t<select name=\"role\">
-\t\t\t\t\t<option selected disabled>role</option>
-\t\t\t\t\t<option value=\"manager\">manager</option>
-\t\t\t\t\t<option value=\"admin\">admin</option>
+\t\t\t\t\t<option selected disabled>Rôle</option>
+\t\t\t\t\t<option value=\"manager\">Manager</option>
+\t\t\t\t\t<option value=\"admin\">Admin</option>
 \t\t\t\t</select>
 \t\t\t\t<button>
-\t\t\t\t\tSearch
+\t\t\t\t\tRechercher
 \t\t\t\t</button>
 \t\t\t</div>
 \t\t\t<div class=\"mainC\">
 \t\t\t\t<table class=\"table align-middle mb-0 bg-white\">
 \t\t\t\t\t<thead class=\"bg-light\">
 \t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<th>users</th>
-\t\t\t\t\t\t\t<th>matricule</th>
-\t\t\t\t\t\t\t<th>Status</th>
-\t\t\t\t\t\t\t<th>job</th>
+\t\t\t\t\t\t\t<th>Utilisateurs</th>
+\t\t\t\t\t\t\t<th>Matricule</th>
+\t\t\t\t\t\t\t<th>Statut</th>
+\t\t\t\t\t\t\t<th>Poste</th>
 \t\t\t\t\t\t\t<th style=\"text-align:center;\">Actions</th>
 \t\t\t\t\t\t</tr>
 \t\t\t\t\t</thead>
@@ -502,9 +502,9 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t\t<label class=\"mt-2\">
 \t\t\t\t\t\t\t\t\t\t\t{% if user.enabled %}
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-success rounded-pill d-inline \">Active</span>
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-success rounded-pill d-inline \">Actif</span>
 \t\t\t\t\t\t\t\t\t\t\t{% else %}
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-warning rounded-pill d-inline\">Blocked</span>
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-warning rounded-pill d-inline\">Bloqué</span>
 \t\t\t\t\t\t\t\t\t\t\t{% endif %}
 
 \t\t\t\t\t\t\t\t\t\t</label>
@@ -517,19 +517,19 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t\t\t\t\t\t\t\t\t<a href=\"User/{{user.id}}\">
 \t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\" style=\" border: #28a745 solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-show-alt bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\t\tview
+\t\t\t\t\t\t\t\t\t\t\t\tVoir
 \t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t<a href=\"User/Edit/{{user.id}}\">
 \t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\t\tEdit
+\t\t\t\t\t\t\t\t\t\t\t\tModifier
 \t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal{{user.id}}\"  style=\" border: #dc3545 solid 1px;\">
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal{{user.id}}\"  style=\" border: #dc3545 solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\t\tDelete
+\t\t\t\t\t\t\t\t\t\t\t\tSupprimer
 \t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t</td>
@@ -538,20 +538,20 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Delete confirmation</h5>
+\t\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Confirmation de suppression</h5>
 \t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t\t\t\t\t\t\tDo you Realy want to delete user :
+\t\t\t\t\t\t\t\t\t\t\t\tVoulez-vous vraiment supprimer cet utilisateur :
 \t\t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">{{user.username}} </label>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"User/Remove/{{user.id}}\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Delete</button>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
 \t\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Close</button>
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Annuler</button>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>

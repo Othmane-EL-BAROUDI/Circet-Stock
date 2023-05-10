@@ -14,7 +14,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 
-						<h5 class="modal-title" id="exampleModalLabel">Add to stock</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Ajouter au stock</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
@@ -22,7 +22,7 @@
 					<div class="modal-body">
 
 						{{ form_start(form) }}
-						<label for="name">item picture:</label>
+						<label for="name">Aperçu de l'appareil:</label>
 						<button>
 							<i class='bx bxs-cloud-upload bx-sm'></i>
 						</button>
@@ -31,7 +31,7 @@
 
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="close_button1">Add item</button>
+						<button type="submit" class="close_button1">Ajouter un appareil</button>
 					</div>
 					{{ form_end(form) }}
 				</div>
@@ -40,7 +40,7 @@
 		</div>
 		{% for flash_message in app.session.flashbag.get('success') %}
 			<div class="alert  alert-success fade show" role="alert">
-				<strong>Success!</strong>
+				<strong>Succès!</strong>
 				{{flash_message}}
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -49,7 +49,7 @@
 		{% endfor %}
 			{% for flash_message in app.session.flashbag.get('update') %}
 			<div class="alert  alert-info fade show" role="alert">
-				<strong>Success!</strong>
+				<strong>Succès!</strong>
 				{{flash_message}}
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -65,35 +65,35 @@
 			</div>
 		{% endfor %}
 		<div class="text">Stock</div>
-		<button type="button" class="new" data-toggle="modal" data-target="#addStock">Add to stock</button>
+		<button type="button" class="new" data-toggle="modal" data-target="#addStock">Ajouter au stock</button>
 		<div class="main_content">
 			<div class="sort1">
-				<input type="text" placeholder="Search">
+				<input type="text" placeholder="Rechercher">
 				<select name="role">
 					<option selected disabled>Type</option>
-					<option value="manager">manager</option>
-					<option value="admin">admin</option>
+					<option value="manager">Manager</option>
+					<option value="admin">Admin</option>
 				</select>
 				<select name="availability">
-					<option selected disabled>Availability</option>
+					<option selected disabled>Disponibilité</option>
 				</select>
 				<select name="state">
-					<option selected disabled>State</option>
+					<option selected disabled>Etat</option>
 				</select>
 				<button>
-					Search
+					Rechercher
 				</button>
 			</div>
 			<div class="mainC">
 				<table class="table align-middle mb-0 bg-white">
 					<thead class="bg-light">
 						<tr>
-							<th>name</th>
-							<th>type</th>
-							<th>serial number</th>
-							<th>availability</th>
-							<th>state</th>
-							<th style="text-align:center;">action</th>
+							<th>Nom</th>
+							<th>Type</th>
+							<th>Numéro de série</th>
+							<th>Disponibilité</th>
+							<th>État</th>
+							<th style="text-align:center;">Action</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -119,9 +119,9 @@
 								<td>
 									<label class="mt-2 ml-2">
 										{% if machine.available == 1 %}
-											<span class="badge badge-success rounded-pill d-inline pl-3 pr-3">Yes</span>
+											<span class="badge badge-success rounded-pill d-inline pl-3 pr-3">Oui</span>
 										{% else %}
-											<span class="badge badge-warning rounded-pill d-inline pl-3 pr-3">No</span>
+											<span class="badge badge-warning rounded-pill d-inline pl-3 pr-3">Non</span>
 										{% endif %}
 									</label>
 								</td>
@@ -141,13 +141,13 @@
 									<a href="Stock/Edit/{{machine.id}}">
 										<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 " style=" border: #007bff solid 1px; ">
 											<i class='bx bx-edit bx-xs'></i>
-											Edit
+											Modifier
 										</button>
 									</a>
 
 									<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " data-toggle="modal" data-target="#exampleModal{{machine.id}}" style=" border: #dc3545 solid 1px;">
 										<i class='bx bx-trash bx-xs'></i>
-										Delete
+										Supprimer
 									</button>
 
 								</td>
@@ -156,22 +156,22 @@
 								<div class="modal-dialog " role="document">
 									<div class="modal-content ">
 										<div class="modal-header">
-											<h5 class="modal-title" id="exampleModalLabel">Delete confirmation</h5>
+											<h5 class="modal-title" id="exampleModalLabel">Confirmation de suppression</h5>
 											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
 										<div class="modal-body">
-											Do you Realy want to delete from the stock :
+											Voulez-vous vraiment supprimer ce matériel :
 											<label style="  font-weight: bold; color: #f9a826; ">{{machine.model.marque.getMarqueName()}}
 												-
 												{{machine.model.getModelName()}}</label>
 										</div>
 										<div class="modal-footer">
 											<a href="Stock/Remove/{{machine.id}}">
-												<button type="button" class="bn3 btn btn-sm h-4" style=" border: #dc3545 solid 1px;">Delete</button>
+												<button type="button" class="bn3 btn btn-sm h-4" style=" border: #dc3545 solid 1px;">Supprimer</button>
 											</a>
-											<button type="button" class="btn btn-sm  btn-secondary" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-sm  btn-secondary" data-dismiss="modal">Annuler</button>
 										</div>
 									</div>
 								</div>

@@ -109,7 +109,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t<div class=\"modal-content\">
 \t\t\t\t\t<div class=\"modal-header\">
 
-\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Add to stock</h5>
+\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Ajouter au stock</h5>
 \t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t</button>
@@ -120,7 +120,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         // line 24
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 24, $this->source); })()), 'form_start');
         echo "
-\t\t\t\t\t\t<label for=\"name\">item picture:</label>
+\t\t\t\t\t\t<label for=\"name\">Aperçu de l'appareil:</label>
 \t\t\t\t\t\t<button>
 \t\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
 \t\t\t\t\t\t</button>
@@ -132,7 +132,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Add item</button>
+\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Ajouter un appareil</button>
 \t\t\t\t\t</div>
 \t\t\t\t\t";
         // line 36
@@ -149,7 +149,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
             // line 42
             echo "\t\t\t<div class=\"alert  alert-success fade show\" role=\"alert\">
-\t\t\t\t<strong>Success!</strong>
+\t\t\t\t<strong>Succès!</strong>
 \t\t\t\t";
             // line 44
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
@@ -170,7 +170,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
             // line 51
             echo "\t\t\t<div class=\"alert  alert-info fade show\" role=\"alert\">
-\t\t\t\t<strong>Success!</strong>
+\t\t\t\t<strong>Succès!</strong>
 \t\t\t\t";
             // line 53
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
@@ -206,35 +206,35 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 67
         echo "\t\t<div class=\"text\">Stock</div>
-\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addStock\">Add to stock</button>
+\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addStock\">Ajouter au stock</button>
 \t\t<div class=\"main_content\">
 \t\t\t<div class=\"sort1\">
-\t\t\t\t<input type=\"text\" placeholder=\"Search\">
+\t\t\t\t<input type=\"text\" placeholder=\"Rechercher\">
 \t\t\t\t<select name=\"role\">
 \t\t\t\t\t<option selected disabled>Type</option>
-\t\t\t\t\t<option value=\"manager\">manager</option>
-\t\t\t\t\t<option value=\"admin\">admin</option>
+\t\t\t\t\t<option value=\"manager\">Manager</option>
+\t\t\t\t\t<option value=\"admin\">Admin</option>
 \t\t\t\t</select>
 \t\t\t\t<select name=\"availability\">
-\t\t\t\t\t<option selected disabled>Availability</option>
+\t\t\t\t\t<option selected disabled>Disponibilité</option>
 \t\t\t\t</select>
 \t\t\t\t<select name=\"state\">
-\t\t\t\t\t<option selected disabled>State</option>
+\t\t\t\t\t<option selected disabled>Etat</option>
 \t\t\t\t</select>
 \t\t\t\t<button>
-\t\t\t\t\tSearch
+\t\t\t\t\tRechercher
 \t\t\t\t</button>
 \t\t\t</div>
 \t\t\t<div class=\"mainC\">
 \t\t\t\t<table class=\"table align-middle mb-0 bg-white\">
 \t\t\t\t\t<thead class=\"bg-light\">
 \t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<th>name</th>
-\t\t\t\t\t\t\t<th>type</th>
-\t\t\t\t\t\t\t<th>serial number</th>
-\t\t\t\t\t\t\t<th>availability</th>
-\t\t\t\t\t\t\t<th>state</th>
-\t\t\t\t\t\t\t<th style=\"text-align:center;\">action</th>
+\t\t\t\t\t\t\t<th>Nom</th>
+\t\t\t\t\t\t\t<th>Type</th>
+\t\t\t\t\t\t\t<th>Numéro de série</th>
+\t\t\t\t\t\t\t<th>Disponibilité</th>
+\t\t\t\t\t\t\t<th>État</th>
+\t\t\t\t\t\t\t<th style=\"text-align:center;\">Action</th>
 \t\t\t\t\t\t</tr>
 \t\t\t\t\t</thead>
 \t\t\t\t\t<tbody>
@@ -280,11 +280,11 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
             // line 121
             if ((twig_get_attribute($this->env, $this->source, $context["machine"], "available", [], "any", false, false, false, 121) == 1)) {
                 // line 122
-                echo "\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-success rounded-pill d-inline pl-3 pr-3\">Yes</span>
+                echo "\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-success rounded-pill d-inline pl-3 pr-3\">Oui</span>
 \t\t\t\t\t\t\t\t\t\t";
             } else {
                 // line 124
-                echo "\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-warning rounded-pill d-inline pl-3 pr-3\">No</span>
+                echo "\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-warning rounded-pill d-inline pl-3 pr-3\">Non</span>
 \t\t\t\t\t\t\t\t\t\t";
             }
             // line 126
@@ -315,7 +315,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
             echo "\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\tEdit
+\t\t\t\t\t\t\t\t\t\t\tModifier
 \t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t</a>
 
@@ -324,7 +324,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 148), "html", null, true);
             echo "\" style=\" border: #dc3545 solid 1px;\">
 \t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\tDelete
+\t\t\t\t\t\t\t\t\t\tSupprimer
 \t\t\t\t\t\t\t\t\t</button>
 
 \t\t\t\t\t\t\t\t</td>
@@ -336,13 +336,13 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
 \t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Delete confirmation</h5>
+\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Confirmation de suppression</h5>
 \t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t\t\t\t\t\tDo you Realy want to delete from the stock :
+\t\t\t\t\t\t\t\t\t\t\tVoulez-vous vraiment supprimer ce matériel :
 \t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">";
             // line 166
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 166), "marque", [], "any", false, false, false, 166), "getMarqueName", [], "method", false, false, false, 166), "html", null, true);
@@ -358,9 +358,9 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
             // line 171
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 171), "html", null, true);
             echo "\">
-\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Delete</button>
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
 \t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Close</button>
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Annuler</button>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
@@ -436,7 +436,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t<div class=\"modal-content\">
 \t\t\t\t\t<div class=\"modal-header\">
 
-\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Add to stock</h5>
+\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Ajouter au stock</h5>
 \t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t</button>
@@ -444,7 +444,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t<div class=\"modal-body\">
 
 \t\t\t\t\t\t{{ form_start(form) }}
-\t\t\t\t\t\t<label for=\"name\">item picture:</label>
+\t\t\t\t\t\t<label for=\"name\">Aperçu de l'appareil:</label>
 \t\t\t\t\t\t<button>
 \t\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
 \t\t\t\t\t\t</button>
@@ -453,7 +453,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Add item</button>
+\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Ajouter un appareil</button>
 \t\t\t\t\t</div>
 \t\t\t\t\t{{ form_end(form) }}
 \t\t\t\t</div>
@@ -462,7 +462,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t</div>
 \t\t{% for flash_message in app.session.flashbag.get('success') %}
 \t\t\t<div class=\"alert  alert-success fade show\" role=\"alert\">
-\t\t\t\t<strong>Success!</strong>
+\t\t\t\t<strong>Succès!</strong>
 \t\t\t\t{{flash_message}}
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
 \t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
@@ -471,7 +471,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t{% endfor %}
 \t\t\t{% for flash_message in app.session.flashbag.get('update') %}
 \t\t\t<div class=\"alert  alert-info fade show\" role=\"alert\">
-\t\t\t\t<strong>Success!</strong>
+\t\t\t\t<strong>Succès!</strong>
 \t\t\t\t{{flash_message}}
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
 \t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
@@ -487,35 +487,35 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t</div>
 \t\t{% endfor %}
 \t\t<div class=\"text\">Stock</div>
-\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addStock\">Add to stock</button>
+\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addStock\">Ajouter au stock</button>
 \t\t<div class=\"main_content\">
 \t\t\t<div class=\"sort1\">
-\t\t\t\t<input type=\"text\" placeholder=\"Search\">
+\t\t\t\t<input type=\"text\" placeholder=\"Rechercher\">
 \t\t\t\t<select name=\"role\">
 \t\t\t\t\t<option selected disabled>Type</option>
-\t\t\t\t\t<option value=\"manager\">manager</option>
-\t\t\t\t\t<option value=\"admin\">admin</option>
+\t\t\t\t\t<option value=\"manager\">Manager</option>
+\t\t\t\t\t<option value=\"admin\">Admin</option>
 \t\t\t\t</select>
 \t\t\t\t<select name=\"availability\">
-\t\t\t\t\t<option selected disabled>Availability</option>
+\t\t\t\t\t<option selected disabled>Disponibilité</option>
 \t\t\t\t</select>
 \t\t\t\t<select name=\"state\">
-\t\t\t\t\t<option selected disabled>State</option>
+\t\t\t\t\t<option selected disabled>Etat</option>
 \t\t\t\t</select>
 \t\t\t\t<button>
-\t\t\t\t\tSearch
+\t\t\t\t\tRechercher
 \t\t\t\t</button>
 \t\t\t</div>
 \t\t\t<div class=\"mainC\">
 \t\t\t\t<table class=\"table align-middle mb-0 bg-white\">
 \t\t\t\t\t<thead class=\"bg-light\">
 \t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<th>name</th>
-\t\t\t\t\t\t\t<th>type</th>
-\t\t\t\t\t\t\t<th>serial number</th>
-\t\t\t\t\t\t\t<th>availability</th>
-\t\t\t\t\t\t\t<th>state</th>
-\t\t\t\t\t\t\t<th style=\"text-align:center;\">action</th>
+\t\t\t\t\t\t\t<th>Nom</th>
+\t\t\t\t\t\t\t<th>Type</th>
+\t\t\t\t\t\t\t<th>Numéro de série</th>
+\t\t\t\t\t\t\t<th>Disponibilité</th>
+\t\t\t\t\t\t\t<th>État</th>
+\t\t\t\t\t\t\t<th style=\"text-align:center;\">Action</th>
 \t\t\t\t\t\t</tr>
 \t\t\t\t\t</thead>
 \t\t\t\t\t<tbody>
@@ -541,9 +541,9 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t<label class=\"mt-2 ml-2\">
 \t\t\t\t\t\t\t\t\t\t{% if machine.available == 1 %}
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-success rounded-pill d-inline pl-3 pr-3\">Yes</span>
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-success rounded-pill d-inline pl-3 pr-3\">Oui</span>
 \t\t\t\t\t\t\t\t\t\t{% else %}
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-warning rounded-pill d-inline pl-3 pr-3\">No</span>
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-warning rounded-pill d-inline pl-3 pr-3\">Non</span>
 \t\t\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t\t\t</label>
 \t\t\t\t\t\t\t\t</td>
@@ -563,13 +563,13 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t\t\t\t<a href=\"Stock/Edit/{{machine.id}}\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\tEdit
+\t\t\t\t\t\t\t\t\t\t\tModifier
 \t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t</a>
 
 \t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal{{machine.id}}\" style=\" border: #dc3545 solid 1px;\">
 \t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\tDelete
+\t\t\t\t\t\t\t\t\t\tSupprimer
 \t\t\t\t\t\t\t\t\t</button>
 
 \t\t\t\t\t\t\t\t</td>
@@ -578,22 +578,22 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
 \t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Delete confirmation</h5>
+\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Confirmation de suppression</h5>
 \t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t\t\t\t\t\tDo you Realy want to delete from the stock :
+\t\t\t\t\t\t\t\t\t\t\tVoulez-vous vraiment supprimer ce matériel :
 \t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">{{machine.model.marque.getMarqueName()}}
 \t\t\t\t\t\t\t\t\t\t\t\t-
 \t\t\t\t\t\t\t\t\t\t\t\t{{machine.model.getModelName()}}</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"Stock/Remove/{{machine.id}}\">
-\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Delete</button>
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
 \t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Close</button>
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Annuler</button>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
