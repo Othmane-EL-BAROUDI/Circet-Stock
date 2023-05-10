@@ -70,7 +70,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Circet-Role
+        echo "Circet-Rôle
 \t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -105,32 +105,14 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
         // line 11
         echo "
 \t<div class=\"home_content\">
-\t\t<div class=\"modal fade\" id=\"editRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"editRole\" aria-hidden=\"true\">
-\t\t\t<div class=\"modal-dialog\" role=\"document\">
-\t\t\t\t<div class=\"modal-content\">
-\t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Edit role</h5>
-\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
-\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
-\t\t\t\t\t\t</button>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t<label for=\"name\">Role name:</label>
-\t\t\t\t\t\t<input placeholder=\"@role_name\" type=\"text\">
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
-\t\t\t\t\t\t<button type=\"button\" class=\"close_button\">Save changes</button>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t</div>
-
+\t\t";
+        // line 33
+        echo "
 \t\t<div class=\"modal fade\" id=\"addRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addRole\" aria-hidden=\"true\">
 \t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t<div class=\"modal-content\">
 \t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Add role</h5>
+\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Ajouter rôle</h5>
 \t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t</button>
@@ -146,7 +128,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
         echo "
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Add role</button>
+\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Ajouter rôle</button>
 \t\t\t\t\t</div>
 \t\t\t\t\t";
         // line 50
@@ -164,7 +146,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
             // line 57
             echo "\t\t\t<div class=\"alert  alert-success fade show\" role=\"alert\">
-\t\t\t\t<strong>Success!</strong>
+\t\t\t\t<strong>Succès!</strong>
 \t\t\t\t";
             // line 59
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
@@ -185,7 +167,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
             // line 66
             echo "\t\t\t<div class=\"alert  alert-info fade show\" role=\"alert\">
-\t\t\t\t<strong>Success!</strong>
+\t\t\t\t<strong>Succès!</strong>
 \t\t\t\t";
             // line 68
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
@@ -221,13 +203,13 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 82
         echo "
-\t\t<div class=\"text\">Role</div>
-\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Add new role</button>
+\t\t<div class=\"text\">Rôle</div>
+\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Ajouter un rôle</button>
 \t\t<div class=\"main_content\">
 \t\t\t<div class=\"sort\">
-\t\t\t\t<input type=\"text\" placeholder=\"Search\">
+\t\t\t\t<input type=\"text\" placeholder=\"Rechercher\">
 \t\t\t\t<button>
-\t\t\t\t\tSearch
+\t\t\t\t\tRechercher
 \t\t\t\t</button>
 \t\t\t</div>
 \t\t</div>
@@ -265,7 +247,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
             echo "\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\tEdit
+\t\t\t\t\t\t\t\t\t\t\tModifier
 \t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal";
@@ -273,7 +255,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "id", [], "any", false, false, false, 119), "html", null, true);
             echo "\" style=\" border: #dc3545 solid 1px;\">
 \t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\tDelete
+\t\t\t\t\t\t\t\t\t\tSupprimer
 \t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t</tr>
@@ -284,13 +266,13 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
 \t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Delete confirmation</h5>
+\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Confirmation de suppression</h5>
 \t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t\t\t\t\t\tDo you Realy want to delete role :
+\t\t\t\t\t\t\t\t\t\t\tVoulez-vous vraiment supprimer ce rôle :
 \t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">";
             // line 136
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "roleName", [], "any", false, false, false, 136), "html", null, true);
@@ -301,9 +283,9 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
             // line 139
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["role"], "id", [], "any", false, false, false, 139), "html", null, true);
             echo "\">
-\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Delete</button>
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
 \t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Close</button>
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Annuler</button>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
@@ -358,13 +340,13 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 
     public function getDebugInfo()
     {
-        return array (  337 => 156,  330 => 155,  317 => 148,  302 => 139,  296 => 136,  282 => 125,  273 => 119,  264 => 113,  256 => 108,  252 => 106,  248 => 105,  223 => 82,  211 => 76,  208 => 75,  203 => 74,  191 => 68,  187 => 66,  182 => 65,  170 => 59,  166 => 57,  162 => 56,  153 => 50,  145 => 45,  140 => 43,  106 => 11,  99 => 10,  88 => 6,  81 => 5,  67 => 2,  60 => 155,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  319 => 156,  312 => 155,  299 => 148,  284 => 139,  278 => 136,  264 => 125,  255 => 119,  246 => 113,  238 => 108,  234 => 106,  230 => 105,  205 => 82,  193 => 76,  190 => 75,  185 => 74,  173 => 68,  169 => 66,  164 => 65,  152 => 59,  148 => 57,  144 => 56,  135 => 50,  127 => 45,  122 => 43,  110 => 33,  106 => 11,  99 => 10,  88 => 6,  81 => 5,  67 => 2,  60 => 155,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<title>
-\t{% block title %}Circet-Role
+\t{% block title %}Circet-Rôle
 \t{% endblock %}
 </title>
 {% block stylesheets %}
@@ -375,17 +357,17 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 {% block body %}
 
 \t<div class=\"home_content\">
-\t\t<div class=\"modal fade\" id=\"editRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"editRole\" aria-hidden=\"true\">
+\t\t{# <div class=\"modal fade\" id=\"editRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"editRole\" aria-hidden=\"true\">
 \t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t<div class=\"modal-content\">
 \t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Edit role</h5>
+\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Modification de rôle</h5>
 \t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t</button>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t<label for=\"name\">Role name:</label>
+\t\t\t\t\t\t<label for=\"name\">Nom de rôle:</label>
 \t\t\t\t\t\t<input placeholder=\"@role_name\" type=\"text\">
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-footer\">
@@ -394,13 +376,13 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
-\t\t</div>
+\t\t</div> #}
 
 \t\t<div class=\"modal fade\" id=\"addRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addRole\" aria-hidden=\"true\">
 \t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t<div class=\"modal-content\">
 \t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Add role</h5>
+\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Ajouter rôle</h5>
 \t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t</button>
@@ -410,7 +392,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t\t\t\t{{ form_widget(form) }}
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Add role</button>
+\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Ajouter rôle</button>
 \t\t\t\t\t</div>
 \t\t\t\t\t{{ form_end(form) }}
 \t\t\t\t</div>
@@ -420,7 +402,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 
 \t\t{% for flash_message in app.session.flashbag.get('success') %}
 \t\t\t<div class=\"alert  alert-success fade show\" role=\"alert\">
-\t\t\t\t<strong>Success!</strong>
+\t\t\t\t<strong>Succès!</strong>
 \t\t\t\t{{flash_message}}
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
 \t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
@@ -429,7 +411,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t{% endfor %}
 \t\t{% for flash_message in app.session.flashbag.get('update') %}
 \t\t\t<div class=\"alert  alert-info fade show\" role=\"alert\">
-\t\t\t\t<strong>Success!</strong>
+\t\t\t\t<strong>Succès!</strong>
 \t\t\t\t{{flash_message}}
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
 \t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
@@ -445,13 +427,13 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t</div>
 \t\t{% endfor %}
 
-\t\t<div class=\"text\">Role</div>
-\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Add new role</button>
+\t\t<div class=\"text\">Rôle</div>
+\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Ajouter un rôle</button>
 \t\t<div class=\"main_content\">
 \t\t\t<div class=\"sort\">
-\t\t\t\t<input type=\"text\" placeholder=\"Search\">
+\t\t\t\t<input type=\"text\" placeholder=\"Rechercher\">
 \t\t\t\t<button>
-\t\t\t\t\tSearch
+\t\t\t\t\tRechercher
 \t\t\t\t</button>
 \t\t\t</div>
 \t\t</div>
@@ -478,12 +460,12 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t\t\t\t\t\t\t<a href=\"Role/Edit/{{role.id}}\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\tEdit
+\t\t\t\t\t\t\t\t\t\t\tModifier
 \t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal{{role.id}}\" style=\" border: #dc3545 solid 1px;\">
 \t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\tDelete
+\t\t\t\t\t\t\t\t\t\tSupprimer
 \t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t</tr>
@@ -491,20 +473,20 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
 \t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Delete confirmation</h5>
+\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Confirmation de suppression</h5>
 \t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t\t\t\t\t\tDo you Realy want to delete role :
+\t\t\t\t\t\t\t\t\t\t\tVoulez-vous vraiment supprimer ce rôle :
 \t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">{{role.roleName}}</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"Role/Remove/{{role.id}}\">
-\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Delete</button>
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
 \t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Close</button>
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Annuler</button>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>

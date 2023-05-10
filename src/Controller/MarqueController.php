@@ -64,11 +64,11 @@ class MarqueController extends AbstractController
         }
         return $this->render('Pages/update/Update.html.twig', [
             'userInfo' => $user,
-            'PageName' => 'Marque Update',
+            'PageName' => 'Mise à jour',
             'Path' => '/Marque',
             'marque' => $marque,
             'form' => $form->createView(),
-            'Title' => 'Marque Update'
+            'Title' => 'Marque'
         ]);
     }
 

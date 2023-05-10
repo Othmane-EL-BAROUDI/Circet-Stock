@@ -68,10 +68,10 @@ class RoleController extends AbstractController
         }
         return $this->render('Pages/update/Update.html.twig', [
             'userInfo' => $user,
-            'PageName' => 'Role Update',
+            'PageName' => 'Mise à jour',
             'Path' => '/Role',
             'form' => $form->createView(),
-            'Title' => 'Role Update'
+            'Title' => 'Rôle'
         ]);
     }
 

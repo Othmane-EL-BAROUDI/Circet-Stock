@@ -1,5 +1,5 @@
 <title>
-	{% block title %}Circet-HomePage
+	{% block title %}Circet-Accueil
 	{% endblock %}
 </title>
 {% block stylesheets %}
@@ -10,14 +10,14 @@
 {% block body %}
 
 	<div class="home_content">
-		<div class="text">Stock Materiel</div>
+		<div class="text">Stock matériel</div>
 		<div class="sort">
-			<input type="text" placeholder="Search">
+			<input type="text" placeholder="Rechercher">
 			<select name="machine">
 				<option selected disabled>Type</option>
-				<option value="computer">Computer</option>
+				<option value="computer">Ordinateur</option>
 				<option value="cable">Cable</option>
-				<option value="scanner">scanner</option>
+				<option value="scanner">Scanner</option>
 			</select>
 
 			<button>
@@ -50,16 +50,21 @@
 								</div>
 								<div class="pop_desc">
 
-									Model :
+									Modèle :
 									<label for="name" id="customerId">{{item.model.getModelName()}}</label>
 									<br>
 									Type :
+<<<<<<< HEAD
 									<label for="name">{{item.model.getType()}}</label><br>
 									Serial number :
+=======
+									<label for="name">{{item.type}}</label><br>
+									Numéro de série :
+>>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
 									<label for="name">{{item.getSerialNum()}}</label><br>
-									State :
+									État :
 									<label for="name">{{item.state}}</label><br>
-									Available :
+									Disponibilité :
 									<label for="name">
 										{% if item.available == 1 %}
 											Yes
@@ -67,19 +72,27 @@
 											No
 										{% endif %}
 									</label><br>
+<<<<<<< HEAD
 									{% if item.model.getType() == "Desktop" or item.model.getType() == "Laptop" %}
 									mac_ethernet :
+=======
+									Mac_ethernet :
+>>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
 									<label for="name">{{item.getMacEthernet()}}</label><br>
-									mac_wifi :
+									Mac_wifi :
 									<label for="name">{{item.getMacWifi()}}</label><br>
+<<<<<<< HEAD
 									{% endif %}
 									description :
+=======
+									Déscription :
+>>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
 									<label for="name">{{item.description}}</label><br>
 
 								</div>
 							</div>
 							<div class="modal-footer close_button">
-								<button type="button" data-dismiss="modal">Close</button>
+								<button type="button" data-dismiss="modal">Annuler</button>
 							</div>
 						</div>
 					</div>
@@ -100,8 +113,7 @@
 					</div>
 					<div class="action">
 						<button>Demande</button>
-						<button type="button" data-toggle="modal" class="start" data-target="#model{{item.id}}">details</button>
-
+						<button type="button" data-toggle="modal" class="start" data-target="#model{{item.id}}">Détails</button>
 					</div>
 				</div>
 			{% endfor %}

@@ -17,9 +17,10 @@ class ModelFormType extends AbstractType
         $builder
             ->add('model_name',TextType::class,[
                 'attr' =>array(
-                    'placeholder' => '@Model name'
+                    'placeholder' => '@Nom_du_modèle'
                 ),
                 'required' => true,
+                'label' => 'Nom du modèle',
             ])
             ->add('type',TextType::class,[
                 'attr' =>array(

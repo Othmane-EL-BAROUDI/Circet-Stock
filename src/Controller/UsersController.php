@@ -111,8 +111,8 @@ class UsersController extends AbstractController
             'userInfo' => $CurrentUser,
             'Path' => '/Users',
             'form' => $form->createView(),
-            'Title' => 'Users',
-            'PageName' => 'User Update'
+            'Title' => 'Utilisateur',
+            'PageName' => 'Mise à jour'
         ]);
     }
 }

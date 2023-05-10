@@ -66,7 +66,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Circet-Users
+        echo "Circet-Utilisateur
 \t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -113,7 +113,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
         echo "
 
 \t<div class=\"home_content\"   >
-\t\t<div class=\"text\">User View</div>
+\t\t<div class=\"text\">Profil de l'utilisateur</div>
 \t\t<section>
 \t\t\t<div class=\"container py-5\">
 
@@ -156,7 +156,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t\t<div class=\"card-body\" style=\" box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\" >
 \t\t\t\t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t\t\t\t<div class=\"col-sm-3\">
-\t\t\t\t\t\t\t\t\t\t<p class=\"mb-0\">Full Name</p>
+\t\t\t\t\t\t\t\t\t\t<p class=\"mb-0\">Nom et Prénom</p>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<div class=\"col-sm-9\">
 \t\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0\">";
@@ -180,7 +180,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t\t\t<hr>
 \t\t\t\t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t\t\t\t<div class=\"col-sm-3\">
-\t\t\t\t\t\t\t\t\t\t<p class=\"mb-0\">Job</p>
+\t\t\t\t\t\t\t\t\t\t<p class=\"mb-0\">Poste</p>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<div class=\"col-sm-9\">
 \t\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0\">";
@@ -192,7 +192,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t\t\t<hr>
 \t\t\t\t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t\t\t\t<div class=\"col-sm-3\">
-\t\t\t\t\t\t\t\t\t\t<p class=\"mb-0\">Role</p>
+\t\t\t\t\t\t\t\t\t\t<p class=\"mb-0\">Rôle</p>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<div class=\"col-sm-9\">
 \t\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0\">";
@@ -218,7 +218,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t\t\t\t\t\t";
         } else {
             // line 99
-            echo "\t\t\t\t\t\t\t\t\t\t\t\tno manager
+            echo "\t\t\t\t\t\t\t\t\t\t\t\tPas de manager
 \t\t\t\t\t\t\t\t\t\t\t";
         }
         // line 101
@@ -257,7 +257,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
             echo "\t\t\t\t\t\t\t\t\t\t\t";
         } else {
             // line 120
-            echo "\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mb-1\" style=\"font-size: .77rem; \">no permissions</p>
+            echo "\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mb-1\" style=\"font-size: .77rem; \">Pas de permissions</p>
 \t\t\t\t\t\t\t\t\t\t\t";
         }
         // line 122
@@ -312,7 +312,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
     public function getSourceContext()
     {
         return new Source("<title>
-\t{% block title %}Circet-Users
+\t{% block title %}Circet-Utilisateur
 \t{% endblock %}
 </title>
 {% block stylesheets %}
@@ -332,7 +332,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t{{ include('Pages/sidebar.html.twig') }}
 
 \t<div class=\"home_content\"   >
-\t\t<div class=\"text\">User View</div>
+\t\t<div class=\"text\">Profil de l'utilisateur</div>
 \t\t<section>
 \t\t\t<div class=\"container py-5\">
 
@@ -366,7 +366,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t\t<div class=\"card-body\" style=\" box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\" >
 \t\t\t\t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t\t\t\t<div class=\"col-sm-3\">
-\t\t\t\t\t\t\t\t\t\t<p class=\"mb-0\">Full Name</p>
+\t\t\t\t\t\t\t\t\t\t<p class=\"mb-0\">Nom et Prénom</p>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<div class=\"col-sm-9\">
 \t\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0\">{{user.username}}</p>
@@ -384,7 +384,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t\t\t<hr>
 \t\t\t\t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t\t\t\t<div class=\"col-sm-3\">
-\t\t\t\t\t\t\t\t\t\t<p class=\"mb-0\">Job</p>
+\t\t\t\t\t\t\t\t\t\t<p class=\"mb-0\">Poste</p>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<div class=\"col-sm-9\">
 \t\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0\">{{user.job}}</p>
@@ -393,7 +393,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t\t\t<hr>
 \t\t\t\t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t\t\t\t<div class=\"col-sm-3\">
-\t\t\t\t\t\t\t\t\t\t<p class=\"mb-0\">Role</p>
+\t\t\t\t\t\t\t\t\t\t<p class=\"mb-0\">Rôle</p>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<div class=\"col-sm-9\">
 \t\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0\">{{user.roles[0]}}</p>
@@ -409,7 +409,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t\t\t\t\t\t{% if user.manager %}
 \t\t\t\t\t\t\t\t\t\t\t\t{{user.manager}}
 \t\t\t\t\t\t\t\t\t\t\t{% else %}
-\t\t\t\t\t\t\t\t\t\t\t\tno manager
+\t\t\t\t\t\t\t\t\t\t\t\tPas de manager
 \t\t\t\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t\t\t</div>
@@ -430,7 +430,7 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mb-2\" style=\"font-size: .77rem; \">{{permission.getPermissionName()}}</p>
 \t\t\t\t\t\t\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t\t\t\t\t\t\t{% else %}
-\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mb-1\" style=\"font-size: .77rem; \">no permissions</p>
+\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mb-1\" style=\"font-size: .77rem; \">Pas de permissions</p>
 \t\t\t\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t\t\t\t</div>
 
@@ -451,6 +451,6 @@ class __TwigTemplate_a5fd01ba82391c0a4a9c5a08f0a5df47a19be65ada4fe2613a90efa4259
 \t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
 {% endblock %}
-", "Pages/view/userView.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\view\\userView.html.twig");
+", "Pages/view/userView.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\view\\userView.html.twig");
     }
 }

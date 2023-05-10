@@ -93,9 +93,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("HomePage");
         echo "\">
                     <i class='bx bx-home'></i>
-                    <span class=\"links_name\">Home</span>
+                    <span class=\"links_name\">Accueil</span>
               </a>
-              <span class=\"tooltip\">Home</span>
+              <span class=\"tooltip\">Accueil</span>
           </li>
            ";
         // line 26
@@ -108,9 +108,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Dashboard");
             echo "\">
                     <i class='bx bxs-dashboard' ></i>
-                    <span class=\"links_name\">Dashboard</span>
+                    <span class=\"links_name\">Tableau de bord</span>
               </a>
-               <span class=\"tooltip\">Dashboard</span>
+               <span class=\"tooltip\">Tableau de bord</span>
           </li>
 
             <li> 
@@ -119,9 +119,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Users");
             echo "\">
                     <i class='bx bxs-user-plus'></i>
-                    <span class=\"links_name\">Users</span>
+                    <span class=\"links_name\">Utilisateurs</span>
               </a>
-               <span class=\"tooltip\">Users</span>
+               <span class=\"tooltip\">Utilisateurs</span>
           </li>
            <li> 
               <a href=\"";
@@ -129,9 +129,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Role");
             echo "\">
                    <i class='bx bx-briefcase-alt-2'></i>
-                    <span class=\"links_name\"> Role</span>
+                    <span class=\"links_name\"> Rôle</span>
               </a>
-               <span class=\"tooltip\">Role</span>
+               <span class=\"tooltip\">Rôle</span>
           </li>
           <li> 
               <a href=\"";
@@ -159,9 +159,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Model");
             echo "\">
                    <i class='bx bx-purchase-tag'></i>
-                    <span class=\"links_name\">Model</span>
+                    <span class=\"links_name\">Modèle</span>
               </a>
-               <span class=\"tooltip\">Model</span>
+               <span class=\"tooltip\">Modèle</span>
           </li>
            <li> 
               <a href=\"";
@@ -183,9 +183,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Profile");
         echo "\">
                     <i class='bx bxs-user-rectangle'></i>
-                    <span class=\"links_name\">Profile</span>
+                    <span class=\"links_name\">Profil</span>
               </a>
-               <span class=\"tooltip\">Profile</span>
+               <span class=\"tooltip\">Profil</span>
           </li>
         </ul>
         <div class=\"profile_content\">
@@ -258,33 +258,33 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
           <li> 
               <a href=\"{{path('HomePage')}}\">
                     <i class='bx bx-home'></i>
-                    <span class=\"links_name\">Home</span>
+                    <span class=\"links_name\">Accueil</span>
               </a>
-              <span class=\"tooltip\">Home</span>
+              <span class=\"tooltip\">Accueil</span>
           </li>
            {% if userInfo.roles[0] == \"ROLE_ADMIN\" %} 
           
            <li> 
               <a href=\"{{path('Dashboard')}}\">
                     <i class='bx bxs-dashboard' ></i>
-                    <span class=\"links_name\">Dashboard</span>
+                    <span class=\"links_name\">Tableau de bord</span>
               </a>
-               <span class=\"tooltip\">Dashboard</span>
+               <span class=\"tooltip\">Tableau de bord</span>
           </li>
 
             <li> 
               <a href=\"{{path('Users')}}\">
                     <i class='bx bxs-user-plus'></i>
-                    <span class=\"links_name\">Users</span>
+                    <span class=\"links_name\">Utilisateurs</span>
               </a>
-               <span class=\"tooltip\">Users</span>
+               <span class=\"tooltip\">Utilisateurs</span>
           </li>
            <li> 
               <a href=\"{{path('Role')}}\">
                    <i class='bx bx-briefcase-alt-2'></i>
-                    <span class=\"links_name\"> Role</span>
+                    <span class=\"links_name\"> Rôle</span>
               </a>
-               <span class=\"tooltip\">Role</span>
+               <span class=\"tooltip\">Rôle</span>
           </li>
           <li> 
               <a href=\"{{path('Permission')}}\">
@@ -303,9 +303,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
            <li> 
               <a href=\"{{path('Model')}}\">
                    <i class='bx bx-purchase-tag'></i>
-                    <span class=\"links_name\">Model</span>
+                    <span class=\"links_name\">Modèle</span>
               </a>
-               <span class=\"tooltip\">Model</span>
+               <span class=\"tooltip\">Modèle</span>
           </li>
            <li> 
               <a href=\"{{path('Marque')}}\">
@@ -319,9 +319,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
             <li> 
               <a href=\"{{path('Profile')}}\">
                     <i class='bx bxs-user-rectangle'></i>
-                    <span class=\"links_name\">Profile</span>
+                    <span class=\"links_name\">Profil</span>
               </a>
-               <span class=\"tooltip\">Profile</span>
+               <span class=\"tooltip\">Profil</span>
           </li>
         </ul>
         <div class=\"profile_content\">
@@ -339,6 +339,6 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
       </div>
      
 {% endblock %}
-", "Pages/sidebar.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\sidebar.html.twig");
+", "Pages/sidebar.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\sidebar.html.twig");
     }
 }

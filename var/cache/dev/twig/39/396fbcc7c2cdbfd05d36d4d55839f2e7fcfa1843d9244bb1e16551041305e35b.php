@@ -52,7 +52,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 9
         $this->displayBlock('body', $context, $blocks);
-        // line 152
+        // line 130
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -103,53 +103,31 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
         echo "
 \t<div class=\"home_content\">
-\t\t<div class=\"modal fade\" id=\"editRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"editRole\" aria-hidden=\"true\">
-\t\t\t<div class=\"modal-dialog\" role=\"document\">
-\t\t\t\t<div class=\"modal-content\">
-\t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Edit Permission</h5>
-\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
-\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
-\t\t\t\t\t\t</button>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t<label for=\"name\">Permission name:</label>
-\t\t\t\t\t\t<input placeholder=\"@permission_name\" type=\"text\">
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
-\t\t\t\t\t\t<button type=\"button\" class=\"close_button\">Save changes</button>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t</div>
-
-\t\t</div>
-
 \t\t<div class=\"modal fade\" id=\"addRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addRole\" aria-hidden=\"true\">
 \t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t<div class=\"modal-content\">
 \t\t\t\t\t";
-        // line 37
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 37, $this->source); })()), 'form_start');
+        // line 15
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), 'form_start');
         echo "
 \t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Add permission</h5>
+\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Ajouter permission</h5>
 \t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t</button>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t";
-        // line 45
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 45, $this->source); })()), 'widget');
+        // line 23
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 23, $this->source); })()), 'widget');
         echo "
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Add permission</button>
+\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Ajouter permission</button>
 \t\t\t\t\t</div>
 \t\t\t\t\t";
-        // line 50
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 50, $this->source); })()), 'form_end');
+        // line 28
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 28, $this->source); })()), 'form_end');
         echo "
 \t\t\t\t</div>
 \t\t\t</div>
@@ -157,15 +135,15 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 
 
 \t\t";
-        // line 56
+        // line 34
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 56, $this->source); })()), "session", [], "any", false, false, false, 56), "flashbag", [], "any", false, false, false, 56), "get", [0 => "success"], "method", false, false, false, 56));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 34, $this->source); })()), "session", [], "any", false, false, false, 34), "flashbag", [], "any", false, false, false, 34), "get", [0 => "success"], "method", false, false, false, 34));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 57
+            // line 35
             echo "\t\t\t<div class=\"alert  alert-success fade show\" role=\"alert\">
-\t\t\t\t<strong>Success!</strong>
+\t\t\t\t<strong>Succès!</strong>
 \t\t\t\t";
-            // line 59
+            // line 37
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
@@ -177,16 +155,16 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 65
+        // line 43
         echo "\t\t";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 65, $this->source); })()), "session", [], "any", false, false, false, 65), "flashbag", [], "any", false, false, false, 65), "get", [0 => "update"], "method", false, false, false, 65));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 43, $this->source); })()), "session", [], "any", false, false, false, 43), "flashbag", [], "any", false, false, false, 43), "get", [0 => "update"], "method", false, false, false, 43));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 66
+            // line 44
             echo "\t\t\t<div class=\"alert  alert-info fade show\" role=\"alert\">
-\t\t\t\t<strong>Success!</strong>
+\t\t\t\t<strong>Succès!</strong>
 \t\t\t\t";
-            // line 68
+            // line 46
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
@@ -198,15 +176,15 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 74
+        // line 52
         echo "\t\t";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 74, $this->source); })()), "session", [], "any", false, false, false, 74), "flashbag", [], "any", false, false, false, 74), "get", [0 => "delete"], "method", false, false, false, 74));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 52, $this->source); })()), "session", [], "any", false, false, false, 52), "flashbag", [], "any", false, false, false, 52), "get", [0 => "delete"], "method", false, false, false, 52));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 75
+            // line 53
             echo "\t\t\t<div class=\"alert  alert-danger fade show\" role=\"alert\">
 \t\t\t\t";
-            // line 76
+            // line 54
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
@@ -218,14 +196,14 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 82
+        // line 60
         echo "\t\t<div class=\"text\">Permission</div>
-\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Add new permission</button>
+\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Ajouter permission</button>
 \t\t<div class=\"main_content\">
 \t\t\t<div class=\"sort\">
-\t\t\t\t<input type=\"text\" placeholder=\"Search\">
+\t\t\t\t<input type=\"text\" placeholder=\"Rechercher\">
 \t\t\t\t<button>
-\t\t\t\t\tSearch
+\t\t\t\t\tRechercher
 \t\t\t\t</button>
 \t\t\t</div>
 \t\t</div>
@@ -234,74 +212,74 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 \t\t\t\t<table class=\"table align-middle mb-0 bg-white\">
 \t\t\t\t\t<thead class=\"bg-light\">
 \t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<th>permission</th>
+\t\t\t\t\t\t\t<th>Permission</th>
 \t\t\t\t\t\t\t<th style=\"text-align:center;\">Actions</th>
 \t\t\t\t\t\t</tr>
 \t\t\t\t\t</thead>
 \t\t\t\t\t<tbody>
 \t\t\t\t\t\t";
-        // line 102
+        // line 80
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["allPermissions"]) || array_key_exists("allPermissions", $context) ? $context["allPermissions"] : (function () { throw new RuntimeError('Variable "allPermissions" does not exist.', 102, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["allPermissions"]) || array_key_exists("allPermissions", $context) ? $context["allPermissions"] : (function () { throw new RuntimeError('Variable "allPermissions" does not exist.', 80, $this->source); })()));
         foreach ($context['_seq'] as $context["key"] => $context["permission"]) {
-            // line 103
+            // line 81
             echo "\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t\t<td class=\"textperm\">
 \t\t\t\t\t\t\t\t\t";
-            // line 105
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 105), "html", null, true);
+            // line 83
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 83), "html", null, true);
             echo "
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t<td class=\"actions\">
 
 \t\t\t\t\t\t\t\t\t<a href=\"/Permission/";
-            // line 109
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 109), "html", null, true);
+            // line 87
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 87), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\tEdit
+\t\t\t\t\t\t\t\t\t\t\tModifier
 \t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t</a>
 
 \t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModal";
-            // line 116
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 116), "html", null, true);
+            // line 94
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 94), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\tDelete
+\t\t\t\t\t\t\t\t\t\tSupprimer
 \t\t\t\t\t\t\t\t\t</button>
 
 
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t</tr>
 \t\t\t\t\t\t\t<div class=\"modal fade\" id=\"exampleModal";
-            // line 124
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 124), "html", null, true);
+            // line 102
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 102), "html", null, true);
             echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
 \t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
 \t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Delete confirmation</h5>
+\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Confirmation de suppression</h5>
 \t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t\t\t\t\t\tDo you Realy want to delete permission :
+\t\t\t\t\t\t\t\t\t\t\tVoulez-vous vraiment supprimer cet permission :
 \t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">";
-            // line 135
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 135), "html", null, true);
+            // line 113
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 113), "html", null, true);
             echo "</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"Permission/Remove/";
-            // line 138
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 138), "html", null, true);
+            // line 116
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 116), "html", null, true);
             echo "\">
-\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Delete</button>
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
 \t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Close</button>
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Annuler</button>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
@@ -311,7 +289,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['permission'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 147
+        // line 125
         echo "\t\t\t\t\t</tbody>
 \t\t\t\t</table>
 \t\t\t</div>
@@ -323,14 +301,14 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 
     }
 
-    // line 152
+    // line 130
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 153
+        // line 131
         echo "<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -349,7 +327,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 
     public function getDebugInfo()
     {
-        return array (  334 => 153,  327 => 152,  315 => 147,  300 => 138,  294 => 135,  280 => 124,  269 => 116,  259 => 109,  252 => 105,  248 => 103,  244 => 102,  222 => 82,  210 => 76,  207 => 75,  202 => 74,  190 => 68,  186 => 66,  181 => 65,  169 => 59,  165 => 57,  161 => 56,  152 => 50,  144 => 45,  133 => 37,  102 => 10,  95 => 9,  84 => 6,  77 => 5,  63 => 2,  56 => 152,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  312 => 131,  305 => 130,  293 => 125,  278 => 116,  272 => 113,  258 => 102,  247 => 94,  237 => 87,  230 => 83,  226 => 81,  222 => 80,  200 => 60,  188 => 54,  185 => 53,  180 => 52,  168 => 46,  164 => 44,  159 => 43,  147 => 37,  143 => 35,  139 => 34,  130 => 28,  122 => 23,  111 => 15,  102 => 10,  95 => 9,  84 => 6,  77 => 5,  63 => 2,  56 => 130,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -365,34 +343,12 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 {% block body %}
 \t{{ include('Pages/sidebar.html.twig') }}
 \t<div class=\"home_content\">
-\t\t<div class=\"modal fade\" id=\"editRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"editRole\" aria-hidden=\"true\">
-\t\t\t<div class=\"modal-dialog\" role=\"document\">
-\t\t\t\t<div class=\"modal-content\">
-\t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Edit Permission</h5>
-\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
-\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
-\t\t\t\t\t\t</button>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t<label for=\"name\">Permission name:</label>
-\t\t\t\t\t\t<input placeholder=\"@permission_name\" type=\"text\">
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
-\t\t\t\t\t\t<button type=\"button\" class=\"close_button\">Save changes</button>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t</div>
-
-\t\t</div>
-
 \t\t<div class=\"modal fade\" id=\"addRole\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addRole\" aria-hidden=\"true\">
 \t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t<div class=\"modal-content\">
 \t\t\t\t\t{{ form_start(form) }}
 \t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Add permission</h5>
+\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Ajouter permission</h5>
 \t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t</button>
@@ -401,7 +357,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 \t\t\t\t\t\t{{ form_widget(form) }}
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Add permission</button>
+\t\t\t\t\t\t<button type=\"submit\" class=\"close_button1\">Ajouter permission</button>
 \t\t\t\t\t</div>
 \t\t\t\t\t{{ form_end(form) }}
 \t\t\t\t</div>
@@ -411,7 +367,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 
 \t\t{% for flash_message in app.session.flashbag.get('success') %}
 \t\t\t<div class=\"alert  alert-success fade show\" role=\"alert\">
-\t\t\t\t<strong>Success!</strong>
+\t\t\t\t<strong>Succès!</strong>
 \t\t\t\t{{flash_message}}
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
 \t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
@@ -420,7 +376,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 \t\t{% endfor %}
 \t\t{% for flash_message in app.session.flashbag.get('update') %}
 \t\t\t<div class=\"alert  alert-info fade show\" role=\"alert\">
-\t\t\t\t<strong>Success!</strong>
+\t\t\t\t<strong>Succès!</strong>
 \t\t\t\t{{flash_message}}
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
 \t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
@@ -436,12 +392,12 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 \t\t\t</div>
 \t\t{% endfor %}
 \t\t<div class=\"text\">Permission</div>
-\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Add new permission</button>
+\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Ajouter permission</button>
 \t\t<div class=\"main_content\">
 \t\t\t<div class=\"sort\">
-\t\t\t\t<input type=\"text\" placeholder=\"Search\">
+\t\t\t\t<input type=\"text\" placeholder=\"Rechercher\">
 \t\t\t\t<button>
-\t\t\t\t\tSearch
+\t\t\t\t\tRechercher
 \t\t\t\t</button>
 \t\t\t</div>
 \t\t</div>
@@ -450,7 +406,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 \t\t\t\t<table class=\"table align-middle mb-0 bg-white\">
 \t\t\t\t\t<thead class=\"bg-light\">
 \t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<th>permission</th>
+\t\t\t\t\t\t\t<th>Permission</th>
 \t\t\t\t\t\t\t<th style=\"text-align:center;\">Actions</th>
 \t\t\t\t\t\t</tr>
 \t\t\t\t\t</thead>
@@ -465,13 +421,13 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 \t\t\t\t\t\t\t\t\t<a href=\"/Permission/{{permission.id}}\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\tEdit
+\t\t\t\t\t\t\t\t\t\t\tModifier
 \t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t</a>
 
 \t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModal{{permission.id}}\">
 \t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\tDelete
+\t\t\t\t\t\t\t\t\t\tSupprimer
 \t\t\t\t\t\t\t\t\t</button>
 
 
@@ -481,20 +437,20 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 \t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
 \t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Delete confirmation</h5>
+\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Confirmation de suppression</h5>
 \t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
-\t\t\t\t\t\t\t\t\t\t\tDo you Realy want to delete permission :
+\t\t\t\t\t\t\t\t\t\t\tVoulez-vous vraiment supprimer cet permission :
 \t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">{{permission.getPermissionName()}}</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"Permission/Remove/{{permission.id}}\">
-\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Delete</button>
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
 \t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Close</button>
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Annuler</button>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>

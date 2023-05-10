@@ -1,5 +1,5 @@
 <title>
-	{% block title %}Circet-Users
+	{% block title %}Circet-Utilisateurs
 	{% endblock %}
 </title>
 {% block stylesheets %}
@@ -13,7 +13,7 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Add user</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Ajouter un utilisateur</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
@@ -24,7 +24,7 @@
 					</div>
 
 					<div class="modal-footer">
-						<button type="submit" class="close_button1">Add user</button>
+						<button type="submit" class="close_button1">Ajouter un utilisateur</button>
 					</div>
 					{{ form_end(form) }}
 
@@ -34,7 +34,7 @@
 		</div>
 		{% for flash_message in app.session.flashbag.get('success') %}
 			<div class="alert  alert-success fade show" role="alert">
-				<strong>Success!</strong>
+				<strong>Succès!</strong>
 				{{flash_message}}
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -43,7 +43,7 @@
 		{% endfor %}
 		{% for flash_message in app.session.flashbag.get('update') %}
 			<div class="alert  alert-info fade show" role="alert">
-				<strong>Success!</strong>
+				<strong>Succès!</strong>
 				{{flash_message}}
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -58,29 +58,29 @@
 				</button>
 			</div>
 		{% endfor %}
-		<div class="text">Users</div>
+		<div class="text">Utilisateurs</div>
 
-		<button type="button" class="new" data-toggle="modal" data-target="#addUser">Add new user</button>
+		<button type="button" class="new" data-toggle="modal" data-target="#addUser">Ajouter un utilisateur</button>
 		<div class="main_content">
 			<div class="sort">
-				<input type="text" placeholder="Search">
+				<input type="text" placeholder="Rechercher">
 				<select name="role">
-					<option selected disabled>role</option>
-					<option value="manager">manager</option>
-					<option value="admin">admin</option>
+					<option selected disabled>Rôle</option>
+					<option value="manager">Manager</option>
+					<option value="admin">Admin</option>
 				</select>
 				<button>
-					Search
+					Rechercher
 				</button>
 			</div>
 			<div class="mainC">
 				<table class="table align-middle mb-0 bg-white">
 					<thead class="bg-light">
 						<tr>
-							<th>users</th>
-							<th>matricule</th>
-							<th>Status</th>
-							<th>job</th>
+							<th>Utilisateurs</th>
+							<th>Matricule</th>
+							<th>Statut</th>
+							<th>Poste</th>
 							<th style="text-align:center;">Actions</th>
 						</tr>
 					</thead>
@@ -102,9 +102,9 @@
 									<td>
 										<label class="mt-2">
 											{% if user.enabled %}
-												<span class="badge badge-success rounded-pill d-inline ">Active</span>
+												<span class="badge badge-success rounded-pill d-inline ">Actif</span>
 											{% else %}
-												<span class="badge badge-warning rounded-pill d-inline">Blocked</span>
+												<span class="badge badge-warning rounded-pill d-inline">Bloqué</span>
 											{% endif %}
 
 										</label>
@@ -117,19 +117,19 @@
 										<a href="User/{{user.id}}">
 											<button type="button" class="bn1 btn  btn-sm btn-rounded mt-1 mr-1" style=" border: #28a745 solid 1px; ">
 												<i class='bx bx-show-alt bx-xs'></i>
-												view
+												Voir
 											</button>
 										</a>
 										<a href="User/Edit/{{user.id}}">
 											<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 " style=" border: #007bff solid 1px; ">
 												<i class='bx bx-edit bx-xs'></i>
-												Edit
+												Modifier
 											</button>
 										</a>
 									
-											<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " data-toggle="modal" data-target="#exampleModal{{user.id}}"  style=" border: #dc3545 solid 1px;">
+											<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " data-toggle="modal" data-target="#exampleModal{{user.id}}"  style=" border: #dc3545 solid 1px; ">
 												<i class='bx bx-trash bx-xs'></i>
-												Delete
+												Supprimer
 											</button>
 										
 									</td>
@@ -138,20 +138,20 @@
 									<div class="modal-dialog " role="document">
 										<div class="modal-content ">
 											<div class="modal-header">
-												<h5 class="modal-title" id="exampleModalLabel">Delete confirmation</h5>
+												<h5 class="modal-title" id="exampleModalLabel">Confirmation de suppression</h5>
 												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 													<span aria-hidden="true">&times;</span>
 												</button>
 											</div>
 											<div class="modal-body">
-												Do you Realy want to delete user :
+												Voulez-vous vraiment supprimer cet utilisateur :
 												<label style="  font-weight: bold; color: #f9a826; ">{{user.username}} </label>
 											</div>
 											<div class="modal-footer">
 													<a href="User/Remove/{{user.id}}">
-													<button type="button" class="bn3 btn btn-sm h-4" style=" border: #dc3545 solid 1px;">Delete</button>
+													<button type="button" class="bn3 btn btn-sm h-4" style=" border: #dc3545 solid 1px;">Supprimer</button>
 												</a>
-												<button type="button" class="btn btn-sm  btn-secondary" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-sm  btn-secondary" data-dismiss="modal">Annuler</button>
 											</div>
 										</div>
 									</div>

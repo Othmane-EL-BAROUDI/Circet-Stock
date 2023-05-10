@@ -61,11 +61,11 @@ class ModelController extends AbstractController
         }
         return $this->render('Pages/update/Update.html.twig', [
             'userInfo' => $user,
-            'PageName' => 'Model Update',
+            'PageName' => 'Mise à jour',
             'Path' => '/Model',
             'model' => $model,
             'form' => $form->createView(),
-            'Title' => 'Model Update'
+            'Title' => 'Modèle'
         ]);
     }
 

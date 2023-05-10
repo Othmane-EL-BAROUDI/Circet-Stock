@@ -15,9 +15,10 @@ class RoleFormType extends AbstractType
         $builder
             ->add('roleName',TextType::class,[
                 'attr' =>array(
-                    'placeholder' => '@Role name'
+                    'placeholder' => '@Nom_du_rôle'
                 ),
                 'required' => true,
+                'label' => 'Nom du rôle',
             ])
         ;
     }
