@@ -12,26 +12,27 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MarqueController extends AbstractController
 {
- /**
+    /**
      * @Route("/Marque" , name="Marque")
      */
-    public function Marque(Request $request , EntityManagerInterface $entityManager): Response
+    public function Marque(Request $request, EntityManagerInterface $entityManager): Response
     {
         $entityManager = $this->getDoctrine()->getManager();
-        $allMarques = $entityManager->getRepository(Marque::class)->findAll();
+        $searchQuery = $request->query->get('search');
+        $allMarques = $entityManager->getRepository(Marque::class)->search($searchQuery);
         $user = $this->getUser();
 
         $marque = new Marque();
         $form = $this->createForm(MarqueFormType::class, $marque);
         $form->handleRequest($request);
 
-        if(  $form->isSubmitted()  && $form->isValid()){
+        if ($form->isSubmitted() && $form->isValid()) {
             $newMarque = $form->getData();
             $entityManager->persist($newMarque);
             $entityManager->flush();
             $this->addFlash(
-               'success',
-               sprintf('"%s" ajouté avec succès.', $newMarque->getMarqueName())
+                'success',
+                sprintf('"%s" ajouté avec succès.', $newMarque->getMarqueName())
             );
             return $this->redirectToRoute('Marque');
         }
