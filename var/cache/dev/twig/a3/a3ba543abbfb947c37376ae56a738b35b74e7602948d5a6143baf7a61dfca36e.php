@@ -50,13 +50,13 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 ";
         // line 5
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 9
+        // line 10
         echo twig_include($this->env, $context, "Pages/sidebar.html.twig");
         echo "
 ";
-        // line 10
+        // line 11
         $this->displayBlock('body', $context, $blocks);
-        // line 187
+        // line 199
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -89,26 +89,26 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/Stock.css"), "html", null, true);
         echo "\">
 \t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
+\t<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\" integrity=\"sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\" />
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
     }
 
-    // line 10
+    // line 11
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 11
+        // line 12
         echo "\t<div class=\"home_content\">
 \t\t<div class=\"modal fade\" id=\"addStock\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addStock\" aria-hidden=\"true\">
 \t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t<div class=\"modal-content\">
 \t\t\t\t\t<div class=\"modal-header\">
-
 \t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Ajouter au stock</h5>
 \t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
@@ -205,26 +205,41 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 67
-        echo "\t\t<div class=\"text\">Stock</div>
+        echo "
+\t\t<div class=\"text\">Stock</div>
 \t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addStock\">Ajouter au stock</button>
 \t\t<div class=\"main_content\">
-\t\t\t<div class=\"sort1\">
-\t\t\t\t<input type=\"text\" placeholder=\"Rechercher\">
-\t\t\t\t<select name=\"role\">
-\t\t\t\t\t<option selected disabled>Type</option>
-\t\t\t\t\t<option value=\"manager\">Manager</option>
-\t\t\t\t\t<option value=\"admin\">Admin</option>
-\t\t\t\t</select>
-\t\t\t\t<select name=\"availability\">
-\t\t\t\t\t<option selected disabled>Disponibilité</option>
-\t\t\t\t</select>
-\t\t\t\t<select name=\"state\">
-\t\t\t\t\t<option selected disabled>État</option>
-\t\t\t\t</select>
-\t\t\t\t<button>
-\t\t\t\t\tRechercher
-\t\t\t\t</button>
-\t\t\t</div>
+\t\t\t<form action=\"";
+        // line 71
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Stock");
+        echo "\" method=\"GET\">
+\t\t\t\t<div class=\"sort1\">
+\t\t\t\t\t<input type=\"text\" name=\"search\" placeholder=\"Rechercher\" autocomplete=\"off\">
+
+\t\t\t\t\t<select name=\"role\">
+\t\t\t\t\t\t<option selected disabled>Type</option>
+\t\t\t\t\t\t<option value=\"manager\">Manager</option>
+\t\t\t\t\t\t<option value=\"admin\">Admin</option>
+\t\t\t\t\t</select>
+\t\t\t\t\t<select name=\"availability\">
+\t\t\t\t\t\t<option selected disabled>Disponibilité</option>
+\t\t\t\t\t</select>
+\t\t\t\t\t<select name=\"state\">
+\t\t\t\t\t\t<option selected disabled>État</option>
+\t\t\t\t\t</select>
+
+\t\t\t\t\t<button>
+\t\t\t\t\t\tRechercher
+\t\t\t\t\t</button>
+\t\t\t\t</div>
+\t\t\t</form>
+
+\t\t\t<form>
+\t\t\t\t<div class=\"reload\">
+\t\t\t\t\t<button onclick=\"refreshPage()\"><i class=\"fa-solid fa-rotate-right fa-lg\"></i></button>
+\t\t\t\t</div>
+\t\t\t</form>
+\t\t\t
 \t\t\t<div class=\"mainC\">
 \t\t\t\t<table class=\"table align-middle mb-0 bg-white\">
 \t\t\t\t\t<thead class=\"bg-light\">
@@ -239,37 +254,37 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t</thead>
 \t\t\t\t\t<tbody>
 \t\t\t\t\t\t";
-        // line 100
+        // line 112
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["Allmachines"]) || array_key_exists("Allmachines", $context) ? $context["Allmachines"] : (function () { throw new RuntimeError('Variable "Allmachines" does not exist.', 100, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["Allmachines"]) || array_key_exists("Allmachines", $context) ? $context["Allmachines"] : (function () { throw new RuntimeError('Variable "Allmachines" does not exist.', 112, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["machine"]) {
-            // line 101
+            // line 113
             echo "\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t<div class=\"d-flex align-items-center\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"ms-3\">
 \t\t\t\t\t\t\t\t\t\t\t<p class=\"fw-bold mb-1\">";
-            // line 105
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 105), "marque", [], "any", false, false, false, 105), "getMarqueName", [], "method", false, false, false, 105), "html", null, true);
+            // line 117
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 117), "marque", [], "any", false, false, false, 117), "getMarqueName", [], "method", false, false, false, 117), "html", null, true);
             echo "</p>
 \t\t\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0\">";
-            // line 106
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 106), "getModelName", [], "method", false, false, false, 106), "html", null, true);
+            // line 118
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 118), "getModelName", [], "method", false, false, false, 118), "html", null, true);
             echo "</p>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0 mt-2 \">";
-            // line 111
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 111), "getType", [], "method", false, false, false, 111), "html", null, true);
+            // line 123
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 123), "getType", [], "method", false, false, false, 123), "html", null, true);
             echo "</p>
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t<label class=\"mt-2\">
 \t\t\t\t\t\t\t\t\t\t";
-            // line 115
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "getSerialNum", [], "method", false, false, false, 115), "html", null, true);
+            // line 127
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "getSerialNum", [], "method", false, false, false, 127), "html", null, true);
             echo "
 \t\t\t\t\t\t\t\t\t</label>
 
@@ -277,32 +292,32 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t<label class=\"mt-2 ml-2\">
 \t\t\t\t\t\t\t\t\t\t";
-            // line 121
-            if ((twig_get_attribute($this->env, $this->source, $context["machine"], "available", [], "any", false, false, false, 121) == 1)) {
-                // line 122
+            // line 133
+            if ((twig_get_attribute($this->env, $this->source, $context["machine"], "available", [], "any", false, false, false, 133) == 1)) {
+                // line 134
                 echo "\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-success rounded-pill d-inline pl-3 pr-3\">Oui</span>
 \t\t\t\t\t\t\t\t\t\t";
             } else {
-                // line 124
+                // line 136
                 echo "\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-warning rounded-pill d-inline pl-3 pr-3\">Non</span>
 \t\t\t\t\t\t\t\t\t\t";
             }
-            // line 126
+            // line 138
             echo "\t\t\t\t\t\t\t\t\t</label>
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t<label class=\"mt-2\">
 \t\t\t\t\t\t\t\t\t\t";
-            // line 130
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "state", [], "method", false, false, false, 130), "html", null, true);
+            // line 142
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "state", [], "method", false, false, false, 142), "html", null, true);
             echo "
 \t\t\t\t\t\t\t\t\t</label>
 
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t<td class=\"actions\">
 \t\t\t\t\t\t\t\t\t<a href=\"stockView/";
-            // line 135
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 135), "html", null, true);
+            // line 147
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 147), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\" style=\" border: #28a745 solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-show-alt bx-xs'></i>
@@ -310,8 +325,8 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t<a href=\"Stock/Edit/";
-            // line 141
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 141), "html", null, true);
+            // line 153
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 153), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
@@ -320,8 +335,8 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t\t\t\t</a>
 
 \t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal";
-            // line 148
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 148), "html", null, true);
+            // line 160
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 160), "html", null, true);
             echo "\" style=\" border: #dc3545 solid 1px;\">
 \t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
 \t\t\t\t\t\t\t\t\t\tSupprimer
@@ -330,8 +345,8 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t</tr>
 \t\t\t\t\t\t\t<div class=\"modal fade\" id=\"exampleModal";
-            // line 155
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 155), "html", null, true);
+            // line 167
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 167), "html", null, true);
             echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
 \t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
 \t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
@@ -344,19 +359,19 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t\t\t\t\t\tVoulez-vous vraiment supprimer ce matériel :
 \t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">";
-            // line 166
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 166), "marque", [], "any", false, false, false, 166), "getMarqueName", [], "method", false, false, false, 166), "html", null, true);
+            // line 178
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 178), "marque", [], "any", false, false, false, 178), "getMarqueName", [], "method", false, false, false, 178), "html", null, true);
             echo "
 \t\t\t\t\t\t\t\t\t\t\t\t-
 \t\t\t\t\t\t\t\t\t\t\t\t";
-            // line 168
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 168), "getModelName", [], "method", false, false, false, 168), "html", null, true);
+            // line 180
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 180), "getModelName", [], "method", false, false, false, 180), "html", null, true);
             echo "</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"Stock/Remove/";
-            // line 171
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 171), "html", null, true);
+            // line 183
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 183), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
 \t\t\t\t\t\t\t\t\t\t\t</a>
@@ -370,7 +385,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['machine'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 180
+        // line 192
         echo "\t\t\t\t\t</tbody>
 \t\t\t\t</table>
 \t\t\t</div>
@@ -383,19 +398,19 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
     }
 
-    // line 187
+    // line 199
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 188
+        // line 200
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
 \t\t<script src=\"";
-        // line 189
+        // line 201
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/Stock.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
@@ -419,7 +434,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 
     public function getDebugInfo()
     {
-        return array (  399 => 189,  394 => 188,  387 => 187,  374 => 180,  359 => 171,  353 => 168,  348 => 166,  334 => 155,  324 => 148,  314 => 141,  305 => 135,  297 => 130,  291 => 126,  287 => 124,  283 => 122,  281 => 121,  272 => 115,  265 => 111,  257 => 106,  253 => 105,  247 => 101,  243 => 100,  208 => 67,  196 => 61,  193 => 60,  188 => 59,  176 => 53,  172 => 51,  167 => 50,  155 => 44,  151 => 42,  147 => 41,  139 => 36,  130 => 30,  121 => 24,  106 => 11,  99 => 10,  88 => 6,  81 => 5,  67 => 2,  60 => 187,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  414 => 201,  409 => 200,  402 => 199,  389 => 192,  374 => 183,  368 => 180,  363 => 178,  349 => 167,  339 => 160,  329 => 153,  320 => 147,  312 => 142,  306 => 138,  302 => 136,  298 => 134,  296 => 133,  287 => 127,  280 => 123,  272 => 118,  268 => 117,  262 => 113,  258 => 112,  214 => 71,  208 => 67,  196 => 61,  193 => 60,  188 => 59,  176 => 53,  172 => 51,  167 => 50,  155 => 44,  151 => 42,  147 => 41,  139 => 36,  130 => 30,  121 => 24,  107 => 12,  100 => 11,  88 => 6,  81 => 5,  67 => 2,  60 => 199,  58 => 11,  54 => 10,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -431,6 +446,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 {% block stylesheets %}
 \t<link rel=\"stylesheet\" href=\"{{asset('css/Stock.css')}}\">
 \t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
+\t<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\" integrity=\"sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\" />
 {% endblock %}
 {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
@@ -439,7 +455,6 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t<div class=\"modal-content\">
 \t\t\t\t\t<div class=\"modal-header\">
-
 \t\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Ajouter au stock</h5>
 \t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
 \t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
@@ -490,26 +505,38 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t</button>
 \t\t\t</div>
 \t\t{% endfor %}
+
 \t\t<div class=\"text\">Stock</div>
 \t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addStock\">Ajouter au stock</button>
 \t\t<div class=\"main_content\">
-\t\t\t<div class=\"sort1\">
-\t\t\t\t<input type=\"text\" placeholder=\"Rechercher\">
-\t\t\t\t<select name=\"role\">
-\t\t\t\t\t<option selected disabled>Type</option>
-\t\t\t\t\t<option value=\"manager\">Manager</option>
-\t\t\t\t\t<option value=\"admin\">Admin</option>
-\t\t\t\t</select>
-\t\t\t\t<select name=\"availability\">
-\t\t\t\t\t<option selected disabled>Disponibilité</option>
-\t\t\t\t</select>
-\t\t\t\t<select name=\"state\">
-\t\t\t\t\t<option selected disabled>État</option>
-\t\t\t\t</select>
-\t\t\t\t<button>
-\t\t\t\t\tRechercher
-\t\t\t\t</button>
-\t\t\t</div>
+\t\t\t<form action=\"{{ path('Stock') }}\" method=\"GET\">
+\t\t\t\t<div class=\"sort1\">
+\t\t\t\t\t<input type=\"text\" name=\"search\" placeholder=\"Rechercher\" autocomplete=\"off\">
+
+\t\t\t\t\t<select name=\"role\">
+\t\t\t\t\t\t<option selected disabled>Type</option>
+\t\t\t\t\t\t<option value=\"manager\">Manager</option>
+\t\t\t\t\t\t<option value=\"admin\">Admin</option>
+\t\t\t\t\t</select>
+\t\t\t\t\t<select name=\"availability\">
+\t\t\t\t\t\t<option selected disabled>Disponibilité</option>
+\t\t\t\t\t</select>
+\t\t\t\t\t<select name=\"state\">
+\t\t\t\t\t\t<option selected disabled>État</option>
+\t\t\t\t\t</select>
+
+\t\t\t\t\t<button>
+\t\t\t\t\t\tRechercher
+\t\t\t\t\t</button>
+\t\t\t\t</div>
+\t\t\t</form>
+
+\t\t\t<form>
+\t\t\t\t<div class=\"reload\">
+\t\t\t\t\t<button onclick=\"refreshPage()\"><i class=\"fa-solid fa-rotate-right fa-lg\"></i></button>
+\t\t\t\t</div>
+\t\t\t</form>
+\t\t\t
 \t\t\t<div class=\"mainC\">
 \t\t\t\t<table class=\"table align-middle mb-0 bg-white\">
 \t\t\t\t\t<thead class=\"bg-light\">

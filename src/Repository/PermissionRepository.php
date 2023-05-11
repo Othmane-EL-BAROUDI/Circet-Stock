@@ -19,6 +19,15 @@ class PermissionRepository extends ServiceEntityRepository
         parent::__construct($registry, Permission::class);
     }
 
+    public function search($searchQuery)
+    {
+        return $this->createQueryBuilder('m')
+            ->where('m.permission_name LIKE :searchQuery')
+            ->setParameter('searchQuery', $searchQuery . '%')
+            ->getQuery()
+            ->getResult();
+    }
+
     // /**
     //  * @return Permission[] Returns an array of Permission objects
     //  */

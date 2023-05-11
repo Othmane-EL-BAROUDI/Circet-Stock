@@ -38,6 +38,23 @@ textarea:focus, input:focus , button:focus{
 .sort1 ::placeholder{
     color:#f9a826;
 }
+.reload{
+    width: 45px;
+}
+.reload > button{
+    margin-left: 85px;
+    font-weight: bold;
+    width: 40px;
+    height: 35px;
+    background-color: white;
+    border: solid #f9a826 1px;
+    border-radius: 4px;
+    background-color: #f9a826;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
 .sort1 > button{
     font-weight: bold;
     width: 13%;
@@ -235,3 +252,9 @@ textarea:focus, input:focus , select:focus ,button:focus{
 table tbody tr:last-of-type{
     border-bottom: 2px solid #f3f3f3 ;
 }
+
+.main_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
