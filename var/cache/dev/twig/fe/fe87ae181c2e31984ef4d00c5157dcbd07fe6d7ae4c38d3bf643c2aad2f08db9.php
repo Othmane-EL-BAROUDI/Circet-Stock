@@ -250,6 +250,6 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t<script src=\"{{asset('JS/Stock.js')}}\"></script>
 \t<script src=\"{{asset('JS/sidebar.js')}}\"></script>
 {% endblock %}
-", "Pages/update/Update.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\update\\Update.html.twig");
+", "Pages/update/Update.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\update\\Update.html.twig");
     }
 }
