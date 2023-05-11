@@ -18,6 +18,15 @@ class MarqueRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Marque::class);
     }
+    
+    public function search($searchQuery)
+    {
+        return $this->createQueryBuilder('m')
+            ->where('m.marque_name LIKE :searchQuery')
+            ->setParameter('searchQuery', $searchQuery . '%')
+            ->getQuery()
+            ->getResult();
+    }
 
     // /**
     //  * @return Marque[] Returns an array of Marque objects
