@@ -34,7 +34,7 @@ class RoleController extends AbstractController
             $entityManager->flush();
             $this->addFlash(
                'success',
-               sprintf('"%s" added successfully.', $newRole->getRoleName())
+               sprintf('"%s" ajouté avec succès.', $newRole->getRoleName())
             );
             return $this->redirectToRoute('Role');
         }
@@ -62,7 +62,7 @@ class RoleController extends AbstractController
             $entityManager->flush();
             $this->addFlash(
                 'update',
-                sprintf('"%s" updated successfully.', $role->getRoleName())
+                sprintf('"%s" Mis à jour avec succés.', $role->getRoleName())
              );
             return $this->redirectToRoute('Role');
         }
@@ -86,7 +86,7 @@ class RoleController extends AbstractController
         $entityManager->flush();
         $this->addFlash(
             'delete',
-            sprintf('"%s" deleted successfully.', $role->getRoleName())
+            sprintf('"%s" Supprimé avec succès.', $role->getRoleName())
          );
         return $this->redirectToRoute('Role');
 

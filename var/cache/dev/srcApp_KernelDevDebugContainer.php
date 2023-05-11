@@ -16,6 +16,6 @@ if (!\class_exists(srcApp_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerMoZAIuc\srcApp_KernelDevDebugContainer([
     'container.build_hash' => 'MoZAIuc',
-    'container.build_id' => '174c081c',
-    'container.build_time' => 1683728927,
+    'container.build_id' => '3dd8ff33',
+    'container.build_time' => 1683792895,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerMoZAIuc');

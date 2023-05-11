@@ -31,7 +31,7 @@ class MarqueController extends AbstractController
             $entityManager->flush();
             $this->addFlash(
                'success',
-               sprintf('"%s" added successfully.', $newMarque->getMarqueName())
+               sprintf('"%s" ajouté avec succès.', $newMarque->getMarqueName())
             );
             return $this->redirectToRoute('Marque');
         }
@@ -58,7 +58,7 @@ class MarqueController extends AbstractController
             $entityManager->flush();
             $this->addFlash(
                 'update',
-                sprintf('"%s" updated successfully.', $marque->getMarqueName())
+                sprintf('"%s" Mis à jour avec succés.', $marque->getMarqueName())
              );
             return $this->redirectToRoute('Marque');
         }
@@ -83,7 +83,7 @@ class MarqueController extends AbstractController
         $entityManager->flush();
         $this->addFlash(
             'delete',
-            sprintf('"%s" deleted successfully.', $marque->getMarqueName())
+            sprintf('"%s" Supprimé avec succès.', $marque->getMarqueName())
          );
         return $this->redirectToRoute('Marque');
     }

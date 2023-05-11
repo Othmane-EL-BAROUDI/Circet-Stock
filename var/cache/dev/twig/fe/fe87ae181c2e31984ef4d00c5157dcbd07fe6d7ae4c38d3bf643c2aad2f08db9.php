@@ -56,7 +56,7 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 ";
         // line 11
         $this->displayBlock('body', $context, $blocks);
-        // line 47
+        // line 45
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -128,28 +128,26 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t\t\t\t\t\t\t\t<button type=\"button\" class=\"mb-3\">
 \t\t\t\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
 \t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t\t
-
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<p class=\" mt-\" id=\"fileName\"  style=\"font-size: .77rem; \">image uploaded : Current picture</p>
+\t\t\t\t\t\t\t<p  id=\"fileName\"  style=\"font-size: .77rem; \">image uploaded : Current picture</p>
 \t\t\t\t\t\t";
         }
-        // line 30
+        // line 28
         echo "
 \t\t\t\t\t\t";
-        // line 31
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 31, $this->source); })()), 'widget');
+        // line 29
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 29, $this->source); })()), 'widget');
         echo "
 \t\t\t\t\t\t<div class=\"actions\">
 \t\t\t\t\t\t\t<div class=\"buttons  text-center mt-4\">
 \t\t\t\t\t\t\t\t<button type=\"submit\" style=\"background-color:#f9a826;\">Mettre à jour</button>
 \t\t\t\t\t\t\t\t";
-        // line 35
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 35, $this->source); })()), 'form_end');
+        // line 33
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 33, $this->source); })()), 'form_end');
         echo "
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 36
-        echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 36, $this->source); })()), "html", null, true);
+        // line 34
+        echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 34, $this->source); })()), "html", null, true);
         echo "\">
 \t\t\t\t\t\t\t\t\t<button type=\"button\" style=\"background-color: #6c757d\">Annuler</button>
 \t\t\t\t\t\t\t\t</a>
@@ -166,19 +164,19 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
     }
 
-    // line 47
+    // line 45
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 48
+        // line 46
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/Stock.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 49
+        // line 47
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -199,7 +197,7 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
     public function getDebugInfo()
     {
-        return array (  182 => 49,  177 => 48,  170 => 47,  152 => 36,  148 => 35,  141 => 31,  138 => 30,  126 => 20,  124 => 19,  119 => 17,  112 => 13,  109 => 12,  102 => 11,  91 => 7,  84 => 6,  74 => 3,  67 => 2,  60 => 47,  58 => 11,  54 => 10,  52 => 6,  49 => 5,  47 => 2,  44 => 1,);
+        return array (  180 => 47,  175 => 46,  168 => 45,  150 => 34,  146 => 33,  139 => 29,  136 => 28,  126 => 20,  124 => 19,  119 => 17,  112 => 13,  109 => 12,  102 => 11,  91 => 7,  84 => 6,  74 => 3,  67 => 2,  60 => 45,  58 => 11,  54 => 10,  52 => 6,  49 => 5,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -228,10 +226,8 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t\t\t\t\t\t\t\t<button type=\"button\" class=\"mb-3\">
 \t\t\t\t\t\t\t\t\t<i class='bx bxs-cloud-upload bx-sm'></i>
 \t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t\t
-
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<p class=\" mt-\" id=\"fileName\"  style=\"font-size: .77rem; \">image uploaded : Current picture</p>
+\t\t\t\t\t\t\t<p  id=\"fileName\"  style=\"font-size: .77rem; \">image uploaded : Current picture</p>
 \t\t\t\t\t\t{% endif %}
 
 \t\t\t\t\t\t{{ form_widget(form) }}

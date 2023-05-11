@@ -51,7 +51,7 @@ class StockController extends AbstractController
             $entityManager->flush();
             $this->addFlash(
                 'success',
-                sprintf('  " %s - %s " added successfully ', $machine->getModel()->getMarque()->getMarqueName(), $machine->getModel()->getModelName())
+                sprintf('  " %s - %s " ajouté avec succès ', $machine->getModel()->getMarque()->getMarqueName(), $machine->getModel()->getModelName())
             );
             return $this->redirectToRoute('Stock');
         }
@@ -90,7 +90,7 @@ class StockController extends AbstractController
         $entityManager->flush();
         $this->addFlash(
             'delete',
-            sprintf(' " %s - %s " deleted successfully.', $stock->getModel()->getMarque()->getMarqueName(), $stock->getModel()->getModelName())
+            sprintf(' " %s - %s " Supprimé avec succès.', $stock->getModel()->getMarque()->getMarqueName(), $stock->getModel()->getModelName())
         );
         return $this->redirectToRoute('Stock');
     }
@@ -129,7 +129,7 @@ class StockController extends AbstractController
             $entityManager->flush();
             $this->addFlash(
                 'update',
-                sprintf(' " %s - %s " updated successfully.', $stock->getModel()->getMarque()->getMarqueName(), $stock->getModel()->getModelName())
+                sprintf(' " %s - %s " Mis à jour avec succés.', $stock->getModel()->getMarque()->getMarqueName(), $stock->getModel()->getModelName())
             );
             return $this->redirectToRoute('Stock');
         }
