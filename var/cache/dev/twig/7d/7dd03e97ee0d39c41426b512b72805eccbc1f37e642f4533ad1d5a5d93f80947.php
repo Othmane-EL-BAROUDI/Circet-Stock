@@ -56,17 +56,10 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 ";
         // line 10
         $this->displayBlock('body', $context, $blocks);
-<<<<<<< HEAD
+        // line 110
+        echo "
+";
         // line 111
-        echo "
-";
-        // line 112
-=======
-        // line 108
-        echo "
-";
-        // line 109
->>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -187,7 +180,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
             // line 57
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "model", [], "any", false, false, false, 57), "getType", [], "method", false, false, false, 57), "html", null, true);
             echo "</label><br>
-\t\t\t\t\t\t\t\t\tNuméro de série :
+\t\t\t\t\t\t\t\t\tSerial number :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">";
             // line 59
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getSerialNum", [], "method", false, false, false, 59), "html", null, true);
@@ -212,7 +205,6 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
             }
             // line 69
             echo "\t\t\t\t\t\t\t\t\t</label><br>
-<<<<<<< HEAD
 \t\t\t\t\t\t\t\t\t";
             // line 70
             if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "model", [], "any", false, false, false, 70), "getType", [], "method", false, false, false, 70) == "Desktop") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "model", [], "any", false, false, false, 70), "getType", [], "method", false, false, false, 70) == "Laptop"))) {
@@ -222,7 +214,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
                 // line 72
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getMacEthernet", [], "method", false, false, false, 72), "html", null, true);
                 echo "</label><br>
-\t\t\t\t\t\t\t\t\tmac_wifi :
+\t\t\t\t\t\t\t\t\tMac_wifi :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">";
                 // line 74
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getMacWifi", [], "method", false, false, false, 74), "html", null, true);
@@ -231,19 +223,6 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
             }
             // line 76
             echo "\t\t\t\t\t\t\t\t\tdescription :
-=======
-\t\t\t\t\t\t\t\t\tMac_ethernet :
-\t\t\t\t\t\t\t\t\t<label for=\"name\">";
-            // line 71
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getMacEthernet", [], "method", false, false, false, 71), "html", null, true);
-            echo "</label><br>
-\t\t\t\t\t\t\t\t\tMac_wifi :
-\t\t\t\t\t\t\t\t\t<label for=\"name\">";
-            // line 73
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getMacWifi", [], "method", false, false, false, 73), "html", null, true);
-            echo "</label><br>
-\t\t\t\t\t\t\t\t\tDéscription :
->>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
 \t\t\t\t\t\t\t\t\t<label for=\"name\">";
             // line 77
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "description", [], "any", false, false, false, 77), "html", null, true);
@@ -291,16 +270,9 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t<div class=\"action\">
 \t\t\t\t\t\t<button>Demande</button>
 \t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\" class=\"start\" data-target=\"#model";
-<<<<<<< HEAD
             // line 103
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 103), "html", null, true);
-            echo "\">details</button>
-
-=======
-            // line 101
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 101), "html", null, true);
             echo "\">Détails</button>
->>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t";
@@ -308,11 +280,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-<<<<<<< HEAD
-        // line 108
-=======
-        // line 105
->>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
+        // line 107
         echo "\t\t</div>
 \t</div>
 ";
@@ -321,31 +289,19 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     }
 
-<<<<<<< HEAD
-    // line 112
-=======
-    // line 109
->>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
+    // line 111
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-<<<<<<< HEAD
-        // line 113
-=======
-        // line 110
->>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
+        // line 112
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/HomePage.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-<<<<<<< HEAD
-        // line 114
-=======
-        // line 111
->>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
+        // line 113
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
@@ -369,11 +325,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     public function getDebugInfo()
     {
-<<<<<<< HEAD
-        return array (  306 => 114,  301 => 113,  294 => 112,  285 => 108,  274 => 103,  267 => 99,  263 => 98,  258 => 95,  252 => 93,  245 => 90,  243 => 89,  228 => 77,  225 => 76,  220 => 74,  215 => 72,  212 => 71,  210 => 70,  207 => 69,  203 => 67,  199 => 65,  197 => 64,  191 => 61,  186 => 59,  181 => 57,  175 => 54,  169 => 50,  163 => 48,  156 => 45,  154 => 44,  142 => 35,  134 => 31,  130 => 30,  109 => 11,  102 => 10,  91 => 6,  84 => 5,  70 => 2,  63 => 112,  60 => 111,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
-=======
-        return array (  298 => 111,  293 => 110,  286 => 109,  277 => 105,  267 => 101,  260 => 97,  256 => 96,  251 => 93,  245 => 91,  238 => 88,  236 => 87,  221 => 75,  216 => 73,  211 => 71,  207 => 69,  203 => 67,  199 => 65,  197 => 64,  191 => 61,  186 => 59,  181 => 57,  175 => 54,  169 => 50,  163 => 48,  156 => 45,  154 => 44,  142 => 35,  134 => 31,  130 => 30,  109 => 11,  102 => 10,  91 => 6,  84 => 5,  70 => 2,  63 => 109,  60 => 108,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
->>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
+        return array (  305 => 113,  300 => 112,  293 => 111,  284 => 107,  274 => 103,  267 => 99,  263 => 98,  258 => 95,  252 => 93,  245 => 90,  243 => 89,  228 => 77,  225 => 76,  220 => 74,  215 => 72,  212 => 71,  210 => 70,  207 => 69,  203 => 67,  199 => 65,  197 => 64,  191 => 61,  186 => 59,  181 => 57,  175 => 54,  169 => 50,  163 => 48,  156 => 45,  154 => 44,  142 => 35,  134 => 31,  130 => 30,  109 => 11,  102 => 10,  91 => 6,  84 => 5,  70 => 2,  63 => 111,  60 => 110,  58 => 10,  54 => 9,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -434,13 +386,8 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t\t\t<label for=\"name\" id=\"customerId\">{{item.model.getModelName()}}</label>
 \t\t\t\t\t\t\t\t\t<br>
 \t\t\t\t\t\t\t\t\tType :
-<<<<<<< HEAD
 \t\t\t\t\t\t\t\t\t<label for=\"name\">{{item.model.getType()}}</label><br>
 \t\t\t\t\t\t\t\t\tSerial number :
-=======
-\t\t\t\t\t\t\t\t\t<label for=\"name\">{{item.type}}</label><br>
-\t\t\t\t\t\t\t\t\tNuméro de série :
->>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
 \t\t\t\t\t\t\t\t\t<label for=\"name\">{{item.getSerialNum()}}</label><br>
 \t\t\t\t\t\t\t\t\tÉtat :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">{{item.state}}</label><br>
@@ -452,21 +399,13 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t\t\t\t\tNo
 \t\t\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t\t\t</label><br>
-<<<<<<< HEAD
 \t\t\t\t\t\t\t\t\t{% if item.model.getType() == \"Desktop\" or item.model.getType() == \"Laptop\" %}
 \t\t\t\t\t\t\t\t\tmac_ethernet :
-=======
-\t\t\t\t\t\t\t\t\tMac_ethernet :
->>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
 \t\t\t\t\t\t\t\t\t<label for=\"name\">{{item.getMacEthernet()}}</label><br>
 \t\t\t\t\t\t\t\t\tMac_wifi :
 \t\t\t\t\t\t\t\t\t<label for=\"name\">{{item.getMacWifi()}}</label><br>
-<<<<<<< HEAD
 \t\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t\t\tdescription :
-=======
-\t\t\t\t\t\t\t\t\tDéscription :
->>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
 \t\t\t\t\t\t\t\t\t<label for=\"name\">{{item.description}}</label><br>
 
 \t\t\t\t\t\t\t\t</div>
@@ -508,6 +447,6 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
 {% endblock %}
-", "Pages/homePage.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\HomePage.html.twig");
+", "Pages/homePage.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\HomePage.html.twig");
     }
 }

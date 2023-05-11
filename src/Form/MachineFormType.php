@@ -36,18 +36,7 @@ class MachineFormType extends AbstractType
                 'multiple' => false,
                 'required' => true,
                 'attr' => array('class' => 'form-control'),
-<<<<<<< HEAD
             ])  
-=======
-                'label' => 'Modèle',
-            ])
-            ->add('type', TextType::class, [
-                'attr' => array(
-                    'placeholder' => '@Type'
-                ),
-                'required' => true,
-            ])
->>>>>>> eb4021e168635ff0ff4744f1eb6eb0aca54670df
             ->add('serial_num', TextType::class, [
                 'attr' => array(
                     'placeholder' => '@Numéro_de_série'
