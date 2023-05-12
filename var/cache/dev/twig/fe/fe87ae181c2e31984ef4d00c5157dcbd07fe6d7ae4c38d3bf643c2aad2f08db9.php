@@ -56,7 +56,7 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 ";
         // line 11
         $this->displayBlock('body', $context, $blocks);
-        // line 76
+        // line 77
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -194,7 +194,8 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
         // line 65
         echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 65, $this->source); })()), "html", null, true);
         echo "\">
-\t\t\t\t\t\t\t\t\t<button type=\"button\" style=\"background-color: #6c757d\">Annuler</button>
+\t\t\t\t\t\t\t\t\t<button type=\"button\"   style=\"background-color: #6c757d\">Annuler</button>
+\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
@@ -209,19 +210,19 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
     }
 
-    // line 76
+    // line 77
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 77
+        // line 78
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/Stock.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 78
+        // line 79
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
@@ -245,7 +246,7 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
     public function getDebugInfo()
     {
-        return array (  225 => 78,  220 => 77,  213 => 76,  195 => 65,  191 => 64,  183 => 60,  174 => 54,  171 => 53,  169 => 52,  162 => 48,  155 => 44,  148 => 40,  138 => 33,  134 => 32,  123 => 24,  109 => 12,  102 => 11,  91 => 7,  84 => 6,  74 => 3,  67 => 2,  60 => 76,  58 => 11,  54 => 10,  52 => 6,  49 => 5,  47 => 2,  44 => 1,);
+        return array (  226 => 79,  221 => 78,  214 => 77,  195 => 65,  191 => 64,  183 => 60,  174 => 54,  171 => 53,  169 => 52,  162 => 48,  155 => 44,  148 => 40,  138 => 33,  134 => 32,  123 => 24,  109 => 12,  102 => 11,  91 => 7,  84 => 6,  74 => 3,  67 => 2,  60 => 77,  58 => 11,  54 => 10,  52 => 6,  49 => 5,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -315,7 +316,8 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t\t\t\t\t\t\t\t<button type=\"submit\" style=\"background-color:#f9a826;\">Mettre à jour</button>
 \t\t\t\t\t\t\t\t{{ form_end(form) }}
 \t\t\t\t\t\t\t\t<a href=\"{{Path}}\">
-\t\t\t\t\t\t\t\t\t<button type=\"button\" style=\"background-color: #6c757d\">Annuler</button>
+\t\t\t\t\t\t\t\t\t<button type=\"button\"   style=\"background-color: #6c757d\">Annuler</button>
+\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>

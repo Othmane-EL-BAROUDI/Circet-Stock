@@ -189,7 +189,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
             // line 55
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "
-\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+\t\t\t\t<button type=\"button\" class=\"close \" data-dismiss=\"alert\" aria-label=\"Close\">
 \t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t</button>
 \t\t\t</div>
@@ -324,19 +324,19 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t\t\t\t\t\t\tVoulez-vous vraiment supprimer cet utilisateur :
-\t\t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">";
+\t\t\t\t\t\t\t\t\t\t\t\t<p style=\"   color: #f9a826; \">";
                 // line 148
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 148), "html", null, true);
-                echo " </label>
+                echo " </p>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"User/Remove/";
                 // line 151
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 151), "html", null, true);
                 echo "\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn h-4\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
 \t\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Annuler</button>
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-outline-secondary\" data-dismiss=\"modal\">Annuler</button>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
@@ -453,7 +453,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t{% for flash_message in app.session.flashbag.get('delete') %}
 \t\t\t<div class=\"alert  alert-danger fade show\" role=\"alert\">
 \t\t\t\t{{flash_message}}
-\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+\t\t\t\t<button type=\"button\" class=\"close \" data-dismiss=\"alert\" aria-label=\"Close\">
 \t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
 \t\t\t\t</button>
 \t\t\t</div>
@@ -545,13 +545,13 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t\t\t\t\t\t\tVoulez-vous vraiment supprimer cet utilisateur :
-\t\t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">{{user.username}} </label>
+\t\t\t\t\t\t\t\t\t\t\t\t<p style=\"   color: #f9a826; \">{{user.username}} </p>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"User/Remove/{{user.id}}\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn h-4\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
 \t\t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Annuler</button>
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-outline-secondary\" data-dismiss=\"modal\">Annuler</button>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>

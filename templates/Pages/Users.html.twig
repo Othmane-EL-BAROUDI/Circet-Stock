@@ -53,7 +53,7 @@
 		{% for flash_message in app.session.flashbag.get('delete') %}
 			<div class="alert  alert-danger fade show" role="alert">
 				{{flash_message}}
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<button type="button" class="close " data-dismiss="alert" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
@@ -145,13 +145,13 @@
 											</div>
 											<div class="modal-body">
 												Voulez-vous vraiment supprimer cet utilisateur :
-												<label style="  font-weight: bold; color: #f9a826; ">{{user.username}} </label>
+												<p style="   color: #f9a826; ">{{user.username}} </p>
 											</div>
 											<div class="modal-footer">
 													<a href="User/Remove/{{user.id}}">
-													<button type="button" class="bn3 btn btn-sm h-4" style=" border: #dc3545 solid 1px;">Supprimer</button>
+													<button type="button" class="bn3 btn h-4" style=" border: #dc3545 solid 1px;">Supprimer</button>
 												</a>
-												<button type="button" class="btn btn-sm  btn-secondary" data-dismiss="modal">Annuler</button>
+												<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Annuler</button>
 											</div>
 										</div>
 									</div>

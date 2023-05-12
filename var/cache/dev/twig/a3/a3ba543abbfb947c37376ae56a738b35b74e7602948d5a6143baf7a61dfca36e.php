@@ -343,7 +343,7 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t\t\t\t\t\tVoulez-vous vraiment supprimer ce matériel :
-\t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">";
+\t\t\t\t\t\t\t\t\t\t\t<p style=\"   color: #f9a826; \">";
             // line 166
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 166), "marque", [], "any", false, false, false, 166), "getMarqueName", [], "method", false, false, false, 166), "html", null, true);
             echo "
@@ -351,16 +351,16 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t\t\t\t\t\t\t";
             // line 168
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["machine"], "model", [], "any", false, false, false, 168), "getModelName", [], "method", false, false, false, 168), "html", null, true);
-            echo "</label>
+            echo "</p>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"Stock/Remove/";
             // line 171
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["machine"], "id", [], "any", false, false, false, 171), "html", null, true);
             echo "\">
-\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  h-5\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
 \t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Annuler</button>
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-outline-secondary\" data-dismiss=\"modal\">Annuler</button>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
@@ -589,15 +589,15 @@ class __TwigTemplate_08deb0ab49ad0dbf83a8320894f4e04a9cee9013485ae94498b8a799f89
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t\t\t\t\t\tVoulez-vous vraiment supprimer ce matériel :
-\t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">{{machine.model.marque.getMarqueName()}}
+\t\t\t\t\t\t\t\t\t\t\t<p style=\"   color: #f9a826; \">{{machine.model.marque.getMarqueName()}}
 \t\t\t\t\t\t\t\t\t\t\t\t-
-\t\t\t\t\t\t\t\t\t\t\t\t{{machine.model.getModelName()}}</label>
+\t\t\t\t\t\t\t\t\t\t\t\t{{machine.model.getModelName()}}</p>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"Stock/Remove/{{machine.id}}\">
-\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  h-5\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
 \t\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm  btn-secondary\" data-dismiss=\"modal\">Annuler</button>
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-outline-secondary\" data-dismiss=\"modal\">Annuler</button>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>

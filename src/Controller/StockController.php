@@ -97,7 +97,7 @@ class StockController extends AbstractController
         return $this->redirectToRoute('Stock');
     }
     /**
-     * @Route("Stock/Edit/{id}" , name="StockUpdate")
+     * @Route("/Stock/Edit/{id}" , name="StockUpdate")
      */
     public function StockUpdate(Request $request, EntityManagerInterface $entityManager, $id): Response
     {
@@ -139,7 +139,7 @@ class StockController extends AbstractController
                 }
             }
             $entityManager->flush();
-            return $this->redirectToRoute('Stock/Edit/' . $id);
+            return $this->redirectToRoute('Stock');
         }
         return $this->render('Pages/update/Update.html.twig', [
             'userInfo' => $CurrentUser,
