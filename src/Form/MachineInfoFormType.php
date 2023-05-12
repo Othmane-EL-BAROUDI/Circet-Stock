@@ -2,27 +2,79 @@
 
 namespace App\Form;
 
+use App\Entity\Model;
+use App\Entity\Marque;
 use App\Entity\Machine;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Proxies\__CG__\App\Entity\Model as EntityModel;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class MachineInfoFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('serial_num')
-            ->add('state')
-            ->add('available')
-            ->add('description')
-            ->add('mac_ethernet')
-            ->add('mac_wifi')
-            ->add('img_src')
-            ->add('model')
-        ;
-    }
+            ->add('model', EntityType::class, [
+                'required' => true,
+                'class' => Model::class,
+                'choice_label' => 'model_name',
+                'multiple' => false,
+                'required' => true,
+                'attr' => array('class' => 'form-control'),
+            ])  
+            ->add('serial_num', TextType::class, [
+                'attr' => array(
+                    'placeholder' => '@Numéro_de_série'
+                ),
+                'required' => true,
+                'label' => 'Numéro de série',
+            ])
+            ->add('state', ChoiceType::class, [
 
+                'choices'  => [
+                    'Bon' => "Bon",
+                    'Mauvais' => "Mauvais",
+                ],
+                'required' => true,
+                'attr' => array('class' => 'form-control', 'placeholder' => '@state'),
+                'label' => 'État',
+
+            ])
+            ->add('available', CheckboxType::class, [
+
+                'attr' => array('class' => 'form-control', 'style' => 'margin-top: -3.5%; width:180px;'),
+                'required' => false,
+                'label' => 'Disponible',
+            ])
+            ->add('description', TextareaType::class, [
+                'attr' => array(
+                    'placeholder' => '@Description',
+                    'style' => ' width:100%; margin-bottom:13px; height:90px;',
+                    'class' => 'form-control',
+                ),
+                'required' => true,
+            ])
+            ->add('mac_ethernet', TextType::class, [
+                'attr' => array(
+                    'placeholder' => '@Mac_ethernet'
+                ),
+                'required' => false,
+            ])
+            ->add('mac_wifi', TextType::class, [
+                'attr' => array(
+                    'placeholder' => '@Mac_wifi'
+                ),
+                'required' => false,
+            ]);
+    }
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([

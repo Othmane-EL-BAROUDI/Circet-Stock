@@ -6,20 +6,21 @@ use App\Entity\Machine;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class MachinePictureFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('serial_num')
-            ->add('state')
-            ->add('available')
-            ->add('description')
-            ->add('mac_ethernet')
-            ->add('mac_wifi')
-            ->add('img_src')
-            ->add('model')
+           
+        ->add('img_src', FileType::class, [
+            'attr' => array('class' => 'filePic' , 'style' => ' position: absolute;  width: 94%;'),
+            'label' => false,
+            'data_class' => null,
+            'required' => false,
+        ])
+          
         ;
     }
 

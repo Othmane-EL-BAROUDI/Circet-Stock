@@ -77,25 +77,29 @@
 						<option value="manager">Manager</option>
 						<option value="admin">Admin</option>
 					</select>
+
 					<select name="availability">
 						<option selected disabled>Disponibilité</option>
 					</select>
+					
 					<select name="state">
 						<option selected disabled>État</option>
 					</select>
 
-					<button>
+					<button type="submit">
 						Rechercher
 					</button>
-				</div>
+				</div>		
 			</form>
 
 			<form>
-				<div class="reload">
-					<button onclick="refreshPage()"><i class="fa-solid fa-rotate-right fa-lg"></i></button>
-				</div>
+				<button onclick="refreshPage()" class="reload">
+					<i class="fa-solid fa-rotate-right fa-lg"></i>
+				</button>
 			</form>
-			
+		</div>
+		
+		<div class="CContent">
 			<div class="mainC">
 				<table class="table align-middle mb-0 bg-white">
 					<thead class="bg-light">
@@ -105,11 +109,12 @@
 							<th>Numéro de série</th>
 							<th>Disponibilité</th>
 							<th>État</th>
-							<th style="text-align:center;">Action</th>
+							<th style="text-align:center;">Actions</th>
 						</tr>
 					</thead>
 					<tbody>
 						{% for machine in Allmachines %}
+						{% if machine %}
 							<tr>
 								<td>
 									<div class="d-flex align-items-center">
@@ -188,15 +193,24 @@
 									</div>
 								</div>
 							</div>
-						{% endfor %}
+						{% endif %}
+						{% else %}
+						<tr>
+							<td>No results found.</td>
+						</tr>
 					</tbody>
+					{% endfor %}
 				</table>
 			</div>
-
 		</div>
 	</div>
 {% endblock %}
 {% block javascripts %}
+<script>
+  	function refreshPage() {
+    	window.location.reload();
+  	}
+</script>
 	<script src="{{asset('JS/sidebar.js')}}"></script>
 		<script src="{{asset('JS/Stock.js')}}"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

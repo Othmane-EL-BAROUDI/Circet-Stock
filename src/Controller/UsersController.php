@@ -21,7 +21,20 @@ class UsersController extends AbstractController
     {
 
         $entityManager = $this->getDoctrine()->getManager();
-        $users = $entityManager->getRepository(User::class)->findAll();
+        $user = $this->getUser();
+
+        $username = $request->query->get('username');
+
+        $userRepository = $entityManager->getRepository(User::class);
+        $queryBuilder = $userRepository->createQueryBuilder('u');
+
+        if ($username) {
+            $queryBuilder
+                ->andWhere('u.username LIKE :username')
+                ->setParameter('username', $username . '%');
+        }
+
+        $users = $queryBuilder->getQuery()->getResult();
         $roles = $entityManager->getRepository(Role::class)->findAll();
         $user = $this->getUser();
 

@@ -34,8 +34,8 @@
 									<img src="{{asset('images/laptop.png')}}" style="width:155px;" alt="">
 
 								{% else %}
-									<!--<img src="{{asset(machine.getImgSrc())}}" style="width:150px;" alt="no pic">-->
-									<img src="{{asset(machine.getImgSrc())}}" style="max-width:160px; max-height:125px;" alt="no pic">
+									<img src="{{asset(machine.getImgSrc())}}" style="width:150px;" alt="no pic">
+									{# <img src="/CIRCET-STOCK/public/{{machine.getImgSrc()}}" style="max-width:160px; max-height:125px;" alt="no pic"> #}
 								{% endif %}
 							</div>
 						</div>
@@ -76,7 +76,7 @@
 									</li>
 									<li class="list-group-item d-flex justify-content-between align-items-center p-3">
 										<p class="mb-0">Mac wifi</p>
-										<p class="mb-1" style="font-size: .77rem; ">{{machine.state}}</p>
+										<p class="mb-1" style="font-size: .77rem; ">{{machine.getMacWifi()}}</p>
 									</li>
 								</ul>
 							</div>
