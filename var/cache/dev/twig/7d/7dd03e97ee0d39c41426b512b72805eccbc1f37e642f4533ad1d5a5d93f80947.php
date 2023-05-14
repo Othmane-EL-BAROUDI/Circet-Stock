@@ -251,7 +251,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
                 // line 93
                 echo "\t\t\t\t\t\t\t\t\t<img src=\"";
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(twig_get_attribute($this->env, $this->source, $context["item"], "getImgSrc", [], "method", false, false, false, 93)), "html", null, true);
-                echo "\" style=\"width:150px; max-height:150px;\" alt=\"no pic\">
+                echo "\"  style=\"width:150px; max-height:150px;\" alt=\"no pic\">
 \t\t\t\t\t\t\t\t";
             }
             // line 95
@@ -422,7 +422,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t\t\t<img src=\"{{asset('images/laptop.png')}}\" style=\"width:150px;\" alt=\"\">
 
 \t\t\t\t\t\t\t\t{% else %}
-\t\t\t\t\t\t\t\t\t<img src=\"{{asset(item.getImgSrc())}}\" style=\"width:150px; max-height:150px;\" alt=\"no pic\">
+\t\t\t\t\t\t\t\t\t<img src=\"{{asset(item.getImgSrc())}}\"  style=\"width:150px; max-height:150px;\" alt=\"no pic\">
 \t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t</div>
 

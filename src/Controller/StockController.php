@@ -5,6 +5,8 @@ namespace App\Controller;
 use App\Entity\Machine;
 use App\Entity\Model;
 use App\Form\MachineFormType;
+use App\Form\MachineInfoFormType;
+use App\Form\MachinePictureFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -102,11 +104,21 @@ class StockController extends AbstractController
         $CurrentUser = $this->getUser();
         $entityManager = $this->getDoctrine()->getManager();
         $stock = $entityManager->getRepository(Machine::class)->find($id);
-        $form = $this->createForm(MachineFormType::class, $stock);
+        $form = $this->createForm(MachineInfoFormType::class, $stock);
         $form->handleRequest($request);
-        $uploadedPicture = $form->get('img_src')->getData();
+        $formPic = $this->createForm(MachinePictureFormType::class, $stock);
+        $formPic->handleRequest($request);
+        $uploadedPicture = $formPic->get('img_src')->getData();
         $uploadType = $stock->getModel()->getType();
         if ($form->isSubmitted()  && $form->isValid()) {
+            $entityManager->flush();
+            $this->addFlash(
+                'update',
+                sprintf(' " %s - %s " Mis à jour avec succés.', $stock->getModel()->getMarque()->getMarqueName(), $stock->getModel()->getModelName())
+            );
+            return $this->redirectToRoute('Stock');
+        }
+        if ($formPic->isSubmitted()  && $formPic->isValid()) {
             if ($uploadedPicture) {
                 if ($stock->getImgSrc() != null) {
                     if (file_exists(
@@ -127,18 +139,16 @@ class StockController extends AbstractController
                 }
             }
             $entityManager->flush();
-            $this->addFlash(
-                'update',
-                sprintf(' " %s - %s " Mis à jour avec succés.', $stock->getModel()->getMarque()->getMarqueName(), $stock->getModel()->getModelName())
-            );
-            return $this->redirectToRoute('Stock');
+            return $this->redirectToRoute('Stock/Edit/' . $id);
         }
         return $this->render('Pages/update/Update.html.twig', [
             'userInfo' => $CurrentUser,
             'Path' => '/Stock',
             'form' => $form->createView(),
+            'formPic' => $formPic->createView(),
             'Title' => 'Stock',
             'PageName' => 'Mise à jour',
+            'StockPic' => $stock->getImgSrc(),
 
         ]);
     }
