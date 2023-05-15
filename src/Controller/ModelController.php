@@ -48,6 +48,9 @@ class ModelController extends AbstractController
     public function ModelUpdate(Request $request , EntityManagerInterface $entityManager, $id): Response
     {   
         $user = $this->getUser();
+        if( $user->getConnected() == false ){
+            return $this->redirect('Profile');
+        }
         $entityManager = $this->getDoctrine()->getManager();
         $model = $entityManager->getRepository(Model::class)->find($id);
         $form = $this->createForm(ModelFormType::class, $model);

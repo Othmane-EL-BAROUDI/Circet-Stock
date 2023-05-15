@@ -16,6 +16,8 @@
           <i class='bx bx-menu'  id="btn" ></i>
         </div>
         <ul class="nav_link">
+        {% if userInfo.Connected %}
+        
           <li> 
               <a href="{{path('HomePage')}}">
                     <i class='bx bx-home'></i>
@@ -76,6 +78,7 @@
                <span class="tooltip">Marque</span>
           </li>
           
+       {% endif %}
        {% endif %}
             <li> 
               <a href="{{path('Profile')}}">

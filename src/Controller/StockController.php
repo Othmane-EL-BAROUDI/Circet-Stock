@@ -25,6 +25,9 @@ class StockController extends AbstractController
         $searchQuery = $request->query->get('search');
         $results = $entityManager->getRepository(Machine::class)->search($searchQuery);
         $user = $this->getUser();
+        if( $user->getConnected() == false ){
+            return $this->redirect('Profile');
+        }
 
         $machine = new Machine();
         $form = $this->createForm(MachineFormType::class, $machine);

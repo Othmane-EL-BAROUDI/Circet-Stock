@@ -37,6 +37,9 @@ class UsersController extends AbstractController
         $users = $queryBuilder->getQuery()->getResult();
         $roles = $entityManager->getRepository(Role::class)->findAll();
         $user = $this->getUser();
+        if( $user->getConnected() == false ){
+            return $this->redirect('Profile');
+        }
 
         $Nuser = new User();
         $form = $this->createForm(UserFormType::class, $Nuser);
@@ -50,6 +53,7 @@ class UsersController extends AbstractController
             $Nuser->addRole($selectedRole->getRoleName());
             $entityManager->persist($Nuser);
             $Nuser->setEnabled(true);
+            $Nuser->setConnected(false);
             $entityManager->flush();
             $this->addFlash(
                 'success',

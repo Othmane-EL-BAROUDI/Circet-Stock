@@ -56,11 +56,7 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 ";
         // line 11
         $this->displayBlock('body', $context, $blocks);
-<<<<<<< HEAD
-        // line 77
-=======
-        // line 78
->>>>>>> 003ad4e8ca88d8fc5ab0c9f6da6a3628bba91edb
+        // line 81
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -111,7 +107,11 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
         // line 12
         echo "\t<div class=\"home_content\">
-\t\t<div class=\"modal fade\" id=\"model\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+\t";
+        // line 13
+        if (((isset($context["Title"]) || array_key_exists("Title", $context) ? $context["Title"] : (function () { throw new RuntimeError('Variable "Title" does not exist.', 13, $this->source); })()) == "Stock")) {
+            // line 14
+            echo "\t\t<div class=\"modal fade\" id=\"model\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
 \t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t<div class=\"modal-content\">
 \t\t\t\t\t<div class=\"modal-header\">
@@ -122,12 +122,13 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t<div class=\"StockImg\" style=\" border: solid  1px #f9a826; height:250px;\">
+\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/";
+            // line 25
+            echo twig_escape_filter($this->env, (isset($context["StockPic"]) || array_key_exists("StockPic", $context) ? $context["StockPic"] : (function () { throw new RuntimeError('Variable "StockPic" does not exist.', 25, $this->source); })()), "html", null, true);
+            echo "\">
 \t\t\t\t\t\t\t";
-        // line 25
-        echo "\t\t\t\t\t\t\t<img src=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl((isset($context["StockPic"]) || array_key_exists("StockPic", $context) ? $context["StockPic"] : (function () { throw new RuntimeError('Variable "StockPic" does not exist.', 25, $this->source); })())), "html", null, true);
-        echo "\">
-\t\t\t\t\t\t</div>
+            // line 27
+            echo "\t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"ImageUpload\">
 \t\t\t\t\t\t<button type=\"button\" class=\"mb-3\">
@@ -135,13 +136,13 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t\t\t\t\t\t</button>
 \t\t\t\t\t</div>
 \t\t\t\t\t";
-        // line 33
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formPic"]) || array_key_exists("formPic", $context) ? $context["formPic"] : (function () { throw new RuntimeError('Variable "formPic" does not exist.', 33, $this->source); })()), 'form_start');
-        echo "
+            // line 34
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formPic"]) || array_key_exists("formPic", $context) ? $context["formPic"] : (function () { throw new RuntimeError('Variable "formPic" does not exist.', 34, $this->source); })()), 'form_start');
+            echo "
 \t\t\t\t\t";
-        // line 34
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formPic"]) || array_key_exists("formPic", $context) ? $context["formPic"] : (function () { throw new RuntimeError('Variable "formPic" does not exist.', 34, $this->source); })()), 'widget');
-        echo "
+            // line 35
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formPic"]) || array_key_exists("formPic", $context) ? $context["formPic"] : (function () { throw new RuntimeError('Variable "formPic" does not exist.', 35, $this->source); })()), 'widget');
+            echo "
 \t\t\t\t\t
 \t\t\t\t\t<p id=\"fileName\" style=\"font-size: .77rem; margin-left:20px;\">image uploaded : image actuelle</p>
 \t\t\t\t\t<div class=\"modal-footer close_button\">
@@ -149,56 +150,59 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t\t\t\t\t\t<button class=\"btn btn-outline-secondary\" type=\"button\" data-dismiss=\"modal\">Annuler</button>
 \t\t\t\t\t</div>
 \t\t\t\t\t";
-        // line 41
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formPic"]) || array_key_exists("formPic", $context) ? $context["formPic"] : (function () { throw new RuntimeError('Variable "formPic" does not exist.', 41, $this->source); })()), 'form_end');
-        echo "
+            // line 42
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formPic"]) || array_key_exists("formPic", $context) ? $context["formPic"] : (function () { throw new RuntimeError('Variable "formPic" does not exist.', 42, $this->source); })()), 'form_end');
+            echo "
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
-\t\t<div class=\"text\">";
-        // line 45
-        echo twig_escape_filter($this->env, (isset($context["PageName"]) || array_key_exists("PageName", $context) ? $context["PageName"] : (function () { throw new RuntimeError('Variable "PageName" does not exist.', 45, $this->source); })()), "html", null, true);
+\t\t";
+        }
+        // line 47
+        echo "\t\t<div class=\"text\">";
+        echo twig_escape_filter($this->env, (isset($context["PageName"]) || array_key_exists("PageName", $context) ? $context["PageName"] : (function () { throw new RuntimeError('Variable "PageName" does not exist.', 47, $this->source); })()), "html", null, true);
         echo "</div>
 \t\t<div class=\"container\" style=\"display: flex; justify-content: center; align-items: center; height: 80vh;\">
 \t\t\t<div class=\"col-md-9\">
 \t\t\t\t<div class=\"card mb-3 content\">
 \t\t\t\t\t";
-        // line 49
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 49, $this->source); })()), 'form_start');
+        // line 51
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 51, $this->source); })()), 'form_start');
         echo "
 \t\t\t\t\t<div class=\"card-body\">
 
 
 \t\t\t\t\t\t";
-        // line 53
-        if (((isset($context["Title"]) || array_key_exists("Title", $context) ? $context["Title"] : (function () { throw new RuntimeError('Variable "Title" does not exist.', 53, $this->source); })()) == "Stock")) {
-            // line 54
-            echo "\t\t\t\t\t\t\t<div class=\"StockImg\" style=\" border: solid  1px #f9a826; height:250px;\">
-\t\t\t\t\t\t\t\t";
+        // line 55
+        if (((isset($context["Title"]) || array_key_exists("Title", $context) ? $context["Title"] : (function () { throw new RuntimeError('Variable "Title" does not exist.', 55, $this->source); })()) == "Stock")) {
             // line 56
-            echo "\t\t\t\t\t\t\t\t<img src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl((isset($context["StockPic"]) || array_key_exists("StockPic", $context) ? $context["StockPic"] : (function () { throw new RuntimeError('Variable "StockPic" does not exist.', 56, $this->source); })())), "html", null, true);
+            echo "\t\t\t\t\t\t\t<div class=\"StockImg\" style=\" border: solid  1px #f9a826; height:250px;\">
+\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/";
+            // line 57
+            echo twig_escape_filter($this->env, (isset($context["StockPic"]) || array_key_exists("StockPic", $context) ? $context["StockPic"] : (function () { throw new RuntimeError('Variable "StockPic" does not exist.', 57, $this->source); })()), "html", null, true);
             echo "\">
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t";
+            // line 59
+            echo "\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"StockImg\">
 \t\t\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\" class=\"start\" data-target=\"#model\">Voir image</button>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t";
         }
-        // line 62
+        // line 64
         echo "\t\t\t\t\t\t";
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 62, $this->source); })()), 'widget');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 64, $this->source); })()), 'widget');
         echo "
 \t\t\t\t\t\t<div class=\"actions\">
 \t\t\t\t\t\t\t<div class=\"buttons  text-center mt-4\">
 \t\t\t\t\t\t\t\t<button type=\"submit\" style=\"background-color:#f9a826;\">Mettre à jour</button>
 \t\t\t\t\t\t\t\t";
-        // line 66
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 66, $this->source); })()), 'form_end');
+        // line 68
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 68, $this->source); })()), 'form_end');
         echo "
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 67
-        echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 67, $this->source); })()), "html", null, true);
+        // line 69
+        echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 69, $this->source); })()), "html", null, true);
         echo "\">
 \t\t\t\t\t\t\t\t\t<button type=\"button\"   style=\"background-color: #6c757d\">Annuler</button>
 \t\t\t\t\t\t\t\t\t
@@ -216,31 +220,19 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
     }
 
-<<<<<<< HEAD
-    // line 77
-=======
-    // line 78
->>>>>>> 003ad4e8ca88d8fc5ab0c9f6da6a3628bba91edb
+    // line 81
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-<<<<<<< HEAD
-        // line 78
-=======
-        // line 79
->>>>>>> 003ad4e8ca88d8fc5ab0c9f6da6a3628bba91edb
+        // line 82
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/Stock.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-<<<<<<< HEAD
-        // line 79
-=======
-        // line 80
->>>>>>> 003ad4e8ca88d8fc5ab0c9f6da6a3628bba91edb
+        // line 83
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
@@ -264,11 +256,7 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
     public function getDebugInfo()
     {
-<<<<<<< HEAD
-        return array (  226 => 79,  221 => 78,  214 => 77,  195 => 65,  191 => 64,  183 => 60,  174 => 54,  171 => 53,  169 => 52,  162 => 48,  155 => 44,  148 => 40,  138 => 33,  134 => 32,  123 => 24,  109 => 12,  102 => 11,  91 => 7,  84 => 6,  74 => 3,  67 => 2,  60 => 77,  58 => 11,  54 => 10,  52 => 6,  49 => 5,  47 => 2,  44 => 1,);
-=======
-        return array (  227 => 80,  222 => 79,  215 => 78,  197 => 67,  193 => 66,  185 => 62,  175 => 56,  172 => 54,  170 => 53,  163 => 49,  156 => 45,  149 => 41,  139 => 34,  135 => 33,  123 => 25,  109 => 12,  102 => 11,  91 => 7,  84 => 6,  74 => 3,  67 => 2,  60 => 78,  58 => 11,  54 => 10,  52 => 6,  49 => 5,  47 => 2,  44 => 1,);
->>>>>>> 003ad4e8ca88d8fc5ab0c9f6da6a3628bba91edb
+        return array (  236 => 83,  231 => 82,  224 => 81,  205 => 69,  201 => 68,  193 => 64,  186 => 59,  182 => 57,  179 => 56,  177 => 55,  170 => 51,  162 => 47,  154 => 42,  144 => 35,  140 => 34,  131 => 27,  127 => 25,  114 => 14,  112 => 13,  109 => 12,  102 => 11,  91 => 7,  84 => 6,  74 => 3,  67 => 2,  60 => 81,  58 => 11,  54 => 10,  52 => 6,  49 => 5,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -285,6 +273,7 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
 \t<div class=\"home_content\">
+\t{% if Title == 'Stock' %}
 \t\t<div class=\"modal fade\" id=\"model\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
 \t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t<div class=\"modal-content\">
@@ -296,8 +285,8 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t<div class=\"StockImg\" style=\" border: solid  1px #f9a826; height:250px;\">
-\t\t\t\t\t\t\t{# <img src=\"/CIRCET-STOCK/public/{{StockPic}}\"> #}
-\t\t\t\t\t\t\t<img src=\"{{asset(StockPic)}}\">
+\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/{{StockPic}}\">
+\t\t\t\t\t\t\t{# <img src=\"{{asset(StockPic)}}\"> #}
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"ImageUpload\">
@@ -317,6 +306,7 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
+\t\t{% endif %}
 \t\t<div class=\"text\">{{PageName}}</div>
 \t\t<div class=\"container\" style=\"display: flex; justify-content: center; align-items: center; height: 80vh;\">
 \t\t\t<div class=\"col-md-9\">
@@ -327,8 +317,8 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
 \t\t\t\t\t\t{% if Title == 'Stock' %}
 \t\t\t\t\t\t\t<div class=\"StockImg\" style=\" border: solid  1px #f9a826; height:250px;\">
-\t\t\t\t\t\t\t\t{# <img src=\"/CIRCET-STOCK/public/{{StockPic}}\"> #}
-\t\t\t\t\t\t\t\t<img src=\"{{asset(StockPic)}}\">
+\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/{{StockPic}}\">
+\t\t\t\t\t\t\t\t{# <img src=\"{{asset(StockPic)}}\"> #}
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"StockImg\">
 \t\t\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\" class=\"start\" data-target=\"#model\">Voir image</button>
@@ -358,6 +348,6 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 \t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
 {% endblock %}
-", "Pages/update/Update.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\update\\Update.html.twig");
+", "Pages/update/Update.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\update\\Update.html.twig");
     }
 }

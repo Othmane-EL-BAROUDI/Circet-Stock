@@ -6,7 +6,6 @@ return [
     '_twig_error_test' => [['code', '_format'], ['_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\BaseController::index'], [], [['text', '/']], [], []],
     'Dashboard' => [[], ['_controller' => 'App\\Controller\\DashboardController::Dashboard'], [], [['text', '/Dashboard']], [], []],
-    'ForgetPassword' => [[], ['_controller' => 'App\\Controller\\ForgetPasswordController::ForgetPassword'], [], [['text', '/ForgetPassword']], [], []],
     'HomePage' => [[], ['_controller' => 'App\\Controller\\HomePageController::HomePage'], [], [['text', '/HomePage']], [], []],
     'Marque' => [[], ['_controller' => 'App\\Controller\\MarqueController::Marque'], [], [['text', '/Marque']], [], []],
     'MarqueUpdate' => [['id'], ['_controller' => 'App\\Controller\\MarqueController::MarqueUpdate'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Marque']], [], []],

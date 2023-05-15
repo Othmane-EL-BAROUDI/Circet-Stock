@@ -10,7 +10,6 @@ return [
     [ // $staticRoutes
         '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\BaseController::index'], null, null, null, false, false, null]],
         '/Dashboard' => [[['_route' => 'Dashboard', '_controller' => 'App\\Controller\\DashboardController::Dashboard'], null, null, null, false, false, null]],
-        '/ForgetPassword' => [[['_route' => 'ForgetPassword', '_controller' => 'App\\Controller\\ForgetPasswordController::ForgetPassword'], null, null, null, false, false, null]],
         '/HomePage' => [[['_route' => 'HomePage', '_controller' => 'App\\Controller\\HomePageController::HomePage'], null, null, null, false, false, null]],
         '/Marque' => [[['_route' => 'Marque', '_controller' => 'App\\Controller\\MarqueController::Marque'], null, null, null, false, false, null]],
         '/Model' => [[['_route' => 'Model', '_controller' => 'App\\Controller\\ModelController::Model'], null, null, null, false, false, null]],

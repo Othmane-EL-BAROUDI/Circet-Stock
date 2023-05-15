@@ -215,7 +215,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t\t</div>
 \t\t\t</form>
 
-\t\t\t<form>
+\t\t\t<form style=\"  position: absolute; right: 45%;\"  >
 \t\t\t\t<div class=\"reload\">
 \t\t\t\t\t<button onclick=\"refreshPage()\"><i class=\"fa-solid fa-rotate-right fa-lg\"></i></button>
 \t\t\t\t</div>
@@ -445,7 +445,7 @@ class __TwigTemplate_8f26bcb0c83e5031984e0625d0a450c44048db52df42b90704adb634c47
 \t\t\t\t</div>
 \t\t\t</form>
 
-\t\t\t<form>
+\t\t\t<form style=\"  position: absolute; right: 45%;\"  >
 \t\t\t\t<div class=\"reload\">
 \t\t\t\t\t<button onclick=\"refreshPage()\"><i class=\"fa-solid fa-rotate-right fa-lg\"></i></button>
 \t\t\t\t</div>

@@ -126,4 +126,5 @@ interface UserManagerInterface
      * @param UserInterface $user
      */
     public function updatePassword(UserInterface $user);
+    
 }

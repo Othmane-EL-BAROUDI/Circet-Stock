@@ -14,7 +14,7 @@
 }
 .sort{
     
-    margin-left: -4%;
+    margin-left: 63%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,12 +23,12 @@
 }
 .sort input{
     padding-left: 18px;
-    width: 100%;
+    width: 40%;
     height: 35px;
     border-radius: 4px;
     border: solid #f9a826 1px;
     color: #f9a826;
-    margin-right: 3px;
+    margin-right: 10px;
 }
 ::placeholder{
     color: #f9a826;
@@ -87,7 +87,7 @@ a{
 }
 .new{
     position: absolute;
-    right: 22;
+    right: 22.4%;
     font-weight: bold;
     width: 15%;
     height: 35px;
@@ -241,6 +241,6 @@ a{
  }
 .main_content{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }

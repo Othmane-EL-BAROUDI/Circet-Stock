@@ -35,7 +35,7 @@
 }
 .body_body > div{
     margin-top: 1%;
-    width: 45%;
+    width: 80%;
    
 }
 .over{
@@ -55,11 +55,11 @@
  }
  .actions button{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 68px; 
+    width: 90px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3px 15px 3px 15px;
+    padding: 3px 18px 3px 18px;
     background: none;
   
  }

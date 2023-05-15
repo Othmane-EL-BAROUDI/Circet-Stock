@@ -36,6 +36,10 @@ class User extends BaseUser
      * @ORM\ManyToMany(targetEntity=Permission::class, inversedBy="user")
      */
     private $user_permission;
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $connected;
 
     public function __construct()
     {
@@ -71,6 +75,18 @@ class User extends BaseUser
     public function setJob(string $job): self
     {
         $this->job = $job;
+
+        
+        return $this;
+    }
+    public function getConnected(): ?bool
+    {
+        return $this->connected;
+    }
+
+    public function setConnected(bool $connected): self
+    {
+        $this->connected = $connected;
 
         return $this;
     }

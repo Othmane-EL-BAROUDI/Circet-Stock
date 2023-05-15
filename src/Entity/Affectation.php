@@ -23,17 +23,15 @@ class Affectation
      * @ORM\Column(type="string", length=255)
      */
     private $date_affectation;
+       /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $description;
 
     /**
      * @ORM\Column(type="boolean")
      */
     private $autocad;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $state;
-
     /**
      * @ORM\ManyToOne(targetEntity=user::class, inversedBy="user_id")
      * @ORM\JoinColumn(nullable=false)
@@ -85,14 +83,14 @@ class Affectation
         return $this;
     }
 
-    public function getState(): ?string
+    public function getDescription(): ?string
     {
-        return $this->state;
+        return $this->description;
     }
 
-    public function setState(string $state): self
+    public function setDescription(string $description): self
     {
-        $this->state = $state;
+        $this->description = $description;
 
         return $this;
     }

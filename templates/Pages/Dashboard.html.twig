@@ -17,7 +17,7 @@
 				</div>
 				<div class="info_container">
 					<label for="name">UTILISATEURS</label>
-					<p>{{usersnbr[1]}}</p>
+					<p>{{usersnbr}}</p>
 				</div>
 			</div>
 			<div>
@@ -26,7 +26,7 @@
 				</div>
 				<div class="info_container">
 					<label for="name">ADMIN</label>
-					<p>{{adminsnbr[1]}}</p>
+					<p>{{adminsnbr}}</p>
 				</div>
 			</div>
 			<div>
@@ -35,7 +35,7 @@
 				</div>
 				<div class="info_container">
 					<label for="name">MATERIELS</label>
-					<p>{{machinesnbr[1]}}</p>
+					<p>{{machinesnbr}}</p>
 				</div>
 			</div>
 			<div>
@@ -44,85 +44,12 @@
 				</div>
 				<div class="info_container">
 					<label for="name">AFFECTATION</label>
-					<p>0</p>
+					<p>{{affecationsnbr}}</p>
 				</div>
 			</div>
 		</div>
 		<div class="body_body">
-			<div class="left">
-                 
-				<div class="text2">Demandes de changement de mot de passe</div>
-                        <div class="over" >
-				      <table class="table align-middle mb-0 bg-white">
-					<thead class="bg-light">
-						<tr>
-							<th>Utilisateurs</th>
-							<th>Matricule</th>
-							<th style="text-align:center;">Actions</th>
-						</tr>
-					</thead>
-					<tbody>
-						
-                                    <tr>
-							<td>
-								<div class="d-flex align-items-center">
-									<div class="ms-3">
-										<p class="fw-bold mb-1">Ayman</p>
-										<p class="text-muted mb-0">Aymangassi972003@gmail.com</p>
-									</div>
-								</div>
-							</td>
-							<td>
-								<p class="text-muted mb-0 mt-2 ">BOWBOW</p>
-							</td>
-
-							<td class="actions">
-								<a href="#">
-									<button type="button" class="bn1 btn  btn-sm btn-rounded mt-1 mr-1" style=" border: #28a745 solid 1px; ">
-										<i class='bx bx-check bx-xs'></i>
-										Accepter
-									</button>
-								</a>
-								<a href="#">
-									<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;">
-										<i class='bx bx-x bx-xs'></i>
-										Refuser
-									</button>
-								</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="d-flex align-items-center">
-									<div class="ms-3">
-										<p class="fw-bold mb-1">Othmane</p>
-										<p class="text-muted mb-0">Othmane@gmail.com</p>
-									</div>
-								</div>
-							</td>
-							<td>
-								<p class="text-muted mb-0 mt-2 ">BAWBAW</p>
-							</td>
-
-							<td class="actions">
-								<a href="#">
-									<button type="button" class="bn1 btn  btn-sm btn-rounded mt-1 mr-1" style=" border: #28a745 solid 1px; ">
-										<i class='bx bx-check bx-xs'></i>
-										Accepter
-									</button>
-								</a>
-								<a href="#">
-									<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;">
-										<i class='bx bx-x bx-xs'></i>
-										Refuser
-									</button>
-								</a>
-							</td>
-						</tr>
-					      </tbody>
-				      </table>
-                         </div>
-			</div>
+			
 
 			<div class="right">
 				<div class="text2">Demande d'affectation</div>
@@ -132,6 +59,9 @@
 				<tr>
 					<th>Utilisateurs</th>
 					<th>Matricule</th>
+					<th>Machine</th>
+					<th>Date de la demande</th>
+					<th>Description</th>
 					<th style="text-align:center;">Actions</th>
 				</tr>
 			</thead>
@@ -141,9 +71,18 @@
 						<div class="d-flex align-items-center">
 							<div class="ms-3">
 								<p class="fw-bold mb-1">Ayman</p>
-								<p class="text-muted mb-0">Want to take <label> DELL G5 - 5500 </label></p>
+								<p class="text-muted mb-0"> <label> Web developer </label></p>
 							</div>
 						</div>
+					</td>
+					<td>
+						<p class="text-muted mb-0 mt-2 ">BOWBOW</p>
+					</td>
+					<td>
+						<p class="text-muted mb-0 mt-2 ">BOWBOW</p>
+					</td>
+					<td>
+						<p class="text-muted mb-0 mt-2 ">BOWBOW</p>
 					</td>
 					<td>
 						<p class="text-muted mb-0 mt-2 ">BOWBOW</p>
@@ -169,13 +108,22 @@
 						<div class="d-flex align-items-center">
 							<div class="ms-3">
 								<p class="fw-bold mb-1">Othmane</p>
-								<p class="text-muted mb-0">Want to take <label> Sonic Screen </label></p>
+								<p class="text-muted mb-0"> <label> Web developer </label></p>
 							</div>
 						</div>
 					</td>
 					<td>
 						<p class="text-muted mb-0 mt-2 ">BAWBAW</p>
 					</td>
+						<td>
+						<p class="text-muted mb-0 mt-2 ">BOWBOW</p>
+					</td>
+					<td>
+						<p class="text-muted mb-0 mt-2 ">BOWBOW</p>
+					</td>
+					<td>
+						<p class="text-muted mb-0 mt-2 ">BOWBOW</p>
+					</td>	
 
 					<td class="actions">
 						<a href="#">

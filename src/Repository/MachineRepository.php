@@ -22,11 +22,16 @@ class MachineRepository extends ServiceEntityRepository
     public function search($searchQuery)
     {
         return $this->createQueryBuilder('m')
-            ->where('m.description LIKE :searchQuery')
+            ->select('m')
+            ->join('m.model', 'p')
+            ->join('p.marque', 'ma')
+            ->where($this->createQueryBuilder('m')->expr()->like('p.model_name', ':searchQuery'))
+            ->orWhere($this->createQueryBuilder('m')->expr()->like('ma.marque_name', ':searchQuery'))
             ->setParameter('searchQuery', $searchQuery . '%')
             ->getQuery()
             ->getResult();
     }
+
 
     // /**
     //  * @return Machine[] Returns an array of Machine objects
