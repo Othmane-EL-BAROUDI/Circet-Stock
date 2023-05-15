@@ -19,6 +19,15 @@ class MachineRepository extends ServiceEntityRepository
         parent::__construct($registry, Machine::class);
     }
 
+    public function search($searchQuery)
+    {
+        return $this->createQueryBuilder('m')
+            ->where('m.description LIKE :searchQuery')
+            ->setParameter('searchQuery', $searchQuery . '%')
+            ->getQuery()
+            ->getResult();
+    }
+
     // /**
     //  * @return Machine[] Returns an array of Machine objects
     //  */

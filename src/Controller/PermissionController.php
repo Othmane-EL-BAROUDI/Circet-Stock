@@ -17,7 +17,8 @@ class PermissionController extends AbstractController
     public function Permission(Request $request , EntityManagerInterface $entityManager): Response
     {
         $entityManager = $this->getDoctrine()->getManager();
-        $allPermissions = $entityManager->getRepository(Permission::class)->findAll();
+        $searchQuery = $request->query->get('search');
+        $allPermissions = $entityManager->getRepository(Permission::class)->search($searchQuery);
         $user = $this->getUser();
 
         $permission = new Permission();

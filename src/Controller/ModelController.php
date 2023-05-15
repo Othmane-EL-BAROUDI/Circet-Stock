@@ -17,7 +17,8 @@ class ModelController extends AbstractController
     public function Model(Request $request , EntityManagerInterface $entityManager): Response
     {
         $entityManager = $this->getDoctrine()->getManager();
-        $allModels = $entityManager->getRepository(Model::class)->findAll();
+        $searchQuery = $request->query->get('search');
+        $allModels = $entityManager->getRepository(Model::class)->search($searchQuery);
         $user = $this->getUser();
 
         $model = new Model();

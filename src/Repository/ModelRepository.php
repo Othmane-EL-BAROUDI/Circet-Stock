@@ -19,6 +19,15 @@ class ModelRepository extends ServiceEntityRepository
         parent::__construct($registry, Model::class);
     }
 
+    public function search($searchQuery)
+    {
+        return $this->createQueryBuilder('m')
+            ->where('m.model_name LIKE :searchQuery')
+            ->setParameter('searchQuery', $searchQuery . '%')
+            ->getQuery()
+            ->getResult();
+    }
+
     // /**
     //  * @return Model[] Returns an array of Model objects
     //  */

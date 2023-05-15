@@ -46,6 +46,7 @@
 
 									{% else %}
 									<img src="/CIRCET-STOCK/public/{{item.getImgSrc()}}" style="width:200px; max-height:200px;" alt="no pic">
+									{# <img src="{{asset(item.getImgSrc())}}" style="width:200px; max-height:200px;" alt="no pic"> #}
 								{% endif %}
 								</div>
 								<div class="pop_desc">
@@ -87,11 +88,11 @@
 				<div class="materiel">
 					<div class="pic">
 						{% if item.getImgSrc() is empty   %}
-									<img src="{{asset('images/laptop.png')}}" style="width:150px;" alt="">
-
-								{% else %}
-									<img src="/CIRCET-STOCK/public/{{item.getImgSrc()}}"  style="width:150px; max-height:150px;" alt="no pic">
-								{% endif %}
+							<img src="{{asset('images/laptop.png')}}" style="width:150px;" alt="">
+						{% else %}
+							<img src="/CIRCET-STOCK/public/{{item.getImgSrc()}}"  style="width:150px; max-height:150px;" alt="no pic">
+							{# <img src="{{asset(item.getImgSrc())}}"  style="width:150px; max-height:150px;" alt="no pic"> #}
+						{% endif %}
 					</div>
 
 					<div class="details">

@@ -21,7 +21,8 @@ class RoleController extends AbstractController
     public function Role(Request $request , EntityManagerInterface $entityManager): Response
     {
         $entityManager = $this->getDoctrine()->getManager();
-        $roles = $entityManager->getRepository(Role::class)->findAll();
+        $searchQuery = $request->query->get('search');
+        $roles = $entityManager->getRepository(Role::class)->search($searchQuery);
         $user = $this->getUser();
 
         $role = new Role();

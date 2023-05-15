@@ -22,7 +22,8 @@ class StockController extends AbstractController
     public function Stock(Request $request, EntityManagerInterface $entityManager): Response
     {
         $entityManager = $this->getDoctrine()->getManager();
-        $results = $entityManager->getRepository(Machine::class)->findAll();
+        $searchQuery = $request->query->get('search');
+        $results = $entityManager->getRepository(Machine::class)->search($searchQuery);
         $user = $this->getUser();
 
         $machine = new Machine();
@@ -139,6 +140,10 @@ class StockController extends AbstractController
                 }
             }
             $entityManager->flush();
+            $this->addFlash(
+                'update',
+                sprintf(' " %s - %s " Mis à jour avec succés.', $stock->getModel()->getMarque()->getMarqueName(), $stock->getModel()->getModelName())
+            );
             return $this->redirectToRoute('Stock');
         }
         return $this->render('Pages/update/Update.html.twig', [
