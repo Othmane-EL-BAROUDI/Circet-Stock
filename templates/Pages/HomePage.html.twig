@@ -5,14 +5,16 @@
 {% block stylesheets %}
 	<link rel="stylesheet" href="{{asset('css/Homepage.css')}}">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 {% endblock %}
 {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
 
 	<div class="home_content">
 		<div class="text">Stock matériel</div>
+		<form action="{{ path('HomePage') }}" method="GET">
 		<div class="sort">
-			<input type="text" placeholder="Rechercher">
+			<input type="text" name="search" placeholder="Rechercher">
 			<select name="machine">
 				<option selected disabled>Type</option>
 				<option value="computer">Ordinateur</option>
@@ -20,14 +22,23 @@
 				<option value="scanner">Scanner</option>
 			</select>
 
-			<button>
-				Sort
+			<button type="submit">
+				Recherche
 			</button>
+			</form>
+			<form >
+				<button onclick="refreshPage()" class="reload">
+					<i class="fa-solid fa-rotate-right fa-lg"></i>
+				</button>
+			</form>
 		</div>
 		<div class="materiel_area">
 
 
 			{% for  item in data %}
+			{% if item %}
+				
+			
 				<div class="modal fade" id="model{{item.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
@@ -103,6 +114,8 @@
 						<button type="button" data-toggle="modal" class="start" data-target="#model{{item.id}}">Détails</button>
 					</div>
 				</div>
+				{% endif %}
+				{% else %} <div class="noData"> <img src="{{asset('images/noData.png')}}" > </div>
 			{% endfor %}
 		</div>
 	</div>

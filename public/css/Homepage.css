@@ -171,3 +171,28 @@ textarea:focus, input:focus , select:focus ,button:focus{
     justify-content: center;
     align-items: center;
 }
+.reload{
+    margin-left: 6px;
+    font-weight: bold;
+    width: 40px;
+    height: 35px;
+    background-color: white;
+    border: solid #f9a826 1px;
+    border-radius: 4px;
+    background-color: #f9a826;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+.noData img{
+    width: 15%;
+    margin-top: 10%;
+}
+.noData{
+    width: 100%;
+    height: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

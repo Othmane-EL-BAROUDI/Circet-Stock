@@ -5,6 +5,7 @@
 {% block stylesheets %}
 	<link rel="stylesheet" href="{{asset('css/Users.css')}}">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 {% endblock %}
 {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
@@ -58,21 +59,34 @@
 				</button>
 			</div>
 		{% endfor %}
-		<div class="text">Utilisateurs</div>
 
+		<div class="text">Utilisateurs</div>
 		<button type="button" class="new" data-toggle="modal" data-target="#addUser">Ajouter un utilisateur</button>
 		<div class="main_content">
-			<div class="sort">
-				<input type="text" placeholder="Rechercher">
-				<select name="role">
-					<option selected disabled>Rôle</option>
-					<option value="manager">Manager</option>
-					<option value="admin">Admin</option>
-				</select>
-				<button>
-					Rechercher
+			<form action="{{ path('Users') }}" method="GET">
+				<div class="sort">
+					<input type="text" placeholder="Rechercher" name="username">
+
+					<select name="role">
+						<option selected disabled>Rôle</option>
+						<option value="manager">Manager</option>
+						<option value="admin">Admin</option>
+					</select>
+
+					<button type="submit">
+						Rechercher
+					</button>
+				</div>
+			</form>
+
+			<form style="  position: absolute; right: 22%;" >
+				<button onclick="refreshPage()" class="reload">
+					<i class="fa-solid fa-rotate-right fa-lg"></i>
 				</button>
-			</div>
+			</form>
+		</div>
+		
+		<div class="CContent">
 			<div class="mainC">
 				<table class="table align-middle mb-0 bg-white">
 					<thead class="bg-light">
@@ -87,6 +101,7 @@
 					<tbody>
 						{% for key , user in allusers %}
 							{% if user.username != userInfo.username %}
+							{% if user %}
 								<tr>
 									<td>
 										<div class="d-flex align-items-center">
@@ -106,9 +121,7 @@
 											{% else %}
 												<span class="badge badge-warning rounded-pill d-inline">Bloqué</span>
 											{% endif %}
-
 										</label>
-
 									</td>
 									<td>
 										<label class="mt-2">{{user.job}}</label>
@@ -127,11 +140,10 @@
 											</button>
 										</a>
 									
-											<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " data-toggle="modal" data-target="#exampleModal{{user.id}}"  style=" border: #dc3545 solid 1px; ">
-												<i class='bx bx-trash bx-xs'></i>
-												Supprimer
-											</button>
-										
+										<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " data-toggle="modal" data-target="#exampleModal{{user.id}}"  style=" border: #dc3545 solid 1px; ">
+											<i class='bx bx-trash bx-xs'></i>
+											Supprimer
+										</button>
 									</td>
 								</tr>
 								<div class="modal fade" id="exampleModal{{user.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -157,14 +169,24 @@
 									</div>
 								</div>
 							{% endif %}
-						{% endfor %}
+							{% endif %}
+						{% else %}
+						<tr>
+							<td>No results found.</td>
+						</tr>
 					</tbody>
+					{% endfor %}
 				</table>
 			</div>
 		</div>
 	</div>
 {% endblock %}
 {% block javascripts %}
+	<script>
+		function refreshPage() {
+			window.location.reload();
+		}
+	</script>
 	<script src="{{asset('JS/sidebar.js')}}"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

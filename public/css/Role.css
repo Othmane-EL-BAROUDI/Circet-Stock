@@ -13,23 +13,22 @@
     margin: 12px;
 }
 .sort{
-   
-    margin-left: 13%;
+    
+    margin-left: 63%;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 500px;
-    padding-bottom: 10px;
     z-index: -1;
 }
 .sort input{
     padding-left: 18px;
-    width: 100%;
+    width: 40%;
     height: 35px;
     border-radius: 4px;
     border: solid #f9a826 1px;
     color: #f9a826;
-    margin-right: 3px;
+    margin-right: 10px;
 }
 ::placeholder{
     color: #f9a826;
@@ -48,9 +47,13 @@
     text-align: center;
     cursor: pointer;
 }
+.reload{
+    width: 45px;
+}
 .reload > button{
+    margin-left: 85px;
     font-weight: bold;
-    width: 15%;
+    width: 40px;
     height: 35px;
     background-color: white;
     border: solid #f9a826 1px;
@@ -60,7 +63,6 @@
     font-size: 14px;
     text-align: center;
     cursor: pointer;
-    margin-top: -10px;
 }
 
 .content{
@@ -85,7 +87,7 @@ a{
 }
 .new{
     position: absolute;
-    right: 22;
+    right: 22.4%;
     font-weight: bold;
     width: 15%;
     height: 35px;
@@ -237,8 +239,8 @@ a{
  .modal{
    margin-top: 10%;
  }
- .main_content{
+.main_content{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
- }
+}
