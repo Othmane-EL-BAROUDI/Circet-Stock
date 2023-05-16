@@ -87,26 +87,31 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
           <i class='bx bx-menu'  id=\"btn\" ></i>
         </div>
         <ul class=\"nav_link\">
+        ";
+        // line 19
+        if (twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 19, $this->source); })()), "Connected", [], "any", false, false, false, 19)) {
+            // line 20
+            echo "        
           <li> 
               <a href=\"";
-        // line 20
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("HomePage");
-        echo "\">
+            // line 22
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("HomePage");
+            echo "\">
                     <i class='bx bx-home'></i>
                     <span class=\"links_name\">Accueil</span>
               </a>
               <span class=\"tooltip\">Accueil</span>
           </li>
            ";
-        // line 26
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 26, $this->source); })()), "roles", [], "any", false, false, false, 26), 0, [], "array", false, false, false, 26) == "ROLE_ADMIN")) {
-            echo " 
+            // line 28
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 28, $this->source); })()), "roles", [], "any", false, false, false, 28), 0, [], "array", false, false, false, 28) == "ROLE_ADMIN")) {
+                echo " 
           
            <li> 
               <a href=\"";
-            // line 29
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Dashboard");
-            echo "\">
+                // line 31
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Dashboard");
+                echo "\">
                     <i class='bx bxs-dashboard' ></i>
                     <span class=\"links_name\">Tableau de bord</span>
               </a>
@@ -115,9 +120,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 
             <li> 
               <a href=\"";
-            // line 37
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Users");
-            echo "\">
+                // line 39
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Users");
+                echo "\">
                     <i class='bx bxs-user-plus'></i>
                     <span class=\"links_name\">Utilisateurs</span>
               </a>
@@ -125,9 +130,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
           </li>
            <li> 
               <a href=\"";
-            // line 44
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Role");
-            echo "\">
+                // line 46
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Role");
+                echo "\">
                    <i class='bx bx-briefcase-alt-2'></i>
                     <span class=\"links_name\"> Rôle</span>
               </a>
@@ -135,9 +140,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
           </li>
           <li> 
               <a href=\"";
-            // line 51
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Permission");
-            echo "\">
+                // line 53
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Permission");
+                echo "\">
                     <i class='bx bx-spreadsheet'></i>
                     <span class=\"links_name\">Permission</span>
               </a>
@@ -145,9 +150,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
           </li>
            <li> 
               <a href=\"";
-            // line 58
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Stock");
-            echo "\">
+                // line 60
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Stock");
+                echo "\">
                     <i class='bx bx-package'></i>
                     <span class=\"links_name\">Stock</span>
               </a>
@@ -155,9 +160,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
           </li>
            <li> 
               <a href=\"";
-            // line 65
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Model");
-            echo "\">
+                // line 67
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Model");
+                echo "\">
                    <i class='bx bx-purchase-tag'></i>
                     <span class=\"links_name\">Modèle</span>
               </a>
@@ -165,9 +170,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
           </li>
            <li> 
               <a href=\"";
-            // line 72
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Marque");
-            echo "\">
+                // line 74
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Marque");
+                echo "\">
                    <i class='bx bx-bookmark-plus'></i>
                     <span class=\"links_name\">Marque</span>
               </a>
@@ -175,11 +180,14 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
           </li>
           
        ";
+            }
+            // line 82
+            echo "       ";
         }
-        // line 80
+        // line 83
         echo "            <li> 
               <a href=\"";
-        // line 81
+        // line 84
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Profile");
         echo "\">
                     <i class='bx bxs-user-rectangle'></i>
@@ -192,22 +200,22 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
             <div class=\"profile\">
                 <div class=\"profile_details\">
                     <img src=\"";
-        // line 91
+        // line 94
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/user.png"), "html", null, true);
         echo "\" alt=\"\">
                     <div class=\"name_role\">
                         <div class=\"name\">";
-        // line 93
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 93, $this->source); })()), "username", [], "any", false, false, false, 93), "html", null, true);
+        // line 96
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 96, $this->source); })()), "username", [], "any", false, false, false, 96), "html", null, true);
         echo "</div>
                         <div class=\"role\">";
-        // line 94
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 94, $this->source); })()), "job", [], "any", false, false, false, 94), "html", null, true);
+        // line 97
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 97, $this->source); })()), "job", [], "any", false, false, false, 97), "html", null, true);
         echo "</div>
                     </div>
                 </div>
                <a href=\"";
-        // line 97
+        // line 100
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_security_logout");
         echo "\"> <i class='bx bx-log-out'  id=\"log_out\" ></i></a>
             </div>
@@ -232,7 +240,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 
     public function getDebugInfo()
     {
-        return array (  211 => 97,  205 => 94,  201 => 93,  196 => 91,  183 => 81,  180 => 80,  169 => 72,  159 => 65,  149 => 58,  139 => 51,  129 => 44,  119 => 37,  108 => 29,  102 => 26,  93 => 20,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  219 => 100,  213 => 97,  209 => 96,  204 => 94,  191 => 84,  188 => 83,  185 => 82,  174 => 74,  164 => 67,  154 => 60,  144 => 53,  134 => 46,  124 => 39,  113 => 31,  107 => 28,  98 => 22,  94 => 20,  92 => 19,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -255,6 +263,8 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
           <i class='bx bx-menu'  id=\"btn\" ></i>
         </div>
         <ul class=\"nav_link\">
+        {% if userInfo.Connected %}
+        
           <li> 
               <a href=\"{{path('HomePage')}}\">
                     <i class='bx bx-home'></i>
@@ -315,6 +325,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
                <span class=\"tooltip\">Marque</span>
           </li>
           
+       {% endif %}
        {% endif %}
             <li> 
               <a href=\"{{path('Profile')}}\">

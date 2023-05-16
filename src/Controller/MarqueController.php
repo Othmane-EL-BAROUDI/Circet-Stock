@@ -21,6 +21,9 @@ class MarqueController extends AbstractController
         $searchQuery = $request->query->get('search');
         $allMarques = $entityManager->getRepository(Marque::class)->search($searchQuery);
         $user = $this->getUser();
+        if( $user->getConnected() == false ){
+            return $this->redirect('Profile');
+        }
 
         $marque = new Marque();
         $form = $this->createForm(MarqueFormType::class, $marque);

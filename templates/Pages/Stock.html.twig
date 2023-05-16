@@ -81,9 +81,12 @@
 					<select name="availability">
 						<option selected disabled>Disponibilité</option>
 					</select>
+<<<<<<< HEAD
 					
 				
 
+=======
+>>>>>>> 4d69b601f0185cbc101b0bfb35f705ad5e87d04e
 					<button type="submit">
 						Rechercher
 					</button>
@@ -178,15 +181,15 @@
 										</div>
 										<div class="modal-body">
 											Voulez-vous vraiment supprimer ce matériel :
-											<label style="  font-weight: bold; color: #f9a826; ">{{machine.model.marque.getMarqueName()}}
+											<p style="   color: #f9a826; ">{{machine.model.marque.getMarqueName()}}
 												-
-												{{machine.model.getModelName()}}</label>
+												{{machine.model.getModelName()}}</p>
 										</div>
 										<div class="modal-footer">
 											<a href="Stock/Remove/{{machine.id}}">
-												<button type="button" class="bn3 btn btn-sm h-4" style=" border: #dc3545 solid 1px;">Supprimer</button>
+												<button type="button" class="bn3 btn  h-5" style=" border: #dc3545 solid 1px;">Supprimer</button>
 											</a>
-											<button type="button" class="btn btn-sm  btn-secondary" data-dismiss="modal">Annuler</button>
+											<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Annuler</button>
 										</div>
 									</div>
 								</div>

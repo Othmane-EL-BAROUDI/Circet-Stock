@@ -14,6 +14,9 @@ class UserProfileController extends AbstractController
     public function UserProfile(): Response
     {
         $user = $this->getUser();
+        if( $user->getConnected() == false ){
+            return $this->redirect('Profile');
+        }
         return $this->render('Pages/UserProfile.html.twig', [
             'controller_name' => 'BaseController',
             'userInfo' => $user,

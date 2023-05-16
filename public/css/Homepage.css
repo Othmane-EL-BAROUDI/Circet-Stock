@@ -21,7 +21,7 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 18px;
-    column-gap: 58px;
+    column-gap: 18px;
     
     
 }
@@ -33,6 +33,9 @@
     border-radius: 8px;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.materiel_area .materiel:hover{
+    transform: scale(1.02);
 }
 .materiel_area .materiel img{
     width: 140px;

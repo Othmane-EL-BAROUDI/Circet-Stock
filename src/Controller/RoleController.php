@@ -54,6 +54,9 @@ class RoleController extends AbstractController
     public function RoleUpdate(Request $request , EntityManagerInterface $entityManager, $id): Response
     {   
         $user = $this->getUser();
+        if( $user->getConnected() == false ){
+            return $this->redirect('Profile');
+        }
 
         $entityManager = $this->getDoctrine()->getManager();
         $role = $entityManager->getRepository(Role::class)->find($id);

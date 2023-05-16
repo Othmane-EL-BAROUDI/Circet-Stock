@@ -22,6 +22,7 @@
 					</div>
 					<div class="modal-body">
 						<div class="StockImg" style=" border: solid  1px #f9a826; height:250px;">
+							{# <img src="/CIRCET-STOCK/public/{{StockPic}}"> #}
 							<img src="{{asset(StockPic)}}">
 						</div>
 					</div>
@@ -53,10 +54,7 @@
 
 						{% if Title == 'Stock' %}
 							<div class="StockImg" style=" border: solid  1px #f9a826; height:250px;">
-<<<<<<< HEAD
-=======
 								{# <img src="/CIRCET-STOCK/public/{{StockPic}}"> #}
->>>>>>> 003ad4e8ca88d8fc5ab0c9f6da6a3628bba91edb
 								<img src="{{asset(StockPic)}}">
 							</div>
 							<div class="StockImg">
@@ -69,7 +67,8 @@
 								<button type="submit" style="background-color:#f9a826;">Mettre à jour</button>
 								{{ form_end(form) }}
 								<a href="{{Path}}">
-									<button type="button" style="background-color: #6c757d">Annuler</button>
+									<button type="button"   style="background-color: #6c757d">Annuler</button>
+									
 								</a>
 							</div>
 						</div>

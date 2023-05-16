@@ -20,6 +20,9 @@ class PermissionController extends AbstractController
         $searchQuery = $request->query->get('search');
         $allPermissions = $entityManager->getRepository(Permission::class)->search($searchQuery);
         $user = $this->getUser();
+        if( $user->getConnected() == false ){
+            return $this->redirect('Profile');
+        }
 
         $permission = new Permission();
         $form = $this->createForm(PermissionFormType::class, $permission);

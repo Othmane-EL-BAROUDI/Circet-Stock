@@ -1,0 +1,42 @@
+.home_content{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition:  all 0.5s ease;
+    overflow-y: scroll  !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.home_content section > div > div > div > div{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.field input{ 
+   width: 100%;
+}
+.buttons button{
+   height: 40px;
+    width: 150px;
+    cursor: pointer;
+  border-radius: 6px;
+}
+.btn1{
+    color: #f9a826;
+    border: #f9a826 solid 1px;
+    background: white;
+}
+.btn1:hover{
+    background-color: #f9a826;
+    color: white;
+}
+.btn2{
+    background-color: #f9a826;
+    color: white;
+    border: none;
+}
+.main_image img{
+    width: 260px;
+    max-width: 280px;
+}

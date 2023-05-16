@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 use App\Entity\User;
+use App\Entity\Affectation;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Doctrine\ORM\EntityManagerInterface;
@@ -14,19 +15,31 @@ class DashboardController extends AbstractController
      */
     public function Dashboard(EntityManagerInterface $entityManager): Response
     {
+        
         $query = $entityManager->createQuery('SELECT COUNT(u) FROM App\Entity\User u');
-        $nbr_of_users = $query->getResult();
+        $nbr_of_users = $query->getSingleScalarResult();
+
         $query = $entityManager->createQuery('SELECT COUNT(u) FROM App\Entity\Machine u');
-        $nbr_of_machines = $query->getResult();
-        $query1 = $entityManager->createQuery('SELECT COUNT(u) FROM App\Entity\User u WHERE u.roles = \'ADMIN\'');
-        $nbr_of_admins = $query1->getResult();
+        $nbr_of_machines =$query->getSingleScalarResult();
+
+        $query = $entityManager->createQuery('SELECT COUNT(u) FROM App\Entity\User u WHERE u.roles LIKE :role');
+        $query->setParameter('role', '%"ROLE_ADMIN"%');
+        $nbr_of_admins = $query->getSingleScalarResult();
+        
+       $query = $entityManager->createQuery('SELECT COUNT(u) FROM App\Entity\Affectation u ');
+        $affecationsnbr= $query->getSingleScalarResult();
+
         $user = $this->getUser();
+        if( $user->getConnected() == false ){
+            return $this->redirect('Profile');
+        }
+
         return $this->render('Pages/Dashboard.html.twig', [
-            'controller_name' => 'BaseController',
             'userInfo' => $user,
-            'usersnbr' => $nbr_of_users[0],
-            'machinesnbr' => $nbr_of_machines[0],
-            'adminsnbr' => $nbr_of_admins[0],
+            'usersnbr' => $nbr_of_users,
+            'machinesnbr' => $nbr_of_machines,
+            'adminsnbr' => $nbr_of_admins,
+            'affecationsnbr' => $affecationsnbr,
         ]);
     }
 }

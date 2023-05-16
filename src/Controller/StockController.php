@@ -25,6 +25,9 @@ class StockController extends AbstractController
         $searchQuery = $request->query->get('search');
         $results = $entityManager->getRepository(Machine::class)->search($searchQuery);
         $user = $this->getUser();
+        if( $user->getConnected() == false ){
+            return $this->redirect('Profile');
+        }
 
         $machine = new Machine();
         $form = $this->createForm(MachineFormType::class, $machine);
@@ -82,6 +85,8 @@ class StockController extends AbstractController
         ]);
     }
 
+    
+
     /**
      * @Route("/Stock/Remove/{id}" , name="StockRemove")
      */
@@ -98,7 +103,7 @@ class StockController extends AbstractController
         return $this->redirectToRoute('Stock');
     }
     /**
-     * @Route("Stock/Edit/{id}" , name="StockUpdate")
+     * @Route("/Stock/Edit/{id}" , name="StockUpdate")
      */
     public function StockUpdate(Request $request, EntityManagerInterface $entityManager, $id): Response
     {
