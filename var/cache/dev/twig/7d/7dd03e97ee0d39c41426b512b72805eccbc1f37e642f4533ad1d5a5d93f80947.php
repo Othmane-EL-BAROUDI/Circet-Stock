@@ -160,12 +160,12 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t";
                 } else {
                     // line 47
-                    echo "\t\t\t\t\t\t\t\t";
-                    // line 48
-                    echo "\t\t\t\t\t\t\t\t<img src=\"";
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(twig_get_attribute($this->env, $this->source, $context["item"], "getImgSrc", [], "method", false, false, false, 48)), "html", null, true);
-                    echo "\" style=\"width:150px; max-height:150px;\" alt=\"no pic\">
-\t\t\t\t\t\t\t";
+                    echo "\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getImgSrc", [], "method", false, false, false, 47), "html", null, true);
+                    echo "\"  style=\"width:150px; max-height:150px;\" alt=\"no pic\">
+\t\t\t\t\t\t\t\t";
+                    // line 49
+                    echo "\t\t\t\t\t\t\t";
                 }
                 // line 50
                 echo "\t\t\t\t\t\t</div>
@@ -204,12 +204,12 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
         }
         if (!$context['_iterated']) {
             // line 68
-            echo "\t\t\t\t\t\t";
-            // line 69
-            echo "\t\t\t\t\t\t<div class=\"noData\">
-\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/noData.png\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t";
+            echo "\t\t\t\t\t\t<div class=\"noData\"> <img src=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/noData.png"), "html", null, true);
+            echo "\" > </div>
+\t\t\t\t\t\t";
+            // line 72
+            echo "\t\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
@@ -260,7 +260,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     public function getDebugInfo()
     {
-        return array (  240 => 80,  235 => 79,  228 => 78,  218 => 73,  209 => 69,  207 => 68,  202 => 67,  193 => 61,  187 => 58,  180 => 54,  176 => 53,  171 => 50,  165 => 48,  163 => 47,  157 => 45,  155 => 44,  149 => 40,  146 => 39,  141 => 38,  115 => 15,  110 => 12,  103 => 11,  91 => 6,  84 => 5,  70 => 2,  63 => 78,  60 => 77,  58 => 11,  54 => 10,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  240 => 80,  235 => 79,  228 => 78,  218 => 73,  212 => 72,  207 => 68,  202 => 67,  193 => 61,  187 => 58,  180 => 54,  176 => 53,  171 => 50,  168 => 49,  163 => 47,  157 => 45,  155 => 44,  149 => 40,  146 => 39,  141 => 38,  115 => 15,  110 => 12,  103 => 11,  91 => 6,  84 => 5,  70 => 2,  63 => 78,  60 => 77,  58 => 11,  54 => 10,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -311,8 +311,8 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t{% if item.getImgSrc() is empty   %}
 \t\t\t\t\t\t\t\t<img src=\"{{asset('images/laptop.png')}}\" style=\"width:150px;\" alt=\"\">
 \t\t\t\t\t\t\t{% else %}
-\t\t\t\t\t\t\t\t{# <img src=\"/CIRCET-STOCK/public/{{item.getImgSrc()}}\"  style=\"width:150px; max-height:150px;\" alt=\"no pic\"> #}
-\t\t\t\t\t\t\t\t<img src=\"{{asset(item.getImgSrc())}}\" style=\"width:150px; max-height:150px;\" alt=\"no pic\">
+\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/{{item.getImgSrc()}}\"  style=\"width:150px; max-height:150px;\" alt=\"no pic\">
+\t\t\t\t\t\t\t\t{# <img src=\"{{asset(item.getImgSrc())}}\" style=\"width:150px; max-height:150px;\" alt=\"no pic\"> #}
 \t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t</div>
 
@@ -332,10 +332,10 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t{% endif %}
 \t\t\t\t\t{% else %}
-\t\t\t\t\t\t{# <div class=\"noData\"> <img src=\"{{asset('images/noData.png')}}\" > </div> #}
-\t\t\t\t\t\t<div class=\"noData\">
+\t\t\t\t\t\t<div class=\"noData\"> <img src=\"{{asset('images/noData.png')}}\" > </div>
+\t\t\t\t\t\t{# <div class=\"noData\">
 \t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/noData.png\">
-\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div> #}
 \t\t\t\t\t{% endfor %}
 \t\t\t\t</div>
 \t\t\t</div>
