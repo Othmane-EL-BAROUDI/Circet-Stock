@@ -33,14 +33,14 @@ class HomePageController extends AbstractController
         ]);
     }
     /**
-     * @Route("/MaterialViw/{id}" , name="MaterialView")
+     * @Route("/materialView/{id}" , name="materialView")
      */
     public function MaterialView($id): Response
     {
         $entityManager = $this->getDoctrine()->getManager();
         $machine = $entityManager->getRepository(Machine::class)->find($id);
         $user = $this->getUser();
-        return $this->render('Pages/view/stockView.html.twig', [
+        return $this->render('Pages/view/materielView.html.twig', [
             'userInfo' => $user,
             'machine' => $machine,
             'Path' => '/HomePage',

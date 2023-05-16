@@ -8,7 +8,7 @@ return [
     'Dashboard' => [[], ['_controller' => 'App\\Controller\\DashboardController::Dashboard'], [], [['text', '/Dashboard']], [], []],
     'AffectationRemove' => [['id'], ['_controller' => 'App\\Controller\\DashboardController::AffectationRemove'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Affecation/Delete']], [], []],
     'HomePage' => [[], ['_controller' => 'App\\Controller\\HomePageController::HomePage'], [], [['text', '/HomePage']], [], []],
-    'MaterialView' => [['id'], ['_controller' => 'App\\Controller\\HomePageController::MaterialView'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/MaterialViw']], [], []],
+    'materialView' => [['id'], ['_controller' => 'App\\Controller\\HomePageController::MaterialView'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/materialView']], [], []],
     'Affectation' => [['id'], ['_controller' => 'App\\Controller\\HomePageController::Affectation'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Affectation']], [], []],
     'Marque' => [[], ['_controller' => 'App\\Controller\\MarqueController::Marque'], [], [['text', '/Marque']], [], []],
     'MarqueUpdate' => [['id'], ['_controller' => 'App\\Controller\\MarqueController::MarqueUpdate'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Marque']], [], []],

@@ -40,13 +40,11 @@ return [
                     .'|ation/Delete/([^/]++)(*:72)'
                     .'|tation/([^/]++)(*:94)'
                 .')'
+                .'|/materialView/([^/]++)(*:124)'
                 .'|/M(?'
-                    .'|a(?'
-                        .'|terialViw/([^/]++)(*:129)'
-                        .'|rque/(?'
-                            .'|([^/]++)(*:153)'
-                            .'|Remove/([^/]++)(*:176)'
-                        .')'
+                    .'|arque/(?'
+                        .'|([^/]++)(*:154)'
+                        .'|Remove/([^/]++)(*:177)'
                     .')'
                     .'|odel/(?'
                         .'|([^/]++)(*:202)'
@@ -81,9 +79,9 @@ return [
         35 => [[['_route' => '_twig_error_test', '_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
         72 => [[['_route' => 'AffectationRemove', '_controller' => 'App\\Controller\\DashboardController::AffectationRemove'], ['id'], null, null, false, true, null]],
         94 => [[['_route' => 'Affectation', '_controller' => 'App\\Controller\\HomePageController::Affectation'], ['id'], null, null, false, true, null]],
-        129 => [[['_route' => 'MaterialView', '_controller' => 'App\\Controller\\HomePageController::MaterialView'], ['id'], null, null, false, true, null]],
-        153 => [[['_route' => 'MarqueUpdate', '_controller' => 'App\\Controller\\MarqueController::MarqueUpdate'], ['id'], null, null, false, true, null]],
-        176 => [[['_route' => 'MarquelRemove', '_controller' => 'App\\Controller\\MarqueController::MarqueDelete'], ['id'], null, null, false, true, null]],
+        124 => [[['_route' => 'materialView', '_controller' => 'App\\Controller\\HomePageController::MaterialView'], ['id'], null, null, false, true, null]],
+        154 => [[['_route' => 'MarqueUpdate', '_controller' => 'App\\Controller\\MarqueController::MarqueUpdate'], ['id'], null, null, false, true, null]],
+        177 => [[['_route' => 'MarquelRemove', '_controller' => 'App\\Controller\\MarqueController::MarqueDelete'], ['id'], null, null, false, true, null]],
         202 => [[['_route' => 'ModelUpdate', '_controller' => 'App\\Controller\\ModelController::ModelUpdate'], ['id'], null, null, false, true, null]],
         225 => [[['_route' => 'ModelRemove', '_controller' => 'App\\Controller\\ModelController::ModelDelete'], ['id'], null, null, false, true, null]],
         258 => [[['_route' => 'PermissionUpdate', '_controller' => 'App\\Controller\\PermissionController::PermissionUpdate'], ['id'], null, null, false, true, null]],
