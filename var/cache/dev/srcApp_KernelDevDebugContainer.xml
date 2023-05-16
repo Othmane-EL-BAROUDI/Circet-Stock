@@ -344,6 +344,9 @@
         <argument type="service" id=".service_locator.E18xQID.App\Controller\UsersController"/>
       </call>
     </service>
+    <service id="App\Form\AffectationFormType" class="App\Form\AffectationFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\MachineFormType" class="App\Form\MachineFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -726,6 +729,7 @@
         <argument>FOS\UserBundle\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\AffectationFormType</argument>
         <argument>App\Form\MachineFormType</argument>
         <argument>App\Form\MachineInfoFormType</argument>
         <argument>App\Form\MachinePictureFormType</argument>
@@ -1027,7 +1031,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.m4zWOry"/>
+      <argument type="service" id=".service_locator.vG8g1yf"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -2203,14 +2207,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -4904,6 +4900,8 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AffectationFormType" class="App\Form\AffectationFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\AffectationFormType" class="App\Form\AffectationFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\MachineFormType" class="App\Form\MachineFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\MachineFormType" class="App\Form\MachineFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\MachineInfoFormType" class="App\Form\MachineInfoFormType" autowire="true" abstract="true"/>
@@ -5315,9 +5313,10 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.m4zWOry" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.vG8g1yf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\AffectationFormType" type="service" id="App\Form\AffectationFormType"/>
         <argument key="App\Form\MachineFormType" type="service" id="App\Form\MachineFormType"/>
         <argument key="App\Form\MachineInfoFormType" type="service" id="App\Form\MachineInfoFormType"/>
         <argument key="App\Form\MachinePictureFormType" type="service" id="App\Form\MachinePictureFormType"/>
