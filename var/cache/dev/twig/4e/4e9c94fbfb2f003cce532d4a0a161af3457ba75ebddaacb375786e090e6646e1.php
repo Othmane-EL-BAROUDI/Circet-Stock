@@ -55,17 +55,19 @@ class __TwigTemplate_07e133236b7d05aca3b9f2f698ca7830c3ca84e7e53cd6a393d46fa33e2
         echo "        ";
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 12
-        echo "
+        echo "         <script src=\"https://code.jquery.com/jquery-3.5.1.js\"></script>
+        <script src=\"https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js\"></script>
+        <script src=\"https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js\"></script>
      
     </head>
     <body>
         ";
-        // line 16
+        // line 18
         $this->displayBlock('body', $context, $blocks);
-        // line 19
+        // line 21
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 22
+        // line 24
         echo "    </body>
 </html>
 ";
@@ -101,14 +103,14 @@ class __TwigTemplate_07e133236b7d05aca3b9f2f698ca7830c3ca84e7e53cd6a393d46fa33e2
 
     }
 
-    // line 16
+    // line 18
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 17
+        // line 19
         echo "           
         ";
         
@@ -116,16 +118,16 @@ class __TwigTemplate_07e133236b7d05aca3b9f2f698ca7830c3ca84e7e53cd6a393d46fa33e2
 
     }
 
-    // line 19
+    // line 21
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 20
+        // line 22
         echo "            ";
-        // line 21
+        // line 23
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -139,7 +141,7 @@ class __TwigTemplate_07e133236b7d05aca3b9f2f698ca7830c3ca84e7e53cd6a393d46fa33e2
 
     public function getDebugInfo()
     {
-        return array (  129 => 21,  127 => 20,  120 => 19,  112 => 17,  105 => 16,  97 => 10,  90 => 9,  78 => 5,  69 => 22,  66 => 19,  64 => 16,  58 => 12,  55 => 9,  50 => 5,  44 => 1,);
+        return array (  131 => 23,  129 => 22,  122 => 21,  114 => 19,  107 => 18,  99 => 10,  92 => 9,  80 => 5,  71 => 24,  68 => 21,  66 => 18,  58 => 12,  55 => 9,  50 => 5,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -155,7 +157,9 @@ class __TwigTemplate_07e133236b7d05aca3b9f2f698ca7830c3ca84e7e53cd6a393d46fa33e2
         {% block stylesheets %}
               
         {% endblock %}
-
+         <script src=\"https://code.jquery.com/jquery-3.5.1.js\"></script>
+        <script src=\"https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js\"></script>
+        <script src=\"https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js\"></script>
      
     </head>
     <body>
@@ -167,6 +171,6 @@ class __TwigTemplate_07e133236b7d05aca3b9f2f698ca7830c3ca84e7e53cd6a393d46fa33e2
         {% endblock %}
     </body>
 </html>
-", "base.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\base.html.twig");
+", "base.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\base.html.twig");
     }
 }

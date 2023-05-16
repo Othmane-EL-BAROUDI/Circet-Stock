@@ -11,14 +11,16 @@
 {% block body %}
 
 	<div class="home_content">
+	
 		<div class="container mt-5 mb-5">
 			<div class="card" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
 				<div class="row g-0">
 					<div class="col-md-6 border-end d-flex flex-column justify-content-center  align-items-center">
 						<div class="d-flex flex-column justify-content-center  align-items-center">
 							<div class="main_image">
-								<img src="/CIRCET-STOCK/public/{{machine.getImgSrc()}}" id="main_product_image">
-								{# <img src="{{asset(machine.getImgSrc())}}" id="main_product_image"> #}
+								<img
+								src="/CIRCET-STOCK/public/{{machine.getImgSrc()}}" id="main_product_image">
+							{# <img src="{{asset(machine.getImgSrc())}}" id="main_product_image"> #}
 							</div>
 
 						</div>
@@ -31,27 +33,25 @@
 									{{machine.model.getModelName()}}</h3>
 
 							</div>
-
+							{{ form_start(form) }}
 							<div class="field mt-4">
-								<span class="fw-bold">Color</span>
-								<input/>
-							</div>
-							<div class="field mt-2">
-								<span class="fw-bold">Color</span>
-								<input/>
-							</div>
-							<div class="field mt-2">
-								<span class="fw-bold">Color</span>
-								<input/>
+								<label>Nom d'utilisateur</label>
+								<input class="form-control" value="{{userInfo.username}}" disabled />
+								<label  >matricule</label>
+								<input class="form-control" value="{{machine.getSerialNum()}}" disabled />
+								<label  >Serial Number de la machine</label>
+								<input class="form-control" value="{{userInfo.matricule}}" disabled />
+								{{ form_widget(form) }}
+
 							</div>
 							<div class="buttons d-flex flex-row mt-4
-																mb-2 gap-3">
+																									mb-2 gap-3">
 								<a href="{{Path}}">
-									<button class="btn1 mr-2">Retourner au stock</button>
+									<button type="button" class="btn1 mr-2">Retourner au stock</button>
 								</a>
-								<button class="btn2 ">Demander</button>
+								<button type="submit" class="btn2 ">Demander</button>
 							</div>
-
+							{{ form_end(form) }}
 						</div>
 					</div>
 				</div>

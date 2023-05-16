@@ -102,7 +102,9 @@ textarea:focus, input:focus , button:focus{
 
 .new{
     position: absolute;
-    right: 73;
+    z-index: 1;
+    right: 80;
+    top:14.5%;
     font-weight: bold;
     width: 15%;
     height: 35px;
@@ -194,12 +196,11 @@ textarea:focus, input:focus , select:focus ,button:focus{
     outline: none;
 }
 .mainC{
-  
-    max-height: 75%;
+    max-height: 80%;
     width: 90%;
     margin-left: 5%;
-    margin-top: 1%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 2%;
+    overflow-x: hidden;
  }
  .mainC{
     overflow-y: scroll !important; 
@@ -228,26 +229,26 @@ textarea:focus, input:focus , select:focus ,button:focus{
     text-decoration: none !important;
  }
  .bn1{
-    color: #28a745;
+    color: #28a745 !important ;
  }
  .bn2{
-    color: #007bff;
+    color: #007bff  !important;
  }
  .bn3{
-    color: #dc3545;
+    color: #dc3545 !important;
     background-color: white;
  }
  .bn1:hover{
     background-color: #28a745;
-    color: white;
+    color: white !important;
  }
  .bn2:hover{
     background-color: #007bff;
-    color: white;
+    color: white !important;
  }
  .bn3:hover{
     background-color: #dc3545;
-    color: white;
+    color: white !important;
  }
 
  .main_content{
@@ -257,3 +258,9 @@ textarea:focus, input:focus , select:focus ,button:focus{
     align-items: center;
     width: 80%;
  }
+ .page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #e9f4ff;
+    border-color: #ffffff;
+}

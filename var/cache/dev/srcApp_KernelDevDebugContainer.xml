@@ -344,6 +344,9 @@
         <argument type="service" id=".service_locator.E18xQID.App\Controller\UsersController"/>
       </call>
     </service>
+    <service id="App\Form\AffectationFormType" class="App\Form\AffectationFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\MachineFormType" class="App\Form\MachineFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -726,6 +729,7 @@
         <argument>FOS\UserBundle\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\AffectationFormType</argument>
         <argument>App\Form\MachineFormType</argument>
         <argument>App\Form\MachineInfoFormType</argument>
         <argument>App\Form\MachinePictureFormType</argument>
@@ -1027,7 +1031,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.m4zWOry"/>
+      <argument type="service" id=".service_locator.vG8g1yf"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4896,6 +4900,8 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AffectationFormType" class="App\Form\AffectationFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\AffectationFormType" class="App\Form\AffectationFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\MachineFormType" class="App\Form\MachineFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\MachineFormType" class="App\Form\MachineFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\MachineInfoFormType" class="App\Form\MachineInfoFormType" autowire="true" abstract="true"/>
@@ -5201,10 +5207,12 @@
         <argument key="entityManager" type="service" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.Ci.tQfu" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.sZUD3GL" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Controller\DashboardController::AffectationRemove" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\DashboardController::Dashboard" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\HomePageController::Affectation" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\HomePageController::HomePage" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\MarqueController::Marque" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\MarqueController::MarqueDelete" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5225,7 +5233,9 @@
         <argument key="App\Controller\UsersController::UserUpdate" type="service" id=".service_locator.Hm8CUXV"/>
         <argument key="App\Controller\UsersController::UserView" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController::Users" type="service" id=".service_locator.Hm8CUXV"/>
+        <argument key="App\Controller\DashboardController:AffectationRemove" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\DashboardController:Dashboard" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\HomePageController:Affectation" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\HomePageController:HomePage" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\MarqueController:Marque" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\MarqueController:MarqueDelete" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5307,9 +5317,10 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.m4zWOry" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.vG8g1yf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\AffectationFormType" type="service" id="App\Form\AffectationFormType"/>
         <argument key="App\Form\MachineFormType" type="service" id="App\Form\MachineFormType"/>
         <argument key="App\Form\MachineInfoFormType" type="service" id="App\Form\MachineInfoFormType"/>
         <argument key="App\Form\MachinePictureFormType" type="service" id="App\Form\MachinePictureFormType"/>
@@ -5581,12 +5592,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.Ci.tQfu"/>
+      <argument type="service" id=".service_locator.sZUD3GL"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.Ci.tQfu"/>
+      <argument type="service" id=".service_locator.sZUD3GL"/>
     </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.aPyppP2"/>
@@ -5906,7 +5917,7 @@
     <service id="mailer" alias="swiftmailer.mailer.default" public="true"/>
     <service id="sensio_framework_extra.converter.doctrine.orm.expression_language" alias="sensio_framework_extra.converter.doctrine.orm.expression_language.default" public="false"/>
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.Ci.tQfu"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.sZUD3GL"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>

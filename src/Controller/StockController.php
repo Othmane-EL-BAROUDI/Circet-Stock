@@ -22,8 +22,7 @@ class StockController extends AbstractController
     public function Stock(Request $request, EntityManagerInterface $entityManager): Response
     {
         $entityManager = $this->getDoctrine()->getManager();
-        $searchQuery = $request->query->get('search');
-        $results = $entityManager->getRepository(Machine::class)->search($searchQuery);
+        $results = $entityManager->getRepository(Machine::class)->findAll();
         $user = $this->getUser();
         if( $user->getConnected() == false ){
             return $this->redirect('Profile');
