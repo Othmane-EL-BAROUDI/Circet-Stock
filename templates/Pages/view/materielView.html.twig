@@ -6,6 +6,19 @@
 	<link rel="stylesheet" href="{{asset('css/Homepage.css')}}">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+	<style>
+		.back{
+			position: absolute;
+			color: white;
+			top: 5;
+			left: 5;
+		}
+		.back a{
+			color: white;
+			text-decoration: none;
+		}
+	</style>
 {% endblock %}
 {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
@@ -13,8 +26,120 @@
 	<div class="home_content">
 		<div class="text">Matériel</div>
 		
+		<section>
+			<div class="container py-5">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="card mb-4">
+							<div class="card-body text-center pt-5 pb-5"  style="height: 440px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+								<a class="back" href="{{Path}}">
+									<i class='bx bxs-share  bx-md'  style="color:black;"> </i>
+								</a>
+
+								<div style="height: 100%; display: flex; justify-content: center; align-items: center;">
+									<div>
+										{% if machine.getImgSrc() is empty   %}
+											<img src="{{asset('images/laptop.png')}}" style="width:155px;" alt="">
+										{% else %}
+											<img src="{{asset(machine.getImgSrc())}}" style="width:150px;" alt="no pic">
+											{# <img src="/CIRCET-STOCK/public/{{machine.getImgSrc()}}" style="max-width:160px; max-height:125px;" alt="no pic"> #}
+										{% endif %}
+
+										<h5 class="mt-5">
+											{{machine.model.marque.getMarqueName()}}
+											-
+											{{machine.model.getModelName()}}
+										</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="col-lg-8">
+						<div class="card mb-4">
+							<div class="card-body" style="height: 440px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+								<div class="row">
+									<div class="col-sm-3">
+										<p class="mb-0">Type</p>
+									</div>
+									<div class="col-sm-9">
+										<p class="text-muted mb-0">{{machine.model.getType()}}</p>
+									</div>
+								</div>
+								<hr>
+								<div class="row">
+									<div class="col-sm-3">
+										<p class="mb-0">Numéro de série</p>
+									</div>
+									<div class="col-sm-9">
+										<p class="text-muted mb-0">{{machine.getSerialNum()}}</p>
+									</div>
+								</div>
+								<hr>
+								<div class="row">
+									<div class="col-sm-3">
+										<p class="mb-0">État</p>
+									</div>
+									<div class="col-sm-9">
+										<p class="text-muted mb-0">{{machine.state}}</p>
+									</div>
+								</div>
+								<hr>
+								<div class="row">
+									<div class="col-sm-3">
+										<p class="mb-0">Disponibilité</p>
+									</div>
+									<div class="col-sm-9">
+										<p class="text-muted mb-0 mt-2">
+											{% if machine.available == 1 %}
+												<span class="badge badge-success rounded-pill d-inline pl-3 pr-3">Oui</span>
+											{% else %}
+												<span class="badge badge-warning rounded-pill d-inline pl-3 pr-3">Non</span>
+											{% endif %}
+										</p>
+									</div>
+								</div>
+								<hr>
+								<div class="row">
+									<div class="col-sm-3">
+										<p class="mb-0">Mac ethernet</p>
+									</div>
+									<div class="col-sm-9">
+										<p class="text-muted mb-0 mt-1">
+											{{machine.getMacEthernet()}}
+										</p>
+									</div>
+								</div>
+								<hr>
+								<div class="row">
+									<div class="col-sm-3">
+										<p class="mb-0">Mac wifi</p>
+									</div>
+									<div class="col-sm-9">
+										<p class="text-muted mb-0">
+											{{machine.getMacWifi()}}
+										</p>
+									</div>
+								</div>
+								<hr>
+								<div class="row">
+									<div class="col-sm-3">
+										<p class="mb-0">Description</p>
+									</div>
+									<div class="col-sm-9" style="height: 56px; overflow-y: auto;">
+										<p class="text-muted mb-0">
+											ssss sssss sssss ssssssssss sssss sssss ssssssssss sssss sssss ssssssssss sssss sssss ssssssssss sssss sssss ssssssssss sssss sssss ssssssssss sssss sssss ssssssssss sssss sssss ssssssssss sssss sssss ssssssssss sssss sssss ssssssssss sssss sssss ssssss
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>					
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
-			
 		{% endblock %}
 
 		{% block javascripts %}

@@ -188,7 +188,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
                 echo "\">
 \t\t\t\t\t\t\t\t<button>Demande</button>
 \t\t\t\t\t\t\t\t<a/>
-\t\t\t\t\t\t\t\t<a href=\"MaterialViw/";
+\t\t\t\t\t\t\t\t<a href=\"materialView/";
                 // line 61
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 61), "html", null, true);
                 echo "\">
@@ -325,7 +325,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t\t<a href=\"Affectation/{{item.id}}\">
 \t\t\t\t\t\t\t\t<button>Demande</button>
 \t\t\t\t\t\t\t\t<a/>
-\t\t\t\t\t\t\t\t<a href=\"MaterialViw/{{item.id}}\">
+\t\t\t\t\t\t\t\t<a href=\"materialView/{{item.id}}\">
 \t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"start\">Détails</button>
 \t\t\t\t\t\t\t\t\t<a/>
 \t\t\t\t\t\t\t\t</div>
@@ -342,37 +342,6 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t
 \t\t{% endblock %}
 
-<<<<<<< HEAD
-\t\t\t\t\t\t\t\t{% else %}
-\t\t\t\t\t\t\t\t\t<img src=\"{{asset(item.getImgSrc())}}\"  style=\"width:150px; max-height:150px;\" alt=\"no pic\">
-\t\t\t\t\t\t\t\t{% endif %}
-\t\t\t\t\t</div>
-
-\t\t\t\t\t<div class=\"details\">
-\t\t\t\t\t\t<label for=\"name\">{{item.model.marque.getMarqueName()}}
-\t\t\t\t\t\t\t{{item.model.getModelName()}}</label>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"action\">
-\t\t\t\t\t\t<button>Demande</button>
-\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\" class=\"start\" data-target=\"#model{{item.id}}\">Détails</button>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t{% endif %}
-\t\t\t\t{% else %} <div class=\"noData\"> <img src=\"{{asset('images/noData.png')}}\" > </div>
-\t\t\t{% endfor %}
-\t\t</div>
-\t</div>
-{% endblock %}
-
-{% block javascripts %}
-\t<script src=\"{{asset('JS/HomePage.js')}}\"></script>
-\t<script src=\"{{asset('JS/sidebar.js')}}\"></script>
-\t<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
-\t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
-\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
-{% endblock %}
-", "Pages/homePage.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\HomePage.html.twig");
-=======
 \t\t{% block javascripts %}
 \t\t\t<script src=\"{{asset('JS/HomePage.js')}}\"></script>
 \t\t\t<script src=\"{{asset('JS/sidebar.js')}}\"></script>
@@ -380,7 +349,6 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 \t\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
 \t\t{% endblock %}
-", "Pages/homePage.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\HomePage.html.twig");
->>>>>>> 4d69b601f0185cbc101b0bfb35f705ad5e87d04e
+", "Pages/homePage.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\HomePage.html.twig");
     }
 }
