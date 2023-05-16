@@ -1,6 +1,6 @@
 <title>
 	{% block title %}
-		{{Title}}
+		Affectation
 	{% endblock %}
 </title>
 {% block stylesheets %}
@@ -9,9 +9,53 @@
 {% endblock %}
 {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
+
 	<div class="home_content">
-    </div>
+		<div class="container mt-5 mb-5">
+			<div class="card" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
+				<div class="row g-0">
+					<div class="col-md-6 border-end d-flex flex-column justify-content-center  align-items-center">
+						<div class="d-flex flex-column justify-content-center  align-items-center">
+							<div class="main_image">
+								<img src="{{asset(machine.getImgSrc())}}" id="main_product_image">
+							</div>
+
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="p-3 right-side">
+							<div class="d-flex justify-content-between align-items-center">
+								<h3>Demande d'affectation pour
+									{{machine.model.marque.getMarqueName()}}
+									{{machine.model.getModelName()}}</h3>
+
+							</div>
+
+							<div class="field mt-4">
+								<span class="fw-bold">Color</span>
+								<input/>
+							</div>
+							<div class="field mt-2">
+								<span class="fw-bold">Color</span>
+								<input/>
+							</div>
+							<div class="field mt-2">
+								<span class="fw-bold">Color</span>
+								<input/>
+							</div>
+							<div class="buttons d-flex flex-row mt-4
+																mb-2 gap-3">
+								<a href="{{Path}}">
+									<button class="btn1 mr-2">Retourner au stock</button>
+								</a>
+								<button class="btn2 ">Demander</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}
-{% block javascripts %}
-	
-{% endblock %}
+{% block javascripts %}{% endblock %}

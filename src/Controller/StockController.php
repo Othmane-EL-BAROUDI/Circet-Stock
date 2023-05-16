@@ -85,6 +85,8 @@ class StockController extends AbstractController
         ]);
     }
 
+    
+
     /**
      * @Route("/Stock/Remove/{id}" , name="StockRemove")
      */
