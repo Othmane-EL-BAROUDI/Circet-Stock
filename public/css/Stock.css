@@ -95,10 +95,7 @@ textarea:focus, input:focus , button:focus{
     background:#f9a826;
   }
 .new{
-    position: absolute;
-    right: 80;
-    z-index: 1;
-    top:14.5%;
+    margin-left: 80%;
     font-weight: bold;
     width: 15%;
     height: 35px;
