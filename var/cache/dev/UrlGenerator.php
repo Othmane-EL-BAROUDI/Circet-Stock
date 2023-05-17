@@ -6,6 +6,7 @@ return [
     '_twig_error_test' => [['code', '_format'], ['_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\BaseController::index'], [], [['text', '/']], [], []],
     'Dashboard' => [[], ['_controller' => 'App\\Controller\\DashboardController::Dashboard'], [], [['text', '/Dashboard']], [], []],
+    'AffectationRemove' => [['id'], ['_controller' => 'App\\Controller\\DashboardController::AffectationRemove'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Affecation/Delete']], [], []],
     'HomePage' => [[], ['_controller' => 'App\\Controller\\HomePageController::HomePage'], [], [['text', '/HomePage']], [], []],
     'materialView' => [['id'], ['_controller' => 'App\\Controller\\HomePageController::MaterialView'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/materialView']], [], []],
     'Affectation' => [['id'], ['_controller' => 'App\\Controller\\HomePageController::Affectation'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Affectation']], [], []],

@@ -6,17 +6,22 @@ use App\Entity\Affectation;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class AffectationFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('date_affectation')
-            ->add('description')
-            ->add('autocad')
-            ->add('user')
-            ->add('machine')
+           
+            ->add('description', TextareaType::class, [
+                'attr' => array(
+                    'placeholder' => '@Description',
+                    'style' => ' width:100%;  height:90px; resize: none;',
+                    'class' => 'form-control',
+                ),
+                'required' => true,
+            ])
         ;
     }
 

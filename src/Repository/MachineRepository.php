@@ -19,15 +19,16 @@ class MachineRepository extends ServiceEntityRepository
         parent::__construct($registry, Machine::class);
     }
 
-    public function search($searchQuery)
+    public function search($searchQuery,$searchQuery2)
     {
         return $this->createQueryBuilder('m')
             ->select('m')
             ->join('m.model', 'p')
             ->join('p.marque', 'ma')
-            ->where($this->createQueryBuilder('m')->expr()->like('p.model_name', ':searchQuery'))
-            ->orWhere($this->createQueryBuilder('m')->expr()->like('ma.marque_name', ':searchQuery'))
-            ->setParameter('searchQuery', $searchQuery . '%')
+            ->where($this->createQueryBuilder('m')->expr()->like('p.model_name', ':ModelQuery'))
+            ->andWhere($this->createQueryBuilder('m')->expr()->like('ma.marque_name', ':MarqueQuery'))
+            ->setParameter('ModelQuery', $searchQuery . '%')
+            ->setParameter('MarqueQuery', $searchQuery2 . '%')
             ->getQuery()
             ->getResult();
     }

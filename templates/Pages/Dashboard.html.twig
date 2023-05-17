@@ -5,10 +5,20 @@
 {% block stylesheets %}
 	<link rel="stylesheet" href="{{asset('css/Dashboard.css')}}">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 {% endblock %}
 {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
 	<div class="home_content">
+
+		{% for flash_message in app.session.flashbag.get('delete') %}
+			<div class="alert  alert-danger fade show" role="alert">
+				{{flash_message}}
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		{% endfor %}
 		<div class="text">Tableau de bord</div>
 		<div class="body_header">
 			<div>
@@ -49,100 +59,81 @@
 			</div>
 		</div>
 		<div class="body_body">
-			
+
 
 			<div class="right">
 				<div class="text2">Demande d'affectation</div>
-                         <div class="over" >
-				<table class="table align-middle mb-0 bg-white">
-			<thead class="bg-light">
-				<tr>
-					<th>Utilisateurs</th>
-					<th>Matricule</th>
-					<th>Machine</th>
-					<th>Date de la demande</th>
-					<th>Description</th>
-					<th style="text-align:center;">Actions</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						<div class="d-flex align-items-center">
-							<div class="ms-3">
-								<p class="fw-bold mb-1">Ayman</p>
-								<p class="text-muted mb-0"> <label> Web developer </label></p>
-							</div>
-						</div>
-					</td>
-					<td>
-						<p class="text-muted mb-0 mt-2 ">BOWBOW</p>
-					</td>
-					<td>
-						<p class="text-muted mb-0 mt-2 ">BOWBOW</p>
-					</td>
-					<td>
-						<p class="text-muted mb-0 mt-2 ">BOWBOW</p>
-					</td>
-					<td>
-						<p class="text-muted mb-0 mt-2 ">BOWBOW</p>
-					</td>
+				<div class="over">
+					<table class="table align-middle mb-0 bg-white">
+						<thead class="bg-light">
+							<tr>
+								<th>Utilisateurs</th>
+								<th>Matricule</th>
+								<th>Machine</th>
+								<th>Date de la demande</th>
+								<th>Description</th>
+								<th style="text-align:center;">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for item in AllAffectations %}
 
-					<td class="actions">
-						<a href="#">
-							<button type="button" class="bn1 btn  btn-sm btn-rounded mt-1 mr-1" style=" border: #28a745 solid 1px; ">
-								<i class='bx bx-check bx-xs'></i>
-								Accepter
-							</button>
-						</a>
-						<a href="#">
-							<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;">
-								<i class='bx bx-x bx-xs'></i>
-								Refuser
-							</button>
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="d-flex align-items-center">
-							<div class="ms-3">
-								<p class="fw-bold mb-1">Othmane</p>
-								<p class="text-muted mb-0"> <label> Web developer </label></p>
-							</div>
-						</div>
-					</td>
-					<td>
-						<p class="text-muted mb-0 mt-2 ">BAWBAW</p>
-					</td>
-						<td>
-						<p class="text-muted mb-0 mt-2 ">BOWBOW</p>
-					</td>
-					<td>
-						<p class="text-muted mb-0 mt-2 ">BOWBOW</p>
-					</td>
-					<td>
-						<p class="text-muted mb-0 mt-2 ">BOWBOW</p>
-					</td>	
 
-					<td class="actions">
-						<a href="#">
-							<button type="button" class="bn1 btn  btn-sm btn-rounded mt-1 mr-1" style=" border: #28a745 solid 1px; ">
-								<i class='bx bx-check bx-xs'></i>
-								Accepter
-							</button>
-						</a>
-						<a href="#">
-							<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;">
-								<i class='bx bx-x bx-xs'></i>
-								Refuser
-							</button>
-						</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-             </div>
-	</div>
-</div>
-{% endblock %}{% block javascripts %}<script src="{{asset('JS/sidebar.js')}}"></script>{% endblock %}
+								<tr>
+									<td>
+										<div class="d-flex align-items-center">
+											<div class="ms-3">
+												<p class="fw-bold mb-1">{{item.getUserAffectation().getUsername()}}</p>
+												<p class="text-muted mb-0">
+													<label>
+														{{item.getUserAffectation().getJob()}}
+													</label>
+												</p>
+											</div>
+										</div>
+									</td>
+									<td>
+										<p class="text-muted mb-0 mt-2 ">{{item.getUserAffectation().getMatricule()}}
+										</p>
+									</td>
+									<td>
+										<p class="text-muted mb-0 mt-2 ">
+											{{item.getMachineAffectation().model.marque.getMarqueName()}}
+											{{item.getMachineAffectation().model.getModelName()}}
+										</p>
+									</td>
+									<td>
+										<p class="text-muted mb-0 mt-2 ">{{item.getDateAffectation()}}</p>
+									</td>
+									<td>
+										<p class="text-muted mb-0 mt-2 ">{{item.getDescription()}}</p>
+									</td>
+
+									<td class="actions">
+										<a href="#">
+											<button type="button" class="bn1 btn  btn-sm btn-rounded mt-1 mr-1" style=" border: #28a745 solid 1px; ">
+												<i class='bx bx-check bx-xs'></i>
+												Accepter
+											</button>
+										</a>
+										<a href="Affecation/Delete/{{item.id}}">
+											<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;">
+												<i class='bx bx-x bx-xs'></i>
+												Refuser
+											</button>
+										</a>
+									</td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	{% endblock %}
+	{% block javascripts %}
+		<script src="{{asset('JS/sidebar.js')}}"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	{% endblock %}

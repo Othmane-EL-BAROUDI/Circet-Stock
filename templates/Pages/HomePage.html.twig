@@ -11,10 +11,20 @@
 {% block body %}
 
 	<div class="home_content">
+		{% for flash_message in app.session.flashbag.get('success') %}
+			<div class="alert  alert-success fade show" role="alert">
+				<strong>Succès!</strong>
+				{{flash_message}}
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		{% endfor %}
 		<div class="text">Stock matériel</div>
 		<form action="{{ path('HomePage') }}" method="GET">
 			<div class="sort">
-				<input type="text" name="search" placeholder="Rechercher">
+				<input type="text" name="ModelSearch" placeholder="@model">
+				<input type="text" name="MarqueSearch" placeholder="@marque">
 				<select name="machine">
 					<option selected disabled>Type</option>
 					<option value="computer">Ordinateur</option>
@@ -50,8 +60,8 @@
 						</div>
 
 						<div class="details">
-							<p class="small text-muted">{{item.model.marque.getMarqueName()}}
-								{{item.model.getModelName()}}</p>
+							<p class="small text-muted">{{item.model.type}}
+								</p>
 								
 						</div>
 						<div class="action">
@@ -65,10 +75,10 @@
 							</div>
 						{% endif %}
 					{% else %}
-						{# <div class="noData"> <img src="{{asset('images/noData.png')}}" > </div> #}
-						<div class="noData">
+						<div class="noData"> <img src="{{asset('images/noData.png')}}" > </div>
+						{# <div class="noData">
 							<img src="/CIRCET-STOCK/public/images/noData.png">
-						</div>
+						</div> #}
 					{% endfor %}
 				</div>
 			</div>

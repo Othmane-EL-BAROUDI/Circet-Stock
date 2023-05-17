@@ -2,10 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\AffectationRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use App\Entity\Restitution;
+use App\Entity\Machine;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\AffectationRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass=AffectationRepository::class)
