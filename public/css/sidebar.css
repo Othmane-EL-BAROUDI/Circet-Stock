@@ -125,6 +125,11 @@ body{
     top: 15%;
     opacity: 1;
 }
+.sidebar ul li:hover .nbrNotifications{
+   background-color: white;
+   color: #f9a826 !important;
+   
+}
 .sidebar ul li a {
     color: white;
     display: flex;
@@ -217,4 +222,64 @@ body{
 .sidebar.active ~ .home_content{
     width: calc(100% -240px);
     left: 240px;
+}
+.nbrNotifications{
+    color:#f9a826 !important;
+    background-color:white;
+    font-weight: bold;
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 2px;
+    left: 78;
+}
+.notifications{
+    
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 10;
+}
+.dropdown-toggle{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 38px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: #f9a826;
+    color: white;
+}
+.dropdown-menu{
+   
+    width: 270px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    text-align: center;
+}
+.dropdown-menu ul li{
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    max-height: 100px !important;
+}
+.dropdown-menu ul li img{
+    width: 30px !important;
+    
+}
+.dropdown-menu ul p{
+    margin-top: 8px;
+    margin-left: 8px;
+    text-align: left;
 }

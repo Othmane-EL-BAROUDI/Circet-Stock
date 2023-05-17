@@ -122,12 +122,13 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t<div class=\"StockImg\" style=\" border: solid  1px #f9a826; height:250px;\">
-\t\t\t\t\t\t\t";
-            // line 26
-            echo "\t\t\t\t\t\t\t<img src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl((isset($context["StockPic"]) || array_key_exists("StockPic", $context) ? $context["StockPic"] : (function () { throw new RuntimeError('Variable "StockPic" does not exist.', 26, $this->source); })())), "html", null, true);
+\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/";
+            // line 25
+            echo twig_escape_filter($this->env, (isset($context["StockPic"]) || array_key_exists("StockPic", $context) ? $context["StockPic"] : (function () { throw new RuntimeError('Variable "StockPic" does not exist.', 25, $this->source); })()), "html", null, true);
             echo "\">
-\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t";
+            // line 27
+            echo "\t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"ImageUpload\">
 \t\t\t\t\t\t<button type=\"button\" class=\"mb-3\">
@@ -176,12 +177,13 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
         if (((isset($context["Title"]) || array_key_exists("Title", $context) ? $context["Title"] : (function () { throw new RuntimeError('Variable "Title" does not exist.', 55, $this->source); })()) == "Stock")) {
             // line 56
             echo "\t\t\t\t\t\t\t<div class=\"StockImg\" style=\" border: solid  1px #f9a826; height:250px;\">
-\t\t\t\t\t\t\t\t";
-            // line 58
-            echo "\t\t\t\t\t\t\t\t<img src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl((isset($context["StockPic"]) || array_key_exists("StockPic", $context) ? $context["StockPic"] : (function () { throw new RuntimeError('Variable "StockPic" does not exist.', 58, $this->source); })())), "html", null, true);
+\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/";
+            // line 57
+            echo twig_escape_filter($this->env, (isset($context["StockPic"]) || array_key_exists("StockPic", $context) ? $context["StockPic"] : (function () { throw new RuntimeError('Variable "StockPic" does not exist.', 57, $this->source); })()), "html", null, true);
             echo "\">
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t";
+            // line 59
+            echo "\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"StockImg\">
 \t\t\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\" class=\"start\" data-target=\"#model\">Voir image</button>
 \t\t\t\t\t\t\t</div>
@@ -254,7 +256,7 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
     public function getDebugInfo()
     {
-        return array (  234 => 83,  229 => 82,  222 => 81,  203 => 69,  199 => 68,  191 => 64,  181 => 58,  178 => 56,  176 => 55,  169 => 51,  161 => 47,  153 => 42,  143 => 35,  139 => 34,  127 => 26,  114 => 14,  112 => 13,  109 => 12,  102 => 11,  91 => 7,  84 => 6,  74 => 3,  67 => 2,  60 => 81,  58 => 11,  54 => 10,  52 => 6,  49 => 5,  47 => 2,  44 => 1,);
+        return array (  236 => 83,  231 => 82,  224 => 81,  205 => 69,  201 => 68,  193 => 64,  186 => 59,  182 => 57,  179 => 56,  177 => 55,  170 => 51,  162 => 47,  154 => 42,  144 => 35,  140 => 34,  131 => 27,  127 => 25,  114 => 14,  112 => 13,  109 => 12,  102 => 11,  91 => 7,  84 => 6,  74 => 3,  67 => 2,  60 => 81,  58 => 11,  54 => 10,  52 => 6,  49 => 5,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -283,8 +285,8 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t<div class=\"StockImg\" style=\" border: solid  1px #f9a826; height:250px;\">
-\t\t\t\t\t\t\t{# <img src=\"/CIRCET-STOCK/public/{{StockPic}}\"> #}
-\t\t\t\t\t\t\t<img src=\"{{asset(StockPic)}}\">
+\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/{{StockPic}}\">
+\t\t\t\t\t\t\t{# <img src=\"{{asset(StockPic)}}\"> #}
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"ImageUpload\">
@@ -315,8 +317,8 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
 \t\t\t\t\t\t{% if Title == 'Stock' %}
 \t\t\t\t\t\t\t<div class=\"StockImg\" style=\" border: solid  1px #f9a826; height:250px;\">
-\t\t\t\t\t\t\t\t{# <img src=\"/CIRCET-STOCK/public/{{StockPic}}\"> #}
-\t\t\t\t\t\t\t\t<img src=\"{{asset(StockPic)}}\">
+\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/{{StockPic}}\">
+\t\t\t\t\t\t\t\t{# <img src=\"{{asset(StockPic)}}\"> #}
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"StockImg\">
 \t\t\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\" class=\"start\" data-target=\"#model\">Voir image</button>
