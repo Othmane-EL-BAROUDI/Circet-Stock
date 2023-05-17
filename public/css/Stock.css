@@ -4,83 +4,18 @@
     width: calc(100% - 78px);
     left: 78px;
     transition:  all 0.5s ease;
-    overflow-y: scroll;
+  
 }
 .home_content .text{
     font-size: 25px;
     font-weight: 500;
     color: #1d1b31;
-    margin: 12px;
+    margin: 12px 12px 0 12px;
 }
 textarea:focus, input:focus , button:focus{
     outline: none !important ;
 }
-.sort1{
 
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    width: 900px;
-    margin-left: 8%;
-    z-index: -1;
-    
-}
-.sort1 input{
-    padding-left: 10px;
-    width: 45%;
-    height: 35px;
-    border-radius: 4px;
-    border: solid #f9a826 1px;
-    color: #f9a826;
-    margin-right: 7px;
-}
-.reload{
-    margin-left: 85px;
-    font-weight: bold;
-    width: 40px;
-    height: 35px;
-    background-color: white;
-    border: solid #f9a826 1px;
-    border-radius: 4px;
-    background-color: #f9a826;
-    color: #fff;
-    font-size: 14px;
-    text-align: center;
-    cursor: pointer;
-}
-.sort1 ::placeholder{
-    color:#f9a826;
-}
-.sort1 > button{
-    font-weight: bold;
-    width: 20%;
-    height: 35px;
-    background-color: white;
-    border: solid #f9a826 1px;
-    border-radius: 4px;
-    background-color: #f9a826;
-    color: #fff;
-    font-size: 14px;
-    text-align: center;
-    cursor: pointer;
-}
-.sort1 select {
-    text-align: center;
-    height: 35px;
-    width: 120px;
-    border-radius: 4px;
-    border: solid #f9a826 1px;
-    color: #f9a826;
-    font-weight: bold;
-    margin-right: 7px;
-}
-.sort1 select option{
-    height: 50px;
-}
-.sort1 select option:hover{
-    background-color: #f9a826;
-    color: white;
-}
 
 ::-webkit-scrollbar {
     width: 4px;
@@ -95,8 +30,9 @@ textarea:focus, input:focus , button:focus{
     background:#f9a826;
   }
 .new{
-    margin-left: 80%;
+    margin-left: 83%;
     font-weight: bold;
+    margin-top: -1%;
     width: 15%;
     height: 35px;
     background-color: white;
@@ -134,9 +70,7 @@ textarea:focus, input:focus , button:focus{
     opacity: 0;
     cursor: pointer;
 }
-.up{
-        margin-bottom: 18px;
-}
+
 .modal-body  input[type="checkbox"]{
     margin-left: 2%;
     margin-top: -27px !important;
@@ -190,18 +124,24 @@ textarea:focus, input:focus , select:focus ,button:focus{
     font-weight: bold;
     font-size: 15px;
 }
+.CContent{
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
 .mainC{
-    overflow-y: scroll;
-    max-height: 75%;
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 2%;
+    width: 100%;
     overflow-x: hidden;
    
+    
  }
  .mainC table thead{
     position: sticky;
     top : 0;
+ }
+ table{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
  }
  .actions{
     display: flex;
@@ -250,8 +190,12 @@ table tbody tr:last-of-type{
 }
 
 .main_content{
-    
     display: flex;
     justify-content: left;
     align-items: center;
  }
+ .dataTables_wrapper .paginate_button {
+   
+    margin-top: 10px;
+  }
+

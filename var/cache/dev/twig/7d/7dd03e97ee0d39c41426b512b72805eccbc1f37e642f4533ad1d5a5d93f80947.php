@@ -183,12 +183,12 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t";
                 } else {
                     // line 57
-                    echo "\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "getImgSrc", [], "method", false, false, false, 57), "html", null, true);
-                    echo "\"  style=\"width:150px; max-height:150px;\" alt=\"no pic\">
-\t\t\t\t\t\t\t\t";
-                    // line 59
-                    echo "\t\t\t\t\t\t\t";
+                    echo "\t\t\t\t\t\t\t\t";
+                    // line 58
+                    echo "\t\t\t\t\t\t\t\t<img src=\"";
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(twig_get_attribute($this->env, $this->source, $context["item"], "getImgSrc", [], "method", false, false, false, 58)), "html", null, true);
+                    echo "\" style=\"width:150px; max-height:150px;\" alt=\"no pic\">
+\t\t\t\t\t\t\t";
                 }
                 // line 60
                 echo "\t\t\t\t\t\t</div>
@@ -218,8 +218,9 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t";
             }
-            // line 77
-            echo "\t\t\t\t\t";
+            // line 76
+            echo "\t
+\t\t\t\t\t";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
@@ -280,7 +281,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     public function getDebugInfo()
     {
-        return array (  260 => 90,  255 => 89,  248 => 88,  238 => 83,  232 => 82,  227 => 78,  222 => 77,  213 => 71,  207 => 68,  199 => 63,  194 => 60,  191 => 59,  186 => 57,  180 => 55,  178 => 54,  172 => 50,  169 => 49,  164 => 48,  137 => 24,  134 => 23,  122 => 17,  118 => 15,  114 => 14,  110 => 12,  103 => 11,  91 => 6,  84 => 5,  70 => 2,  63 => 88,  60 => 87,  58 => 11,  54 => 10,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  261 => 90,  256 => 89,  249 => 88,  239 => 83,  233 => 82,  228 => 78,  222 => 76,  213 => 71,  207 => 68,  199 => 63,  194 => 60,  188 => 58,  186 => 57,  180 => 55,  178 => 54,  172 => 50,  169 => 49,  164 => 48,  137 => 24,  134 => 23,  122 => 17,  118 => 15,  114 => 14,  110 => 12,  103 => 11,  91 => 6,  84 => 5,  70 => 2,  63 => 88,  60 => 87,  58 => 11,  54 => 10,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -341,8 +342,8 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t{% if item.getImgSrc() is empty   %}
 \t\t\t\t\t\t\t\t<img src=\"{{asset('images/laptop.png')}}\" style=\"width:150px;\" alt=\"\">
 \t\t\t\t\t\t\t{% else %}
-\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/{{item.getImgSrc()}}\"  style=\"width:150px; max-height:150px;\" alt=\"no pic\">
-\t\t\t\t\t\t\t\t{# <img src=\"{{asset(item.getImgSrc())}}\" style=\"width:150px; max-height:150px;\" alt=\"no pic\"> #}
+\t\t\t\t\t\t\t\t{# <img src=\"/CIRCET-STOCK/public/{{item.getImgSrc()}}\"  style=\"width:150px; max-height:150px;\" alt=\"no pic\"> #}
+\t\t\t\t\t\t\t\t<img src=\"{{asset(item.getImgSrc())}}\" style=\"width:150px; max-height:150px;\" alt=\"no pic\">
 \t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t</div>
 
@@ -360,7 +361,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t\t\t<a/>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t{% endif %}\t
 \t\t\t\t\t{% else %}
 \t\t\t\t\t\t<div class=\"noData\"> <img src=\"{{asset('images/noData.png')}}\" > </div>
 \t\t\t\t\t\t{# <div class=\"noData\">

@@ -64,29 +64,7 @@
 
 		<div class="text">Utilisateurs</div>
 		<button type="button" class="new" data-toggle="modal" data-target="#addUser">Ajouter un utilisateur</button>
-		{# <div class="main_content">
-			<form action="{{ path('Users') }}" method="GET">
-				<div class="sort">
-					<input type="text" placeholder="Rechercher" name="username">
-
-					<select name="role">
-						<option selected disabled>Rôle</option>
-						<option value="manager">Manager</option>
-						<option value="admin">Admin</option>
-					</select>
-
-					<button type="submit">
-						Rechercher
-					</button>
-				</div>
-			</form>
-
-			<form style="  position: absolute; right: 22%;" >
-				<button onclick="refreshPage()" class="reload">
-					<i class="fa-solid fa-rotate-right fa-lg"></i>
-				</button>
-			</form>
-		</div> #}
+	
 		
 		<div class="CContent">
 			<div class="mainC">
@@ -117,7 +95,7 @@
 										<p class="text-muted mb-0 mt-2 ">{{user.matricule}}t</p>
 									</td>
 									<td>
-										<label class="mt-2">
+										<label class="mt-2 ml-2">
 											{% if user.enabled %}
 												<span class="badge badge-success rounded-pill d-inline ">Actif</span>
 											{% else %}
@@ -184,14 +162,23 @@
 	</div>
 {% endblock %}
 {% block javascripts %}
-	<script>
-		function refreshPage() {
-			window.location.reload();
-		}
-		$(document).ready(function () {
-    $('#example').DataTable();
-});
-	</script>
+<script>
+    $(document).ready(function() {
+      var table = $('#example').DataTable({
+        lengthMenu: [6], // Display 4 rows per page
+        language: {
+          search: "_INPUT_", // Display search input instead of default text
+          searchPlaceholder: "Recherche..." // Placeholder text for search input
+        },
+
+      });
+
+      table.on('draw.dt', function() {
+        var info = table.page.info();
+        $('#pagination').html('Showing ' + (info.start + 1) + ' to ' + (info.start + info.length) + ' of ' + info.recordsDisplay + ' s');
+      });
+    });
+  </script>
 	<script src="{{asset('JS/sidebar.js')}}"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
