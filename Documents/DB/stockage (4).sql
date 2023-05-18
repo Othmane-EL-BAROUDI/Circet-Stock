@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 17 mai 2023 à 02:25
+-- Généré le : jeu. 18 mai 2023 à 17:39
 -- Version du serveur : 10.4.21-MariaDB
 -- Version de PHP : 7.3.31
 
@@ -128,26 +128,36 @@ CREATE TABLE `permission` (
 --
 
 INSERT INTO `permission` (`id`, `permission_name`) VALUES
-(41, 'add user'),
-(42, 'edit user'),
-(43, 'delete user'),
-(44, 'add machine'),
-(45, 'edit machine'),
-(46, 'delete machine'),
-(47, 'change password'),
-(48, 'demande machine'),
-(49, 'voir notifications');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `permission_user`
---
-
-CREATE TABLE `permission_user` (
-  `permission_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+(50, 'Voir accueil'),
+(51, 'Voir notification'),
+(53, 'Voir Matériel Détails'),
+(54, 'Demande matériel'),
+(55, 'Voir les utilisateurs'),
+(56, 'Ajouter un utilisateur'),
+(57, 'Modifier un utilisateur'),
+(58, 'Supprimer un utilisateur'),
+(60, 'Voir les rôles'),
+(62, 'Ajouter un rôle'),
+(63, 'Modifier un rôle'),
+(64, 'Supprimer un rôle'),
+(65, 'Voir les permissions'),
+(66, 'Ajouter une permission'),
+(67, 'Modifier une permission'),
+(68, 'Supprimer une permission'),
+(69, 'Voir le stock'),
+(70, 'Ajouter un matériel'),
+(71, 'Modifier un matériel'),
+(72, 'Supprimer un matériel'),
+(73, 'Voir les modèles'),
+(74, 'Ajouter un modèle'),
+(75, 'Modifier un modèle'),
+(76, 'Supprimer un modèle'),
+(77, 'Voir les marques'),
+(78, 'Ajouter une marque'),
+(79, 'Modifier une marque'),
+(80, 'Supprimer une marque'),
+(81, 'Voir le profil'),
+(82, 'Voir tableau de bord');
 
 -- --------------------------------------------------------
 
@@ -213,12 +223,13 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `username_canonical`, `email`, `email_canonical`, `enabled`, `salt`, `password`, `last_login`, `confirmation_token`, `password_requested_at`, `roles`, `matricule`, `manager`, `job`, `connected`) VALUES
-(1, 'ayman', 'ayman', 'itsmeaymane2003@gmail.com', 'itsmeaymane2003@gmail.com', 1, NULL, '$2y$13$1tlOnq2FUygLTjnlkCp6dOIgX3HARbFfLiNoDZSTIUuyRlApTiV/2', '2023-05-17 02:08:02', NULL, NULL, 'a:1:{i:0;s:10:\"ROLE_ADMIN\";}', 'BW33832', 'Soufiane', 'Web developer', 1),
-(2, 'Jett', 'jett', 'Jett@gmail.com', 'jett@gmail.com', 1, NULL, '$2y$13$tOK8yNhRhWhpWFcr40BVoOh68avLMeKM3SxjsEzALsPMmrwMrdhQC', '2023-05-11 22:55:10', NULL, NULL, 'a:1:{i:0;s:11:\"SUPER ADMIN\";}', 'XADV22', 'ahmed', 'Technicien', 0),
+(1, 'ayman', 'ayman', 'itsmeaymane2003@gmail.com', 'itsmeaymane2003@gmail.com', 1, NULL, '$2y$13$4MBQz7ZiM.PxXpn3gBxVW.Ly6T.LgtYbSZsucOXrmiOelBNkqP19i', '2023-05-18 13:33:17', NULL, NULL, 'a:1:{i:0;s:11:\"SUPER ADMIN\";}', 'BW33832', 'Soufiane', 'Web developer', 1),
+(2, 'Jett', 'jett', 'Jett@gmail.com', 'jett@gmail.com', 1, NULL, '$2y$13$4MBQz7ZiM.PxXpn3gBxVW.Ly6T.LgtYbSZsucOXrmiOelBNkqP19i', '2023-05-18 13:28:36', NULL, NULL, 'a:1:{i:0;s:11:\"SUPER ADMIN\";}', 'XADV22', 'ahmed', 'Technicien', 1),
 (4, 'Rena', 'rena', 'Rena@gmail.com', 'rena@gmail.com', 1, NULL, '$2y$13$SVkeuj6BFBm7L91iy7SHbuy6hEDRVlR4abSy/lfV2ouyBH./6wmnC', NULL, NULL, NULL, 'a:0:{}', 'BW338310', 'Soufiane', 'Web developer', 0),
 (5, 'Neon', 'neon', 'Neon@gmail.com', 'neon@gmail.com', 1, NULL, '$2y$13$ATPR1XWMKzs8pG8lBFB1HOYFClBlXhugdYUdmKIIa9j.ValQsYl0q', NULL, NULL, NULL, 'a:0:{}', 'BW338310', 'Said', 'Menage', 0),
 (6, 'othman', 'othman', 'othman@gmail.com', 'othman@gmail.com', 1, NULL, '$2y$13$hPW9f/LgS2LC.B.Xqqu3WOc2xeLz6e1n9YCsORVb3s5EaukUxBt3G', '2023-05-02 21:57:56', NULL, NULL, 'a:0:{}', 'BW338310', 'Soufiane', 'Menage', 0),
-(10, 'hicham', 'hicham', 'hicham@gmail.com', 'hicham@gmail.com', 1, NULL, '$2y$13$Lg.UPvJJJMKPY8.T6PhSUeh8.hpFO//sdVsNUGd7EWuc3tllnTZtO', NULL, NULL, NULL, 'a:1:{i:0;s:5:\"ADMIN\";}', 'sfddsf', 'Ayman', 'Web developer', 0);
+(10, 'hicham', 'hicham', 'hicham@gmail.com', 'hicham@gmail.com', 1, NULL, '$2y$13$Lg.UPvJJJMKPY8.T6PhSUeh8.hpFO//sdVsNUGd7EWuc3tllnTZtO', NULL, NULL, NULL, 'a:1:{i:0;s:5:\"ADMIN\";}', 'sfddsf', 'Ayman', 'Web developer', 0),
+(11, 'hamid', 'hamid', 'hamid@gmail.com', 'hamid@gmail.com', 1, NULL, '$2y$13$iGwQYeHaIhppbwnLXiwUsODm64dgrM1K/1T9Gy/dtNyGPNnvYuR4W', NULL, NULL, NULL, 'a:1:{i:0;s:5:\"ADMIN\";}', 'qdsqsd', 'sqdq', 'sqdsqqs', 0);
 
 -- --------------------------------------------------------
 
@@ -236,16 +247,55 @@ CREATE TABLE `user_permission` (
 --
 
 INSERT INTO `user_permission` (`user_id`, `permission_id`) VALUES
-(2, 41),
-(2, 42),
-(2, 43),
-(2, 44),
-(2, 45),
-(2, 46),
-(2, 47),
-(10, 41),
-(10, 42),
-(10, 43);
+(1, 50),
+(1, 51),
+(1, 53),
+(1, 54),
+(1, 55),
+(1, 56),
+(1, 57),
+(1, 58),
+(1, 60),
+(1, 62),
+(1, 63),
+(1, 64),
+(1, 65),
+(1, 66),
+(1, 67),
+(1, 68),
+(1, 69),
+(1, 70),
+(1, 71),
+(1, 72),
+(1, 73),
+(1, 74),
+(1, 75),
+(1, 76),
+(1, 77),
+(1, 78),
+(1, 79),
+(1, 80),
+(1, 81),
+(1, 82),
+(2, 50),
+(2, 51),
+(2, 54),
+(2, 55),
+(2, 56),
+(2, 60),
+(2, 62),
+(2, 65),
+(2, 66),
+(2, 67),
+(2, 69),
+(2, 73),
+(2, 75),
+(2, 77),
+(2, 78),
+(2, 79),
+(2, 80),
+(2, 81),
+(2, 82);
 
 --
 -- Index pour les tables déchargées
@@ -284,14 +334,6 @@ ALTER TABLE `model`
 --
 ALTER TABLE `permission`
   ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `permission_user`
---
-ALTER TABLE `permission_user`
-  ADD PRIMARY KEY (`permission_id`,`user_id`),
-  ADD KEY `IDX_DC5D4DE9FED90CCA` (`permission_id`),
-  ADD KEY `IDX_DC5D4DE9A76ED395` (`user_id`);
 
 --
 -- Index pour la table `restitution`
@@ -343,7 +385,7 @@ ALTER TABLE `machine`
 -- AUTO_INCREMENT pour la table `marque`
 --
 ALTER TABLE `marque`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT pour la table `model`
@@ -355,7 +397,7 @@ ALTER TABLE `model`
 -- AUTO_INCREMENT pour la table `permission`
 --
 ALTER TABLE `permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT pour la table `restitution`
@@ -373,7 +415,7 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Contraintes pour les tables déchargées
@@ -397,13 +439,6 @@ ALTER TABLE `machine`
 --
 ALTER TABLE `model`
   ADD CONSTRAINT `FK_D79572D94827B9B2` FOREIGN KEY (`marque_id`) REFERENCES `marque` (`id`);
-
---
--- Contraintes pour la table `permission_user`
---
-ALTER TABLE `permission_user`
-  ADD CONSTRAINT `FK_DC5D4DE9A76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `FK_DC5D4DE9FED90CCA` FOREIGN KEY (`permission_id`) REFERENCES `permission` (`id`) ON DELETE CASCADE;
 
 --
 -- Contraintes pour la table `restitution`
