@@ -231,82 +231,42 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t<div class=\"notifications btn-group dropup\">
 \t\t<button type=\"button\" class=\"btn  dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
 \t\t\t<i class='bx bx-bell  bx-sm mr-2'></i>Notifications
-\t\t\t<div class=\" nbrNotifications\">8</div>
+\t\t\t<div class=\" nbrNotifications\">2</div>
 \t\t</button>
 \t\t<div class=\"dropdown-menu\">
 \t\t\t<h6>Centre de notifications</h6>
                   <hr/>
                   <ul>
                         <li>
+                             <img src=\"";
+        // line 121
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/decline.png"), "html", null, true);
+        echo "\" /> 
                              ";
-        // line 122
-        echo "                             <img src=\"/CIRCET-STOCK/public/images/decline.png\" />
-                             
-                                    <p  style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
+        // line 123
+        echo "                             
+                                    <p  style=\"font-size: .77rem; \">votre demande sur Ajazz Ak33 a etait refuser</p>
                            
                               
                         </li>
                         <hr/>
+                  
+            
                           <li>
+                           
+\t\t\t\t\t\t\t   <img src=\"";
+        // line 133
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/accept.png"), "html", null, true);
+        echo "\" />  
                              ";
-        // line 131
-        echo "                             <img src=\"/CIRCET-STOCK/public/images/accept.png\" />
-                             
+        // line 135
+        echo "                             
                                     <p  style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
                            
                               
                         </li>
                         <hr/>
-                          <li>
-                             ";
-        // line 140
-        echo "                             <img src=\"/CIRCET-STOCK/public/images/accept.png\" />
-                             
-                                    <p  style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                           
-                              
-                        </li>
-                        <hr/>
-                          <li>
-                             ";
-        // line 149
-        echo "                             <img src=\"/CIRCET-STOCK/public/images/decline.png\" />
-                             
-                                    <p  style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                           
-                              
-                        </li>
-                        <hr/>
-                          <li>
-                             ";
-        // line 158
-        echo "                             <img src=\"/CIRCET-STOCK/public/images/accept.png\" />
-                             
-                                    <p  style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                           
-                              
-                        </li>
-                        <hr/>
-                          <li>
-                             ";
-        // line 167
-        echo "                             <img src=\"/CIRCET-STOCK/public/images/accept.png\" />
-                             
-                                    <p  style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                           
-                              
-                        </li>
-                        <hr/>
-                          <li>
-                             ";
-        // line 176
-        echo "                             <img src=\"/CIRCET-STOCK/public/images/decline.png\" />
-                             
-                                    <p  style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                           
-                              
-                        </li>
-                        <hr/>
+
                   </ul>
 \t\t
 \t\t</div>
@@ -331,7 +291,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 
     public function getDebugInfo()
     {
-        return array (  303 => 176,  293 => 167,  283 => 158,  273 => 149,  263 => 140,  253 => 131,  243 => 122,  223 => 104,  217 => 101,  213 => 100,  208 => 98,  195 => 88,  192 => 87,  189 => 86,  178 => 78,  168 => 71,  158 => 64,  148 => 57,  137 => 49,  127 => 42,  116 => 34,  112 => 32,  110 => 31,  101 => 25,  96 => 22,  94 => 21,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  263 => 135,  259 => 133,  247 => 123,  243 => 121,  223 => 104,  217 => 101,  213 => 100,  208 => 98,  195 => 88,  192 => 87,  189 => 86,  178 => 78,  168 => 71,  158 => 64,  148 => 57,  137 => 49,  127 => 42,  116 => 34,  112 => 32,  110 => 31,  101 => 25,  96 => 22,  94 => 21,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -449,75 +409,34 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t<div class=\"notifications btn-group dropup\">
 \t\t<button type=\"button\" class=\"btn  dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
 \t\t\t<i class='bx bx-bell  bx-sm mr-2'></i>Notifications
-\t\t\t<div class=\" nbrNotifications\">8</div>
+\t\t\t<div class=\" nbrNotifications\">2</div>
 \t\t</button>
 \t\t<div class=\"dropdown-menu\">
 \t\t\t<h6>Centre de notifications</h6>
                   <hr/>
                   <ul>
                         <li>
-                             {# <img src=\"asset{{'images/decline.png'}}\" />  #}
-                             <img src=\"/CIRCET-STOCK/public/images/decline.png\" />
+                             <img src=\"{{asset('images/decline.png')}}\" /> 
+                             {# <img src=\"/CIRCET-STOCK/public/images/decline.png\" /> #}
                              
-                                    <p  style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
+                                    <p  style=\"font-size: .77rem; \">votre demande sur Ajazz Ak33 a etait refuser</p>
                            
                               
                         </li>
                         <hr/>
+                  
+            
                           <li>
-                             {# <img src=\"asset{{'images/accept.png'}}\" />  #}
-                             <img src=\"/CIRCET-STOCK/public/images/accept.png\" />
+                           
+\t\t\t\t\t\t\t   <img src=\"{{asset('images/accept.png')}}\" />  
+                             {# <img src=\"/CIRCET-STOCK/public/images/accept.png\" /> #}
                              
                                     <p  style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
                            
                               
                         </li>
                         <hr/>
-                          <li>
-                             {# <img src=\"asset{{'images/accept.png'}}\" />  #}
-                             <img src=\"/CIRCET-STOCK/public/images/accept.png\" />
-                             
-                                    <p  style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                           
-                              
-                        </li>
-                        <hr/>
-                          <li>
-                             {# <img src=\"asset{{'images/accept.png'}}\" />  #}
-                             <img src=\"/CIRCET-STOCK/public/images/decline.png\" />
-                             
-                                    <p  style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                           
-                              
-                        </li>
-                        <hr/>
-                          <li>
-                             {# <img src=\"asset{{'images/decline.png'}}\" />  #}
-                             <img src=\"/CIRCET-STOCK/public/images/accept.png\" />
-                             
-                                    <p  style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                           
-                              
-                        </li>
-                        <hr/>
-                          <li>
-                             {# <img src=\"asset{{'images/decline.png'}}\" />  #}
-                             <img src=\"/CIRCET-STOCK/public/images/accept.png\" />
-                             
-                                    <p  style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                           
-                              
-                        </li>
-                        <hr/>
-                          <li>
-                             {# <img src=\"asset{{'images/decline.png'}}\" />  #}
-                             <img src=\"/CIRCET-STOCK/public/images/decline.png\" />
-                             
-                                    <p  style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                           
-                              
-                        </li>
-                        <hr/>
+
                   </ul>
 \t\t
 \t\t</div>
