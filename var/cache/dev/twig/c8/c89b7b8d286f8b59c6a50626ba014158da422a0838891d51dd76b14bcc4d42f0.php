@@ -378,7 +378,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
         echo "<script>
     \$(document).ready(function() {
       var table = \$('#example').DataTable({
-        lengthMenu: [6], // Display 4 rows per page
+        lengthMenu: [4], // Display 4 rows per page
         language: {
           search: \"_INPUT_\", // Display search input instead of default text
           searchPlaceholder: \"Recherche...\" // Placeholder text for search input
@@ -590,7 +590,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 <script>
     \$(document).ready(function() {
       var table = \$('#example').DataTable({
-        lengthMenu: [6], // Display 4 rows per page
+        lengthMenu: [4], // Display 4 rows per page
         language: {
           search: \"_INPUT_\", // Display search input instead of default text
           searchPlaceholder: \"Recherche...\" // Placeholder text for search input

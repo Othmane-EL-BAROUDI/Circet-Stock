@@ -5,7 +5,7 @@
 {% block stylesheets %}
 	<link rel="stylesheet" href="{{asset('css/Role.css')}}">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 {% endblock %}
 {% block body %}
 	{{ include('Pages/sidebar.html.twig') }}
@@ -39,6 +39,7 @@
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
+			
 		{% endfor %}
 		{% for flash_message in app.session.flashbag.get('update') %}
 			<div class="alert  alert-info fade show" role="alert">
@@ -70,9 +71,11 @@
 				</div>
 			</form>
 
-			<form style="  position: absolute; right: 45%;"  >
+			<form style="  position: absolute; right: 45%;">
 				<div class="reload">
-					<button onclick="refreshPage()"><i class="fa-solid fa-rotate-right fa-lg"></i></button>
+					<button onclick="refreshPage()">
+						<i class="fa-solid fa-rotate-right fa-lg"></i>
+					</button>
 				</div>
 			</form>
 		</div>
@@ -88,53 +91,53 @@
 					</thead>
 					<tbody>
 						{% for key , marque in allMarques %}
-						{% if marque %}
-							<tr>
-								<td class="textperm">
-									{{marque.getMarqueName()}}
-								</td>
-								<td class="actions">
-									<a href="/Marque/{{marque.id}}">
-										<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 " style=" border: #007bff solid 1px; ">
-											<i class='bx bx-edit bx-xs'></i>
-											Modifier
-										</button>
-									</a>
-
-									<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal{{marque.id}}">
-										<i class='bx bx-trash bx-xs'></i>
-										Supprimer
-									</button>
-								</td>
-							</tr>
-							<div class="modal fade" id="exampleModal{{marque.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-								<div class="modal-dialog " role="document">
-									<div class="modal-content ">
-										<div class="modal-header">
-											<h5 class="modal-title" id="exampleModalLabel">Confirmation de suppression</h5>
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
+							{% if marque %}
+								<tr>
+									<td class="textperm">
+										{{marque.getMarqueName()}}
+									</td>
+									<td class="actions">
+										<a href="/Marque/{{marque.id}}">
+											<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 " style=" border: #007bff solid 1px; ">
+												<i class='bx bx-edit bx-xs'></i>
+												Modifier
 											</button>
-										</div>
-										<div class="modal-body">
-											Voulez-vous vraiment supprimer ce marque :
-											<label style="  font-weight: bold; color: #f9a826; ">{{marque.getMarqueName()}}</label>
-										</div>
-										<div class="modal-footer">
-											<a href="Marque/Remove/{{marque.id}}">
-												<button type="button" class="bn3 btn btn-sm h-4" style=" border: #dc3545 solid 1px;">Supprimer</button>
-											</a>
-											<button type="button" class="btn btn-sm  btn-secondary" data-dismiss="modal">Annuler</button>
+										</a>
+
+										<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal{{marque.id}}">
+											<i class='bx bx-trash bx-xs'></i>
+											Supprimer
+										</button>
+									</td>
+								</tr>
+								<div class="modal fade" id="exampleModal{{marque.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog " role="document">
+										<div class="modal-content ">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Confirmation de suppression</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												Voulez-vous vraiment supprimer ce marque :
+												<label style="  font-weight: bold; color: #f9a826; ">{{marque.getMarqueName()}}</label>
+											</div>
+											<div class="modal-footer">
+												<a href="Marque/Remove/{{marque.id}}">
+													<button type="button" class="bn3 btn btn-sm h-4" style=" border: #dc3545 solid 1px;">Supprimer</button>
+												</a>
+												<button type="button" class="btn btn-sm  btn-secondary" data-dismiss="modal">Annuler</button>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-						{% endif %}
+							{% endif %}
 						{% else %}
-						<tr>
-							<td>No results found.</td>
-						</tr>
-					</tbody>
+							<tr>
+								<td>No results found.</td>
+							</tr>
+						</tbody>
 					{% endfor %}
 				</table>
 			</div>
@@ -142,9 +145,10 @@
 	</div>
 </div>{% endblock %}{% block javascripts %}
 <script>
-  	function refreshPage() {
-    	window.location.reload();
-  	}
+	function refreshPage() {
+window.location.reload();
+}
+
 </script>
 <script src="{{asset('JS/sidebar.js')}}"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
