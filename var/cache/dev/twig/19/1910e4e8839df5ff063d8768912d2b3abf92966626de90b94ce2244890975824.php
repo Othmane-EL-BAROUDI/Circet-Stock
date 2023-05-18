@@ -393,104 +393,6 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t</div>
 \t\t</div>
 \t</div>
-<<<<<<< HEAD
-\t
-\t<div class=\"notifications btn-group dropup\">
-\t\t<button type=\"button\" class=\"btn  dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-\t\t\t<i class='bx bx-bell  bx-sm mr-2'></i>Notifications
-\t\t\t<div class=\" nbrNotifications\">8</div>
-\t\t</button>
-\t\t<div class=\"dropdown-menu\">
-\t\t\t<h6>Centre de notifications</h6>
-            <hr/>
-               \t<ul>
-                    <li>
-                        <img src=\"";
-        // line 121
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/decline.png"), "html", null, true);
-        echo "\" /> 
-                        ";
-        // line 123
-        echo "                        <p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                    </li>
-
-                    <hr/>
-
-                    <li>
-                        <img src=\"";
-        // line 129
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/accept.png"), "html", null, true);
-        echo "\" /> 
-                        ";
-        // line 131
-        echo "                        <p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                    </li>
-
-                    <hr/>
-
-                    <li>
-                        <img src=\"";
-        // line 137
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/accept.png"), "html", null, true);
-        echo "\" /> 
-                        ";
-        // line 139
-        echo "                        <p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                    </li>
-
-                    <hr/>
-
-\t\t\t\t\t<li>
-                        <img src=\"";
-        // line 145
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/accept.png"), "html", null, true);
-        echo "\" /> 
-                        ";
-        // line 147
-        echo "                        <p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                    </li>
-
-                    <hr/>
-
-                    <li>
-                        <img src=\"";
-        // line 153
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/decline.png"), "html", null, true);
-        echo "\" /> 
-                        ";
-        // line 155
-        echo "                        <p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                    </li>
-
-                    <hr/>
-
-\t\t\t\t\t<li>
-                        <img src=\"";
-        // line 161
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/decline.png"), "html", null, true);
-        echo "\" /> 
-                        ";
-        // line 163
-        echo "                        <p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                    </li>
-
-                    <hr/>
-
-\t\t\t\t\t<li>
-                        <img src=\"";
-        // line 169
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/decline.png"), "html", null, true);
-        echo "\" /> 
-                        ";
-        // line 171
-        echo "                        <p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                    </li>
-
-                    <hr/>
-                </ul>
-\t\t</div>
-\t</div>
-=======
 \t";
         // line 151
         if (twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 151, $this->source); })()), "Connected", [], "any", false, false, false, 151)) {
@@ -518,7 +420,6 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t\t\t\t\t\t";
                     // line 166
                     echo "\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/decline.png\"/>
->>>>>>> 74b73a0395dd9e88203f99f92047efb275e81394
 
 \t\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
 
@@ -618,11 +519,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 
     public function getDebugInfo()
     {
-<<<<<<< HEAD
-        return array (  319 => 171,  315 => 169,  307 => 163,  303 => 161,  295 => 155,  291 => 153,  283 => 147,  279 => 145,  271 => 139,  267 => 137,  259 => 131,  255 => 129,  247 => 123,  243 => 121,  223 => 104,  217 => 101,  213 => 100,  208 => 98,  195 => 88,  192 => 87,  189 => 86,  178 => 78,  168 => 71,  158 => 64,  148 => 57,  137 => 49,  127 => 42,  116 => 34,  112 => 32,  110 => 31,  101 => 25,  96 => 22,  94 => 21,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
-=======
         return array (  502 => 231,  499 => 230,  493 => 229,  482 => 220,  472 => 211,  462 => 202,  452 => 193,  442 => 184,  432 => 175,  422 => 166,  410 => 155,  407 => 154,  403 => 153,  400 => 152,  398 => 151,  389 => 145,  383 => 142,  379 => 141,  374 => 139,  367 => 134,  361 => 133,  351 => 126,  348 => 125,  345 => 124,  341 => 123,  338 => 122,  335 => 121,  331 => 119,  325 => 118,  315 => 111,  312 => 110,  309 => 109,  305 => 108,  302 => 107,  296 => 106,  286 => 99,  283 => 98,  280 => 97,  276 => 96,  273 => 95,  267 => 94,  257 => 87,  254 => 86,  251 => 85,  247 => 84,  244 => 83,  238 => 82,  228 => 75,  225 => 74,  222 => 73,  218 => 72,  215 => 71,  209 => 70,  199 => 63,  196 => 62,  193 => 61,  189 => 60,  186 => 59,  180 => 58,  170 => 51,  167 => 50,  164 => 49,  160 => 48,  157 => 47,  151 => 46,  141 => 39,  138 => 38,  135 => 37,  131 => 36,  128 => 35,  125 => 34,  119 => 33,  109 => 26,  106 => 25,  103 => 24,  99 => 23,  96 => 22,  94 => 21,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
->>>>>>> 74b73a0395dd9e88203f99f92047efb275e81394
     }
 
     public function getSourceContext()
@@ -777,76 +674,6 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t</div>
 \t\t</div>
 \t</div>
-<<<<<<< HEAD
-\t
-\t<div class=\"notifications btn-group dropup\">
-\t\t<button type=\"button\" class=\"btn  dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-\t\t\t<i class='bx bx-bell  bx-sm mr-2'></i>Notifications
-\t\t\t<div class=\" nbrNotifications\">8</div>
-\t\t</button>
-\t\t<div class=\"dropdown-menu\">
-\t\t\t<h6>Centre de notifications</h6>
-            <hr/>
-               \t<ul>
-                    <li>
-                        <img src=\"{{asset('images/decline.png')}}\" /> 
-                        {# <img src=\"/CIRCET-STOCK/public/images/decline.png\" /> #}
-                        <p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                    </li>
-
-                    <hr/>
-
-                    <li>
-                        <img src=\"{{asset('images/accept.png')}}\" /> 
-                        {# <img src=\"/CIRCET-STOCK/public/images/accept.png\" /> #}
-                        <p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                    </li>
-
-                    <hr/>
-
-                    <li>
-                        <img src=\"{{asset('images/accept.png')}}\" /> 
-                        {# <img src=\"/CIRCET-STOCK/public/images/accept.png\" /> #}
-                        <p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                    </li>
-
-                    <hr/>
-
-\t\t\t\t\t<li>
-                        <img src=\"{{asset('images/accept.png')}}\" /> 
-                        {# <img src=\"/CIRCET-STOCK/public/images/accept.png\" /> #}
-                        <p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                    </li>
-
-                    <hr/>
-
-                    <li>
-                        <img src=\"{{asset('images/decline.png')}}\" /> 
-                        {# <img src=\"/CIRCET-STOCK/public/images/decline.png\" /> #}
-                        <p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                    </li>
-
-                    <hr/>
-
-\t\t\t\t\t<li>
-                        <img src=\"{{asset('images/decline.png')}}\" /> 
-                        {# <img src=\"/CIRCET-STOCK/public/images/decline.png\" /> #}
-                        <p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                    </li>
-
-                    <hr/>
-
-\t\t\t\t\t<li>
-                        <img src=\"{{asset('images/decline.png')}}\" /> 
-                        {# <img src=\"/CIRCET-STOCK/public/images/decline.png\" /> #}
-                        <p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                    </li>
-
-                    <hr/>
-                </ul>
-\t\t</div>
-\t</div>
-=======
 \t{% if userInfo.Connected %}
 
 \t\t{% for permission in userInfo.getUserPermission() %}
@@ -927,7 +754,6 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t{% endif %}
 \t\t{% endfor %}
 \t{% endif %}
->>>>>>> 74b73a0395dd9e88203f99f92047efb275e81394
 
 
 {% endblock %}
