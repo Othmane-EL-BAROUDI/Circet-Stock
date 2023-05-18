@@ -68,41 +68,13 @@
 
 		<div class="text">Stock</div>
 		<button type="button" class="new" data-toggle="modal" data-target="#addStock">Ajouter au stock</button>
-			{# <div class="main_content">
-				<form action="{{ path('Stock') }}" method="GET">
-					<div class="sort1">
-						<input type="text" name="search" placeholder="Rechercher" autocomplete="off">
-
-						<select name="role">
-							<option selected disabled>Type</option>
-							<option value="manager">Manager</option>
-							<option value="admin">Admin</option>
-						</select>
-
-						<select name="availability">
-							<option selected disabled>Disponibilité</option>
-						</select>
-						
-					
-
-						<button type="submit">
-							Rechercher
-						</button>
-					</div>		
-				</form>
-
-				<form style="  position: absolute; right: 22%;" >
-					<button onclick="refreshPage()" class="reload">
-						<i class="fa-solid fa-rotate-right fa-lg"></i>
-					</button>
-				</form>
-			</div> #}
+			
 		
 		<div class="CContent">
 			<div class="mainC">
-				<table  id="example" class="table align-middle mb-0 bg-white">
+				<table  id="example"  data-page-size="3" class="table align-middle mb-0 bg-white">
 					<thead class="bg-light">
-						<tr>
+						<tr>	
 							<th>Nom</th>
 							<th>Type</th>
 							<th>Numéro de série</th>
@@ -112,6 +84,7 @@
 						</tr>
 					</thead>
 					<tbody>
+						
 						{% for machine in Allmachines %}
 						{% if machine %}
 							<tr>
@@ -133,7 +106,7 @@
 
 								</td>
 								<td>
-									<label class="mt-2 ml-2">
+									<label class="mt-2 ml-3  ">
 										{% if machine.available == 1 %}
 											<span class="badge badge-success rounded-pill d-inline pl-3 pr-3">Oui</span>
 										{% else %}
@@ -197,6 +170,7 @@
 						<tr>
 							<td>No results found.</td>
 						</tr>
+					
 					</tbody>
 					{% endfor %}
 				</table>
@@ -206,13 +180,22 @@
 {% endblock %}
 {% block javascripts %}
 <script>
-  	function refreshPage() {
-    	window.location.reload();
-  	}
-			$(document).ready(function () {
-    $('#example').DataTable();
-});
-</script>
+    $(document).ready(function() {
+      var table = $('#example').DataTable({
+        lengthMenu: [6], // Display 4 rows per page
+        language: {
+          search: "_INPUT_", // Display search input instead of default text
+          searchPlaceholder: "Recherche..." // Placeholder text for search input
+        },
+
+      });
+
+      table.on('draw.dt', function() {
+        var info = table.page.info();
+        $('#pagination').html('Showing ' + (info.start + 1) + ' to ' + (info.start + info.length) + ' of ' + info.recordsDisplay + ' s');
+      });
+    });
+  </script>
 	<script src="{{asset('JS/sidebar.js')}}"></script>
 		<script src="{{asset('JS/Stock.js')}}"></script>
 	
