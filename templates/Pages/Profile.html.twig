@@ -39,7 +39,7 @@
                                                 <input class="form-control" type="text" value="{{userInfo.job}}" aria-label="readonly input example" readonly>
                                           </div>
                                     </div>
-                                    {% if userInfo.Connected == false %}
+                                    {% if userInfo.Connected == false or userInfo.roles[0] == 'ROLE_ADMIN' or  userInfo.roles[0] == 'SUPER ADMIN' %}
                                     
                                     <label for="inputPassword1" class="mt-3 mb-1 col-form-label">Mot de passe</label>
                                     <div class="mb-3 row" style="width: 125%;">

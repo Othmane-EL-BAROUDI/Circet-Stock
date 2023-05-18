@@ -62,7 +62,13 @@
 		{% endfor %}
 
 		<div class="text">Modèle</div>
-		<button type="button" class="new" data-toggle="modal" data-target="#addRole">Ajouter modèle</button>
+
+		{% for permission in userInfo.getUserPermission() %}
+			{% if permission.getPermissionName() == "Ajouter un modèle" %}
+				<button type="button" class="new" data-toggle="modal" data-target="#addRole">Ajouter modèle</button>
+			{% endif %}
+		{% endfor %}
+
 		<div class="main_content">
 			<form action="{{ path('Model') }}" method="GET">
 				<div class="sort">
@@ -105,18 +111,23 @@
 								</td>
 								<td class="actions" style="width:230px;" >
 
-									<a href="/Model/{{model.id}}">
-										<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 " style=" border: #007bff solid 1px; ">
-											<i class='bx bx-edit bx-xs'></i>
-											Modifier
-										</button>
-									</a>
+									{% for permission in userInfo.getUserPermission() %}
+										{% if permission.getPermissionName() == "Modifier un modèle" %}
+											<a href="/Model/{{model.id}}">
+												<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 " style=" border: #007bff solid 1px; ">
+													<i class='bx bx-edit bx-xs'></i>
+													Modifier
+												</button>
+											</a>
+										{% endif %}
 
-									<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal{{model.id}}">
-										<i class='bx bx-trash bx-xs'></i>
-										Supprimer
-									</button>
-
+										{% if permission.getPermissionName() == "Supprimer un modèle" %}
+											<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal{{model.id}}">
+												<i class='bx bx-trash bx-xs'></i>
+												Supprimer
+											</button>
+										{% endif %}
+									{% endfor %}
 								</td>
 							</tr>
 							<div class="modal fade" id="exampleModal{{model.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

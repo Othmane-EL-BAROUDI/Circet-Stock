@@ -56,10 +56,10 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 ";
         // line 11
         $this->displayBlock('body', $context, $blocks);
-        // line 89
+        // line 95
         echo "
 \t\t";
-        // line 90
+        // line 96
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -204,30 +204,52 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"action\">
-\t\t\t\t\t\t\t<a href=\"Affectation/";
+\t\t\t\t\t\t\t\t";
                 // line 69
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 69), "html", null, true);
-                echo "\">
-\t\t\t\t\t\t\t\t<button>Demande</button>
-\t\t\t\t\t\t\t\t<a/>
-\t\t\t\t\t\t\t\t<a href=\"materialView/";
-                // line 72
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 72), "html", null, true);
-                echo "\">
-\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"start\">Détails</button>
-\t\t\t\t\t\t\t\t\t<a/>
-\t\t\t\t\t\t\t\t</div>
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 69, $this->source); })()), "getUserPermission", [], "method", false, false, false, 69));
+                foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+                    // line 70
+                    echo "\t\t\t\t\t\t\t\t\t";
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 70) == "Demande matériel")) {
+                        // line 71
+                        echo "\t\t\t\t\t\t\t\t\t\t<a href=\"Affectation/";
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 71), "html", null, true);
+                        echo "\">
+\t\t\t\t\t\t\t\t\t\t\t<button>Demande</button>
+\t\t\t\t\t\t\t\t\t\t<a/>
+\t\t\t\t\t\t\t\t\t";
+                    }
+                    // line 75
+                    echo "\t\t\t\t\t\t\t\t\t";
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 75) == "Voir Matériel Détails")) {
+                        // line 76
+                        echo "\t\t\t\t\t\t\t\t\t\t<a href=\"materialView/";
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 76), "html", null, true);
+                        echo "\">
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"start\">Détails</button>
+\t\t\t\t\t\t\t\t\t\t<a/>
+\t\t\t\t\t\t\t\t\t";
+                    }
+                    // line 80
+                    echo "\t\t\t\t\t\t\t\t";
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                // line 81
+                echo "\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t";
             }
-            // line 78
+            // line 84
             echo "\t\t\t\t\t";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 79
+            // line 85
             echo "\t\t\t\t\t\t";
-            // line 80
+            // line 86
             echo "\t\t\t\t\t\t<div class=\"noData\">
 \t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/noData.png\">
 \t\t\t\t\t\t</div>
@@ -236,9 +258,9 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 84
+        // line 90
         echo "\t\t\t\t</div>
-\t\t\t\t
+
 \t\t\t</div>
 
 \t\t";
@@ -247,19 +269,19 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     }
 
-    // line 90
+    // line 96
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 91
+        // line 97
         echo "\t\t\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/HomePage.js"), "html", null, true);
         echo "\"></script>
 \t\t\t<script src=\"";
-        // line 92
+        // line 98
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
 \t\t\t<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
@@ -283,7 +305,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     public function getDebugInfo()
     {
-        return array (  263 => 92,  258 => 91,  251 => 90,  240 => 84,  231 => 80,  229 => 79,  224 => 78,  215 => 72,  209 => 69,  201 => 64,  196 => 61,  193 => 60,  189 => 58,  186 => 57,  180 => 55,  178 => 54,  172 => 50,  169 => 49,  164 => 48,  137 => 24,  134 => 23,  122 => 17,  118 => 15,  114 => 14,  110 => 12,  103 => 11,  91 => 6,  84 => 5,  70 => 2,  63 => 90,  60 => 89,  58 => 11,  54 => 10,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  285 => 98,  280 => 97,  273 => 96,  262 => 90,  253 => 86,  251 => 85,  246 => 84,  241 => 81,  235 => 80,  227 => 76,  224 => 75,  216 => 71,  213 => 70,  209 => 69,  201 => 64,  196 => 61,  193 => 60,  189 => 58,  186 => 57,  180 => 55,  178 => 54,  172 => 50,  169 => 49,  164 => 48,  137 => 24,  134 => 23,  122 => 17,  118 => 15,  114 => 14,  110 => 12,  103 => 11,  91 => 6,  84 => 5,  70 => 2,  63 => 96,  60 => 95,  58 => 11,  54 => 10,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -356,12 +378,18 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"action\">
-\t\t\t\t\t\t\t<a href=\"Affectation/{{item.id}}\">
-\t\t\t\t\t\t\t\t<button>Demande</button>
-\t\t\t\t\t\t\t\t<a/>
-\t\t\t\t\t\t\t\t<a href=\"materialView/{{item.id}}\">
-\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"start\">Détails</button>
-\t\t\t\t\t\t\t\t\t<a/>
+\t\t\t\t\t\t\t\t{% for permission in userInfo.getUserPermission() %}
+\t\t\t\t\t\t\t\t\t{% if permission.getPermissionName() == \"Demande matériel\" %}
+\t\t\t\t\t\t\t\t\t\t<a href=\"Affectation/{{item.id}}\">
+\t\t\t\t\t\t\t\t\t\t\t<button>Demande</button>
+\t\t\t\t\t\t\t\t\t\t<a/>
+\t\t\t\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t\t\t{% if permission.getPermissionName() == \"Voir Matériel Détails\" %}
+\t\t\t\t\t\t\t\t\t\t<a href=\"materialView/{{item.id}}\">
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"start\">Détails</button>
+\t\t\t\t\t\t\t\t\t\t<a/>
+\t\t\t\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t{% endif %}
@@ -372,7 +400,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t</div>
 \t\t\t\t\t{% endfor %}
 \t\t\t\t</div>
-\t\t\t\t
+
 \t\t\t</div>
 
 \t\t{% endblock %}

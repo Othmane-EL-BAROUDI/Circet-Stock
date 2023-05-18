@@ -63,7 +63,12 @@
 		{% endfor %}
 
 		<div class="text">Utilisateurs</div>
-		<button type="button" class="new" data-toggle="modal" data-target="#addUser">Ajouter un utilisateur</button>
+		
+		{% for permission in userInfo.getUserPermission() %}
+			{% if permission.getPermissionName() == "Ajouter un utilisateur" %}
+				<button type="button" class="new" data-toggle="modal" data-target="#addUser">Ajouter un utilisateur</button>
+			{% endif %}
+		{% endfor %}
 	
 		
 		<div class="CContent">
@@ -113,17 +118,24 @@
 												Voir
 											</button>
 										</a>
-										<a href="User/Edit/{{user.id}}">
-											<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 " style=" border: #007bff solid 1px; ">
-												<i class='bx bx-edit bx-xs'></i>
-												Modifier
-											</button>
-										</a>
-									
-										<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " data-toggle="modal" data-target="#exampleModal{{user.id}}"  style=" border: #dc3545 solid 1px; ">
-											<i class='bx bx-trash bx-xs'></i>
-											Supprimer
-										</button>
+										
+										{% for permission in userInfo.getUserPermission() %}
+											{% if permission.getPermissionName() == "Modifier un utilisateur" %}
+												<a href="User/Edit/{{user.id}}">
+													<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 " style=" border: #007bff solid 1px; ">
+														<i class='bx bx-edit bx-xs'></i>
+														Modifier
+													</button>
+												</a>
+											{% endif %}
+
+											{% if permission.getPermissionName() == "Supprimer un utilisateur" %}											
+												<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " data-toggle="modal" data-target="#exampleModal{{user.id}}"  style=" border: #dc3545 solid 1px; ">
+													<i class='bx bx-trash bx-xs'></i>
+													Supprimer
+												</button>
+											{% endif %}
+										{% endfor %}
 									</td>
 								</tr>
 								<div class="modal fade" id="exampleModal{{user.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -165,7 +177,7 @@
 <script>
     $(document).ready(function() {
       var table = $('#example').DataTable({
-        lengthMenu: [6], // Display 4 rows per page
+        lengthMenu: [4], // Display 4 rows per page
         language: {
           search: "_INPUT_", // Display search input instead of default text
           searchPlaceholder: "Recherche..." // Placeholder text for search input
