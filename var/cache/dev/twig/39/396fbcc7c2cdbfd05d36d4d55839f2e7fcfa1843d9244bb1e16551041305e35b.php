@@ -52,7 +52,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 10
         $this->displayBlock('body', $context, $blocks);
-        // line 143
+        // line 155
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -199,10 +199,30 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 61
         echo "\t\t<div class=\"text\">Permission</div>
-\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Ajouter permission</button>
+
+\t\t";
+        // line 63
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 63, $this->source); })()), "getUserPermission", [], "method", false, false, false, 63));
+        foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+            // line 64
+            echo "\t\t\t";
+            if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 64) == "Ajouter une permission")) {
+                // line 65
+                echo "\t\t\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Ajouter une permission</button>
+\t\t\t";
+            }
+            // line 67
+            echo "\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 68
+        echo "
 \t\t<div class=\"main_content\">
 \t\t\t<form action=\"";
-        // line 64
+        // line 70
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Permission");
         echo "\" method=\"GET\">
 \t\t\t\t<div class=\"sort\">
@@ -230,46 +250,69 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 \t\t\t\t\t</thead>
 \t\t\t\t\t<tbody>
 \t\t\t\t\t\t";
-        // line 89
+        // line 95
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["allPermissions"]) || array_key_exists("allPermissions", $context) ? $context["allPermissions"] : (function () { throw new RuntimeError('Variable "allPermissions" does not exist.', 89, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["allPermissions"]) || array_key_exists("allPermissions", $context) ? $context["allPermissions"] : (function () { throw new RuntimeError('Variable "allPermissions" does not exist.', 95, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["key"] => $context["permission"]) {
-            // line 90
+            // line 96
             echo "\t\t\t\t\t\t";
             if ($context["permission"]) {
-                // line 91
+                // line 97
                 echo "\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t\t<td class=\"textperm\">
 \t\t\t\t\t\t\t\t\t";
-                // line 93
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 93), "html", null, true);
+                // line 99
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 99), "html", null, true);
                 echo "
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t<td class=\"actions\">
 
-\t\t\t\t\t\t\t\t\t<a href=\"/Permission/";
-                // line 97
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 97), "html", null, true);
-                echo "\">
-\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
-\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\tModifier
-\t\t\t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t\t\t</a>
-
-\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModal";
-                // line 104
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 104), "html", null, true);
-                echo "\">
-\t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\tSupprimer
-\t\t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t";
+                // line 103
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 103, $this->source); })()), "getUserPermission", [], "method", false, false, false, 103));
+                foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+                    // line 104
+                    echo "\t\t\t\t\t\t\t\t\t\t";
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 104) == "Modifier une permission")) {
+                        // line 105
+                        echo "\t\t\t\t\t\t\t\t\t\t\t<a href=\"/Permission/";
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 105), "html", null, true);
+                        echo "\">
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\tModifier
+\t\t\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t";
+                    }
+                    // line 112
+                    echo "
+\t\t\t\t\t\t\t\t\t\t";
+                    // line 113
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 113) == "Supprimer une permission")) {
+                        // line 114
+                        echo "\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModal";
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 114), "html", null, true);
+                        echo "\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
+\t\t\t\t\t\t\t\t\t\t\t\tSupprimer
+\t\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t\t";
+                    }
+                    // line 119
+                    echo "\t\t\t\t\t\t\t\t\t";
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                // line 120
+                echo "\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t</tr>
 \t\t\t\t\t\t\t<div class=\"modal fade\" id=\"exampleModal";
-                // line 110
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 110), "html", null, true);
+                // line 122
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 122), "html", null, true);
                 echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
 \t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
 \t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
@@ -282,14 +325,14 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t\t\t\t\t\tVoulez-vous vraiment supprimer cet permission :
 \t\t\t\t\t\t\t\t\t\t\t<label style=\"  font-weight: bold; color: #f9a826; \">";
-                // line 121
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 121), "html", null, true);
+                // line 133
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 133), "html", null, true);
                 echo "</label>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"Permission/Remove/";
-                // line 124
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 124), "html", null, true);
+                // line 136
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["permission"], "id", [], "any", false, false, false, 136), "html", null, true);
                 echo "\">
 \t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn btn-sm h-4\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
 \t\t\t\t\t\t\t\t\t\t\t</a>
@@ -300,12 +343,12 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t";
             }
-            // line 133
+            // line 145
             echo "\t\t\t\t\t\t";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 134
+            // line 146
             echo "\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t<td>No results found.</td>
 \t\t\t\t\t\t</tr>
@@ -315,7 +358,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['permission'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 139
+        // line 151
         echo "\t\t\t\t</table>
 \t\t\t</div>
 \t\t</div>
@@ -326,14 +369,14 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 
     }
 
-    // line 143
+    // line 155
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 144
+        // line 156
         echo "<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
@@ -352,7 +395,7 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 
     public function getDebugInfo()
     {
-        return array (  337 => 144,  330 => 143,  319 => 139,  309 => 134,  304 => 133,  292 => 124,  286 => 121,  272 => 110,  263 => 104,  253 => 97,  246 => 93,  242 => 91,  239 => 90,  234 => 89,  206 => 64,  201 => 61,  189 => 55,  186 => 54,  181 => 53,  169 => 47,  165 => 45,  160 => 44,  148 => 38,  144 => 36,  140 => 35,  131 => 29,  123 => 24,  112 => 16,  103 => 11,  96 => 10,  84 => 6,  77 => 5,  63 => 2,  56 => 143,  54 => 10,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  380 => 156,  373 => 155,  362 => 151,  352 => 146,  347 => 145,  335 => 136,  329 => 133,  315 => 122,  311 => 120,  305 => 119,  296 => 114,  294 => 113,  291 => 112,  280 => 105,  277 => 104,  273 => 103,  266 => 99,  262 => 97,  259 => 96,  254 => 95,  226 => 70,  222 => 68,  216 => 67,  212 => 65,  209 => 64,  205 => 63,  201 => 61,  189 => 55,  186 => 54,  181 => 53,  169 => 47,  165 => 45,  160 => 44,  148 => 38,  144 => 36,  140 => 35,  131 => 29,  123 => 24,  112 => 16,  103 => 11,  96 => 10,  84 => 6,  77 => 5,  63 => 2,  56 => 155,  54 => 10,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -418,7 +461,13 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 \t\t\t</div>
 \t\t{% endfor %}
 \t\t<div class=\"text\">Permission</div>
-\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Ajouter permission</button>
+
+\t\t{% for permission in userInfo.getUserPermission() %}
+\t\t\t{% if permission.getPermissionName() == \"Ajouter une permission\" %}
+\t\t\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addRole\">Ajouter une permission</button>
+\t\t\t{% endif %}
+\t\t{% endfor %}
+
 \t\t<div class=\"main_content\">
 \t\t\t<form action=\"{{ path('Permission') }}\" method=\"GET\">
 \t\t\t\t<div class=\"sort\">
@@ -453,17 +502,23 @@ class __TwigTemplate_60aa358e0ec294ed663caa4ee002c33679c57d85dce6d4a437ae9790636
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t<td class=\"actions\">
 
-\t\t\t\t\t\t\t\t\t<a href=\"/Permission/{{permission.id}}\">
-\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
-\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\tModifier
-\t\t\t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t{% for permission in userInfo.getUserPermission() %}
+\t\t\t\t\t\t\t\t\t\t{% if permission.getPermissionName() == \"Modifier une permission\" %}
+\t\t\t\t\t\t\t\t\t\t\t<a href=\"/Permission/{{permission.id}}\">
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\tModifier
+\t\t\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t{% endif %}
 
-\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModal{{permission.id}}\">
-\t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\tSupprimer
-\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t\t{% if permission.getPermissionName() == \"Supprimer une permission\" %}
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" style=\" border: #dc3545 solid 1px;\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModal{{permission.id}}\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
+\t\t\t\t\t\t\t\t\t\t\t\tSupprimer
+\t\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t</tr>
 \t\t\t\t\t\t\t<div class=\"modal fade\" id=\"exampleModal{{permission.id}}\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">

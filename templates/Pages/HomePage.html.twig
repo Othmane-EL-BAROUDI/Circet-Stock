@@ -65,12 +65,18 @@
 
 						</div>
 						<div class="action">
-							<a href="Affectation/{{item.id}}">
-								<button>Demande</button>
-								<a/>
-								<a href="materialView/{{item.id}}">
-									<button type="button" class="start">Détails</button>
-									<a/>
+								{% for permission in userInfo.getUserPermission() %}
+									{% if permission.getPermissionName() == "Demande matériel" %}
+										<a href="Affectation/{{item.id}}">
+											<button>Demande</button>
+										<a/>
+									{% endif %}
+									{% if permission.getPermissionName() == "Voir Matériel Détails" %}
+										<a href="materialView/{{item.id}}">
+											<button type="button" class="start">Détails</button>
+										<a/>
+									{% endif %}
+								{% endfor %}
 								</div>
 							</div>
 						{% endif %}
@@ -79,7 +85,7 @@
 						{# <div class="noData"><img src="/CIRCET-STOCK/public/images/noData.png"></div> #}
 					{% endfor %}
 				</div>
-				
+
 			</div>
 
 		{% endblock %}
