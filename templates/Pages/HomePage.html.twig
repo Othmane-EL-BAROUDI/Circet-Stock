@@ -9,46 +9,47 @@
 {% endblock %}
 {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
-{% if userInfo.roles[0] == "IT SERVICE"  %}
-	<div class="notifications btn-group dropup">
-		<button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			<i class='bx bx-bell  bx-sm mr-2'></i>Notifications
-			<div class=" nbrNotifications">{{ NotificationCount }}</div>
-		</button>
-		<div class="dropdown-menu">
-			<h6>notifications récentes</h6>
-			<hr/>
-			<ul>
-				{% if RecentNotification|length > 0  %}
-					{% for noti in RecentNotification %}
-						<li>
-							{# <img
-													src="{{asset('images/decline.png')}}"/> #}
-							<img
-							src="{{asset(noti.srcImg())}}"/>
+	{% if userInfo.roles[0] == "IT SERVICE"  %}
+		<div class="notifications btn-group dropup">
+			<button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class='bx bx-bell  bx-sm mr-2'></i>Notifications
+				<div class=" nbrNotifications">{{ NotificationCount }}</div>
+			</button>
+			<div class="dropdown-menu">
+				<h6>notifications récentes</h6>
+				<hr/>
+				<ul>
+					{% if RecentNotification|length > 0  %}
+						{% for noti in RecentNotification %}
+							<li>
+								{# <img
+																																					src="{{asset('images/decline.png')}}"/> #}
+								<img
+								src="{{asset(noti.srcImg())}}"/>
 
-							{# <img src="/CIRCET-STOCK/public/images/decline.png" /> #}
-							<p style="font-size: .77rem; ">{{noti.description}}</p>
+								{# <img src="/CIRCET-STOCK/public/images/decline.png" /> #}
+								<p style="font-size: .77rem; ">{{noti.description}}</p>
+							</li>
+
+							<hr/>
+						{% endfor %}
+					{% else %}
+						<li>
+
+							<p style="font-size: .77rem; ">Pas de notifications</p>
 						</li>
 
 						<hr/>
-					{% endfor %}
-				{% else %}
-					<li>
-
-						<p style="font-size: .77rem; ">Pas de notifications</p>
+					{% endif %}
+					<li style=" height: 2px;">
+						<button type="button" class="voirPLus" data-toggle="modal" data-target="#exampleModal">
+							Voir plus
+						</button>
 					</li>
-
-					<hr/>
-				{% endif %}
-				<li style=" height: 2px;" >
-					<button type="button" class="voirPLus" data-toggle="modal" data-target="#exampleModal">
-						Voir plus
-					</button>
-				</li>
-			</ul>
+				</ul>
+			</div>
 		</div>
-	</div>
+	{% endif %}
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -60,41 +61,41 @@
 				</div>
 				<div class="modal-body">
 					<ul>
-				{% if AllNotification|length > 0  %}
-					{% for noti in AllNotification %}
-						<li>
-							{# <img
-													src="{{asset('images/decline.png')}}"/> #}
-							<img
-							src="{{asset(noti.srcImg())}}"/>
+						{% if AllNotification|length > 0  %}
+							{% for noti in AllNotification %}
+								<li>
+									{# <img
+																																										src="{{asset('images/decline.png')}}"/> #}
+									<img
+									src="{{asset(noti.srcImg())}}"/>
 
-							{# <img src="/CIRCET-STOCK/public/images/decline.png" /> #}
-						
-							
-							<p style="font-size: .77rem; ">{{noti.description}}</p>
-							<h6  class="NotiDate" style="font-size: .65rem; ">{{ noti.getDateNotifications() }}</h6>
-							
-						
-						</li>
+									{# <img src="/CIRCET-STOCK/public/images/decline.png" /> #}
 
-						<hr/>
-					{% endfor %}
-				{% else %}
-					<li>
 
-						<p style="font-size: .77rem; ">Pas de notifications</p>
-					</li>
+									<p style="font-size: .77rem; ">{{noti.description}}</p>
+									<h6 class="NotiDate" style="font-size: .65rem; ">{{ noti.getDateNotifications() }}</h6>
 
-					<hr/>
-				{% endif %}
-				
-			</ul>
+
+								</li>
+
+								<hr/>
+							{% endfor %}
+						{% else %}
+							<li>
+
+								<p style="font-size: .77rem; ">Pas de notifications</p>
+							</li>
+
+							<hr/>
+						{% endif %}
+
+					</ul>
 				</div>
-	
+
 			</div>
 		</div>
 	</div>
-	{% endif %}
+
 	<div class="home_content">
 		{% for flash_message in app.session.flashbag.get('success') %}
 			<div class="alert  alert-success fade show" role="alert">
@@ -139,8 +140,9 @@
 							{% if item.getImgSrc() is empty   %}
 								<img src="{{asset('images/laptop.png')}}" style="width:150px;" alt="">
 							{% else %}
-								<img src="/CIRCET-STOCK/public/{{item.getImgSrc()}}" style="width:150px; max-height:150px;" alt="no pic">
-								{# <img src="{{asset(item.getImgSrc())}}" style="width:150px; max-height:150px;" alt="no pic"> #}
+								<img
+								src="/CIRCET-STOCK/public/{{item.getImgSrc()}}" style="width:150px; max-height:150px;" alt="no pic">
+							{# <img src="{{asset(item.getImgSrc())}}" style="width:150px; max-height:150px;" alt="no pic"> #}
 							{% endif %}
 						</div>
 
@@ -167,8 +169,8 @@
 						{% endif %}
 					{% else %}
 						{# <div class="noData">
-							<img src="{{asset('images/noData.png')}}">
-						</div> #}
+																									<img src="{{asset('images/noData.png')}}">
+																								</div> #}
 						<div class="noData"><img src="/CIRCET-STOCK/public/images/noData.png"></div>
 					{% endfor %}
 				</div>
