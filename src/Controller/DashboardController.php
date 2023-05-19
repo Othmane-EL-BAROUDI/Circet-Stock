@@ -2,14 +2,15 @@
 
 namespace App\Controller;
 
+use DateTime;
 use App\Entity\User;
 use App\Entity\Machine;
 use App\Entity\Affectation;
 use App\Entity\Notification;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class DashboardController extends AbstractController
 {
@@ -29,7 +30,8 @@ class DashboardController extends AbstractController
         $query->setParameter('role', '%"ROLE_ADMIN"%');
         $nbr_of_admins = $query->getSingleScalarResult();
 
-        $query = $entityManager->createQuery('SELECT COUNT(u) FROM App\Entity\Affectation u ');
+        $query = $entityManager->createQuery('SELECT COUNT(u) FROM App\Entity\Affectation u WHERE u.Accept LIKE :state');
+        $query->setParameter('state', true);
         $affecationsnbr = $query->getSingleScalarResult();
 
         $user = $this->getUser();
@@ -39,6 +41,10 @@ class DashboardController extends AbstractController
 
         $entityManager = $this->getDoctrine()->getManager();
         $results = $entityManager->getRepository(Affectation::class)->findAll();
+        
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Affectation u WHERE u.Visibility = :state ');
+        $query->setParameter('state', true);
+        $results = $query->getResult();
 
         return $this->render('Pages/Dashboard.html.twig', [
             'userInfo' => $user,
@@ -60,6 +66,7 @@ class DashboardController extends AbstractController
         $newNotification->setUserId($affectation->getUserAffectation()->getId());
         $newNotification->setDescription('La demande sur '.$affectation->getMachineAffectation()->getModel()->getMarque()->getmarqueName() .' '. $affectation->getMachineAffectation()->getModel()->getModelName() . ' est refuse');
         $newNotification->setSrcImg('images/decline.png');
+        $newNotification->setDateNotifications(new DateTime(date('Y-m-d H:i:s')));
         $entityManager->persist($newNotification);
         $entityManager->remove($affectation);
         $entityManager->flush();
@@ -79,12 +86,14 @@ class DashboardController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $affectation = $entityManager->getRepository(Affectation::class)->find($id);
         $affectation->setAccept(true);
+        $affectation->setVisibility(false);
         $affectation->setDateAffectation(date("d/m/Y") . ' ' . date("h:i:sa"));
         $affectation->getMachineAffectation()->setAvailable(false);
         $newNotification = new Notification();
         $newNotification->setUserId($affectation->getUserAffectation()->getId());
         $newNotification->setDescription('La demande sur '.$affectation->getMachineAffectation()->getModel()->getMarque()->getmarqueName() .' '. $affectation->getMachineAffectation()->getModel()->getModelName() . ' est accepter');
         $newNotification->setSrcImg('images/accept.png');
+        $newNotification->setDateNotifications(new \DateTime(date('Y-m-d H:i:s')));
         $entityManager->persist($newNotification);
         $entityManager->flush();
         $this->addFlash(

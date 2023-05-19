@@ -41,8 +41,8 @@
 										{% if machine.getImgSrc() is empty   %}
 											<img src="{{asset('images/laptop.png')}}" style="width:155px;" alt="">
 										{% else %}
-											<img src="{{asset(machine.getImgSrc())}}" style="width:150px;" alt="no pic">
-											{# <img src="/CIRCET-STOCK/public/{{machine.getImgSrc()}}" style="max-width:160px; max-height:125px;" alt="no pic"> #}
+											{# <img src="{{asset(machine.getImgSrc())}}" style="width:150px;" alt="no pic"> #}
+											<img src="/CIRCET-STOCK/public/{{machine.getImgSrc()}}" style="max-width:160px; max-height:125px;" alt="no pic">
 										{% endif %}
 
 										<h5 class="mt-5">

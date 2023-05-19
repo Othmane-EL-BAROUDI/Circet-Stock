@@ -35,6 +35,10 @@ class Affectation
      */
     private $Accept;
     /**
+     * @ORM\Column(type="boolean")
+     */
+    private $Visibility;
+    /**
      * @ORM\ManyToOne(targetEntity=user::class, inversedBy="user_id")
      * @ORM\JoinColumn(nullable=false)
      */
@@ -81,6 +85,17 @@ class Affectation
     public function setAccept(bool $Accept): self
     {
         $this->Accept = $Accept;
+
+        return $this;
+    }
+    public function getVisibility(): ?bool
+    {
+        return $this->Visibility;
+    }
+
+    public function setVisibility(bool $Visibility): self
+    {
+        $this->Visibility = $Visibility;
 
         return $this;
     }

@@ -199,3 +199,42 @@ textarea:focus, input:focus , select:focus ,button:focus{
     justify-content: center;
     align-items: center;
 }
+.voirPLus{
+    cursor: pointer;
+    background: none;
+    color: #f9a826;
+    width: 100%;
+    border: none;
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.modal-body{
+    max-height: 400px !important;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+.modal-body ul li{
+   
+    padding-right: 15px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 30px;
+    max-height: 100px !important;
+}
+.modal-body ul li img{
+    width: 33px !important;
+    
+}
+.modal-body ul li p{
+    margin-left: 15px;
+    text-align: left;
+    width: 70%;
+    max-height: 50px;
+}
+.modal-body .NotiDate{
+  
+    width: 100px;
+    margin-left: 3%;
+    margin-top: 33px;
+}

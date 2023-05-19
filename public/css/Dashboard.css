@@ -41,7 +41,7 @@
 .over{
     
     overflow-y: scroll  !important;
-    max-height: 200px;
+    max-height: 345px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .body_body > div label{
