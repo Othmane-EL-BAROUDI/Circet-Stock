@@ -19,7 +19,26 @@
 		</div>
 		<ul class="nav_link">
 			{% if userInfo.Connected %}
+				{% if userInfo.roles[0] == "ROLE_ADMIN" or userInfo.roles[0] == "SUPER ADMIN" %}
 
+					{% for permission in userInfo.getUserPermission() %}
+						{% if permission.getPermissionName() == "Voir notification" %}
+						
+							<li  style="margin-top:-25px;">
+								<button type="button" class="bbttnn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<a href="#">
+									
+										<i class='bx bx-bell  bx-sm mr-2'></i>	<span class="links_name">Notifications</span>
+										<div class=" notlinkCount">0</div>
+									
+								</a>
+								<span class="tooltip">Notifications</span>
+							</button>
+							</li>
+							
+						{% endif %}
+					{% endfor %}
+				{% endif %}
 				{% for permission in userInfo.getUserPermission() %}
 					{% if permission.getPermissionName() == "Voir accueil" %}
 						<li>
@@ -148,8 +167,7 @@
 			</div>
 		</div>
 	</div>
-	
-	
+
 
 
 {% endblock %}

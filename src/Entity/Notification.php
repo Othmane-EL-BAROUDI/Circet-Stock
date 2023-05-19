@@ -2,8 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\NotificationRepository;
+use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\NotificationRepository;
+use DateTime;
+use PhpParser\Node\Scalar\String_;
+use Symfony\Component\Validator\Constraints\Date;
 
 /**
  * @ORM\Entity(repositoryClass=NotificationRepository::class)
@@ -21,6 +25,10 @@ class Notification
      * @ORM\Column(type="string", length=255)
      */
     private $description;
+    /**
+     * @ORM\Column(type="datetime", nullable=true )
+     */
+    private $DateNotifications;
 
     /**
      * @ORM\Column(type="integer")
@@ -70,6 +78,19 @@ class Notification
     {
         $this->srcImg = $srcImg;
 
+        return $this;
+    }
+    public function getDateNotifications(): ?string
+    {
+        // $now = new DateTime(date('d-m-Y H:i:s'));
+        // $interval = $this->DateNotifications->diff($now);
+        return $this->DateNotifications->format('d/m/Y h:i');
+    }
+    
+    public function setDateNotifications(\DateTimeInterface $DateNotifications): self
+    {
+        $this->DateNotifications = $DateNotifications;
+    
         return $this;
     }
 }

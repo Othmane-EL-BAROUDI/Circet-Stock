@@ -60,8 +60,8 @@
 		{% endfor %}
 		<div class="text">Permission</div>
 
-		{% for permission in userInfo.getUserPermission() %}
-			{% if permission.getPermissionName() == "Ajouter une permission" %}
+		{% for Currentpermission in userInfo.getUserPermission() %}
+			{% if Currentpermission.getPermissionName() == "Ajouter une permission" %}
 				<button type="button" class="new" data-toggle="modal" data-target="#addRole">Ajouter une permission</button>
 			{% endif %}
 		{% endfor %}
@@ -100,8 +100,8 @@
 								</td>
 								<td class="actions">
 
-									{% for permission in userInfo.getUserPermission() %}
-										{% if permission.getPermissionName() == "Modifier une permission" %}
+									{% for Currentpermission in userInfo.getUserPermission() %}
+										{% if Currentpermission.getPermissionName() == "Modifier une permission" %}
 											<a href="/Permission/{{permission.id}}">
 												<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 " style=" border: #007bff solid 1px; ">
 													<i class='bx bx-edit bx-xs'></i>
@@ -110,7 +110,7 @@
 											</a>
 										{% endif %}
 
-										{% if permission.getPermissionName() == "Supprimer une permission" %}
+										{% if Currentpermission.getPermissionName() == "Supprimer une permission" %}
 											<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal{{permission.id}}">
 												<i class='bx bx-trash bx-xs'></i>
 												Supprimer

@@ -85,7 +85,7 @@
 								<th style="text-align:center;">Actions</th>
 							</tr>
 						</thead>
-						<tbody>
+						<tbody>{% if AllAffectations|length > 0 %}
 							{% for item in AllAffectations %}
 
 
@@ -135,6 +135,13 @@
 									</td>
 								</tr>
 							{% endfor %}
+							{% else %} <tr>
+									<td> aucune demande
+									
+									</td> 
+									</tr>
+								
+							{% endif %}
 						</tbody>
 					</table>
 				</div>
