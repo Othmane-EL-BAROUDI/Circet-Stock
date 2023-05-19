@@ -18,6 +18,18 @@ class AffectationRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Affectation::class);
     }
+    public function search($id)
+    {
+        return $this->createQueryBuilder('m')
+            ->select('m')
+            ->join('m.machine', 'p')
+            ->where($this->createQueryBuilder('m')->expr()->like('p.id', ':ModelQuery'))
+            ->andwhere($this->createQueryBuilder('m')->expr()->like('m.Accept', ':AcceptQuery'))
+            ->setParameter('ModelQuery', $id)
+            ->setParameter('AcceptQuery', 1 )
+            ->getQuery()
+            ->getResult();
+    }
 
     // /**
     //  * @return Affectation[] Returns an array of Affectation objects

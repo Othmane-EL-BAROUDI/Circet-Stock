@@ -19,6 +19,16 @@
 				</button>
 			</div>
 		{% endfor %}
+			{% for flash_message in app.session.flashbag.get('success') %}
+			<div class="alert  alert-success fade show" role="alert">
+				<strong>Succès!</strong>
+				{{flash_message}}
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			
+		{% endfor %}
 		<div class="text">Tableau de bord</div>
 		<div class="body_header">
 			<div>
@@ -110,7 +120,7 @@
 									</td>
 
 									<td class="actions">
-										<a href="#">
+										<a href="Affecation/Accept/{{item.id}}">
 											<button type="button" class="bn1 btn  btn-sm btn-rounded mt-1 mr-1" style=" border: #28a745 solid 1px; ">
 												<i class='bx bx-check bx-xs'></i>
 												Accepter

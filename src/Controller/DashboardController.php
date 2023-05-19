@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Entity\Machine;
 use App\Entity\Affectation;
+use App\Entity\Notification;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Doctrine\ORM\EntityManagerInterface;
@@ -55,12 +56,41 @@ class DashboardController extends AbstractController
     {
         $entityManager = $this->getDoctrine()->getManager();
         $affectation = $entityManager->getRepository(Affectation::class)->find($id);
+        $newNotification = new Notification();
+        $newNotification->setUserId($affectation->getUserAffectation()->getId());
+        $newNotification->setDescription('La demande sur '.$affectation->getMachineAffectation()->getModel()->getMarque()->getmarqueName() .' '. $affectation->getMachineAffectation()->getModel()->getModelName() . ' est refuse');
+        $newNotification->setSrcImg('images/decline.png');
+        $entityManager->persist($newNotification);
         $entityManager->remove($affectation);
         $entityManager->flush();
         $this->addFlash(
             'delete',
             sprintf(
                 'Demande refuse',
+            )
+        );
+        return $this->redirectToRoute('Dashboard');
+    }
+    /**
+     * @Route("Affecation/Accept/{id}" , name="AffectationAccept")
+     */
+    public function AffectationAccept(EntityManagerInterface $entityManager, $id): Response
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $affectation = $entityManager->getRepository(Affectation::class)->find($id);
+        $affectation->setAccept(true);
+        $affectation->setDateAffectation(date("d/m/Y") . ' ' . date("h:i:sa"));
+        $affectation->getMachineAffectation()->setAvailable(false);
+        $newNotification = new Notification();
+        $newNotification->setUserId($affectation->getUserAffectation()->getId());
+        $newNotification->setDescription('La demande sur '.$affectation->getMachineAffectation()->getModel()->getMarque()->getmarqueName() .' '. $affectation->getMachineAffectation()->getModel()->getModelName() . ' est accepter');
+        $newNotification->setSrcImg('images/accept.png');
+        $entityManager->persist($newNotification);
+        $entityManager->flush();
+        $this->addFlash(
+            'success',
+            sprintf(
+                'Demande accepter',
             )
         );
         return $this->redirectToRoute('Dashboard');

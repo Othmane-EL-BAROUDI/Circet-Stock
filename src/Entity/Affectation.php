@@ -33,7 +33,7 @@ class Affectation
     /**
      * @ORM\Column(type="boolean")
      */
-    private $autocad;
+    private $Accept;
     /**
      * @ORM\ManyToOne(targetEntity=user::class, inversedBy="user_id")
      * @ORM\JoinColumn(nullable=false)
@@ -73,14 +73,14 @@ class Affectation
         return $this;
     }
 
-    public function getAutocad(): ?bool
+    public function getAccept(): ?bool
     {
-        return $this->autocad;
+        return $this->Accept;
     }
 
-    public function setAutocad(bool $autocad): self
+    public function setAccept(bool $Accept): self
     {
-        $this->autocad = $autocad;
+        $this->Accept = $Accept;
 
         return $this;
     }

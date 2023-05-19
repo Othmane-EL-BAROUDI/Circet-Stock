@@ -33,15 +33,16 @@
 									<img src="{{asset('images/laptop.png')}}" style="width:155px;" alt="">
 
 								{% else %}
-									<img src="{{asset(machine.getImgSrc())}}" style="width:150px;" alt="no pic">
-									{# <img src="/CIRCET-STOCK/public/{{machine.getImgSrc()}}" style="max-width:160px; max-height:125px;" alt="no pic"> #}
+									<img
+									src="{{asset(machine.getImgSrc())}}" style="width:150px;" alt="no pic">
+								{# <img src="/CIRCET-STOCK/public/{{machine.getImgSrc()}}" style="max-width:160px; max-height:125px;" alt="no pic"> #}
 								{% endif %}
 							</div>
 						</div>
 						<div class="card mb-4 mb-lg-0">
 							<div class="card-body p-0">
 								<ul class="list-group list-group-flush rounded-3" style=" box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
-									
+
 									<li class="list-group-item d-flex justify-content-between align-items-center p-3">
 										<p class="mb-0">Type</p>
 										<p class="mb-1" style="font-size: .77rem; ">{{machine.model.getType()}}</p>
@@ -93,57 +94,40 @@
 									<table class="table align-middle mb-0 bg-white">
 										<thead class="bg-light">
 											<tr>
-												<th>Affectation</th>
-												<th>Type</th>
-												<th>Date</th>
+												<th>utilisateur</th>
+												<th>Matricule</th>
+												<th>Date d'acceptation</th>
+												<th>Description</th>
 											</tr>
 										</thead>
 										<tbody>
+											{% if  AllAffectation|length >0  %}
 
-											<tr>
-												<td class="textperm">
-													<label>Ayman</label>
-													a pris 
-																																							cet
-													<label>Ordinateur Portable</label>
-												</td>
-												<td class="textperm">
-													Laptop
-												</td>
-												<td class="textperm">
-													09/17/2023 8:00
-												</td>
-											</tr>
-											<tr>
-												<td class="textperm">
-													<label>Ayman</label>
-													a pris 
-																																							cet
-													<label>Ordinateur Portable</label>
-												</td>
-												<td class="textperm">
-													Laptop
-												</td>
-												<td class="textperm">
-													09/17/2023 8:00
-												</td>
-											</tr>
-											<tr>
-												<td class="textperm">
-													<label>Ayman</label>
-													a pris 
-																																							cet
-													<label>Ordinateur Portable</label>
-												</td>
-												<td class="textperm">
-													Laptop
-												</td>
-												<td class="textperm">
-													09/17/2023 8:00
-												</td>
-											</tr>
-										
-									
+
+												{% for item in AllAffectation %}
+
+
+													<tr>
+														<td class="textperm">
+															{{item.getUserAffectation().getUsername()}}
+														</td>
+														<td class="textperm">
+															{{item.getUserAffectation().getMatricule()}}
+														</td>
+														<td class="textperm">
+															{{item.getDateAffectation()}}
+														</td>
+														<td class="textperm">
+															{{item.getDescription()}}
+														</td>
+													</tr>
+												{% endfor %}
+											{% else %}
+												<tr>
+													<td>No Historique found.</td>
+												</tr>
+											{% endif %}
+
 										</tbody>
 									</table>
 								</div>
@@ -260,7 +244,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 					</div>
 				</div>
 			</div>

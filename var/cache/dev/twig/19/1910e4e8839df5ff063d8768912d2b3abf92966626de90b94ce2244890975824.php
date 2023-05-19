@@ -393,113 +393,9 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t</div>
 \t\t</div>
 \t</div>
-\t";
-        // line 151
-        if (twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 151, $this->source); })()), "Connected", [], "any", false, false, false, 151)) {
-            // line 152
-            echo "
-\t\t";
-            // line 153
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 153, $this->source); })()), "getUserPermission", [], "method", false, false, false, 153));
-            foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
-                // line 154
-                echo "\t\t\t";
-                if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 154) == "Voir les rôles")) {
-                    // line 155
-                    echo "\t\t\t\t<div class=\"notifications btn-group dropup\">
-\t\t\t\t\t<button type=\"button\" class=\"btn  dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-\t\t\t\t\t\t<i class='bx bx-bell  bx-sm mr-2'></i>Notifications
-\t\t\t\t\t\t<div class=\" nbrNotifications\">8</div>
-\t\t\t\t\t</button>
-\t\t\t\t\t<div class=\"dropdown-menu\">
-\t\t\t\t\t\t<h6>Centre de notifications</h6>
-\t\t\t\t\t\t<hr/>
-\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t";
-                    // line 166
-                    echo "\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/decline.png\"/>
+\t
+\t
 
-\t\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-
-
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<hr/>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t";
-                    // line 175
-                    echo "\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/accept.png\"/>
-
-\t\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-
-
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<hr/>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t";
-                    // line 184
-                    echo "\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/accept.png\"/>
-
-\t\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-
-
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<hr/>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t";
-                    // line 193
-                    echo "\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/decline.png\"/>
-
-\t\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-
-
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<hr/>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t";
-                    // line 202
-                    echo "\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/accept.png\"/>
-
-\t\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-
-
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<hr/>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t";
-                    // line 211
-                    echo "\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/accept.png\"/>
-
-\t\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-
-
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<hr/>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t";
-                    // line 220
-                    echo "\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/decline.png\"/>
-\t\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<hr/>
-\t\t\t\t\t\t</ul>
-
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t";
-                }
-                // line 229
-                echo "\t\t";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 230
-            echo "\t";
-        }
-        // line 231
-        echo "
 
 ";
         
@@ -519,7 +415,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 
     public function getDebugInfo()
     {
-        return array (  502 => 231,  499 => 230,  493 => 229,  482 => 220,  472 => 211,  462 => 202,  452 => 193,  442 => 184,  432 => 175,  422 => 166,  410 => 155,  407 => 154,  403 => 153,  400 => 152,  398 => 151,  389 => 145,  383 => 142,  379 => 141,  374 => 139,  367 => 134,  361 => 133,  351 => 126,  348 => 125,  345 => 124,  341 => 123,  338 => 122,  335 => 121,  331 => 119,  325 => 118,  315 => 111,  312 => 110,  309 => 109,  305 => 108,  302 => 107,  296 => 106,  286 => 99,  283 => 98,  280 => 97,  276 => 96,  273 => 95,  267 => 94,  257 => 87,  254 => 86,  251 => 85,  247 => 84,  244 => 83,  238 => 82,  228 => 75,  225 => 74,  222 => 73,  218 => 72,  215 => 71,  209 => 70,  199 => 63,  196 => 62,  193 => 61,  189 => 60,  186 => 59,  180 => 58,  170 => 51,  167 => 50,  164 => 49,  160 => 48,  157 => 47,  151 => 46,  141 => 39,  138 => 38,  135 => 37,  131 => 36,  128 => 35,  125 => 34,  119 => 33,  109 => 26,  106 => 25,  103 => 24,  99 => 23,  96 => 22,  94 => 21,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  389 => 145,  383 => 142,  379 => 141,  374 => 139,  367 => 134,  361 => 133,  351 => 126,  348 => 125,  345 => 124,  341 => 123,  338 => 122,  335 => 121,  331 => 119,  325 => 118,  315 => 111,  312 => 110,  309 => 109,  305 => 108,  302 => 107,  296 => 106,  286 => 99,  283 => 98,  280 => 97,  276 => 96,  273 => 95,  267 => 94,  257 => 87,  254 => 86,  251 => 85,  247 => 84,  244 => 83,  238 => 82,  228 => 75,  225 => 74,  222 => 73,  218 => 72,  215 => 71,  209 => 70,  199 => 63,  196 => 62,  193 => 61,  189 => 60,  186 => 59,  180 => 58,  170 => 51,  167 => 50,  164 => 49,  160 => 48,  157 => 47,  151 => 46,  141 => 39,  138 => 38,  135 => 37,  131 => 36,  128 => 35,  125 => 34,  119 => 33,  109 => 26,  106 => 25,  103 => 24,  99 => 23,  96 => 22,  94 => 21,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -674,86 +570,8 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t</div>
 \t\t</div>
 \t</div>
-\t{% if userInfo.Connected %}
-
-\t\t{% for permission in userInfo.getUserPermission() %}
-\t\t\t{% if permission.getPermissionName() == \"Voir les rôles\" %}
-\t\t\t\t<div class=\"notifications btn-group dropup\">
-\t\t\t\t\t<button type=\"button\" class=\"btn  dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-\t\t\t\t\t\t<i class='bx bx-bell  bx-sm mr-2'></i>Notifications
-\t\t\t\t\t\t<div class=\" nbrNotifications\">8</div>
-\t\t\t\t\t</button>
-\t\t\t\t\t<div class=\"dropdown-menu\">
-\t\t\t\t\t\t<h6>Centre de notifications</h6>
-\t\t\t\t\t\t<hr/>
-\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t{# <img src=\"asset{{'images/decline.png'}}\" />  #}
-\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/decline.png\"/>
-
-\t\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-
-
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<hr/>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t{# <img src=\"asset{{'images/accept.png'}}\" />  #}
-\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/accept.png\"/>
-
-\t\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-
-
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<hr/>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t{# <img src=\"asset{{'images/accept.png'}}\" />  #}
-\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/accept.png\"/>
-
-\t\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-
-
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<hr/>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t{# <img src=\"asset{{'images/accept.png'}}\" />  #}
-\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/decline.png\"/>
-
-\t\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-
-
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<hr/>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t{# <img src=\"asset{{'images/decline.png'}}\" />  #}
-\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/accept.png\"/>
-
-\t\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-
-
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<hr/>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t{# <img src=\"asset{{'images/decline.png'}}\" />  #}
-\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/accept.png\"/>
-
-\t\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-
-
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<hr/>
-\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t{# <img src=\"asset{{'images/decline.png'}}\" />  #}
-\t\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/decline.png\"/>
-\t\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t<hr/>
-\t\t\t\t\t\t</ul>
-
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t{% endif %}
-\t\t{% endfor %}
-\t{% endif %}
+\t
+\t
 
 
 {% endblock %}

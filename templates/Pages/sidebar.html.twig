@@ -148,86 +148,8 @@
 			</div>
 		</div>
 	</div>
-	{% if userInfo.Connected %}
-
-		{% for permission in userInfo.getUserPermission() %}
-			{% if permission.getPermissionName() == "Voir les rôles" %}
-				<div class="notifications btn-group dropup">
-					<button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<i class='bx bx-bell  bx-sm mr-2'></i>Notifications
-						<div class=" nbrNotifications">8</div>
-					</button>
-					<div class="dropdown-menu">
-						<h6>Centre de notifications</h6>
-						<hr/>
-						<ul>
-							<li>
-								{# <img src="asset{{'images/decline.png'}}" />  #}
-								<img src="/CIRCET-STOCK/public/images/decline.png"/>
-
-								<p style="font-size: .77rem; ">votre demande sur Dell G3 a etait accepter</p>
-
-
-							</li>
-							<hr/>
-							<li>
-								{# <img src="asset{{'images/accept.png'}}" />  #}
-								<img src="/CIRCET-STOCK/public/images/accept.png"/>
-
-								<p style="font-size: .77rem; ">votre demande sur Dell G3 a etait accepter</p>
-
-
-							</li>
-							<hr/>
-							<li>
-								{# <img src="asset{{'images/accept.png'}}" />  #}
-								<img src="/CIRCET-STOCK/public/images/accept.png"/>
-
-								<p style="font-size: .77rem; ">votre demande sur Dell G3 a etait accepter</p>
-
-
-							</li>
-							<hr/>
-							<li>
-								{# <img src="asset{{'images/accept.png'}}" />  #}
-								<img src="/CIRCET-STOCK/public/images/decline.png"/>
-
-								<p style="font-size: .77rem; ">votre demande sur Dell G3 a etait accepter</p>
-
-
-							</li>
-							<hr/>
-							<li>
-								{# <img src="asset{{'images/decline.png'}}" />  #}
-								<img src="/CIRCET-STOCK/public/images/accept.png"/>
-
-								<p style="font-size: .77rem; ">votre demande sur Dell G3 a etait accepter</p>
-
-
-							</li>
-							<hr/>
-							<li>
-								{# <img src="asset{{'images/decline.png'}}" />  #}
-								<img src="/CIRCET-STOCK/public/images/accept.png"/>
-
-								<p style="font-size: .77rem; ">votre demande sur Dell G3 a etait accepter</p>
-
-
-							</li>
-							<hr/>
-							<li>
-								{# <img src="asset{{'images/decline.png'}}" />  #}
-								<img src="/CIRCET-STOCK/public/images/decline.png"/>
-								<p style="font-size: .77rem; ">votre demande sur Dell G3 a etait accepter</p>
-							</li>
-							<hr/>
-						</ul>
-
-					</div>
-				</div>
-			{% endif %}
-		{% endfor %}
-	{% endif %}
+	
+	
 
 
 {% endblock %}

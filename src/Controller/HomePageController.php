@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Affectation;
 use App\Entity\Machine;
+use App\Entity\Notification;
 use App\Form\AffectationFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Doctrine\ORM\EntityManagerInterface;
@@ -22,7 +23,18 @@ class HomePageController extends AbstractController
         $searchQuery1 = $request->query->get('ModelSearch');
         $searchQuery2 = $request->query->get('MarqueSearch');
         $results = $entityManager->getRepository(Machine::class)->search($searchQuery1,$searchQuery2);
+
         $user = $this->getUser();
+
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ');
+        $query->setParameter('uid', $user->getId());
+        $query->setMaxResults(5);
+        $AllNotification = $query->getResult();
+
+        $query = $entityManager->createQuery('SELECT COUNT(u) FROM App\Entity\Notification u WHERE u.userId LIKE :uid ');
+        $query->setParameter('uid', $user->getId());
+        $NotificationCount = $query->getSingleScalarResult();
+
         if ($user->getConnected() == false) {
             return $this->redirect('Profile');
         }
@@ -30,6 +42,9 @@ class HomePageController extends AbstractController
             'controller_name' => 'BaseController',
             'userInfo' => $user,
             'data' => $results,
+            'AllNotification' => $AllNotification,
+            'NotificationCount' => $NotificationCount,
+            
         ]);
     }
     /**
@@ -54,18 +69,22 @@ class HomePageController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $machine = $entityManager->getRepository(Machine::class)->find($id);
 
-        $user = $this->getUser();
+        $user = $this->getUser();   
 
         $affectation = new Affectation();
         $affectation->setDateAffectation(date("d/m/Y") . ' ' . date("h:i:sa"));
         $affectation->setUserAffectation($user);
         $affectation->setMachineAffectation($machine);
-        $affectation->setAutocad(1);
+        $affectation->setAccept(false);
         $form = $this->createForm(AffectationFormType::class, $affectation);
         $form->handleRequest($request);
         
         if(  $form->isSubmitted()  && $form->isValid()){
-          //  dd($form);
+            $newNotification = new Notification();
+            $newNotification->setUserId($affectation->getUserAffectation()->getId());
+            $newNotification->setDescription('En attend la reponse sur la  demande sur '.$affectation->getMachineAffectation()->getModel()->getMarque()->getmarqueName() .' '. $affectation->getMachineAffectation()->getModel()->getModelName() );
+            $newNotification->setSrcImg('images/time-left.png');
+            $entityManager->persist($newNotification);
             $affectation = $form->getData();
             $entityManager->persist($affectation);
             $entityManager->flush();

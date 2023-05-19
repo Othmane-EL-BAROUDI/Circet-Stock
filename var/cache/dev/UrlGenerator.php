@@ -7,6 +7,7 @@ return [
     'index' => [[], ['_controller' => 'App\\Controller\\BaseController::index'], [], [['text', '/']], [], []],
     'Dashboard' => [[], ['_controller' => 'App\\Controller\\DashboardController::Dashboard'], [], [['text', '/Dashboard']], [], []],
     'AffectationRemove' => [['id'], ['_controller' => 'App\\Controller\\DashboardController::AffectationRemove'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Affecation/Delete']], [], []],
+    'AffectationAccept' => [['id'], ['_controller' => 'App\\Controller\\DashboardController::AffectationAccept'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Affecation/Accept']], [], []],
     'HomePage' => [[], ['_controller' => 'App\\Controller\\HomePageController::HomePage'], [], [['text', '/HomePage']], [], []],
     'materialView' => [['id'], ['_controller' => 'App\\Controller\\HomePageController::MaterialView'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/materialView']], [], []],
     'Affectation' => [['id'], ['_controller' => 'App\\Controller\\HomePageController::Affectation'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Affectation']], [], []],

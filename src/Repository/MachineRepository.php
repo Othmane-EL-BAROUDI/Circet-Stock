@@ -27,8 +27,10 @@ class MachineRepository extends ServiceEntityRepository
             ->join('p.marque', 'ma')
             ->where($this->createQueryBuilder('m')->expr()->like('p.model_name', ':ModelQuery'))
             ->andWhere($this->createQueryBuilder('m')->expr()->like('ma.marque_name', ':MarqueQuery'))
+            ->andWhere($this->createQueryBuilder('m')->expr()->like('m.available', ':AvailableQuery'))
             ->setParameter('ModelQuery', $searchQuery . '%')
             ->setParameter('MarqueQuery', $searchQuery2 . '%')
+            ->setParameter('AvailableQuery', 1 )
             ->getQuery()
             ->getResult();
     }

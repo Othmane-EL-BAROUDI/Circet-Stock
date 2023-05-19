@@ -387,6 +387,10 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="App\Repository\NotificationRepository" class="App\Repository\NotificationRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Repository\PermissionRepository" class="App\Repository\PermissionRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -3239,7 +3243,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.7SRdLwO"/>
+      <argument type="service" id=".service_locator.RBeFgPg"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -4926,6 +4930,8 @@
     <service id=".abstract.instanceof.App\Repository\MarqueRepository" class="App\Repository\MarqueRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ModelRepository" class="App\Repository\ModelRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ModelRepository" class="App\Repository\ModelRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\NotificationRepository" class="App\Repository\NotificationRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\NotificationRepository" class="App\Repository\NotificationRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PermissionRepository" class="App\Repository\PermissionRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\PermissionRepository" class="App\Repository\PermissionRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\RestitutionRepository" class="App\Repository\RestitutionRepository" autowire="true" abstract="true"/>
@@ -5207,9 +5213,10 @@
         <argument key="entityManager" type="service" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.sZUD3GL" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.uFvl7Vp" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Controller\DashboardController::AffectationAccept" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\DashboardController::AffectationRemove" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\DashboardController::Dashboard" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\HomePageController::Affectation" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5233,6 +5240,7 @@
         <argument key="App\Controller\UsersController::UserUpdate" type="service" id=".service_locator.Hm8CUXV"/>
         <argument key="App\Controller\UsersController::UserView" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController::Users" type="service" id=".service_locator.Hm8CUXV"/>
+        <argument key="App\Controller\DashboardController:AffectationAccept" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\DashboardController:AffectationRemove" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\DashboardController:Dashboard" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\HomePageController:Affectation" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5346,13 +5354,14 @@
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
       </argument>
     </service>
-    <service id=".service_locator.7SRdLwO" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.RBeFgPg" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\AffectationRepository" type="service" id="App\Repository\AffectationRepository"/>
         <argument key="App\Repository\MachineRepository" type="service" id="App\Repository\MachineRepository"/>
         <argument key="App\Repository\MarqueRepository" type="service" id="App\Repository\MarqueRepository"/>
         <argument key="App\Repository\ModelRepository" type="service" id="App\Repository\ModelRepository"/>
+        <argument key="App\Repository\NotificationRepository" type="service" id="App\Repository\NotificationRepository"/>
         <argument key="App\Repository\PermissionRepository" type="service" id="App\Repository\PermissionRepository"/>
         <argument key="App\Repository\RestitutionRepository" type="service" id="App\Repository\RestitutionRepository"/>
         <argument key="App\Repository\RoleRepository" type="service" id="App\Repository\RoleRepository"/>
@@ -5592,12 +5601,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.sZUD3GL"/>
+      <argument type="service" id=".service_locator.uFvl7Vp"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.sZUD3GL"/>
+      <argument type="service" id=".service_locator.uFvl7Vp"/>
     </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.aPyppP2"/>
@@ -5917,7 +5926,7 @@
     <service id="mailer" alias="swiftmailer.mailer.default" public="true"/>
     <service id="sensio_framework_extra.converter.doctrine.orm.expression_language" alias="sensio_framework_extra.converter.doctrine.orm.expression_language.default" public="false"/>
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.sZUD3GL"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.uFvl7Vp"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>
