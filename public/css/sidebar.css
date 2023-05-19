@@ -240,7 +240,6 @@ body{
     left: 78;
 }
 .notifications{
-    
     z-index: 1;
     position: absolute;
     bottom: 0;
@@ -259,7 +258,6 @@ body{
     color: white;
 }
 .dropdown-menu{
-   
     width: 270px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;

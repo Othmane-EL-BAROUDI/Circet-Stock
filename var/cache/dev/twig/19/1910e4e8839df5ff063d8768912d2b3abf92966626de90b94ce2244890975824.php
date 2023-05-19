@@ -94,132 +94,298 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
         if (twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 21, $this->source); })()), "Connected", [], "any", false, false, false, 21)) {
             // line 22
             echo "
-
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"";
-            // line 25
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("HomePage");
-            echo "\">
-\t\t\t\t\t\t<i class='bx bx-home'></i>
-\t\t\t\t\t\t<span class=\"links_name\">Accueil</span>
-\t\t\t\t\t</a>
-\t\t\t\t\t<span class=\"tooltip\">Accueil</span>
-\t\t\t\t</li>
 \t\t\t\t";
-            // line 31
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 31, $this->source); })()), "roles", [], "any", false, false, false, 31), 0, [], "array", false, false, false, 31) == "ROLE_ADMIN")) {
-                // line 32
+            // line 23
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 23, $this->source); })()), "getUserPermission", [], "method", false, false, false, 23));
+            foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+                // line 24
+                echo "\t\t\t\t\t";
+                if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 24) == "Voir accueil")) {
+                    // line 25
+                    echo "\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"";
+                    // line 26
+                    echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("HomePage");
+                    echo "\">
+\t\t\t\t\t\t\t\t<i class='bx bx-home'></i>
+\t\t\t\t\t\t\t\t<span class=\"links_name\">Accueil</span>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<span class=\"tooltip\">Accueil</span>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t";
+                }
+                // line 33
+                echo "\t\t\t\t";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 34
+            echo "\t\t\t\t";
+            if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 34, $this->source); })()), "roles", [], "any", false, false, false, 34), 0, [], "array", false, false, false, 34) == "ROLE_ADMIN") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 34, $this->source); })()), "roles", [], "any", false, false, false, 34), 0, [], "array", false, false, false, 34) == "SUPER ADMIN"))) {
+                // line 35
                 echo "
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-                // line 34
-                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Dashboard");
-                echo "\">
-\t\t\t\t\t\t\t<i class='bx bxs-dashboard'></i>
-\t\t\t\t\t\t\t<span class=\"links_name\">Tableau de bord</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<span class=\"tooltip\">Tableau de bord</span>
-\t\t\t\t\t</li>
-
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-                // line 42
-                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Users");
-                echo "\">
-\t\t\t\t\t\t\t<i class='bx bxs-user-plus'></i>
-\t\t\t\t\t\t\t<span class=\"links_name\">Utilisateurs</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<span class=\"tooltip\">Utilisateurs</span>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-                // line 49
-                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Role");
-                echo "\">
-\t\t\t\t\t\t\t<i class='bx bx-briefcase-alt-2'></i>
-\t\t\t\t\t\t\t<span class=\"links_name\">
-\t\t\t\t\t\t\t\tRôle</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<span class=\"tooltip\">Rôle</span>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-                // line 57
-                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Permission");
-                echo "\">
-\t\t\t\t\t\t\t<i class='bx bx-spreadsheet'></i>
-\t\t\t\t\t\t\t<span class=\"links_name\">Permission</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<span class=\"tooltip\">Permission</span>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-                // line 64
-                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Stock");
-                echo "\">
-\t\t\t\t\t\t\t<i class='bx bx-package'></i>
-\t\t\t\t\t\t\t<span class=\"links_name\">Stock</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<span class=\"tooltip\">Stock</span>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
+\t\t\t\t\t";
+                // line 36
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 36, $this->source); })()), "getUserPermission", [], "method", false, false, false, 36));
+                foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+                    // line 37
+                    echo "\t\t\t\t\t\t";
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 37) == "Voir tableau de bord")) {
+                        // line 38
+                        echo "\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<a href=\"";
+                        // line 39
+                        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Dashboard");
+                        echo "\">
+\t\t\t\t\t\t\t\t\t<i class='bx bxs-dashboard'></i>
+\t\t\t\t\t\t\t\t\t<span class=\"links_name\">Tableau de bord</span>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<span class=\"tooltip\">Tableau de bord</span>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t";
+                    }
+                    // line 46
+                    echo "\t\t\t\t\t";
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                // line 47
+                echo "
+\t\t\t\t\t";
+                // line 48
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 48, $this->source); })()), "getUserPermission", [], "method", false, false, false, 48));
+                foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+                    // line 49
+                    echo "\t\t\t\t\t\t";
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 49) == "Voir les utilisateurs")) {
+                        // line 50
+                        echo "\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<a href=\"";
+                        // line 51
+                        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Users");
+                        echo "\">
+\t\t\t\t\t\t\t\t\t<i class='bx bxs-user-plus'></i>
+\t\t\t\t\t\t\t\t\t<span class=\"links_name\">Utilisateurs</span>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<span class=\"tooltip\">Utilisateurs</span>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t";
+                    }
+                    // line 58
+                    echo "\t\t\t\t\t";
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                // line 59
+                echo "
+\t\t\t\t\t";
+                // line 60
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 60, $this->source); })()), "getUserPermission", [], "method", false, false, false, 60));
+                foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+                    // line 61
+                    echo "\t\t\t\t\t\t";
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 61) == "Voir les rôles")) {
+                        // line 62
+                        echo "\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<a href=\"";
+                        // line 63
+                        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Role");
+                        echo "\">
+\t\t\t\t\t\t\t\t\t<i class='bx bx-briefcase-alt-2'></i>
+\t\t\t\t\t\t\t\t\t<span class=\"links_name\">Rôle</span>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<span class=\"tooltip\">Rôle</span>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t";
+                    }
+                    // line 70
+                    echo "\t\t\t\t\t";
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
                 // line 71
-                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Model");
-                echo "\">
-\t\t\t\t\t\t\t<i class='bx bx-purchase-tag'></i>
-\t\t\t\t\t\t\t<span class=\"links_name\">Modèle</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<span class=\"tooltip\">Modèle</span>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-                // line 78
-                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Marque");
-                echo "\">
-\t\t\t\t\t\t\t<i class='bx bx-bookmark-plus'></i>
-\t\t\t\t\t\t\t<span class=\"links_name\">Marque</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<span class=\"tooltip\">Marque</span>
-\t\t\t\t\t</li>
-
+                echo "
+\t\t\t\t\t";
+                // line 72
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 72, $this->source); })()), "getUserPermission", [], "method", false, false, false, 72));
+                foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+                    // line 73
+                    echo "\t\t\t\t\t\t";
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 73) == "Voir les permissions")) {
+                        // line 74
+                        echo "\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<a href=\"";
+                        // line 75
+                        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Permission");
+                        echo "\">
+\t\t\t\t\t\t\t\t\t<i class='bx bx-spreadsheet'></i>
+\t\t\t\t\t\t\t\t\t<span class=\"links_name\">Permission</span>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<span class=\"tooltip\">Permission</span>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t";
+                    }
+                    // line 82
+                    echo "\t\t\t\t\t";
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                // line 83
+                echo "
+\t\t\t\t\t";
+                // line 84
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 84, $this->source); })()), "getUserPermission", [], "method", false, false, false, 84));
+                foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+                    // line 85
+                    echo "\t\t\t\t\t\t";
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 85) == "Voir le stock")) {
+                        // line 86
+                        echo "\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<a href=\"";
+                        // line 87
+                        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Stock");
+                        echo "\">
+\t\t\t\t\t\t\t\t\t<i class='bx bx-package'></i>
+\t\t\t\t\t\t\t\t\t<span class=\"links_name\">Stock</span>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<span class=\"tooltip\">Stock</span>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t";
+                    }
+                    // line 94
+                    echo "\t\t\t\t\t";
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                // line 95
+                echo "
+\t\t\t\t\t";
+                // line 96
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 96, $this->source); })()), "getUserPermission", [], "method", false, false, false, 96));
+                foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+                    // line 97
+                    echo "\t\t\t\t\t\t";
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 97) == "Voir les modèles")) {
+                        // line 98
+                        echo "\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<a href=\"";
+                        // line 99
+                        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Model");
+                        echo "\">
+\t\t\t\t\t\t\t\t\t<i class='bx bx-purchase-tag'></i>
+\t\t\t\t\t\t\t\t\t<span class=\"links_name\">Modèle</span>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<span class=\"tooltip\">Modèle</span>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t";
+                    }
+                    // line 106
+                    echo "\t\t\t\t\t";
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                // line 107
+                echo "
+\t\t\t\t\t";
+                // line 108
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 108, $this->source); })()), "getUserPermission", [], "method", false, false, false, 108));
+                foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+                    // line 109
+                    echo "\t\t\t\t\t\t";
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 109) == "Voir les marques")) {
+                        // line 110
+                        echo "\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<a href=\"";
+                        // line 111
+                        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Marque");
+                        echo "\">
+\t\t\t\t\t\t\t\t\t<i class='bx bx-bookmark-plus'></i>
+\t\t\t\t\t\t\t\t\t<span class=\"links_name\">Marque</span>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<span class=\"tooltip\">Marque</span>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t";
+                    }
+                    // line 118
+                    echo "\t\t\t\t\t";
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                // line 119
+                echo "
 \t\t\t\t";
             }
-            // line 86
+            // line 121
             echo "\t\t\t";
         }
-        // line 87
-        echo "\t\t\t<li>
-\t\t\t\t<a href=\"";
-        // line 88
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Profile");
-        echo "\">
-\t\t\t\t\t<i class='bx bxs-user-rectangle'></i>
-\t\t\t\t\t<span class=\"links_name\">Profil</span>
-\t\t\t\t</a>
-\t\t\t\t<span class=\"tooltip\">Profil</span>
-\t\t\t</li>
+        // line 122
+        echo "
+\t\t\t";
+        // line 123
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 123, $this->source); })()), "getUserPermission", [], "method", false, false, false, 123));
+        foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+            // line 124
+            echo "\t\t\t\t";
+            if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 124) == "Voir le profil")) {
+                // line 125
+                echo "\t\t\t\t\t<li>
+\t\t\t\t\t\t<a href=\"";
+                // line 126
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Profile");
+                echo "\">
+\t\t\t\t\t\t\t<i class='bx bxs-user-rectangle'></i>
+\t\t\t\t\t\t\t<span class=\"links_name\">Profil</span>
+\t\t\t\t\t\t</a>
+\t\t\t\t\t\t<span class=\"tooltip\">Profil</span>
+\t\t\t\t\t</li>
+\t\t\t\t";
+            }
+            // line 133
+            echo "\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 134
+        echo "
 \t\t</ul>
 \t\t<div class=\"profile_content\">
 \t\t\t<div class=\"profile\">
 \t\t\t\t<div class=\"profile_details\">
 \t\t\t\t\t<img src=\"";
-        // line 98
+        // line 139
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/user.png"), "html", null, true);
         echo "\" alt=\"\">
 \t\t\t\t\t<div class=\"name_role\">
 \t\t\t\t\t\t<div class=\"name\">";
-        // line 100
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 100, $this->source); })()), "username", [], "any", false, false, false, 100), "html", null, true);
+        // line 141
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 141, $this->source); })()), "username", [], "any", false, false, false, 141), "html", null, true);
         echo "</div>
 \t\t\t\t\t\t<div class=\"role\">";
-        // line 101
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 101, $this->source); })()), "job", [], "any", false, false, false, 101), "html", null, true);
+        // line 142
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 142, $this->source); })()), "job", [], "any", false, false, false, 142), "html", null, true);
         echo "</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t\t<a href=\"";
-        // line 104
+        // line 145
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_security_logout");
         echo "\">
 \t\t\t\t\t<i class='bx bx-log-out' id=\"log_out\"></i>
@@ -228,49 +394,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t</div>
 \t</div>
 \t
-\t<div class=\"notifications btn-group dropup\">
-\t\t<button type=\"button\" class=\"btn  dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-\t\t\t<i class='bx bx-bell  bx-sm mr-2'></i>Notifications
-\t\t\t<div class=\" nbrNotifications\">2</div>
-\t\t</button>
-\t\t<div class=\"dropdown-menu\">
-\t\t\t<h6>Centre de notifications</h6>
-                  <hr/>
-                  <ul>
-                        <li>
-                             <img src=\"";
-        // line 121
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/decline.png"), "html", null, true);
-        echo "\" /> 
-                             ";
-        // line 123
-        echo "                             
-                                    <p  style=\"font-size: .77rem; \">votre demande sur Ajazz Ak33 a etait refuser</p>
-                           
-                              
-                        </li>
-                        <hr/>
-                  
-            
-                          <li>
-                           
-\t\t\t\t\t\t\t   <img src=\"";
-        // line 133
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/accept.png"), "html", null, true);
-        echo "\" />  
-                             ";
-        // line 135
-        echo "                             
-                                    <p  style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                           
-                              
-                        </li>
-                        <hr/>
-
-                  </ul>
-\t\t
-\t\t</div>
-\t</div>
+\t
 
 
 ";
@@ -291,7 +415,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 
     public function getDebugInfo()
     {
-        return array (  263 => 135,  259 => 133,  247 => 123,  243 => 121,  223 => 104,  217 => 101,  213 => 100,  208 => 98,  195 => 88,  192 => 87,  189 => 86,  178 => 78,  168 => 71,  158 => 64,  148 => 57,  137 => 49,  127 => 42,  116 => 34,  112 => 32,  110 => 31,  101 => 25,  96 => 22,  94 => 21,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  389 => 145,  383 => 142,  379 => 141,  374 => 139,  367 => 134,  361 => 133,  351 => 126,  348 => 125,  345 => 124,  341 => 123,  338 => 122,  335 => 121,  331 => 119,  325 => 118,  315 => 111,  312 => 110,  309 => 109,  305 => 108,  302 => 107,  296 => 106,  286 => 99,  283 => 98,  280 => 97,  276 => 96,  273 => 95,  267 => 94,  257 => 87,  254 => 86,  251 => 85,  247 => 84,  244 => 83,  238 => 82,  228 => 75,  225 => 74,  222 => 73,  218 => 72,  215 => 71,  209 => 70,  199 => 63,  196 => 62,  193 => 61,  189 => 60,  186 => 59,  180 => 58,  170 => 51,  167 => 50,  164 => 49,  160 => 48,  157 => 47,  151 => 46,  141 => 39,  138 => 38,  135 => 37,  131 => 36,  128 => 35,  125 => 34,  119 => 33,  109 => 26,  106 => 25,  103 => 24,  99 => 23,  96 => 22,  94 => 21,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -318,77 +442,118 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t<ul class=\"nav_link\">
 \t\t\t{% if userInfo.Connected %}
 
+\t\t\t\t{% for permission in userInfo.getUserPermission() %}
+\t\t\t\t\t{% if permission.getPermissionName() == \"Voir accueil\" %}
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t<a href=\"{{path('HomePage')}}\">
+\t\t\t\t\t\t\t\t<i class='bx bx-home'></i>
+\t\t\t\t\t\t\t\t<span class=\"links_name\">Accueil</span>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<span class=\"tooltip\">Accueil</span>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t{% endif %}
+\t\t\t\t{% endfor %}
+\t\t\t\t{% if userInfo.roles[0] == \"ROLE_ADMIN\" or userInfo.roles[0] == \"SUPER ADMIN\" %}
 
-\t\t\t\t<li>
-\t\t\t\t\t<a href=\"{{path('HomePage')}}\">
-\t\t\t\t\t\t<i class='bx bx-home'></i>
-\t\t\t\t\t\t<span class=\"links_name\">Accueil</span>
-\t\t\t\t\t</a>
-\t\t\t\t\t<span class=\"tooltip\">Accueil</span>
-\t\t\t\t</li>
-\t\t\t\t{% if userInfo.roles[0] == \"ROLE_ADMIN\" %}
+\t\t\t\t\t{% for permission in userInfo.getUserPermission() %}
+\t\t\t\t\t\t{% if permission.getPermissionName() == \"Voir tableau de bord\" %}
+\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<a href=\"{{path('Dashboard')}}\">
+\t\t\t\t\t\t\t\t\t<i class='bx bxs-dashboard'></i>
+\t\t\t\t\t\t\t\t\t<span class=\"links_name\">Tableau de bord</span>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<span class=\"tooltip\">Tableau de bord</span>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t{% endfor %}
 
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"{{path('Dashboard')}}\">
-\t\t\t\t\t\t\t<i class='bx bxs-dashboard'></i>
-\t\t\t\t\t\t\t<span class=\"links_name\">Tableau de bord</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<span class=\"tooltip\">Tableau de bord</span>
-\t\t\t\t\t</li>
+\t\t\t\t\t{% for permission in userInfo.getUserPermission() %}
+\t\t\t\t\t\t{% if permission.getPermissionName() == \"Voir les utilisateurs\" %}
+\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<a href=\"{{path('Users')}}\">
+\t\t\t\t\t\t\t\t\t<i class='bx bxs-user-plus'></i>
+\t\t\t\t\t\t\t\t\t<span class=\"links_name\">Utilisateurs</span>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<span class=\"tooltip\">Utilisateurs</span>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t{% endfor %}
 
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"{{path('Users')}}\">
-\t\t\t\t\t\t\t<i class='bx bxs-user-plus'></i>
-\t\t\t\t\t\t\t<span class=\"links_name\">Utilisateurs</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<span class=\"tooltip\">Utilisateurs</span>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"{{path('Role')}}\">
-\t\t\t\t\t\t\t<i class='bx bx-briefcase-alt-2'></i>
-\t\t\t\t\t\t\t<span class=\"links_name\">
-\t\t\t\t\t\t\t\tRôle</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<span class=\"tooltip\">Rôle</span>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"{{path('Permission')}}\">
-\t\t\t\t\t\t\t<i class='bx bx-spreadsheet'></i>
-\t\t\t\t\t\t\t<span class=\"links_name\">Permission</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<span class=\"tooltip\">Permission</span>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"{{path('Stock')}}\">
-\t\t\t\t\t\t\t<i class='bx bx-package'></i>
-\t\t\t\t\t\t\t<span class=\"links_name\">Stock</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<span class=\"tooltip\">Stock</span>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"{{path('Model')}}\">
-\t\t\t\t\t\t\t<i class='bx bx-purchase-tag'></i>
-\t\t\t\t\t\t\t<span class=\"links_name\">Modèle</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<span class=\"tooltip\">Modèle</span>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"{{path('Marque')}}\">
-\t\t\t\t\t\t\t<i class='bx bx-bookmark-plus'></i>
-\t\t\t\t\t\t\t<span class=\"links_name\">Marque</span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<span class=\"tooltip\">Marque</span>
-\t\t\t\t\t</li>
+\t\t\t\t\t{% for permission in userInfo.getUserPermission() %}
+\t\t\t\t\t\t{% if permission.getPermissionName() == \"Voir les rôles\" %}
+\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<a href=\"{{path('Role')}}\">
+\t\t\t\t\t\t\t\t\t<i class='bx bx-briefcase-alt-2'></i>
+\t\t\t\t\t\t\t\t\t<span class=\"links_name\">Rôle</span>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<span class=\"tooltip\">Rôle</span>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t{% endfor %}
+
+\t\t\t\t\t{% for permission in userInfo.getUserPermission() %}
+\t\t\t\t\t\t{% if permission.getPermissionName() == \"Voir les permissions\" %}
+\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<a href=\"{{path('Permission')}}\">
+\t\t\t\t\t\t\t\t\t<i class='bx bx-spreadsheet'></i>
+\t\t\t\t\t\t\t\t\t<span class=\"links_name\">Permission</span>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<span class=\"tooltip\">Permission</span>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t{% endfor %}
+
+\t\t\t\t\t{% for permission in userInfo.getUserPermission() %}
+\t\t\t\t\t\t{% if permission.getPermissionName() == \"Voir le stock\" %}
+\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<a href=\"{{path('Stock')}}\">
+\t\t\t\t\t\t\t\t\t<i class='bx bx-package'></i>
+\t\t\t\t\t\t\t\t\t<span class=\"links_name\">Stock</span>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<span class=\"tooltip\">Stock</span>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t{% endfor %}
+
+\t\t\t\t\t{% for permission in userInfo.getUserPermission() %}
+\t\t\t\t\t\t{% if permission.getPermissionName() == \"Voir les modèles\" %}
+\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<a href=\"{{path('Model')}}\">
+\t\t\t\t\t\t\t\t\t<i class='bx bx-purchase-tag'></i>
+\t\t\t\t\t\t\t\t\t<span class=\"links_name\">Modèle</span>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<span class=\"tooltip\">Modèle</span>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t{% endfor %}
+
+\t\t\t\t\t{% for permission in userInfo.getUserPermission() %}
+\t\t\t\t\t\t{% if permission.getPermissionName() == \"Voir les marques\" %}
+\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<a href=\"{{path('Marque')}}\">
+\t\t\t\t\t\t\t\t\t<i class='bx bx-bookmark-plus'></i>
+\t\t\t\t\t\t\t\t\t<span class=\"links_name\">Marque</span>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<span class=\"tooltip\">Marque</span>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t{% endfor %}
 
 \t\t\t\t{% endif %}
 \t\t\t{% endif %}
-\t\t\t<li>
-\t\t\t\t<a href=\"{{path('Profile')}}\">
-\t\t\t\t\t<i class='bx bxs-user-rectangle'></i>
-\t\t\t\t\t<span class=\"links_name\">Profil</span>
-\t\t\t\t</a>
-\t\t\t\t<span class=\"tooltip\">Profil</span>
-\t\t\t</li>
+
+\t\t\t{% for permission in userInfo.getUserPermission() %}
+\t\t\t\t{% if permission.getPermissionName() == \"Voir le profil\" %}
+\t\t\t\t\t<li>
+\t\t\t\t\t\t<a href=\"{{path('Profile')}}\">
+\t\t\t\t\t\t\t<i class='bx bxs-user-rectangle'></i>
+\t\t\t\t\t\t\t<span class=\"links_name\">Profil</span>
+\t\t\t\t\t\t</a>
+\t\t\t\t\t\t<span class=\"tooltip\">Profil</span>
+\t\t\t\t\t</li>
+\t\t\t\t{% endif %}
+\t\t\t{% endfor %}
+
 \t\t</ul>
 \t\t<div class=\"profile_content\">
 \t\t\t<div class=\"profile\">
@@ -406,41 +571,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t</div>
 \t</div>
 \t
-\t<div class=\"notifications btn-group dropup\">
-\t\t<button type=\"button\" class=\"btn  dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-\t\t\t<i class='bx bx-bell  bx-sm mr-2'></i>Notifications
-\t\t\t<div class=\" nbrNotifications\">2</div>
-\t\t</button>
-\t\t<div class=\"dropdown-menu\">
-\t\t\t<h6>Centre de notifications</h6>
-                  <hr/>
-                  <ul>
-                        <li>
-                             <img src=\"{{asset('images/decline.png')}}\" /> 
-                             {# <img src=\"/CIRCET-STOCK/public/images/decline.png\" /> #}
-                             
-                                    <p  style=\"font-size: .77rem; \">votre demande sur Ajazz Ak33 a etait refuser</p>
-                           
-                              
-                        </li>
-                        <hr/>
-                  
-            
-                          <li>
-                           
-\t\t\t\t\t\t\t   <img src=\"{{asset('images/accept.png')}}\" />  
-                             {# <img src=\"/CIRCET-STOCK/public/images/accept.png\" /> #}
-                             
-                                    <p  style=\"font-size: .77rem; \">votre demande sur Dell G3 a etait accepter</p>
-                           
-                              
-                        </li>
-                        <hr/>
-
-                  </ul>
-\t\t
-\t\t</div>
-\t</div>
+\t
 
 
 {% endblock %}

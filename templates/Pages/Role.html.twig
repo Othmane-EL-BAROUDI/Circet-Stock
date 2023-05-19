@@ -60,7 +60,13 @@
 		{% endfor %}
 
 		<div class="text">Rôle</div>
-		<button type="button" class="new" data-toggle="modal" data-target="#addRole">Ajouter un rôle</button>
+
+		{% for permission in userInfo.getUserPermission() %}
+			{% if permission.getPermissionName() == "Ajouter un rôle" %}
+				<button type="button" class="new" data-toggle="modal" data-target="#addRole">Ajouter un rôle</button>
+			{% endif %}
+		{% endfor %}
+
 		<div class="main_content">
 			<form action="{{ path('Role') }}" method="GET">
 				<div class="sort">
@@ -97,16 +103,23 @@
 
 								<td class="actions">
 
-									<a href="Role/Edit/{{role.id}}">
-										<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 " style=" border: #007bff solid 1px; ">
-											<i class='bx bx-edit bx-xs'></i>
-											Modifier
+								{% for permission in userInfo.getUserPermission() %}
+									{% if permission.getPermissionName() == "Modifier un rôle" %}
+										<a href="Role/Edit/{{role.id}}">
+											<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 " style=" border: #007bff solid 1px; ">
+												<i class='bx bx-edit bx-xs'></i>
+												Modifier
+											</button>
+										</a>
+									{% endif %}
+
+									{% if permission.getPermissionName() == "Supprimer un rôle" %}
+										<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " data-toggle="modal" data-target="#exampleModal{{role.id}}" style=" border: #dc3545 solid 1px;">
+											<i class='bx bx-trash bx-xs'></i>
+											Supprimer
 										</button>
-									</a>
-									<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " data-toggle="modal" data-target="#exampleModal{{role.id}}" style=" border: #dc3545 solid 1px;">
-										<i class='bx bx-trash bx-xs'></i>
-										Supprimer
-									</button>
+									{% endif %}
+								{% endfor %}
 								</td>
 							</tr>
 							<div class="modal fade" id="exampleModal{{role.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

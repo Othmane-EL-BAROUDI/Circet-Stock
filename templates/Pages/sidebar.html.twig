@@ -20,77 +20,118 @@
 		<ul class="nav_link">
 			{% if userInfo.Connected %}
 
+				{% for permission in userInfo.getUserPermission() %}
+					{% if permission.getPermissionName() == "Voir accueil" %}
+						<li>
+							<a href="{{path('HomePage')}}">
+								<i class='bx bx-home'></i>
+								<span class="links_name">Accueil</span>
+							</a>
+							<span class="tooltip">Accueil</span>
+						</li>
+					{% endif %}
+				{% endfor %}
+				{% if userInfo.roles[0] == "ROLE_ADMIN" or userInfo.roles[0] == "SUPER ADMIN" %}
 
-				<li>
-					<a href="{{path('HomePage')}}">
-						<i class='bx bx-home'></i>
-						<span class="links_name">Accueil</span>
-					</a>
-					<span class="tooltip">Accueil</span>
-				</li>
-				{% if userInfo.roles[0] == "ROLE_ADMIN" %}
+					{% for permission in userInfo.getUserPermission() %}
+						{% if permission.getPermissionName() == "Voir tableau de bord" %}
+							<li>
+								<a href="{{path('Dashboard')}}">
+									<i class='bx bxs-dashboard'></i>
+									<span class="links_name">Tableau de bord</span>
+								</a>
+								<span class="tooltip">Tableau de bord</span>
+							</li>
+						{% endif %}
+					{% endfor %}
 
-					<li>
-						<a href="{{path('Dashboard')}}">
-							<i class='bx bxs-dashboard'></i>
-							<span class="links_name">Tableau de bord</span>
-						</a>
-						<span class="tooltip">Tableau de bord</span>
-					</li>
+					{% for permission in userInfo.getUserPermission() %}
+						{% if permission.getPermissionName() == "Voir les utilisateurs" %}
+							<li>
+								<a href="{{path('Users')}}">
+									<i class='bx bxs-user-plus'></i>
+									<span class="links_name">Utilisateurs</span>
+								</a>
+								<span class="tooltip">Utilisateurs</span>
+							</li>
+						{% endif %}
+					{% endfor %}
 
-					<li>
-						<a href="{{path('Users')}}">
-							<i class='bx bxs-user-plus'></i>
-							<span class="links_name">Utilisateurs</span>
-						</a>
-						<span class="tooltip">Utilisateurs</span>
-					</li>
-					<li>
-						<a href="{{path('Role')}}">
-							<i class='bx bx-briefcase-alt-2'></i>
-							<span class="links_name">
-								Rôle</span>
-						</a>
-						<span class="tooltip">Rôle</span>
-					</li>
-					<li>
-						<a href="{{path('Permission')}}">
-							<i class='bx bx-spreadsheet'></i>
-							<span class="links_name">Permission</span>
-						</a>
-						<span class="tooltip">Permission</span>
-					</li>
-					<li>
-						<a href="{{path('Stock')}}">
-							<i class='bx bx-package'></i>
-							<span class="links_name">Stock</span>
-						</a>
-						<span class="tooltip">Stock</span>
-					</li>
-					<li>
-						<a href="{{path('Model')}}">
-							<i class='bx bx-purchase-tag'></i>
-							<span class="links_name">Modèle</span>
-						</a>
-						<span class="tooltip">Modèle</span>
-					</li>
-					<li>
-						<a href="{{path('Marque')}}">
-							<i class='bx bx-bookmark-plus'></i>
-							<span class="links_name">Marque</span>
-						</a>
-						<span class="tooltip">Marque</span>
-					</li>
+					{% for permission in userInfo.getUserPermission() %}
+						{% if permission.getPermissionName() == "Voir les rôles" %}
+							<li>
+								<a href="{{path('Role')}}">
+									<i class='bx bx-briefcase-alt-2'></i>
+									<span class="links_name">Rôle</span>
+								</a>
+								<span class="tooltip">Rôle</span>
+							</li>
+						{% endif %}
+					{% endfor %}
+
+					{% for permission in userInfo.getUserPermission() %}
+						{% if permission.getPermissionName() == "Voir les permissions" %}
+							<li>
+								<a href="{{path('Permission')}}">
+									<i class='bx bx-spreadsheet'></i>
+									<span class="links_name">Permission</span>
+								</a>
+								<span class="tooltip">Permission</span>
+							</li>
+						{% endif %}
+					{% endfor %}
+
+					{% for permission in userInfo.getUserPermission() %}
+						{% if permission.getPermissionName() == "Voir le stock" %}
+							<li>
+								<a href="{{path('Stock')}}">
+									<i class='bx bx-package'></i>
+									<span class="links_name">Stock</span>
+								</a>
+								<span class="tooltip">Stock</span>
+							</li>
+						{% endif %}
+					{% endfor %}
+
+					{% for permission in userInfo.getUserPermission() %}
+						{% if permission.getPermissionName() == "Voir les modèles" %}
+							<li>
+								<a href="{{path('Model')}}">
+									<i class='bx bx-purchase-tag'></i>
+									<span class="links_name">Modèle</span>
+								</a>
+								<span class="tooltip">Modèle</span>
+							</li>
+						{% endif %}
+					{% endfor %}
+
+					{% for permission in userInfo.getUserPermission() %}
+						{% if permission.getPermissionName() == "Voir les marques" %}
+							<li>
+								<a href="{{path('Marque')}}">
+									<i class='bx bx-bookmark-plus'></i>
+									<span class="links_name">Marque</span>
+								</a>
+								<span class="tooltip">Marque</span>
+							</li>
+						{% endif %}
+					{% endfor %}
 
 				{% endif %}
 			{% endif %}
-			<li>
-				<a href="{{path('Profile')}}">
-					<i class='bx bxs-user-rectangle'></i>
-					<span class="links_name">Profil</span>
-				</a>
-				<span class="tooltip">Profil</span>
-			</li>
+
+			{% for permission in userInfo.getUserPermission() %}
+				{% if permission.getPermissionName() == "Voir le profil" %}
+					<li>
+						<a href="{{path('Profile')}}">
+							<i class='bx bxs-user-rectangle'></i>
+							<span class="links_name">Profil</span>
+						</a>
+						<span class="tooltip">Profil</span>
+					</li>
+				{% endif %}
+			{% endfor %}
+
 		</ul>
 		<div class="profile_content">
 			<div class="profile">
@@ -108,41 +149,7 @@
 		</div>
 	</div>
 	
-	<div class="notifications btn-group dropup">
-		<button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			<i class='bx bx-bell  bx-sm mr-2'></i>Notifications
-			<div class=" nbrNotifications">2</div>
-		</button>
-		<div class="dropdown-menu">
-			<h6>Centre de notifications</h6>
-                  <hr/>
-                  <ul>
-                        <li>
-                             <img src="{{asset('images/decline.png')}}" /> 
-                             {# <img src="/CIRCET-STOCK/public/images/decline.png" /> #}
-                             
-                                    <p  style="font-size: .77rem; ">votre demande sur Ajazz Ak33 a etait refuser</p>
-                           
-                              
-                        </li>
-                        <hr/>
-                  
-            
-                          <li>
-                           
-							   <img src="{{asset('images/accept.png')}}" />  
-                             {# <img src="/CIRCET-STOCK/public/images/accept.png" /> #}
-                             
-                                    <p  style="font-size: .77rem; ">votre demande sur Dell G3 a etait accepter</p>
-                           
-                              
-                        </li>
-                        <hr/>
-
-                  </ul>
-		
-		</div>
-	</div>
+	
 
 
 {% endblock %}

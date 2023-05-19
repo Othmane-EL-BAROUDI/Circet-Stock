@@ -15,7 +15,7 @@
 				<div class="modal-content">
 					{{ form_start(form) }}
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Ajouter marque</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Ajouter une marque</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
@@ -24,7 +24,7 @@
 						{{ form_widget(form) }}
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="close_button1">Ajouter marque</button>
+						<button type="submit" class="close_button1">Ajouter une marque</button>
 					</div>
 					{{ form_end(form) }}
 				</div>
@@ -60,7 +60,13 @@
 		{% endfor %}
 
 		<div class="text">Marque</div>
-		<button type="button" class="new" data-toggle="modal" data-target="#addRole">Ajouter marque</button>
+
+		{% for permission in userInfo.getUserPermission() %}
+			{% if permission.getPermissionName() == "Ajouter une marque" %}
+				<button type="button" class="new" data-toggle="modal" data-target="#addRole">Ajouter une marque</button>
+			{% endif %}
+		{% endfor %}
+
 		<div class="main_content">
 			<form action="{{ path('Marque') }}" method="GET">
 				<div class="sort">
@@ -97,17 +103,24 @@
 										{{marque.getMarqueName()}}
 									</td>
 									<td class="actions">
-										<a href="/Marque/{{marque.id}}">
-											<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 " style=" border: #007bff solid 1px; ">
-												<i class='bx bx-edit bx-xs'></i>
-												Modifier
-											</button>
-										</a>
 
-										<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal{{marque.id}}">
-											<i class='bx bx-trash bx-xs'></i>
-											Supprimer
-										</button>
+										{% for permission in userInfo.getUserPermission() %}
+											{% if permission.getPermissionName() == "Modifier une marque" %}
+												<a href="/Marque/{{marque.id}}">
+													<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 " style=" border: #007bff solid 1px; ">
+														<i class='bx bx-edit bx-xs'></i>
+														Modifier
+													</button>
+												</a>
+											{% endif %}
+
+											{% if permission.getPermissionName() == "Supprimer une marque" %}
+												<button type="button" class="bn3 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal{{marque.id}}">
+													<i class='bx bx-trash bx-xs'></i>
+													Supprimer
+												</button>
+											{% endif %}
+										{% endfor %}
 									</td>
 								</tr>
 								<div class="modal fade" id="exampleModal{{marque.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -56,10 +56,10 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 ";
         // line 11
         $this->displayBlock('body', $context, $blocks);
-        // line 89
+        // line 150
         echo "
 \t\t";
-        // line 90
+        // line 151
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -107,18 +107,99 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 12
-        echo "
+        echo "\t<div class=\"notifications btn-group dropup\">
+\t\t<button type=\"button\" class=\"btn  dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+\t\t\t<i class='bx bx-bell  bx-sm mr-2'></i>Notifications
+\t\t\t<div class=\" nbrNotifications\">";
+        // line 15
+        echo twig_escape_filter($this->env, (isset($context["NotificationCount"]) || array_key_exists("NotificationCount", $context) ? $context["NotificationCount"] : (function () { throw new RuntimeError('Variable "NotificationCount" does not exist.', 15, $this->source); })()), "html", null, true);
+        echo "</div>
+\t\t</button>
+\t\t<div class=\"dropdown-menu\">
+\t\t\t<h6>notifications récentes</h6>
+\t\t\t<hr/>
+\t\t\t<ul>
+\t\t\t\t";
+        // line 21
+        if ((twig_length_filter($this->env, (isset($context["AllNotification"]) || array_key_exists("AllNotification", $context) ? $context["AllNotification"] : (function () { throw new RuntimeError('Variable "AllNotification" does not exist.', 21, $this->source); })())) > 0)) {
+            // line 22
+            echo "\t\t\t\t\t";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable((isset($context["AllNotification"]) || array_key_exists("AllNotification", $context) ? $context["AllNotification"] : (function () { throw new RuntimeError('Variable "AllNotification" does not exist.', 22, $this->source); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["noti"]) {
+                // line 23
+                echo "\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t";
+                // line 26
+                echo "\t\t\t\t\t\t\t<img
+\t\t\t\t\t\t\tsrc=\"";
+                // line 27
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(twig_get_attribute($this->env, $this->source, $context["noti"], "srcImg", [], "method", false, false, false, 27)), "html", null, true);
+                echo "\"/>
+
+\t\t\t\t\t\t\t";
+                // line 30
+                echo "\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["noti"], "description", [], "any", false, false, false, 30), "html", null, true);
+                echo "</p>
+\t\t\t\t\t\t</li>
+
+\t\t\t\t\t\t<hr/>
+\t\t\t\t\t";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['noti'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 35
+            echo "\t\t\t\t";
+        } else {
+            // line 36
+            echo "\t\t\t\t\t<li>
+
+\t\t\t\t\t\t<p style=\"font-size: .77rem; \">Pas de notifications</p>
+\t\t\t\t\t</li>
+
+\t\t\t\t\t<hr/>
+\t\t\t\t";
+        }
+        // line 43
+        echo "\t\t\t\t<li>
+\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModal\">
+\t\t\t\t\t\tVoir plus
+\t\t\t\t\t</button>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</div>
+\t</div>
+\t<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+\t\t<div class=\"modal-dialog\" role=\"document\">
+\t\t\t<div class=\"modal-content\">
+\t\t\t\t<div class=\"modal-header\">
+\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Centre des notifications</h5>
+\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
+\t\t\t\t\t</button>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"modal-body\">
+\t\t\t\t\t...
+\t\t\t\t</div>
+\t\t\t\t<div class=\"modal-footer\">
+\t\t\t\t\t
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
 \t<div class=\"home_content\">
 \t\t";
-        // line 14
+        // line 70
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 14, $this->source); })()), "session", [], "any", false, false, false, 14), "flashbag", [], "any", false, false, false, 14), "get", [0 => "success"], "method", false, false, false, 14));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 70, $this->source); })()), "session", [], "any", false, false, false, 70), "flashbag", [], "any", false, false, false, 70), "get", [0 => "success"], "method", false, false, false, 70));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
-            // line 15
+            // line 71
             echo "\t\t\t<div class=\"alert  alert-success fade show\" role=\"alert\">
 \t\t\t\t<strong>Succès!</strong>
 \t\t\t\t";
-            // line 17
+            // line 73
             echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
             echo "
 \t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
@@ -130,10 +211,10 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 23
+        // line 79
         echo "\t\t<div class=\"text\">Stock matériel</div>
 \t\t<form action=\"";
-        // line 24
+        // line 80
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("HomePage");
         echo "\" method=\"GET\">
 \t\t\t<div class=\"sort\">
@@ -160,84 +241,108 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
 
 \t\t\t";
-        // line 48
+        // line 104
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 48, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 104, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 49
+            // line 105
             echo "\t\t\t\t";
             if ($context["item"]) {
-                // line 50
+                // line 106
                 echo "
 
 \t\t\t\t\t<div class=\"materiel\">
 \t\t\t\t\t\t<div class=\"pic\">
 \t\t\t\t\t\t\t";
-                // line 54
-                if (twig_test_empty(twig_get_attribute($this->env, $this->source, $context["item"], "getImgSrc", [], "method", false, false, false, 54))) {
-                    // line 55
+                // line 110
+                if (twig_test_empty(twig_get_attribute($this->env, $this->source, $context["item"], "getImgSrc", [], "method", false, false, false, 110))) {
+                    // line 111
                     echo "\t\t\t\t\t\t\t\t<img src=\"";
                     echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/laptop.png"), "html", null, true);
                     echo "\" style=\"width:150px;\" alt=\"\">
 \t\t\t\t\t\t\t";
                 } else {
-                    // line 57
-                    echo "\t\t\t\t\t\t\t\t<img
-\t\t\t\t\t\t\t\t";
-                    // line 59
-                    echo "\t\t\t\t\t\t\t<img src=\"";
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(twig_get_attribute($this->env, $this->source, $context["item"], "getImgSrc", [], "method", false, false, false, 59)), "html", null, true);
+                    // line 113
+                    echo "\t\t\t\t\t\t\t\t";
+                    // line 114
+                    echo "\t\t\t\t\t\t\t\t<img src=\"";
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(twig_get_attribute($this->env, $this->source, $context["item"], "getImgSrc", [], "method", false, false, false, 114)), "html", null, true);
                     echo "\" style=\"width:150px; max-height:150px;\" alt=\"no pic\">
 \t\t\t\t\t\t\t";
                 }
-                // line 61
+                // line 116
                 echo "\t\t\t\t\t\t</div>
 
 \t\t\t\t\t\t<div class=\"details\">
 \t\t\t\t\t\t\t<p class=\"small text-muted\">";
-                // line 64
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "model", [], "any", false, false, false, 64), "type", [], "any", false, false, false, 64), "html", null, true);
+                // line 119
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "model", [], "any", false, false, false, 119), "type", [], "any", false, false, false, 119), "html", null, true);
                 echo "
 \t\t\t\t\t\t\t</p>
 
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"action\">
-\t\t\t\t\t\t\t<a href=\"Affectation/";
-                // line 69
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 69), "html", null, true);
-                echo "\">
-\t\t\t\t\t\t\t\t<button>Demande</button>
-\t\t\t\t\t\t\t\t<a/>
-\t\t\t\t\t\t\t\t<a href=\"materialView/";
-                // line 72
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 72), "html", null, true);
-                echo "\">
-\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"start\">Détails</button>
-\t\t\t\t\t\t\t\t\t<a/>
-\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t";
+                // line 124
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 124, $this->source); })()), "getUserPermission", [], "method", false, false, false, 124));
+                foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+                    // line 125
+                    echo "\t\t\t\t\t\t\t\t";
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 125) == "Demande matériel")) {
+                        // line 126
+                        echo "\t\t\t\t\t\t\t\t\t<a href=\"Affectation/";
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 126), "html", null, true);
+                        echo "\">
+\t\t\t\t\t\t\t\t\t\t<button>Demande</button>
+\t\t\t\t\t\t\t\t\t\t<a/>
+\t\t\t\t\t\t\t\t\t";
+                    }
+                    // line 130
+                    echo "\t\t\t\t\t\t\t\t\t";
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 130) == "Voir Matériel Détails")) {
+                        // line 131
+                        echo "\t\t\t\t\t\t\t\t\t\t<a href=\"materialView/";
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 131), "html", null, true);
+                        echo "\">
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"start\">Détails</button>
+\t\t\t\t\t\t\t\t\t\t\t<a/>
+\t\t\t\t\t\t\t\t\t\t";
+                    }
+                    // line 135
+                    echo "\t\t\t\t\t\t\t\t\t";
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                // line 136
+                echo "\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t";
             }
-            // line 78
+            // line 139
             echo "\t\t\t\t\t";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 79
-            echo "\t\t\t\t\t\t<div class=\"noData\"> <img src=\"";
+            // line 140
+            echo "\t\t\t\t\t\t<div class=\"noData\">
+\t\t\t\t\t\t\t<img src=\"";
+            // line 141
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/noData.png"), "html", null, true);
-            echo "\" > </div>
+            echo "\">
+\t\t\t\t\t\t</div>
 \t\t\t\t\t\t";
-            // line 83
+            // line 144
             echo "\t\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 84
+        // line 145
         echo "\t\t\t\t</div>
-\t\t\t\t
+
 \t\t\t</div>
 
 \t\t";
@@ -246,19 +351,19 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     }
 
-    // line 90
+    // line 151
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 91
+        // line 152
         echo "\t\t\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/HomePage.js"), "html", null, true);
         echo "\"></script>
 \t\t\t<script src=\"";
-        // line 92
+        // line 153
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
 \t\t\t<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
@@ -282,7 +387,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     public function getDebugInfo()
     {
-        return array (  262 => 92,  257 => 91,  250 => 90,  239 => 84,  233 => 83,  228 => 79,  223 => 78,  214 => 72,  208 => 69,  200 => 64,  195 => 61,  189 => 59,  186 => 57,  180 => 55,  178 => 54,  172 => 50,  169 => 49,  164 => 48,  137 => 24,  134 => 23,  122 => 17,  118 => 15,  114 => 14,  110 => 12,  103 => 11,  91 => 6,  84 => 5,  70 => 2,  63 => 90,  60 => 89,  58 => 11,  54 => 10,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  367 => 153,  362 => 152,  355 => 151,  344 => 145,  338 => 144,  333 => 141,  330 => 140,  325 => 139,  320 => 136,  314 => 135,  306 => 131,  303 => 130,  295 => 126,  292 => 125,  288 => 124,  280 => 119,  275 => 116,  269 => 114,  267 => 113,  261 => 111,  259 => 110,  253 => 106,  250 => 105,  245 => 104,  218 => 80,  215 => 79,  203 => 73,  199 => 71,  195 => 70,  166 => 43,  157 => 36,  154 => 35,  142 => 30,  137 => 27,  134 => 26,  131 => 23,  126 => 22,  124 => 21,  115 => 15,  110 => 12,  103 => 11,  91 => 6,  84 => 5,  70 => 2,  63 => 151,  60 => 150,  58 => 11,  54 => 10,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -298,7 +403,63 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 {% endblock %}
 {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
+\t<div class=\"notifications btn-group dropup\">
+\t\t<button type=\"button\" class=\"btn  dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+\t\t\t<i class='bx bx-bell  bx-sm mr-2'></i>Notifications
+\t\t\t<div class=\" nbrNotifications\">{{ NotificationCount }}</div>
+\t\t</button>
+\t\t<div class=\"dropdown-menu\">
+\t\t\t<h6>notifications récentes</h6>
+\t\t\t<hr/>
+\t\t\t<ul>
+\t\t\t\t{% if AllNotification|length > 0  %}
+\t\t\t\t\t{% for noti in AllNotification %}
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t{# <img
+\t\t\t\t\t\t\t\t\t\t\t\t\tsrc=\"{{asset('images/decline.png')}}\"/> #}
+\t\t\t\t\t\t\t<img
+\t\t\t\t\t\t\tsrc=\"{{asset(noti.srcImg())}}\"/>
 
+\t\t\t\t\t\t\t{# <img src=\"/CIRCET-STOCK/public/images/decline.png\" /> #}
+\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">{{noti.description}}</p>
+\t\t\t\t\t\t</li>
+
+\t\t\t\t\t\t<hr/>
+\t\t\t\t\t{% endfor %}
+\t\t\t\t{% else %}
+\t\t\t\t\t<li>
+
+\t\t\t\t\t\t<p style=\"font-size: .77rem; \">Pas de notifications</p>
+\t\t\t\t\t</li>
+
+\t\t\t\t\t<hr/>
+\t\t\t\t{% endif %}
+\t\t\t\t<li>
+\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModal\">
+\t\t\t\t\t\tVoir plus
+\t\t\t\t\t</button>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</div>
+\t</div>
+\t<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+\t\t<div class=\"modal-dialog\" role=\"document\">
+\t\t\t<div class=\"modal-content\">
+\t\t\t\t<div class=\"modal-header\">
+\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Centre des notifications</h5>
+\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
+\t\t\t\t\t</button>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"modal-body\">
+\t\t\t\t\t...
+\t\t\t\t</div>
+\t\t\t\t<div class=\"modal-footer\">
+\t\t\t\t\t
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
 \t<div class=\"home_content\">
 \t\t{% for flash_message in app.session.flashbag.get('success') %}
 \t\t\t<div class=\"alert  alert-success fade show\" role=\"alert\">
@@ -343,9 +504,8 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t\t{% if item.getImgSrc() is empty   %}
 \t\t\t\t\t\t\t\t<img src=\"{{asset('images/laptop.png')}}\" style=\"width:150px;\" alt=\"\">
 \t\t\t\t\t\t\t{% else %}
-\t\t\t\t\t\t\t\t<img
-\t\t\t\t\t\t\t\t{# src=\"/CIRCET-STOCK/public/{{item.getImgSrc()}}\" style=\"width:150px; max-height:150px;\" alt=\"no pic\"> #}
-\t\t\t\t\t\t\t<img src=\"{{asset(item.getImgSrc())}}\" style=\"width:150px; max-height:150px;\" alt=\"no pic\">
+\t\t\t\t\t\t\t\t{# <img src=\"/CIRCET-STOCK/public/{{item.getImgSrc()}}\" style=\"width:150px; max-height:150px;\" alt=\"no pic\"> #}
+\t\t\t\t\t\t\t\t<img src=\"{{asset(item.getImgSrc())}}\" style=\"width:150px; max-height:150px;\" alt=\"no pic\">
 \t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t</div>
 
@@ -355,23 +515,29 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"action\">
-\t\t\t\t\t\t\t<a href=\"Affectation/{{item.id}}\">
-\t\t\t\t\t\t\t\t<button>Demande</button>
-\t\t\t\t\t\t\t\t<a/>
-\t\t\t\t\t\t\t\t<a href=\"materialView/{{item.id}}\">
-\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"start\">Détails</button>
-\t\t\t\t\t\t\t\t\t<a/>
+\t\t\t\t\t\t\t{% for permission in userInfo.getUserPermission() %}
+\t\t\t\t\t\t\t\t{% if permission.getPermissionName() == \"Demande matériel\" %}
+\t\t\t\t\t\t\t\t\t<a href=\"Affectation/{{item.id}}\">
+\t\t\t\t\t\t\t\t\t\t<button>Demande</button>
+\t\t\t\t\t\t\t\t\t\t<a/>
+\t\t\t\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t\t\t{% if permission.getPermissionName() == \"Voir Matériel Détails\" %}
+\t\t\t\t\t\t\t\t\t\t<a href=\"materialView/{{item.id}}\">
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"start\">Détails</button>
+\t\t\t\t\t\t\t\t\t\t\t<a/>
+\t\t\t\t\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t{% endif %}
 \t\t\t\t\t{% else %}
-\t\t\t\t\t\t<div class=\"noData\"> <img src=\"{{asset('images/noData.png')}}\" > </div>
-\t\t\t\t\t\t{# <div class=\"noData\">
-\t\t\t\t\t\t\t<img src=\"/CIRCET-STOCK/public/images/noData.png\">
-\t\t\t\t\t\t</div> #}
+\t\t\t\t\t\t<div class=\"noData\">
+\t\t\t\t\t\t\t<img src=\"{{asset('images/noData.png')}}\">
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t{# <div class=\"noData\"><img src=\"/CIRCET-STOCK/public/images/noData.png\"></div> #}
 \t\t\t\t\t{% endfor %}
 \t\t\t\t</div>
-\t\t\t\t
+
 \t\t\t</div>
 
 \t\t{% endblock %}

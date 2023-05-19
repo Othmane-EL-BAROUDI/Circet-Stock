@@ -56,7 +56,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 ";
         // line 13
         $this->displayBlock('body', $context, $blocks);
-        // line 164
+        // line 176
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -204,8 +204,27 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
         // line 64
         echo "
 \t\t<div class=\"text\">Utilisateurs</div>
-\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addUser\">Ajouter un utilisateur</button>
-\t
+\t\t
+\t\t";
+        // line 67
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 67, $this->source); })()), "getUserPermission", [], "method", false, false, false, 67));
+        foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+            // line 68
+            echo "\t\t\t";
+            if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 68) == "Ajouter un utilisateur")) {
+                // line 69
+                echo "\t\t\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addUser\">Ajouter un utilisateur</button>
+\t\t\t";
+            }
+            // line 71
+            echo "\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 72
+        echo "\t
 \t\t
 \t\t<div class=\"CContent\">
 \t\t\t<div class=\"mainC\">
@@ -221,93 +240,118 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t\t\t\t</thead>
 \t\t\t\t\t<tbody>
 \t\t\t\t\t\t";
-        // line 82
+        // line 87
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["allusers"]) || array_key_exists("allusers", $context) ? $context["allusers"] : (function () { throw new RuntimeError('Variable "allusers" does not exist.', 82, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["allusers"]) || array_key_exists("allusers", $context) ? $context["allusers"] : (function () { throw new RuntimeError('Variable "allusers" does not exist.', 87, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["key"] => $context["user"]) {
-            // line 83
+            // line 88
             echo "\t\t\t\t\t\t\t";
-            if ((twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 83) != twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 83, $this->source); })()), "username", [], "any", false, false, false, 83))) {
-                // line 84
+            if ((twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 88) != twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 88, $this->source); })()), "username", [], "any", false, false, false, 88))) {
+                // line 89
                 echo "\t\t\t\t\t\t\t";
                 if ($context["user"]) {
-                    // line 85
+                    // line 90
                     echo "\t\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t\t<div class=\"d-flex align-items-center\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"ms-3\">
 \t\t\t\t\t\t\t\t\t\t\t\t<p class=\"fw-bold mb-1\">";
-                    // line 89
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 89), "html", null, true);
+                    // line 94
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 94), "html", null, true);
                     echo "</p>
 \t\t\t\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0\">";
-                    // line 90
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 90), "html", null, true);
+                    // line 95
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 95), "html", null, true);
                     echo "</p>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t\t<p class=\"text-muted mb-0 mt-2 \">";
-                    // line 95
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "matricule", [], "any", false, false, false, 95), "html", null, true);
+                    // line 100
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "matricule", [], "any", false, false, false, 100), "html", null, true);
                     echo "t</p>
 \t\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t\t<label class=\"mt-2 ml-2\">
 \t\t\t\t\t\t\t\t\t\t\t";
-                    // line 99
-                    if (twig_get_attribute($this->env, $this->source, $context["user"], "enabled", [], "any", false, false, false, 99)) {
-                        // line 100
+                    // line 104
+                    if (twig_get_attribute($this->env, $this->source, $context["user"], "enabled", [], "any", false, false, false, 104)) {
+                        // line 105
                         echo "\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-success rounded-pill d-inline \">Actif</span>
 \t\t\t\t\t\t\t\t\t\t\t";
                     } else {
-                        // line 102
+                        // line 107
                         echo "\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"badge badge-warning rounded-pill d-inline\">Bloqué</span>
 \t\t\t\t\t\t\t\t\t\t\t";
                     }
-                    // line 104
+                    // line 109
                     echo "\t\t\t\t\t\t\t\t\t\t</label>
 \t\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t\t<label class=\"mt-2\">";
-                    // line 107
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "job", [], "any", false, false, false, 107), "html", null, true);
+                    // line 112
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "job", [], "any", false, false, false, 112), "html", null, true);
                     echo "</label>
 \t\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t\t<td class=\"actions\">
 \t\t\t\t\t\t\t\t\t\t<a href=\"User/";
-                    // line 110
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 110), "html", null, true);
+                    // line 115
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 115), "html", null, true);
                     echo "\">
 \t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn1 btn  btn-sm btn-rounded mt-1 mr-1\" style=\" border: #28a745 solid 1px; \">
 \t\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-show-alt bx-xs'></i>
 \t\t\t\t\t\t\t\t\t\t\t\tVoir
 \t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t<a href=\"User/Edit/";
-                    // line 116
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 116), "html", null, true);
-                    echo "\">
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
-\t\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\t\tModifier
-\t\t\t\t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal";
-                    // line 123
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 123), "html", null, true);
-                    echo "\"  style=\" border: #dc3545 solid 1px; \">
-\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\tSupprimer
-\t\t\t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t";
+                    // line 122
+                    $context['_parent'] = $context;
+                    $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 122, $this->source); })()), "getUserPermission", [], "method", false, false, false, 122));
+                    foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
+                        // line 123
+                        echo "\t\t\t\t\t\t\t\t\t\t\t";
+                        if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 123) == "Modifier un utilisateur")) {
+                            // line 124
+                            echo "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"User/Edit/";
+                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 124), "html", null, true);
+                            echo "\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\tModifier
+\t\t\t\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t";
+                        }
+                        // line 131
+                        echo "
+\t\t\t\t\t\t\t\t\t\t\t";
+                        // line 132
+                        if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 132) == "Supprimer un utilisateur")) {
+                            echo "\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal";
+                            // line 133
+                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 133), "html", null, true);
+                            echo "\"  style=\" border: #dc3545 solid 1px; \">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\tSupprimer
+\t\t\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t\t\t";
+                        }
+                        // line 138
+                        echo "\t\t\t\t\t\t\t\t\t\t";
+                    }
+                    $_parent = $context['_parent'];
+                    unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
+                    $context = array_intersect_key($context, $_parent) + $_parent;
+                    // line 139
+                    echo "\t\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t</tr>
 \t\t\t\t\t\t\t\t<div class=\"modal fade\" id=\"exampleModal";
-                    // line 129
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 129), "html", null, true);
+                    // line 141
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 141), "html", null, true);
                     echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
 \t\t\t\t\t\t\t\t\t<div class=\"modal-dialog \" role=\"document\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"modal-content \">
@@ -320,14 +364,14 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t\t\t\t\t\t\tVoulez-vous vraiment supprimer cet utilisateur :
 \t\t\t\t\t\t\t\t\t\t\t\t<p style=\"   color: #f9a826; \">";
-                    // line 140
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 140), "html", null, true);
+                    // line 152
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 152), "html", null, true);
                     echo " </p>
 \t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"User/Remove/";
-                    // line 143
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 143), "html", null, true);
+                    // line 155
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 155), "html", null, true);
                     echo "\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn h-4\" style=\" border: #dc3545 solid 1px;\">Supprimer</button>
 \t\t\t\t\t\t\t\t\t\t\t\t</a>
@@ -338,15 +382,15 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t";
                 }
-                // line 152
+                // line 164
                 echo "\t\t\t\t\t\t\t";
             }
-            // line 153
+            // line 165
             echo "\t\t\t\t\t\t";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 154
+            // line 166
             echo "\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t<td>No results found.</td>
 \t\t\t\t\t\t</tr>
@@ -356,7 +400,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 159
+        // line 171
         echo "\t\t\t\t</table>
 \t\t\t</div>
 \t\t</div>
@@ -367,18 +411,18 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 
     }
 
-    // line 164
+    // line 176
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 165
+        // line 177
         echo "<script>
     \$(document).ready(function() {
       var table = \$('#example').DataTable({
-        lengthMenu: [6], // Display 4 rows per page
+        lengthMenu: [4], // Display 4 rows per page
         language: {
           search: \"_INPUT_\", // Display search input instead of default text
           searchPlaceholder: \"Recherche...\" // Placeholder text for search input
@@ -393,7 +437,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
     });
   </script>
 \t<script src=\"";
-        // line 182
+        // line 194
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
 
@@ -418,7 +462,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 
     public function getDebugInfo()
     {
-        return array (  397 => 182,  378 => 165,  371 => 164,  360 => 159,  350 => 154,  345 => 153,  342 => 152,  330 => 143,  324 => 140,  310 => 129,  301 => 123,  291 => 116,  282 => 110,  276 => 107,  271 => 104,  267 => 102,  263 => 100,  261 => 99,  254 => 95,  246 => 90,  242 => 89,  236 => 85,  233 => 84,  230 => 83,  225 => 82,  205 => 64,  193 => 58,  190 => 57,  185 => 56,  173 => 50,  169 => 48,  164 => 47,  152 => 41,  148 => 39,  144 => 38,  135 => 32,  126 => 26,  121 => 24,  109 => 14,  102 => 13,  88 => 6,  81 => 5,  67 => 2,  60 => 164,  58 => 13,  54 => 12,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  441 => 194,  422 => 177,  415 => 176,  404 => 171,  394 => 166,  389 => 165,  386 => 164,  374 => 155,  368 => 152,  354 => 141,  350 => 139,  344 => 138,  336 => 133,  332 => 132,  329 => 131,  318 => 124,  315 => 123,  311 => 122,  301 => 115,  295 => 112,  290 => 109,  286 => 107,  282 => 105,  280 => 104,  273 => 100,  265 => 95,  261 => 94,  255 => 90,  252 => 89,  249 => 88,  244 => 87,  227 => 72,  221 => 71,  217 => 69,  214 => 68,  210 => 67,  205 => 64,  193 => 58,  190 => 57,  185 => 56,  173 => 50,  169 => 48,  164 => 47,  152 => 41,  148 => 39,  144 => 38,  135 => 32,  126 => 26,  121 => 24,  109 => 14,  102 => 13,  88 => 6,  81 => 5,  67 => 2,  60 => 176,  58 => 13,  54 => 12,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -488,7 +532,12 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t{% endfor %}
 
 \t\t<div class=\"text\">Utilisateurs</div>
-\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addUser\">Ajouter un utilisateur</button>
+\t\t
+\t\t{% for permission in userInfo.getUserPermission() %}
+\t\t\t{% if permission.getPermissionName() == \"Ajouter un utilisateur\" %}
+\t\t\t\t<button type=\"button\" class=\"new\" data-toggle=\"modal\" data-target=\"#addUser\">Ajouter un utilisateur</button>
+\t\t\t{% endif %}
+\t\t{% endfor %}
 \t
 \t\t
 \t\t<div class=\"CContent\">
@@ -538,17 +587,24 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 \t\t\t\t\t\t\t\t\t\t\t\tVoir
 \t\t\t\t\t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t\t<a href=\"User/Edit/{{user.id}}\">
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
-\t\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\t\tModifier
-\t\t\t\t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal{{user.id}}\"  style=\" border: #dc3545 solid 1px; \">
-\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
-\t\t\t\t\t\t\t\t\t\t\tSupprimer
-\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t{% for permission in userInfo.getUserPermission() %}
+\t\t\t\t\t\t\t\t\t\t\t{% if permission.getPermissionName() == \"Modifier un utilisateur\" %}
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"User/Edit/{{user.id}}\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn2 btn  btn-sm btn-rounded mt-1 mr-1 \" style=\" border: #007bff solid 1px; \">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-edit bx-xs'></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\tModifier
+\t\t\t\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t{% endif %}
+
+\t\t\t\t\t\t\t\t\t\t\t{% if permission.getPermissionName() == \"Supprimer un utilisateur\" %}\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bn3 btn  btn-sm btn-rounded mt-1 \" data-toggle=\"modal\" data-target=\"#exampleModal{{user.id}}\"  style=\" border: #dc3545 solid 1px; \">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<i class='bx bx-trash bx-xs'></i>
+\t\t\t\t\t\t\t\t\t\t\t\t\tSupprimer
+\t\t\t\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t\t</tr>
 \t\t\t\t\t\t\t\t<div class=\"modal fade\" id=\"exampleModal{{user.id}}\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
@@ -590,7 +646,7 @@ class __TwigTemplate_c097c9d535af803fdbcc4409ca8872714411e6f419bc98e0fe05f5409bc
 <script>
     \$(document).ready(function() {
       var table = \$('#example').DataTable({
-        lengthMenu: [6], // Display 4 rows per page
+        lengthMenu: [4], // Display 4 rows per page
         language: {
           search: \"_INPUT_\", // Display search input instead of default text
           searchPlaceholder: \"Recherche...\" // Placeholder text for search input

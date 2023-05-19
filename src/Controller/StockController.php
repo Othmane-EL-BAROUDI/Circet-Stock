@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Affectation;
 use App\Entity\Machine;
 use App\Entity\Model;
 use App\Form\MachineFormType;
@@ -77,9 +78,14 @@ class StockController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $machine = $entityManager->getRepository(Machine::class)->find($id);
         $user = $this->getUser();
+
+        $AllAffectations = $entityManager->getRepository(Affectation::class)->search($id);
+
+
         return $this->render('Pages/view/stockView.html.twig', [
             'userInfo' => $user,
             'machine' => $machine,
+            'AllAffectation' => $AllAffectations,
             'Path' => '/Stock',
         ]);
     }
