@@ -80,6 +80,77 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
         // line 10
         echo "
 \t<div class=\"sidebar\">
+\t<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+\t\t<div class=\"modal-dialog\" role=\"document\">
+\t\t\t<div class=\"modal-content\">
+\t\t\t\t<div class=\"modal-header\">
+\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Centre des notifications</h5>
+\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
+\t\t\t\t\t</button>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"modal-body\">
+\t\t\t\t\t<ul>
+\t\t\t\t";
+        // line 23
+        if ((twig_length_filter($this->env, (isset($context["AllNotification"]) || array_key_exists("AllNotification", $context) ? $context["AllNotification"] : (function () { throw new RuntimeError('Variable "AllNotification" does not exist.', 23, $this->source); })())) > 0)) {
+            // line 24
+            echo "\t\t\t\t\t";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable((isset($context["AllNotification"]) || array_key_exists("AllNotification", $context) ? $context["AllNotification"] : (function () { throw new RuntimeError('Variable "AllNotification" does not exist.', 24, $this->source); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["noti"]) {
+                // line 25
+                echo "\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t";
+                // line 28
+                echo "\t\t\t\t\t\t\t<img
+\t\t\t\t\t\t\tsrc=\"";
+                // line 29
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(twig_get_attribute($this->env, $this->source, $context["noti"], "srcImg", [], "method", false, false, false, 29)), "html", null, true);
+                echo "\"/>
+
+\t\t\t\t\t\t\t";
+                // line 32
+                echo "\t\t\t\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">";
+                // line 34
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["noti"], "description", [], "any", false, false, false, 34), "html", null, true);
+                echo "</p>
+\t\t\t\t\t\t\t<h6  class=\"NotiDate\" style=\"font-size: .65rem; \">";
+                // line 35
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["noti"], "getDateNotifications", [], "method", false, false, false, 35), "html", null, true);
+                echo "</h6>
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t</li>
+
+\t\t\t\t\t\t<hr/>
+\t\t\t\t\t";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['noti'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 42
+            echo "\t\t\t\t";
+        } else {
+            // line 43
+            echo "\t\t\t\t\t<li>
+
+\t\t\t\t\t\t<p style=\"font-size: .77rem; \">Pas de notifications</p>
+\t\t\t\t\t</li>
+
+\t\t\t\t\t<hr/>
+\t\t\t\t";
+        }
+        // line 50
+        echo "\t\t\t\t
+\t\t\t</ul>
+\t\t\t\t</div>
+\t
+\t\t\t</div>
+\t\t</div>
+\t</div>
 \t\t<div class=\"logo_content\">
 \t\t\t<div class=\"logo\">
 \t\t\t\t<i class='bx bxs-package'></i>
@@ -90,25 +161,25 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t</div>
 \t\t<ul class=\"nav_link\">
 \t\t\t";
-        // line 21
-        if (twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 21, $this->source); })()), "Connected", [], "any", false, false, false, 21)) {
-            // line 22
+        // line 66
+        if (twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 66, $this->source); })()), "Connected", [], "any", false, false, false, 66)) {
+            // line 67
             echo "\t\t\t\t";
-            if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 22, $this->source); })()), "roles", [], "any", false, false, false, 22), 0, [], "array", false, false, false, 22) == "ROLE_ADMIN") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 22, $this->source); })()), "roles", [], "any", false, false, false, 22), 0, [], "array", false, false, false, 22) == "SUPER ADMIN"))) {
-                // line 23
+            if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 67, $this->source); })()), "roles", [], "any", false, false, false, 67), 0, [], "array", false, false, false, 67) == "ROLE_ADMIN") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 67, $this->source); })()), "roles", [], "any", false, false, false, 67), 0, [], "array", false, false, false, 67) == "SUPER ADMIN"))) {
+                // line 68
                 echo "
 \t\t\t\t\t";
-                // line 24
+                // line 69
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 24, $this->source); })()), "getUserPermission", [], "method", false, false, false, 24));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 69, $this->source); })()), "getUserPermission", [], "method", false, false, false, 69));
                 foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
-                    // line 25
+                    // line 70
                     echo "\t\t\t\t\t\t";
-                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 25) == "Voir notification")) {
-                        // line 26
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 70) == "Voir notification")) {
+                        // line 71
                         echo "\t\t\t\t\t\t
 \t\t\t\t\t\t\t<li  style=\"margin-top:-25px;\">
-\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bbttnn\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bbttnn\" data-toggle=\"exampleModal\" aria-haspopup=\"true\" aria-expanded=\"false\">
 \t\t\t\t\t\t\t\t<a href=\"#\">
 \t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t<i class='bx bx-bell  bx-sm mr-2'></i>\t<span class=\"links_name\">Notifications</span>
@@ -121,27 +192,27 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t";
                     }
-                    // line 40
+                    // line 85
                     echo "\t\t\t\t\t";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 41
+                // line 86
                 echo "\t\t\t\t";
             }
-            // line 42
+            // line 87
             echo "\t\t\t\t";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 42, $this->source); })()), "getUserPermission", [], "method", false, false, false, 42));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 87, $this->source); })()), "getUserPermission", [], "method", false, false, false, 87));
             foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
-                // line 43
+                // line 88
                 echo "\t\t\t\t\t";
-                if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 43) == "Voir accueil")) {
-                    // line 44
+                if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 88) == "Voir accueil")) {
+                    // line 89
                     echo "\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<a href=\"";
-                    // line 45
+                    // line 90
                     echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("HomePage");
                     echo "\">
 \t\t\t\t\t\t\t\t<i class='bx bx-home'></i>
@@ -151,29 +222,29 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t\t\t\t</li>
 \t\t\t\t\t";
                 }
-                // line 52
+                // line 97
                 echo "\t\t\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 53
+            // line 98
             echo "\t\t\t\t";
-            if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 53, $this->source); })()), "roles", [], "any", false, false, false, 53), 0, [], "array", false, false, false, 53) == "ROLE_ADMIN") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 53, $this->source); })()), "roles", [], "any", false, false, false, 53), 0, [], "array", false, false, false, 53) == "SUPER ADMIN"))) {
-                // line 54
+            if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 98, $this->source); })()), "roles", [], "any", false, false, false, 98), 0, [], "array", false, false, false, 98) == "ROLE_ADMIN") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 98, $this->source); })()), "roles", [], "any", false, false, false, 98), 0, [], "array", false, false, false, 98) == "SUPER ADMIN"))) {
+                // line 99
                 echo "
 \t\t\t\t\t";
-                // line 55
+                // line 100
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 55, $this->source); })()), "getUserPermission", [], "method", false, false, false, 55));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 100, $this->source); })()), "getUserPermission", [], "method", false, false, false, 100));
                 foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
-                    // line 56
+                    // line 101
                     echo "\t\t\t\t\t\t";
-                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 56) == "Voir tableau de bord")) {
-                        // line 57
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 101) == "Voir tableau de bord")) {
+                        // line 102
                         echo "\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t<a href=\"";
-                        // line 58
+                        // line 103
                         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Dashboard");
                         echo "\">
 \t\t\t\t\t\t\t\t\t<i class='bx bxs-dashboard'></i>
@@ -183,26 +254,26 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
                     }
-                    // line 65
+                    // line 110
                     echo "\t\t\t\t\t";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 66
+                // line 111
                 echo "
 \t\t\t\t\t";
-                // line 67
+                // line 112
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 67, $this->source); })()), "getUserPermission", [], "method", false, false, false, 67));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 112, $this->source); })()), "getUserPermission", [], "method", false, false, false, 112));
                 foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
-                    // line 68
+                    // line 113
                     echo "\t\t\t\t\t\t";
-                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 68) == "Voir les utilisateurs")) {
-                        // line 69
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 113) == "Voir les utilisateurs")) {
+                        // line 114
                         echo "\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t<a href=\"";
-                        // line 70
+                        // line 115
                         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Users");
                         echo "\">
 \t\t\t\t\t\t\t\t\t<i class='bx bxs-user-plus'></i>
@@ -212,26 +283,26 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
                     }
-                    // line 77
+                    // line 122
                     echo "\t\t\t\t\t";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 78
+                // line 123
                 echo "
 \t\t\t\t\t";
-                // line 79
+                // line 124
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 79, $this->source); })()), "getUserPermission", [], "method", false, false, false, 79));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 124, $this->source); })()), "getUserPermission", [], "method", false, false, false, 124));
                 foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
-                    // line 80
+                    // line 125
                     echo "\t\t\t\t\t\t";
-                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 80) == "Voir les rôles")) {
-                        // line 81
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 125) == "Voir les rôles")) {
+                        // line 126
                         echo "\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t<a href=\"";
-                        // line 82
+                        // line 127
                         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Role");
                         echo "\">
 \t\t\t\t\t\t\t\t\t<i class='bx bx-briefcase-alt-2'></i>
@@ -241,26 +312,26 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
                     }
-                    // line 89
+                    // line 134
                     echo "\t\t\t\t\t";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 90
+                // line 135
                 echo "
 \t\t\t\t\t";
-                // line 91
+                // line 136
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 91, $this->source); })()), "getUserPermission", [], "method", false, false, false, 91));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 136, $this->source); })()), "getUserPermission", [], "method", false, false, false, 136));
                 foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
-                    // line 92
+                    // line 137
                     echo "\t\t\t\t\t\t";
-                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 92) == "Voir les permissions")) {
-                        // line 93
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 137) == "Voir les permissions")) {
+                        // line 138
                         echo "\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t<a href=\"";
-                        // line 94
+                        // line 139
                         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Permission");
                         echo "\">
 \t\t\t\t\t\t\t\t\t<i class='bx bx-spreadsheet'></i>
@@ -270,26 +341,26 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
                     }
-                    // line 101
+                    // line 146
                     echo "\t\t\t\t\t";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 102
+                // line 147
                 echo "
 \t\t\t\t\t";
-                // line 103
+                // line 148
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 103, $this->source); })()), "getUserPermission", [], "method", false, false, false, 103));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 148, $this->source); })()), "getUserPermission", [], "method", false, false, false, 148));
                 foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
-                    // line 104
+                    // line 149
                     echo "\t\t\t\t\t\t";
-                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 104) == "Voir le stock")) {
-                        // line 105
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 149) == "Voir le stock")) {
+                        // line 150
                         echo "\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t<a href=\"";
-                        // line 106
+                        // line 151
                         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Stock");
                         echo "\">
 \t\t\t\t\t\t\t\t\t<i class='bx bx-package'></i>
@@ -299,26 +370,26 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
                     }
-                    // line 113
+                    // line 158
                     echo "\t\t\t\t\t";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 114
+                // line 159
                 echo "
 \t\t\t\t\t";
-                // line 115
+                // line 160
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 115, $this->source); })()), "getUserPermission", [], "method", false, false, false, 115));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 160, $this->source); })()), "getUserPermission", [], "method", false, false, false, 160));
                 foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
-                    // line 116
+                    // line 161
                     echo "\t\t\t\t\t\t";
-                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 116) == "Voir les modèles")) {
-                        // line 117
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 161) == "Voir les modèles")) {
+                        // line 162
                         echo "\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t<a href=\"";
-                        // line 118
+                        // line 163
                         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Model");
                         echo "\">
 \t\t\t\t\t\t\t\t\t<i class='bx bx-purchase-tag'></i>
@@ -328,26 +399,26 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
                     }
-                    // line 125
+                    // line 170
                     echo "\t\t\t\t\t";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 126
+                // line 171
                 echo "
 \t\t\t\t\t";
-                // line 127
+                // line 172
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 127, $this->source); })()), "getUserPermission", [], "method", false, false, false, 127));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 172, $this->source); })()), "getUserPermission", [], "method", false, false, false, 172));
                 foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
-                    // line 128
+                    // line 173
                     echo "\t\t\t\t\t\t";
-                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 128) == "Voir les marques")) {
-                        // line 129
+                    if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 173) == "Voir les marques")) {
+                        // line 174
                         echo "\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t<a href=\"";
-                        // line 130
+                        // line 175
                         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Marque");
                         echo "\">
 \t\t\t\t\t\t\t\t\t<i class='bx bx-bookmark-plus'></i>
@@ -357,33 +428,33 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
                     }
-                    // line 137
+                    // line 182
                     echo "\t\t\t\t\t";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 138
+                // line 183
                 echo "
 \t\t\t\t";
             }
-            // line 140
+            // line 185
             echo "\t\t\t";
         }
-        // line 141
+        // line 186
         echo "
 \t\t\t";
-        // line 142
+        // line 187
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 142, $this->source); })()), "getUserPermission", [], "method", false, false, false, 142));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 187, $this->source); })()), "getUserPermission", [], "method", false, false, false, 187));
         foreach ($context['_seq'] as $context["_key"] => $context["permission"]) {
-            // line 143
+            // line 188
             echo "\t\t\t\t";
-            if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 143) == "Voir le profil")) {
-                // line 144
+            if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 188) == "Voir le profil")) {
+                // line 189
                 echo "\t\t\t\t\t<li>
 \t\t\t\t\t\t<a href=\"";
-                // line 145
+                // line 190
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Profile");
                 echo "\">
 \t\t\t\t\t\t\t<i class='bx bxs-user-rectangle'></i>
@@ -393,35 +464,35 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t\t\t</li>
 \t\t\t\t";
             }
-            // line 152
+            // line 197
             echo "\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['permission'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 153
+        // line 198
         echo "
 \t\t</ul>
 \t\t<div class=\"profile_content\">
 \t\t\t<div class=\"profile\">
 \t\t\t\t<div class=\"profile_details\">
 \t\t\t\t\t<img src=\"";
-        // line 158
+        // line 203
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/user.png"), "html", null, true);
         echo "\" alt=\"\">
 \t\t\t\t\t<div class=\"name_role\">
 \t\t\t\t\t\t<div class=\"name\">";
-        // line 160
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 160, $this->source); })()), "username", [], "any", false, false, false, 160), "html", null, true);
+        // line 205
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 205, $this->source); })()), "username", [], "any", false, false, false, 205), "html", null, true);
         echo "</div>
 \t\t\t\t\t\t<div class=\"role\">";
-        // line 161
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 161, $this->source); })()), "job", [], "any", false, false, false, 161), "html", null, true);
+        // line 206
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 206, $this->source); })()), "job", [], "any", false, false, false, 206), "html", null, true);
         echo "</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t\t<a href=\"";
-        // line 164
+        // line 209
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_security_logout");
         echo "\">
 \t\t\t\t\t<i class='bx bx-log-out' id=\"log_out\"></i>
@@ -450,7 +521,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 
     public function getDebugInfo()
     {
-        return array (  425 => 164,  419 => 161,  415 => 160,  410 => 158,  403 => 153,  397 => 152,  387 => 145,  384 => 144,  381 => 143,  377 => 142,  374 => 141,  371 => 140,  367 => 138,  361 => 137,  351 => 130,  348 => 129,  345 => 128,  341 => 127,  338 => 126,  332 => 125,  322 => 118,  319 => 117,  316 => 116,  312 => 115,  309 => 114,  303 => 113,  293 => 106,  290 => 105,  287 => 104,  283 => 103,  280 => 102,  274 => 101,  264 => 94,  261 => 93,  258 => 92,  254 => 91,  251 => 90,  245 => 89,  235 => 82,  232 => 81,  229 => 80,  225 => 79,  222 => 78,  216 => 77,  206 => 70,  203 => 69,  200 => 68,  196 => 67,  193 => 66,  187 => 65,  177 => 58,  174 => 57,  171 => 56,  167 => 55,  164 => 54,  161 => 53,  155 => 52,  145 => 45,  142 => 44,  139 => 43,  134 => 42,  131 => 41,  125 => 40,  109 => 26,  106 => 25,  102 => 24,  99 => 23,  96 => 22,  94 => 21,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  496 => 209,  490 => 206,  486 => 205,  481 => 203,  474 => 198,  468 => 197,  458 => 190,  455 => 189,  452 => 188,  448 => 187,  445 => 186,  442 => 185,  438 => 183,  432 => 182,  422 => 175,  419 => 174,  416 => 173,  412 => 172,  409 => 171,  403 => 170,  393 => 163,  390 => 162,  387 => 161,  383 => 160,  380 => 159,  374 => 158,  364 => 151,  361 => 150,  358 => 149,  354 => 148,  351 => 147,  345 => 146,  335 => 139,  332 => 138,  329 => 137,  325 => 136,  322 => 135,  316 => 134,  306 => 127,  303 => 126,  300 => 125,  296 => 124,  293 => 123,  287 => 122,  277 => 115,  274 => 114,  271 => 113,  267 => 112,  264 => 111,  258 => 110,  248 => 103,  245 => 102,  242 => 101,  238 => 100,  235 => 99,  232 => 98,  226 => 97,  216 => 90,  213 => 89,  210 => 88,  205 => 87,  202 => 86,  196 => 85,  180 => 71,  177 => 70,  173 => 69,  170 => 68,  167 => 67,  165 => 66,  147 => 50,  138 => 43,  135 => 42,  122 => 35,  118 => 34,  114 => 32,  109 => 29,  106 => 28,  103 => 25,  98 => 24,  96 => 23,  81 => 10,  74 => 9,  63 => 5,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -466,6 +537,51 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 {% block body %}
 
 \t<div class=\"sidebar\">
+\t<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+\t\t<div class=\"modal-dialog\" role=\"document\">
+\t\t\t<div class=\"modal-content\">
+\t\t\t\t<div class=\"modal-header\">
+\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Centre des notifications</h5>
+\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>
+\t\t\t\t\t</button>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"modal-body\">
+\t\t\t\t\t<ul>
+\t\t\t\t{% if AllNotification|length > 0  %}
+\t\t\t\t\t{% for noti in AllNotification %}
+\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t{# <img
+\t\t\t\t\t\t\t\t\t\t\t\t\tsrc=\"{{asset('images/decline.png')}}\"/> #}
+\t\t\t\t\t\t\t<img
+\t\t\t\t\t\t\tsrc=\"{{asset(noti.srcImg())}}\"/>
+
+\t\t\t\t\t\t\t{# <img src=\"/CIRCET-STOCK/public/images/decline.png\" /> #}
+\t\t\t\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t<p style=\"font-size: .77rem; \">{{noti.description}}</p>
+\t\t\t\t\t\t\t<h6  class=\"NotiDate\" style=\"font-size: .65rem; \">{{ noti.getDateNotifications() }}</h6>
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t</li>
+
+\t\t\t\t\t\t<hr/>
+\t\t\t\t\t{% endfor %}
+\t\t\t\t{% else %}
+\t\t\t\t\t<li>
+
+\t\t\t\t\t\t<p style=\"font-size: .77rem; \">Pas de notifications</p>
+\t\t\t\t\t</li>
+
+\t\t\t\t\t<hr/>
+\t\t\t\t{% endif %}
+\t\t\t\t
+\t\t\t</ul>
+\t\t\t\t</div>
+\t
+\t\t\t</div>
+\t\t</div>
+\t</div>
 \t\t<div class=\"logo_content\">
 \t\t\t<div class=\"logo\">
 \t\t\t\t<i class='bx bxs-package'></i>
@@ -482,7 +598,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t\t\t\t{% if permission.getPermissionName() == \"Voir notification\" %}
 \t\t\t\t\t\t
 \t\t\t\t\t\t\t<li  style=\"margin-top:-25px;\">
-\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bbttnn\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+\t\t\t\t\t\t\t\t<button type=\"button\" class=\"bbttnn\" data-toggle=\"exampleModal\" aria-haspopup=\"true\" aria-expanded=\"false\">
 \t\t\t\t\t\t\t\t<a href=\"#\">
 \t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t<i class='bx bx-bell  bx-sm mr-2'></i>\t<span class=\"links_name\">Notifications</span>

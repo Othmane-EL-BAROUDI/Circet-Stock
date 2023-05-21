@@ -9,7 +9,7 @@
 {% endblock %}
 {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
-{% if userInfo.roles[0] != "ROLE_ADMIN" or userInfo.roles[0] != "SUPER ADMIN" %}
+{% if userInfo.roles[0] == "IT SERVICE"  %}
 	<div class="notifications btn-group dropup">
 		<button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			<i class='bx bx-bell  bx-sm mr-2'></i>Notifications

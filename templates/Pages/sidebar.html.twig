@@ -9,6 +9,51 @@
 {% block body %}
 
 	<div class="sidebar">
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Centre des notifications</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<ul>
+				{% if AllNotification|length > 0  %}
+					{% for noti in AllNotification %}
+						<li>
+							{# <img
+													src="{{asset('images/decline.png')}}"/> #}
+							<img
+							src="{{asset(noti.srcImg())}}"/>
+
+							{# <img src="/CIRCET-STOCK/public/images/decline.png" /> #}
+						
+							
+							<p style="font-size: .77rem; ">{{noti.description}}</p>
+							<h6  class="NotiDate" style="font-size: .65rem; ">{{ noti.getDateNotifications() }}</h6>
+							
+						
+						</li>
+
+						<hr/>
+					{% endfor %}
+				{% else %}
+					<li>
+
+						<p style="font-size: .77rem; ">Pas de notifications</p>
+					</li>
+
+					<hr/>
+				{% endif %}
+				
+			</ul>
+				</div>
+	
+			</div>
+		</div>
+	</div>
 		<div class="logo_content">
 			<div class="logo">
 				<i class='bx bxs-package'></i>
@@ -25,7 +70,7 @@
 						{% if permission.getPermissionName() == "Voir notification" %}
 						
 							<li  style="margin-top:-25px;">
-								<button type="button" class="bbttnn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<button type="button" class="bbttnn" data-toggle="exampleModal" aria-haspopup="true" aria-expanded="false">
 								<a href="#">
 									
 										<i class='bx bx-bell  bx-sm mr-2'></i>	<span class="links_name">Notifications</span>
