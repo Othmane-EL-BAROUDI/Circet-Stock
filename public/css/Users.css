@@ -99,7 +99,7 @@ textarea:focus, input:focus , button:focus{
 }
 .modal-body select{
     color: black;
-    height: 100px;
+    height: 150px;
 }
 .modal-body select option{
    padding-top: 6px;

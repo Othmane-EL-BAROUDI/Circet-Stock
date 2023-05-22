@@ -201,7 +201,6 @@ class DashboardController extends AbstractController
         $restitution->setAccept(true);
         $restitution->setVisibility(false);
         $restitution->setDate(date("d/m/Y") . ' ' . date("h:i:sa"));
-        $restitution->getAffectation()->getMachineAffectation()->setAvailable(true);
         $restitution->getAffectation()->setAccept(false);
         $newNotification = new Notification();
         $newNotification->setUserId($restitution->getAffectation()->getUserAffectation()->getId());

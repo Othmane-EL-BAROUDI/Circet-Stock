@@ -68,13 +68,13 @@
 						<div class="action">
 							{% for permission in userInfo.getUserPermission() %}
 								{% if permission.getPermissionName() == "Demande matériel" %}
-									<a href="Affectation/{{item.id}}">
-										<button>Demande</button>
+									<a   href="Affectation/{{item.id}}">
+										<button  >Demande</button>
 										<a/>
 									{% endif %}
 									{% if permission.getPermissionName() == "Voir Matériel Détails" %}
 										<a href="materialView/{{item.id}}">
-											<button type="button" class="start">Détails</button>
+											<button type="button" class="start mr-1">Détails</button>
 											<a/>
 										{% endif %}
 									{% endfor %}
