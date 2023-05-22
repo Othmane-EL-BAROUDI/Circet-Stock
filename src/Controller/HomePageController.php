@@ -34,6 +34,9 @@ class HomePageController extends AbstractController
         $query->setMaxResults(5);
         $RecentNotification = $query->getResult();
 
+        if ($user->getRoles()[0] == 'SUPER ADMIN') {
+            return $this->redirect('Dashboard');
+        }
         if ($user->getConnected() == false) {
             return $this->redirect('Profile');
         }
@@ -142,4 +145,13 @@ class HomePageController extends AbstractController
 
         ]);
     }
+     /**
+     * @Route("/DeleteNotification/{id}" , name="DeleteNotification")
+     */
+    public function DeleteNotification($id, Request $request, EntityManagerInterface $entityManager): Response
+    {
+        return $this->redirectToRoute('HomePage');  
+    }
 }
+   
+
