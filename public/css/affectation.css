@@ -4,12 +4,23 @@
     width: calc(100% - 78px);
     left: 78px;
     transition:  all 0.5s ease;
-    overflow-y: scroll  !important;
     display: flex;
     justify-content: center;
     align-items: center;
  
 }
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#f9a826;
+  }
 .home_content section > div > div > div > div{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

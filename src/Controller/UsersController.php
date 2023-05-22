@@ -5,6 +5,8 @@ namespace App\Controller;
 use App\Entity\Role;
 use App\Entity\User;
 use App\Form\UserFormType;
+use App\Entity\Notification;
+use App\Form\UserPasswordFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -23,6 +25,15 @@ class UsersController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $user = $this->getUser();
 
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ORDER BY u.DateNotifications DESC');
+        $query->setParameter('uid', $user->getId());
+        $AllNotification = $query->getResult();
+        $query->setMaxResults(5);
+        $RecentNotification = $query->getResult();
+
+
+
+
         $username = $request->query->get('username');
 
         $userRepository = $entityManager->getRepository(User::class);
@@ -37,7 +48,7 @@ class UsersController extends AbstractController
         $users = $queryBuilder->getQuery()->getResult();
         $roles = $entityManager->getRepository(Role::class)->findAll();
         $user = $this->getUser();
-        if( $user->getConnected() == false ){
+        if ($user->getConnected() == false) {
             return $this->redirect('Profile');
         }
 
@@ -47,6 +58,18 @@ class UsersController extends AbstractController
 
         if ($form->isSubmitted()  && $form->isValid()) {
             $Nuser = $form->getData();
+            $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
+            $query->setParameter('role', '%"ADMIN"%');
+            $query->setParameter('role2', '%"SUPER ADMIN"%');
+            $AllAdmins = $query->getResult();
+            foreach ($AllAdmins as $admin) {
+                $Notification = new Notification();
+                $Notification->setUserId($admin->getId());
+                $Notification->setDescription($this->getUser()->getUsername() . ' a ajouter une nouveau utilisateur  ' . $Nuser->getUsername() . " - " . $Nuser->getMatricule());
+                $Notification->setSrcImg('images/success.png');
+                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $entityManager->persist($Notification);
+            }
             $encoded = $encoder->encodePassword($Nuser, $Nuser->getPassword());
             $Nuser->setPassword($encoded);
             $selectedRole = $form->get('roles')->getData();
@@ -66,6 +89,10 @@ class UsersController extends AbstractController
             'userInfo' => $user,
             'allusers' => $users,
             'allroles' => $roles,
+            'AllNotification' => $AllNotification,
+            'RecentNotification' => $RecentNotification,
+
+
         ]);
     }
 
@@ -77,10 +104,22 @@ class UsersController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $user = $entityManager->getRepository(User::class)->find($id);
         $CurrentUser = $this->getUser();
+
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ORDER BY u.DateNotifications DESC');
+        $query->setParameter('uid', $user->getId());
+        $AllNotification = $query->getResult();
+        $query->setMaxResults(5);
+        $RecentNotification = $query->getResult();
+
+
         return $this->render('Pages/view/userView.html.twig', [
             'userInfo' => $CurrentUser,
             'user' => $user,
-            'Path' => '/Users'
+            'Path' => '/Users',
+            'AllNotification' => $AllNotification,
+            'RecentNotification' => $RecentNotification,
+
+
         ]);
     }
 
@@ -93,6 +132,18 @@ class UsersController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $user = $entityManager->getRepository(User::class)->find($id);
         $entityManager->remove($user);
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
+        $query->setParameter('role', '%"ADMIN"%');
+        $query->setParameter('role2', '%"SUPER ADMIN"%');
+        $AllAdmins = $query->getResult();
+        foreach ($AllAdmins as $admin) {
+            $Notification = new Notification();
+            $Notification->setUserId($admin->getId());
+            $Notification->setDescription($this->getUser()->getUsername() . ' a supprimer un utilisateur : ' . $user->getUsername() . " - " . $user->getMatricule());
+            $Notification->setSrcImg('images/delete-file.png');
+            $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+            $entityManager->persist($Notification);
+        }
         $entityManager->flush();
         $this->addFlash(
             'delete',
@@ -107,15 +158,38 @@ class UsersController extends AbstractController
     public function UserUpdate(Request $request, EntityManagerInterface $entityManager, $id, UserPasswordEncoderInterface $encoder): Response
     {
         $CurrentUser = $this->getUser();
+
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ORDER BY u.DateNotifications DESC');
+        $query->setParameter('uid', $CurrentUser->getId());
+        $AllNotification = $query->getResult();
+        $query->setMaxResults(5);
+        $RecentNotification = $query->getResult();
+
+
+
+
         $entityManager = $this->getDoctrine()->getManager();
         $user = $entityManager->getRepository(User::class)->find($id);
         $form = $this->createForm(UserFormType::class, $user);
-        $form->get('password')->setData(' ');
         $form->get('roles')->setData($user->getRoles()[0]);
         $form->handleRequest($request);
+        $Passform = $this->createForm(UserPasswordFormType::class);
+        $Passform->handleRequest($request);
         if ($form->isSubmitted()  && $form->isValid()) {
-            $encoded = $encoder->encodePassword($user, $user->getPassword());
-            $user->setPassword($encoded);
+            $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
+            $query->setParameter('role', '%"ADMIN"%');
+            $query->setParameter('role2', '%"SUPER ADMIN"%');
+            $AllAdmins = $query->getResult();
+            foreach ($AllAdmins as $admin) {
+                $Notification = new Notification();
+                $Notification->setUserId($admin->getId());
+                $Notification->setDescription($this->getUser()->getUsername() . ' a modifier un utilisateur  ' .  $user->getUsername() . " - " . $user->getMatricule());
+                $Notification->setSrcImg('images/updated.png');
+                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $entityManager->persist($Notification);
+            }
+        
+
             $user->setRoles(array($form->get('roles')->getData()->getRoleName()));
             $entityManager->flush();
             $this->addFlash(
@@ -124,12 +198,40 @@ class UsersController extends AbstractController
             );
             return $this->redirectToRoute('Users');
         }
+        if ($Passform->isSubmitted()  && $Passform->isValid()) {
+            $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
+            $query->setParameter('role', '%"ADMIN"%');
+            $query->setParameter('role2', '%"SUPER ADMIN"%');
+            $AllAdmins = $query->getResult();
+            foreach ($AllAdmins as $admin) {
+                $Notification = new Notification();
+                $Notification->setUserId($admin->getId());
+                $Notification->setDescription($this->getUser()->getUsername() . ' a modifier le mot de passe de  ' .  $user->getUsername() . " - " . $user->getMatricule());
+                $Notification->setSrcImg('images/reset-password.png');
+                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $entityManager->persist($Notification);
+            }
+            $NewEncoded = $encoder->encodePassword($user, $Passform->get('Newpassword')->getData());
+            $user->setPassword($NewEncoded);
+            $entityManager->flush();
+            $this->addFlash(
+                'update',
+                sprintf('"%s" Mise à jour avec succés.', $user->getUsername())
+            );
+            return $this->redirectToRoute('Users');
+        }
+
         return $this->render('Pages/update/Update.html.twig', [
             'userInfo' => $CurrentUser,
             'Path' => '/Users',
             'form' => $form->createView(),
+            'Passform' => $Passform->createView(),
             'Title' => 'Utilisateur',
-            'PageName' => 'Mise à jour'
+            'PageName' => 'Mise à jour',
+            'AllNotification' => $AllNotification,
+            'RecentNotification' => $RecentNotification,
+
+
         ]);
     }
 }

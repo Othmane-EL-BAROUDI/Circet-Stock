@@ -7,7 +7,94 @@
 
 {% endblock %}
 {% block body %}
+{% if userInfo.Connected %}
+	{% if userInfo.roles[0] == "IT SERVICE"  %}
+		<div class="notifications btn-group dropup">
+			<button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class='bx bx-bell  bx-sm mr-2'></i>Notifications
+				<div class=" nbrNotifications">{{ AllNotification|length }}</div>
+			</button>
+			<div class="dropdown-menu">
+				<h6>notifications récentes</h6>
+				<hr/>
+				<ul>
+					{% if RecentNotification|length > 0  %}
+						{% for noti in RecentNotification %}
+							<li>
+								
+												
+								<img
+								src="{{asset(noti.srcImg())}}"/>
 
+								
+								<p style="font-size: .77rem; ">{{noti.description}}</p>
+							</li>
+
+							<hr/>
+						{% endfor %}
+					{% else %}
+						<li>
+
+							<p style="font-size: .77rem; ">Pas de notifications</p>
+						</li>
+
+						<hr/>
+					{% endif %}
+					<li style=" height: 2px;">
+						<button type="button" class="voirPLus" data-toggle="modal" data-target="#exampleModal">
+							Voir plus
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	{% endif %}
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Centre des notifications</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body noti-body">
+					<ul>
+						{% if AllNotification|length > 0  %}
+							{% for noti in AllNotification %}
+								<li>
+									
+																																										
+									<img
+									src="{{asset(noti.srcImg())}}"/>
+
+									
+
+
+									<p style="font-size: .77rem; ">{{noti.description}}</p>
+									<h6 class="NotiDate" style="font-size: .65rem; ">{{ noti.getDateNotifications() }}</h6>
+
+
+								</li>
+
+								<hr/>
+							{% endfor %}
+						{% else %}
+							<li>
+
+								<p style="font-size: .77rem; ">Pas de notifications</p>
+							</li>
+
+							<hr/>
+						{% endif %}
+
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</div>
+{% endif %}
 	<div class="sidebar">
 		<div class="logo_content">
 			<div class="logo">
@@ -28,11 +115,11 @@
 								<button class="bbttnn"  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 								<a href="#">
 									
-										<i class='bx bx-bell  mr-2'></i>	<span class="links_name">Notifications</span>
-										<div class=" notlinkCount">0</div>
+										<i class='bx bx-bell bx-sm'></i><span class="links_name">Activites</span>
+										<div class=" notlinkCount">{{AllNotification|length }}</div>
 									
 								</a>
-								<span class="tooltip">Notifications</span>
+								<span class="tooltip">Activites</span>
 							</button>
 							</li>
 							
@@ -50,17 +137,17 @@
 						</li>
 					{% endif %}
 				{% endfor %}
-					{# {% for permission in userInfo.getUserPermission() %} #}
-					{# {% if permission.getPermissionName() == "Voir accueil" %} #}
+					{% for permission in userInfo.getUserPermission() %}
+					{% if permission.getPermissionName() == "Voir restitution" %}
 						<li>
-							<a href="#">
+							<a href="{{path('restitution')}}">
 								<i class='bx bxs-message-alt-detail'></i>
 								<span class="links_name">Restitution</span>
 							</a>
 							<span class="tooltip">Restitution</span>
 						</li>
-					{# {% endif %}
-				{% endfor %} #}
+					{% endif %}
+				{% endfor %}
 				{% if userInfo.roles[0] == "ROLE_ADMIN" or userInfo.roles[0] == "SUPER ADMIN" %}
 
 					{% for permission in userInfo.getUserPermission() %}

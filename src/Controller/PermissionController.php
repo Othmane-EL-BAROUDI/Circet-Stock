@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
+use App\Entity\Notification;
 
 class PermissionController extends AbstractController
 {
@@ -20,6 +21,16 @@ class PermissionController extends AbstractController
         $searchQuery = $request->query->get('search');
         $allPermissions = $entityManager->getRepository(Permission::class)->search($searchQuery);
         $user = $this->getUser();
+         
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ORDER BY u.DateNotifications ASC');
+        $query->setParameter('uid', $user->getId());
+        $AllNotification = $query->getResult();
+        $query->setMaxResults(5);
+        $RecentNotification = $query->getResult();
+
+
+  
+
         if( $user->getConnected() == false ){
             return $this->redirect('Profile');
         }
@@ -30,6 +41,18 @@ class PermissionController extends AbstractController
         
         if(  $form->isSubmitted()  && $form->isValid()){
             $newPermission = $form->getData();
+            $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
+            $query->setParameter('role', '%"ADMIN"%');
+            $query->setParameter('role2', '%"SUPER ADMIN"%');
+            $AllAdmins = $query->getResult();
+            foreach ($AllAdmins as $admin) {
+                $Notification = new Notification();
+                $Notification->setUserId($admin->getId());
+                $Notification->setDescription($this->getUser()->getUsername() . ' a ajouter une nouvelle permission  ' . $permission->getPermissionName()  );
+                $Notification->setSrcImg('images/success.png');
+                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $entityManager->persist($Notification);
+            }
             $entityManager->persist($newPermission);
             $entityManager->flush();
             $this->addFlash(
@@ -43,6 +66,10 @@ class PermissionController extends AbstractController
             'form' => $form->createView(),
             'userInfo' => $user,
             'allPermissions' => $allPermissions,
+            'AllNotification' => $AllNotification,
+            'RecentNotification' => $RecentNotification,
+          
+
         ]);
     }
        /**
@@ -51,13 +78,35 @@ class PermissionController extends AbstractController
     public function PermissionUpdate(Request $request , EntityManagerInterface $entityManager, $id): Response
     {   
         $user = $this->getUser();
+         
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ORDER BY u.DateNotifications ASC');
+        $query->setParameter('uid', $user->getId());
+        $AllNotification = $query->getResult();
+        $query->setMaxResults(5);
+        $RecentNotification = $query->getResult();
+
+
+        
+
 
         $entityManager = $this->getDoctrine()->getManager();
         $permission = $entityManager->getRepository(Permission::class)->find($id);
+        $CurrentPermissionName = $permission->getPermissionName();
         $form = $this->createForm(PermissionFormType::class, $permission);
         $form->handleRequest($request);
         if(  $form->isSubmitted()  && $form->isValid()){
-            // $permission->setPermissionName($form->get('permission_name')->getData());
+            $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
+            $query->setParameter('role', '%"ADMIN"%');
+            $query->setParameter('role2', '%"SUPER ADMIN"%');
+            $AllAdmins = $query->getResult();
+            foreach ($AllAdmins as $admin) {
+                $Notification = new Notification();
+                $Notification->setUserId($admin->getId());
+                $Notification->setDescription($this->getUser()->getUsername() . ' a modifier la permission ' . $CurrentPermissionName . ' vers ' . $form->get('permission_name')->getData() );
+                $Notification->setSrcImg('images/updated.png');
+                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $entityManager->persist($Notification);
+            }
             $entityManager->flush();
             $this->addFlash(
                 'update',
@@ -71,7 +120,11 @@ class PermissionController extends AbstractController
             'Path' => '/Permission',
             'permission' => $permission,
             'form' => $form->createView(),
-            'Title' => 'Permission'
+            'Title' => 'Permission',
+            'AllNotification' => $AllNotification,
+            'RecentNotification' => $RecentNotification,
+        
+
         ]);
     }
 
@@ -83,6 +136,18 @@ class PermissionController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $permission = $entityManager->getRepository(Permission::class)->find($id);
         $entityManager->remove($permission);
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
+        $query->setParameter('role', '%"ADMIN"%');
+        $query->setParameter('role2', '%"SUPER ADMIN"%');
+        $AllAdmins = $query->getResult();
+        foreach ($AllAdmins as $admin) {
+            $Notification = new Notification();
+            $Notification->setUserId($admin->getId());
+            $Notification->setDescription($this->getUser()->getUsername() . ' a supprimer la permission ' . $permission->getPermissionName() );
+            $Notification->setSrcImg('images/delete-file.png');
+            $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+            $entityManager->persist($Notification);
+        }
         $entityManager->flush();
         $this->addFlash(
             'delete',

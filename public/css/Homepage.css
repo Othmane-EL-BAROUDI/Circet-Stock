@@ -199,15 +199,7 @@ textarea:focus, input:focus , select:focus ,button:focus{
     justify-content: center;
     align-items: center;
 }
-.voirPLus{
-    cursor: pointer;
-    background: none;
-    color: #f9a826;
-    width: 100%;
-    border: none;
-    font-size: 12px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+
 .modal-body{
     max-height: 400px !important;
     overflow-y: scroll;

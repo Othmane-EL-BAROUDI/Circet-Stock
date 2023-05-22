@@ -236,9 +236,7 @@ a{
  .save{
     border: #dc3545 1px solid;
  }
- .modal{
-   margin-top: 10%;
- }
+ 
 .main_content{
     display: flex;
     justify-content: left;

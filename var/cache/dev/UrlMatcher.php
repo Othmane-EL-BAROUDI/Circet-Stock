@@ -15,6 +15,7 @@ return [
         '/Model' => [[['_route' => 'Model', '_controller' => 'App\\Controller\\ModelController::Model'], null, null, null, false, false, null]],
         '/Permission' => [[['_route' => 'Permission', '_controller' => 'App\\Controller\\PermissionController::Permission'], null, null, null, false, false, null]],
         '/Profile' => [[['_route' => 'Profile', '_controller' => 'App\\Controller\\ProfileController::ForgetPassword'], null, null, null, false, false, null]],
+        '/restitution' => [[['_route' => 'restitution', '_controller' => 'App\\Controller\\RestitutionController::index'], null, null, null, false, false, null]],
         '/Role' => [[['_route' => 'Role', '_controller' => 'App\\Controller\\RoleController::Role'], null, null, null, false, false, null]],
         '/redirect-after-login' => [[['_route' => 'redirect_after_login', '_controller' => 'App\\Controller\\SecurityController::redirectAfterLogin'], null, null, null, false, false, null]],
         '/Stock' => [[['_route' => 'Stock', '_controller' => 'App\\Controller\\StockController::Stock'], null, null, null, false, false, null]],
@@ -43,38 +44,45 @@ return [
                     .')'
                     .'|tation/([^/]++)(*:120)'
                 .')'
-                .'|/materialView/([^/]++)(*:151)'
+                .'|/re(?'
+                    .'|s(?'
+                        .'|titution/(?'
+                            .'|Delete/([^/]++)(*:166)'
+                            .'|Accept/([^/]++)(*:189)'
+                        .')'
+                        .'|etting/reset/([^/]++)(*:219)'
+                    .')'
+                    .'|gister/confirm/([^/]++)(*:251)'
+                .')'
+                .'|/materialView/([^/]++)(*:282)'
                 .'|/M(?'
                     .'|arque/(?'
-                        .'|([^/]++)(*:181)'
-                        .'|Remove/([^/]++)(*:204)'
+                        .'|([^/]++)(*:312)'
+                        .'|Remove/([^/]++)(*:335)'
                     .')'
                     .'|odel/(?'
-                        .'|([^/]++)(*:229)'
-                        .'|Remove/([^/]++)(*:252)'
+                        .'|([^/]++)(*:360)'
+                        .'|Remove/([^/]++)(*:383)'
                     .')'
                 .')'
                 .'|/Permission/(?'
-                    .'|([^/]++)(*:285)'
-                    .'|Remove/([^/]++)(*:308)'
+                    .'|([^/]++)(*:416)'
+                    .'|Remove/([^/]++)(*:439)'
                 .')'
+                .'|/DemandeRestitution/([^/]++)(*:476)'
                 .'|/Role/(?'
-                    .'|Edit/([^/]++)(*:339)'
-                    .'|Remove/([^/]++)(*:362)'
+                    .'|Edit/([^/]++)(*:506)'
+                    .'|Remove/([^/]++)(*:529)'
                 .')'
-                .'|/stockView/([^/]++)(*:390)'
+                .'|/stockView/([^/]++)(*:557)'
                 .'|/Stock/(?'
-                    .'|Remove/([^/]++)(*:423)'
-                    .'|Edit/([^/]++)(*:444)'
+                    .'|Remove/([^/]++)(*:590)'
+                    .'|Edit/([^/]++)(*:611)'
                 .')'
                 .'|/User/(?'
-                    .'|([^/]++)(*:470)'
-                    .'|Remove/([^/]++)(*:493)'
-                    .'|Edit/([^/]++)(*:514)'
-                .')'
-                .'|/re(?'
-                    .'|gister/confirm/([^/]++)(*:552)'
-                    .'|setting/reset/([^/]++)(*:582)'
+                    .'|([^/]++)(*:637)'
+                    .'|Remove/([^/]++)(*:660)'
+                    .'|Edit/([^/]++)(*:681)'
                 .')'
             .')/?$}sDu',
     ],
@@ -83,24 +91,27 @@ return [
         75 => [[['_route' => 'AffectationRemove', '_controller' => 'App\\Controller\\DashboardController::AffectationRemove'], ['id'], null, null, false, true, null]],
         97 => [[['_route' => 'AffectationAccept', '_controller' => 'App\\Controller\\DashboardController::AffectationAccept'], ['id'], null, null, false, true, null]],
         120 => [[['_route' => 'Affectation', '_controller' => 'App\\Controller\\HomePageController::Affectation'], ['id'], null, null, false, true, null]],
-        151 => [[['_route' => 'materialView', '_controller' => 'App\\Controller\\HomePageController::MaterialView'], ['id'], null, null, false, true, null]],
-        181 => [[['_route' => 'MarqueUpdate', '_controller' => 'App\\Controller\\MarqueController::MarqueUpdate'], ['id'], null, null, false, true, null]],
-        204 => [[['_route' => 'MarquelRemove', '_controller' => 'App\\Controller\\MarqueController::MarqueDelete'], ['id'], null, null, false, true, null]],
-        229 => [[['_route' => 'ModelUpdate', '_controller' => 'App\\Controller\\ModelController::ModelUpdate'], ['id'], null, null, false, true, null]],
-        252 => [[['_route' => 'ModelRemove', '_controller' => 'App\\Controller\\ModelController::ModelDelete'], ['id'], null, null, false, true, null]],
-        285 => [[['_route' => 'PermissionUpdate', '_controller' => 'App\\Controller\\PermissionController::PermissionUpdate'], ['id'], null, null, false, true, null]],
-        308 => [[['_route' => 'PermissionRemove', '_controller' => 'App\\Controller\\PermissionController::PermissionDelete'], ['id'], null, null, false, true, null]],
-        339 => [[['_route' => 'RoleUpdate', '_controller' => 'App\\Controller\\RoleController::RoleUpdate'], ['id'], null, null, false, true, null]],
-        362 => [[['_route' => 'RoleRemove', '_controller' => 'App\\Controller\\RoleController::RoleDelete'], ['id'], null, null, false, true, null]],
-        390 => [[['_route' => 'stockView', '_controller' => 'App\\Controller\\StockController::stockView'], ['id'], null, null, false, true, null]],
-        423 => [[['_route' => 'StockRemove', '_controller' => 'App\\Controller\\StockController::PermissionDelete'], ['id'], null, null, false, true, null]],
-        444 => [[['_route' => 'StockUpdate', '_controller' => 'App\\Controller\\StockController::StockUpdate'], ['id'], null, null, false, true, null]],
-        470 => [[['_route' => 'UserView', '_controller' => 'App\\Controller\\UsersController::UserView'], ['id'], null, null, false, true, null]],
-        493 => [[['_route' => 'UserRemove', '_controller' => 'App\\Controller\\UsersController::UserDelete'], ['id'], null, null, false, true, null]],
-        514 => [[['_route' => 'UserUpdate', '_controller' => 'App\\Controller\\UsersController::UserUpdate'], ['id'], null, null, false, true, null]],
-        552 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
-        582 => [
-            [['_route' => 'fos_user_resetting_reset', '_controller' => 'fos_user.resetting.controller:resetAction'], ['token'], ['GET' => 0, 'POST' => 1], null, false, true, null],
+        166 => [[['_route' => 'resitutionRemove', '_controller' => 'App\\Controller\\DashboardController::resitutionRemove'], ['id'], null, null, false, true, null]],
+        189 => [[['_route' => 'restitutionAccept', '_controller' => 'App\\Controller\\DashboardController::restitutionAccept'], ['id'], null, null, false, true, null]],
+        219 => [[['_route' => 'fos_user_resetting_reset', '_controller' => 'fos_user.resetting.controller:resetAction'], ['token'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        251 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
+        282 => [[['_route' => 'materialView', '_controller' => 'App\\Controller\\HomePageController::MaterialView'], ['id'], null, null, false, true, null]],
+        312 => [[['_route' => 'MarqueUpdate', '_controller' => 'App\\Controller\\MarqueController::MarqueUpdate'], ['id'], null, null, false, true, null]],
+        335 => [[['_route' => 'MarquelRemove', '_controller' => 'App\\Controller\\MarqueController::MarqueDelete'], ['id'], null, null, false, true, null]],
+        360 => [[['_route' => 'ModelUpdate', '_controller' => 'App\\Controller\\ModelController::ModelUpdate'], ['id'], null, null, false, true, null]],
+        383 => [[['_route' => 'ModelRemove', '_controller' => 'App\\Controller\\ModelController::ModelDelete'], ['id'], null, null, false, true, null]],
+        416 => [[['_route' => 'PermissionUpdate', '_controller' => 'App\\Controller\\PermissionController::PermissionUpdate'], ['id'], null, null, false, true, null]],
+        439 => [[['_route' => 'PermissionRemove', '_controller' => 'App\\Controller\\PermissionController::PermissionDelete'], ['id'], null, null, false, true, null]],
+        476 => [[['_route' => 'DemandeRestitution', '_controller' => 'App\\Controller\\RestitutionController::demande'], ['id'], null, null, false, true, null]],
+        506 => [[['_route' => 'RoleUpdate', '_controller' => 'App\\Controller\\RoleController::RoleUpdate'], ['id'], null, null, false, true, null]],
+        529 => [[['_route' => 'RoleRemove', '_controller' => 'App\\Controller\\RoleController::RoleDelete'], ['id'], null, null, false, true, null]],
+        557 => [[['_route' => 'stockView', '_controller' => 'App\\Controller\\StockController::stockView'], ['id'], null, null, false, true, null]],
+        590 => [[['_route' => 'StockRemove', '_controller' => 'App\\Controller\\StockController::PermissionDelete'], ['id'], null, null, false, true, null]],
+        611 => [[['_route' => 'StockUpdate', '_controller' => 'App\\Controller\\StockController::StockUpdate'], ['id'], null, null, false, true, null]],
+        637 => [[['_route' => 'UserView', '_controller' => 'App\\Controller\\UsersController::UserView'], ['id'], null, null, false, true, null]],
+        660 => [[['_route' => 'UserRemove', '_controller' => 'App\\Controller\\UsersController::UserDelete'], ['id'], null, null, false, true, null]],
+        681 => [
+            [['_route' => 'UserUpdate', '_controller' => 'App\\Controller\\UsersController::UserUpdate'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

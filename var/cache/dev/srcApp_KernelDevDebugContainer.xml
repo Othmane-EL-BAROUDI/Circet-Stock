@@ -309,6 +309,13 @@
         <argument type="service" id=".service_locator.E18xQID.App\Controller\ProfileController"/>
       </call>
     </service>
+    <service id="App\Controller\RestitutionController" class="App\Controller\RestitutionController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.E18xQID.App\Controller\RestitutionController"/>
+      </call>
+    </service>
     <service id="App\Controller\RoleController" class="App\Controller\RoleController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -365,10 +372,16 @@
     <service id="App\Form\PermissionFormType" class="App\Form\PermissionFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\RestitutionFormType" class="App\Form\RestitutionFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\RoleFormType" class="App\Form\RoleFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\UserFormType" class="App\Form\UserFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\UserPasswordFormType" class="App\Form\UserPasswordFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Repository\AffectationRepository" class="App\Repository\AffectationRepository" autowire="true" autoconfigure="true">
@@ -740,8 +753,10 @@
         <argument>App\Form\MarqueFormType</argument>
         <argument>App\Form\ModelFormType</argument>
         <argument>App\Form\PermissionFormType</argument>
+        <argument>App\Form\RestitutionFormType</argument>
         <argument>App\Form\RoleFormType</argument>
         <argument>App\Form\UserFormType</argument>
+        <argument>App\Form\UserPasswordFormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
@@ -1035,7 +1050,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.vG8g1yf"/>
+      <argument type="service" id=".service_locator.AbfbYWe"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4889,6 +4904,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ProfileController" class="App\Controller\ProfileController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ProfileController" class="App\Controller\ProfileController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ProfileController" class="App\Controller\ProfileController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RestitutionController" class="App\Controller\RestitutionController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RestitutionController" class="App\Controller\RestitutionController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\RestitutionController" class="App\Controller\RestitutionController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RoleController" class="App\Controller\RoleController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RoleController" class="App\Controller\RoleController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\RoleController" class="App\Controller\RoleController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4918,10 +4936,14 @@
     <service id=".abstract.instanceof.App\Form\ModelFormType" class="App\Form\ModelFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PermissionFormType" class="App\Form\PermissionFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\PermissionFormType" class="App\Form\PermissionFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RestitutionFormType" class="App\Form\RestitutionFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\RestitutionFormType" class="App\Form\RestitutionFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RoleFormType" class="App\Form\RoleFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\RoleFormType" class="App\Form\RoleFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserFormType" class="App\Form\UserFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UserFormType" class="App\Form\UserFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserPasswordFormType" class="App\Form\UserPasswordFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\UserPasswordFormType" class="App\Form\UserPasswordFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AffectationRepository" class="App\Repository\AffectationRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\AffectationRepository" class="App\Repository\AffectationRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\MachineRepository" class="App\Repository\MachineRepository" autowire="true" abstract="true"/>
@@ -5213,12 +5235,14 @@
         <argument key="entityManager" type="service" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.uFvl7Vp" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.jL.8ZaD" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\DashboardController::AffectationAccept" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\DashboardController::AffectationRemove" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\DashboardController::Dashboard" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\DashboardController::resitutionRemove" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\DashboardController::restitutionAccept" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\HomePageController::Affectation" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\HomePageController::HomePage" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\MarqueController::Marque" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5230,12 +5254,16 @@
         <argument key="App\Controller\PermissionController::Permission" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\PermissionController::PermissionDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\PermissionController::PermissionUpdate" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\ProfileController::ForgetPassword" type="service" id=".service_locator.Hm8CUXV"/>
+        <argument key="App\Controller\RestitutionController::demande" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\RestitutionController::index" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\RoleController::Role" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\RoleController::RoleDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\RoleController::RoleUpdate" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController::PermissionDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController::Stock" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController::StockUpdate" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\UserProfileController::UserProfile" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController::UserDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController::UserUpdate" type="service" id=".service_locator.Hm8CUXV"/>
         <argument key="App\Controller\UsersController::UserView" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5243,6 +5271,8 @@
         <argument key="App\Controller\DashboardController:AffectationAccept" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\DashboardController:AffectationRemove" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\DashboardController:Dashboard" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\DashboardController:resitutionRemove" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\DashboardController:restitutionAccept" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\HomePageController:Affectation" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\HomePageController:HomePage" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\MarqueController:Marque" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5254,12 +5284,16 @@
         <argument key="App\Controller\PermissionController:Permission" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\PermissionController:PermissionDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\PermissionController:PermissionUpdate" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\ProfileController:ForgetPassword" type="service" id=".service_locator.Hm8CUXV"/>
+        <argument key="App\Controller\RestitutionController:demande" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\RestitutionController:index" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\RoleController:Role" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\RoleController:RoleDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\RoleController:RoleUpdate" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController:PermissionDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController:Stock" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\StockController:StockUpdate" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\UserProfileController:UserProfile" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController:UserDelete" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\UsersController:UserUpdate" type="service" id=".service_locator.Hm8CUXV"/>
         <argument key="App\Controller\UsersController:UserView" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5325,7 +5359,7 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.vG8g1yf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.AbfbYWe" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\AffectationFormType" type="service" id="App\Form\AffectationFormType"/>
@@ -5335,8 +5369,10 @@
         <argument key="App\Form\MarqueFormType" type="service" id="App\Form\MarqueFormType"/>
         <argument key="App\Form\ModelFormType" type="service" id="App\Form\ModelFormType"/>
         <argument key="App\Form\PermissionFormType" type="service" id="App\Form\PermissionFormType"/>
+        <argument key="App\Form\RestitutionFormType" type="service" id="App\Form\RestitutionFormType"/>
         <argument key="App\Form\RoleFormType" type="service" id="App\Form\RoleFormType"/>
         <argument key="App\Form\UserFormType" type="service" id="App\Form\UserFormType"/>
+        <argument key="App\Form\UserPasswordFormType" type="service" id="App\Form\UserPasswordFormType"/>
         <argument key="FOS\UserBundle\Form\Type\ChangePasswordFormType" type="service" id="fos_user.change_password.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\ProfileFormType" type="service" id="fos_user.profile.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\RegistrationFormType" type="service" id="fos_user.registration.form.type"/>
@@ -5456,6 +5492,12 @@
     <service id=".service_locator.E18xQID.App\Controller\ProfileController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\ProfileController"/>
       <argument>App\Controller\ProfileController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.E18xQID" method="withContext"/>
+    </service>
+    <service id=".service_locator.E18xQID.App\Controller\RestitutionController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\RestitutionController"/>
+      <argument>App\Controller\RestitutionController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.E18xQID" method="withContext"/>
     </service>
@@ -5601,12 +5643,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.uFvl7Vp"/>
+      <argument type="service" id=".service_locator.jL.8ZaD"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.uFvl7Vp"/>
+      <argument type="service" id=".service_locator.jL.8ZaD"/>
     </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.aPyppP2"/>
@@ -5926,7 +5968,7 @@
     <service id="mailer" alias="swiftmailer.mailer.default" public="true"/>
     <service id="sensio_framework_extra.converter.doctrine.orm.expression_language" alias="sensio_framework_extra.converter.doctrine.orm.expression_language.default" public="false"/>
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.uFvl7Vp"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.jL.8ZaD"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>

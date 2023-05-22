@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\RestitutionRepository;
+use App\Entity\Affectation;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -37,6 +38,14 @@ class Restitution
      * @ORM\Column(type="string", length=255)
      */
     private $description;
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $Accept;
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $Visibility;
 
     public function getId(): ?int
     {
@@ -75,6 +84,28 @@ class Restitution
     public function setDate(string $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+     public function getAccept(): ?bool
+    {
+        return $this->Accept;
+    }
+
+    public function setAccept(bool $Accept): self
+    {
+        $this->Accept = $Accept;
+
+        return $this;
+    }
+    public function getVisibility(): ?bool
+    {
+        return $this->Visibility;
+    }
+
+    public function setVisibility(bool $Visibility): self
+    {
+        $this->Visibility = $Visibility;
 
         return $this;
     }

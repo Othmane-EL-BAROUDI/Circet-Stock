@@ -10,40 +10,64 @@
 {{ include('Pages/sidebar.html.twig') }}
 {% block body %}
 	<div class="home_content">
-	{% if Title == 'Stock' %}
-		<div class="modal fade" id="model" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel ">Picture view</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<div class="StockImg" style=" border: solid  1px #f9a826; height:250px;">
-							{# <img src="/CIRCET-STOCK/public/{{StockPic}}"> #}
-							<img src="{{asset(StockPic)}}">
+		{% if Title == 'Stock' %}
+			<div class="modal fade" id="model" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel ">Picture view</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
 						</div>
+						<div class="modal-body">
+							<div
+								class="StockImg" style=" border: solid  1px #f9a826; height:250px;">
+								{# <img src="/CIRCET-STOCK/public/{{StockPic}}"> #}
+								<img src="{{asset(StockPic)}}">
+							</div>
+						</div>
+						<div class="ImageUpload">
+							<button type="button" class="mb-3">
+								<i class='bx bxs-cloud-upload bx-sm'></i>
+							</button>
+						</div>
+						{{ form_start(formPic) }}
+						{{ form_widget(formPic) }}
+
+						<p id="fileName" style="font-size: .77rem; margin-left:20px;">image uploaded : image actuelle</p>
+						
+						<div class="modal-footer close_button">
+							<button class="btn btn-outline-success" type="submit">Modifier</button>
+							<button class="btn btn-outline-secondary" type="button" data-dismiss="modal">Annuler</button>
+						</div>
+						{{ form_end(formPic) }}
 					</div>
-					<div class="ImageUpload">
-						<button type="button" class="mb-3">
-							<i class='bx bxs-cloud-upload bx-sm'></i>
-						</button>
-					</div>
-					{{ form_start(formPic) }}
-					{{ form_widget(formPic) }}
-					
-					<p id="fileName" style="font-size: .77rem; margin-left:20px;">image uploaded : image actuelle</p>
-					<div class="modal-footer close_button">
-						<button class="btn btn-outline-success" type="submit" >Modifier</button>
-						<button class="btn btn-outline-secondary" type="button" data-dismiss="modal">Annuler</button>
-					</div>
-					{{ form_end(formPic) }}
 				</div>
 			</div>
-		</div>
+			
 		{% endif %}
+		<div class="modal fade" id="PassPanel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Changement du mot de passe</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						{{ form_start(Passform) }}
+						<div class="modal-body">
+							{{ form_widget(Passform) }}
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="submit" class="btn btn-outline-warning">Save changes</button>
+						</div>
+						{{ form_end(Passform) }}
+					</div>
+				</div>
+			</div>
 		<div class="text">{{PageName}}</div>
 		<div class="container" style="display: flex; justify-content: center; align-items: center; height: 80vh;">
 			<div class="col-md-9">
@@ -53,7 +77,8 @@
 
 
 						{% if Title == 'Stock' %}
-							<div class="StockImg" style=" border: solid  1px #f9a826; height:250px;">
+							<div
+								class="StockImg" style=" border: solid  1px #f9a826; height:250px;">
 								{# <img src="/CIRCET-STOCK/public/{{StockPic}}"> #}
 								<img src="{{asset(StockPic)}}">
 							</div>
@@ -62,13 +87,17 @@
 							</div>
 						{% endif %}
 						{{ form_widget(form) }}
+						
+							<div class="modal-body " style="display: flex;  justify-content: right; align-items: center; ">
+							<button type="button"  class="btn btn-outline-warning" data-toggle="modal" data-target="#PassPanel">changer le mote de passe</button>
+							</div>
 						<div class="actions">
 							<div class="buttons  text-center mt-4">
 								<button type="submit" style="background-color:#f9a826;">Mettre à jour</button>
 								{{ form_end(form) }}
 								<a href="{{Path}}">
-									<button type="button"   style="background-color: #6c757d">Annuler</button>
-									
+									<button type="button" style="background-color: #6c757d">Annuler</button>
+
 								</a>
 							</div>
 						</div>

@@ -43,10 +43,9 @@ textarea:focus, input:focus , button:focus{
     font-size: 14px;
     text-align: center;
     cursor: pointer;
+    justify-content: right;
 }
-.modal-body{
-    margin-bottom: -20px;
-}
+
 .modal-body input , .modal-body select{
     border-radius: 5px;
     width: 100%;

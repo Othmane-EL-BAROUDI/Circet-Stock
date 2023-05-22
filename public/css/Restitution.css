@@ -1,0 +1,95 @@
+.home_content{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition:  all 0.5s ease;
+    overflow-y: scroll  !important;
+}
+.home_content .text{
+    font-size: 25px;
+    font-weight: 500;
+    color: #1d1b31;
+    margin: 12px;
+}
+::-webkit-scrollbar {
+    width: 4px;
+ }
+ /* Track */
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+ }
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+    background:#f9a826;
+ }
+ .Main{
+    margin-left: 2%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: -1;
+    width: calc(100% - 50px);
+    row-gap: 18px;
+    column-gap: 18px;
+ }
+ .Item{
+    width: 360px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 6px;
+ }
+ .Item > div{
+    height: 100%;
+ }
+ .left{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .left img{
+    width: 100%;
+ }
+ .Right{
+    width: 60%;
+    padding: 8px;
+    text-align: left;
+ }
+ .Right button{
+    cursor: pointer;
+    width: 95%;
+    background-color:white ;
+    border: #f9a826 solid 1px;
+    color: #f9a826;
+    height: 32px;
+    font-size: 13px;
+    border-radius: 5px;
+ }
+ .Right button:hover{
+    background-color:#f9a826 ;
+    color: white;
+ }
+ .Right p{
+    
+    height: 38px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+ }
+ .exeption{
+    height: 80%;
+    width: calc(100% - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .exeption  img{
+    width: 50%;
+ }
