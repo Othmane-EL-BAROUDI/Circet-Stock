@@ -126,6 +126,7 @@
 						{% endif %}
 					{% endfor %}
 				{% endif %}
+				{% if userInfo.roles[0] == "IT SERVICE" %}
 				{% for permission in userInfo.getUserPermission() %}
 					{% if permission.getPermissionName() == "Voir accueil" %}
 						<li>
@@ -148,6 +149,7 @@
 						</li>
 					{% endif %}
 				{% endfor %}
+				{% endif %}
 				{% if userInfo.roles[0] == "ROLE_ADMIN" or userInfo.roles[0] == "SUPER ADMIN" %}
 
 					{% for permission in userInfo.getUserPermission() %}
