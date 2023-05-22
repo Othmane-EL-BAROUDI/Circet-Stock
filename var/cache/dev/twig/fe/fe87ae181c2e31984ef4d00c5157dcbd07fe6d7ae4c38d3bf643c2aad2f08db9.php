@@ -56,7 +56,7 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 ";
         // line 11
         $this->displayBlock('body', $context, $blocks);
-        // line 110
+        // line 113
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -161,7 +161,10 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t\t";
         }
         // line 50
-        echo "\t\t<div class=\"modal fade\" id=\"PassPanel\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+        echo "\t\t";
+        if (((isset($context["Title"]) || array_key_exists("Title", $context) ? $context["Title"] : (function () { throw new RuntimeError('Variable "Title" does not exist.', 50, $this->source); })()) != "Stock")) {
+            // line 51
+            echo "\t\t<div class=\"modal fade\" id=\"PassPanel\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
 \t\t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t\t<div class=\"modal-content\">
 \t\t\t\t\t\t<div class=\"modal-header\">
@@ -171,75 +174,83 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t";
-        // line 59
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Passform"]) || array_key_exists("Passform", $context) ? $context["Passform"] : (function () { throw new RuntimeError('Variable "Passform" does not exist.', 59, $this->source); })()), 'form_start');
-        echo "
+            // line 60
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Passform"]) || array_key_exists("Passform", $context) ? $context["Passform"] : (function () { throw new RuntimeError('Variable "Passform" does not exist.', 60, $this->source); })()), 'form_start');
+            echo "
 \t\t\t\t\t\t<div class=\"modal-body\">
 \t\t\t\t\t\t\t";
-        // line 61
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["Passform"]) || array_key_exists("Passform", $context) ? $context["Passform"] : (function () { throw new RuntimeError('Variable "Passform" does not exist.', 61, $this->source); })()), 'widget');
-        echo "
+            // line 62
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["Passform"]) || array_key_exists("Passform", $context) ? $context["Passform"] : (function () { throw new RuntimeError('Variable "Passform" does not exist.', 62, $this->source); })()), 'widget');
+            echo "
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"modal-footer\">
 \t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
 \t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-outline-warning\">Save changes</button>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t";
-        // line 67
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Passform"]) || array_key_exists("Passform", $context) ? $context["Passform"] : (function () { throw new RuntimeError('Variable "Passform" does not exist.', 67, $this->source); })()), 'form_end');
-        echo "
+            // line 68
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Passform"]) || array_key_exists("Passform", $context) ? $context["Passform"] : (function () { throw new RuntimeError('Variable "Passform" does not exist.', 68, $this->source); })()), 'form_end');
+            echo "
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
-\t\t<div class=\"text\">";
-        // line 71
-        echo twig_escape_filter($this->env, (isset($context["PageName"]) || array_key_exists("PageName", $context) ? $context["PageName"] : (function () { throw new RuntimeError('Variable "PageName" does not exist.', 71, $this->source); })()), "html", null, true);
+\t\t\t\t";
+        }
+        // line 73
+        echo "\t\t<div class=\"text\">";
+        echo twig_escape_filter($this->env, (isset($context["PageName"]) || array_key_exists("PageName", $context) ? $context["PageName"] : (function () { throw new RuntimeError('Variable "PageName" does not exist.', 73, $this->source); })()), "html", null, true);
         echo "</div>
 \t\t<div class=\"container\" style=\"display: flex; justify-content: center; align-items: center; height: 80vh;\">
 \t\t\t<div class=\"col-md-9\">
 \t\t\t\t<div class=\"card mb-3 content\">
 \t\t\t\t\t";
-        // line 75
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 75, $this->source); })()), 'form_start');
+        // line 77
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 77, $this->source); })()), 'form_start');
         echo "
 \t\t\t\t\t<div class=\"card-body\">
 
 
 \t\t\t\t\t\t";
-        // line 79
-        if (((isset($context["Title"]) || array_key_exists("Title", $context) ? $context["Title"] : (function () { throw new RuntimeError('Variable "Title" does not exist.', 79, $this->source); })()) == "Stock")) {
-            // line 80
+        // line 81
+        if (((isset($context["Title"]) || array_key_exists("Title", $context) ? $context["Title"] : (function () { throw new RuntimeError('Variable "Title" does not exist.', 81, $this->source); })()) == "Stock")) {
+            // line 82
             echo "\t\t\t\t\t\t\t<div
 \t\t\t\t\t\t\t\tclass=\"StockImg\" style=\" border: solid  1px #f9a826; height:250px;\">
 \t\t\t\t\t\t\t\t";
-            // line 83
+            // line 85
             echo "\t\t\t\t\t\t\t\t<img src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl((isset($context["StockPic"]) || array_key_exists("StockPic", $context) ? $context["StockPic"] : (function () { throw new RuntimeError('Variable "StockPic" does not exist.', 83, $this->source); })())), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl((isset($context["StockPic"]) || array_key_exists("StockPic", $context) ? $context["StockPic"] : (function () { throw new RuntimeError('Variable "StockPic" does not exist.', 85, $this->source); })())), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"StockImg\">
-\t\t\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\" class=\"start\" data-target=\"#model\">Voir image</button>
+\t\t\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\" class=\"start\" data-target=\"#model\">Voir l'image</button>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t";
         }
-        // line 89
+        // line 91
         echo "\t\t\t\t\t\t";
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 89, $this->source); })()), 'widget');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 91, $this->source); })()), 'widget');
         echo "
-\t\t\t\t\t\t
-\t\t\t\t\t\t\t<div class=\"modal-body \" style=\"display: flex;  justify-content: right; align-items: center; \">
-\t\t\t\t\t\t\t<button type=\"button\"  class=\"btn btn-outline-warning\" data-toggle=\"modal\" data-target=\"#PassPanel\">changer le mote de passe</button>
+\t\t\t\t\t\t\t\t";
+        // line 92
+        if (((isset($context["Title"]) || array_key_exists("Title", $context) ? $context["Title"] : (function () { throw new RuntimeError('Variable "Title" does not exist.', 92, $this->source); })()) != "Stock")) {
+            // line 93
+            echo "\t\t\t\t\t\t\t<div class=\"modal-body \" style=\"display: flex;  justify-content: right; align-items: center; \">
+\t\t\t\t\t\t\t<button type=\"button\"  class=\"btn btn-outline-warning\" data-toggle=\"modal\" data-target=\"#PassPanel\">changer le mot de passe</button>
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class=\"actions\">
+\t\t\t\t\t\t\t";
+        }
+        // line 97
+        echo "\t\t\t\t\t\t<div class=\"actions\">
 \t\t\t\t\t\t\t<div class=\"buttons  text-center mt-4\">
 \t\t\t\t\t\t\t\t<button type=\"submit\" style=\"background-color:#f9a826;\">Mettre à jour</button>
 \t\t\t\t\t\t\t\t";
-        // line 97
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 97, $this->source); })()), 'form_end');
+        // line 100
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 100, $this->source); })()), 'form_end');
         echo "
 \t\t\t\t\t\t\t\t<a href=\"";
-        // line 98
-        echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 98, $this->source); })()), "html", null, true);
+        // line 101
+        echo twig_escape_filter($this->env, (isset($context["Path"]) || array_key_exists("Path", $context) ? $context["Path"] : (function () { throw new RuntimeError('Variable "Path" does not exist.', 101, $this->source); })()), "html", null, true);
         echo "\">
 \t\t\t\t\t\t\t\t\t<button type=\"button\" style=\"background-color: #6c757d\">Annuler</button>
 
@@ -257,19 +268,19 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
     }
 
-    // line 110
+    // line 113
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 111
+        // line 114
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/Stock.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"";
-        // line 112
+        // line 115
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("JS/sidebar.js"), "html", null, true);
         echo "\"></script>
 \t<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
@@ -293,7 +304,7 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 
     public function getDebugInfo()
     {
-        return array (  273 => 112,  268 => 111,  261 => 110,  242 => 98,  238 => 97,  226 => 89,  216 => 83,  212 => 80,  210 => 79,  203 => 75,  196 => 71,  189 => 67,  180 => 61,  175 => 59,  164 => 50,  155 => 44,  144 => 36,  140 => 35,  128 => 27,  114 => 14,  112 => 13,  109 => 12,  102 => 11,  91 => 7,  84 => 6,  74 => 3,  67 => 2,  60 => 110,  58 => 11,  54 => 10,  52 => 6,  49 => 5,  47 => 2,  44 => 1,);
+        return array (  284 => 115,  279 => 114,  272 => 113,  253 => 101,  249 => 100,  244 => 97,  238 => 93,  236 => 92,  231 => 91,  221 => 85,  217 => 82,  215 => 81,  208 => 77,  200 => 73,  192 => 68,  183 => 62,  178 => 60,  167 => 51,  164 => 50,  155 => 44,  144 => 36,  140 => 35,  128 => 27,  114 => 14,  112 => 13,  109 => 12,  102 => 11,  91 => 7,  84 => 6,  74 => 3,  67 => 2,  60 => 113,  58 => 11,  54 => 10,  52 => 6,  49 => 5,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -347,6 +358,7 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t\t\t</div>
 \t\t\t
 \t\t{% endif %}
+\t\t{% if Title != 'Stock' %}
 \t\t<div class=\"modal fade\" id=\"PassPanel\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
 \t\t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t\t<div class=\"modal-content\">
@@ -368,6 +380,7 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
+\t\t\t\t{% endif %}
 \t\t<div class=\"text\">{{PageName}}</div>
 \t\t<div class=\"container\" style=\"display: flex; justify-content: center; align-items: center; height: 80vh;\">
 \t\t\t<div class=\"col-md-9\">
@@ -383,14 +396,15 @@ class __TwigTemplate_7565788b7359742907b287e561fe71e9bd4f53a6221b893f140acc902a7
 \t\t\t\t\t\t\t\t<img src=\"{{asset(StockPic)}}\">
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"StockImg\">
-\t\t\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\" class=\"start\" data-target=\"#model\">Voir image</button>
+\t\t\t\t\t\t\t\t<button type=\"button\" data-toggle=\"modal\" class=\"start\" data-target=\"#model\">Voir l'image</button>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t{{ form_widget(form) }}
-\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t{% if Title != 'Stock' %}
 \t\t\t\t\t\t\t<div class=\"modal-body \" style=\"display: flex;  justify-content: right; align-items: center; \">
-\t\t\t\t\t\t\t<button type=\"button\"  class=\"btn btn-outline-warning\" data-toggle=\"modal\" data-target=\"#PassPanel\">changer le mote de passe</button>
+\t\t\t\t\t\t\t<button type=\"button\"  class=\"btn btn-outline-warning\" data-toggle=\"modal\" data-target=\"#PassPanel\">changer le mot de passe</button>
 \t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t<div class=\"actions\">
 \t\t\t\t\t\t\t<div class=\"buttons  text-center mt-4\">
 \t\t\t\t\t\t\t\t<button type=\"submit\" style=\"background-color:#f9a826;\">Mettre à jour</button>

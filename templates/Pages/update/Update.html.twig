@@ -47,6 +47,7 @@
 			</div>
 			
 		{% endif %}
+		{% if Title != 'Stock' %}
 		<div class="modal fade" id="PassPanel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
@@ -68,6 +69,7 @@
 					</div>
 				</div>
 			</div>
+				{% endif %}
 		<div class="text">{{PageName}}</div>
 		<div class="container" style="display: flex; justify-content: center; align-items: center; height: 80vh;">
 			<div class="col-md-9">
@@ -83,14 +85,15 @@
 								<img src="{{asset(StockPic)}}">
 							</div>
 							<div class="StockImg">
-								<button type="button" data-toggle="modal" class="start" data-target="#model">Voir image</button>
+								<button type="button" data-toggle="modal" class="start" data-target="#model">Voir l'image</button>
 							</div>
 						{% endif %}
 						{{ form_widget(form) }}
-						
+								{% if Title != 'Stock' %}
 							<div class="modal-body " style="display: flex;  justify-content: right; align-items: center; ">
-							<button type="button"  class="btn btn-outline-warning" data-toggle="modal" data-target="#PassPanel">changer le mote de passe</button>
+							<button type="button"  class="btn btn-outline-warning" data-toggle="modal" data-target="#PassPanel">changer le mot de passe</button>
 							</div>
+							{% endif %}
 						<div class="actions">
 							<div class="buttons  text-center mt-4">
 								<button type="submit" style="background-color:#f9a826;">Mettre à jour</button>

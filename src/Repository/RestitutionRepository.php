@@ -18,6 +18,19 @@ class RestitutionRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Restitution::class);
     }
+    public function search($id)
+    {
+        return $this->createQueryBuilder('m')
+            ->select('m')
+            ->join('m.affectation', 'p')
+            ->join('p.machine', 's')
+            ->where($this->createQueryBuilder('m')->expr()->like('s.id', ':ModelQuery'))
+            ->andwhere($this->createQueryBuilder('m')->expr()->like('m.Accept', ':AcceptQuery'))
+            ->setParameter('ModelQuery', $id)
+            ->setParameter('AcceptQuery', 1 )
+            ->getQuery()
+            ->getResult();
+    }
 
     // /**
     //  * @return Restitution[] Returns an array of Restitution objects

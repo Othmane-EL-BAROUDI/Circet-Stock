@@ -23,7 +23,7 @@ class MarqueController extends AbstractController
         $allMarques = $entityManager->getRepository(Marque::class)->search($searchQuery);
         $user = $this->getUser();
 
-        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ORDER BY ORDER BY u.DateNotifications DESC');
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid  ORDER BY u.DateNotifications DESC');
         $query->setParameter('uid', $user->getId());
         $AllNotification = $query->getResult();
         $query->setMaxResults(5);

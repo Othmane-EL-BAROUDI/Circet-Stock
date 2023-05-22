@@ -24,9 +24,13 @@
 		<div class="Main">
 		{% for item in UserMachine %}
 			<div class="Item">
+				{# <div class="Left">
+					<img  src="/CIRCET-STOCK/public/{{item.getMachineAffectation().getImgSrc()}}" alt="no img"/>
+				</div> #}
 				<div class="Left">
-					<img src="{{asset(item.getMachineAffectation().getImgSrc())}}" alt="no img"/>
+					<img src="{{asset(item.getMachineAffectation().getImgSrc())}}" id="main_product_image">
 				</div>
+				
 				<div class="Right">
 						<h6>{{item.getMachineAffectation().getModel().getMarque().getMarqueName()}} </h6>
 						<h6>{{item.getMachineAffectation().getModel().getModelName()}}</h6>
