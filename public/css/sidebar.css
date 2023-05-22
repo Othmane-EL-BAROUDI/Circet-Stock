@@ -84,7 +84,7 @@ body{
 }
 .sidebar ul li{
     position: relative;
-    height: 50px;
+    height: 44px;
     width: 100%;
     list-style: none;
     line-height: 50px;
@@ -253,6 +253,15 @@ body{
     background-color: #f9a826;
     color: white;
 }
+.voirPLus{
+    cursor: pointer;
+    background: none;
+    color: #f9a826;
+    width: 100%;
+    border: none;
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .notlink{
     display: flex;
     justify-content: center;
@@ -314,3 +323,34 @@ body{
     margin-left: 8px;
     text-align: left;
 }
+.noti-body{
+    max-height: 500px !important;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+.noti-body ul li{
+   
+    padding-right: 15px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 30px;
+    max-height: 100px !important;
+}
+.noti-body ul li img{
+    width: 33px !important;
+    
+}
+.modal-body ul li p{
+    margin-left: 15px;
+    text-align: left;
+    width: 70%;
+    max-height: 50px;
+}
+.noti-body .NotiDate{
+  
+    width: 100px;
+    margin-left: 3%;
+    margin-top: 33px;
+}
+

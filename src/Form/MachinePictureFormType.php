@@ -18,7 +18,7 @@ class MachinePictureFormType extends AbstractType
             'attr' => array('class' => 'filePic' , 'style' => ' position: absolute;  width: 94%;'),
             'label' => false,
             'data_class' => null,
-            'required' => false,
+            'required' => true,
         ])
           
         ;

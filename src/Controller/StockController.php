@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Affectation;
 use App\Entity\Machine;
 use App\Entity\Model;
+use App\Entity\Notification;
 use App\Form\MachineFormType;
 use App\Form\MachineInfoFormType;
 use App\Form\MachinePictureFormType;
@@ -25,6 +26,16 @@ class StockController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $results = $entityManager->getRepository(Machine::class)->findAll();
         $user = $this->getUser();
+         
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ORDER BY u.DateNotifications DESC');
+        $query->setParameter('uid', $user->getId());
+        $AllNotification = $query->getResult();
+        $query->setMaxResults(5);
+        $RecentNotification = $query->getResult();
+
+
+
+
         if( $user->getConnected() == false ){
             return $this->redirect('Profile');
         }
@@ -34,6 +45,18 @@ class StockController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted()  && $form->isValid()) {
             $machine = $form->getData();
+            $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
+            $query->setParameter('role', '%"ADMIN"%');
+            $query->setParameter('role2', '%"SUPER ADMIN"%');
+            $AllAdmins = $query->getResult();
+            foreach ($AllAdmins as $admin) {
+                $Notification = new Notification();
+                $Notification->setUserId($admin->getId());
+                $Notification->setDescription($this->getUser()->getUsername() . ' a ajouter une nouveau materiel  ' .$machine->getModel()->getMarque()->getMarqueName() . " " .$machine->getModel()->getModelName()  );
+                $Notification->setSrcImg('images/success.png');
+                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $entityManager->persist($Notification);
+            }
             $uploadedPicture = $form->get('img_src')->getData();
             $uploadType = $machine->getModel()->getType();
             if ($uploadedPicture) {
@@ -67,6 +90,10 @@ class StockController extends AbstractController
             'userInfo' => $user,
             'form' => $form->createView(),
             'Allmachines' => $results,
+            'AllNotification' => $AllNotification,
+            'RecentNotification' => $RecentNotification,
+         
+
         ]);
     }
 
@@ -78,6 +105,14 @@ class StockController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $machine = $entityManager->getRepository(Machine::class)->find($id);
         $user = $this->getUser();
+         
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ORDER BY u.DateNotifications DESC');
+        $query->setParameter('uid', $user->getId());
+        $AllNotification = $query->getResult();
+        $query->setMaxResults(5);
+        $RecentNotification = $query->getResult();
+
+
 
         $AllAffectations = $entityManager->getRepository(Affectation::class)->search($id);
 
@@ -87,6 +122,10 @@ class StockController extends AbstractController
             'machine' => $machine,
             'AllAffectation' => $AllAffectations,
             'Path' => '/Stock',
+            'AllNotification' => $AllNotification,
+            'RecentNotification' => $RecentNotification,
+     
+
         ]);
     }
 
@@ -100,6 +139,18 @@ class StockController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $stock = $entityManager->getRepository(Machine::class)->find($id);
         $entityManager->remove($stock);
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
+        $query->setParameter('role', '%"ADMIN"%');
+        $query->setParameter('role2', '%"SUPER ADMIN"%');
+        $AllAdmins = $query->getResult();
+        foreach ($AllAdmins as $admin) {
+            $Notification = new Notification();
+            $Notification->setUserId($admin->getId());
+            $Notification->setDescription($this->getUser()->getUsername() . ' a supprimer la marque ' . $stock->getModel()->getMarque()->getMarqueName() ." ". $stock->getModel()->getModelName() );
+            $Notification->setSrcImg('images/delete-file.png');
+            $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+            $entityManager->persist($Notification);
+        }
         $entityManager->flush();
         $this->addFlash(
             'delete',
@@ -113,6 +164,15 @@ class StockController extends AbstractController
     public function StockUpdate(Request $request, EntityManagerInterface $entityManager, $id): Response
     {
         $CurrentUser = $this->getUser();
+         
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ORDER BY u.DateNotifications DESC');
+        $query->setParameter('uid', $CurrentUser->getId());
+        $AllNotification = $query->getResult();
+        $query->setMaxResults(5);
+        $RecentNotification = $query->getResult();
+
+
+
         $entityManager = $this->getDoctrine()->getManager();
         $stock = $entityManager->getRepository(Machine::class)->find($id);
         $form = $this->createForm(MachineInfoFormType::class, $stock);
@@ -122,6 +182,18 @@ class StockController extends AbstractController
         $uploadedPicture = $formPic->get('img_src')->getData();
         $uploadType = $stock->getModel()->getType();
         if ($form->isSubmitted()  && $form->isValid()) {
+            $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
+            $query->setParameter('role', '%"ADMIN"%');
+            $query->setParameter('role2', '%"SUPER ADMIN"%');
+            $AllAdmins = $query->getResult();
+            foreach ($AllAdmins as $admin) {
+                $Notification = new Notification();
+                $Notification->setUserId($admin->getId());
+                $Notification->setDescription($this->getUser()->getUsername() . ' a modifier le materiel ' . $stock->getModel()->getMarque()->getMarqueName() ." ". $stock->getModel()->getModelName() );
+                $Notification->setSrcImg('images/updated.png');
+                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $entityManager->persist($Notification);
+            }
             $entityManager->flush();
             $this->addFlash(
                 'update',
@@ -130,6 +202,18 @@ class StockController extends AbstractController
             return $this->redirectToRoute('Stock');
         }
         if ($formPic->isSubmitted()  && $formPic->isValid()) {
+            $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
+            $query->setParameter('role', '%"ADMIN"%');
+            $query->setParameter('role2', '%"SUPER ADMIN"%');
+            $AllAdmins = $query->getResult();
+            foreach ($AllAdmins as $admin) {
+                $Notification = new Notification();
+                $Notification->setUserId($admin->getId());
+                $Notification->setDescription($this->getUser()->getUsername() . ' a modifier le materiel ' . $stock->getModel()->getMarque()->getMarqueName() ." ".$stock->getModel()->getModelName() );
+                $Notification->setSrcImg('images/updated.png');
+                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $entityManager->persist($Notification);
+            }
             if ($uploadedPicture) {
                 if ($stock->getImgSrc() != null) {
                     if (file_exists(
@@ -164,6 +248,10 @@ class StockController extends AbstractController
             'Title' => 'Stock',
             'PageName' => 'Mise à jour',
             'StockPic' => $stock->getImgSrc(),
+            'AllNotification' => $AllNotification,
+            'RecentNotification' => $RecentNotification,
+            
+
 
         ]);
     }

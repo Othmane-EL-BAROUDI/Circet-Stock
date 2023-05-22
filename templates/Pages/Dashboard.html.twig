@@ -19,7 +19,7 @@
 				</button>
 			</div>
 		{% endfor %}
-			{% for flash_message in app.session.flashbag.get('success') %}
+		{% for flash_message in app.session.flashbag.get('success') %}
 			<div class="alert  alert-success fade show" role="alert">
 				<strong>Succès!</strong>
 				{{flash_message}}
@@ -27,7 +27,7 @@
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			
+
 		{% endfor %}
 		<div class="text">Tableau de bord</div>
 		<div class="body_header">
@@ -85,62 +85,152 @@
 								<th style="text-align:center;">Actions</th>
 							</tr>
 						</thead>
-						<tbody>{% if AllAffectations|length > 0 %}
-							{% for item in AllAffectations %}
+						<tbody>
+							{% if AllAffectations|length > 0 %}
+								{% for item in AllAffectations %}
 
 
+									<tr>
+										<td>
+											<div class="d-flex align-items-center">
+												<div class="ms-3">
+													<p class="fw-bold mb-1">{{item.getUserAffectation().getUsername()}}</p>
+													<p class="text-muted mb-0">
+														<label>
+															{{item.getUserAffectation().getJob()}}
+														</label>
+													</p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="text-muted mb-0 mt-2 ">{{item.getUserAffectation().getMatricule()}}
+											</p>
+										</td>
+										<td>
+											<p class="text-muted mb-0 mt-2 ">
+												{{item.getMachineAffectation().model.marque.getMarqueName()}}
+												{{item.getMachineAffectation().model.getModelName()}}
+											</p>
+										</td>
+										<td>
+											<p class="text-muted mb-0 mt-2 ">{{item.getDateAffectation()}}</p>
+										</td>
+										<td>
+											<p class="text-muted mb-0 mt-2 ">{{item.getDescription()}}</p>
+										</td>
+
+										<td class="actions">
+											<a href="Affecation/Accept/{{item.id}}">
+												<button type="button" class="bn1 btn  btn-sm btn-rounded mt-1 mr-1" style=" border: #28a745 solid 1px; ">
+													<i class='bx bx-check bx-xs'></i>
+													Accepter
+												</button>
+											</a>
+											<a href="Affecation/Delete/{{item.id}}">
+												<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;">
+													<i class='bx bx-x bx-xs'></i>
+													Refuser
+												</button>
+											</a>
+										</td>
+									</tr>
+								{% endfor %}
+							{% else %}
 								<tr>
 									<td>
-										<div class="d-flex align-items-center">
-											<div class="ms-3">
-												<p class="fw-bold mb-1">{{item.getUserAffectation().getUsername()}}</p>
-												<p class="text-muted mb-0">
-													<label>
-														{{item.getUserAffectation().getJob()}}
-													</label>
-												</p>
-											</div>
-										</div>
-									</td>
-									<td>
-										<p class="text-muted mb-0 mt-2 ">{{item.getUserAffectation().getMatricule()}}
-										</p>
-									</td>
-									<td>
-										<p class="text-muted mb-0 mt-2 ">
-											{{item.getMachineAffectation().model.marque.getMarqueName()}}
-											{{item.getMachineAffectation().model.getModelName()}}
-										</p>
-									</td>
-									<td>
-										<p class="text-muted mb-0 mt-2 ">{{item.getDateAffectation()}}</p>
-									</td>
-									<td>
-										<p class="text-muted mb-0 mt-2 ">{{item.getDescription()}}</p>
-									</td>
+										aucune demande
 
-									<td class="actions">
-										<a href="Affecation/Accept/{{item.id}}">
-											<button type="button" class="bn1 btn  btn-sm btn-rounded mt-1 mr-1" style=" border: #28a745 solid 1px; ">
-												<i class='bx bx-check bx-xs'></i>
-												Accepter
-											</button>
-										</a>
-										<a href="Affecation/Delete/{{item.id}}">
-											<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;">
-												<i class='bx bx-x bx-xs'></i>
-												Refuser
-											</button>
-										</a>
 									</td>
 								</tr>
-							{% endfor %}
-							{% else %} <tr>
-									<td> aucune demande
-									
-									</td> 
+
+							{% endif %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="body_body">
+
+
+			<div class="right">
+				<div class="text2">Demande de restitution</div>
+				<div class="over">
+					<table class="table align-middle mb-0 bg-white">
+						<thead class="bg-light">
+							<tr>
+								<th>Utilisateurs</th>
+								<th>Matricule</th>
+								<th>Machine</th>
+								<th>Date de la demande</th>
+								<th>Type</th>
+								<th>Description</th>
+								<th style="text-align:center;">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% if AllRestitutions|length > 0 %}
+								{% for item in AllRestitutions %}
+
+
+									<tr>
+										<td>
+											<div class="d-flex align-items-center">
+												<div class="ms-3">
+													<p class="fw-bold mb-1">{{item.getAffectation().getUserAffectation().getUsername()}}</p>
+													<p class="text-muted mb-0">
+														<label>
+															{{item.getAffectation().getUserAffectation().getJob()}}
+														</label>
+													</p>
+												</div>
+											</div>
+										</td>
+										<td>
+											<p class="text-muted mb-0 mt-2 ">{{item.getAffectation().getUserAffectation().getMatricule()}}
+											</p>
+										</td>
+										<td>
+											<p class="text-muted mb-0 mt-2 ">
+												{{item.getAffectation().getMachineAffectation().model.marque.getMarqueName()}}
+												{{item.getAffectation().getMachineAffectation().model.getModelName()}}
+											</p>
+										</td>
+										<td>
+											<p class="text-muted mb-0 mt-2 ">{{item.getDate()}}</p>
+										</td>
+										<td>
+											<p class="text-muted mb-0 mt-2 ">{{item.getTypeRestitution()}}</p>
+										</td>
+
+										<td>
+											<p class="text-muted mb-0 mt-2 ">{{item.getDescription()}}</p>
+										</td>
+
+										<td class="actions">
+											<a href="restitution/Accept/{{item.id}}">
+												<button type="button" class="bn1 btn  btn-sm btn-rounded mt-1 mr-1" style=" border: #28a745 solid 1px; ">
+													<i class='bx bx-check bx-xs'></i>
+													Accepter
+												</button>
+											</a>
+											<a href="restitution/Delete/{{item.id}}">
+												<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 " style=" border: #dc3545 solid 1px;">
+													<i class='bx bx-x bx-xs'></i>
+													Refuser
+												</button>
+											</a>
+										</td>
 									</tr>
-								
+								{% endfor %}
+							{% else %}
+								<tr>
+									<td>
+										aucune demande
+
+									</td>
+								</tr>
+
 							{% endif %}
 						</tbody>
 					</table>

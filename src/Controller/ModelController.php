@@ -3,6 +3,7 @@
 namespace App\Controller;
 use App\Entity\Model;
 use App\Form\ModelFormType;
+use App\Entity\Notification;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,6 +21,15 @@ class ModelController extends AbstractController
         $searchQuery = $request->query->get('search');
         $allModels = $entityManager->getRepository(Model::class)->search($searchQuery);
         $user = $this->getUser();
+         
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ORDER BY u.DateNotifications DESC');
+        $query->setParameter('uid', $user->getId());
+        $AllNotification = $query->getResult();
+        $query->setMaxResults(5);
+        $RecentNotification = $query->getResult();
+
+
+
 
         $model = new Model();
         $form = $this->createForm(ModelFormType::class, $model);
@@ -27,6 +37,18 @@ class ModelController extends AbstractController
         
         if(  $form->isSubmitted()  && $form->isValid()){
             $model = $form->getData();
+            $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
+            $query->setParameter('role', '%"ADMIN"%');
+            $query->setParameter('role2', '%"SUPER ADMIN"%');
+            $AllAdmins = $query->getResult();
+            foreach ($AllAdmins as $admin) {
+                $Notification = new Notification();
+                $Notification->setUserId($admin->getId());
+                $Notification->setDescription($this->getUser()->getUsername() . ' a ajouter un nouveau model  ' . $model->getModelName()  );
+                $Notification->setSrcImg('images/success.png');
+                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $entityManager->persist($Notification);
+            }
             $entityManager->persist($model);
             $entityManager->flush();
             $this->addFlash(
@@ -40,6 +62,10 @@ class ModelController extends AbstractController
             'form' => $form->createView(),
             'userInfo' => $user,
             'allModels' => $allModels,
+            'AllNotification' => $AllNotification,
+            'RecentNotification' => $RecentNotification,
+       
+
         ]);
     }
        /**
@@ -48,14 +74,37 @@ class ModelController extends AbstractController
     public function ModelUpdate(Request $request , EntityManagerInterface $entityManager, $id): Response
     {   
         $user = $this->getUser();
+         
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ORDER BY u.DateNotifications DESC');
+        $query->setParameter('uid', $user->getId());
+        $AllNotification = $query->getResult();
+        $query->setMaxResults(5);
+        $RecentNotification = $query->getResult();
+
+
+     
+
         if( $user->getConnected() == false ){
             return $this->redirect('Profile');
         }
         $entityManager = $this->getDoctrine()->getManager();
         $model = $entityManager->getRepository(Model::class)->find($id);
+        $CurrentModelame = $model->getModelName();
         $form = $this->createForm(ModelFormType::class, $model);
         $form->handleRequest($request);
         if(  $form->isSubmitted()  && $form->isValid()){
+            $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
+            $query->setParameter('role', '%"ADMIN"%');
+            $query->setParameter('role2', '%"SUPER ADMIN"%');
+            $AllAdmins = $query->getResult();
+            foreach ($AllAdmins as $admin) {
+                $Notification = new Notification();
+                $Notification->setUserId($admin->getId());
+                $Notification->setDescription($this->getUser()->getUsername() . ' a modifier le model ' . $CurrentModelame . ' vers ' . $form->get('model_name')->getData() );
+                $Notification->setSrcImg('images/updated.png');
+                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $entityManager->persist($Notification);
+            }
             $entityManager->flush();
             $this->addFlash(
                 'update',
@@ -69,7 +118,11 @@ class ModelController extends AbstractController
             'Path' => '/Model',
             'model' => $model,
             'form' => $form->createView(),
-            'Title' => 'Modèle'
+            'Title' => 'Modèle',
+            'AllNotification' => $AllNotification,
+            'RecentNotification' => $RecentNotification,
+           
+
         ]);
     }
 
@@ -81,6 +134,18 @@ class ModelController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $model = $entityManager->getRepository(Model::class)->find($id);
         $entityManager->remove($model);
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
+        $query->setParameter('role', '%"ADMIN"%');
+        $query->setParameter('role2', '%"SUPER ADMIN"%');
+        $AllAdmins = $query->getResult();
+        foreach ($AllAdmins as $admin) {
+            $Notification = new Notification();
+            $Notification->setUserId($admin->getId());
+            $Notification->setDescription($this->getUser()->getUsername() . ' a supprimer le model ' . $model->getModelName() );
+            $Notification->setSrcImg('images/delete-file.png');
+            $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+            $entityManager->persist($Notification);
+        }
         $entityManager->flush();
         $this->addFlash(
             'delete',

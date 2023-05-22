@@ -8,6 +8,7 @@ use App\Entity\Affectation;
 use App\Entity\Notification;
 use App\Form\AffectationFormType;
 use Doctrine\ORM\EntityManagerInterface;
+use PhpParser\Node\Stmt\Foreach_;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -27,16 +28,11 @@ class HomePageController extends AbstractController
 
         $user = $this->getUser();
 
-        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ORDER BY u.DateNotifications ASC');
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ORDER BY u.DateNotifications DESC');
         $query->setParameter('uid', $user->getId());
         $AllNotification = $query->getResult();
         $query->setMaxResults(5);
         $RecentNotification = $query->getResult();
-
-
-        $query = $entityManager->createQuery('SELECT COUNT(u) FROM App\Entity\Notification u WHERE u.userId LIKE :uid ');
-        $query->setParameter('uid', $user->getId());
-        $NotificationCount = $query->getSingleScalarResult();
 
         if ($user->getConnected() == false) {
             return $this->redirect('Profile');
@@ -47,8 +43,6 @@ class HomePageController extends AbstractController
             'data' => $results,
             'AllNotification' => $AllNotification,
             'RecentNotification' => $RecentNotification,
-            'NotificationCount' => $NotificationCount,
-
         ]);
     }
     /**
@@ -58,11 +52,23 @@ class HomePageController extends AbstractController
     {
         $entityManager = $this->getDoctrine()->getManager();
         $machine = $entityManager->getRepository(Machine::class)->find($id);
+
         $user = $this->getUser();
+         
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ORDER BY u.DateNotifications DESC');
+        $query->setParameter('uid', $user->getId());
+        $AllNotification = $query->getResult();
+        $query->setMaxResults(5);
+        $RecentNotification = $query->getResult();
+
         return $this->render('Pages/view/materielView.html.twig', [
             'userInfo' => $user,
             'machine' => $machine,
             'Path' => '/HomePage',
+            'AllNotification' => $AllNotification,
+            'RecentNotification' => $RecentNotification,
+          
+
         ]);
     }
     /**
@@ -70,10 +76,20 @@ class HomePageController extends AbstractController
      */
     public function Affectation($id, Request $request, EntityManagerInterface $entityManager): Response
     {
+        $user = $this->getUser();
+        
+        $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ORDER BY u.DateNotifications DESC');
+        $query->setParameter('uid', $user->getId());
+        $AllNotification = $query->getResult();
+        $query->setMaxResults(5);
+        $RecentNotification = $query->getResult();
+
+
+
         $entityManager = $this->getDoctrine()->getManager();
         $machine = $entityManager->getRepository(Machine::class)->find($id);
 
-        $user = $this->getUser();
+       
 
         $affectation = new Affectation();
         $affectation->setDateAffectation(date("d/m/Y") . ' ' . date("h:i:sa"));
@@ -85,12 +101,27 @@ class HomePageController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted()  && $form->isValid()) {
+
             $newNotification = new Notification();
             $newNotification->setUserId($affectation->getUserAffectation()->getId());
             $newNotification->setDescription('En attend la reponse sur la  demande sur ' . $affectation->getMachineAffectation()->getModel()->getMarque()->getmarqueName() . ' ' . $affectation->getMachineAffectation()->getModel()->getModelName());
             $newNotification->setSrcImg('images/time-left.png');
             $newNotification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
             $entityManager->persist($newNotification);
+
+            $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
+            $query->setParameter('role', '%"ADMIN"%');
+            $query->setParameter('role2', '%"SUPER ADMIN"%');
+            $AllAdmins = $query->getResult();
+            foreach($AllAdmins as $admin){
+                $Notification = new Notification();
+                $Notification->setUserId($admin->getId());
+                $Notification->setDescription( $affectation->getUserAffectation()->getUsername() .' attend la  reponse sur la  demande sur ' . $affectation->getMachineAffectation()->getModel()->getMarque()->getmarqueName() . ' ' . $affectation->getMachineAffectation()->getModel()->getModelName());
+                $Notification->setSrcImg('images/info.png');
+                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $entityManager->persist($Notification);
+            }
+
             $affectation = $form->getData();
             $entityManager->persist($affectation);
             $entityManager->flush();
@@ -105,6 +136,10 @@ class HomePageController extends AbstractController
             'userInfo' => $user,
             'machine' => $machine,
             'Path' => '/HomePage',
+            'AllNotification' => $AllNotification,
+            'RecentNotification' => $RecentNotification,
+       
+
         ]);
     }
 }

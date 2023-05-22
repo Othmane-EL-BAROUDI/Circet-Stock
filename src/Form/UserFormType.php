@@ -41,12 +41,7 @@ class UserFormType extends AbstractType
             // ->add('emailCanonical')
             // ->add('enabled')
             // ->add('salt')
-            ->add('password', TextType::class, [
-                'attr' => array(
-                    'placeholder' => '@Mot de passe',
-                ),
-                'label' => 'Mot de passe',
-            ])
+          
             ->add('user_permission', EntityType::class, [
                 'required' => true,
                 'class' => Permission::class,
