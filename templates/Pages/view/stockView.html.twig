@@ -34,8 +34,8 @@
 
 								{% else %}
 									<img
-									src="{{asset(machine.getImgSrc())}}" style="width:150px;" alt="no pic">
-								{# <img src="/CIRCET-STOCK/public/{{machine.getImgSrc()}}" style="max-width:160px; max-height:125px;" alt="no pic"> #}
+									{# src="{{asset(machine.getImgSrc())}}" style="width:150px;" alt="no pic"> #}
+								<img src="/CIRCET-STOCK/public/{{machine.getImgSrc()}}" style="max-width:160px; max-height:125px;" alt="no pic">
 								{% endif %}
 							</div>
 						</div>
@@ -149,92 +149,47 @@
 											<table class="table align-middle mb-0 bg-white">
 												<thead class="bg-light">
 													<tr>
-														<th>Restitution</th>
-														<th>Type</th>
-														<th>Date</th>
+													
+													<th>utilisateur</th>
+													<th>Matricule</th>
+													<th>Date </th>
+													<th>Type </th>
+													<th>Description</th>
 													</tr>
 												</thead>
 												<tbody>
 
-													<tr>
-														<td class="textperm">
-															<label>Restitution</label>
-															made a
-															<label>restitution</label>
-														</td>
-														<td class="textperm">
-															Restitution
-														</td>
-														<td class="textperm">
-															09/17/2023 8:00
-														</td>
-													</tr>
-													<tr>
-														<td class="textperm">
-															<label>Restitution</label>
-															made a
-															<label>restitution</label>
-														</td>
-														<td class="textperm">
-															Restitution
-														</td>
-														<td class="textperm">
-															09/17/2023 8:00
-														</td>
-													</tr>
-													<tr>
-														<td class="textperm">
-															<label>Restitution</label>
-															made a
-															<label>restitution</label>
-														</td>
-														<td class="textperm">
-															Restitution
-														</td>
-														<td class="textperm">
-															09/17/2023 8:00
-														</td>
-													</tr>
-													<tr>
-														<td class="textperm">
-															<label>Restitution</label>
-															made a
-															<label>restitution</label>
-														</td>
-														<td class="textperm">
-															Restitution
-														</td>
-														<td class="textperm">
-															09/17/2023 8:00
-														</td>
-													</tr>
-													<tr>
-														<td class="textperm">
-															<label>Restitution</label>
-															made a
-															<label>restitution</label>
-														</td>
-														<td class="textperm">
-															Restitution
-														</td>
-														<td class="textperm">
-															09/17/2023 8:00
-														</td>
-													</tr>
-													<tr>
-														<td class="textperm">
-															<label>Restitution</label>
-															made a
-															<label>restitution</label>
-														</td>
-														<td class="textperm">
-															Restitution
-														</td>
-														<td class="textperm">
-															09/17/2023 8:00
-														</td>
-													</tr>
+													{% if  AllRestitution|length >0  %}
 
+
+												{% for item in AllRestitution %}
+
+
+												<tr>
+														<td class="textperm">
+															{{item.getAffectation().getUserAffectation().getUsername()}}
+														</td>
+														<td class="textperm">
+															{{item.getAffectation().getUserAffectation().getMatricule()}}
+														</td>
+														<td class="textperm">
+															{{item.getDate()}}
+														</td>
+														<td class="textperm">
+															{{item.getDescription()}}
+														</td>
+															<td class="textperm">
+															{{item.getTypeRestitution()}}
+														</td>
+														
+													</tr>
+												{% endfor %}
+											{% else %}
+												<tr>
+													<td>No Restitution found.</td>
+												</tr>
+											{% endif %}
+									
 
 												</tbody>
 											</table>

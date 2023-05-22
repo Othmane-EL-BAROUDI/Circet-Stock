@@ -6,6 +6,7 @@ use App\Entity\Affectation;
 use App\Entity\Machine;
 use App\Entity\Model;
 use App\Entity\Notification;
+use App\Entity\Restitution;
 use App\Form\MachineFormType;
 use App\Form\MachineInfoFormType;
 use App\Form\MachinePictureFormType;
@@ -115,12 +116,14 @@ class StockController extends AbstractController
 
 
         $AllAffectations = $entityManager->getRepository(Affectation::class)->search($id);
+        $AllRestitution = $entityManager->getRepository(Restitution::class)->search($id);
 
 
         return $this->render('Pages/view/stockView.html.twig', [
             'userInfo' => $user,
             'machine' => $machine,
             'AllAffectation' => $AllAffectations,
+            'AllRestitution' => $AllRestitution,
             'Path' => '/Stock',
             'AllNotification' => $AllNotification,
             'RecentNotification' => $RecentNotification,

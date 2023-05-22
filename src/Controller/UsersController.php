@@ -6,6 +6,7 @@ use App\Entity\Role;
 use App\Entity\User;
 use App\Form\UserFormType;
 use App\Entity\Notification;
+use App\Form\OriginalUserFormType;
 use App\Form\UserPasswordFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -53,7 +54,7 @@ class UsersController extends AbstractController
         }
 
         $Nuser = new User();
-        $form = $this->createForm(UserFormType::class, $Nuser);
+        $form = $this->createForm(OriginalUserFormType::class, $Nuser);
         $form->handleRequest($request);
 
         if ($form->isSubmitted()  && $form->isValid()) {

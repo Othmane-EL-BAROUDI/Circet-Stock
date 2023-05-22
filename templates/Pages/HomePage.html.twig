@@ -55,8 +55,8 @@
 								<img src="{{asset('images/laptop.png')}}" style="width:150px;" alt="">
 							{% else %}
 								<img
-								{# src="/CIRCET-STOCK/public/{{item.getImgSrc()}}" style="width:150px; max-height:150px;" alt="no pic"> #}
-							<img src="{{asset(item.getImgSrc())}}" style="width:150px; max-height:150px;" alt="no pic">
+								src="/CIRCET-STOCK/public/{{item.getImgSrc()}}" style="width:150px; max-height:150px;" alt="no pic">
+							{# <img src="{{asset(item.getImgSrc())}}" style="width:150px; max-height:150px;" alt="no pic"> #}
 							{% endif %}
 						</div>
 
@@ -82,10 +82,10 @@
 							</div>
 						{% endif %}
 					{% else %}
-						<div class="noData">
+						{# <div class="noData">
 																									<img src="{{asset('images/noData.png')}}">
-																								</div>
-						{# <div class="noData"><img src="/CIRCET-STOCK/public/images/noData.png"></div> #}
+																								</div> #}
+						<div class="noData"><img src="/CIRCET-STOCK/public/images/noData.png"></div>
 					{% endfor %}
 				</div>
 
