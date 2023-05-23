@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 18 mai 2023 à 17:39
+-- Généré le : mar. 23 mai 2023 à 12:29
 -- Version du serveur : 10.4.21-MariaDB
 -- Version de PHP : 7.3.31
 
@@ -32,16 +32,10 @@ CREATE TABLE `affectation` (
   `user_id` int(11) NOT NULL,
   `machine_id` int(11) NOT NULL,
   `date_affectation` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `autocad` tinyint(1) NOT NULL,
-  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+  `accept` tinyint(1) NOT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `visibility` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `affectation`
---
-
-INSERT INTO `affectation` (`id`, `user_id`, `machine_id`, `date_affectation`, `autocad`, `description`) VALUES
-(1, 1, 33, '17/05/2023 02:23:58am', 1, 'i need to work with EXCEL');
 
 -- --------------------------------------------------------
 
@@ -68,7 +62,7 @@ CREATE TABLE `machine` (
 INSERT INTO `machine` (`id`, `model_id`, `serial_num`, `state`, `available`, `description`, `mac_ethernet`, `mac_wifi`, `img_src`) VALUES
 (31, 11, 'JDWX403', 'Bon', 1, '650\r\n250SSD\r\n1ToHDD', '4-73-5A-EF-BF-B', 'C-6A-77-8E-D4-E', '/images/upload/Laptop/64641cc1bf5c7.jpeg'),
 (32, 12, 'ILK4C92', 'Mauvais', 1, 'i7-7eme', '64-00-6A-IF-88-97', 'N/A', '/images/upload/Desktop/64641d86bcadf.jpeg'),
-(33, 13, 'CZC6119YW7', 'Bon', 0, '128 SSD', 'ET-8-0F-CF-4C-84-B', 'N/A', '/images/upload/Desktop/64641e0a6c05b.jpeg');
+(33, 13, 'CZC6119YW7', 'Bon', 1, '128 SSD', 'ET-8-0F-CF-4C-84-B', 'N/A', '/images/upload/Desktop/64641e0a6c05b.jpeg');
 
 -- --------------------------------------------------------
 
@@ -115,6 +109,27 @@ INSERT INTO `model` (`id`, `marque_id`, `model_name`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `notification`
+--
+
+CREATE TABLE `notification` (
+  `id` int(11) NOT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `src_img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date_notifications` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `notification`
+--
+
+INSERT INTO `notification` (`id`, `description`, `user_id`, `src_img`, `date_notifications`) VALUES
+(1, 'ayman a modifier le mot de passe de  othmane - jsdfsdfsf', 1, 'images/reset-password.png', '2023-05-23 10:53:00');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `permission`
 --
 
@@ -157,7 +172,9 @@ INSERT INTO `permission` (`id`, `permission_name`) VALUES
 (79, 'Modifier une marque'),
 (80, 'Supprimer une marque'),
 (81, 'Voir le profil'),
-(82, 'Voir tableau de bord');
+(82, 'Voir tableau de bord'),
+(84, 'sss'),
+(85, 'Voir restitution');
 
 -- --------------------------------------------------------
 
@@ -170,7 +187,9 @@ CREATE TABLE `restitution` (
   `affectation_id` int(11) NOT NULL,
   `type_restitution` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `accept` tinyint(1) NOT NULL,
+  `visibility` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -223,13 +242,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `username_canonical`, `email`, `email_canonical`, `enabled`, `salt`, `password`, `last_login`, `confirmation_token`, `password_requested_at`, `roles`, `matricule`, `manager`, `job`, `connected`) VALUES
-(1, 'ayman', 'ayman', 'itsmeaymane2003@gmail.com', 'itsmeaymane2003@gmail.com', 1, NULL, '$2y$13$4MBQz7ZiM.PxXpn3gBxVW.Ly6T.LgtYbSZsucOXrmiOelBNkqP19i', '2023-05-18 13:33:17', NULL, NULL, 'a:1:{i:0;s:11:\"SUPER ADMIN\";}', 'BW33832', 'Soufiane', 'Web developer', 1),
-(2, 'Jett', 'jett', 'Jett@gmail.com', 'jett@gmail.com', 1, NULL, '$2y$13$4MBQz7ZiM.PxXpn3gBxVW.Ly6T.LgtYbSZsucOXrmiOelBNkqP19i', '2023-05-18 13:28:36', NULL, NULL, 'a:1:{i:0;s:11:\"SUPER ADMIN\";}', 'XADV22', 'ahmed', 'Technicien', 1),
-(4, 'Rena', 'rena', 'Rena@gmail.com', 'rena@gmail.com', 1, NULL, '$2y$13$SVkeuj6BFBm7L91iy7SHbuy6hEDRVlR4abSy/lfV2ouyBH./6wmnC', NULL, NULL, NULL, 'a:0:{}', 'BW338310', 'Soufiane', 'Web developer', 0),
-(5, 'Neon', 'neon', 'Neon@gmail.com', 'neon@gmail.com', 1, NULL, '$2y$13$ATPR1XWMKzs8pG8lBFB1HOYFClBlXhugdYUdmKIIa9j.ValQsYl0q', NULL, NULL, NULL, 'a:0:{}', 'BW338310', 'Said', 'Menage', 0),
-(6, 'othman', 'othman', 'othman@gmail.com', 'othman@gmail.com', 1, NULL, '$2y$13$hPW9f/LgS2LC.B.Xqqu3WOc2xeLz6e1n9YCsORVb3s5EaukUxBt3G', '2023-05-02 21:57:56', NULL, NULL, 'a:0:{}', 'BW338310', 'Soufiane', 'Menage', 0),
-(10, 'hicham', 'hicham', 'hicham@gmail.com', 'hicham@gmail.com', 1, NULL, '$2y$13$Lg.UPvJJJMKPY8.T6PhSUeh8.hpFO//sdVsNUGd7EWuc3tllnTZtO', NULL, NULL, NULL, 'a:1:{i:0;s:5:\"ADMIN\";}', 'sfddsf', 'Ayman', 'Web developer', 0),
-(11, 'hamid', 'hamid', 'hamid@gmail.com', 'hamid@gmail.com', 1, NULL, '$2y$13$iGwQYeHaIhppbwnLXiwUsODm64dgrM1K/1T9Gy/dtNyGPNnvYuR4W', NULL, NULL, NULL, 'a:1:{i:0;s:5:\"ADMIN\";}', 'qdsqsd', 'sqdq', 'sqdsqqs', 0);
+(1, 'ayman', 'ayman', 'itsmeaymane2003@gmail.com', 'itsmeaymane2003@gmail.com', 1, NULL, '$2y$13$4MBQz7ZiM.PxXpn3gBxVW.Ly6T.LgtYbSZsucOXrmiOelBNkqP19i', '2023-05-23 10:48:27', NULL, NULL, 'a:1:{i:0;s:11:\"SUPER ADMIN\";}', 'BW33832', 'Soufiane', 'Web developer', 1),
+(12, 'othmane', 'othmane', 'othmane@gmail.com', 'othmane@gmail.com', 1, NULL, '$2y$13$BEfoJc8T0wgwZFsMZyUyWO42PCuqoPhUIt2WeUY4lKnSF5D.5ZDDO', '2023-05-23 10:54:22', NULL, NULL, 'a:1:{i:0;s:10:\"IT SERVICE\";}', 'jsdfsdfsf', 'Soufiane', 'Web developer', 1);
 
 -- --------------------------------------------------------
 
@@ -277,25 +291,12 @@ INSERT INTO `user_permission` (`user_id`, `permission_id`) VALUES
 (1, 80),
 (1, 81),
 (1, 82),
-(2, 50),
-(2, 51),
-(2, 54),
-(2, 55),
-(2, 56),
-(2, 60),
-(2, 62),
-(2, 65),
-(2, 66),
-(2, 67),
-(2, 69),
-(2, 73),
-(2, 75),
-(2, 77),
-(2, 78),
-(2, 79),
-(2, 80),
-(2, 81),
-(2, 82);
+(1, 85),
+(12, 50),
+(12, 51),
+(12, 54),
+(12, 81),
+(12, 85);
 
 --
 -- Index pour les tables déchargées
@@ -328,6 +329,12 @@ ALTER TABLE `marque`
 ALTER TABLE `model`
   ADD PRIMARY KEY (`id`),
   ADD KEY `IDX_D79572D94827B9B2` (`marque_id`);
+
+--
+-- Index pour la table `notification`
+--
+ALTER TABLE `notification`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `permission`
@@ -373,7 +380,7 @@ ALTER TABLE `user_permission`
 -- AUTO_INCREMENT pour la table `affectation`
 --
 ALTER TABLE `affectation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT pour la table `machine`
@@ -394,16 +401,22 @@ ALTER TABLE `model`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
+-- AUTO_INCREMENT pour la table `notification`
+--
+ALTER TABLE `notification`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT pour la table `permission`
 --
 ALTER TABLE `permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 
 --
 -- AUTO_INCREMENT pour la table `restitution`
 --
 ALTER TABLE `restitution`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `role`
@@ -415,7 +428,7 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Contraintes pour les tables déchargées
