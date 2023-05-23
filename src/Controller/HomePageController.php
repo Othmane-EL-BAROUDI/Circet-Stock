@@ -37,6 +37,9 @@ class HomePageController extends AbstractController
         if ($user->getRoles()[0] == 'SUPER ADMIN') {
             return $this->redirect('Dashboard');
         }
+        if ($user->getRoles()[0] == 'ROLE_ADMIN') {
+            return $this->redirect('Dashboard');
+        }
         if ($user->getConnected() == false) {
             return $this->redirect('Profile');
         }

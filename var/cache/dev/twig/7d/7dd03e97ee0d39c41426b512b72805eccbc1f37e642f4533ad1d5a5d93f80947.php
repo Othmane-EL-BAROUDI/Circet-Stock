@@ -139,13 +139,9 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t<div class=\"sort\">
 \t\t\t\t<input type=\"text\" name=\"ModelSearch\" placeholder=\"@model\">
 \t\t\t\t<input type=\"text\" name=\"MarqueSearch\" placeholder=\"@marque\">
-\t\t\t\t<select name=\"machine\">
-\t\t\t\t\t<option selected disabled>Type</option>
-\t\t\t\t\t<option value=\"computer\">Ordinateur</option>
-\t\t\t\t\t<option value=\"cable\">Cable</option>
-\t\t\t\t\t<option value=\"scanner\">Scanner</option>
-\t\t\t\t</select>
-
+\t\t\t\t";
+        // line 34
+        echo "
 \t\t\t\t<button type=\"submit\">
 \t\t\t\t\tRecherche
 \t\t\t\t</button>
@@ -304,7 +300,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 
     public function getDebugInfo()
     {
-        return array (  284 => 96,  279 => 95,  272 => 94,  261 => 88,  255 => 87,  250 => 85,  245 => 84,  240 => 81,  234 => 80,  226 => 76,  223 => 75,  215 => 71,  212 => 70,  208 => 69,  200 => 64,  195 => 61,  189 => 59,  186 => 57,  180 => 55,  178 => 54,  172 => 50,  169 => 49,  164 => 48,  137 => 24,  134 => 23,  122 => 17,  118 => 15,  114 => 14,  110 => 12,  103 => 11,  91 => 6,  84 => 5,  70 => 2,  63 => 94,  60 => 93,  58 => 11,  54 => 10,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
+        return array (  280 => 96,  275 => 95,  268 => 94,  257 => 88,  251 => 87,  246 => 85,  241 => 84,  236 => 81,  230 => 80,  222 => 76,  219 => 75,  211 => 71,  208 => 70,  204 => 69,  196 => 64,  191 => 61,  185 => 59,  182 => 57,  176 => 55,  174 => 54,  168 => 50,  165 => 49,  160 => 48,  144 => 34,  137 => 24,  134 => 23,  122 => 17,  118 => 15,  114 => 14,  110 => 12,  103 => 11,  91 => 6,  84 => 5,  70 => 2,  63 => 94,  60 => 93,  58 => 11,  54 => 10,  52 => 5,  49 => 4,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -336,12 +332,12 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t<div class=\"sort\">
 \t\t\t\t<input type=\"text\" name=\"ModelSearch\" placeholder=\"@model\">
 \t\t\t\t<input type=\"text\" name=\"MarqueSearch\" placeholder=\"@marque\">
-\t\t\t\t<select name=\"machine\">
+\t\t\t\t{# <select name=\"machine\">
 \t\t\t\t\t<option selected disabled>Type</option>
 \t\t\t\t\t<option value=\"computer\">Ordinateur</option>
 \t\t\t\t\t<option value=\"cable\">Cable</option>
 \t\t\t\t\t<option value=\"scanner\">Scanner</option>
-\t\t\t\t</select>
+\t\t\t\t</select> #}
 
 \t\t\t\t<button type=\"submit\">
 \t\t\t\t\tRecherche
@@ -409,6 +405,6 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
 \t\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
 \t\t{% endblock %}
-", "Pages/homePage.html.twig", "C:\\xampp\\htdocs\\Circet-Stock\\templates\\Pages\\HomePage.html.twig");
+", "Pages/homePage.html.twig", "C:\\xampp\\htdocs\\Circet Projet\\Circet-Stock\\templates\\Pages\\HomePage.html.twig");
     }
 }
