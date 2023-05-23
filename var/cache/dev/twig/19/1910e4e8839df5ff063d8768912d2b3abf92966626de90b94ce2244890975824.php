@@ -154,7 +154,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t<div class=\"modal-content\">
 \t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Centre des notifications</h5>
+\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Centre des notifications</h5>x
 \t\t\t\t<a href=\"";
             // line 57
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("DeleteNotification");
@@ -691,7 +691,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t<div class=\"modal-content\">
 \t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Centre des notifications</h5>
+\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Centre des notifications</h5>x
 \t\t\t\t<a href=\"{{path('DeleteNotification')}}\" class=\"close\" >&times;</a>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"modal-body noti-body\">
