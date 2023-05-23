@@ -13,6 +13,7 @@ return [
     'HomePage' => [[], ['_controller' => 'App\\Controller\\HomePageController::HomePage'], [], [['text', '/HomePage']], [], []],
     'materialView' => [['id'], ['_controller' => 'App\\Controller\\HomePageController::MaterialView'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/materialView']], [], []],
     'Affectation' => [['id'], ['_controller' => 'App\\Controller\\HomePageController::Affectation'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Affectation']], [], []],
+    'DeleteNotification' => [['id'], ['_controller' => 'App\\Controller\\HomePageController::DeleteNotification'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/DeleteNotification']], [], []],
     'Marque' => [[], ['_controller' => 'App\\Controller\\MarqueController::Marque'], [], [['text', '/Marque']], [], []],
     'MarqueUpdate' => [['id'], ['_controller' => 'App\\Controller\\MarqueController::MarqueUpdate'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Marque']], [], []],
     'MarquelRemove' => [['id'], ['_controller' => 'App\\Controller\\MarqueController::MarqueDelete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/Marque/Remove']], [], []],

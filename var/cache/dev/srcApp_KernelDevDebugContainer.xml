@@ -5241,7 +5241,7 @@
         <argument key="entityManager" type="service" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.jL.8ZaD" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.oa0BkG5" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\DashboardController::AffectationAccept" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5250,6 +5250,7 @@
         <argument key="App\Controller\DashboardController::resitutionRemove" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\DashboardController::restitutionAccept" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\HomePageController::Affectation" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\HomePageController::DeleteNotification" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\HomePageController::HomePage" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\MarqueController::Marque" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\MarqueController::MarqueDelete" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5280,6 +5281,7 @@
         <argument key="App\Controller\DashboardController:resitutionRemove" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\DashboardController:restitutionAccept" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\HomePageController:Affectation" type="service" id=".service_locator.ZIsCxOI"/>
+        <argument key="App\Controller\HomePageController:DeleteNotification" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\HomePageController:HomePage" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\MarqueController:Marque" type="service" id=".service_locator.ZIsCxOI"/>
         <argument key="App\Controller\MarqueController:MarqueDelete" type="service" id=".service_locator.ZIsCxOI"/>
@@ -5650,12 +5652,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.jL.8ZaD"/>
+      <argument type="service" id=".service_locator.oa0BkG5"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.jL.8ZaD"/>
+      <argument type="service" id=".service_locator.oa0BkG5"/>
     </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.aPyppP2"/>
@@ -5975,7 +5977,7 @@
     <service id="mailer" alias="swiftmailer.mailer.default" public="true"/>
     <service id="sensio_framework_extra.converter.doctrine.orm.expression_language" alias="sensio_framework_extra.converter.doctrine.orm.expression_language.default" public="false"/>
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.jL.8ZaD"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.oa0BkG5"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>
