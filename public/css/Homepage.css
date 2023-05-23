@@ -62,7 +62,7 @@
   .action{
     margin-top: 25px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   }
   .action button{

@@ -57,7 +57,7 @@ class HomePageController extends AbstractController
         $machine = $entityManager->getRepository(Machine::class)->find($id);
 
         $user = $this->getUser();
-         
+
         $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ORDER BY u.DateNotifications DESC');
         $query->setParameter('uid', $user->getId());
         $AllNotification = $query->getResult();
@@ -70,7 +70,7 @@ class HomePageController extends AbstractController
             'Path' => '/HomePage',
             'AllNotification' => $AllNotification,
             'RecentNotification' => $RecentNotification,
-          
+
 
         ]);
     }
@@ -80,7 +80,7 @@ class HomePageController extends AbstractController
     public function Affectation($id, Request $request, EntityManagerInterface $entityManager): Response
     {
         $user = $this->getUser();
-        
+
         $query = $entityManager->createQuery('SELECT u FROM App\Entity\Notification u WHERE u.userId LIKE :uid ORDER BY u.DateNotifications DESC');
         $query->setParameter('uid', $user->getId());
         $AllNotification = $query->getResult();
@@ -92,7 +92,7 @@ class HomePageController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $machine = $entityManager->getRepository(Machine::class)->find($id);
 
-       
+
 
         $affectation = new Affectation();
         $affectation->setDateAffectation(date("d/m/Y") . ' ' . date("h:i:sa"));
@@ -116,10 +116,10 @@ class HomePageController extends AbstractController
             $query->setParameter('role', '%"ADMIN"%');
             $query->setParameter('role2', '%"SUPER ADMIN"%');
             $AllAdmins = $query->getResult();
-            foreach($AllAdmins as $admin){
+            foreach ($AllAdmins as $admin) {
                 $Notification = new Notification();
                 $Notification->setUserId($admin->getId());
-                $Notification->setDescription( $affectation->getUserAffectation()->getUsername() .' attend la  reponse sur la  demande sur ' . $affectation->getMachineAffectation()->getModel()->getMarque()->getmarqueName() . ' ' . $affectation->getMachineAffectation()->getModel()->getModelName());
+                $Notification->setDescription($affectation->getUserAffectation()->getUsername() . ' attend la  reponse sur la  demande sur ' . $affectation->getMachineAffectation()->getModel()->getMarque()->getmarqueName() . ' ' . $affectation->getMachineAffectation()->getModel()->getModelName());
                 $Notification->setSrcImg('images/info.png');
                 $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
                 $entityManager->persist($Notification);
@@ -141,17 +141,26 @@ class HomePageController extends AbstractController
             'Path' => '/HomePage',
             'AllNotification' => $AllNotification,
             'RecentNotification' => $RecentNotification,
-       
+
 
         ]);
     }
-     /**
-     * @Route("/DeleteNotification/{id}" , name="DeleteNotification")
+    /**
+     * @Route("/DeleteNotification" , name="DeleteNotification")
      */
-    public function DeleteNotification($id, Request $request, EntityManagerInterface $entityManager): Response
+    public function DeleteNotification(EntityManagerInterface $entityManager): Response
     {
-        return $this->redirectToRoute('HomePage');  
+        $userId = $this->getUser()->getId();
+
+        $repository = $entityManager->getRepository(Notification::class);
+        $notifications = $repository->findBy(['userId' => $userId]);
+
+        foreach ($notifications as $notification) {
+            $entityManager->remove($notification);
+        }
+
+        $entityManager->flush();
+
+        return $this->redirectToRoute('HomePage');
     }
 }
-   
-

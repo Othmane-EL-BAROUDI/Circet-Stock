@@ -212,10 +212,10 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
                     echo "\t\t\t\t\t\t\t\t";
                     if ((twig_get_attribute($this->env, $this->source, $context["permission"], "getPermissionName", [], "method", false, false, false, 70) == "Demande matériel")) {
                         // line 71
-                        echo "\t\t\t\t\t\t\t\t\t<a href=\"Affectation/";
+                        echo "\t\t\t\t\t\t\t\t\t<a   href=\"Affectation/";
                         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 71), "html", null, true);
                         echo "\">
-\t\t\t\t\t\t\t\t\t\t<button>Demande</button>
+\t\t\t\t\t\t\t\t\t\t<button  >Demande</button>
 \t\t\t\t\t\t\t\t\t\t<a/>
 \t\t\t\t\t\t\t\t\t";
                     }
@@ -226,7 +226,7 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
                         echo "\t\t\t\t\t\t\t\t\t\t<a href=\"materialView/";
                         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 76), "html", null, true);
                         echo "\">
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"start\">Détails</button>
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"start mr-1\">Détails</button>
 \t\t\t\t\t\t\t\t\t\t\t<a/>
 \t\t\t\t\t\t\t\t\t\t";
                     }
@@ -379,13 +379,13 @@ class __TwigTemplate_5db1b7507320884f77ba08c3b93f52d6dc540c8d13ea53724d17ca8235b
 \t\t\t\t\t\t<div class=\"action\">
 \t\t\t\t\t\t\t{% for permission in userInfo.getUserPermission() %}
 \t\t\t\t\t\t\t\t{% if permission.getPermissionName() == \"Demande matériel\" %}
-\t\t\t\t\t\t\t\t\t<a href=\"Affectation/{{item.id}}\">
-\t\t\t\t\t\t\t\t\t\t<button>Demande</button>
+\t\t\t\t\t\t\t\t\t<a   href=\"Affectation/{{item.id}}\">
+\t\t\t\t\t\t\t\t\t\t<button  >Demande</button>
 \t\t\t\t\t\t\t\t\t\t<a/>
 \t\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t\t\t{% if permission.getPermissionName() == \"Voir Matériel Détails\" %}
 \t\t\t\t\t\t\t\t\t\t<a href=\"materialView/{{item.id}}\">
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"start\">Détails</button>
+\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"start mr-1\">Détails</button>
 \t\t\t\t\t\t\t\t\t\t\t<a/>
 \t\t\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t\t\t{% endfor %}

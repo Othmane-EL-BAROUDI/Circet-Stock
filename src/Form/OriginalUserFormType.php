@@ -26,6 +26,21 @@ class OriginalUserFormType extends AbstractType
                     'placeholder' => '@Matricule'
                 ),
             ])
+            ->add('roles', EntityType::class, [
+                'required' => true,
+                'class' => Role::class,
+                'choice_label' => 'roleName',
+                'label' => 'Rôles',
+                'query_builder' => function (\App\Repository\RoleRepository $r) {
+                    return $r->createQueryBuilder('r');
+                        
+                },
+              
+                    'mapped' => false,
+                    'multiple' => false,
+                    
+                'attr' => ['class' => 'form-control']
+            ])
             ->add('job', TextType::class, [
                 'attr' => array(
                     'placeholder' => '@Poste'
@@ -54,21 +69,7 @@ class OriginalUserFormType extends AbstractType
             // ->add('lastLogin')
             //  ->add('confirmationToken')
             //  ->add('passwordRequestedAt')
-            ->add('roles', EntityType::class, [
-                'required' => true,
-                'class' => Role::class,
-                'choice_label' => 'roleName',
-                'label' => 'Rôles',
-                'query_builder' => function (\App\Repository\RoleRepository $r) {
-                    return $r->createQueryBuilder('r');
-                        
-                },
-              
-                    'mapped' => false,
-                    'multiple' => false,
-                    'expanded' => false,
-                'attr' => ['class' => 'form-control']
-            ])
+      
             
             ->add('password',TextType::class,[
                 'attr' => array('class' => 'form-control', 'placeholder' => '@mot de passe'),
