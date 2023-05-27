@@ -82,6 +82,15 @@ class OriginalUserFormType extends AbstractType
                 ),
                 'required' => false,
             ]);
+            // ->add('manager', EntityType::class, [
+            //     'required' => true,
+            //     'class' => User::class,
+            //     'choice_label' => 'username',
+            //     'label' => 'Manager',
+            //     'mapped' => false,
+            //     'attr' => ['class' => 'form-control'],
+            //     'placeholder' => 'Select a manager',
+            // ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

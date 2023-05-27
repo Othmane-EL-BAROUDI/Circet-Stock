@@ -48,7 +48,7 @@ class MachineFormType extends AbstractType
 
                 'choices'  => [
                     'Bon' => "Bon",
-                    'Mauvais' => "Mauvais",
+                    'Mauvaise' => "Mauvaise",
                 ],
                 'required' => true,
                 'attr' => array('class' => 'form-control', 'placeholder' => '@state'),

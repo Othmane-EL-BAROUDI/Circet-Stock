@@ -8,7 +8,7 @@
 {% endblock %}
 {% block body %}
 {% if userInfo.Connected %}
-	{% if userInfo.roles[0] == "IT SERVICE"  %}
+	{% if userInfo.roles[0] == "IT SERVICE" or userInfo.roles[0] == "USER"   %}
 		<div class="notifications btn-group dropup">
 			<button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class='bx bx-bell  bx-sm mr-2'></i>Notifications
@@ -53,7 +53,7 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Centre des notifications</h5>
+					<h5 class="modal-title" id="exampleModalLabel">Centre des notifications</h5>x
 				<a href="{{path('DeleteNotification')}}" class="close" >&times;</a>
 				</div>
 				<div class="modal-body noti-body">
@@ -124,7 +124,7 @@
 						{% endif %}
 					{% endfor %}
 				{% endif %}
-				{% if userInfo.roles[0] == "IT SERVICE" %}
+				{% if userInfo.roles[0] == "IT SERVICE" or userInfo.roles[0] == "USER" %}
 				{% for permission in userInfo.getUserPermission() %}
 					{% if permission.getPermissionName() == "Voir accueil" %}
 						<li>

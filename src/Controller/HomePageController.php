@@ -37,6 +37,9 @@ class HomePageController extends AbstractController
         if ($user->getRoles()[0] == 'SUPER ADMIN') {
             return $this->redirect('Dashboard');
         }
+        if ($user->getRoles()[0] == 'ROLE_ADMIN') {
+            return $this->redirect('Dashboard');
+        }
         if ($user->getConnected() == false) {
             return $this->redirect('Profile');
         }
@@ -95,7 +98,7 @@ class HomePageController extends AbstractController
 
 
         $affectation = new Affectation();
-        $affectation->setDateAffectation(date("d/m/Y") . ' ' . date("h:i:sa"));
+        $affectation->setDateAffectation(date("d/m/Y") . ' ' . date("h:ia"));
         $affectation->setUserAffectation($user);
         $affectation->setMachineAffectation($machine);
         $affectation->setAccept(false);

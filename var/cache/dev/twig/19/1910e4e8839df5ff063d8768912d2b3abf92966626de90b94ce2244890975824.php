@@ -81,7 +81,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
         if (twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 10, $this->source); })()), "Connected", [], "any", false, false, false, 10)) {
             // line 11
             echo "\t";
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 11, $this->source); })()), "roles", [], "any", false, false, false, 11), 0, [], "array", false, false, false, 11) == "IT SERVICE")) {
+            if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 11, $this->source); })()), "roles", [], "any", false, false, false, 11), 0, [], "array", false, false, false, 11) == "IT SERVICE") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 11, $this->source); })()), "roles", [], "any", false, false, false, 11), 0, [], "array", false, false, false, 11) == "USER"))) {
                 // line 12
                 echo "\t\t<div class=\"notifications btn-group dropup\">
 \t\t\t<button type=\"button\" class=\"btn  dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
@@ -154,7 +154,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t<div class=\"modal-content\">
 \t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Centre des notifications</h5>
+\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Centre des notifications</h5>x
 \t\t\t\t<a href=\"";
             // line 57
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("DeleteNotification");
@@ -280,7 +280,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
             }
             // line 127
             echo "\t\t\t\t";
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 127, $this->source); })()), "roles", [], "any", false, false, false, 127), 0, [], "array", false, false, false, 127) == "IT SERVICE")) {
+            if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 127, $this->source); })()), "roles", [], "any", false, false, false, 127), 0, [], "array", false, false, false, 127) == "IT SERVICE") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 127, $this->source); })()), "roles", [], "any", false, false, false, 127), 0, [], "array", false, false, false, 127) == "USER"))) {
                 // line 128
                 echo "\t\t\t\t";
                 $context['_parent'] = $context;
@@ -646,7 +646,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 {% endblock %}
 {% block body %}
 {% if userInfo.Connected %}
-\t{% if userInfo.roles[0] == \"IT SERVICE\"  %}
+\t{% if userInfo.roles[0] == \"IT SERVICE\" or userInfo.roles[0] == \"USER\"   %}
 \t\t<div class=\"notifications btn-group dropup\">
 \t\t\t<button type=\"button\" class=\"btn  dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
 \t\t\t\t<i class='bx bx-bell  bx-sm mr-2'></i>Notifications
@@ -691,7 +691,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t<div class=\"modal-content\">
 \t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Centre des notifications</h5>
+\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Centre des notifications</h5>x
 \t\t\t\t<a href=\"{{path('DeleteNotification')}}\" class=\"close\" >&times;</a>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"modal-body noti-body\">
@@ -762,7 +762,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t\t\t\t{% endif %}
 \t\t\t\t\t{% endfor %}
 \t\t\t\t{% endif %}
-\t\t\t\t{% if userInfo.roles[0] == \"IT SERVICE\" %}
+\t\t\t\t{% if userInfo.roles[0] == \"IT SERVICE\" or userInfo.roles[0] == \"USER\" %}
 \t\t\t\t{% for permission in userInfo.getUserPermission() %}
 \t\t\t\t\t{% if permission.getPermissionName() == \"Voir accueil\" %}
 \t\t\t\t\t\t<li>

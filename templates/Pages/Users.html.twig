@@ -120,9 +120,9 @@
 										</a>
 										
 										{% for permission in userInfo.getUserPermission() %}
-											{% if permission.getPermissionName() == "Modifier un utilisateur" %}
+											{% if permission.getPermissionName() == "Modifier un utilisateur"  and user.Roles[0] != 'SUPER ADMIN'%}
 												<a href="User/Edit/{{user.id}}">
-													<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 " style=" border: #007bff solid 1px; ">
+													<button type="button" class="bn2 btn  btn-sm btn-rounded mt-1 mr-1 "  style=" border: #007bff solid 1px; ">
 														<i class='bx bx-edit bx-xs'></i>
 														Modifier
 													</button>
@@ -177,10 +177,11 @@
 <script>
     $(document).ready(function() {
       var table = $('#example').DataTable({
-        lengthMenu: [4], // Display 4 rows per page
+        lengthMenu: [6], 
         language: {
-          search: "_INPUT_", // Display search input instead of default text
-          searchPlaceholder: "Recherche..." // Placeholder text for search input
+          search: "_INPUT_", 
+          searchPlaceholder: "Recherche...", 
+		  info : ''
         },
 
       });

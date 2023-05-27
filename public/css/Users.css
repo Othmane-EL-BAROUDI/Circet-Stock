@@ -200,3 +200,12 @@ textarea:focus, input:focus , select:focus ,button:focus{
     background-color: #e9f4ff;
     border-color: #ffffff;
 }
+
+
+.dataTables_length{
+    display: none !important;
+  }
+  .dataTables_filter input{
+    width: 300px !important;
+   
+  }

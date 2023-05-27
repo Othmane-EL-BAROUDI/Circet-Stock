@@ -24,7 +24,11 @@
 							<div
 								class="StockImg" style=" border: solid  1px #f9a826; height:250px;">
 								{# <img src="/CIRCET-STOCK/public/{{StockPic}}"> #}
-								<img src="{{asset(StockPic)}}">
+								{% if StockPic is empty   %}
+									<img src="{{asset('images/laptop.png')}}" style="width:155px;" alt="">
+								{% else %}
+									<img src="{{asset(StockPic)}}">
+								{% endif %}
 							</div>
 						</div>
 						<div class="ImageUpload">
@@ -36,7 +40,7 @@
 						{{ form_widget(formPic) }}
 
 						<p id="fileName" style="font-size: .77rem; margin-left:20px;">image uploaded : image actuelle</p>
-						
+
 						<div class="modal-footer close_button">
 							<button class="btn btn-outline-success" type="submit">Modifier</button>
 							<button class="btn btn-outline-secondary" type="button" data-dismiss="modal">Annuler</button>
@@ -45,10 +49,10 @@
 					</div>
 				</div>
 			</div>
-			
+
 		{% endif %}
 		{% if Title == 'Utilisateur' %}
-		<div class="modal fade" id="PassPanel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal fade" id="PassPanel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -82,18 +86,22 @@
 							<div
 								class="StockImg" style=" border: solid  1px #f9a826; height:250px;">
 								{# <img src="/CIRCET-STOCK/public/{{StockPic}}"> #}
-								<img src="{{asset(StockPic)}}">
+								{% if StockPic is empty   %}
+									<img src="{{asset('images/laptop.png')}}" style="width:155px;" alt="">
+								{% else %}
+									<img src="{{asset(StockPic)}}">
+								{% endif %}
 							</div>
 							<div class="StockImg">
 								<button type="button" data-toggle="modal" class="start" data-target="#model">Voir l'image</button>
 							</div>
 						{% endif %}
 						{{ form_widget(form) }}
-								{% if Title == 'Utilisateur' %}
+						{% if Title == 'Utilisateur' %}
 							<div class="modal-body " style="display: flex;  justify-content: right; align-items: center; ">
-							<button type="button"  class="btn btn-outline-warning" data-toggle="modal" data-target="#PassPanel">changer le mot de passe</button>
+								<button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#PassPanel">changer le mot de passe</button>
 							</div>
-							{% endif %}
+						{% endif %}
 						<div class="actions">
 							<div class="buttons  text-center mt-4">
 								<button type="submit" style="background-color:#f9a826;">Mettre à jour</button>

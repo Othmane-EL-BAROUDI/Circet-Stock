@@ -198,3 +198,12 @@ table tbody tr:last-of-type{
     margin-top: 10px;
   }
 
+
+  .dataTables_length{
+    display: none !important;
+  }
+  .dataTables_filter input{
+    width: 300px !important;
+   
+  }
+
