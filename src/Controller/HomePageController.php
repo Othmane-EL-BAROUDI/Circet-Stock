@@ -107,7 +107,7 @@ class HomePageController extends AbstractController
 
             $newNotification = new Notification();
             $newNotification->setUserId($affectation->getUserAffectation()->getId());
-            $newNotification->setDescription('En attend la reponse sur la  demande sur ' . $affectation->getMachineAffectation()->getModel()->getMarque()->getmarqueName() . ' ' . $affectation->getMachineAffectation()->getModel()->getModelName());
+            $newNotification->setDescription('En attend la reponse sur la  demande sur ' . $affectation->getMachineAffectation()->getModel()->getType());
             $newNotification->setSrcImg('images/time-left.png');
             $newNotification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
             $entityManager->persist($newNotification);

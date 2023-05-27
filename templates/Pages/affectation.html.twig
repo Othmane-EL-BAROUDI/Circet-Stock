@@ -28,8 +28,8 @@
 						<div class="p-3 right-side">
 							<div class="d-flex justify-content-between align-items-center">
 								<h3>Demande d'affectation pour
-									{{machine.model.marque.getMarqueName()}}
-									{{machine.model.getModelName()}}</h3>
+									{{machine.model.getType()}}
+									</h3>
 
 							</div>
 							{{ form_start(form) }}
@@ -38,8 +38,7 @@
 								<input class="form-control" value="{{userInfo.username}}" disabled />
 								<label  >matricule</label>
 								<input class="form-control" value="{{machine.getSerialNum()}}" disabled />
-								<label  >Serial Number de la machine</label>
-								<input class="form-control" value="{{userInfo.matricule}}" disabled />
+							
 								{{ form_widget(form) }}
 
 							</div>

@@ -85,7 +85,7 @@ class DashboardController extends AbstractController
         $affectation = $entityManager->getRepository(Affectation::class)->find($id);
         $newNotification = new Notification();
         $newNotification->setUserId($affectation->getUserAffectation()->getId());
-        $newNotification->setDescription('La demande sur '.$affectation->getMachineAffectation()->getModel()->getMarque()->getmarqueName() .' '. $affectation->getMachineAffectation()->getModel()->getModelName() . ' est refuse');
+        $newNotification->setDescription('La demande sur '. $affectation->getMachineAffectation()->getModel()->getType() . ' est refuse');
         $newNotification->setSrcImg('images/decline.png');
         $newNotification->setDateNotifications(new DateTime(date('Y-m-d H:i:s')));
         $entityManager->persist($newNotification);
@@ -126,7 +126,7 @@ class DashboardController extends AbstractController
         $affectation->getMachineAffectation()->setAvailable(false);
         $newNotification = new Notification();
         $newNotification->setUserId($affectation->getUserAffectation()->getId());
-        $newNotification->setDescription('La demande sur '.$affectation->getMachineAffectation()->getModel()->getMarque()->getmarqueName() .' '. $affectation->getMachineAffectation()->getModel()->getModelName() . ' est accepter');
+        $newNotification->setDescription('La demande sur '. $affectation->getMachineAffectation()->getModel()->getType() . ' est accepter');
         $newNotification->setSrcImg('images/accept.png');
         $newNotification->setDateNotifications(new \DateTime(date('Y-m-d H:i:s')));
         $entityManager->persist($newNotification);
@@ -162,7 +162,7 @@ class DashboardController extends AbstractController
         $restitution = $entityManager->getRepository(Restitution::class)->find($id);
         $newNotification = new Notification();
         $newNotification->setUserId($restitution->getAffectation()->getUserAffectation()->getId());
-        $newNotification->setDescription('La demande de restitution sur '.$restitution->getAffectation()->getMachineAffectation()->getModel()->getMarque()->getmarqueName() .' '. $restitution->getAffectation()->getMachineAffectation()->getModel()->getModelName() . ' est refuse');
+        $newNotification->setDescription('La demande de restitution sur '. $restitution->getAffectation()->getMachineAffectation()->getModel()->getType() . ' est refuse');
         $newNotification->setSrcImg('images/decline.png');
         $newNotification->setDateNotifications(new DateTime(date('Y-m-d H:i:s')));
         $entityManager->persist($newNotification);
@@ -201,10 +201,10 @@ class DashboardController extends AbstractController
         $restitution->setAccept(true);
         $restitution->setVisibility(false);
         $restitution->setDate(date("d/m/Y") . ' ' . date("h:i:sa"));
-        $restitution->getAffectation()->setAccept(false);
+        $restitution->getAffectation()->setAccept(true);
         $newNotification = new Notification();
         $newNotification->setUserId($restitution->getAffectation()->getUserAffectation()->getId());
-        $newNotification->setDescription('La demande de restitution sur '.$restitution->getAffectation()->getMachineAffectation()->getModel()->getMarque()->getmarqueName() .' '. $restitution->getAffectation()->getMachineAffectation()->getModel()->getModelName() . ' est accepter');
+        $newNotification->setDescription('La demande de restitution sur '. $restitution->getAffectation()->getMachineAffectation()->getModel()->getType() . ' est accepter');
         $newNotification->setSrcImg('images/accept.png');
         $newNotification->setDateNotifications(new \DateTime(date('Y-m-d H:i:s')));
         $entityManager->persist($newNotification);
