@@ -84,7 +84,7 @@ class Notification
     {
         // $now = new DateTime(date('d-m-Y H:i:s'));
         // $interval = $this->DateNotifications->diff($now);
-        return $this->DateNotifications->format('d/m/Y h:i');
+        return $this->DateNotifications->format('d/m/Y H:i');
     }
     
     public function setDateNotifications(\DateTimeInterface $DateNotifications): self

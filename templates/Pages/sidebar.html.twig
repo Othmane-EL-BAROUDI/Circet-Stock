@@ -53,7 +53,7 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Centre des notifications</h5>x
+					<h5 class="modal-title" id="exampleModalLabel">Centre des notifications</h5>
 				<a href="{{path('DeleteNotification')}}" class="close" >&times;</a>
 				</div>
 				<div class="modal-body noti-body">
@@ -104,7 +104,7 @@
 		</div>
 		<ul class="nav_link">
 			{% if userInfo.Connected %}
-				{% if userInfo.roles[0] == "ROLE_ADMIN" or userInfo.roles[0] == "SUPER ADMIN" %}
+				{% if userInfo.roles[0] == "ADMIN" or userInfo.roles[0] == "SUPER ADMIN" %}
 
 					{% for permission in userInfo.getUserPermission() %}
 						{% if permission.getPermissionName() == "Voir notification" %}
@@ -148,7 +148,7 @@
 					{% endif %}
 				{% endfor %}
 				{% endif %}
-				{% if userInfo.roles[0] == "ROLE_ADMIN" or userInfo.roles[0] == "SUPER ADMIN" %}
+				{% if userInfo.roles[0] == "ADMIN" or userInfo.roles[0] == "SUPER ADMIN" %}
 
 					{% for permission in userInfo.getUserPermission() %}
 						{% if permission.getPermissionName() == "Voir tableau de bord" %}

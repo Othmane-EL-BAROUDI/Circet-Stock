@@ -61,9 +61,10 @@
 						</div>
 
 						<div class="details">
-							<p class="small text-muted">{{item.model.type}}
-							</p>
-
+							{# <p class="small text-muted">{{item.model.type}}
+							</p> #}
+							<p for="name">{{item.model.marque.getMarqueName()}}
+							{{item.model.getModelName()}}</p>
 						</div>
 						<div class="action">
 							{% for permission in userInfo.getUserPermission() %}

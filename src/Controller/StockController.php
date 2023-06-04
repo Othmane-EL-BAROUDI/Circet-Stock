@@ -55,7 +55,9 @@ class StockController extends AbstractController
                 $Notification->setUserId($admin->getId());
                 $Notification->setDescription($this->getUser()->getUsername() . ' a ajouter une nouveau materiel  ' .$machine->getModel()->getMarque()->getMarqueName() . " " .$machine->getModel()->getModelName()  );
                 $Notification->setSrcImg('images/success.png');
-                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $timezone = new \DateTimeZone('Africa/Casablanca'); 
+                $currentDateTime = new \DateTime('now', $timezone); 
+                $Notification->setDateNotifications($currentDateTime);
                 $entityManager->persist($Notification);
             }
             $uploadedPicture = $form->get('img_src')->getData();
@@ -151,7 +153,9 @@ class StockController extends AbstractController
             $Notification->setUserId($admin->getId());
             $Notification->setDescription($this->getUser()->getUsername() . ' a supprimer la marque ' . $stock->getModel()->getMarque()->getMarqueName() ." ". $stock->getModel()->getModelName() );
             $Notification->setSrcImg('images/delete-file.png');
-            $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+            $timezone = new \DateTimeZone('Africa/Casablanca'); 
+            $currentDateTime = new \DateTime('now', $timezone); 
+            $Notification->setDateNotifications($currentDateTime);
             $entityManager->persist($Notification);
         }
         $entityManager->flush();
@@ -194,7 +198,9 @@ class StockController extends AbstractController
                 $Notification->setUserId($admin->getId());
                 $Notification->setDescription($this->getUser()->getUsername() . ' a modifier le materiel ' . $stock->getModel()->getMarque()->getMarqueName() ." ". $stock->getModel()->getModelName() );
                 $Notification->setSrcImg('images/updated.png');
-                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $timezone = new \DateTimeZone('Africa/Casablanca'); 
+                $currentDateTime = new \DateTime('now', $timezone); 
+                $Notification->setDateNotifications($currentDateTime);
                 $entityManager->persist($Notification);
             }
             $entityManager->flush();
@@ -214,7 +220,9 @@ class StockController extends AbstractController
                 $Notification->setUserId($admin->getId());
                 $Notification->setDescription($this->getUser()->getUsername() . ' a modifier le materiel ' . $stock->getModel()->getMarque()->getMarqueName() ." ".$stock->getModel()->getModelName() );
                 $Notification->setSrcImg('images/updated.png');
-                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $timezone = new \DateTimeZone('Africa/Casablanca'); 
+                $currentDateTime = new \DateTime('now', $timezone); 
+                $Notification->setDateNotifications($currentDateTime);
                 $entityManager->persist($Notification);
             }
             if ($uploadedPicture) {

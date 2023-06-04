@@ -43,7 +43,9 @@ class ProfileController extends AbstractController
                         $Notification->setUserId($admin->getId());
                         $Notification->setDescription($user->getUsername() . ' - ' . $user->getMatricule()   .' a modifier le mot de passe ');
                         $Notification->setSrcImg('images/reset-password.png');
-                        $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                        $timezone = new \DateTimeZone('Africa/Casablanca'); 
+                $currentDateTime = new \DateTime('now', $timezone); 
+                $Notification->setDateNotifications($currentDateTime);
                         $entityManager->persist($Notification);
                     }
                     $NewEncoded = $encoder->encodePassword($user,$form->get('Newpassword')->getData());

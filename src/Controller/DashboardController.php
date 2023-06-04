@@ -87,7 +87,9 @@ class DashboardController extends AbstractController
         $newNotification->setUserId($affectation->getUserAffectation()->getId());
         $newNotification->setDescription('La demande sur '. $affectation->getMachineAffectation()->getModel()->getType() . ' est refuse');
         $newNotification->setSrcImg('images/decline.png');
-        $newNotification->setDateNotifications(new DateTime(date('Y-m-d H:i:s')));
+        $timezone = new \DateTimeZone('Africa/Casablanca'); 
+        $currentDateTime = new \DateTime('now', $timezone); 
+        $Notification->setDateNotifications($currentDateTime);
         $entityManager->persist($newNotification);
         $entityManager->remove($affectation);
         $entityManager->flush();
@@ -101,7 +103,9 @@ class DashboardController extends AbstractController
             $Notification->setUserId($admin->getId());
             $Notification->setDescription( $this->getUser()->getUsername() . ' a refuser la demande de' . $affectation->getUserAffectation()->getUsername() .' - '. $affectation->getUserAffectation()->getMatricule().' sur ' . $affectation->getMachineAffectation()->getModel()->getMarque()->getmarqueName() . ' ' . $affectation->getMachineAffectation()->getModel()->getModelName());
             $Notification->setSrcImg('images/info.png');
-            $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+            $timezone = new \DateTimeZone('Africa/Casablanca'); 
+            $currentDateTime = new \DateTime('now', $timezone); 
+            $Notification->setDateNotifications($currentDateTime);
             $entityManager->persist($Notification);
         }
         $entityManager->flush();
@@ -140,7 +144,9 @@ class DashboardController extends AbstractController
             $Notification->setUserId($admin->getId());
             $Notification->setDescription( $this->getUser()->getUsername() . ' a accepter la demande de ' .$affectation->getUserAffectation()->getUsername() .' - '. $affectation->getUserAffectation()->getMatricule().' sur ' . $affectation->getMachineAffectation()->getModel()->getMarque()->getmarqueName() . ' ' . $affectation->getMachineAffectation()->getModel()->getModelName());
             $Notification->setSrcImg('images/info.png');
-            $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+            $timezone = new \DateTimeZone('Africa/Casablanca'); 
+                $currentDateTime = new \DateTime('now', $timezone); 
+                $Notification->setDateNotifications($currentDateTime);
             $entityManager->persist($Notification);
         }
 
@@ -164,7 +170,9 @@ class DashboardController extends AbstractController
         $newNotification->setUserId($restitution->getAffectation()->getUserAffectation()->getId());
         $newNotification->setDescription('La demande de restitution sur '. $restitution->getAffectation()->getMachineAffectation()->getModel()->getType() . ' est refuse');
         $newNotification->setSrcImg('images/decline.png');
-        $newNotification->setDateNotifications(new DateTime(date('Y-m-d H:i:s')));
+        $timezone = new \DateTimeZone('Africa/Casablanca'); 
+        $currentDateTime = new \DateTime('now', $timezone); 
+        $newNotification->setDateNotifications($currentDateTime);
         $entityManager->persist($newNotification);
         
 
@@ -178,7 +186,9 @@ class DashboardController extends AbstractController
             $Notification->setUserId($admin->getId());
             $Notification->setDescription( $this->getUser()->getUsername() . ' a refuser la demande de restitution de' . $restitution->getAffectation()->getUserAffectation()->getUsername() .' - '. $restitution->getAffectation()->getUserAffectation()->getMatricule().' sur ' . $restitution->getAffectation()->getMachineAffectation()->getModel()->getMarque()->getmarqueName() . ' ' . $restitution->getAffectation()->getMachineAffectation()->getModel()->getModelName());
             $Notification->setSrcImg('images/delete-file.png');
-            $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+            $timezone = new \DateTimeZone('Africa/Casablanca'); 
+                $currentDateTime = new \DateTime('now', $timezone); 
+                $Notification->setDateNotifications($currentDateTime);
             $entityManager->persist($Notification);
         }
         $entityManager->remove($restitution);
@@ -206,7 +216,9 @@ class DashboardController extends AbstractController
         $newNotification->setUserId($restitution->getAffectation()->getUserAffectation()->getId());
         $newNotification->setDescription('La demande de restitution sur '. $restitution->getAffectation()->getMachineAffectation()->getModel()->getType() . ' est accepter');
         $newNotification->setSrcImg('images/accept.png');
-        $newNotification->setDateNotifications(new \DateTime(date('Y-m-d H:i:s')));
+        $timezone = new \DateTimeZone('Africa/Casablanca'); 
+        $currentDateTime = new \DateTime('now', $timezone); 
+        $newNotification->setDateNotifications($currentDateTime);
         $entityManager->persist($newNotification);
 
         $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
@@ -218,7 +230,9 @@ class DashboardController extends AbstractController
             $Notification->setUserId($admin->getId());
             $Notification->setDescription( $this->getUser()->getUsername() . ' a accepter la demande de restitution de ' .$restitution->getAffectation()->getUserAffectation()->getUsername() .' - '. $restitution->getAffectation()->getUserAffectation()->getMatricule().' sur ' . $restitution->getAffectation()->getMachineAffectation()->getModel()->getMarque()->getmarqueName() . ' ' . $restitution->getAffectation()->getMachineAffectation()->getModel()->getModelName());
             $Notification->setSrcImg('images/delivery-status.png');
-            $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+            $timezone = new \DateTimeZone('Africa/Casablanca'); 
+                $currentDateTime = new \DateTime('now', $timezone); 
+                $Notification->setDateNotifications($currentDateTime);
             $entityManager->persist($Notification);
         }
 
