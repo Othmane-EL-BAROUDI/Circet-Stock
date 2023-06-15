@@ -51,7 +51,9 @@ class MarqueController extends AbstractController
                 $Notification->setUserId($admin->getId());
                 $Notification->setDescription($this->getUser()->getUsername() . ' a ajouter une nouvelle marque  ' . $newMarque->getMarqueName()  );
                 $Notification->setSrcImg('images/success.png');
-                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $timezone = new \DateTimeZone('Africa/Casablanca'); 
+                $currentDateTime = new \DateTime('now', $timezone); 
+                $Notification->setDateNotifications($currentDateTime);
                 $entityManager->persist($Notification);
             }
             $entityManager->persist($newMarque);
@@ -106,7 +108,9 @@ class MarqueController extends AbstractController
                 $Notification->setUserId($admin->getId());
                 $Notification->setDescription($this->getUser()->getUsername() . ' a modifier la marque ' . $CurrentMarqueName . ' vers ' . $form->get('marque_name')->getData() );
                 $Notification->setSrcImg('images/updated.png');
-                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $timezone = new \DateTimeZone('Africa/Casablanca'); 
+                $currentDateTime = new \DateTime('now', $timezone); 
+                $Notification->setDateNotifications($currentDateTime);
                 $entityManager->persist($Notification);
             }
             $entityManager->flush();
@@ -147,7 +151,9 @@ class MarqueController extends AbstractController
             $Notification->setUserId($admin->getId());
             $Notification->setDescription($this->getUser()->getUsername() . ' a supprimer la marque ' . $marque->getMarqueName() );
             $Notification->setSrcImg('images/delete-file.png');
-            $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+            $timezone = new \DateTimeZone('Africa/Casablanca'); 
+            $currentDateTime = new \DateTime('now', $timezone); 
+            $Notification->setDateNotifications($currentDateTime);
             $entityManager->persist($Notification);
         }
         $entityManager->flush();

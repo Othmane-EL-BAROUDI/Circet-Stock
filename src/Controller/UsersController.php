@@ -8,6 +8,7 @@ use App\Form\UserFormType;
 use App\Entity\Notification;
 use App\Form\OriginalUserFormType;
 use App\Form\UserPasswordFormType;
+use App\Form\UserRoleFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -68,7 +69,9 @@ class UsersController extends AbstractController
                 $Notification->setUserId($admin->getId());
                 $Notification->setDescription($this->getUser()->getUsername() . ' a ajouter une nouveau utilisateur  ' . $Nuser->getUsername() . " - " . $Nuser->getMatricule());
                 $Notification->setSrcImg('images/success.png');
-                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $timezone = new \DateTimeZone('Africa/Casablanca'); 
+                $currentDateTime = new \DateTime('now', $timezone); 
+                $Notification->setDateNotifications($currentDateTime);
                 $entityManager->persist($Notification);
             }
             $encoded = $encoder->encodePassword($Nuser, $Nuser->getPassword());
@@ -142,7 +145,9 @@ class UsersController extends AbstractController
             $Notification->setUserId($admin->getId());
             $Notification->setDescription($this->getUser()->getUsername() . ' a supprimer un utilisateur : ' . $user->getUsername() . " - " . $user->getMatricule());
             $Notification->setSrcImg('images/delete-file.png');
-            $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+            $timezone = new \DateTimeZone('Africa/Casablanca'); 
+            $currentDateTime = new \DateTime('now', $timezone); 
+            $Notification->setDateNotifications($currentDateTime);
             $entityManager->persist($Notification);
         }
         $entityManager->flush();
@@ -172,10 +177,11 @@ class UsersController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $user = $entityManager->getRepository(User::class)->find($id);
         $form = $this->createForm(UserFormType::class, $user);
-        $form->get('roles')->setData($user->getRoles()[0]);
         $form->handleRequest($request);
         $Passform = $this->createForm(UserPasswordFormType::class);
         $Passform->handleRequest($request);
+        $Roleform = $this->createForm(UserRoleFormType::class);
+        $Roleform->handleRequest($request);
         if ($form->isSubmitted()  && $form->isValid()) {
             $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
             $query->setParameter('role', '%"ADMIN"%');
@@ -186,12 +192,34 @@ class UsersController extends AbstractController
                 $Notification->setUserId($admin->getId());
                 $Notification->setDescription($this->getUser()->getUsername() . ' a modifier un utilisateur  ' .  $user->getUsername() . " - " . $user->getMatricule());
                 $Notification->setSrcImg('images/updated.png');
-                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $timezone = new \DateTimeZone('Africa/Casablanca'); 
+                $currentDateTime = new \DateTime('now', $timezone); 
+                $Notification->setDateNotifications($currentDateTime);
                 $entityManager->persist($Notification);
             }
-        
-
-            $user->setRoles(array($form->get('roles')->getData()->getRoleName()));
+            $entityManager->flush();
+            $this->addFlash(
+                'update',
+                sprintf('"%s" Mis à jour avec succés.', $user->getUsername())
+            );
+            return $this->redirectToRoute('Users');
+        }
+        if ($Roleform->isSubmitted()  && $Roleform->isValid()) {
+            $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
+            $query->setParameter('role', '%"ADMIN"%');
+            $query->setParameter('role2', '%"SUPER ADMIN"%');
+            $AllAdmins = $query->getResult();
+            foreach ($AllAdmins as $admin) {
+                $Notification = new Notification();
+                $Notification->setUserId($admin->getId());
+                $Notification->setDescription($this->getUser()->getUsername() . ' a modifier le role du  ' .  $user->getUsername() . " - " . $user->getMatricule());
+                $Notification->setSrcImg('images/updated.png');
+                $timezone = new \DateTimeZone('Africa/Casablanca'); 
+                $currentDateTime = new \DateTime('now', $timezone); 
+                $Notification->setDateNotifications($currentDateTime);
+                $entityManager->persist($Notification);
+            }
+            $user->setRoles(array($Roleform->get('roles')->getData()->getRoleName()));
             $entityManager->flush();
             $this->addFlash(
                 'update',
@@ -209,7 +237,9 @@ class UsersController extends AbstractController
                 $Notification->setUserId($admin->getId());
                 $Notification->setDescription($this->getUser()->getUsername() . ' a modifier le mot de passe de  ' .  $user->getUsername() . " - " . $user->getMatricule());
                 $Notification->setSrcImg('images/reset-password.png');
-                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $timezone = new \DateTimeZone('Africa/Casablanca'); 
+                $currentDateTime = new \DateTime('now', $timezone); 
+                $Notification->setDateNotifications($currentDateTime);
                 $entityManager->persist($Notification);
             }
             $NewEncoded = $encoder->encodePassword($user, $Passform->get('Newpassword')->getData());
@@ -227,6 +257,7 @@ class UsersController extends AbstractController
             'Path' => '/Users',
             'form' => $form->createView(),
             'Passform' => $Passform->createView(),
+            'Roleform' => $Roleform->createView(),
             'Title' => 'Utilisateur',
             'PageName' => 'Mise à jour',
             'AllNotification' => $AllNotification,

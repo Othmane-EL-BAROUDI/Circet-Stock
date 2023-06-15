@@ -154,7 +154,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t<div class=\"modal-content\">
 \t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Centre des notifications</h5>x
+\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Centre des notifications</h5>
 \t\t\t\t<a href=\"";
             // line 57
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("DeleteNotification");
@@ -239,7 +239,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
         if (twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 106, $this->source); })()), "Connected", [], "any", false, false, false, 106)) {
             // line 107
             echo "\t\t\t\t";
-            if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 107, $this->source); })()), "roles", [], "any", false, false, false, 107), 0, [], "array", false, false, false, 107) == "ROLE_ADMIN") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 107, $this->source); })()), "roles", [], "any", false, false, false, 107), 0, [], "array", false, false, false, 107) == "SUPER ADMIN"))) {
+            if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 107, $this->source); })()), "roles", [], "any", false, false, false, 107), 0, [], "array", false, false, false, 107) == "ADMIN") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 107, $this->source); })()), "roles", [], "any", false, false, false, 107), 0, [], "array", false, false, false, 107) == "SUPER ADMIN"))) {
                 // line 108
                 echo "
 \t\t\t\t\t";
@@ -340,7 +340,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
             }
             // line 151
             echo "\t\t\t\t";
-            if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 151, $this->source); })()), "roles", [], "any", false, false, false, 151), 0, [], "array", false, false, false, 151) == "ROLE_ADMIN") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 151, $this->source); })()), "roles", [], "any", false, false, false, 151), 0, [], "array", false, false, false, 151) == "SUPER ADMIN"))) {
+            if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 151, $this->source); })()), "roles", [], "any", false, false, false, 151), 0, [], "array", false, false, false, 151) == "ADMIN") || (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 151, $this->source); })()), "roles", [], "any", false, false, false, 151), 0, [], "array", false, false, false, 151) == "SUPER ADMIN"))) {
                 // line 152
                 echo "
 \t\t\t\t\t";
@@ -691,7 +691,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t<div class=\"modal-content\">
 \t\t\t\t<div class=\"modal-header\">
-\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Centre des notifications</h5>x
+\t\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Centre des notifications</h5>
 \t\t\t\t<a href=\"{{path('DeleteNotification')}}\" class=\"close\" >&times;</a>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"modal-body noti-body\">
@@ -742,7 +742,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t</div>
 \t\t<ul class=\"nav_link\">
 \t\t\t{% if userInfo.Connected %}
-\t\t\t\t{% if userInfo.roles[0] == \"ROLE_ADMIN\" or userInfo.roles[0] == \"SUPER ADMIN\" %}
+\t\t\t\t{% if userInfo.roles[0] == \"ADMIN\" or userInfo.roles[0] == \"SUPER ADMIN\" %}
 
 \t\t\t\t\t{% for permission in userInfo.getUserPermission() %}
 \t\t\t\t\t\t{% if permission.getPermissionName() == \"Voir notification\" %}
@@ -786,7 +786,7 @@ class __TwigTemplate_d86ce06bb4778847f4b82e59caec70f96a57533a7b5ae1c9d787fe20189
 \t\t\t\t\t{% endif %}
 \t\t\t\t{% endfor %}
 \t\t\t\t{% endif %}
-\t\t\t\t{% if userInfo.roles[0] == \"ROLE_ADMIN\" or userInfo.roles[0] == \"SUPER ADMIN\" %}
+\t\t\t\t{% if userInfo.roles[0] == \"ADMIN\" or userInfo.roles[0] == \"SUPER ADMIN\" %}
 
 \t\t\t\t\t{% for permission in userInfo.getUserPermission() %}
 \t\t\t\t\t\t{% if permission.getPermissionName() == \"Voir tableau de bord\" %}

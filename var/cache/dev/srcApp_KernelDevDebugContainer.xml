@@ -387,6 +387,9 @@
     <service id="App\Form\UserPasswordFormType" class="App\Form\UserPasswordFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\UserRoleFormType" class="App\Form\UserRoleFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Repository\AffectationRepository" class="App\Repository\AffectationRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -761,6 +764,7 @@
         <argument>App\Form\RoleFormType</argument>
         <argument>App\Form\UserFormType</argument>
         <argument>App\Form\UserPasswordFormType</argument>
+        <argument>App\Form\UserRoleFormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
@@ -1054,7 +1058,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.qkzgN_e"/>
+      <argument type="service" id=".service_locator.fx9hxPR"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -2230,14 +2234,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -4958,6 +4954,8 @@
     <service id=".abstract.instanceof.App\Form\UserFormType" class="App\Form\UserFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserPasswordFormType" class="App\Form\UserPasswordFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UserPasswordFormType" class="App\Form\UserPasswordFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserRoleFormType" class="App\Form\UserRoleFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\UserRoleFormType" class="App\Form\UserRoleFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AffectationRepository" class="App\Repository\AffectationRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\AffectationRepository" class="App\Repository\AffectationRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\MachineRepository" class="App\Repository\MachineRepository" autowire="true" abstract="true"/>
@@ -5375,7 +5373,7 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.qkzgN_e" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.fx9hxPR" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\AffectationFormType" type="service" id="App\Form\AffectationFormType"/>
@@ -5390,6 +5388,7 @@
         <argument key="App\Form\RoleFormType" type="service" id="App\Form\RoleFormType"/>
         <argument key="App\Form\UserFormType" type="service" id="App\Form\UserFormType"/>
         <argument key="App\Form\UserPasswordFormType" type="service" id="App\Form\UserPasswordFormType"/>
+        <argument key="App\Form\UserRoleFormType" type="service" id="App\Form\UserRoleFormType"/>
         <argument key="FOS\UserBundle\Form\Type\ChangePasswordFormType" type="service" id="fos_user.change_password.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\ProfileFormType" type="service" id="fos_user.profile.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\RegistrationFormType" type="service" id="fos_user.registration.form.type"/>

@@ -38,7 +38,12 @@ class RestitutionController extends AbstractController
             ->getQuery()
             ->getResult();
       
-
+            if ($user->getRoles()[0] == 'SUPER ADMIN') {
+                return $this->redirect('Dashboard');
+            }
+            if ($user->getRoles()[0] == 'ADMIN') {
+                return $this->redirect('Dashboard');
+            }
         if ($user->getConnected() == false) {
             return $this->redirect('Profile');
         }
@@ -79,7 +84,9 @@ class RestitutionController extends AbstractController
             $newNotification->setUserId($machine->getUserAffectation()->getId());
             $newNotification->setDescription('En attend la reponse sur la  demande de restitution sur ' . $machine->getMachineAffectation()->getModel()->getMarque()->getmarqueName() . ' ' . $machine->getMachineAffectation()->getModel()->getModelName());
             $newNotification->setSrcImg('images/time-left.png');
-            $newNotification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+            $timezone = new \DateTimeZone('Africa/Casablanca'); 
+            $currentDateTime = new \DateTime('now', $timezone); 
+            $newNotification->setDateNotifications($currentDateTime);
             $entityManager->persist($newNotification);
 
             $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
@@ -91,7 +98,9 @@ class RestitutionController extends AbstractController
                 $Notification->setUserId($admin->getId());
                 $Notification->setDescription( $machine->getUserAffectation()->getUsername() . ' - ' .  $machine->getUserAffectation()->getMatricule() .' attend la  reponse sur la  demande de restitution sur ' . $machine->getMachineAffectation()->getModel()->getMarque()->getmarqueName() . ' ' . $machine->getMachineAffectation()->getModel()->getModelName());
                 $Notification->setSrcImg('images/info.png');
-                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $timezone = new \DateTimeZone('Africa/Casablanca'); 
+                $currentDateTime = new \DateTime('now', $timezone); 
+                $Notification->setDateNotifications($currentDateTime);
                 $entityManager->persist($Notification);
             }
 

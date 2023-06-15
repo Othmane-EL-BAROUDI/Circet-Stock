@@ -47,7 +47,7 @@
                                                 <input class="form-control" type="text" value="{{userInfo.job}}" aria-label="readonly input example" readonly>
                                           </div>
                                     </div>
-                                    {% if userInfo.Connected == false or userInfo.roles[0] == 'ROLE_ADMIN' or  userInfo.roles[0] == 'SUPER ADMIN' %}
+                                    {% if userInfo.Connected == false or userInfo.roles[0] == 'ADMIN' or  userInfo.roles[0] == 'SUPER ADMIN' %}
                                       {{ form_start(form) }}                          
                                     <div class="mb-3 row" style="width: 125%;">
                                           <div class="col-sm-10">

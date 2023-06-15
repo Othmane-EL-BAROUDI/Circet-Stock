@@ -37,7 +37,7 @@ class HomePageController extends AbstractController
         if ($user->getRoles()[0] == 'SUPER ADMIN') {
             return $this->redirect('Dashboard');
         }
-        if ($user->getRoles()[0] == 'ROLE_ADMIN') {
+        if ($user->getRoles()[0] == 'ADMIN') {
             return $this->redirect('Dashboard');
         }
         if ($user->getConnected() == false) {
@@ -112,7 +112,9 @@ class HomePageController extends AbstractController
             $newNotification->setUserId($affectation->getUserAffectation()->getId());
             $newNotification->setDescription('En attend la reponse sur la  demande sur ' . $affectation->getMachineAffectation()->getModel()->getType());
             $newNotification->setSrcImg('images/time-left.png');
-            $newNotification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+            $timezone = new \DateTimeZone('Africa/Casablanca'); 
+                $currentDateTime = new \DateTime('now', $timezone); 
+                $newNotification->setDateNotifications($currentDateTime);
             $entityManager->persist($newNotification);
 
             $query = $entityManager->createQuery('SELECT u FROM App\Entity\User u WHERE u.roles LIKE :role or u.roles LIKE :role2');
@@ -124,7 +126,9 @@ class HomePageController extends AbstractController
                 $Notification->setUserId($admin->getId());
                 $Notification->setDescription($affectation->getUserAffectation()->getUsername() . ' attend la  reponse sur la  demande sur ' . $affectation->getMachineAffectation()->getModel()->getMarque()->getmarqueName() . ' ' . $affectation->getMachineAffectation()->getModel()->getModelName());
                 $Notification->setSrcImg('images/info.png');
-                $Notification->setDateNotifications(new \DateTime(date('Y-m-d H:i')));
+                $timezone = new \DateTimeZone('Africa/Casablanca'); 
+                $currentDateTime = new \DateTime('now', $timezone); 
+                $Notification->setDateNotifications($currentDateTime);
                 $entityManager->persist($Notification);
             }
 

@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\Role;
+
 use App\Entity\User;
 use App\Entity\Permission;
 use Symfony\Component\Form\AbstractType;
@@ -54,21 +54,7 @@ class UserFormType extends AbstractType
             // ->add('lastLogin')
             //  ->add('confirmationToken')
             //  ->add('passwordRequestedAt')
-            ->add('roles', EntityType::class, [
-                'required' => true,
-                'class' => Role::class,
-                'choice_label' => 'roleName',
-                'label' => 'Rôles',
-                'query_builder' => function (\App\Repository\RoleRepository $r) {
-                    return $r->createQueryBuilder('r');
-                        
-                },
-              
-                    'mapped' => false,
-                    'multiple' => false,
-                    'expanded' => false,
-                'attr' => ['class' => 'form-control']
-            ])
+           
             ->add('manager', TextType::class, [
                 'attr' => array(
                     'placeholder' => '@Manager'

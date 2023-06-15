@@ -39,7 +39,8 @@ class OriginalUserFormType extends AbstractType
                     'mapped' => false,
                     'multiple' => false,
                     
-                'attr' => ['class' => 'form-control']
+                'attr' => ['class' => 'form-control'],
+                
             ])
             ->add('job', TextType::class, [
                 'attr' => array(
